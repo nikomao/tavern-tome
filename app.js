@@ -865,7 +865,16 @@
 
         t += '<div class="comp-board">';
         STATS.comps.slice(0, 8).forEach(function(c, i){
-          var cards = (c.cards || []).map(function(x, idx){
+          var list = (c.cards || []).slice();
+          var note = (typeof COMP_NOTES !== "undefined" && c.key && COMP_NOTES[c.key]) ? COMP_NOTES[c.key] : null;
+          if(note && note.order){
+            var posIdx = {};
+            note.order.forEach(function(n, k){ posIdx[n] = k; });
+            list.sort(function(a, b){
+              return (posIdx[a.name] == null ? 99 : posIdx[a.name]) - (posIdx[b.name] == null ? 99 : posIdx[b.name]);
+            });
+          }
+          var cards = list.map(function(x, idx){
             return '<a class="comp-slot" href="cards.html?card=' + x.id + '" title="' + x.name + '">' +
               '<span class="cs-no">' + (idx + 1) + '</span>' +
               '<span class="cs-img"><img loading="lazy" src="pool/' + x.id + '.webp" alt="" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><i>' + x.name.slice(0,1) + '</i></span>' +
@@ -878,7 +887,7 @@
             '<span class="cc-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4||0)*100) +
             '% · 吃鸡 ' + Math.round((c.win||0)*100) + '% · ' + (c.sample||0).toLocaleString("en-US") + ' 局</span></div>' +
             '<div class="cc-lineup">' + cards + '</div>' +
-            '<div class="cc-pos"><b>站位</b> ' + posHint(c) + '</div>' +
+            '<div class="cc-pos"><b>站位</b> ' + ((note && note.pos) ? note.pos + '（手工站位）' : posHint(c)) + '</div>' +
             '<div class="cc-foot"><span>推荐英雄：' + (heroes || "—") + '</span><span>' +
             (c.difficulty || "") + (c.power ? ' / 强度 ' + c.power : "") + '</span></div>' +
             '</article>';

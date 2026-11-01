@@ -938,6 +938,7 @@ const STATS = {
   ],
   "comps": [
     {
+      "key": "dragon_shield",
       "name": "龙·圣盾",
       "tier": "T0",
       "top4": 0.7541,
@@ -997,6 +998,7 @@ const STATS = {
       "power": "A"
     },
     {
+      "key": "neutral_tea_set",
       "name": "中立·喝茶",
       "tier": "T0",
       "top4": 0.7424,
@@ -1056,6 +1058,7 @@ const STATS = {
       "power": "S"
     },
     {
+      "key": "aberration_discard",
       "name": "畸变怪·弃牌",
       "tier": "T0",
       "top4": 0.7594,
@@ -1115,6 +1118,7 @@ const STATS = {
       "power": "C"
     },
     {
+      "key": "mech_apm",
       "name": "机械·APM",
       "tier": "T0",
       "top4": 0.6748,
@@ -1174,6 +1178,7 @@ const STATS = {
       "power": "S"
     },
     {
+      "key": "mech_volumizer",
       "name": "机械·扩音机",
       "tier": "T0",
       "top4": 0.6688,
@@ -1233,6 +1238,7 @@ const STATS = {
       "power": "C"
     },
     {
+      "key": "murloc_end_of_turn",
       "name": "鱼人·回合结束",
       "tier": "T1",
       "top4": 0.6841,
@@ -1292,6 +1298,7 @@ const STATS = {
       "power": "A"
     },
     {
+      "key": "demon_boost_shop",
       "name": "恶魔·养酒馆",
       "tier": "T1",
       "top4": 0.6997,
@@ -1351,6 +1358,7 @@ const STATS = {
       "power": "A"
     },
     {
+      "key": "quilboar_choose_one",
       "name": "野猪人·抉择",
       "tier": "T1",
       "top4": 0.6608,
@@ -1410,6 +1418,7 @@ const STATS = {
       "power": "C"
     },
     {
+      "key": "elemental_azerite",
       "name": "元素·艾泽里特",
       "tier": "T1",
       "top4": 0.6717,
@@ -1469,6 +1478,7 @@ const STATS = {
       "power": "S"
     },
     {
+      "key": "elemental_cycle",
       "name": "元素·倒转",
       "tier": "T1",
       "top4": 0.7026,
@@ -1483,6 +1493,7 @@ const STATS = {
       "power": ""
     },
     {
+      "key": "quilboar_felboar_spam",
       "name": "野猪人·邪能猪",
       "tier": "T1",
       "top4": 0.674,
@@ -1542,6 +1553,7 @@ const STATS = {
       "power": "S"
     },
     {
+      "key": "aberration_deathrattle",
       "name": "畸变怪·亡语",
       "tier": "T1",
       "top4": 0.6829,
@@ -1601,6 +1613,7 @@ const STATS = {
       "power": "B"
     },
     {
+      "key": "undead_apm",
       "name": "亡灵·APM",
       "tier": "T2",
       "top4": 0.6637,
@@ -1660,6 +1673,7 @@ const STATS = {
       "power": "S"
     },
     {
+      "key": "undead_eternal_knight",
       "name": "亡灵·永恒骑士",
       "tier": "T2",
       "top4": 0.6737,
@@ -1719,6 +1733,7 @@ const STATS = {
       "power": "C"
     },
     {
+      "key": "murloc_handbuff",
       "name": "鱼人·手牌 buff",
       "tier": "T2",
       "top4": 0.66,
@@ -1778,6 +1793,7 @@ const STATS = {
       "power": "C"
     },
     {
+      "key": "murloc_scam",
       "name": "鱼人·下毒",
       "tier": "T2",
       "top4": 0.6453,
@@ -1837,6 +1853,7 @@ const STATS = {
       "power": "A"
     },
     {
+      "key": "undead_butcher",
       "name": "亡灵·屠夫",
       "tier": "T2",
       "top4": 0.6463,
@@ -1896,6 +1913,7 @@ const STATS = {
       "power": "A"
     },
     {
+      "key": "beast_lobster",
       "name": "野兽·龙虾",
       "tier": "T2",
       "top4": 0.6011,
@@ -1955,6 +1973,7 @@ const STATS = {
       "power": "S"
     },
     {
+      "key": "demon_self_damage",
       "name": "恶魔·自伤",
       "tier": "T2",
       "top4": 0.6271,
@@ -2014,6 +2033,7 @@ const STATS = {
       "power": "A"
     },
     {
+      "key": "dragon_spell_power",
       "name": "龙·法强",
       "tier": "T2",
       "top4": 0.6276,
@@ -2073,6 +2093,7 @@ const STATS = {
       "power": "B"
     },
     {
+      "key": "pirate_discover",
       "name": "海盗·发现",
       "tier": "T3",
       "top4": 0.6084,
@@ -2132,6 +2153,7 @@ const STATS = {
       "power": "B"
     },
     {
+      "key": "elemental_tempest",
       "name": "元素·风暴",
       "tier": "T3",
       "top4": 0.5643,
@@ -2191,6 +2213,7 @@ const STATS = {
       "power": "C"
     },
     {
+      "key": "beast_beetle",
       "name": "野兽·甲虫",
       "tier": "T3",
       "top4": 0.6274,
@@ -2250,6 +2273,7 @@ const STATS = {
       "power": "A"
     },
     {
+      "key": "quilboar_gem_spam",
       "name": "野猪人·宝石",
       "tier": "T3",
       "top4": 0.5939,
@@ -2309,6 +2333,7 @@ const STATS = {
       "power": "A"
     },
     {
+      "key": "beast_leviathan",
       "name": "野兽·巨兽",
       "tier": "T3",
       "top4": 0.5975,
@@ -2368,6 +2393,7 @@ const STATS = {
       "power": "A"
     },
     {
+      "key": "dragon_kalecgos",
       "name": "龙·卡雷苟斯",
       "tier": "T3",
       "top4": 0.6017,
@@ -2427,6 +2453,7 @@ const STATS = {
       "power": "C"
     },
     {
+      "key": "pirate_bounty",
       "name": "海盗·悬赏",
       "tier": "T3",
       "top4": 0.5507,
@@ -2486,6 +2513,7 @@ const STATS = {
       "power": "B"
     },
     {
+      "key": "mech_glambot",
       "name": "机械·魅力机器人",
       "tier": "T3",
       "top4": 0.5118,

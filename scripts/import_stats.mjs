@@ -41,6 +41,7 @@ const heroes = (raw.heroes || []).map(h => ({
 })).filter(h => h.name);
 
 const comps = (raw.comps || []).map(c => ({
+  key: c.key || "",
   name: String(c.name || "").trim(),
   tier: TIERS.includes(c.tier) ? c.tier : "T2",
   top4: Number(c.top4) || 0,

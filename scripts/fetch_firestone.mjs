@@ -95,6 +95,7 @@ const comps = cs.compStats
       .slice(0, 3)
       .map(h => names[h.heroCardId]);
     return {
+      key: c.archetype,
       name: CN[c.archetype], tier: "T2",
       top4: +r.top4.toFixed(4), win: +r.win.toFixed(4),
       avg: +c.averagePlacement.toFixed(2), sample: c.dataPoints,
