@@ -81,6 +81,30 @@
     return h;
   }
 
+
+  var TRIBE_RACE = { aberration:"ABERRATION", elemental:"ELEMENTAL", demon:"DEMON", naga:"NAGA",
+    pirate:"PIRATE", beast:"BEAST", dragon:"DRAGON", mech:"MECHANICAL", murloc:"MURLOC",
+    undead:"UNDEAD", quilboar:"QUILBOAR" };
+
+  function tribeAllCards(t){
+    var race = TRIBE_RACE[t.id];
+    if(!race || typeof POOL === "undefined") return "";
+    var list = POOL.filter(function(c){ return (c.r || "").split("/").indexOf(race) >= 0; });
+    if(!list.length) return "";
+    var h = '<details class="tribe-all"><summary>该种族全部卡牌 <b>' + list.length + '</b> 张 <span>含历史卡 · 点开查看</span></summary>';
+    h += '<div class="tribe-grid">';
+    list.forEach(function(c){
+      h += '<a class="tc" href="cards.html?card=' + c.i + '" title="' + c.n + '">' +
+        '<span class="tc-img">' + (c.m ? '<img loading="lazy" src="pool/' + c.i + '.webp" alt="">' : '<i>?</i>') + '</span>' +
+        '<span class="tc-name">' + c.n + '</span>' +
+        '<span class="tc-meta">' + c.t + ' 本</span></a>';
+    });
+    h += '</div>';
+    h += '<a class="tribe-more" href="cards.html?race=' + race + '">在卡池页筛选「' + t.name + '」→</a>';
+    h += '</details>';
+    return h;
+  }
+
   function panelHTML(t, idx){
     var c = t.color;
     var soft = hexA(c, .17);
@@ -138,6 +162,7 @@
     t.mistakes.forEach(function(w){ h += '<li>'+w+'</li>'; });
     h +=       '</ul></div>';
     h +=     '</div>';
+    h +=     tribeAllCards(t);
     h +=   '</div>';
     h += '</article>';
     return h;

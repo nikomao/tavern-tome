@@ -73,6 +73,29 @@
   }
 
   var timer;
+  function showCard(c){
+    document.getElementById("pmName").textContent = c.n;
+    document.getElementById("pmMeta").textContent = metaText(c);
+    document.getElementById("pmText").textContent = c.x || "（无卡牌描述）";
+    var img = document.getElementById("pmImg");
+    if(c.m){ img.src = "pool/" + c.i + ".webp"; img.style.display = ""; }
+    else { img.removeAttribute("src"); img.style.display = "none"; }
+    var TRIBE_ID = { BEAST:"beast", DEMON:"demon", DRAGON:"dragon", ELEMENTAL:"elemental",
+      MECHANICAL:"mech", MURLOC:"murloc", NAGA:"naga", PIRATE:"pirate", QUILBOAR:"quilboar",
+      UNDEAD:"undead", ABERRATION:"aberration" };
+    var host = document.getElementById("pmTribes");
+    host.innerHTML = "";
+    (c.r || "").split("/").forEach(function(r){
+      var id = TRIBE_ID[r];
+      if(!id) return;
+      var a = document.createElement("a");
+      a.href = "index.html?tribe=" + id + "#tribes";
+      a.textContent = "看「" + (RACE[r] || r) + "」流派 →";
+      host.appendChild(a);
+    });
+    modal.hidden = false;
+  }
+
   function bind(){
     var search = document.getElementById("poolSearch");
     search.addEventListener("input", function(){
@@ -95,28 +118,9 @@
       var btn = e.target.closest(".pc");
       if(!btn) return;
       var c = rows[+btn.getAttribute("data-idx")];
-      if(!c) return;
-      document.getElementById("pmName").textContent = c.n;
-      document.getElementById("pmMeta").textContent = metaText(c);
-      document.getElementById("pmText").textContent = c.x || "（无卡牌描述）";
-      var img = document.getElementById("pmImg");
-      if(c.m){ img.src = "pool/" + c.i + ".webp"; img.style.display = ""; }
-      else { img.removeAttribute("src"); img.style.display = "none"; }
-      var TRIBE_ID = { BEAST:"beast", DEMON:"demon", DRAGON:"dragon", ELEMENTAL:"elemental",
-        MECHANICAL:"mech", MURLOC:"murloc", NAGA:"naga", PIRATE:"pirate", QUILBOAR:"quilboar",
-        UNDEAD:"undead", ABERRATION:"aberration" };
-      var host = document.getElementById("pmTribes");
-      host.innerHTML = "";
-      (c.r || "").split("/").forEach(function(r){
-        var id = TRIBE_ID[r];
-        if(!id) return;
-        var a = document.createElement("a");
-        a.href = "index.html?tribe=" + id + "#tribes";
-        a.textContent = "看「" + (RACE[r] || r) + "」流派 →";
-        host.appendChild(a);
-      });
-      modal.hidden = false;
+      if(c) showCard(c);
     });
+
     document.getElementById("pmClose").addEventListener("click", function(){ modal.hidden = true; });
     modal.addEventListener("click", function(e){ if(e.target === modal) modal.hidden = true; });
     document.addEventListener("keydown", function(e){ if(e.key === "Escape") modal.hidden = true; });
@@ -125,4 +129,18 @@
   document.getElementById("poolTotal").textContent = POOL.length;
   bind();
   apply();
+
+  try{
+    var params = new URLSearchParams(location.search);
+    var race = params.get("race");
+    if(race){
+      var sel = document.getElementById("poolRace");
+      if(sel){ sel.value = race; state.race = race; apply(); }
+    }
+    var cid = params.get("card");
+    if(cid){
+      var hit = POOL.filter(function(x){ return x.i === cid; })[0];
+      if(hit) showCard(hit);
+    }
+  }catch(e){}
 })();

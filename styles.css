@@ -929,3 +929,22 @@ body{
 }
 
 .plan-label{font-size:10.5px;letter-spacing:.14em;color:var(--dim);align-self:center;margin-right:4px}
+
+/* all cards of a tribe */
+.tribe-all{margin:0 28px 24px;border:1px solid rgba(226,180,95,.2);border-radius:12px;background:rgba(255,255,255,.02);overflow:hidden}
+.tribe-all summary{cursor:pointer;padding:14px 18px;font-size:13.5px;color:var(--gold-2);list-style:none;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tribe-all summary::-webkit-details-marker{display:none}
+.tribe-all summary::before{content:"▸";color:var(--gold);font-size:12px}
+.tribe-all[open] summary::before{content:"▾"}
+.tribe-all summary b{color:var(--ink);font-size:15px}
+.tribe-all summary span{font-size:11px;color:var(--dim)}
+.tribe-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:9px;padding:4px 18px 16px}
+.tc{display:flex;flex-direction:column;gap:4px;min-width:0;text-align:center}
+.tc-img{display:block;aspect-ratio:1/1;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.03);transition:.2s}
+.tc-img img{width:100%;height:100%;object-fit:cover;display:block}
+.tc:hover .tc-img{border-color:var(--gold-dim);transform:translateY(-2px)}
+.tc-name{font-size:11px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tc-meta{font-size:9.5px;color:var(--dim)}
+.tribe-more{display:inline-block;margin:0 18px 16px;font-size:12px;color:var(--gold)}
+@media (max-width:900px){ .tribe-grid{grid-template-columns:repeat(5,minmax(0,1fr))} }
+@media (max-width:640px){ .tribe-grid{grid-template-columns:repeat(4,minmax(0,1fr));padding:0 12px 14px} .tribe-all{margin:0 16px 18px} }
