@@ -33,6 +33,9 @@ jobs:
       - name: Fetch Firestone stats
         run: node scripts/fetch_firestone.mjs ${{ github.event.inputs.mmr || '100' }}
 
+      - name: Diff against previous snapshot
+        run: node scripts/diff_stats.mjs
+
       - name: Import into stats.js
         run: node scripts/import_stats.mjs stats-input.json
 
@@ -55,3 +58,5 @@ jobs:
           add-paths: |
             stats.js
             stats-input.json
+            stats-change.js
+            stats-prev.json

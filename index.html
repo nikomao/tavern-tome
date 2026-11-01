@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://nikomao.github.io/tavern-tome/" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-<link rel="stylesheet" href="styles.css?v=20261101g" />
+<link rel="stylesheet" href="styles.css?v=20261101h" />
 </head>
 <body>
 
@@ -31,6 +31,7 @@
       <a href="#meta">周报</a>
       <a href="#finder">反查</a>
       <a href="cards.html">卡池</a>
+      <button type="button" class="search-open" id="searchOpen" aria-label="搜索">搜索 <span>⌘K</span></button>
     </nav>
     <div class="ver">v37.0</div>
   </div>
@@ -586,6 +587,8 @@
   </div>
   <div class="stats-badge" id="metaStatsBadge"></div>
 
+  <div class="stats-change" id="statsChange" hidden></div>
+
   <div class="tavern-bulletin">
     <span class="tb-pin"></span>
     <span class="tb-label">酒馆告示</span>
@@ -753,12 +756,21 @@
   </div>
 </div>
 
-<script src="data.js?v=20261101g"></script>
-<script src="pool.js?v=20261101g"></script>
-<script src="stats.js?v=20261101g"></script>
-<script src="comp-notes.js?v=20261101g"></script>
-<script src="extra-cards.js?v=20261101g"></script>
-<script src="cards.js?v=20261101g"></script>
-<script src="app.js?v=20261101g"></script>
+<div class="search-overlay" id="searchOverlay" hidden>
+  <div class="search-box" role="dialog" aria-label="全站搜索">
+    <input id="searchInput" type="search" placeholder="搜卡牌 / 英雄 / 阵容 / 术语…" autocomplete="off" spellcheck="false">
+    <div class="search-list" id="searchList"></div>
+    <p class="search-hint">↑↓ 选择 · Enter 打开 · Esc 关闭</p>
+  </div>
+</div>
+
+<script src="data.js?v=20261101h"></script>
+<script src="pool.js?v=20261101h"></script>
+<script src="stats-change.js?v=20261101h"></script>
+<script src="stats.js?v=20261101h"></script>
+<script src="comp-notes.js?v=20261101h"></script>
+<script src="extra-cards.js?v=20261101h"></script>
+<script src="cards.js?v=20261101h"></script>
+<script src="app.js?v=20261101h"></script>
 </body>
 </html>

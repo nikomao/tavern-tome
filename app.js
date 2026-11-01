@@ -1233,6 +1233,8 @@
 /* ---------- hero deep link + comp jump ---------- */
 (function(){
   function jumpToComp(key){
+    // exposed for the global search
+    window.__jumpComp = jumpToComp;
     var card = document.querySelector('.comp-card[data-comp-key="' + key + '"]');
     if(!card){
       var more = document.querySelector(".comp-more");
@@ -1262,4 +1264,171 @@
       if(f) setTimeout(function(){ f.scrollIntoView({ block: "start" }); }, 300);
     }
   }
+})();
+
+
+/* ---------- weekly change ---------- */
+(function(){
+  var host = document.getElementById("statsChange");
+  if(!host || typeof STATS_CHANGE === "undefined" || !STATS_CHANGE) return;
+  var c = STATS_CHANGE;
+  function fmt(n){ return n ? Math.round(n / 10000) + " 万" : "-"; }
+  var range = (c.from && c.to && c.from !== c.to) ? (c.from + " → " + c.to) : "对比上一版";
+  var h = '<div class="sc-head">本周变化 <span>' + range +
+    " · 样本 " + fmt(c.sampleFrom) + " → " + fmt(c.sampleTo) + '</span></div>';
+
+  var rows = [];
+  (c.comps || []).forEach(function(x){
+    var up = x.rankTo < x.rankFrom;
+    rows.push('<div class="sc-row"><span class="' + (up ? "sc-up" : "sc-down") + '">' + (up ? "↑" : "↓") + "</span>" +
+      '<span class="sc-tag">阵容</span><b>' + x.name + '</b><span>#' + x.rankFrom + " → #" + x.rankTo +
+      (x.avgFrom === x.avgTo ? "" : "（均位 " + x.avgFrom + " → " + x.avgTo + "）") + "</span></div>");
+  });
+  (c.heroes || []).forEach(function(x){
+    var up = x.rankTo < x.rankFrom;
+    rows.push('<div class="sc-row"><span class="' + (up ? "sc-up" : "sc-down") + '">' + (up ? "↑" : "↓") + "</span>" +
+      '<span class="sc-tag">英雄</span><b>' + x.name + '</b><span>#' + x.rankFrom + " → #" + x.rankTo +
+      (x.avgFrom === x.avgTo ? "" : "（均位 " + x.avgFrom + " → " + x.avgTo + "）") + "</span></div>");
+  });
+
+  if(c.first) h += '<div class="sc-row">首次接入真实数据，已记录基线；下周开始显示升降。</div>';
+  else if(!rows.length) h += '<div class="sc-row">本周阵容与英雄排名无显著变化。</div>';
+  else h += rows.join("");
+
+  host.innerHTML = h;
+  host.hidden = false;
+})();
+
+/* ---------- global search ---------- */
+(function(){
+  var overlay = document.getElementById("searchOverlay");
+  var input = document.getElementById("searchInput");
+  var list = document.getElementById("searchList");
+  if(!overlay || !input || !list) return;
+
+  var idx = null, active = -1, shown = [];
+
+  function buildIndex(){
+    var items = [], seen = {};
+    function add(type, name, sub, href, data){
+      if(!name || seen[type + "|" + name]) return;
+      seen[type + "|" + name] = 1;
+      items.push({ type: type, name: name, sub: sub || "", href: href || "", data: data || {} });
+    }
+    var RACE_CN = { BEAST:"野兽", DEMON:"恶魔", DRAGON:"龙", ELEMENTAL:"元素", MECHANICAL:"机械",
+      MURLOC:"鱼人", NAGA:"纳迦", PIRATE:"海盗", QUILBOAR:"野猪人", UNDEAD:"亡灵", ABERRATION:"畸变怪" };
+    if(typeof POOL !== "undefined"){
+      POOL.forEach(function(c){
+        var races = String(c.r || "").split("/").map(function(r){ return RACE_CN[r] || r; }).filter(Boolean).join("/");
+        add("卡牌", c.n, (c.t != null ? c.t + " 本 · " : "") + races, "cards.html?card=" + c.i, { id: c.i });
+      });
+    }
+    if(typeof STATS !== "undefined" && STATS.heroComps){
+      Object.keys(STATS.heroComps).forEach(function(n){
+        var top = STATS.heroComps[n][0];
+        add("英雄", n, top ? "推荐 " + top.name : "", "", { hero: n });
+      });
+    }
+    if(typeof STATS !== "undefined" && STATS.comps){
+      STATS.comps.forEach(function(c){
+        add("阵容", c.name, "均位 " + c.avg + " · " + c.tier, "", { comp: c.key });
+      });
+    }
+    if(typeof GLOSSARY !== "undefined"){
+      GLOSSARY.forEach(function(g){ add("术语", g[0], g[1], "#glossary"); });
+    }
+    [["start","入门"],["laws","三条定律"],["math","数学"],["positioning","站位"],["tribes","种族"],
+     ["heroes","英雄与饰品"],["meta","周报"],["finder","阵容反查"],["glossary","术语"]].forEach(function(s){
+      add("章节", s[1], "", "#" + s[0]);
+    });
+    return items;
+  }
+
+  function open(){
+    if(!idx) idx = buildIndex();
+    overlay.hidden = false;
+    input.value = "";
+    render("");
+    setTimeout(function(){ input.focus(); }, 20);
+  }
+  function close(){ overlay.hidden = true; active = -1; }
+
+  function render(q){
+    q = String(q || "").trim().toLowerCase();
+    var pool = idx;
+    if(q){
+      pool = idx.filter(function(x){ return x.name.toLowerCase().indexOf(q) >= 0; });
+      pool.sort(function(a, b){
+        var as = a.name.toLowerCase().indexOf(q) === 0 ? 0 : 1;
+        var bs = b.name.toLowerCase().indexOf(q) === 0 ? 0 : 1;
+        return as - bs || a.name.length - b.name.length;
+      });
+    }
+    shown = pool.slice(0, 12);
+    active = shown.length ? 0 : -1;
+    if(!shown.length){
+      list.innerHTML = '<div class="sr-empty">没找到「' + q + '」相关的内容</div>';
+      return;
+    }
+    list.innerHTML = shown.map(function(x, i){
+      return '<a class="sr' + (i === 0 ? " on" : "") + '" href="' + (x.href || "#") + '" data-i="' + i + '">' +
+        '<span class="sr-type">' + x.type + '</span><span class="sr-name">' + x.name + '</span>' +
+        '<span class="sr-sub">' + x.sub + '</span></a>';
+    }).join("");
+  }
+
+  function choose(i){
+    var x = shown[i];
+    if(!x) return;
+    if(x.data.comp){
+      close();
+      var link = document.querySelector('[data-comp="' + x.data.comp + '"]');
+      if(link) link.click();
+      else if(window.__jumpComp) window.__jumpComp(x.data.comp);
+      return;
+    }
+    if(x.data.hero){
+      close();
+      var sel = document.getElementById("finderHero");
+      if(sel){ sel.value = x.data.hero; sel.dispatchEvent(new Event("change", { bubbles: true })); }
+      var f = document.getElementById("finder");
+      if(f) f.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+    close();
+    if(x.href) location.href = x.href;
+  }
+
+  function setActive(i){
+    if(!shown.length) return;
+    active = (i + shown.length) % shown.length;
+    Array.prototype.forEach.call(list.children, function(el, k){ el.classList.toggle("on", k === active); });
+    var el = list.children[active];
+    if(el && el.scrollIntoView) el.scrollIntoView({ block: "nearest" });
+  }
+
+  input.addEventListener("input", function(){ render(input.value); });
+  input.addEventListener("keydown", function(e){
+    if(e.key === "ArrowDown"){ e.preventDefault(); setActive(active + 1); }
+    else if(e.key === "ArrowUp"){ e.preventDefault(); setActive(active - 1); }
+    else if(e.key === "Enter"){ e.preventDefault(); choose(active); }
+    else if(e.key === "Escape"){ close(); }
+  });
+  list.addEventListener("click", function(e){
+    var a = e.target.closest ? e.target.closest(".sr") : null;
+    if(!a) return;
+    e.preventDefault();
+    choose(+a.getAttribute("data-i"));
+  });
+  overlay.addEventListener("click", function(e){ if(e.target === overlay) close(); });
+
+  var btn = document.getElementById("searchOpen");
+  if(btn) btn.addEventListener("click", open);
+
+  document.addEventListener("keydown", function(e){
+    var tag = (document.activeElement && document.activeElement.tagName) || "";
+    if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k"){ e.preventDefault(); open(); return; }
+    if(e.key === "/" && tag !== "INPUT" && tag !== "TEXTAREA" && overlay.hidden){ e.preventDefault(); open(); return; }
+    if(e.key === "Escape" && !overlay.hidden) close();
+  });
 })();
