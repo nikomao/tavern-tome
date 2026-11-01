@@ -5,7 +5,7 @@
 
 [![Deploy](https://github.com/nikomao/tavern-tome/actions/workflows/pages.yml/badge.svg)](https://github.com/nikomao/tavern-tome/actions/workflows/pages.yml)
 
-[在线预览](https://nikomao.github.io/tavern-tome/) · [版本快照](#版本) · [MIT / CC BY-NC-SA](#许可)
+[在线预览](https://nikom-blog.org/) · [版本快照](#版本) · [MIT / CC BY-NC-SA](#许可)
 
 ![页面预览](preview.png)
 
