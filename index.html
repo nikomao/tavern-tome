@@ -66,35 +66,103 @@
     <div class="sec-no">01</div>
     <div>
       <h2>三条底层定律</h2>
-      <p class="sub">先把世界观立住，后面的每个种族都只是这三条定律的不同写法。</p>
+      <p class="sub">先别背术语。这三条其实是三句大白话，配三个能直接看懂的小动画。</p>
     </div>
   </div>
 
-  <div class="law-grid">
-    <article class="law-card">
-      <div class="law-num">I</div>
-      <h3>加法决定下限，乘法决定上限</h3>
-      <p>每回合 <em>+2/+2</em> 是线性的，它保证你活着；每回合 <em>×2</em> 是指数的，它决定你吃鸡。所有「上万身材」的对局，背后都有一条<strong>乘数链</strong>，而不是某张单卡特别超模。</p>
-      <div class="law-formula">S = S₀ + a·n　vs　S = S₀ · 2<sup>k</sup></div>
-    </article>
-    <article class="law-card">
-      <div class="law-num">II</div>
-      <h3>经济不是钱，是触发次数</h3>
-      <p>1 枚铸币 = 1 次购买 = 1 次战吼 / 亡语 / 塑造 / 磁力触发。所谓「电表倒转」，本质是把每回合的触发次数从 10 次拉到 30 次——在指数曲线上，这是把时间轴压缩了三分之二。</p>
-      <div class="law-formula">成长速度 = 触发频率 × 单次增幅 × 乘数</div>
-    </article>
-    <article class="law-card">
-      <div class="law-num">III</div>
-      <h3>站位是攻击次数的分配方案</h3>
-      <p>一回合里，你能决定的攻击次数是有限的（随从数量、先手权、嘲讽）。站位的全部意义，是让「最该先出手的单位」先出手，让「最不能死的单位」晚挨打。</p>
-      <div class="law-formula">先手权 = 随从数多者先攻（同数随机）</div>
-    </article>
-  </div>
+  <article class="lesson">
+    <div class="lesson-head">
+      <span class="lesson-no">定律一</span>
+      <h3>加法是走路，乘法是滚雪球</h3>
+      <p class="lesson-plain">每回合固定加一点，你只是慢慢变强；每回合把现有的数字翻一倍，你会在某一回合突然「起飞」。</p>
+    </div>
 
-  <div class="callout">
-    <span class="callout-tag">核心</span>
-    <p>如果你只记一句话：<strong>把有限的格子，用来放「乘数」，而不是放「加法」。</strong> 一个铜须、一个瑞文、一个巴琳达，价值远高于三张 +5/+5 的白板大哥。</p>
-  </div>
+    <div class="demo race" data-demo="race">
+      <div class="race-top">
+        <div class="race-side">
+          <span class="rs-tag">加法</span>
+          <span class="rs-desc">每回合 +6</span>
+          <b class="rs-num" data-race-add>4</b>
+        </div>
+        <div class="race-round">第 <b data-race-round>0</b> 回合</div>
+        <div class="race-side right">
+          <span class="rs-tag hot">乘法</span>
+          <span class="rs-desc">每回合 ×2</span>
+          <b class="rs-num hot" data-race-mul>4</b>
+        </div>
+      </div>
+      <div class="race-bars">
+        <div class="rb"><i data-bar-add></i></div>
+        <div class="rb"><i class="hot" data-bar-mul></i></div>
+      </div>
+      <div class="demo-foot">
+        <button type="button" class="demo-btn" data-race-play>▶ 播放 10 回合</button>
+        <span class="demo-note" data-race-note>同样的 4/4 起手，第 5 回合只差 4 倍，第 10 回合差 64 倍。</span>
+      </div>
+    </div>
+
+    <p class="lesson-take"><b>翻译成人话：</b>看到「翻倍 / 触发两次 / 属性翻倍」，优先级永远高于「+2/+2」。前者改的是曲线，后者改的只是一个点。</p>
+  </article>
+
+  <article class="lesson">
+    <div class="lesson-head">
+      <span class="lesson-no">定律二</span>
+      <h3>一枚铸币，就是一次触发</h3>
+      <p class="lesson-plain">你花的每一块钱，最后都会变成「效果触发一次」。触发次数越多，乘数链跑得越快。</p>
+    </div>
+
+    <div class="demo trigger" data-demo="trigger">
+      <div class="tg-grid">
+        <div class="tg-case">
+          <div class="tg-title">普通回合 <b>10 次触发</b></div>
+          <div class="tg-dots" data-dots-a></div>
+          <div class="tg-val" data-val-a>4/4</div>
+        </div>
+        <div class="tg-case hot">
+          <div class="tg-title">电表倒转 <b>30 次触发</b></div>
+          <div class="tg-dots" data-dots-b></div>
+          <div class="tg-val hot" data-val-b>4/4</div>
+        </div>
+      </div>
+      <div class="demo-foot">
+        <button type="button" class="demo-btn" data-tg-play>▶ 播放一回合</button>
+        <span class="demo-note" data-tg-note>同样一次 +3/+3：10 次是 +30，30 次是 +90。</span>
+      </div>
+    </div>
+
+    <p class="lesson-take"><b>翻译成人话：</b>「电表倒转」不是贪钱，是在给乘数链加燃料。触发次数翻三倍，你到达上万的速度也快三倍。</p>
+  </article>
+
+  <article class="lesson">
+    <div class="lesson-head">
+      <span class="lesson-no">定律三</span>
+      <h3>站位，是让对手打错人</h3>
+      <p class="lesson-plain">对面先打谁，不取决于谁最强，取决于你把他放在第几格。放错一格，一万身材也可能第一下就没了。</p>
+    </div>
+
+    <div class="demo board" data-demo="board">
+      <div class="bc-grid">
+        <div class="bc-col">
+          <div class="bc-head"><span class="bad">坏站位</span><em>大哥放最前面</em><b class="bc-arrow">← 对手从这里打</b></div>
+          <div class="bc-row" data-board="bad">
+            <i class="bslot carry">大哥</i><i class="bslot engine">铜须</i><i class="bslot util">巴琳达</i><i class="bslot small">小怪</i><i class="bslot small">小怪</i><i class="bslot small">小怪</i><i class="bslot small">补刀</i>
+          </div>
+        </div>
+        <div class="bc-col">
+          <div class="bc-head"><span class="good">好站位</span><em>小怪先挨打</em><b class="bc-arrow">← 对手从这里打</b></div>
+          <div class="bc-row" data-board="good">
+            <i class="bslot small">小怪</i><i class="bslot tank">嘲讽</i><i class="bslot tank">复生</i><i class="bslot carry">大哥</i><i class="bslot engine">铜须</i><i class="bslot util">毒</i><i class="bslot small">补刀</i>
+          </div>
+        </div>
+      </div>
+      <div class="demo-foot">
+        <button type="button" class="demo-btn" data-bd-play>▶ 播放对手进攻</button>
+        <span class="demo-note" data-bd-note>对手从左边开始，连续打三次。</span>
+      </div>
+    </div>
+
+    <p class="lesson-take"><b>翻译成人话：</b>站位的意义，是把对手宝贵的攻击次数，浪费在你的小怪和嘲讽上。</p>
+  </article>
 </section>
 
 <!-- ================= 数学 ================= -->
@@ -103,77 +171,53 @@
     <div class="sec-no">02</div>
     <div>
       <h2>为什么能长到上千、上万</h2>
-      <p class="sub">不是玄学，是复利。看懂这一节，你就知道每一局该找什么牌。</p>
+      <p class="sub">数学只有一句话：加法是一条直线，乘法是一条往上翘的曲线。下面按顺序看三块。</p>
     </div>
   </div>
 
-  <div class="math-layout">
-    <div class="math-text">
-      <h3>两种增长，天差地别</h3>
-      <p><strong>线性增长</strong>：每回合固定加一点。20 回合后，4/4 变成 124/124。很稳，但永远追不上成型阵容。</p>
-      <p><strong>复利增长</strong>：每回合把「现有的身材」再乘一次。同样 20 回合，4/4 会变成 <b class="hl">4,194,304</b>。差别不在努力程度，而在<strong>增长方式</strong>。</p>
-      <p>复利只需要三个条件同时成立：</p>
-      <ol class="cond">
-        <li><b>底数 &gt; 1</b>　场上至少有一个「翻倍 / 复制 / 双触发」的引擎。</li>
-        <li><b>频率 &gt; 1</b>　每回合不止触发一次，而是靠经济反复触发。</li>
-        <li><b>时间足够</b>　活到 9 回合以后，让指数跑起来。</li>
-      </ol>
-      <p class="muted">三者缺一，你得到的就是一条斜率很小的直线——这就是「明明很胡却只有烂分」的数学解释。</p>
-    </div>
-
-    <div class="math-table-wrap">
-      <table class="mini-table">
-        <thead><tr><th>回合</th><th>线性 +6/回合</th><th>复利 ×2/回合</th></tr></thead>
-        <tbody>
-          <tr><td>0</td><td>4</td><td>4</td></tr>
-          <tr><td>5</td><td>34</td><td>128</td></tr>
-          <tr><td>10</td><td>64</td><td>4,096</td></tr>
-          <tr><td>15</td><td>94</td><td>131,072</td></tr>
-          <tr><td>20</td><td>124</td><td class="hot">4,194,304</td></tr>
-        </tbody>
-      </table>
-      <p class="table-note">同样的起点、同样的回合数。第 5 回合只差 4 倍，第 15 回合差 1394 倍。</p>
-    </div>
+  <div class="math-plain">
+    <b>一分钟版：</b>4/4 起手，每回合翻一倍。第 5 回合 128，第 10 回合 4096，第 13 回合 32768。
+    你要找的不是「更大的数字」，而是「更多的 ×2 次数」。
   </div>
 
-  <h3 class="block-title">乘数链：真正让你上万的四类引擎</h3>
-  <div class="engine-grid">
-    <article class="engine">
-      <div class="engine-ico">×2</div>
-      <h4>双触发引擎</h4>
-      <p><b>铜须</b>（战吼触发两次）、<b>瑞文</b>（亡语触发两次）、<b>巴琳达</b>（塑造法术触发两次）。</p>
-      <p class="engine-math">效果：把「每次 +X」直接变成「每次 +2X」，等于把整条曲线抬高一倍。</p>
-    </article>
-    <article class="engine">
-      <div class="engine-ico">×2<sup>n</sup></div>
-      <h4>翻倍引擎</h4>
-      <p><b>双线缝针</b>：每回合把一张塑造法术锁进手牌，使一个随从<strong>属性翻倍</strong>。配合巴琳达就是每回合 ×4。</p>
-      <p class="engine-math">效果：这是唯一能把 4/4 直接推成 65536/65536 的引擎，也是「上万身材」最直接的来源。</p>
-    </article>
-    <article class="engine">
-      <div class="engine-ico">∞</div>
-      <h4>永久化引擎</h4>
-      <p><b>诗心龙</b>：战斗中的属性增益被保留下来；<b>合唱鱼人</b>：加身材但不掉血；<b>恩佐斯</b>：把身材分配出去。</p>
-      <p class="engine-math">效果：把「一次性 buff」变成「永久资产」，让每一场战斗都在为下一场复利。</p>
-    </article>
-    <article class="engine">
-      <div class="engine-ico">↻</div>
-      <h4>经济引擎</h4>
-      <p><b>火药运输工</b>、<b>苦情民谣歌手</b>、<b>死海破坏者</b>、<b>铜须 + 战吼</b> 组成的「电表倒转」。</p>
-      <p class="engine-math">效果：不直接加身材，但把「每回合触发 10 次」变成 30 次——指数曲线的斜率由它决定。</p>
-    </article>
+  <div class="ds" data-demo="double">
+    <div class="ds-head">
+      <h3>从 4/4 翻到 32768</h3>
+      <p>每翻一次，数字 ×2。第 10 次是 4096，第 13 次是 32768——这就是「上万」的全部秘密。</p>
+    </div>
+    <div class="ds-track" data-ds-track></div>
+    <div class="ds-foot"><span>第 0 次 · 4/4</span><span class="hot">第 13 次 · 32768/32768</span></div>
+  </div>
+
+  <div class="chain">
+    <h3>乘数链：三个引擎叠在一起</h3>
+    <p class="chain-sub">同一回合里，每个「×2」都乘在上一个结果上。所以引擎之间不是相加，是相乘。</p>
+    <div class="chain-flow">
+      <div class="chain-node base"><b>4/4</b><span>起手</span></div>
+      <div class="chain-op"><b>×2</b><span>铜须</span></div>
+      <div class="chain-node"><b>8/8</b><span>触发两次</span></div>
+      <div class="chain-op"><b>×2</b><span>瑞文</span></div>
+      <div class="chain-node"><b>16/16</b><span>亡语两次</span></div>
+      <div class="chain-op"><b>×2</b><span>双线缝针</span></div>
+      <div class="chain-node hot"><b>32/32</b><span>一回合 ×8</span></div>
+    </div>
   </div>
 
   <div class="sim" id="sim">
     <div class="sim-head">
       <div>
         <h3>成长模拟器</h3>
-        <p>拖动滑块，亲眼看着「加法」被「乘法」甩开。</p>
+        <p>拖动滑块，或者点一个预设，亲眼看着「加法」被「乘法」甩开。</p>
       </div>
       <div class="scale-toggle" id="scaleToggle" role="group" aria-label="坐标轴">
         <button data-scale="linear" class="on">线性</button>
         <button data-scale="log">对数</button>
       </div>
+    </div>
+    <div class="sim-presets">
+      <button type="button" data-preset="plain">只加 6</button>
+      <button type="button" data-preset="brann">铜须：每回合多一次</button>
+      <button type="button" data-preset="double">双线缝针：每回合 ×4</button>
     </div>
     <div class="sim-body">
       <div class="sim-controls">
@@ -200,6 +244,19 @@
         <div class="chart-legend"><span class="lg linear"></span>加法 <span class="lg compound"></span>复利 <span class="lg-hint">· 两条线的纵轴差距，就是「乘数」的价值</span></div>
       </div>
     </div>
+  </div>
+
+  <h3 class="block-title">查表：不同回合数的差距</h3>
+  <div class="table-wrap">
+    <table class="mini-table">
+      <thead><tr><th>回合</th><th>线性 +6/回合</th><th>复利 ×2/回合</th><th>差多少倍</th></tr></thead>
+      <tbody>
+        <tr><td>5</td><td>34</td><td>128</td><td>3.8×</td></tr>
+        <tr><td>10</td><td>64</td><td>4,096</td><td>64×</td></tr>
+        <tr><td>15</td><td>94</td><td>131,072</td><td>1,394×</td></tr>
+        <tr><td>20</td><td>124</td><td class="hot">4,194,304</td><td class="hot">33,825×</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="callout danger">

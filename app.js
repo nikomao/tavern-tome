@@ -438,4 +438,223 @@
       rt = setTimeout(function(){ fitCanvas(); draw(); }, 120);
     });
   }
+
+  /* ---------- lesson demos (01 / 02) ---------- */
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function onceVisible(el, cb){
+    if(!el) return;
+    if(reduceMotion || !("IntersectionObserver" in window)){ cb(); return; }
+    var done = false;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting && !done){ done = true; io.disconnect(); cb(); }
+      });
+    }, { threshold: 0.3 });
+    io.observe(el);
+  }
+
+  /* 定律一：加法 vs 乘法 */
+  (function(){
+    var root = document.querySelector('[data-demo="race"]');
+    if(!root) return;
+    var addEl = root.querySelector("[data-race-add]");
+    var mulEl = root.querySelector("[data-race-mul]");
+    var roundEl = root.querySelector("[data-race-round]");
+    var barAdd = root.querySelector("[data-bar-add]");
+    var barMul = root.querySelector("[data-bar-mul]");
+    var note = root.querySelector("[data-race-note]");
+    var btn = root.querySelector("[data-race-play]");
+    var a = 4, m = 4, r = 0, timer = null, token = 0;
+    var MAX = 10, LOGMAX = Math.log10(8192);
+
+    function barW(v){ return Math.max(2, Math.min(100, Math.log10(Math.max(v, 1)) / LOGMAX * 100)); }
+    function render(){
+      addEl.textContent = a;
+      mulEl.textContent = m.toLocaleString("en-US");
+      roundEl.textContent = r;
+      barAdd.style.width = barW(a) + "%";
+      barMul.style.width = barW(m) + "%";
+    }
+    function reset(){
+      clearTimeout(timer); token++; a = 4; m = 4; r = 0;
+      note.textContent = "同样的 4/4 起手，第 5 回合只差 4 倍，第 10 回合差 64 倍。";
+      btn.textContent = "▶ 播放 10 回合";
+      render();
+    }
+    function step(my){
+      if(my !== token) return;
+      if(r >= MAX){
+        note.innerHTML = "10 回合后：<b>64</b> vs <b>4,096</b>，相差 64 倍。";
+        btn.textContent = "↻ 再播一次";
+        return;
+      }
+      r++; a += 6; m *= 2; render();
+      timer = setTimeout(function(){ step(my); }, 420);
+    }
+    function play(){
+      reset();
+      var my = token;
+      btn.disabled = true;
+      timer = setTimeout(function(){ btn.disabled = false; step(my); }, 180);
+    }
+    btn.addEventListener("click", play);
+    reset();
+    onceVisible(root, play);
+  })();
+
+  /* 定律二：铸币 = 触发次数 */
+  (function(){
+    var root = document.querySelector('[data-demo="trigger"]');
+    if(!root) return;
+    var dotsA = root.querySelector("[data-dots-a]");
+    var dotsB = root.querySelector("[data-dots-b]");
+    var valA = root.querySelector("[data-val-a]");
+    var valB = root.querySelector("[data-val-b]");
+    var note = root.querySelector("[data-tg-note]");
+    var btn = root.querySelector("[data-tg-play]");
+    var timers = [];
+
+    function build(host, n){
+      host.innerHTML = "";
+      for(var i = 0; i < n; i++){
+        var d = document.createElement("span");
+        d.className = "tg-dot";
+        host.appendChild(d);
+      }
+    }
+    build(dotsA, 10); build(dotsB, 30);
+
+    function reset(){
+      timers.forEach(clearTimeout); timers = [];
+      Array.prototype.forEach.call(root.querySelectorAll(".tg-dot"), function(d){ d.classList.remove("on"); });
+      valA.textContent = "4/4"; valB.textContent = "4/4";
+      note.textContent = "同样一次 +3/+3：10 次是 +30，30 次是 +90。";
+      btn.disabled = false;
+    }
+    function play(){
+      reset();
+      btn.disabled = true;
+      var da = dotsA.children, db = dotsB.children;
+      for(var i = 0; i < 10; i++){
+        (function(i){
+          timers.push(setTimeout(function(){
+            da[i].classList.add("on");
+            valA.textContent = (4 + (i + 1) * 3) + "/" + (4 + (i + 1) * 3);
+          }, 120 + i * 110));
+        })(i);
+      }
+      for(var j = 0; j < 30; j++){
+        (function(j){
+          timers.push(setTimeout(function(){
+            db[j].classList.add("on");
+            valB.textContent = (4 + (j + 1) * 3) + "/" + (4 + (j + 1) * 3);
+            if(j === 29){
+              btn.disabled = false;
+              note.innerHTML = "10 次：<b>34/34</b>；30 次：<b>94/94</b>。如果每次是 ×2，10 次是 1024，30 次是 10.7 亿。";
+            }
+          }, 160 + j * 42));
+        })(j);
+      }
+    }
+    btn.addEventListener("click", play);
+    reset();
+    onceVisible(root, function(){ if(!reduceMotion) play(); });
+  })();
+
+  /* 定律三：站位 */
+  (function(){
+    var root = document.querySelector('[data-demo="board"]');
+    if(!root) return;
+    var bad = root.querySelector('[data-board="bad"]');
+    var good = root.querySelector('[data-board="good"]');
+    var note = root.querySelector("[data-bd-note]");
+    var btn = root.querySelector("[data-bd-play]");
+    var timers = [];
+
+    function reset(){
+      timers.forEach(clearTimeout); timers = [];
+      Array.prototype.forEach.call(root.querySelectorAll(".bslot"), function(s){
+        s.classList.remove("hit", "dead");
+      });
+      note.textContent = "对手从左边开始，连续打三次。";
+      btn.disabled = false;
+    }
+    function play(){
+      reset();
+      btn.disabled = true;
+      for(var i = 0; i < 3; i++){
+        (function(i){
+          timers.push(setTimeout(function(){
+            var b = bad.children[i], g = good.children[i];
+            b.classList.add("hit"); g.classList.add("hit");
+            timers.push(setTimeout(function(){
+              b.classList.add("dead"); g.classList.add("dead");
+            }, 380));
+          }, 220 + i * 900));
+        })(i);
+      }
+      timers.push(setTimeout(function(){
+        note.innerHTML = "坏站位：<b>大哥、铜须、巴琳达</b>全没了；好站位：只死了三个小怪，<b>大哥和铜须还活着</b>。";
+        btn.disabled = false;
+      }, 220 + 3 * 900));
+    }
+    btn.addEventListener("click", play);
+    reset();
+    onceVisible(root, function(){ if(!reduceMotion) play(); });
+  })();
+
+  /* 02：翻倍积木 */
+  (function(){
+    var track = document.querySelector("[data-ds-track]");
+    if(!track) return;
+    var values = [4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768];
+    var html = "";
+    values.forEach(function(v, i){
+      html += '<div class="ds-tile' + (i === values.length - 1 ? " hot" : "") + '"><b>' +
+              v.toLocaleString("en-US") + '</b><span>第 ' + i + ' 次</span></div>';
+    });
+    track.innerHTML = html;
+    var tiles = track.children;
+    onceVisible(track, function(){
+      if(reduceMotion){
+        Array.prototype.forEach.call(tiles, function(t){ t.classList.add("on"); });
+        return;
+      }
+      Array.prototype.forEach.call(tiles, function(t, i){
+        setTimeout(function(){ t.classList.add("on"); }, 120 + i * 110);
+      });
+    });
+  })();
+
+  /* 02：乘数链逐段点亮 */
+  (function(){
+    var flow = document.querySelector(".chain-flow");
+    if(!flow) return;
+    onceVisible(flow, function(){ flow.classList.add("reveal"); });
+  })();
+
+  /* 02：模拟器预设 */
+  (function(){
+    var presets = {
+      plain:  { base: 4, add: 6,  mult: 0, turns: 10 },
+      brann:  { base: 4, add: 6,  mult: 1, turns: 10 },
+      double: { base: 4, add: 6,  mult: 2, turns: 8 }
+    };
+    var buttons = document.querySelectorAll("[data-preset]");
+    if(!buttons.length) return;
+    Array.prototype.forEach.call(buttons, function(btn){
+      btn.addEventListener("click", function(){
+        var cfg = presets[btn.getAttribute("data-preset")];
+        if(!cfg) return;
+        var b = document.getElementById("base"), a = document.getElementById("add");
+        var m = document.getElementById("mult"), t = document.getElementById("turns");
+        if(!b || !a || !m || !t) return;
+        b.value = cfg.base; a.value = cfg.add; m.value = cfg.mult; t.value = cfg.turns;
+        b.dispatchEvent(new Event("input", { bubbles: true }));
+        Array.prototype.forEach.call(buttons, function(x){ x.classList.toggle("on", x === btn); });
+      });
+    });
+  })();
+
 })();
