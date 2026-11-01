@@ -117,12 +117,13 @@ python scripts/fetch_cards.py
 
 ## 数据源与统计
 
-页面里的英雄/周报默认是**社区整理（非统计）**，会有明确标注。接入真实对局数据后会自动切换成统计口径。
+页面里的英雄/周报现在接入 **Firestone / ZeroToHeroes** 的公开统计（每补丁更新），并标注数据日期、分段与样本量。
 
 ```bash
-# 1) 准备一个统计 JSON（示例见 scripts/import_stats.mjs 顶部注释）
-# 2) 写入 stats.js
-node scripts/import_stats.mjs my-stats.json
+# 拉取最新统计（可用 100/50/25/10/1 指定 MMR 分位）
+node scripts/fetch_firestone.mjs 100
+# 写入 stats.js
+node scripts/import_stats.mjs stats-input.json
 ```
 
 字段：`source / url / fetchedAt / bracket / region / sample`，

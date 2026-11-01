@@ -955,3 +955,18 @@ body{
 .stats-badge.manual{color:var(--dim);border-color:var(--line-2);background:rgba(255,255,255,.02)}
 .stats-badge.live{color:#9fd8b6;border-color:rgba(111,211,154,.35);background:rgba(111,211,154,.08)}
 .stats-badge b{color:var(--ink)}
+
+/* data-driven comp board */
+.comp-stats{margin-bottom:26px}
+.cs-head{font-size:15px;color:var(--gold-2);margin-bottom:12px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.cs-head span{font-size:11px;color:var(--dim);font-weight:400}
+.meta-sub{font-size:14px;letter-spacing:.08em;color:var(--muted);margin:0 0 14px;padding-left:10px;border-left:2px solid var(--gold-dim)}
+.comp-stats .meta-table{min-width:680px}
+
+#heroList{max-height:640px;overflow:auto;padding-right:6px}
+#heroList::-webkit-scrollbar{width:6px}
+#heroList::-webkit-scrollbar-thumb{background:rgba(226,180,95,.3);border-radius:3px}
+
+/* when live stats exist, editorial cards drop the tier badge */
+#meta.stats-live .meta-card .mc-rank{display:none}
+#meta.stats-live .meta-card h3{padding-right:0}

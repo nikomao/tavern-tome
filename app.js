@@ -849,6 +849,27 @@
     if(dt) dt.textContent = META.updated;
     if(nt) nt.textContent = META.note;
 
+    if(typeof STATS !== "undefined" && STATS && STATS.comps && STATS.comps.length){
+      var host = document.getElementById("compStats");
+      var sub = document.getElementById("metaSub");
+      if(host){
+        var rows = STATS.comps.slice(0, 12);
+        var t = '<div class="cs-head">数据阵容榜 <span>' + STATS.source + ' · ' + (STATS.bracket || "") +
+          " · " + (STATS.fetchedAt || "") + " · 样本 " + (STATS.sample ? Math.round(STATS.sample/10000)+" 万局" : "-") + '</span></div>';
+        t += '<div class="table-wrap"><table class="meta-table"><thead><tr><th>#</th><th>阵容</th><th>梯度</th><th>均位</th><th>前四</th><th>吃鸡</th><th>样本</th></tr></thead><tbody>';
+        rows.forEach(function(c, i){
+          t += '<tr><td>' + (i+1) + '</td><td>' + c.name + '</td><td>' + c.tier + '</td><td>' + Number(c.avg).toFixed(2) +
+            '</td><td>' + Math.round((c.top4||0)*100) + '%</td><td>' + Math.round((c.win||0)*100) + '%</td><td>' + (c.sample||0).toLocaleString("en-US") + '</td></tr>';
+        });
+        t += '</tbody></table></div>';
+        host.innerHTML = t;
+        host.hidden = false;
+      }
+      if(sub) sub.hidden = false;
+      var metaSec = document.getElementById("meta");
+      if(metaSec) metaSec.classList.add("stats-live");
+    }
+
     META.comps.slice(0, 3).forEach(function(c){
       var d = document.createElement("article");
       d.className = "meta-card " + c.rank.toLowerCase();
@@ -892,11 +913,17 @@
     var live = (typeof STATS !== "undefined" && STATS && STATS.heroes && STATS.heroes.length) ? STATS.heroes : null;
     var heroes = live ? live.map(function(h){
       var base = (typeof HEROES !== "undefined") ? HEROES.filter(function(x){ return x.n === h.name; })[0] : null;
+      var bits = [];
+      if (h.top4) bits.push("前四 " + pct(h.top4));
+      if (h.avg) bits.push("均位 " + Number(h.avg).toFixed(2));
+      var detail = [];
+      if (h.winrate) detail.push("吃鸡 " + pct(h.winrate));
+      if (h.pickrate) detail.push("选取 " + h.pickrate + "%");
       return {
         n: h.name,
         rank: h.tier,
-        tag: "胜率 " + pct(h.winrate),
-        why: base ? base.why : "数据来自 " + (STATS.source || "外部统计")
+        tag: bits.join(" · "),
+        why: base ? base.why : (detail.length ? detail.join(" · ") : "数据来自 " + (STATS.source || "外部统计"))
       };
     }) : (typeof HEROES !== "undefined" ? HEROES : []);
 
@@ -912,7 +939,7 @@
           (STATS.bracket ? " · " + STATS.bracket : "") +
           (STATS.region ? " · " + STATS.region : "") +
           (STATS.fetchedAt ? " · " + STATS.fetchedAt : "") +
-          (STATS.sample ? " · 样本 " + STATS.sample : "");
+          (STATS.sample ? " · 样本 " + (STATS.sample >= 10000 ? Math.round(STATS.sample / 10000) + " 万局" : STATS.sample) : "");
       } else {
         el.className = "stats-badge manual";
         el.textContent = label + "：社区整理（非统计） · 待接入实时数据";

@@ -35,6 +35,8 @@ const heroes = (raw.heroes || []).map(h => ({
   name: String(h.name || "").trim(),
   tier: TIERS.includes(h.tier) ? h.tier : "T2",
   winrate: Number(h.winrate) || 0,
+  top4: Number(h.top4) || 0,
+  avg: Number(h.avg) || 0,
   pickrate: Number(h.pickrate) || 0
 })).filter(h => h.name);
 
@@ -42,7 +44,9 @@ const comps = (raw.comps || []).map(c => ({
   name: String(c.name || "").trim(),
   tier: TIERS.includes(c.tier) ? c.tier : "T2",
   top4: Number(c.top4) || 0,
-  win: Number(c.win) || 0
+  win: Number(c.win) || 0,
+  avg: Number(c.avg) || 0,
+  sample: Number(c.sample) || 0
 })).filter(c => c.name);
 
 if (!heroes.length && !comps.length) {
