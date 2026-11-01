@@ -956,10 +956,11 @@
             '<span class="cs-img"><img loading="lazy" src="pool/' + x.id + '.webp" alt="" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><i>' + x.name.slice(0,1) + '</i></span>' +
             '<span class="cs-name">' + x.name + '</span></a>';
         }).join("");
-        return '<article class="comp-card" data-comp-key="' + (c.key || "") + '">' +
+        return '<article class="comp-card" data-comp-key="' + (c.key || "") + '" id="comp-' + (c.key || "") + '">' +
           '<div class="cc-head"><span class="cc-rank">#' + (rank + 1) + '</span><b>' + c.name + '</b>' +
           '<span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span>' +
           (c.key ? '<a class="cc-play" href="play.html?comp=' + c.key + '">对局模式</a>' : '') +
+          (c.key ? '<button type="button" class="cc-cmp" data-cmp="' + c.key + '">对比</button>' : '') +
           heroBadge +
           '<span class="cc-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) +
           '% · 吃鸡 ' + Math.round((c.win || 0) * 100) + '% · ' + (c.sample || 0).toLocaleString("en-US") + ' 局</span></div>' +
@@ -1014,6 +1015,9 @@
         host.innerHTML = t;
         host.hidden = false;
         if(tools) tools.hidden = false;
+        Array.prototype.forEach.call(host.querySelectorAll("[data-cmp]"), function(x){
+          x.classList.toggle("on", cmp.indexOf(x.getAttribute("data-cmp")) >= 0);
+        });
       }
 
       if(heroSel){
@@ -1023,6 +1027,86 @@
           renderBoard();
         });
       }
+      var cmp = [];
+      var cmpOverlay = document.getElementById("cmpOverlay");
+      var cmpBody = document.getElementById("cmpBody");
+
+      function orderedCards(c){
+        var list = (c.cards || []).slice();
+        var note = (typeof COMP_NOTES !== "undefined" && c.key && COMP_NOTES[c.key]) ? COMP_NOTES[c.key] : null;
+        if(note && note.order){
+          var idx = {};
+          note.order.forEach(function(n, k){ idx[n] = k; });
+          list.sort(function(a, b){
+            return (idx[a.name] == null ? 99 : idx[a.name]) - (idx[b.name] == null ? 99 : idx[b.name]);
+          });
+        }
+        return list;
+      }
+
+      function cmpCol(c, other){
+        var ids = orderedCards(c).map(function(x){ return x.id; });
+        var oids = orderedCards(other).map(function(x){ return x.id; });
+        var only = orderedCards(c).filter(function(x){ return oids.indexOf(x.id) < 0; }).map(function(x){ return x.name; });
+        var slots = orderedCards(c).slice(0, 7).map(function(x, i){
+          var t = tierOfCard(x.id);
+          return '<div class="cmp-slot"><img src="pool/' + x.id + '.webp" alt="" onerror="this.style.opacity=0"><span>' + x.name + '</span><em>' + (t != null ? t + '本' : '') + '</em></div>';
+        }).join("");
+        return '<div class="cmp-col"><h3>' + c.name + ' <span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span></h3>' +
+          '<div class="cmp-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) + '% · 吃鸡 ' +
+          Math.round((c.win || 0) * 100) + '% · ' + (c.sample || 0).toLocaleString("en-US") + ' 局</div>' +
+          '<div class="cmp-lineup">' + slots + '</div>' +
+          '<div class="cmp-diff"><b>独有</b>：' + (only.length ? only.join("、") : "无") + '<br><b>推荐英雄</b>：' +
+          ((c.heroes || []).join(" · ") || "—") + '</div></div>';
+      }
+
+      function renderCompare(){
+        if(!cmpOverlay) return;
+        if(cmp.length < 2){ cmpOverlay.hidden = true; return; }
+        var a = STATS.comps.filter(function(x){ return x.key === cmp[0]; })[0];
+        var b = STATS.comps.filter(function(x){ return x.key === cmp[1]; })[0];
+        if(!a || !b){ cmpOverlay.hidden = true; return; }
+        cmpBody.innerHTML = cmpCol(a, b) + cmpCol(b, a);
+        cmpOverlay.hidden = false;
+      }
+
+      if(host){
+        host.addEventListener("click", function(e){
+          var b = e.target.closest ? e.target.closest("[data-cmp]") : null;
+          if(!b) return;
+          e.preventDefault();
+          var k = b.getAttribute("data-cmp");
+          var i = cmp.indexOf(k);
+          if(i >= 0) cmp.splice(i, 1);
+          else { cmp.push(k); if(cmp.length > 2) cmp.shift(); }
+          Array.prototype.forEach.call(host.querySelectorAll("[data-cmp]"), function(x){
+            x.classList.toggle("on", cmp.indexOf(x.getAttribute("data-cmp")) >= 0);
+          });
+          renderCompare();
+        });
+      }
+      var cmpClose = document.getElementById("cmpClose");
+      if(cmpClose) cmpClose.addEventListener("click", function(){ cmp = []; if(cmpOverlay) cmpOverlay.hidden = true; });
+      if(cmpOverlay) cmpOverlay.addEventListener("click", function(e){ if(e.target === cmpOverlay) cmpOverlay.hidden = true; });
+
+      function openHash(){
+        var m = /^#comp-(.+)$/.exec(location.hash || "");
+        if(!m) return;
+        var key = decodeURIComponent(m[1]);
+        var card = document.querySelector('.comp-card[data-comp-key="' + key + '"]');
+        if(!card){
+          var det = document.querySelector(".comp-more");
+          if(det) det.open = true;
+          card = document.querySelector('.comp-card[data-comp-key="' + key + '"]');
+        }
+        if(!card) return;
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+        card.classList.add("comp-flash");
+        setTimeout(function(){ card.classList.remove("comp-flash"); }, 1800);
+      }
+      window.addEventListener("hashchange", openHash);
+      setTimeout(openHash, 500);
+
       var tierBox = document.getElementById("compTiers");
       if(tierBox){
         tierBox.addEventListener("click", function(e){
