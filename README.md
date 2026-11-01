@@ -3,6 +3,8 @@
 > 11 个种族 × 7 格站位 × 一条指数曲线。  
 > 不只告诉你「摆什么」，更讲清楚**为什么**——为什么同样的 7 个格子，有人只能烂分，有人能把身材堆到上万。
 
+[![Deploy](https://github.com/nikomao/tavern-tome/actions/workflows/pages.yml/badge.svg)](https://github.com/nikomao/tavern-tome/actions/workflows/pages.yml)
+
 [在线预览](https://nikomao.github.io/tavern-tome/) · [版本快照](#版本) · [MIT / CC BY-NC-SA](#许可)
 
 ![页面预览](preview.png)
