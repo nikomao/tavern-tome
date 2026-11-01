@@ -657,4 +657,139 @@
     });
   })();
 
+
+  /* ---------- first-game simulator ---------- */
+  (function(){
+    var root = document.getElementById("simGame");
+    if(!root || typeof SIM === "undefined") return;
+    var el = {
+      turn: root.querySelector("[data-sg-turn]"),
+      hp: root.querySelector("[data-sg-hp]"),
+      tier: root.querySelector("[data-sg-tier]"),
+      power: root.querySelector("[data-sg-power]"),
+      gold: root.querySelector("[data-sg-gold]"),
+      scene: root.querySelector("[data-sg-scene]"),
+      options: root.querySelector("[data-sg-options]"),
+      feedback: root.querySelector("[data-sg-feedback]"),
+      result: root.querySelector("[data-sg-result]")
+    };
+    var state;
+
+    function reset(){
+      state = { i: 0, hp: 30, tier: 1, power: 0, good: 0 };
+      el.result.hidden = true;
+      el.result.innerHTML = "";
+      el.feedback.hidden = true;
+      render();
+    }
+
+    function render(){
+      var t = SIM.turns[state.i];
+      el.turn.textContent = (state.i + 1) + " / " + SIM.turns.length;
+      el.hp.textContent = Math.max(0, state.hp);
+      el.tier.textContent = state.tier + " 本";
+      el.power.textContent = state.power;
+      el.gold.textContent = t.gold;
+      el.scene.textContent = t.scene;
+      el.options.innerHTML = "";
+      el.options.hidden = false;
+      el.feedback.hidden = true;
+      el.feedback.innerHTML = "";
+      t.opts.forEach(function(o, idx){
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "sg-opt";
+        b.innerHTML = '<span class="k">' + (idx + 1) + '</span><span class="t">' + o.t + '</span>';
+        b.addEventListener("click", function(){ choose(idx); });
+        el.options.appendChild(b);
+      });
+    }
+
+    function choose(idx){
+      var t = SIM.turns[state.i], o = t.opts[idx], e = o.e || {};
+      state.power = Math.max(0, state.power + (e.power || 0));
+      state.tier += (e.tier || 0);
+      state.hp += (e.hp || 0);
+      if(o.good) state.good++;
+
+      var opp = SIM.opp[state.i];
+      var win = state.power >= opp;
+      var dmg = 0;
+      if(!win){ dmg = 3 + Math.floor(state.i / 2); state.hp -= dmg; }
+
+      el.options.hidden = true;
+      el.feedback.hidden = false;
+      el.feedback.className = "sg-feedback " + (o.good ? "ok" : "no");
+      el.feedback.innerHTML =
+        '<div class="sg-fb-head">' + (o.good ? "✓ 好选择" : "✗ 可以更好") +
+        " · 战斗" + (win ? "胜利" : "失败 −" + dmg + " 血") + '</div>' +
+        '<p>' + o.fb + '</p>' +
+        '<div class="sg-fb-state">战力 ' + state.power + ' / 对手 ' + opp + ' · 血量 ' + Math.max(0, state.hp) + '</div>';
+
+      var last = state.i === SIM.turns.length - 1 || state.hp <= 0;
+      var next = document.createElement("button");
+      next.type = "button";
+      next.className = "sg-next";
+      next.textContent = last ? "看结果 →" : "下一回合 →";
+      next.addEventListener("click", function(){
+        if(last){ showResult(); } else { state.i++; render(); }
+      });
+      el.feedback.appendChild(next);
+
+      el.hp.textContent = Math.max(0, state.hp);
+      el.power.textContent = state.power;
+      el.tier.textContent = state.tier + " 本";
+    }
+
+    function showResult(){
+      var grade = state.hp <= 0 ? "D" : state.good >= 9 ? "S" : state.good >= 7 ? "A" : state.good >= 5 ? "B" : "C";
+      el.feedback.hidden = true;
+      el.result.hidden = false;
+      el.result.innerHTML =
+        '<div class="sg-grade">' + grade + '</div>' +
+        '<div class="sg-sum"><b>' + state.good + ' / 10</b> 个回合做了正确选择<br>终局：' +
+        Math.max(0, state.hp) + ' 血 · ' + state.tier + ' 本 · 战力 ' + state.power + '</div>' +
+        '<p>' + (grade === "S"
+          ? "节奏很标准：先站住、再升本、再收口。现在可以去看 01 的三条定律了。"
+          : "记住一句话：血量健康就升本，血量危险就先买战力；钱要花在能长大的卡上。") + '</p>' +
+        '<button type="button" class="sg-next" id="sgRestart">↻ 再玩一次</button>';
+      var btn = document.getElementById("sgRestart");
+      if(btn) btn.addEventListener("click", reset);
+    }
+
+    reset();
+  })();
+
+  /* ---------- weekly meta ---------- */
+  (function(){
+    if(typeof META === "undefined") return;
+    var top = document.getElementById("metaTop");
+    var tbody = document.querySelector("#metaTable tbody");
+    if(!top || !tbody) return;
+    var wk = document.getElementById("metaWeek"), pt = document.getElementById("metaPatch");
+    var dt = document.getElementById("metaDate"), nt = document.getElementById("metaNote");
+    if(wk) wk.textContent = META.week;
+    if(pt) pt.textContent = META.patch;
+    if(dt) dt.textContent = META.updated;
+    if(nt) nt.textContent = META.note;
+
+    META.comps.slice(0, 3).forEach(function(c){
+      var d = document.createElement("article");
+      d.className = "meta-card " + c.rank.toLowerCase();
+      d.innerHTML = '<span class="mc-rank">' + c.rank + '</span>' +
+        '<h3>' + c.name + '</h3>' +
+        '<p class="mc-line">' + c.line + '</p>' +
+        '<div class="mc-core">' + c.core.map(function(x){ return '<span>' + x + '</span>'; }).join("") + '</div>' +
+        '<p class="mc-good"><b>强</b>' + c.good + '</p>' +
+        '<p class="mc-bad"><b>怕</b>' + c.bad + '</p>';
+      top.appendChild(d);
+    });
+
+    META.comps.slice(3).forEach(function(c){
+      var tr = document.createElement("tr");
+      tr.innerHTML = '<td>' + c.rank + '</td><td>' + c.name + '</td><td>' + c.line + '</td><td>' + c.good + '</td><td>' + c.bad + '</td>';
+      tbody.appendChild(tr);
+    });
+  })();
+
 })();

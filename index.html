@@ -26,7 +26,7 @@
       <a href="#math">数学</a>
       <a href="#fusion">融合</a>
       <a href="#positioning">站位</a>
-      <a href="#tribes">种族</a>
+      <a href="#tribes">种族</a><a href="#meta">周报</a>
       <a href="#table">速查</a>
       <a href="#flow">决策</a>
     </nav>
@@ -153,6 +153,29 @@
         <li><b>站位每回合改</b>：对手种族一变，你的 1 号位就该换人。</li>
       </ul>
     </div>
+  </div>
+
+
+  <div class="sim-game" id="simGame">
+    <div class="sg-head">
+      <div>
+        <h3>练习：打完你的第一局</h3>
+        <p>10 个回合，每回合选一个动作。选错不会真的输，但会告诉你为什么。</p>
+      </div>
+      <span class="sg-badge">教练模式</span>
+    </div>
+    <div class="sg-hud">
+      <div><span>回合</span><b data-sg-turn>1 / 10</b></div>
+      <div><span>血量</span><b data-sg-hp>30</b></div>
+      <div><span>酒馆</span><b data-sg-tier>1 本</b></div>
+      <div><span>战力</span><b data-sg-power>0</b></div>
+      <div><span>铸币</span><b data-sg-gold>3</b></div>
+    </div>
+    <div class="sg-scene" data-sg-scene></div>
+    <div class="sg-options" data-sg-options></div>
+    <div class="sg-feedback" data-sg-feedback hidden></div>
+    <div class="sg-result" data-sg-result hidden></div>
+    <p class="sg-foot">数值做了简化，只用来练「买 / 升 / 刷」的节奏，不代表真实对局。</p>
   </div>
 
   <div class="callout">
@@ -541,6 +564,25 @@
     </table>
   </div>
   <p class="table-note">「成型回合」指具备战斗力、可以开始滚雪球的时点；「上限」是吃鸡潜力，不是烂分能力。</p>
+</section>
+
+<!-- ================= 本周最强 ================= -->
+<section class="section alt" id="meta">
+  <div class="section-head">
+    <div class="sec-no">周</div>
+    <div>
+      <h2>本周最强组合</h2>
+      <p class="sub">每周更新 · <b id="metaWeek">第 1 周</b> · <span id="metaPatch">37.0</span> · 更新于 <span id="metaDate"></span></p>
+    </div>
+  </div>
+  <div class="meta-top" id="metaTop"></div>
+  <div class="table-wrap">
+    <table class="meta-table" id="metaTable">
+      <thead><tr><th>梯度</th><th>组合</th><th>一句话打法</th><th>强在哪</th><th>怕什么</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="table-note" id="metaNote"></p>
 </section>
 
 <!-- ================= 决策 ================= -->

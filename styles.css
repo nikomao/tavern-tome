@@ -612,3 +612,83 @@ p{margin:0 0 1em}
   .start-col{padding:18px}
   .pace{min-width:520px}
 }
+
+/* ============ first-game simulator ============ */
+.sim-game{margin-top:40px;border:1px solid rgba(214,178,106,.25);border-radius:18px;padding:26px 28px;
+  background:linear-gradient(180deg,rgba(24,29,42,.75),rgba(10,12,18,.82))}
+.sg-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.sg-head h3{font-size:22px}
+.sg-head p{font-size:13.5px;color:var(--dim);margin:6px 0 0}
+.sg-badge{font-size:11px;letter-spacing:.12em;color:var(--gold);border:1px solid var(--gold-dim);border-radius:999px;padding:4px 12px;white-space:nowrap}
+.sg-hud{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:20px 0 16px}
+.sg-hud div{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:rgba(255,255,255,.02)}
+.sg-hud span{display:block;font-size:10.5px;color:var(--dim);letter-spacing:.08em}
+.sg-hud b{font-size:16px;color:var(--gold-2);font-family:ui-monospace,monospace}
+.sg-scene{font-size:14px;color:#c9ccd4;line-height:1.7;padding:14px 16px;border-left:2px solid var(--gold-dim);
+  background:rgba(214,178,106,.05);border-radius:0 8px 8px 0;min-height:56px}
+.sg-options{display:grid;gap:8px;margin-top:16px}
+.sg-opt{display:flex;gap:12px;align-items:center;text-align:left;border:1px solid var(--line);
+  background:rgba(255,255,255,.02);color:#d5d8df;border-radius:10px;padding:12px 14px;font-size:14px;
+  font-family:var(--sans);cursor:pointer;transition:.2s}
+.sg-opt:hover{border-color:var(--gold-dim);background:rgba(214,178,106,.08);transform:translateX(3px)}
+.sg-opt:disabled{opacity:.45;cursor:default;transform:none}
+.sg-opt .k{width:22px;height:22px;flex:none;display:grid;place-items:center;border-radius:50%;
+  border:1px solid var(--gold-dim);color:var(--gold);font-size:11px}
+.sg-feedback{margin-top:14px;border-radius:10px;padding:14px 16px;border:1px solid var(--line);
+  background:rgba(255,255,255,.02);font-size:13.5px;color:#c6cad2}
+.sg-feedback.ok{border-color:rgba(111,211,154,.35);background:rgba(111,211,154,.06)}
+.sg-feedback.no{border-color:rgba(232,105,95,.35);background:rgba(232,105,95,.06)}
+.sg-fb-head{font-weight:600;margin-bottom:6px;color:var(--ink)}
+.sg-feedback p{margin:0 0 8px;line-height:1.7}
+.sg-fb-state{font-size:11.5px;color:var(--dim);font-family:ui-monospace,monospace}
+.sg-next{margin-top:10px;border:1px solid var(--gold-dim);background:rgba(214,178,106,.12);
+  color:var(--gold-2);border-radius:999px;padding:8px 18px;font-size:13px;cursor:pointer;font-family:var(--sans)}
+.sg-next:hover{background:rgba(214,178,106,.22)}
+.sg-result{margin-top:16px;text-align:center;border:1px solid var(--gold-dim);border-radius:14px;padding:24px;
+  background:radial-gradient(120% 120% at 50% 0%,rgba(214,178,106,.15),transparent 70%)}
+.sg-grade{font-family:var(--serif);font-size:64px;line-height:1;color:var(--gold-2);text-shadow:0 0 40px rgba(214,178,106,.4)}
+.sg-sum{font-size:14px;color:#cfd3da;margin:10px 0}
+.sg-sum b{color:var(--gold-2);font-size:20px}
+.sg-result p{font-size:13px;color:var(--dim);max-width:520px;margin:0 auto 14px;line-height:1.7}
+.sg-foot{font-size:11.5px;color:#4d5461;margin:16px 0 0}
+
+/* ============ weekly meta ============ */
+.meta-top{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:26px}
+.meta-card{position:relative;border:1px solid var(--line);border-radius:16px;padding:24px 22px;
+  background:linear-gradient(165deg,rgba(255,255,255,.045),transparent 65%)}
+.meta-card.t0{border-color:rgba(232,105,95,.35)}
+.meta-card.t1{border-color:rgba(214,178,106,.3)}
+.mc-rank{position:absolute;top:18px;right:18px;font-size:11px;letter-spacing:.1em;padding:3px 9px;border-radius:999px;border:1px solid}
+.meta-card.t0 .mc-rank{color:#ffb4ab;border-color:rgba(232,105,95,.45);background:rgba(232,105,95,.1)}
+.meta-card.t1 .mc-rank{color:var(--gold-2);border-color:rgba(214,178,106,.45)}
+.meta-card.t2 .mc-rank{color:#9fd6f5;border-color:rgba(124,196,240,.4)}
+.meta-card h3{font-size:20px;padding-right:56px}
+.mc-line{font-size:13px;color:var(--dim);margin:8px 0 14px;line-height:1.6}
+.mc-core{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.mc-core span{font-size:11.5px;border:1px solid var(--line-2);border-radius:6px;padding:3px 8px;color:#cfd3da}
+.mc-good,.mc-bad{font-size:12.5px;margin:0;line-height:1.6}
+.mc-good b,.mc-bad b{display:inline-block;width:22px;font-weight:700}
+.mc-good{color:#9fd8b6}.mc-good b{color:var(--green)}
+.mc-bad{color:#e0a8a2;margin-top:4px}.mc-bad b{color:var(--red)}
+.meta-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:760px}
+.meta-table th{text-align:left;padding:12px 16px;font-weight:500;font-size:11.5px;letter-spacing:.08em;
+  color:var(--dim);background:rgba(255,255,255,.03);border-bottom:1px solid var(--line)}
+.meta-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);color:#c2c6ce;vertical-align:top}
+.meta-table tr:last-child td{border-bottom:none}
+.meta-table td:first-child{font-family:ui-monospace,monospace;color:var(--gold-2)}
+
+@media (max-width:900px){
+  .meta-top{grid-template-columns:1fr}
+  .sg-hud{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:760px){
+  .sim-game{padding:20px 16px}
+  .sg-head{flex-direction:column;gap:8px}
+  .sg-hud{grid-template-columns:1fr 1fr;gap:8px}
+  .sg-hud b{font-size:14px}
+  .sg-opt{font-size:13px;padding:11px 12px}
+  .sg-grade{font-size:52px}
+}
+
+/* 保证 hidden 属性生效（作者样式里的 display 会覆盖 UA 的 hidden） */
+[hidden]{display:none!important}
