@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>卡池查詢 · 酒館戰棋 | 酒館手札</title>
+<meta name="description" content="酒館戰棋完整卡池：按酒館等級、種族、型別、關鍵詞搜尋，含卡圖與完整效果。" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="酒館手札" />
+<meta property="og:title" content="卡池查詢 · 酒館戰棋" />
+<meta property="og:description" content="1218 張卡牌，按等級、種族、型別篩選，含卡圖與完整效果。" />
+<meta property="og:image" content="https://nikom-blog.org/og.png" />
+<meta property="og:url" content="https://nikom-blog.org/cards.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://nikom-blog.org/cards.html" />
+<link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="../favicon.png" type="image/png" sizes="64x64" />
+<link rel="stylesheet" href="../styles.css?v=20261102d" />
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">棋</span><span>酒館手札</span></a>
+    <nav class="nav">
+      <a href="index.html">手冊</a>
+      <a href="cards.html" class="active">卡池</a>
+      <a href="index.html#start">入門</a>
+      <a href="index.html#tribes">種族</a>
+      <a href="index.html#meta">週報</a>
+    </nav>
+    <div class="ver">v37.0</div>
+  </div>
+</header>
+
+<main class="pool-main">
+  <div class="pool-head">
+    <div>
+      <h1>卡池查詢</h1>
+      <p>收錄 HearthstoneJSON 中全部酒館戰棋隨從與法術（含歷史卡），共 <b id="poolTotal">0</b> 張。</p>
+    </div>
+    <a class="btn ghost" href="index.html">← 返回手冊</a>
+  </div>
+
+  <div class="pool-controls">
+    <input id="poolSearch" class="pool-search" type="search" placeholder="搜尋卡名或效果關鍵詞，例如「亡語」「鮮血寶石」「戰吼」" autocomplete="off" />
+    <select id="poolTier">
+      <option value="">全部等級</option>
+      <option value="1">★</option><option value="2">★★</option><option value="3">★★★</option>
+      <option value="4">★★★★</option><option value="5">★★★★★</option><option value="6">★★★★★★</option><option value="7">★★★★★★★</option>
+    </select>
+    <select id="poolRace">
+      <option value="">全部種族</option>
+      <option value="BEAST">野獸</option><option value="DEMON">惡魔</option><option value="DRAGON">龍</option>
+      <option value="ELEMENTAL">元素</option><option value="MECHANICAL">機械</option><option value="MURLOC">魚人</option>
+      <option value="NAGA">納迦</option><option value="PIRATE">海盜</option><option value="QUILBOAR">野豬人</option>
+      <option value="UNDEAD">亡靈</option><option value="ABERRATION">畸變怪</option><option value="ALL">全種族</option>
+    </select>
+    <select id="poolType">
+      <option value="">隨從 + 法術</option>
+      <option value="minion">只看隨從</option>
+      <option value="spell">只看法術</option>
+    </select>
+    <select id="poolSet">
+      <option value="">全部版本</option>
+      <option value="recent">近兩年（BG31+）</option>
+      <option value="old">更早</option>
+    </select>
+  </div>
+
+  <div class="pool-status">
+    <span id="poolCount">—</span>
+    <button type="button" class="pool-reset" id="poolReset">清空篩選</button>
+  </div>
+
+  <div class="pool-grid" id="poolGrid"></div>
+  <div class="pool-more"><button type="button" class="btn ghost" id="poolMore">載入更多</button></div>
+  <p class="pool-note">卡圖與卡牌資料來自社群卡牌庫（HearthstoneJSON / ZeroToHeroes）。歷史卡不一定出現在當前對局，請以遊戲內為準。</p>
+</main>
+
+<div class="pool-modal" id="poolModal" hidden>
+  <div class="pm-card">
+    <button type="button" class="pm-close" id="pmClose" aria-label="關閉">×</button>
+    <div class="pm-img"><img id="pmImg" alt="" /></div>
+    <div class="pm-info">
+      <h3 id="pmName"></h3>
+      <div class="pm-meta" id="pmMeta"></div>
+      <p class="pm-text" id="pmText"></p>
+      <div class="pm-tribes" id="pmTribes"></div>
+    </div>
+  </div>
+</div>
+
+<script src="pool.js?v=20261102d"></script>
+<script src="pool-page.js?v=20261102d"></script>
+<a class="lang-fab" href="../cards.html">簡中</a>
+</body>
+</html>

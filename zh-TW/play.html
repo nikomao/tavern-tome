@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>對局模式 · 酒館手札</title>
+<meta name="description" content="邊玩邊對照：7 格陣容、缺卡清單、本回合建議、置頂小窗。" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="酒館手札" />
+<meta property="og:title" content="對局模式 · 酒館手札" />
+<meta property="og:description" content="7 格陣容 · 缺卡清單 · 本回合建議 · 置頂小窗" />
+<meta property="og:image" content="https://nikom-blog.org/og.png" />
+<meta property="og:url" content="https://nikom-blog.org/play.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://nikom-blog.org/play.html" />
+<link rel="icon" href="../favicon.png" type="image/png" sizes="64x64" />
+<link rel="stylesheet" href="../styles.css?v=20261102d">
+<link rel="stylesheet" href="../play.css?v=20261102d">
+</head>
+<body class="play-body">
+
+<header class="play-top">
+  <a class="play-back" href="index.html">← 返回</a>
+  <select id="playComp" aria-label="選擇陣容"></select>
+  <span class="play-tier" id="playTier"></span>
+  <span class="play-meta" id="playMeta"></span>
+</header>
+
+<div class="play-status" id="playStatus">
+  <div class="ps"><span>回合</span><button data-k="turn" data-d="-1">−</button><b id="stTurn">1</b><button data-k="turn" data-d="1">+</button></div>
+  <div class="ps"><span>本數</span><button data-k="tier" data-d="-1">−</button><b id="stTier">1</b><button data-k="tier" data-d="1">+</button></div>
+  <div class="ps"><span>金幣</span><button data-k="gold" data-d="-1">−</button><b id="stGold">3</b><button data-k="gold" data-d="1">+</button></div>
+  <div class="ps"><span>血量</span><button data-k="health" data-d="-1">−</button><b id="stHealth">30</b><button data-k="health" data-d="1">+</button></div>
+</div>
+
+<main class="play-main">
+  <section class="play-slots" id="playSlots" aria-label="七格陣容"></section>
+  <aside class="play-side">
+    <div class="advice" id="playAdvice">
+      <div class="advice-h">本回合建議</div>
+      <p class="advice-main" id="adviceMain"></p>
+      <p class="advice-sub" id="adviceSub"></p>
+    </div>
+    <h3>還差 <b id="missCount">0</b> 張</h3>
+    <div id="missList"></div>
+    <button type="button" class="play-add" id="btnAdd">＋ 新增卡牌</button>
+    <p class="play-hint" id="playHint"></p>
+  </aside>
+</main>
+
+<footer class="play-actions">
+  <button type="button" id="btnNext">下一回合 <span>空格</span></button>
+  <button type="button" id="btnPip">置頂小窗</button>
+  <button type="button" id="btnShare">複製連結</button>
+  <button type="button" id="btnReset">重置</button>
+</footer>
+
+<div class="pick-overlay" id="pickOverlay" hidden>
+  <div class="pick-box">
+    <input id="pickInput" type="search" placeholder="搜卡名，例如：銅須、詩心龍" autocomplete="off">
+    <div class="pick-list" id="pickList"></div>
+    <p class="pick-hint">Esc 關閉</p>
+  </div>
+</div>
+
+<script src="data.js?v=20261102d"></script>
+<script src="pool.js?v=20261102d"></script>
+<script src="stats.js?v=20261102d"></script>
+<script src="comp-notes.js?v=20261102d"></script>
+<script src="extra-cards.js?v=20261102d"></script>
+<script src="cards.js?v=20261102d"></script>
+<script src="play.js?v=20261102d"></script>
+<a class="lang-fab" href="../play.html">簡中</a>
+</body>
+</html>
