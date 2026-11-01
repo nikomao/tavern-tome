@@ -324,6 +324,45 @@
       return true;
     }
 
+    var POOL_BY_ID = {};
+    if(typeof POOL !== "undefined"){ POOL.forEach(function(x){ POOL_BY_ID[x.i] = x; }); }
+    var RACE_CN = { BEAST:"野兽", DEMON:"恶魔", DRAGON:"龙", ELEMENTAL:"元素", MECHANICAL:"机械",
+      MURLOC:"鱼人", NAGA:"纳迦", PIRATE:"海盗", QUILBOAR:"野猪人", UNDEAD:"亡灵", ABERRATION:"畸变怪" };
+
+    function fillById(id){
+      var c = POOL_BY_ID[id];
+      if(!c) return false;
+      if(c.m){
+        popImg.src = "pool/" + c.i + ".webp";
+        popImg.style.display = "";
+      } else {
+        popImg.removeAttribute("src");
+        popImg.style.display = "none";
+      }
+      popName.innerHTML = "<b>" + c.n + "</b>";
+      var meta = [];
+      if(c.t != null) meta.push("等级 " + c.t);
+      if(c.a != null) meta.push(c.a + " / " + c.h);
+      var races = String(c.r || "").split("/").map(function(r){ return RACE_CN[r] || r; }).filter(Boolean);
+      if(races.length) meta.push(races.join(" / "));
+      popMeta.textContent = meta.join(" · ");
+      popText.textContent = c.x || "暂无卡牌描述";
+      return true;
+    }
+
+    document.addEventListener("mouseover", function(e){
+      var el = e.target.closest ? e.target.closest("[data-card-id]") : null;
+      if(!el) return;
+      if(!fillById(el.getAttribute("data-card-id"))) return;
+      pop.hidden = false;
+      placePop(e.clientX, e.clientY);
+    });
+
+    document.addEventListener("mouseout", function(e){
+      var el = e.target.closest ? e.target.closest("[data-card-id]") : null;
+      if(el && !el.contains(e.relatedTarget)) pop.hidden = true;
+    });
+
     function placePop(x, y){
       var w = pop.offsetWidth, h = pop.offsetHeight;
       var left = x + 18, top = y + 18;
@@ -875,7 +914,7 @@
             });
           }
           var cards = list.map(function(x, idx){
-            return '<a class="comp-slot" href="cards.html?card=' + x.id + '" title="' + x.name + '">' +
+            return '<a class="comp-slot" href="cards.html?card=' + x.id + '" data-card-id="' + x.id + '" title="' + x.name + '">' +
               '<span class="cs-no">' + (idx + 1) + '</span>' +
               '<span class="cs-img"><img loading="lazy" src="pool/' + x.id + '.webp" alt="" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><i>' + x.name.slice(0,1) + '</i></span>' +
               '<span class="cs-name">' + x.name + '</span></a>';
@@ -942,7 +981,7 @@
         '<p class="mc-line">' + c.line + '</p>' +
         '<div class="mc-core">' + c.core.map(function(x){
           var card = cardFor(x);
-          return '<span class="mc-card">' + (card && card.img ? '<img src="' + card.img + '" alt="" loading="lazy">' : '') + '<em>' + x + '</em></span>';
+          return '<span class="mc-card" data-card="' + x + '">' + (card && card.img ? '<img src="' + card.img + '" alt="" loading="lazy">' : '') + '<em>' + x + '</em></span>';
         }).join("") + '</div>' +
         '<p class="mc-good"><b>强</b>' + c.good + '</p>' +
         '<p class="mc-bad"><b>怕</b>' + c.bad + '</p>';
