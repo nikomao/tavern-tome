@@ -1236,8 +1236,8 @@ const STATS = {
           "status": "ADDON"
         },
         {
-          "id": "#N/A",
-          "name": "",
+          "id": "BG33_830",
+          "name": "艾萨拉的刀客",
           "status": "ADDON"
         }
       ],
@@ -1594,11 +1594,6 @@ const STATS = {
           "status": "CORE"
         },
         {
-          "id": "#N/A",
-          "name": "",
-          "status": "CORE"
-        },
-        {
           "id": "BG36_848",
           "name": "小巫妖囤积者",
           "status": "ADDON"
@@ -1616,6 +1611,11 @@ const STATS = {
         {
           "id": "BG36_515",
           "name": "时尚魅影",
+          "status": "ADDON"
+        },
+        {
+          "id": "BG36_511",
+          "name": "丧钟死灵",
           "status": "ADDON"
         }
       ],

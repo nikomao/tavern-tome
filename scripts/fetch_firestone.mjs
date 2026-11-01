@@ -75,6 +75,7 @@ const comps = cs.compStats
     if (s && Array.isArray(s.cards)) {
       const order = { CORE: 0, ADDON: 1, CYCLE: 2 };
       lineup = [...s.cards]
+        .filter(x => x.cardId && !String(x.cardId).startsWith("#"))
         .sort((a, b) => (order[a.status] ?? 3) - (order[b.status] ?? 3) || (b.finalBoardWeight || 0) - (a.finalBoardWeight || 0))
         .slice(0, 7)
         .map(x => ({ id: x.cardId, name: names[x.cardId] || x.name, status: x.status }));
