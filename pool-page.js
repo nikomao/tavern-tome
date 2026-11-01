@@ -1,5 +1,5 @@
 (function(){
-  function tierStars(n){ n = Number(n); if(!n || n < 1) return ""; return "★".repeat(Math.min(7, n)); }
+  function tierStars(n){ n = Number(n); if(!n || n < 1) return ""; return '<i class="star"></i>'.repeat(Math.min(7, n)); }
 
   "use strict";
   var RACE = { BEAST:"野兽", DEMON:"恶魔", DRAGON:"龙", ELEMENTAL:"元素", MECHANICAL:"机械",
@@ -77,7 +77,7 @@
   var timer;
   function showCard(c){
     document.getElementById("pmName").textContent = c.n;
-    document.getElementById("pmMeta").textContent = metaText(c);
+    document.getElementById("pmMeta").innerHTML = metaText(c);
     document.getElementById("pmText").textContent = c.x || "（无卡牌描述）";
     var img = document.getElementById("pmImg");
     if(c.m){ img.src = "pool/" + c.i + ".webp"; img.style.display = ""; }

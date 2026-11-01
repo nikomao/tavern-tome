@@ -1,6 +1,6 @@
 /* 渲染与交互 */
 (function(){
-  function tierStars(n){ n = Number(n); if(!n || n < 1) return ""; return "★".repeat(Math.min(7, n)); }
+  function tierStars(n){ n = Number(n); if(!n || n < 1) return ""; return '<i class="star"></i>'.repeat(Math.min(7, n)); }
 
   "use strict";
 
@@ -327,7 +327,7 @@
         if(c.a != null) meta.push(c.a + " / " + c.h);
       }
       if(c.r) meta.push(c.r);
-      popMeta.textContent = meta.join(" · ");
+      popMeta.innerHTML = meta.join(" · ");
       popText.textContent = c.x || "暂未收录卡牌描述";
       return true;
     }
@@ -811,7 +811,7 @@
       var t = SIM.turns[state.i];
       el.turn.textContent = (state.i + 1) + " / " + SIM.turns.length;
       el.hp.textContent = Math.max(0, state.hp);
-      el.tier.textContent = tierStars(state.tier);
+      el.tier.innerHTML = '<span class="stars">' + tierStars(state.tier) + '</span>';
       el.power.textContent = state.power;
       el.gold.textContent = t.gold;
       el.scene.textContent = t.scene;
@@ -862,7 +862,7 @@
 
       el.hp.textContent = Math.max(0, state.hp);
       el.power.textContent = state.power;
-      el.tier.textContent = tierStars(state.tier);
+      el.tier.innerHTML = '<span class="stars">' + tierStars(state.tier) + '</span>';
     }
 
     function showResult(){

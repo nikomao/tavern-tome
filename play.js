@@ -1,6 +1,6 @@
 /* 对局模式 */
 (function(){
-  function tierStars(n){ n = Number(n); if(!n || n < 1) return ""; return "★".repeat(Math.min(7, n)); }
+  function tierStars(n){ n = Number(n); if(!n || n < 1) return ""; return '<i class="star"></i>'.repeat(Math.min(7, n)); }
 
   var comps = (typeof STATS !== "undefined" && STATS.comps) || [];
   var sel = document.getElementById("playComp");
@@ -121,14 +121,14 @@
       var sub = state.gold >= 8 ? "钱够，可以 D 一次找它；别 D 到 0。"
         : state.gold <= 2 ? "钱少，先存钱，下回合再找。"
         : "边打边找，优先拿它，别为了刷新把钱花光。";
-      return { main: "现在最该找：" + n.x.name + "（" + (n.t != null ? tierStars(n.t) : "?") + " · " + roleCN(n.role) + "）",
+      return { main: "现在最该找：" + n.x.name + " " + (n.t != null ? tierStars(n.t) : "?") + " · " + roleCN(n.role),
         sub: sub, nextId: n.x.id };
     }
 
     if(locked.length){
       locked.sort(function(a, b){ return (a.t || 99) - (b.t || 99) || b.w - a.w; });
       var l = locked[0];
-      return { main: "先升到 " + tierStars(l.t) + "，再找「" + l.x.name + "」",
+      return { main: "先升到 " + tierStars(l.t) + " 本，再找「" + l.x.name + "」",
         sub: "当前 " + tierStars(state.tier) + "，高本卡刷不到，别浪费钱 D。", nextId: l.x.id };
     }
 
@@ -172,8 +172,8 @@
       .sort(function(a, b){ return (tierOf(a.x.id) || 99) - (tierOf(b.x.id) || 99); });
 
     var adv = advice();
-    document.getElementById("adviceMain").textContent = adv.main;
-    document.getElementById("adviceSub").textContent = adv.sub;
+    document.getElementById("adviceMain").innerHTML = adv.main;
+    document.getElementById("adviceSub").innerHTML = adv.sub;
 
     missCount.textContent = missing.length;
     missList.innerHTML = missing.length ? missing.map(function(o){

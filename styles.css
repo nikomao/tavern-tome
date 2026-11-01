@@ -1017,8 +1017,9 @@ body{
 .meta-card .mc-card img{width:48px;height:48px;border-radius:8px;object-fit:cover;border:1px solid var(--line);background:rgba(255,255,255,.03)}
 .meta-card .mc-card em{font-style:normal;font-size:9.5px;color:var(--muted);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:58px}
 
-.cs-tier{position:absolute;top:-6px;right:-4px;z-index:2;font-size:9.5px;font-weight:700;color:#1a100a;
-  background:var(--parchment,#f4e7cf);border-radius:4px;padding:1px 5px;box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.cs-tier{position:absolute;top:-6px;right:-4px;z-index:2;display:flex;gap:1px;align-items:center;
+  background:rgba(18,11,7,.92);border:1px solid rgba(226,180,95,.45);border-radius:4px;padding:2px 4px;
+  box-shadow:0 1px 4px rgba(0,0,0,.5)}
 
 /* hero -> comp recommendations */
 .hg-comps{margin-top:4px;font-size:11px;color:var(--dim);line-height:1.7}
@@ -1120,5 +1121,9 @@ body{
 @media (max-width:760px){ .cmp-body{grid-template-columns:1fr} .cmp-lineup{grid-template-columns:repeat(4,minmax(0,1fr))} }
 
 /* tier stars (in-game style) */
-.stars{color:#e2b45f;letter-spacing:1px;white-space:nowrap}
-.cs-tier.stars{font-size:9px;letter-spacing:0}
+.stars{display:inline-flex;align-items:center;gap:1.5px;vertical-align:-1px;line-height:1}
+.star{display:inline-block;width:11px;height:11px;flex:none;
+  background:linear-gradient(180deg,#ffe9a8 0%,#ffc247 45%,#e07d12 100%);
+  clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+  filter:drop-shadow(0 0 1px rgba(0,0,0,.9)) drop-shadow(0 1px 0 rgba(0,0,0,.45))}
+.cs-tier .star,.cmp-slot .star{width:10px;height:10px}
