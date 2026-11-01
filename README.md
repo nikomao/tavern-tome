@@ -115,6 +115,23 @@ python scripts/fetch_cards.py
 
 > 自动化只负责「提醒」，不自动改梯度——环境判断仍然需要人。
 
+## 数据源与统计
+
+页面里的英雄/周报默认是**社区整理（非统计）**，会有明确标注。接入真实对局数据后会自动切换成统计口径。
+
+```bash
+# 1) 准备一个统计 JSON（示例见 scripts/import_stats.mjs 顶部注释）
+# 2) 写入 stats.js
+node scripts/import_stats.mjs my-stats.json
+```
+
+字段：`source / url / fetchedAt / bracket / region / sample`，
+`heroes[]`（name, tier, winrate, pickrate）、`comps[]`（name, tier, top4, win）。
+
+- 没有数据时：徽章显示「社区整理（非统计）」
+- 有数据时：徽章显示「HSReplay · 10000+ · 日期 · 样本 N」，英雄列表带胜率
+- 数据只影响展示，不改动卡牌事实数据
+
 ## 如何贡献
 
 1. 发现卡名、梯度、站位有误：直接改 `data.js` 或 `cards.js`，提 PR。

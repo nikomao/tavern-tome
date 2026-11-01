@@ -948,3 +948,10 @@ body{
 .tribe-more{display:inline-block;margin:0 18px 16px;font-size:12px;color:var(--gold)}
 @media (max-width:900px){ .tribe-grid{grid-template-columns:repeat(5,minmax(0,1fr))} }
 @media (max-width:640px){ .tribe-grid{grid-template-columns:repeat(4,minmax(0,1fr));padding:0 12px 14px} .tribe-all{margin:0 16px 18px} }
+
+/* stats provenance badge */
+.stats-badge{display:inline-flex;flex-wrap:wrap;gap:6px;font-size:11.5px;border-radius:999px;padding:5px 12px;
+  margin-bottom:18px;border:1px solid;line-height:1.5}
+.stats-badge.manual{color:var(--dim);border-color:var(--line-2);background:rgba(255,255,255,.02)}
+.stats-badge.live{color:#9fd8b6;border-color:rgba(111,211,154,.35);background:rgba(111,211,154,.08)}
+.stats-badge b{color:var(--ink)}

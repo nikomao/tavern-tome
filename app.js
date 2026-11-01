@@ -869,24 +869,58 @@
   })();
 
 
-  /* ---------- heroes & trinkets ---------- */
+  /* ---------- heroes & trinkets (stats-aware) ---------- */
   (function(){
+    function pct(v){ return Math.round((Number(v) || 0) * 100) + "%"; }
+
     function renderGuideList(id, data){
       var host = document.getElementById(id);
-      if(!host || typeof data === "undefined") return;
+      if(!host || !data) return;
+      host.innerHTML = "";
       data.forEach(function(x){
         var row = document.createElement("div");
         row.className = "hg-item";
-        row.innerHTML = '<span class="hg-rank ' + x.rank.toLowerCase() + '">' + x.rank + '</span>' +
-          '<span class="hg-tag">' + x.tag + '</span>' +
-          '<div><b>' + x.n + '</b><p>' + x.why + '</p></div>';
+        var rank = x.rank || x.tier || "T2";
+        var tag = x.tag || (x.winrate ? "胜率 " + pct(x.winrate) : "");
+        row.innerHTML = '<span class="hg-rank ' + String(rank).toLowerCase() + '">' + rank + '</span>' +
+          (tag ? '<span class="hg-tag">' + tag + '</span>' : '') +
+          '<div><b>' + x.n + '</b><p>' + (x.why || "") + '</p></div>';
         host.appendChild(row);
       });
     }
-    if(typeof HEROES !== "undefined") renderGuideList("heroList", HEROES);
-    if(typeof TRINKETS !== "undefined") renderGuideList("trinketList", TRINKETS);
-  })();
 
+    var live = (typeof STATS !== "undefined" && STATS && STATS.heroes && STATS.heroes.length) ? STATS.heroes : null;
+    var heroes = live ? live.map(function(h){
+      var base = (typeof HEROES !== "undefined") ? HEROES.filter(function(x){ return x.n === h.name; })[0] : null;
+      return {
+        n: h.name,
+        rank: h.tier,
+        tag: "胜率 " + pct(h.winrate),
+        why: base ? base.why : "数据来自 " + (STATS.source || "外部统计")
+      };
+    }) : (typeof HEROES !== "undefined" ? HEROES : []);
+
+    renderGuideList("heroList", heroes);
+    if(typeof TRINKETS !== "undefined") renderGuideList("trinketList", TRINKETS);
+
+    function badge(id, hasData, label){
+      var el = document.getElementById(id);
+      if(!el) return;
+      if(hasData){
+        el.className = "stats-badge live";
+        el.innerHTML = "数据：<b>" + STATS.source + "</b>" +
+          (STATS.bracket ? " · " + STATS.bracket : "") +
+          (STATS.region ? " · " + STATS.region : "") +
+          (STATS.fetchedAt ? " · " + STATS.fetchedAt : "") +
+          (STATS.sample ? " · 样本 " + STATS.sample : "");
+      } else {
+        el.className = "stats-badge manual";
+        el.textContent = label + "：社区整理（非统计） · 待接入实时数据";
+      }
+    }
+    badge("heroStatsBadge", !!live, "英雄梯度");
+    badge("metaStatsBadge", !!(typeof STATS !== "undefined" && STATS && STATS.comps && STATS.comps.length), "周报");
+  })();
 
   /* ---------- lineup finder ---------- */
   (function(){
