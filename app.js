@@ -354,7 +354,7 @@
       if(c.a != null) meta.push(c.a + " / " + c.h);
       var races = String(c.r || "").split("/").map(function(r){ return RACE_CN[r] || r; }).filter(Boolean);
       if(races.length) meta.push(races.join(" / "));
-      popMeta.textContent = meta.join(" · ");
+      popMeta.innerHTML = meta.join(" · ");
       popText.textContent = c.x || "暂无卡牌描述";
       return true;
     }
