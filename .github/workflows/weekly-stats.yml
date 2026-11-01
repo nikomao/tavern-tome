@@ -33,6 +33,9 @@ jobs:
       - name: Fetch Firestone stats
         run: node scripts/fetch_firestone.mjs ${{ github.event.inputs.mmr || '100' }}
 
+      - name: Fetch MMR segments
+        run: node scripts/fetch_mmr.mjs
+
       - name: Diff against previous snapshot
         run: node scripts/diff_stats.mjs
 
@@ -60,3 +63,4 @@ jobs:
             stats-input.json
             stats-change.js
             stats-prev.json
+            stats-mmr.js

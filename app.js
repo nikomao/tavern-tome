@@ -1004,9 +1004,13 @@
   })();
 
 
-  /* ---------- heroes & trinkets (stats-aware) ---------- */
+  /* ---------- heroes & trinkets (stats-aware, MMR segments) ---------- */
   (function(){
     function pct(v){ return Math.round((Number(v) || 0) * 100) + "%"; }
+    var SEG = 100;
+    var LABEL = { "100": "全部", "50": "前 50%", "10": "前 10%", "1": "前 1%" };
+
+    function seg(){ return (typeof STATS_MMR !== "undefined" && STATS_MMR[SEG]) ? STATS_MMR[SEG] : null; }
 
     function renderGuideList(id, data){
       var host = document.getElementById(id);
@@ -1028,25 +1032,57 @@
       });
     }
 
-    var live = (typeof STATS !== "undefined" && STATS && STATS.heroes && STATS.heroes.length) ? STATS.heroes : null;
-    var heroes = live ? live.map(function(h){
-      var base = (typeof HEROES !== "undefined") ? HEROES.filter(function(x){ return x.n === h.name; })[0] : null;
-      var bits = [];
-      if (h.top4) bits.push("前四 " + pct(h.top4));
-      if (h.avg) bits.push("均位 " + Number(h.avg).toFixed(2));
-      var detail = [];
-      if (h.winrate) detail.push("吃鸡 " + pct(h.winrate));
-      if (h.pickrate) detail.push("选取 " + h.pickrate + "%");
-      return {
-        n: h.name,
-        rank: h.tier,
-        tag: bits.join(" · "),
-        why: base ? base.why : (detail.length ? detail.join(" · ") : "数据来自 " + (STATS.source || "外部统计"))
-      };
-    }) : (typeof HEROES !== "undefined" ? HEROES : []);
+    function drawHeroes(){
+      var d = seg();
+      var src = d ? d.heroes : ((typeof STATS !== "undefined" && STATS.heroes) ? STATS.heroes : null);
+      var list = src ? src.map(function(h){
+        var base = (typeof HEROES !== "undefined") ? HEROES.filter(function(x){ return x.n === h.name; })[0] : null;
+        var bits = [];
+        if (h.top4) bits.push("前四 " + pct(h.top4));
+        if (h.avg) bits.push("均位 " + Number(h.avg).toFixed(2));
+        var detail = [];
+        if (h.winrate) detail.push("吃鸡 " + pct(h.winrate));
+        if (h.pickrate) detail.push("选取 " + h.pickrate + "%");
+        return {
+          n: h.name,
+          rank: h.tier,
+          tag: bits.join(" · "),
+          why: base ? base.why : (detail.length ? detail.join(" · ") : "数据来自 " + (STATS.source || "外部统计"))
+        };
+      }) : (typeof HEROES !== "undefined" ? HEROES : []);
+      renderGuideList("heroList", list);
 
-    renderGuideList("heroList", heroes);
+      var el = document.getElementById("heroStatsBadge");
+      if(!el) return;
+      if(d){
+        el.className = "stats-badge live";
+        el.innerHTML = "数据：<b>Firestone</b> · " + LABEL[SEG] + " · " + (d.fetchedAt || "") +
+          " · 样本 " + (d.sample ? Math.round(d.sample / 10000) + " 万局" : "-");
+      } else if(typeof STATS !== "undefined" && STATS && STATS.heroes && STATS.heroes.length){
+        el.className = "stats-badge live";
+        el.innerHTML = "数据：<b>" + STATS.source + "</b>" +
+          (STATS.bracket ? " · " + STATS.bracket : "") +
+          (STATS.fetchedAt ? " · " + STATS.fetchedAt : "") +
+          (STATS.sample ? " · 样本 " + Math.round(STATS.sample / 10000) + " 万局" : "");
+      } else {
+        el.className = "stats-badge manual";
+        el.textContent = "英雄梯度：社区整理（非统计） · 待接入实时数据";
+      }
+    }
+
+    drawHeroes();
     if(typeof TRINKETS !== "undefined") renderGuideList("trinketList", TRINKETS);
+
+    var sw = document.getElementById("segSwitch");
+    if(sw){
+      sw.addEventListener("click", function(e){
+        var b = e.target.closest ? e.target.closest("button[data-seg]") : null;
+        if(!b) return;
+        SEG = +b.getAttribute("data-seg");
+        Array.prototype.forEach.call(sw.querySelectorAll("button"), function(x){ x.classList.toggle("on", x === b); });
+        drawHeroes();
+      });
+    }
 
     function badge(id, hasData, label){
       var el = document.getElementById(id);
@@ -1063,11 +1099,10 @@
         el.textContent = label + "：社区整理（非统计） · 待接入实时数据";
       }
     }
-    badge("heroStatsBadge", !!live, "英雄梯度");
     badge("metaStatsBadge", !!(typeof STATS !== "undefined" && STATS && STATS.comps && STATS.comps.length), "周报");
   })();
 
-  /* ---------- lineup finder ---------- */
+/* ---------- lineup finder ---------- */
   (function(){
     var input = document.getElementById("finderCard");
     if(!input || typeof POOL === "undefined" || typeof TRIBES === "undefined") return;

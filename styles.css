@@ -1071,3 +1071,9 @@ body{
   .cs-tier{font-size:9px}
   .cc-metrics{margin-left:0}
 }
+
+/* MMR segment switch */
+.seg-switch{display:inline-flex;gap:4px;padding:3px;border:1px solid var(--line-2);border-radius:10px;background:rgba(255,255,255,.02);margin-bottom:14px}
+.seg-switch button{border:0;background:none;color:var(--muted);font-size:12px;padding:6px 12px;border-radius:7px;cursor:pointer}
+.seg-switch button:hover{color:var(--ink)}
+.seg-switch button.on{background:rgba(226,180,95,.16);color:var(--gold-2)}
