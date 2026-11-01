@@ -895,7 +895,7 @@
         t += '</div>';
 
         if(STATS.comps.length > 8){
-          t += '<details class="comp-more"><summary>更多阵容（9–' + STATS.comps.length + '）</summary>' +
+          t += '<details class="comp-more"><summary>更多阵容（9–' + STATS.comps.length + '，仅统计，无手工站位）</summary>' +
             '<div class="table-wrap"><table class="meta-table"><thead><tr><th>#</th><th>阵容</th><th>梯度</th><th>均位</th><th>前四</th><th>吃鸡</th><th>样本</th></tr></thead><tbody>';
           STATS.comps.slice(8).forEach(function(c, i){
             t += '<tr><td>' + (i+9) + '</td><td>' + c.name + '</td><td>' + c.tier + '</td><td>' + Number(c.avg).toFixed(2) +
