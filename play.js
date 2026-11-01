@@ -39,6 +39,24 @@
   var DEFAULTS = { turn: 1, tier: 1, gold: 3, health: 30, slots: [], cards: null };
   var state = load();
 
+  // 从分享链接恢复局面
+  (function(){
+    if(params.get("t")) state.turn = Math.max(1, Math.min(30, +params.get("t") || 1));
+    if(params.get("ti")) state.tier = Math.max(1, Math.min(7, +params.get("ti") || 1));
+    if(params.get("g")) state.gold = Math.max(0, Math.min(99, +params.get("g") || 0));
+    if(params.get("h")) state.health = Math.max(0, Math.min(99, +params.get("h") || 0));
+    var s = params.get("s");
+    if(s && /^[0-2]{1,7}$/.test(s)) state.slots = s.split("").map(Number);
+    var c = params.get("c");
+    if(c){
+      var ids = c.split(",").filter(Boolean).slice(0, 7);
+      if(ids.length) state.cards = ids.map(function(id){
+        var card = CARD_DB[id];
+        return { id: id, name: card ? card.n : id };
+      });
+    }
+  })();
+
   function load(){
     try {
       var raw = localStorage.getItem("tt-play-" + key);
@@ -294,7 +312,11 @@
 
   var shareBtn = document.getElementById("btnShare");
   if(shareBtn) shareBtn.addEventListener("click", function(){
-    var url = location.origin + location.pathname + "?comp=" + encodeURIComponent(key);
+    var q = ["comp=" + encodeURIComponent(key)];
+    q.push("t=" + state.turn, "ti=" + state.tier, "g=" + state.gold, "h=" + state.health);
+    q.push("s=" + state.slots.join(""));
+    if(state.cards && state.cards.length) q.push("c=" + state.cards.map(function(x){ return x.id; }).join(","));
+    var url = location.origin + location.pathname + "?" + q.join("&");
     if(navigator.clipboard && navigator.clipboard.writeText){
       navigator.clipboard.writeText(url).then(function(){ shareBtn.textContent = "已复制"; setTimeout(function(){ shareBtn.textContent = "复制链接"; }, 1500); });
     } else {
