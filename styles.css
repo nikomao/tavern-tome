@@ -1062,3 +1062,12 @@ body{
 .sr-sub{font-size:11px;color:var(--dim);margin-left:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:45%}
 .search-hint{margin-top:8px;font-size:10.5px;color:var(--dim);text-align:right}
 .sr-empty{padding:16px;font-size:12.5px;color:var(--dim);text-align:center}
+
+/* mobile: horizontal scroller for lineups */
+@media (max-width:640px){
+  .cc-lineup{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:96px;
+    overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .comp-slot{scroll-snap-align:start}
+  .cs-tier{font-size:9px}
+  .cc-metrics{margin-left:0}
+}

@@ -1308,12 +1308,21 @@
 
   var idx = null, active = -1, shown = [];
 
+  var ALIAS = {
+    "血魔":"塔隆·血魔", "铜须":"布莱恩·铜须", "诗心龙":"执念诗心龙", "白狼":"巨狼戈德林",
+    "摩托车":"极速野猪骑士", "摩托猪":"极速野猪骑士", "仙女龙":"折跃之翼", "红龙":"赤红守备巨龙",
+    "瑞文":"提图斯·瑞文戴尔", "巴琳达":"巴琳达·斯通赫尔斯", "卡雷":"奥术守护者卡雷苟斯",
+    "尤朵拉":"尤朵拉船长", "钩牙":"钩牙船长", "雷诺":"雷诺·杰克逊",
+    "螺丝":"炎魔之王拉格纳罗斯", "大螺丝":"炎魔之王拉格纳罗斯", "苔丝":"苔丝·格雷迈恩"
+  };
+
   function buildIndex(){
     var items = [], seen = {};
     function add(type, name, sub, href, data){
       if(!name || seen[type + "|" + name]) return;
       seen[type + "|" + name] = 1;
-      items.push({ type: type, name: name, sub: sub || "", href: href || "", data: data || {} });
+      var al = Object.keys(ALIAS).filter(function(k){ return ALIAS[k] === name; }).join(" ");
+      items.push({ type: type, name: name, sub: sub || "", href: href || "", data: data || {}, alias: al });
     }
     var RACE_CN = { BEAST:"野兽", DEMON:"恶魔", DRAGON:"龙", ELEMENTAL:"元素", MECHANICAL:"机械",
       MURLOC:"鱼人", NAGA:"纳迦", PIRATE:"海盗", QUILBOAR:"野猪人", UNDEAD:"亡灵", ABERRATION:"畸变怪" };
@@ -1357,10 +1366,13 @@
     q = String(q || "").trim().toLowerCase();
     var pool = idx;
     if(q){
-      pool = idx.filter(function(x){ return x.name.toLowerCase().indexOf(q) >= 0; });
+      pool = idx.filter(function(x){
+        return x.name.toLowerCase().indexOf(q) >= 0 || (x.alias || "").toLowerCase().indexOf(q) >= 0;
+      });
       pool.sort(function(a, b){
-        var as = a.name.toLowerCase().indexOf(q) === 0 ? 0 : 1;
-        var bs = b.name.toLowerCase().indexOf(q) === 0 ? 0 : 1;
+        var an = a.name.toLowerCase(), bn = b.name.toLowerCase();
+        var as = (an.indexOf(q) === 0 || (a.alias || "").toLowerCase() === q) ? 0 : 1;
+        var bs = (bn.indexOf(q) === 0 || (b.alias || "").toLowerCase() === q) ? 0 : 1;
         return as - bs || a.name.length - b.name.length;
       });
     }
@@ -1371,9 +1383,10 @@
       return;
     }
     list.innerHTML = shown.map(function(x, i){
+      var byAlias = x.alias && x.name.toLowerCase().indexOf(q) < 0;
       return '<a class="sr' + (i === 0 ? " on" : "") + '" href="' + (x.href || "#") + '" data-i="' + i + '">' +
         '<span class="sr-type">' + x.type + '</span><span class="sr-name">' + x.name + '</span>' +
-        '<span class="sr-sub">' + x.sub + '</span></a>';
+        '<span class="sr-sub">' + (byAlias ? "俗称：" + x.alias.split(" ")[0] + " · " : "") + x.sub + '</span></a>';
     }).join("");
   }
 
