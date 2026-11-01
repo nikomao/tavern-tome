@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>酒馆战棋 · 全种族最优解手册 | 37.0 黑暗帝国</title>
+<meta name="description" content="炉石传说酒馆战棋全种族阵容、站位与成长数学：讲清楚为什么身材能长到上千上万。" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="酒馆战棋 · 全种族最优解手册" />
+<meta property="og:description" content="11 个种族 × 7 格站位 × 一条指数曲线：讲清楚阵容、站位，以及身材为什么能长到上万。" />
+<meta property="og:image" content="https://nikomao.github.io/tavern-tome/preview.png" />
+<meta property="og:url" content="https://nikomao.github.io/tavern-tome/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top"><span class="brand-mark">棋</span><span>酒馆手札</span></a>
+    <nav class="nav" id="nav">
+      <a href="#laws">定律</a>
+      <a href="#math">数学</a>
+      <a href="#fusion">融合</a>
+      <a href="#positioning">站位</a>
+      <a href="#tribes">种族</a>
+      <a href="#table">速查</a>
+      <a href="#flow">决策</a>
+    </nav>
+    <div class="ver">v37.0</div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="kicker"><span class="dot"></span> 37.0 补丁 · 黑暗帝国 · 2026.11</div>
+    <h1>酒馆战棋<span class="sep">·</span><br class="mobile-br" />全种族最优解</h1>
+    <p class="lede">
+      11 个种族，7 格站位，一条指数曲线。<br />
+      这份手札不只告诉你「摆什么」，更讲清楚<strong>为什么</strong>——
+      为什么同样的 7 个格子，有人只能烂分，有人能把身材堆到上万。
+    </p>
+    <div class="hero-stats">
+      <div class="stat"><b>11</b><span>种族 / 类型</span></div>
+      <div class="stat"><b>7</b><span>格站位</span></div>
+      <div class="stat"><b>3</b><span>条底层定律</span></div>
+      <div class="stat"><b>2<sup>13</sup></b><span>≈ 8192 的原因</span></div>
+    </div>
+    <div class="hero-cta">
+      <a class="btn primary" href="#tribes">进入种族图鉴</a>
+      <a class="btn ghost" href="#math">先看懂成长数学</a>
+    </div>
+    <p class="hero-note">* 环境快照：36.6 → 37.0（黑暗帝国上线首周）。卡池会轮换，但「为什么」不会。</p>
+  </div>
+</section>
+
+<!-- ================= 三条定律 ================= -->
+<section class="section" id="laws">
+  <div class="section-head">
+    <div class="sec-no">01</div>
+    <div>
+      <h2>三条底层定律</h2>
+      <p class="sub">先把世界观立住，后面的每个种族都只是这三条定律的不同写法。</p>
+    </div>
+  </div>
+
+  <div class="law-grid">
+    <article class="law-card">
+      <div class="law-num">I</div>
+      <h3>加法决定下限，乘法决定上限</h3>
+      <p>每回合 <em>+2/+2</em> 是线性的，它保证你活着；每回合 <em>×2</em> 是指数的，它决定你吃鸡。所有「上万身材」的对局，背后都有一条<strong>乘数链</strong>，而不是某张单卡特别超模。</p>
+      <div class="law-formula">S = S₀ + a·n　vs　S = S₀ · 2<sup>k</sup></div>
+    </article>
+    <article class="law-card">
+      <div class="law-num">II</div>
+      <h3>经济不是钱，是触发次数</h3>
+      <p>1 枚铸币 = 1 次购买 = 1 次战吼 / 亡语 / 塑造 / 磁力触发。所谓「电表倒转」，本质是把每回合的触发次数从 10 次拉到 30 次——在指数曲线上，这是把时间轴压缩了三分之二。</p>
+      <div class="law-formula">成长速度 = 触发频率 × 单次增幅 × 乘数</div>
+    </article>
+    <article class="law-card">
+      <div class="law-num">III</div>
+      <h3>站位是攻击次数的分配方案</h3>
+      <p>一回合里，你能决定的攻击次数是有限的（随从数量、先手权、嘲讽）。站位的全部意义，是让「最该先出手的单位」先出手，让「最不能死的单位」晚挨打。</p>
+      <div class="law-formula">先手权 = 随从数多者先攻（同数随机）</div>
+    </article>
+  </div>
+
+  <div class="callout">
+    <span class="callout-tag">核心</span>
+    <p>如果你只记一句话：<strong>把有限的格子，用来放「乘数」，而不是放「加法」。</strong> 一个铜须、一个瑞文、一个巴琳达，价值远高于三张 +5/+5 的白板大哥。</p>
+  </div>
+</section>
+
+<!-- ================= 数学 ================= -->
+<section class="section alt" id="math">
+  <div class="section-head">
+    <div class="sec-no">02</div>
+    <div>
+      <h2>为什么能长到上千、上万</h2>
+      <p class="sub">不是玄学，是复利。看懂这一节，你就知道每一局该找什么牌。</p>
+    </div>
+  </div>
+
+  <div class="math-layout">
+    <div class="math-text">
+      <h3>两种增长，天差地别</h3>
+      <p><strong>线性增长</strong>：每回合固定加一点。20 回合后，4/4 变成 124/124。很稳，但永远追不上成型阵容。</p>
+      <p><strong>复利增长</strong>：每回合把「现有的身材」再乘一次。同样 20 回合，4/4 会变成 <b class="hl">4,194,304</b>。差别不在努力程度，而在<strong>增长方式</strong>。</p>
+      <p>复利只需要三个条件同时成立：</p>
+      <ol class="cond">
+        <li><b>底数 &gt; 1</b>　场上至少有一个「翻倍 / 复制 / 双触发」的引擎。</li>
+        <li><b>频率 &gt; 1</b>　每回合不止触发一次，而是靠经济反复触发。</li>
+        <li><b>时间足够</b>　活到 9 回合以后，让指数跑起来。</li>
+      </ol>
+      <p class="muted">三者缺一，你得到的就是一条斜率很小的直线——这就是「明明很胡却只有烂分」的数学解释。</p>
+    </div>
+
+    <div class="math-table-wrap">
+      <table class="mini-table">
+        <thead><tr><th>回合</th><th>线性 +6/回合</th><th>复利 ×2/回合</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>4</td><td>4</td></tr>
+          <tr><td>5</td><td>34</td><td>128</td></tr>
+          <tr><td>10</td><td>64</td><td>4,096</td></tr>
+          <tr><td>15</td><td>94</td><td>131,072</td></tr>
+          <tr><td>20</td><td>124</td><td class="hot">4,194,304</td></tr>
+        </tbody>
+      </table>
+      <p class="table-note">同样的起点、同样的回合数。第 5 回合只差 4 倍，第 15 回合差 1394 倍。</p>
+    </div>
+  </div>
+
+  <h3 class="block-title">乘数链：真正让你上万的四类引擎</h3>
+  <div class="engine-grid">
+    <article class="engine">
+      <div class="engine-ico">×2</div>
+      <h4>双触发引擎</h4>
+      <p><b>铜须</b>（战吼触发两次）、<b>瑞文</b>（亡语触发两次）、<b>巴琳达</b>（塑造法术触发两次）。</p>
+      <p class="engine-math">效果：把「每次 +X」直接变成「每次 +2X」，等于把整条曲线抬高一倍。</p>
+    </article>
+    <article class="engine">
+      <div class="engine-ico">×2<sup>n</sup></div>
+      <h4>翻倍引擎</h4>
+      <p><b>双线缝针</b>：每回合把一张塑造法术锁进手牌，使一个随从<strong>属性翻倍</strong>。配合巴琳达就是每回合 ×4。</p>
+      <p class="engine-math">效果：这是唯一能把 4/4 直接推成 65536/65536 的引擎，也是「上万身材」最直接的来源。</p>
+    </article>
+    <article class="engine">
+      <div class="engine-ico">∞</div>
+      <h4>永久化引擎</h4>
+      <p><b>诗心龙</b>：战斗中的属性增益被保留下来；<b>合唱鱼人</b>：加身材但不掉血；<b>恩佐斯</b>：把身材分配出去。</p>
+      <p class="engine-math">效果：把「一次性 buff」变成「永久资产」，让每一场战斗都在为下一场复利。</p>
+    </article>
+    <article class="engine">
+      <div class="engine-ico">↻</div>
+      <h4>经济引擎</h4>
+      <p><b>火药运输工</b>、<b>苦情民谣歌手</b>、<b>死海破坏者</b>、<b>铜须 + 战吼</b> 组成的「电表倒转」。</p>
+      <p class="engine-math">效果：不直接加身材，但把「每回合触发 10 次」变成 30 次——指数曲线的斜率由它决定。</p>
+    </article>
+  </div>
+
+  <div class="sim" id="sim">
+    <div class="sim-head">
+      <div>
+        <h3>成长模拟器</h3>
+        <p>拖动滑块，亲眼看着「加法」被「乘法」甩开。</p>
+      </div>
+      <div class="scale-toggle" id="scaleToggle" role="group" aria-label="坐标轴">
+        <button data-scale="linear" class="on">线性</button>
+        <button data-scale="log">对数</button>
+      </div>
+    </div>
+    <div class="sim-body">
+      <div class="sim-controls">
+        <label>起始身材 <output id="o-base">4</output>
+          <input type="range" id="base" min="1" max="20" value="4" />
+        </label>
+        <label>每回合加算 <output id="o-add">6</output>
+          <input type="range" id="add" min="0" max="30" value="6" />
+        </label>
+        <label>每回合翻倍次数 <output id="o-mult">1</output>
+          <input type="range" id="mult" min="0" max="3" value="1" />
+        </label>
+        <label>回合数 <output id="o-turns">10</output>
+          <input type="range" id="turns" min="2" max="20" value="10" />
+        </label>
+        <div class="sim-readout">
+          <div><span>纯加法</span><b id="r-linear">64</b></div>
+          <div><span>复利</span><b id="r-compound" class="hot">4,096</b></div>
+          <div><span>倍差</span><b id="r-ratio">64×</b></div>
+        </div>
+      </div>
+      <div class="sim-chart">
+        <canvas id="chart" width="760" height="340"></canvas>
+        <div class="chart-legend"><span class="lg linear"></span>加法 <span class="lg compound"></span>复利 <span class="lg-hint">· 两条线的纵轴差距，就是「乘数」的价值</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout danger">
+    <span class="callout-tag">反直觉</span>
+    <p>很多人以为「上万身材」需要某张超模卡。真实情况是：<strong>任何一条 ×2 的链，只要跑够 13 次，4/4 就是 32768。</strong> 你要找的不是更大的数字，而是<strong>更多的「×2 次数」</strong>。</p>
+  </div>
+</section>
+
+<!-- ================= 融合 ================= -->
+<section class="section" id="fusion">
+  <div class="section-head">
+    <div class="sec-no">03</div>
+    <div>
+      <h2>融合怪：为什么它是天然的上万载体</h2>
+      <p class="sub">「融合」不是一个动作，而是一个身份——它同时属于所有种族。</p>
+    </div>
+  </div>
+
+  <div class="fusion-grid">
+    <div class="fusion-main">
+      <h3>三层「融合」，层层放大</h3>
+      <div class="fusion-layer">
+        <div class="fl-no">①</div>
+        <div>
+          <h4>标签融合：吃遍所有种族光环</h4>
+          <p>融合怪拥有<strong>全部种族标签</strong>。鱼人的 +攻、龙的传血、纳迦的塑造、元素的酒馆 buff、野猪人的鲜血宝石——只要是「使你的某个种族获得」，它都能吃到。别人只能吃一条线，它吃十一条线。</p>
+        </div>
+      </div>
+      <div class="fusion-layer">
+        <div class="fl-no">②</div>
+        <div>
+          <h4>增益合流：把散落的 buff 收进一个身体</h4>
+          <p>酒馆战棋只有 7 个格子。你不可能让 7 个随从都吃到所有资源，但你可以让<strong>一个</strong>随从吃到所有资源。融合怪就是那个「收口」——<b>双线缝针</b>翻它的属性、<b>恩佐斯</b>把身材分给它、<b>巴琳达</b>让塑造翻倍后再喂给它。</p>
+        </div>
+      </div>
+      <div class="fusion-layer">
+        <div class="fl-no">③</div>
+        <div>
+          <h4>永久化：让每一场战斗都变成存款</h4>
+          <p><b>诗心龙</b>把战斗内的属性保留下来。这意味着融合怪在战斗里吃到的每一次增益，不会在战斗结束后清零，而是变成下一场的<strong>本金</strong>。这就是复利从「回合」升级到「战斗」的关键。</p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="fusion-side">
+      <div class="big-number">
+        <span class="bn-label">8 回合 × 每回合翻 4 倍</span>
+        <b>65,536</b>
+        <span class="bn-sub">4<sup>8</sup> = 65,536　一条链，一个载体，八个回合。</span>
+      </div>
+      <div class="fusion-case">
+        <h4>「喝茶」体系骨架</h4>
+        <ul class="chips">
+          <li>亚煞极 <small>神明成长</small></li>
+          <li>守门融合怪 <small>载体</small></li>
+          <li>巴琳达 <small>塑造 ×2</small></li>
+          <li>唤冰者 <small>弃牌 / 法强</small></li>
+          <li>铜须 <small>经济</small></li>
+          <li>邪能猪 <small>加速发育</small></li>
+        </ul>
+        <p class="case-note">骨架的每一件都在做同一件事：<strong>提高「翻倍」的发生频率</strong>。不是加数字，是加次数。</p>
+        <div class="why4">
+          <span>为什么是 ×4</span>
+          <p>巴琳达让塑造法术<strong>触发两次</strong>（×2），双线缝针本身让属性<strong>翻倍</strong>（×2）。两个乘数相乘 = 每回合 ×4；八个回合就是 4⁸。</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="warn-row">
+    <div class="warn"><b>怕毒</b><p>上万身材也怕剧毒。解法是频率、圣盾、或先手点掉毒鱼。</p></div>
+    <div class="warn"><b>怕狂战斧</b><p>一个狂战斧能溅射三个。把载体夹在小怪中间，别放边上。</p></div>
+    <div class="warn"><b>怕被针对</b><p>单载体阵容最怕「扎普 / 潜行 / 直伤」。留一个副载体，别把鸡蛋放一个篮子。</p></div>
+  </div>
+</section>
+
+<!-- ================= 站位 ================= -->
+<section class="section alt" id="positioning">
+  <div class="section-head">
+    <div class="sec-no">04</div>
+    <div>
+      <h2>站位总纲：七个格子怎么分</h2>
+      <p class="sub">先手权、嘲讽、溅射、亡语——四个变量决定一切。</p>
+    </div>
+  </div>
+
+  <div class="pos-intro">
+    <p><strong>先手规则：</strong>战斗开始时，随从数量多的一方先攻；数量相同时随机。所以你「多铺一个」不只是多一个频率，还可能抢到整场战斗的先手。</p>
+  </div>
+
+  <div class="board-wrap">
+    <div class="board-label">从左到右 = 从先挨打到后挨打（常规）</div>
+    <div class="pos-board" id="posBoard">
+      <div class="pos-slot sac" data-tip="破盾 / 送死 / 狂战斧：用最低成本换掉对手的圣盾，或让狂战斧先出手。">
+        <span class="ps-num">1</span><span class="ps-role">破盾</span><span class="ps-name">小怪 / 狂战</span>
+      </div>
+      <div class="pos-slot tank" data-tip="主坦：圣盾 + 嘲讽，吸收第一波伤害，保护后面的引擎。">
+        <span class="ps-num">2</span><span class="ps-role">主坦</span><span class="ps-name">圣盾嘲讽</span>
+      </div>
+      <div class="pos-slot tank2" data-tip="副坦 / 复生：第二层墙，死了还能再站起来一次。">
+        <span class="ps-num">3</span><span class="ps-role">副坦</span><span class="ps-name">复生 / 大屁股</span>
+      </div>
+      <div class="pos-slot carry" data-tip="主输出：你的大身材载体，尽量放在中间偏后，避免被溅射。">
+        <span class="ps-num">4</span><span class="ps-role">主输出</span><span class="ps-name">融合怪 / 大哥</span>
+      </div>
+      <div class="pos-slot engine" data-tip="引擎：铜须、瑞文、巴琳达。绝不能死，必须被嘲讽保护。">
+        <span class="ps-num">5</span><span class="ps-role">引擎</span><span class="ps-name">铜须 / 瑞文</span>
+      </div>
+      <div class="pos-slot finisher" data-tip="终结：剧毒、风怒、狂战斧。用来点掉对手最难处理的那个。">
+        <span class="ps-num">6</span><span class="ps-role">终结</span><span class="ps-name">毒 / 风怒</span>
+      </div>
+      <div class="pos-slot back" data-tip="收割 / 亡语：最后出手，处理残局；或让亡语在最后铺场。">
+        <span class="ps-num">7</span><span class="ps-role">收割</span><span class="ps-name">亡语 / 补刀</span>
+      </div>
+    </div>
+    <div class="board-note" id="posNote">悬停任意格子，查看它的职责。</div>
+  </div>
+
+  <h3 class="block-title">十二条铁律</h3>
+  <div class="rules">
+    <div class="rule"><b>01</b><p>嘲讽放前排，但<strong>不要把唯一的圣盾大哥放 1 号位</strong>——先放一个无圣盾小怪吃破盾。</p></div>
+    <div class="rule"><b>02</b><p>狂战斧放最左，前提是它<strong>能在被击杀前先出手</strong>；如果它很大，就先垫一个小怪破盾。</p></div>
+    <div class="rule"><b>03</b><p>铜须、瑞文、巴琳达这类引擎，永远放在<strong>至少两个身位之后</strong>，且不要贴着狂战斧的溅射位。</p></div>
+    <div class="rule"><b>04</b><p>两个嘲讽之间夹一个小怪或超高血量单位，专门用来接狂战斧的溅射。</p></div>
+    <div class="rule"><b>05</b><p>剧毒单位要放在<strong>能先攻击</strong>的位置，它的价值是点掉对手最大的墙，而不是站桩。</p></div>
+    <div class="rule"><b>06</b><p>亡语铺场单位放前面，让它们早点死、早点产频率；瑞文放最后。</p></div>
+    <div class="rule"><b>07</b><p>风怒单位放后排收割，它的两次攻击要打在「已经破防」的残局上。</p></div>
+    <div class="rule"><b>08</b><p>对局中随时数对手的随从数：<strong>多一个就多一分先手</strong>，必要时买白板也要凑数。</p></div>
+    <div class="rule"><b>09</b><p>圣盾嘲讽是优质前排，但它<strong>怕破盾</strong>；看到对手有 1 攻小怪，就把圣盾往后挪。</p></div>
+    <div class="rule"><b>10</b><p>复生单位适合当第二层墙：它死两次，等于白赚一次频率。</p></div>
+    <div class="rule"><b>11</b><p>不要为了「好看」把大身材放边上；<strong>溅射位 = 死亡位</strong>。</p></div>
+    <div class="rule"><b>12</b><p>站位是动态的：每回合根据对手种族调整，别一套站位用到黑。</p></div>
+  </div>
+
+  <h3 class="block-title">针对矩阵</h3>
+  <div class="table-wrap">
+    <table class="matrix">
+      <thead><tr><th>对手形态</th><th>威胁</th><th>你的调整</th></tr></thead>
+      <tbody>
+        <tr><td>狂战斧 / 溅射</td><td>一次打三个，专杀引擎</td><td>引擎后置；用 1-2 个小怪把主力夹在中间；嘲讽错位。</td></tr>
+        <tr><td>剧毒鱼</td><td>无视身材，直接换掉大哥</td><td>圣盾先手破毒；用频率小怪吃毒；把大哥放到毒鱼攻击不到的位。</td></tr>
+        <tr><td>圣盾频率</td><td>多次免伤，拖死你的大怪</td><td>1 号位放小怪破盾；狂战斧先手；带「破盾」类效果。</td></tr>
+        <tr><td>亡语铺场</td><td>越打越多，频率压死</td><td>先杀瑞文；用扎普/潜行点后排；别把攻击浪费在小亡语上。</td></tr>
+        <tr><td>单一大哥</td><td>一个 10000/10000</td><td>剧毒 + 风怒 + 圣盾三件套；或者直接转身打脸。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= 种族 ================= -->
+<section class="section" id="tribes">
+  <div class="section-head">
+    <div class="sec-no">05</div>
+    <div>
+      <h2>全种族图鉴</h2>
+      <p class="sub">每个种族：定位 → 核心 → 站位 → 节奏 → 为什么强 → 怎么死。</p>
+    </div>
+  </div>
+
+  <div class="tier-strip" id="tierStrip"></div>
+  <div class="tabs" id="tribeTabs" role="tablist"></div>
+  <div class="panels" id="tribePanels"></div>
+</section>
+
+<!-- ================= 速查表 ================= -->
+<section class="section alt" id="table">
+  <div class="section-head">
+    <div class="sec-no">06</div>
+    <div>
+      <h2>一页速查</h2>
+      <p class="sub">开局迷茫时，先看这张表，再决定这把玩什么。</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table class="summary" id="summaryTable">
+      <thead>
+        <tr><th>种族</th><th>一句话定位</th><th>核心引擎</th><th>成型回合</th><th>上限</th><th>难度</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="table-note">「成型回合」指具备战斗力、可以开始滚雪球的时点；「上限」是吃鸡潜力，不是烂分能力。</p>
+</section>
+
+<!-- ================= 决策 ================= -->
+<section class="section" id="flow">
+  <div class="section-head">
+    <div class="sec-no">07</div>
+    <div>
+      <h2>一局游戏的四次决策</h2>
+      <p class="sub">酒馆战棋不是「抄阵容」，是「在四个时间点做对选择」。</p>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot">1</div>
+      <div class="tl-body">
+        <h4>第 1–3 回合：定调</h4>
+        <p>看发牌、看英雄、看饰品。优先拿<strong>经济</strong>与<strong>畸变怪</strong>起手；不要在这个阶段追三星，除非你确定要走频率。</p>
+        <span class="tl-key">关键词：稳血 &gt; 贪经济 &gt; 追梦</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">2</div>
+      <div class="tl-body">
+        <h4>第 4–7 回合：找引擎</h4>
+        <p>确定「乘数」：铜须？瑞文？巴琳达？找到其一再决定种族。没有引擎的阵容，后期一定打不过有引擎的。</p>
+        <span class="tl-key">关键词：先定引擎，再定种族</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">3</div>
+      <div class="tl-body">
+        <h4>第 8–12 回合：收敛</h4>
+        <p>把资源收口到一个载体（融合怪 / 大哥），开始复利。这时候不要再「什么都想要」，卖掉不参与乘法的挂件。</p>
+        <span class="tl-key">关键词：七格只留「参与乘法」的</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">4</div>
+      <div class="tl-body">
+        <h4>第 13 回合以后：针对</h4>
+        <p>看决赛圈对手：补毒、补圣盾、补狂战斧、调站位。身材到这个阶段已经够了，胜负在<strong>克制关系</strong>。</p>
+        <span class="tl-key">关键词：从「养成」切换到「针对」</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 术语 ================= -->
+<section class="section alt" id="glossary">
+  <div class="section-head">
+    <div class="sec-no">08</div>
+    <div>
+      <h2>术语表</h2>
+      <p class="sub">看懂这些词，你就看懂了九成的攻略。</p>
+    </div>
+  </div>
+  <dl class="glossary" id="glossaryList"></dl>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="brand"><span class="brand-mark">棋</span><span>酒馆手札</span></div>
+      <p>基于 36.6 → 37.0 补丁环境整理，供个人学习参考。卡图与卡牌数据来自社区卡牌库（HearthstoneJSON / ZeroToHeroes），仅作识别用途；卡池与数值随版本轮换，请以游戏内为准。</p>
+    </div>
+    <div class="footer-links">
+      <a href="#laws">定律</a><a href="#math">数学</a><a href="#fusion">融合</a><a href="#positioning">站位</a><a href="#tribes">种族</a>
+      <a href="https://github.com/nikomao/tavern-tome" target="_blank" rel="noopener">GitHub 仓库 ↗</a>
+    </div>
+  </div>
+  <div class="footer-bottom">Built for study · 2026.11</div>
+</footer>
+
+</main>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<div class="card-pop" id="cardPop" hidden>
+  <div class="cp-img"><img alt="" /></div>
+  <div class="cp-body">
+    <div class="cp-name"></div>
+    <div class="cp-meta"></div>
+    <p class="cp-text"></p>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="cards.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
