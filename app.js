@@ -1565,7 +1565,6 @@
   var overlay = document.getElementById("searchOverlay");
   var input = document.getElementById("searchInput");
   var list = document.getElementById("searchList");
-  if(!overlay || !input || !list) return;
 
   var idx = null, active = -1, shown = [];
 
@@ -1615,6 +1614,10 @@
   }
 
   function open(){
+    if(!overlay) overlay = document.getElementById("searchOverlay");
+    if(!input) input = document.getElementById("searchInput");
+    if(!list) list = document.getElementById("searchList");
+    if(!overlay || !input || !list) return;
     if(!idx) idx = buildIndex();
     overlay.hidden = false;
     input.value = "";
@@ -1696,14 +1699,16 @@
   });
   overlay.addEventListener("click", function(e){ if(e.target === overlay) close(); });
 
-  var btn = document.getElementById("searchOpen");
-  if(btn) btn.addEventListener("click", open);
+  document.addEventListener("click", function(e){
+    var b = e.target.closest ? e.target.closest("#searchOpen") : null;
+    if(b){ e.preventDefault(); open(); }
+  });
 
   document.addEventListener("keydown", function(e){
     var tag = (document.activeElement && document.activeElement.tagName) || "";
     if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k"){ e.preventDefault(); open(); return; }
-    if(e.key === "/" && tag !== "INPUT" && tag !== "TEXTAREA" && overlay.hidden){ e.preventDefault(); open(); return; }
-    if(e.key === "Escape" && !overlay.hidden) close();
+    if(e.key === "/" && tag !== "INPUT" && tag !== "TEXTAREA" && overlay && overlay.hidden){ e.preventDefault(); open(); return; }
+    if(e.key === "Escape" && overlay && !overlay.hidden) close();
   });
 })();
 
