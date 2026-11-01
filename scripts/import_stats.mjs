@@ -68,6 +68,7 @@ const out = {
   sample: Number(raw.sample) || 0,
   heroes,
   comps,
+  heroComps: raw.heroComps || {},
   trinkets: (raw.trinkets || []).map(t => ({
     name: String(t.name || "").trim(),
     avg: Number(t.avg) || 0,

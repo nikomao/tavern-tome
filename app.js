@@ -928,7 +928,7 @@
               '<span class="cs-name">' + x.name + '</span></a>';
           }).join("");
           var heroes = (c.heroes || []).join(" · ");
-          t += '<article class="comp-card">' +
+          t += '<article class="comp-card" data-comp-key="' + (c.key || "") + '">' +
             '<div class="cc-head"><span class="cc-rank">#' + (i+1) + '</span><b>' + c.name + '</b>' +
             '<span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span>' +
             '<span class="cc-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4||0)*100) +
@@ -1017,9 +1017,13 @@
         row.className = "hg-item";
         var rank = x.rank || x.tier || "T2";
         var tag = x.tag || (x.winrate ? "胜率 " + pct(x.winrate) : "");
+        var recs = (typeof STATS !== "undefined" && STATS.heroComps && STATS.heroComps[x.n]) || [];
+        var recHTML = recs.length ? '<p class="hg-comps">推荐：' + recs.map(function(r){
+          return '<a href="#meta" data-comp="' + r.key + '">' + r.name + '</a>';
+        }).join(" · ") + '</p>' : '';
         row.innerHTML = '<span class="hg-rank ' + String(rank).toLowerCase() + '">' + rank + '</span>' +
           (tag ? '<span class="hg-tag">' + tag + '</span>' : '') +
-          '<div><b>' + x.n + '</b><p>' + (x.why || "") + '</p></div>';
+          '<div><b>' + x.n + '</b><p>' + (x.why || "") + '</p>' + recHTML + '</div>';
         host.appendChild(row);
       });
     }
@@ -1096,9 +1100,41 @@
     }
 
     var heroSel = document.getElementById("finderHero");
-    if(typeof HEROES !== "undefined"){
-      HEROES.forEach(function(h){ var o = document.createElement("option"); o.value = h.n; o.textContent = h.n; heroSel.appendChild(o); });
+    var heroNames = [];
+    if(typeof STATS !== "undefined" && STATS.heroComps){
+      var order = {};
+      (STATS.heroes || []).forEach(function(h, i){ order[h.name] = i; });
+      heroNames = Object.keys(STATS.heroComps).sort(function(a, b){ return (order[a] == null ? 999 : order[a]) - (order[b] == null ? 999 : order[b]); });
     }
+    if(!heroNames.length && typeof HEROES !== "undefined"){ heroNames = HEROES.map(function(h){ return h.n; }); }
+    heroNames.forEach(function(n){ var o = document.createElement("option"); o.value = n; o.textContent = n; heroSel.appendChild(o); });
+
+    function pct(v){ return Math.round((Number(v) || 0) * 100) + "%"; }
+
+    function renderHeroComps(name){
+      var recs = (typeof STATS !== "undefined" && STATS.heroComps && STATS.heroComps[name]) || [];
+      if(!recs.length) return false;
+      var h = '<div class="fr-recs"><div class="fr-recs-head">' + name + ' 的推荐阵容</div>';
+      recs.forEach(function(r, i){
+        var full = (STATS.comps || []).filter(function(c){ return c.key === r.key; })[0] || {};
+        h += '<a class="fr-comp" href="#meta" data-comp="' + r.key + '">' +
+          '<span class="fr-comp-rank">#' + (i + 1) + '</span>' +
+          '<b>' + r.name + '</b>' +
+          '<span class="fr-comp-tier ' + String(r.tier).toLowerCase() + '">' + r.tier + '</span>' +
+          '<span class="fr-comp-meta">均位 ' + r.avg + ' · 前四 ' + pct(full.top4) + ' · 吃鸡 ' + pct(full.win) + ' · ' + r.sample + ' 局</span>' +
+          '</a>';
+      });
+      h += '<p class="fr-recs-tip">点任意一套，跳到周报区看 7 格卡牌与站位。</p></div>';
+      result.innerHTML = h;
+      return true;
+    }
+
+    heroSel.addEventListener("change", function(){
+      if(!heroSel.value) return;
+      if(!renderHeroComps(heroSel.value)){
+        result.innerHTML = '<p class="fr-empty">这个英雄暂时没有足够样本的阵容推荐。</p>';
+      }
+    });
 
     var chipsEl = document.getElementById("finderChips");
     var result = document.getElementById("finderResult");
@@ -1191,4 +1227,39 @@
     renderChips();
   })();
 
+})();
+
+
+/* ---------- hero deep link + comp jump ---------- */
+(function(){
+  function jumpToComp(key){
+    var card = document.querySelector('.comp-card[data-comp-key="' + key + '"]');
+    if(!card){
+      var more = document.querySelector(".comp-more");
+      if(more) more.open = true;
+      card = document.querySelector('.comp-card[data-comp-key="' + key + '"]');
+    }
+    if(!card) return false;
+    card.scrollIntoView({ behavior: "smooth", block: "center" });
+    card.classList.add("comp-flash");
+    setTimeout(function(){ card.classList.remove("comp-flash"); }, 1800);
+    return true;
+  }
+
+  document.addEventListener("click", function(e){
+    var a = e.target.closest ? e.target.closest("[data-comp]") : null;
+    if(!a) return;
+    if(jumpToComp(a.getAttribute("data-comp"))) e.preventDefault();
+  });
+
+  var hero = new URLSearchParams(location.search).get("hero");
+  if(hero){
+    var sel = document.getElementById("finderHero");
+    if(sel){
+      sel.value = hero;
+      sel.dispatchEvent(new Event("change", { bubbles: true }));
+      var f = document.getElementById("finder");
+      if(f) setTimeout(function(){ f.scrollIntoView({ block: "start" }); }, 300);
+    }
+  }
 })();

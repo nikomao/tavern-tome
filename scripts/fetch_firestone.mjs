@@ -119,6 +119,22 @@ const trinkets = (tr.trinketStats || [])
   .sort((a, b) => a.avg - b.avg)
   .slice(0, 8);
 
+const heroComps = {};
+for (const c of comps) {
+  const raw = cs.compStats.find(x => x.archetype === c.key);
+  if (!raw || !Array.isArray(raw.heroStats)) continue;
+  for (const h of raw.heroStats) {
+    const name = names[h.heroCardId];
+    if (!name || h.dataPoints < 30) continue;
+    if (!heroComps[name]) heroComps[name] = [];
+    heroComps[name].push({ key: c.key, name: c.name, tier: c.tier, avg: +h.averagePlacement.toFixed(2), sample: h.dataPoints });
+  }
+}
+for (const k of Object.keys(heroComps)) {
+  heroComps[k].sort((a, b) => a.avg - b.avg);
+  heroComps[k] = heroComps[k].slice(0, 3);
+}
+
 const out = {
   source: "Firestone / ZeroToHeroes",
   url: "https://static.zerotoheroes.com/api/bgs/",
@@ -126,7 +142,7 @@ const out = {
   bracket: MMR === "100" ? "全部 MMR" : "MMR 前 " + MMR + "%",
   region: "ALL",
   sample: hs.dataPoints,
-  heroes, comps, trinkets
+  heroes, comps, trinkets, heroComps
 };
 writeFileSync(resolve(root, "stats-input.json"), JSON.stringify(out, null, 1));
 console.log("英雄 " + heroes.length + "，阵容 " + comps.length + "，饰品 " + trinkets.length + "，样本 " + out.sample);

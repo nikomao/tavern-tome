@@ -1019,3 +1019,21 @@ body{
 
 .cs-tier{position:absolute;top:-6px;right:-4px;z-index:2;font-size:9.5px;font-weight:700;color:#1a100a;
   background:var(--parchment,#f4e7cf);border-radius:4px;padding:1px 5px;box-shadow:0 1px 3px rgba(0,0,0,.35)}
+
+/* hero -> comp recommendations */
+.hg-comps{margin-top:4px;font-size:11px;color:var(--dim);line-height:1.7}
+.hg-comps a{color:var(--gold-2);text-decoration:none;border-bottom:1px dotted rgba(226,180,95,.4)}
+.hg-comps a:hover{color:var(--gold)}
+.fr-recs{border:1px solid rgba(226,180,95,.22);border-radius:12px;padding:16px 18px;background:rgba(255,255,255,.02)}
+.fr-recs-head{font-size:13px;color:var(--gold-2);margin-bottom:12px}
+.fr-comp{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px 10px;
+  padding:10px 0;border-top:1px dashed var(--line);text-decoration:none}
+.fr-comp:first-of-type{border-top:0}
+.fr-comp-rank{font-family:var(--serif);color:var(--gold);font-size:12px}
+.fr-comp b{font-size:14px;color:var(--ink)}
+.fr-comp-tier{font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;border:1px solid var(--line-2);color:var(--muted)}
+.fr-comp-tier.t0{color:#ffb4ab;border-color:rgba(232,105,95,.45)}
+.fr-comp-tier.t1{color:var(--gold-2);border-color:rgba(226,180,95,.45)}
+.fr-comp-meta{grid-column:1 / -1;font-size:11px;color:var(--dim)}
+.fr-recs-tip{margin-top:10px;font-size:11px;color:var(--dim)}
+.comp-flash{outline:2px solid var(--gold);outline-offset:3px;transition:outline-color .3s}
