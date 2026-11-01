@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>阵容分享图 · 酒馆手札</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<style>
+  body{margin:0;background:#120b07;color:#f4e7cf;font-family:"Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;padding:20px}
+  .bar{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap;justify-content:center}
+  select,button{background:#241610;color:#f4e7cf;border:1px solid rgba(226,180,95,.35);border-radius:9px;padding:9px 14px;font-size:14px;cursor:pointer}
+  button.primary{background:rgba(226,180,95,.16)}
+  canvas{max-width:100%;height:auto;border:1px solid rgba(226,180,95,.25);border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .tip{font-size:12px;color:#9c8a74;margin-top:10px}
+</style>
+</head>
+<body>
+  <div class="bar">
+    <select id="comp"></select>
+    <button type="button" id="download" class="primary">下载 PNG</button>
+    <button type="button" id="copy">复制图片</button>
+  </div>
+  <canvas id="cv" width="1080" height="1080"></canvas>
+  <p class="tip">1080×1080 · 适合微信群 / 朋友圈 / QQ 群</p>
+
+<script src="data.js?v=20261102f"></script>
+<script src="pool.js?v=20261102f"></script>
+<script src="stats.js?v=20261102f"></script>
+<script src="comp-notes.js?v=20261102f"></script>
+<script src="extra-cards.js?v=20261102f"></script>
+<script src="cards.js?v=20261102f"></script>
+<script src="share.js?v=20261102f"></script>
+</body>
+</html>

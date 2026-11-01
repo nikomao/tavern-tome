@@ -1017,6 +1017,7 @@
           '<div class="cc-head"><span class="cc-rank">#' + (rank + 1) + '</span><b>' + c.name + '</b>' +
           '<span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span>' +
           (c.key ? '<a class="cc-play" href="play.html?comp=' + c.key + '">对局模式</a>' : '') +
+          (c.key ? '<a class="cc-share" href="share.html?comp=' + c.key + '">分享图</a>' : '') +
           (c.key ? '<button type="button" class="cc-cmp" data-cmp="' + c.key + '">对比</button>' : '') +
           heroBadge +
           '<span class="cc-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) +
