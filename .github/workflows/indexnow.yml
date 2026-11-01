@@ -1,0 +1,34 @@
+name: IndexNow ping
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "sitemap.xml"
+      - "cards.html"
+      - "play.html"
+      - "share.html"
+      - "zh-TW/index.html"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit URLs to IndexNow
+        run: |
+          curl -sS -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "nikom-blog.org",
+              "key": "9c9115fd03ecc9e97205f5f194ef52fd",
+              "keyLocation": "https://nikom-blog.org/9c9115fd03ecc9e97205f5f194ef52fd.txt",
+              "urlList": [
+                "https://nikom-blog.org/",
+                "https://nikom-blog.org/cards.html",
+                "https://nikom-blog.org/play.html",
+                "https://nikom-blog.org/share.html",
+                "https://nikom-blog.org/zh-TW/"
+              ]
+            }'
