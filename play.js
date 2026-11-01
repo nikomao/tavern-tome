@@ -22,7 +22,8 @@
   function nameOf(id, fallback){ var c = CARD_DB[id]; return (c && c.n) || fallback || id; }
 
   var params = new URLSearchParams(location.search);
-  var key = params.get("comp") || comps[0].key;
+  var heroParam = params.get("hero");
+  var key = params.get("comp") || (heroParam && typeof STATS !== "undefined" && STATS.heroComps && STATS.heroComps[heroParam] ? STATS.heroComps[heroParam][0].key : "") || comps[0].key;
   if(!comps.some(function(c){ return c.key === key; })) key = comps[0].key;
 
   comps.forEach(function(c){
@@ -35,7 +36,7 @@
 
   function current(){ return comps.filter(function(c){ return c.key === key; })[0]; }
 
-  var DEFAULTS = { turn: 1, tier: 1, gold: 3, health: 30, slots: [] };
+  var DEFAULTS = { turn: 1, tier: 1, gold: 3, health: 30, slots: [], cards: null };
   var state = load();
 
   function load(){
@@ -43,7 +44,7 @@
       var raw = localStorage.getItem("tt-play-" + key);
       if(raw){
         var s = JSON.parse(raw);
-        return { turn: s.turn || 1, tier: s.tier || 1, gold: s.gold || 0, health: s.health == null ? 30 : s.health, slots: s.slots || [] };
+        return { turn: s.turn || 1, tier: s.tier || 1, gold: s.gold || 0, health: s.health == null ? 30 : s.health, slots: s.slots || [], cards: s.cards || null };
       }
     } catch(e){}
     return JSON.parse(JSON.stringify(DEFAULTS));
@@ -65,8 +66,10 @@
     return list;
   }
 
+  function currentCards(){ return (state.cards && state.cards.length) ? state.cards : ordered(current()); }
+
   function ensureSlots(){
-    var n = ordered(current()).length;
+    var n = currentCards().length;
     while(state.slots.length < n) state.slots.push(0);
     state.slots = state.slots.slice(0, n);
   }
@@ -77,10 +80,11 @@
     ensureSlots();
     var c = current();
     tierEl.textContent = c.tier;
-    metaEl.textContent = "均位 " + c.avg + " · 前四 " + Math.round((c.top4 || 0) * 100) + "% · 吃鸡 " + Math.round((c.win || 0) * 100) + "%";
+    metaEl.textContent = "均位 " + c.avg + " · 前四 " + Math.round((c.top4 || 0) * 100) + "% · 吃鸡 " + Math.round((c.win || 0) * 100) + "%" +
+      (heroParam ? " · 按英雄推荐" : "");
 
     slotsEl.innerHTML = "";
-    ordered(c).forEach(function(x, i){
+    currentCards().forEach(function(x, i){
       var v = state.slots[i] || 0;
       var t = tierOf(x.id);
       var d = document.createElement("div");
@@ -88,6 +92,7 @@
       d.setAttribute("data-i", i);
       d.title = x.name + " · 点击切换 缺/有/金";
       d.innerHTML = '<span class="num">' + (i + 1) + '</span>' +
+        '<button class="swap" data-swap="' + i + '" title="替换">⇄</button>' +
         (t != null ? '<span class="tier">' + t + '本</span>' : '') +
         '<span class="ps-img">' + (CARD_DB[x.id] && CARD_DB[x.id].m ? '<img src="pool/' + x.id + '.webp" alt="" onerror="this.style.display=\'none\'">' : '<i>' + x.name.slice(0,1) + '</i>') + '</span>' +
         '<span class="ps-name">' + x.name + '</span>' +
@@ -95,7 +100,7 @@
       slotsEl.appendChild(d);
     });
 
-    var missing = ordered(c).map(function(x, i){ return { x: x, i: i, v: state.slots[i] || 0 }; })
+    var missing = currentCards().map(function(x, i){ return { x: x, i: i, v: state.slots[i] || 0 }; })
       .filter(function(o){ return o.v === 0; })
       .sort(function(a, b){ return (tierOf(a.x.id) || 99) - (tierOf(b.x.id) || 99); });
 
@@ -137,6 +142,8 @@
   }
 
   slotsEl.addEventListener("click", function(e){
+    var sw = e.target.closest ? e.target.closest(".swap") : null;
+    if(sw){ e.preventDefault(); openPicker(+sw.getAttribute("data-swap")); return; }
     var s = e.target.closest ? e.target.closest(".ps-slot") : null;
     if(s) toggle(+s.getAttribute("data-i"));
   });
@@ -184,14 +191,14 @@
     if(!pipWin) return;
     var c = current();
     var doc = pipWin.document;
-    var missing = ordered(c).map(function(x, i){ return { x: x, i: i, v: state.slots[i] || 0 }; })
+    var missing = currentCards().map(function(x, i){ return { x: x, i: i, v: state.slots[i] || 0 }; })
       .filter(function(o){ return o.v === 0; })
       .sort(function(a, b){ return (tierOf(a.x.id) || 99) - (tierOf(b.x.id) || 99); });
     doc.getElementById("pipRoot").innerHTML =
       '<div class="play-status" style="padding:0 0 6px"><div class="ps"><span>回合</span><b>' + state.turn + '</b></div>' +
       '<div class="ps"><span>本数</span><b>' + state.tier + '</b></div>' +
       '<div class="ps"><span>金币</span><b>' + state.gold + '</b></div></div>' +
-      '<div class="play-slots">' + ordered(c).map(function(x, i){
+      '<div class="play-slots">' + currentCards().map(function(x, i){
         var v = state.slots[i] || 0;
         var t = tierOf(x.id);
         return '<div class="ps-slot ' + (v === 2 ? "golden" : v === 1 ? "owned" : "missing") + '" data-i="' + i + '">' +
@@ -225,6 +232,74 @@
     });
     pipWin.addEventListener("pagehide", function(){ pipWin = null; });
     renderPip();
+  });
+
+  /* ---- 卡牌替换/添加 ---- */
+  var overlay = document.getElementById("pickOverlay");
+  var pickInput = document.getElementById("pickInput");
+  var pickList = document.getElementById("pickList");
+  var pickIndex = -1;
+
+  function openPicker(i){
+    pickIndex = i;
+    overlay.hidden = false;
+    pickInput.value = "";
+    renderPicks("");
+    setTimeout(function(){ pickInput.focus(); }, 30);
+  }
+  function closePicker(){ overlay.hidden = true; pickIndex = -1; }
+
+  function renderPicks(q){
+    q = String(q || "").trim().toLowerCase();
+    var list = [];
+    if(typeof POOL !== "undefined"){
+      list = POOL.filter(function(c){ return !q || c.n.toLowerCase().indexOf(q) >= 0; })
+        .sort(function(a, b){
+          var as = a.n.toLowerCase().indexOf(q) === 0 ? 0 : 1;
+          var bs = b.n.toLowerCase().indexOf(q) === 0 ? 0 : 1;
+          return as - bs || a.n.length - b.n.length;
+        })
+        .slice(0, 30);
+    }
+    pickList.innerHTML = list.length ? list.map(function(c){
+      return '<div class="pick-item" data-id="' + c.i + '">' +
+        (c.m ? '<img src="pool/' + c.i + '.webp" alt="">' : '<span class="pt">?</span>') +
+        '<span>' + c.n + '</span><span class="pt">' + (c.t != null ? c.t + "本" : "") + '</span></div>';
+    }).join("") : '<p class="pick-hint">没找到</p>';
+  }
+
+  pickInput.addEventListener("input", function(){ renderPicks(pickInput.value); });
+  pickInput.addEventListener("keydown", function(e){ if(e.key === "Escape") closePicker(); });
+  pickList.addEventListener("click", function(e){
+    var it = e.target.closest ? e.target.closest(".pick-item") : null;
+    if(!it) return;
+    var id = it.getAttribute("data-id");
+    var card = CARD_DB[id];
+    if(!card) return;
+    var list = currentCards().slice();
+    if(pickIndex >= 0) list[pickIndex] = { id: id, name: card.n };
+    else {
+      if(list.length >= 7){ alert("最多 7 格，请用格子上的 ⇄ 替换。"); return; }
+      list.push({ id: id, name: card.n });
+    }
+    state.cards = list;
+    state.slots = state.slots.slice(0, list.length);
+    save(); render(); closePicker();
+  });
+  overlay.addEventListener("click", function(e){ if(e.target === overlay) closePicker(); });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape" && !overlay.hidden) closePicker(); });
+
+  var addBtn = document.getElementById("btnAdd");
+  if(addBtn) addBtn.addEventListener("click", function(){ openPicker(-1); });
+
+  var shareBtn = document.getElementById("btnShare");
+  if(shareBtn) shareBtn.addEventListener("click", function(){
+    var url = location.origin + location.pathname + "?comp=" + encodeURIComponent(key);
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(function(){ shareBtn.textContent = "已复制"; setTimeout(function(){ shareBtn.textContent = "复制链接"; }, 1500); });
+    } else {
+      prompt("复制链接", url);
+    }
   });
 
   render();

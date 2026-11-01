@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>对局模式 · 酒馆手札</title>
-<link rel="stylesheet" href="styles.css?v=20261101l">
-<link rel="stylesheet" href="play.css?v=20261101l">
+<link rel="stylesheet" href="styles.css?v=20261101m">
+<link rel="stylesheet" href="play.css?v=20261101m">
 </head>
 <body class="play-body">
 
@@ -28,6 +28,7 @@
   <aside class="play-side">
     <h3>还差 <b id="missCount">0</b> 张</h3>
     <div id="missList"></div>
+    <button type="button" class="play-add" id="btnAdd">＋ 添加卡牌</button>
     <p class="play-hint" id="playHint"></p>
   </aside>
 </main>
@@ -35,15 +36,24 @@
 <footer class="play-actions">
   <button type="button" id="btnNext">下一回合 <span>空格</span></button>
   <button type="button" id="btnPip">置顶小窗</button>
+  <button type="button" id="btnShare">复制链接</button>
   <button type="button" id="btnReset">重置</button>
 </footer>
 
-<script src="data.js?v=20261101l"></script>
-<script src="pool.js?v=20261101l"></script>
-<script src="stats.js?v=20261101l"></script>
-<script src="comp-notes.js?v=20261101l"></script>
-<script src="extra-cards.js?v=20261101l"></script>
-<script src="cards.js?v=20261101l"></script>
-<script src="play.js?v=20261101l"></script>
+<div class="pick-overlay" id="pickOverlay" hidden>
+  <div class="pick-box">
+    <input id="pickInput" type="search" placeholder="搜卡名，例如：铜须、诗心龙" autocomplete="off">
+    <div class="pick-list" id="pickList"></div>
+    <p class="pick-hint">Esc 关闭</p>
+  </div>
+</div>
+
+<script src="data.js?v=20261101m"></script>
+<script src="pool.js?v=20261101m"></script>
+<script src="stats.js?v=20261101m"></script>
+<script src="comp-notes.js?v=20261101m"></script>
+<script src="extra-cards.js?v=20261101m"></script>
+<script src="cards.js?v=20261101m"></script>
+<script src="play.js?v=20261101m"></script>
 </body>
 </html>

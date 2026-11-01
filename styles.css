@@ -1081,3 +1081,6 @@ body{
 .cc-play{font-size:11px;color:var(--gold-2);text-decoration:none;border:1px solid rgba(226,180,95,.35);
   border-radius:6px;padding:3px 8px;margin-left:6px}
 .cc-play:hover{background:rgba(226,180,95,.12)}
+
+.hg-play{color:var(--gold);border:1px solid rgba(226,180,95,.35);border-radius:5px;padding:1px 6px;font-size:10.5px;text-decoration:none;margin-left:4px}
+.hg-play:hover{background:rgba(226,180,95,.12)}

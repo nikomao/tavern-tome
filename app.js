@@ -1025,7 +1025,7 @@
         var recs = (typeof STATS !== "undefined" && STATS.heroComps && STATS.heroComps[x.n]) || [];
         var recHTML = recs.length ? '<p class="hg-comps">推荐：' + recs.map(function(r){
           return '<a href="#meta" data-comp="' + r.key + '">' + r.name + '</a>';
-        }).join(" · ") + '</p>' : '';
+        }).join(" · ") + ' <a class="hg-play" href="play.html?hero=' + encodeURIComponent(x.n) + '">对局模式</a></p>' : '';
         row.innerHTML = '<span class="hg-rank ' + String(rank).toLowerCase() + '">' + rank + '</span>' +
           (tag ? '<span class="hg-tag">' + tag + '</span>' : '') +
           '<div><b>' + x.n + '</b><p>' + (x.why || "") + '</p>' + recHTML + '</div>';

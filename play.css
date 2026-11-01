@@ -44,3 +44,22 @@
   .play-main{grid-template-columns:1fr}
   .play-slots{grid-template-columns:repeat(4,minmax(0,1fr))}
 }
+
+.play-add{margin-top:12px;width:100%;padding:9px;border-radius:8px;border:1px dashed rgba(226,180,95,.35);
+  background:none;color:#c8a86a;font-size:12px;cursor:pointer}
+.play-add:hover{background:rgba(226,180,95,.08)}
+.ps-slot .swap{position:absolute;top:4px;right:26px;z-index:3;width:20px;height:20px;border-radius:5px;
+  border:1px solid rgba(226,180,95,.35);background:rgba(18,11,7,.8);color:#e2b45f;font-size:11px;
+  display:none;cursor:pointer;place-items:center}
+.ps-slot:hover .swap{display:grid}
+.pick-overlay{position:fixed;inset:0;z-index:40;background:rgba(8,5,3,.75);display:flex;justify-content:center;align-items:flex-start;padding-top:12vh}
+.pick-box{width:min(560px,92vw);background:#241610;border:1px solid rgba(226,180,95,.3);border-radius:12px;padding:12px}
+.pick-box input{width:100%;box-sizing:border-box;background:#1a100a;border:1px solid rgba(226,180,95,.25);border-radius:8px;
+  color:#f4e7cf;font-size:14px;padding:10px 12px;outline:none}
+.pick-list{max-height:46vh;overflow:auto;margin-top:8px}
+.pick-item{display:flex;gap:8px;align-items:center;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:13px;color:#e8dcc7}
+.pick-item:hover{background:rgba(226,180,95,.12)}
+.pick-item .pt{font-size:10px;padding:1px 5px;border-radius:4px;background:rgba(255,255,255,.08);color:#9c8a74}
+.pick-item img{width:28px;height:28px;border-radius:5px;object-fit:cover}
+.pick-hint{font-size:10.5px;color:#9c8a74;text-align:right;margin:6px 0 0}
+@media (max-width:820px){ .ps-slot .swap{display:grid} }
