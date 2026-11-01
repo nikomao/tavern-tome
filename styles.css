@@ -904,3 +904,12 @@ body{
 .pm-tribes{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .pm-tribes a{font-size:12px;color:var(--gold-2);border:1px solid var(--gold-dim);border-radius:999px;padding:4px 11px;background:rgba(226,180,95,.08)}
 .pm-tribes a:hover{background:rgba(226,180,95,.18)}
+
+/* NEW placeholders for cards missing official art */
+.ci-thumb.noimg{position:relative;background:linear-gradient(160deg,rgba(226,180,95,.2),rgba(90,45,18,.3));
+  color:var(--gold-2);border-color:rgba(226,180,95,.35)}
+.ci-thumb.noimg::after{content:"NEW";position:absolute;top:2px;right:3px;font-size:7px;letter-spacing:.08em;
+  color:#1a0f09;background:var(--gold);border-radius:3px;padding:1px 3px;font-family:var(--sans)}
+.fc .fc-img.noimg{position:relative}
+.fc .fc-img.noimg::after{content:"NEW";position:absolute;top:5px;right:5px;font-size:8px;letter-spacing:.08em;
+  color:#1a0f09;background:var(--gold);border-radius:3px;padding:1px 4px;font-family:var(--sans)}
