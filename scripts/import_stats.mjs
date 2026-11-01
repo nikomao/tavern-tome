@@ -46,7 +46,11 @@ const comps = (raw.comps || []).map(c => ({
   top4: Number(c.top4) || 0,
   win: Number(c.win) || 0,
   avg: Number(c.avg) || 0,
-  sample: Number(c.sample) || 0
+  sample: Number(c.sample) || 0,
+  cards: Array.isArray(c.cards) ? c.cards.slice(0, 7) : [],
+  heroes: Array.isArray(c.heroes) ? c.heroes.slice(0, 3) : [],
+  difficulty: c.difficulty || "",
+  power: c.power || ""
 })).filter(c => c.name);
 
 if (!heroes.length && !comps.length) {
@@ -62,7 +66,13 @@ const out = {
   region: raw.region || "",
   sample: Number(raw.sample) || 0,
   heroes,
-  comps
+  comps,
+  trinkets: (raw.trinkets || []).map(t => ({
+    name: String(t.name || "").trim(),
+    avg: Number(t.avg) || 0,
+    pickrate: Number(t.pickrate) || 0,
+    sample: Number(t.sample) || 0
+  })).filter(t => t.name)
 };
 
 const js = "/* 对局统计数据（由 scripts/import_stats.mjs 生成） */\nconst STATS = " +

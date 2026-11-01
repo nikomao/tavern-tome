@@ -853,15 +853,47 @@
       var host = document.getElementById("compStats");
       var sub = document.getElementById("metaSub");
       if(host){
-        var rows = STATS.comps.slice(0, 12);
         var t = '<div class="cs-head">数据阵容榜 <span>' + STATS.source + ' · ' + (STATS.bracket || "") +
           " · " + (STATS.fetchedAt || "") + " · 样本 " + (STATS.sample ? Math.round(STATS.sample/10000)+" 万局" : "-") + '</span></div>';
-        t += '<div class="table-wrap"><table class="meta-table"><thead><tr><th>#</th><th>阵容</th><th>梯度</th><th>均位</th><th>前四</th><th>吃鸡</th><th>样本</th></tr></thead><tbody>';
-        rows.forEach(function(c, i){
-          t += '<tr><td>' + (i+1) + '</td><td>' + c.name + '</td><td>' + c.tier + '</td><td>' + Number(c.avg).toFixed(2) +
-            '</td><td>' + Math.round((c.top4||0)*100) + '%</td><td>' + Math.round((c.win||0)*100) + '%</td><td>' + (c.sample||0).toLocaleString("en-US") + '</td></tr>';
+
+        t += '<div class="comp-board">';
+        STATS.comps.slice(0, 8).forEach(function(c, i){
+          var cards = (c.cards || []).map(function(x){
+            return '<a class="comp-slot" href="cards.html?card=' + x.id + '" title="' + x.name + '">' +
+              '<span class="cs-img"><img loading="lazy" src="pool/' + x.id + '.webp" alt="" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><i>' + x.name.slice(0,1) + '</i></span>' +
+              '<span class="cs-name">' + x.name + '</span></a>';
+          }).join("");
+          var heroes = (c.heroes || []).join(" · ");
+          t += '<article class="comp-card">' +
+            '<div class="cc-head"><span class="cc-rank">#' + (i+1) + '</span><b>' + c.name + '</b>' +
+            '<span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span>' +
+            '<span class="cc-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4||0)*100) +
+            '% · 吃鸡 ' + Math.round((c.win||0)*100) + '% · ' + (c.sample||0).toLocaleString("en-US") + ' 局</span></div>' +
+            '<div class="cc-lineup">' + cards + '</div>' +
+            '<div class="cc-foot"><span>推荐英雄：' + (heroes || "—") + '</span><span>' +
+            (c.difficulty || "") + (c.power ? ' / 强度 ' + c.power : "") + '</span></div>' +
+            '</article>';
         });
-        t += '</tbody></table></div>';
+        t += '</div>';
+
+        if(STATS.comps.length > 8){
+          t += '<details class="comp-more"><summary>更多阵容（9–' + STATS.comps.length + '）</summary>' +
+            '<div class="table-wrap"><table class="meta-table"><thead><tr><th>#</th><th>阵容</th><th>梯度</th><th>均位</th><th>前四</th><th>吃鸡</th><th>样本</th></tr></thead><tbody>';
+          STATS.comps.slice(8).forEach(function(c, i){
+            t += '<tr><td>' + (i+9) + '</td><td>' + c.name + '</td><td>' + c.tier + '</td><td>' + Number(c.avg).toFixed(2) +
+              '</td><td>' + Math.round((c.top4||0)*100) + '%</td><td>' + Math.round((c.win||0)*100) + '%</td><td>' + (c.sample||0).toLocaleString("en-US") + '</td></tr>';
+          });
+          t += '</tbody></table></div></details>';
+        }
+
+        if(STATS.trinkets && STATS.trinkets.length){
+          t += '<div class="trinket-board"><div class="cs-head">本周强势饰品 <span>按平均排名</span></div><div class="trinket-grid">';
+          STATS.trinkets.forEach(function(k){
+            t += '<span class="tk"><b>' + k.name + '</b><em>均位 ' + Number(k.avg).toFixed(2) + ' · 选取 ' + k.pickrate + '%</em></span>';
+          });
+          t += '</div></div>';
+        }
+
         host.innerHTML = t;
         host.hidden = false;
       }

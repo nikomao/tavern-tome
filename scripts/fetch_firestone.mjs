@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 /**
- * 从 Firestone / ZeroToHeroes 的公开静态接口拉取酒馆战棋统计，
- * 生成 stats-input.json（再用 import_stats.mjs 写入 stats.js）。
- *
+ * 拉取 Firestone / ZeroToHeroes 的酒馆战棋统计，生成 stats-input.json。
  * 用法: node scripts/fetch_firestone.mjs [mmrPercentile]
- *   mmrPercentile: 100=全部, 50, 25, 10, 1（默认 100）
  */
 import { gunzipSync } from "node:zlib";
 import { writeFileSync } from "node:fs";
@@ -46,19 +43,22 @@ function rates(h) {
 
 const hs = await getJson("https://static.zerotoheroes.com/api/bgs/hero-stats/mmr-" + MMR + "/last-patch/overview-from-hourly.gz.json");
 const cs = await getJson("https://static.zerotoheroes.com/api/bgs/comp-stats/last-patch/overview-v3.gz.json");
+const strat = await getJson("https://static.zerotoheroes.com/hearthstone/data/battlegrounds-strategies/bgs-comps-strategies.gz.json");
+const tr = await getJson("https://static.zerotoheroes.com/api/bgs/trinket-stats/last-patch/overview-from-hourly.gz.json");
 const cards = await getJson("https://api.hearthstonejson.com/v1/latest/zhCN/cards.json");
+
 const names = {};
 for (const c of cards) if (c.id) names[c.id] = c.name;
+const stratById = {};
+for (const s of strat) if (s.compId) stratById[s.compId] = s;
 
 const heroes = hs.heroStats
   .filter(h => names[h.heroCardId] && h.totalPicked >= 300)
   .map(h => {
     const r = rates(h);
     return {
-      name: names[h.heroCardId],
-      tier: "T2",
-      winrate: +r.win.toFixed(4),
-      top4: +r.top4.toFixed(4),
+      name: names[h.heroCardId], tier: "T2",
+      winrate: +r.win.toFixed(4), top4: +r.top4.toFixed(4),
       avg: +h.averagePosition.toFixed(2),
       pickrate: h.totalOffered ? +(h.totalPicked / h.totalOffered * 100).toFixed(2) : 0
     };
@@ -70,17 +70,43 @@ const comps = cs.compStats
   .filter(c => c.dataPoints >= 800 && CN[c.archetype])
   .map(c => {
     const r = rates(c);
+    const s = stratById[c.archetype];
+    let lineup = [];
+    if (s && Array.isArray(s.cards)) {
+      const order = { CORE: 0, ADDON: 1, CYCLE: 2 };
+      lineup = [...s.cards]
+        .sort((a, b) => (order[a.status] ?? 3) - (order[b.status] ?? 3) || (b.finalBoardWeight || 0) - (a.finalBoardWeight || 0))
+        .slice(0, 7)
+        .map(x => ({ id: x.cardId, name: names[x.cardId] || x.name, status: x.status }));
+    }
+    const compHeroes = (c.heroStats || [])
+      .filter(h => h.dataPoints >= 50 && names[h.heroCardId])
+      .sort((a, b) => a.averagePlacement - b.averagePlacement)
+      .slice(0, 3)
+      .map(h => names[h.heroCardId]);
     return {
-      name: CN[c.archetype],
-      tier: "T2",
-      top4: +r.top4.toFixed(4),
-      win: +r.win.toFixed(4),
-      avg: +c.averagePlacement.toFixed(2),
-      sample: c.dataPoints
+      name: CN[c.archetype], tier: "T2",
+      top4: +r.top4.toFixed(4), win: +r.win.toFixed(4),
+      avg: +c.averagePlacement.toFixed(2), sample: c.dataPoints,
+      cards: lineup,
+      heroes: compHeroes,
+      difficulty: s ? s.difficulty : "",
+      power: s ? s.powerLevel : ""
     };
   })
   .sort((a, b) => a.avg - b.avg);
 comps.forEach((c, i) => { const p = i / comps.length; c.tier = p < 0.15 ? "T0" : p < 0.4 ? "T1" : p < 0.7 ? "T2" : "T3"; });
+
+const trinkets = (tr.trinketStats || [])
+  .filter(t => t.dataPoints >= 1000 && names[t.trinketCardId])
+  .map(t => ({
+    name: names[t.trinketCardId],
+    avg: +t.averagePlacement.toFixed(2),
+    pickrate: +(t.pickRate * 100).toFixed(1),
+    sample: t.dataPoints
+  }))
+  .sort((a, b) => a.avg - b.avg)
+  .slice(0, 8);
 
 const out = {
   source: "Firestone / ZeroToHeroes",
@@ -89,8 +115,7 @@ const out = {
   bracket: MMR === "100" ? "全部 MMR" : "MMR 前 " + MMR + "%",
   region: "ALL",
   sample: hs.dataPoints,
-  heroes,
-  comps
+  heroes, comps, trinkets
 };
 writeFileSync(resolve(root, "stats-input.json"), JSON.stringify(out, null, 1));
-console.log("stats-input.json：英雄 " + heroes.length + "，阵容 " + comps.length + "，样本 " + out.sample);
+console.log("英雄 " + heroes.length + "，阵容 " + comps.length + "，饰品 " + trinkets.length + "，样本 " + out.sample);
