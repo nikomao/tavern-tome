@@ -914,10 +914,24 @@
 
         host.innerHTML = t;
         host.hidden = false;
+        if(!t || !document.querySelector(".comp-card")){
+          host.innerHTML = '<div class="cs-empty">卡表数据未加载（可能是旧缓存）。请按 <b>Ctrl+F5</b> 强制刷新，或换无痕窗口打开。</div>';
+        }
       }
       if(sub) sub.hidden = false;
       var metaSec = document.getElementById("meta");
       if(metaSec) metaSec.classList.add("stats-live");
+    }
+
+    function cardFor(n){
+      if(typeof CARDS === "undefined" || !CARDS) return null;
+      if(CARDS[n]) return CARDS[n];
+      var keys = Object.keys(CARDS), low = String(n).toLowerCase();
+      for(var i = 0; i < keys.length; i++){
+        var k = keys[i].toLowerCase();
+        if(k.indexOf(low) >= 0 || low.indexOf(k) >= 0) return CARDS[keys[i]];
+      }
+      return null;
     }
 
     META.comps.slice(0, 3).forEach(function(c){
@@ -926,7 +940,10 @@
       d.innerHTML = '<span class="mc-rank">' + c.rank + '</span>' +
         '<h3>' + c.name + '</h3>' +
         '<p class="mc-line">' + c.line + '</p>' +
-        '<div class="mc-core">' + c.core.map(function(x){ return '<span>' + x + '</span>'; }).join("") + '</div>' +
+        '<div class="mc-core">' + c.core.map(function(x){
+          var card = cardFor(x);
+          return '<span class="mc-card">' + (card && card.img ? '<img src="' + card.img + '" alt="" loading="lazy">' : '') + '<em>' + x + '</em></span>';
+        }).join("") + '</div>' +
         '<p class="mc-good"><b>强</b>' + c.good + '</p>' +
         '<p class="mc-bad"><b>怕</b>' + c.bad + '</p>';
       top.appendChild(d);
