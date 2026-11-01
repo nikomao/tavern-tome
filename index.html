@@ -29,7 +29,7 @@
       <a href="#tribes">种族</a>
       <a href="#heroes">英雄</a>
       <a href="#meta">周报</a>
-      <a href="#table">速查</a>
+      <a href="#finder">反查</a>
       <a href="cards.html">卡池</a>
     </nav>
     <div class="ver">v37.0</div>
@@ -633,6 +633,35 @@
   <p class="table-note">英雄与饰品池会随赛季轮换，这里给的是选择方法；具体强度以当前版本为准。</p>
 </section>
 
+<!-- ================= 阵容反查 ================= -->
+<section class="section" id="finder">
+  <div class="section-head">
+    <div class="sec-no">查</div>
+    <div>
+      <h2>阵容反查</h2>
+      <p class="sub">输入你的英雄和手里的牌，告诉你最该玩什么，以及为什么。</p>
+    </div>
+  </div>
+
+  <div class="finder">
+    <div class="finder-form">
+      <label class="ff-row"><span>你的英雄</span>
+        <select id="finderHero"><option value="">先不选</option></select>
+      </label>
+      <label class="ff-row"><span>手里的牌（最多 3 张）</span>
+        <input id="finderCard" list="poolNames" placeholder="输入卡名，例如：铜须、诗心龙、白狼" autocomplete="off" />
+        <datalist id="poolNames"></datalist>
+      </label>
+      <div class="finder-chips" id="finderChips"></div>
+      <button type="button" class="btn primary" id="finderGo">推荐阵容</button>
+      <p class="finder-tip">只看「核心组件」和「种族」两条线，不会替你做全部决策。</p>
+    </div>
+    <div class="finder-result" id="finderResult">
+      <p class="fr-empty">选好英雄或卡牌，点「推荐阵容」。</p>
+    </div>
+  </div>
+</section>
+
 <!-- ================= 决策 ================= -->
 <section class="section" id="flow">
   <div class="section-head">
@@ -719,6 +748,7 @@
 </div>
 
 <script src="data.js"></script>
+<script src="pool.js"></script>
 <script src="cards.js"></script>
 <script src="app.js"></script>
 </body>

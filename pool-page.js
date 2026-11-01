@@ -102,6 +102,19 @@
       var img = document.getElementById("pmImg");
       if(c.m){ img.src = "pool/" + c.i + ".webp"; img.style.display = ""; }
       else { img.removeAttribute("src"); img.style.display = "none"; }
+      var TRIBE_ID = { BEAST:"beast", DEMON:"demon", DRAGON:"dragon", ELEMENTAL:"elemental",
+        MECHANICAL:"mech", MURLOC:"murloc", NAGA:"naga", PIRATE:"pirate", QUILBOAR:"quilboar",
+        UNDEAD:"undead", ABERRATION:"aberration" };
+      var host = document.getElementById("pmTribes");
+      host.innerHTML = "";
+      (c.r || "").split("/").forEach(function(r){
+        var id = TRIBE_ID[r];
+        if(!id) return;
+        var a = document.createElement("a");
+        a.href = "index.html?tribe=" + id + "#tribes";
+        a.textContent = "看「" + (RACE[r] || r) + "」流派 →";
+        host.appendChild(a);
+      });
       modal.hidden = false;
     });
     document.getElementById("pmClose").addEventListener("click", function(){ modal.hidden = true; });
