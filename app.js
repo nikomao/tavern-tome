@@ -54,10 +54,26 @@
   }
 
 
+  function tierByName(nm){
+    var c = (typeof cardOf === "function") ? cardOf(nm) : null;
+    if(c && c.t != null) return c.t;
+    if(typeof POOL !== "undefined"){
+      for(var i=0;i<POOL.length;i++){ if(POOL[i].n === nm && POOL[i].t != null) return POOL[i].t; }
+    }
+    if(typeof EXTRA_CARDS !== "undefined"){
+      var keys = Object.keys(EXTRA_CARDS);
+      for(var k=0;k<keys.length;k++){ if(EXTRA_CARDS[keys[k]].n === nm) return EXTRA_CARDS[keys[k]].t; }
+    }
+    return null;
+  }
+
   function planSlot(nm){
     var c = cardOf(nm);
     if(c && c.img){
-      return '<button type="button" class="fc" data-card="'+nm+'"><span class="fc-img"><img src="'+c.img+'" alt="'+nm+'"></span><span class="fc-name">'+nm+'</span></button>';
+      var st = (typeof tierStars === "function") ? tierStars(tierByName(nm)) : "";
+      return '<button type="button" class="fc" data-card="'+nm+'">' +
+        (st ? '<span class="fc-tier"><span class="stars">'+st+'</span></span>' : '') +
+        '<span class="fc-img"><img src="'+c.img+'" alt="'+nm+'"></span><span class="fc-name">'+nm+'</span></button>';
     }
     if(isNoArt(nm)){
       return '<span class="fc" title="卡图暂未收录"><span class="fc-img noimg"><i>'+nm.slice(0,1)+'</i></span><span class="fc-name">'+nm+'</span></span>';
@@ -172,7 +188,7 @@
         var bits = [];
         if(c.n && c.n !== x.n) bits.push(c.n);
         if(c.k === "spell") bits.push("酒馆法术");
-        else if(c.t != null) bits.push((typeof tierStars === "function" ? tierStars(c.t) : ""));
+        else if(tierByName(x.n) != null) bits.push((typeof tierStars === "function" ? tierStars(tierByName(x.n)) : ""));
         sub = bits.join(" · ");
       }
       h += '<li class="core-item" data-card="'+x.n+'">' +
