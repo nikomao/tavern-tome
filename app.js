@@ -897,61 +897,113 @@
 
     if(typeof STATS !== "undefined" && STATS && STATS.comps && STATS.comps.length){
       var host = document.getElementById("compStats");
+      var tools = document.getElementById("compTools");
       var sub = document.getElementById("metaSub");
-      if(host){
-        var t = '<div class="cs-head">数据阵容榜 <span>' + STATS.source + ' · ' + (STATS.bracket || "") +
-          " · " + (STATS.fetchedAt || "") + " · 样本 " + (STATS.sample ? Math.round(STATS.sample/10000)+" 万局" : "-") + '</span></div>';
+      var st = { hero: "", tier: "all", sort: "avg", q: "" };
 
-        function posHint(c){
-          var tribeName = String(c.name || "").split("·")[0];
-          var tr = (typeof TRIBES !== "undefined") ? TRIBES.filter(function(x){ return x.name === tribeName; })[0] : null;
-          if(tr && tr.posHint) return tr.posHint + '（经验站位）';
-          return '通用原则：1–2 号位放前排吸收，3–5 号位放功能，6–7 号位放核心输出';
-        }
+      var DB = {};
+      if(typeof POOL !== "undefined") POOL.forEach(function(c){ DB[c.i] = c; });
+      if(typeof EXTRA_CARDS !== "undefined") Object.keys(EXTRA_CARDS).forEach(function(k){ DB[k] = EXTRA_CARDS[k]; });
+      function tierOfCard(id){ var c = DB[id]; return c && c.t != null ? c.t : null; }
 
-        t += '<div class="comp-board">';
-        STATS.comps.slice(0, 8).forEach(function(c, i){
-          var list = (c.cards || []).slice();
-          var note = (typeof COMP_NOTES !== "undefined" && c.key && COMP_NOTES[c.key]) ? COMP_NOTES[c.key] : null;
-          if(note && note.order){
-            var posIdx = {};
-            note.order.forEach(function(n, k){ posIdx[n] = k; });
-            list.sort(function(a, b){
-              return (posIdx[a.name] == null ? 99 : posIdx[a.name]) - (posIdx[b.name] == null ? 99 : posIdx[b.name]);
-            });
-          }
-          var cards = list.map(function(x, idx){
-            return '<a class="comp-slot" href="cards.html?card=' + x.id + '" data-card-id="' + x.id + '" title="' + x.name + '">' +
-              '<span class="cs-no">' + (idx + 1) + '</span>' +
-              (cardTier(x.id) != null ? '<span class="cs-tier">' + cardTier(x.id) + ' 本</span>' : '') +
-              '<span class="cs-img"><img loading="lazy" src="pool/' + x.id + '.webp" alt="" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><i>' + x.name.slice(0,1) + '</i></span>' +
-              '<span class="cs-name">' + x.name + '</span></a>';
-          }).join("");
-          var heroes = (c.heroes || []).join(" · ");
-          t += '<article class="comp-card" data-comp-key="' + (c.key || "") + '">' +
-            '<div class="cc-head"><span class="cc-rank">#' + (i+1) + '</span><b>' + c.name + '</b>' +
-            '<span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span>' +
-            (c.key ? '<a class="cc-play" href="play.html?comp=' + c.key + '">对局模式</a>' : '') +
-            '<span class="cc-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4||0)*100) +
-            '% · 吃鸡 ' + Math.round((c.win||0)*100) + '% · ' + (c.sample||0).toLocaleString("en-US") + ' 局</span></div>' +
-            '<div class="cc-lineup">' + cards + '</div>' +
-            '<div class="cc-pos"><b>站位</b> ' + ((note && note.pos) ? note.pos + '（手工站位）' : posHint(c)) + '</div>' +
-            '<div class="cc-foot"><span>推荐英雄：' + (heroes || "—") + '</span><span>' +
-            (c.difficulty || "") + (c.power ? ' / 强度 ' + c.power : "") + '</span></div>' +
-            '</article>';
+      var heroNames = [];
+      if(STATS.heroComps){
+        var order = {};
+        (STATS.heroes || []).forEach(function(h, i){ order[h.name] = i; });
+        heroNames = Object.keys(STATS.heroComps).sort(function(a, b){
+          return (order[a] == null ? 999 : order[a]) - (order[b] == null ? 999 : order[b]);
         });
-        t += '</div>';
+      }
+      var heroSel = document.getElementById("compHero");
+      if(heroSel){
+        heroNames.forEach(function(n){ var o = document.createElement("option"); o.value = n; o.textContent = n; heroSel.appendChild(o); });
+        try { st.hero = localStorage.getItem("tt-comp-hero") || ""; } catch(e){}
+        if(st.hero && heroNames.indexOf(st.hero) < 0) st.hero = "";
+        heroSel.value = st.hero;
+      }
 
-        if(STATS.comps.length > 8){
-          t += '<details class="comp-more"><summary>更多阵容（9–' + STATS.comps.length + '，仅统计，无手工站位）</summary>' +
-            '<div class="table-wrap"><table class="meta-table"><thead><tr><th>#</th><th>阵容</th><th>梯度</th><th>均位</th><th>前四</th><th>吃鸡</th><th>样本</th></tr></thead><tbody>';
-          STATS.comps.slice(8).forEach(function(c, i){
-            t += '<tr><td>' + (i+9) + '</td><td>' + c.name + '</td><td>' + c.tier + '</td><td>' + Number(c.avg).toFixed(2) +
-              '</td><td>' + Math.round((c.top4||0)*100) + '%</td><td>' + Math.round((c.win||0)*100) + '%</td><td>' + (c.sample||0).toLocaleString("en-US") + '</td></tr>';
+      function heroStat(key){
+        if(!st.hero || !STATS.heroComps || !STATS.heroComps[st.hero]) return null;
+        var list = STATS.heroComps[st.hero];
+        for(var i = 0; i < list.length; i++) if(list[i].key === key) return list[i];
+        return null;
+      }
+
+      function posHint(c){
+        var tribeName = String(c.name || "").split("·")[0];
+        var tr = (typeof TRIBES !== "undefined") ? TRIBES.filter(function(x){ return x.name === tribeName; })[0] : null;
+        if(tr && tr.posHint) return tr.posHint + "（经验站位）";
+        return "通用原则：1–2 号位放前排吸收，3–5 号位放功能，6–7 号位放核心输出";
+      }
+
+      function compCardHTML(c, rank){
+        var list = (c.cards || []).slice();
+        var note = (typeof COMP_NOTES !== "undefined" && c.key && COMP_NOTES[c.key]) ? COMP_NOTES[c.key] : null;
+        if(note && note.order){
+          var idx = {};
+          note.order.forEach(function(n, k){ idx[n] = k; });
+          list.sort(function(a, b){
+            return (idx[a.name] == null ? 99 : idx[a.name]) - (idx[b.name] == null ? 99 : idx[b.name]);
           });
-          t += '</tbody></table></div></details>';
+        }
+        var hs = heroStat(c.key);
+        var heroBadge = hs ? '<span class="cc-hero' + (hs.avg > c.avg ? " bad" : "") + '">你在玩：均位 ' + hs.avg + " · " + hs.sample + " 局</span>" : "";
+        var cards = list.map(function(x, i){
+          var t = tierOfCard(x.id);
+          return '<a class="comp-slot" href="cards.html?card=' + x.id + '" data-card-id="' + x.id + '" title="' + x.name + '">' +
+            '<span class="cs-no">' + (i + 1) + '</span>' +
+            (t != null ? '<span class="cs-tier">' + t + ' 本</span>' : '') +
+            '<span class="cs-img"><img loading="lazy" src="pool/' + x.id + '.webp" alt="" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><i>' + x.name.slice(0,1) + '</i></span>' +
+            '<span class="cs-name">' + x.name + '</span></a>';
+        }).join("");
+        return '<article class="comp-card" data-comp-key="' + (c.key || "") + '">' +
+          '<div class="cc-head"><span class="cc-rank">#' + (rank + 1) + '</span><b>' + c.name + '</b>' +
+          '<span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span>' +
+          (c.key ? '<a class="cc-play" href="play.html?comp=' + c.key + '">对局模式</a>' : '') +
+          heroBadge +
+          '<span class="cc-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) +
+          '% · 吃鸡 ' + Math.round((c.win || 0) * 100) + '% · ' + (c.sample || 0).toLocaleString("en-US") + ' 局</span></div>' +
+          '<div class="cc-lineup">' + cards + '</div>' +
+          '<div class="cc-pos"><b>站位</b> ' + ((note && note.pos) ? note.pos + '（手工站位）' : posHint(c)) + '</div>' +
+          '<div class="cc-foot"><span>推荐英雄：' + ((c.heroes || []).join(" · ") || "—") + '</span><span>' +
+          (c.difficulty || "") + (c.power ? ' / 强度 ' + c.power : "") + '</span></div>' +
+          '</article>';
+      }
+
+      function renderBoard(){
+        var list = STATS.comps.filter(function(c){
+          if(st.tier !== "all" && c.tier !== st.tier) return false;
+          if(st.q && c.name.toLowerCase().indexOf(st.q.toLowerCase()) < 0) return false;
+          return true;
+        });
+        list.sort(function(a, b){
+          if(st.hero){
+            var ha = heroStat(a.key), hb = heroStat(b.key);
+            if(ha && !hb) return -1;
+            if(!ha && hb) return 1;
+            if(ha && hb) return ha.avg - hb.avg;
+          }
+          if(st.sort === "top4") return (b.top4 || 0) - (a.top4 || 0);
+          if(st.sort === "win") return (b.win || 0) - (a.win || 0);
+          if(st.sort === "sample") return (b.sample || 0) - (a.sample || 0);
+          return a.avg - b.avg;
+        });
+
+        var t = '<div class="cs-head">数据阵容榜 <span>' + STATS.source + ' · ' + (STATS.bracket || "") +
+          " · " + (STATS.fetchedAt || "") + " · 样本 " + (STATS.sample ? Math.round(STATS.sample / 10000) + " 万局" : "-") +
+          (st.hero ? " · 按 " + st.hero + " 排序" : "") + '</span></div>';
+
+        if(!list.length){
+          host.innerHTML = t + '<p class="cs-empty">没有符合条件的阵容，换个梯度或清空搜索试试。</p>';
+          host.hidden = false;
+          return;
         }
 
+        t += '<div class="comp-board">' + list.slice(0, 8).map(function(c, i){ return compCardHTML(c, i); }).join("") + '</div>';
+        if(list.length > 8){
+          t += '<details class="comp-more"><summary>更多阵容（9–' + list.length + '，仅统计）</summary>' +
+            '<div class="comp-board">' + list.slice(8).map(function(c, i){ return compCardHTML(c, i + 8); }).join("") + '</div></details>';
+        }
         if(STATS.trinkets && STATS.trinkets.length){
           t += '<div class="trinket-board"><div class="cs-head">本周强势饰品 <span>按平均排名</span></div><div class="trinket-grid">';
           STATS.trinkets.forEach(function(k){
@@ -959,13 +1011,40 @@
           });
           t += '</div></div>';
         }
-
         host.innerHTML = t;
         host.hidden = false;
-        if(!t || !document.querySelector(".comp-card")){
-          host.innerHTML = '<div class="cs-empty">卡表数据未加载（可能是旧缓存）。请按 <b>Ctrl+F5</b> 强制刷新，或换无痕窗口打开。</div>';
-        }
+        if(tools) tools.hidden = false;
       }
+
+      if(heroSel){
+        heroSel.addEventListener("change", function(){
+          st.hero = heroSel.value;
+          try { localStorage.setItem("tt-comp-hero", st.hero); } catch(e){}
+          renderBoard();
+        });
+      }
+      var tierBox = document.getElementById("compTiers");
+      if(tierBox){
+        tierBox.addEventListener("click", function(e){
+          var b = e.target.closest ? e.target.closest("button[data-tier]") : null;
+          if(!b) return;
+          st.tier = b.getAttribute("data-tier");
+          Array.prototype.forEach.call(tierBox.querySelectorAll("button"), function(x){ x.classList.toggle("on", x === b); });
+          renderBoard();
+        });
+      }
+      var sortSel = document.getElementById("compSort");
+      if(sortSel) sortSel.addEventListener("change", function(){ st.sort = sortSel.value; renderBoard(); });
+      var searchEl = document.getElementById("compSearch");
+      if(searchEl){
+        var timer = null;
+        searchEl.addEventListener("input", function(){
+          clearTimeout(timer);
+          timer = setTimeout(function(){ st.q = searchEl.value.trim(); renderBoard(); }, 180);
+        });
+      }
+
+      renderBoard();
       if(sub) sub.hidden = false;
       var metaSec = document.getElementById("meta");
       if(metaSec) metaSec.classList.add("stats-live");

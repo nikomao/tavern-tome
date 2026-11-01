@@ -595,6 +595,24 @@
     <span class="tb-label">酒馆告示</span>
     <p><b>本周环境：</b>畸变怪、元素、恶魔三家 T0 争霸；纳迦、海盗、野兽、龙稳在 T1；机械和鱼人适合吃分；亡灵与野猪人偏弱，除非发牌特别好。</p>
   </div>
+  <div class="comp-tools" id="compTools" hidden>
+    <label class="ct-hero"><span>我在玩</span><select id="compHero"><option value="">不选英雄</option></select></label>
+    <div class="ct-tiers" id="compTiers">
+      <button type="button" data-tier="all" class="on">全部</button>
+      <button type="button" data-tier="T0">T0</button>
+      <button type="button" data-tier="T1">T1</button>
+      <button type="button" data-tier="T2">T2</button>
+      <button type="button" data-tier="T3">T3</button>
+    </div>
+    <select id="compSort" aria-label="排序">
+      <option value="avg">按均位</option>
+      <option value="top4">按前四率</option>
+      <option value="win">按吃鸡率</option>
+      <option value="sample">按样本</option>
+    </select>
+    <input id="compSearch" type="search" placeholder="搜阵容，如：龙、喝茶" autocomplete="off">
+  </div>
+
   <div class="comp-stats" id="compStats" hidden></div>
   <h3 class="meta-sub" id="metaSub" hidden>编辑推荐（经验，不含胜率）</h3>
   <div class="meta-top" id="metaTop"></div>
