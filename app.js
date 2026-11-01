@@ -1,5 +1,6 @@
 /* 渲染与交互 */
 (function(){
+  function tierName(t){ return t === "T0" ? "T0：最强一档" : t === "T1" ? "T1：强势" : t === "T2" ? "T2：可用，需要条件" : "T3：弱势或冷门"; }
   function tierStars(n){ n = Number(n); if(!n || n < 1) return ""; return '<i class="star"></i>'.repeat(Math.min(7, n)); }
 
   "use strict";
@@ -159,7 +160,7 @@
         '<em class="stars">' + stars + '</em></a>';
     }).join("");
     return '<div class="tribe-best"><div class="tb-head"><span class="tb-label">本周最佳</span><b>' + c.name + '</b>' +
-      '<span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span>' +
+      '<span class="cc-tier ' + String(c.tier).toLowerCase() + '" title="' + tierName(c.tier) + '">' + c.tier + '</span>' +
       '<span class="tb-meta">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) +
       '% · 吃鸡 ' + Math.round((c.win || 0) * 100) + '%</span>' +
       '<a class="tb-play" href="play.html?comp=' + c.key + '">对局模式</a></div>' +
@@ -1245,7 +1246,7 @@
         var recHTML = recs.length ? '<p class="hg-comps">推荐：' + recs.map(function(r){
           return '<a href="#meta" data-comp="' + r.key + '">' + r.name + '</a>';
         }).join(" · ") + ' <a class="hg-play" href="play.html?hero=' + encodeURIComponent(x.n) + '">对局模式</a></p>' : '';
-        row.innerHTML = '<span class="hg-rank ' + String(rank).toLowerCase() + '">' + rank + '</span>' +
+        row.innerHTML = '<span class="hg-rank ' + String(rank).toLowerCase() + '" title="' + tierName(rank) + '">' + rank + '</span>' +
           (tag ? '<span class="hg-tag">' + tag + '</span>' : '') +
           '<div><b>' + x.n + '</b><p>' + (x.why || "") + '</p>' + recHTML + '</div>';
         host.appendChild(row);
@@ -1699,4 +1700,20 @@
     if(e.key === "/" && tag !== "INPUT" && tag !== "TEXTAREA" && overlay.hidden){ e.preventDefault(); open(); return; }
     if(e.key === "Escape" && !overlay.hidden) close();
   });
+})();
+
+
+/* ---------- tier legend modal ---------- */
+(function(){
+  var modal = document.getElementById("tierModal");
+  if(!modal) return;
+  function close(){ modal.hidden = true; }
+  document.addEventListener("click", function(e){
+    var h = e.target.closest ? e.target.closest(".tier-help") : null;
+    if(h){ e.preventDefault(); modal.hidden = false; return; }
+    if(e.target === modal) close();
+  });
+  var b = document.getElementById("tierClose");
+  if(b) b.addEventListener("click", close);
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape" && !modal.hidden) close(); });
 })();

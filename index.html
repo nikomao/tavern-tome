@@ -587,6 +587,15 @@
     </div>
   </div>
   <div class="stats-badge" id="metaStatsBadge"></div>
+  <div class="tier-legend">
+    <span class="tl-title">梯度</span>
+    <span class="tl t0">T0</span><em>最强</em>
+    <span class="tl t1">T1</span><em>强势</em>
+    <span class="tl t2">T2</span><em>可用</em>
+    <span class="tl t3">T3</span><em>弱势</em>
+    <button type="button" class="tier-help" aria-label="梯度说明">?</button>
+  </div>
+
 
   <div class="stats-change" id="statsChange" hidden></div>
 
@@ -643,6 +652,15 @@
   </div>
 
   <div class="stats-badge" id="heroStatsBadge"></div>
+  <div class="tier-legend">
+    <span class="tl-title">梯度</span>
+    <span class="tl t0">T0</span><em>最强</em>
+    <span class="tl t1">T1</span><em>强势</em>
+    <span class="tl t2">T2</span><em>可用</em>
+    <span class="tl t3">T3</span><em>弱势</em>
+    <button type="button" class="tier-help" aria-label="梯度说明">?</button>
+  </div>
+
 
   <div class="hero-guide">
     <div class="hg-col">
@@ -794,6 +812,22 @@
   <div class="cmp-box">
     <div class="cmp-head"><b>阵容对比</b><button type="button" id="cmpClose" aria-label="关闭">×</button></div>
     <div class="cmp-body" id="cmpBody"></div>
+  </div>
+</div>
+
+<div class="tier-modal" id="tierModal" hidden>
+  <div class="tm-box">
+    <h3>梯度（Tier）是什么意思</h3>
+    <p>T0 / T1 / T2 / T3 是按<b>当前数据的平均排名（均位）</b>排序后分档的结果，均位越低越强。</p>
+    <ul>
+      <li><b>T0</b>：最强一档，通常是版本答案</li>
+      <li><b>T1</b>：强势，稳定吃分</li>
+      <li><b>T2</b>：可用，但需要特定英雄或来牌</li>
+      <li><b>T3</b>：弱势或冷门，绝活才玩</li>
+    </ul>
+    <p>分档比例：英雄榜按前 10% / 30% / 60% 切；阵容榜按前 15% / 40% / 70% 切。</p>
+    <p class="tm-note">T 只代表“平均表现”，不代表上限；样本小的分档会波动。</p>
+    <button type="button" id="tierClose">知道了</button>
   </div>
 </div>
 
