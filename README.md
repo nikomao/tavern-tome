@@ -133,6 +133,16 @@ node scripts/import_stats.mjs stats-input.json
 - 有数据时：徽章显示「HSReplay · 10000+ · 日期 · 样本 N」，英雄列表带胜率
 - 数据只影响展示，不改动卡牌事实数据
 
+### 每周自动更新
+
+`.github/workflows/weekly-stats.yml` 每周一 10:00（北京时间）自动：
+
+1. 跑 `scripts/fetch_firestone.mjs` 拉最新统计
+2. 跑 `scripts/import_stats.mjs` 写入 `stats.js`
+3. 如果数据有变化，自动开一个 PR（分支 `stats/weekly`）等你复核
+
+也可以在 Actions 页面手动触发，并指定 MMR 分位（100/50/25/10/1）。
+
 ## 如何贡献
 
 1. 发现卡名、梯度、站位有误：直接改 `data.js` 或 `cards.js`，提 PR。

@@ -1,0 +1,57 @@
+name: Weekly BG stats (Firestone)
+
+on:
+  schedule:
+    - cron: "0 2 * * 1"
+  workflow_dispatch:
+    inputs:
+      mmr:
+        description: "MMR percentile (100/50/25/10/1)"
+        required: false
+        default: "100"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: weekly-stats
+  cancel-in-progress: true
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch Firestone stats
+        run: node scripts/fetch_firestone.mjs ${{ github.event.inputs.mmr || '100' }}
+
+      - name: Import into stats.js
+        run: node scripts/import_stats.mjs stats-input.json
+
+      - name: Open review PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: update BG stats from Firestone"
+          title: "数据更新：酒馆战棋统计（Firestone）"
+          body: |
+            自动拉取 Firestone / ZeroToHeroes 的最新酒馆战棋统计。
+
+            - 来源：https://static.zerotoheroes.com/api/bgs/
+            - 内容：116 个英雄 + 28 套阵容（均位 / 前四 / 吃鸡 / 样本）
+            - 请复核：样本量是否足够、分档是否合理、中文阵容名是否需要调整
+            - 合并后 Pages 会自动部署
+
+            > 这份 PR 由每周 Action 自动生成，可以直接改完再合并。
+          branch: stats/weekly
+          delete-branch: true
+          add-paths: |
+            stats.js
+            stats-input.json
