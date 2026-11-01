@@ -82,6 +82,12 @@
   }
 
 
+  var CARD_DB = {};
+  if(typeof POOL !== "undefined"){ POOL.forEach(function(c){ CARD_DB[c.i] = c; }); }
+  if(typeof EXTRA_CARDS !== "undefined"){ Object.keys(EXTRA_CARDS).forEach(function(k){ CARD_DB[k] = EXTRA_CARDS[k]; }); }
+
+  function cardTier(id){ var c = CARD_DB[id]; return c && c.t != null ? c.t : null; }
+
   var TRIBE_RACE = { aberration:"ABERRATION", elemental:"ELEMENTAL", demon:"DEMON", naga:"NAGA",
     pirate:"PIRATE", beast:"BEAST", dragon:"DRAGON", mech:"MECHANICAL", murloc:"MURLOC",
     undead:"UNDEAD", quilboar:"QUILBOAR" };
@@ -326,6 +332,7 @@
 
     var POOL_BY_ID = {};
     if(typeof POOL !== "undefined"){ POOL.forEach(function(x){ POOL_BY_ID[x.i] = x; }); }
+    if(typeof EXTRA_CARDS !== "undefined"){ Object.keys(EXTRA_CARDS).forEach(function(k){ POOL_BY_ID[k] = EXTRA_CARDS[k]; }); }
     var RACE_CN = { BEAST:"野兽", DEMON:"恶魔", DRAGON:"龙", ELEMENTAL:"元素", MECHANICAL:"机械",
       MURLOC:"鱼人", NAGA:"纳迦", PIRATE:"海盗", QUILBOAR:"野猪人", UNDEAD:"亡灵", ABERRATION:"畸变怪" };
 
@@ -333,7 +340,7 @@
       var c = POOL_BY_ID[id];
       if(!c) return false;
       if(c.m){
-        popImg.src = "pool/" + c.i + ".webp";
+        popImg.src = "pool/" + (c.i || id) + ".webp";
         popImg.style.display = "";
       } else {
         popImg.removeAttribute("src");
@@ -916,6 +923,7 @@
           var cards = list.map(function(x, idx){
             return '<a class="comp-slot" href="cards.html?card=' + x.id + '" data-card-id="' + x.id + '" title="' + x.name + '">' +
               '<span class="cs-no">' + (idx + 1) + '</span>' +
+              (cardTier(x.id) != null ? '<span class="cs-tier">' + cardTier(x.id) + ' 本</span>' : '') +
               '<span class="cs-img"><img loading="lazy" src="pool/' + x.id + '.webp" alt="" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><i>' + x.name.slice(0,1) + '</i></span>' +
               '<span class="cs-name">' + x.name + '</span></a>';
           }).join("");
