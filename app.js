@@ -1,5 +1,7 @@
 /* 渲染与交互 */
 (function(){
+  function tierStars(n){ n = Number(n); if(!n || n < 1) return ""; return "★".repeat(Math.min(7, n)); }
+
   "use strict";
 
   function hexA(hex, a){
@@ -103,7 +105,7 @@
       h += '<a class="tc" href="cards.html?card=' + c.i + '" title="' + c.n + '">' +
         '<span class="tc-img">' + (c.m ? '<img loading="lazy" src="pool/' + c.i + '.webp" alt="">' : '<i>?</i>') + '</span>' +
         '<span class="tc-name">' + c.n + '</span>' +
-        '<span class="tc-meta">' + c.t + ' 本</span></a>';
+        '<span class="tc-meta stars">' + tierStars(c.t) + '</span></a>';
     });
     h += '</div>';
     h += '<a class="tribe-more" href="cards.html?race=' + race + '">在卡池页筛选「' + t.name + '」→</a>';
@@ -321,7 +323,7 @@
       var meta = [];
       if(c.k === "spell") meta.push("酒馆法术");
       else {
-        if(c.t != null) meta.push("等级 " + c.t);
+        if(c.t != null) meta.push(tierStars(c.t));
         if(c.a != null) meta.push(c.a + " / " + c.h);
       }
       if(c.r) meta.push(c.r);
@@ -348,7 +350,7 @@
       }
       popName.innerHTML = "<b>" + c.n + "</b>";
       var meta = [];
-      if(c.t != null) meta.push("等级 " + c.t);
+      if(c.t != null) meta.push(tierStars(c.t));
       if(c.a != null) meta.push(c.a + " / " + c.h);
       var races = String(c.r || "").split("/").map(function(r){ return RACE_CN[r] || r; }).filter(Boolean);
       if(races.length) meta.push(races.join(" / "));
@@ -809,7 +811,7 @@
       var t = SIM.turns[state.i];
       el.turn.textContent = (state.i + 1) + " / " + SIM.turns.length;
       el.hp.textContent = Math.max(0, state.hp);
-      el.tier.textContent = state.tier + " 本";
+      el.tier.textContent = tierStars(state.tier);
       el.power.textContent = state.power;
       el.gold.textContent = t.gold;
       el.scene.textContent = t.scene;
@@ -860,7 +862,7 @@
 
       el.hp.textContent = Math.max(0, state.hp);
       el.power.textContent = state.power;
-      el.tier.textContent = state.tier + " 本";
+      el.tier.textContent = tierStars(state.tier);
     }
 
     function showResult(){
@@ -952,7 +954,7 @@
           var t = tierOfCard(x.id);
           return '<a class="comp-slot" href="cards.html?card=' + x.id + '" data-card-id="' + x.id + '" title="' + x.name + '">' +
             '<span class="cs-no">' + (i + 1) + '</span>' +
-            (t != null ? '<span class="cs-tier">' + t + ' 本</span>' : '') +
+            (t != null ? '<span class="cs-tier stars" title="' + t + ' 本">' + tierStars(t) + '</span>' : '') +
             '<span class="cs-img"><img loading="lazy" src="pool/' + x.id + '.webp" alt="" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><i>' + x.name.slice(0,1) + '</i></span>' +
             '<span class="cs-name">' + x.name + '</span></a>';
         }).join("");
@@ -1050,7 +1052,7 @@
         var only = orderedCards(c).filter(function(x){ return oids.indexOf(x.id) < 0; }).map(function(x){ return x.name; });
         var slots = orderedCards(c).slice(0, 7).map(function(x, i){
           var t = tierOfCard(x.id);
-          return '<div class="cmp-slot"><img src="pool/' + x.id + '.webp" alt="" onerror="this.style.opacity=0"><span>' + x.name + '</span><em>' + (t != null ? t + '本' : '') + '</em></div>';
+          return '<div class="cmp-slot"><img src="pool/' + x.id + '.webp" alt="" onerror="this.style.opacity=0"><span>' + x.name + '</span><em class="stars" title="' + (t != null ? t + ' 本' : '') + '">' + (t != null ? tierStars(t) : '') + '</em></div>';
         }).join("");
         return '<div class="cmp-col"><h3>' + c.name + ' <span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span></h3>' +
           '<div class="cmp-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) + '% · 吃鸡 ' +
@@ -1528,7 +1530,7 @@
     if(typeof POOL !== "undefined"){
       POOL.forEach(function(c){
         var races = String(c.r || "").split("/").map(function(r){ return RACE_CN[r] || r; }).filter(Boolean).join("/");
-        add("卡牌", c.n, (c.t != null ? c.t + " 本 · " : "") + races, "cards.html?card=" + c.i, { id: c.i });
+        add("卡牌", c.n, (c.t != null ? tierStars(c.t) + " · " : "") + races, "cards.html?card=" + c.i, { id: c.i });
       });
     }
     if(typeof STATS !== "undefined" && STATS.heroComps){

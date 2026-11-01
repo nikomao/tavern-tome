@@ -1,5 +1,7 @@
 /* 对局模式 */
 (function(){
+  function tierStars(n){ n = Number(n); if(!n || n < 1) return ""; return "★".repeat(Math.min(7, n)); }
+
   var comps = (typeof STATS !== "undefined" && STATS.comps) || [];
   var sel = document.getElementById("playComp");
   var slotsEl = document.getElementById("playSlots");
@@ -86,6 +88,53 @@
 
   function currentCards(){ return (state.cards && state.cards.length) ? state.cards : ordered(current()); }
 
+  function roleWeight(role){ return role === "CORE" ? 3 : role === "CYCLE" ? 1 : 2; }
+  function roleCN(role){ return role === "CORE" ? "核心" : role === "CYCLE" ? "轮转" : "补强"; }
+
+  function advice(){
+    var list = currentCards();
+    var missing = [];
+    list.forEach(function(x, i){
+      if((state.slots[i] || 0) !== 0) return;
+      var role = String(x.status || "ADDON").toUpperCase();
+      missing.push({ x: x, t: tierOf(x.id), role: role, w: roleWeight(role), text: (CARD_DB[x.id] && CARD_DB[x.id].x) || "" });
+    });
+    var affordable = missing.filter(function(m){ return m.t == null || m.t <= state.tier; })
+      .sort(function(a, b){ return b.w - a.w || (b.t || 0) - (a.t || 0); });
+    var locked = missing.filter(function(m){ return m.t != null && m.t > state.tier; });
+
+    if(!missing.length){
+      return { main: "七格齐了：先调站位，再考虑追金。",
+        sub: state.gold >= 10 ? "钱多可以 D 一次找金，否则存钱上本。" : "别乱 D，把金币留给下一轮。", nextId: null };
+    }
+
+    if(state.health <= 12){
+      var wall = missing.filter(function(m){ return /嘲讽|圣盾/.test(m.text); }).sort(function(a, b){ return b.w - a.w; })[0];
+      if(wall){
+        return { main: "血线危险：先找「" + wall.x.name + "」稳血（嘲讽/圣盾）",
+          sub: "别追贪，先活过这一轮。", nextId: wall.x.id };
+      }
+    }
+
+    if(affordable.length){
+      var n = affordable[0];
+      var sub = state.gold >= 8 ? "钱够，可以 D 一次找它；别 D 到 0。"
+        : state.gold <= 2 ? "钱少，先存钱，下回合再找。"
+        : "边打边找，优先拿它，别为了刷新把钱花光。";
+      return { main: "现在最该找：" + n.x.name + "（" + (n.t != null ? tierStars(n.t) : "?") + " · " + roleCN(n.role) + "）",
+        sub: sub, nextId: n.x.id };
+    }
+
+    if(locked.length){
+      locked.sort(function(a, b){ return (a.t || 99) - (b.t || 99) || b.w - a.w; });
+      var l = locked[0];
+      return { main: "先升到 " + tierStars(l.t) + "，再找「" + l.x.name + "」",
+        sub: "当前 " + tierStars(state.tier) + "，高本卡刷不到，别浪费钱 D。", nextId: l.x.id };
+    }
+
+    return { main: "先稳血，等核心卡。", sub: "当前没有可执行的下一步。", nextId: null };
+  }
+
   function ensureSlots(){
     var n = currentCards().length;
     while(state.slots.length < n) state.slots.push(0);
@@ -111,7 +160,7 @@
       d.title = x.name + " · 点击切换 缺/有/金";
       d.innerHTML = '<span class="num">' + (i + 1) + '</span>' +
         '<button class="swap" data-swap="' + i + '" title="替换">⇄</button>' +
-        (t != null ? '<span class="tier">' + t + '本</span>' : '') +
+        (t != null ? '<span class="tier stars" title="' + t + ' 本">' + tierStars(t) + '</span>' : '') +
         '<span class="ps-img">' + (CARD_DB[x.id] && CARD_DB[x.id].m ? '<img src="pool/' + x.id + '.webp" alt="" onerror="this.style.display=\'none\'">' : '<i>' + x.name.slice(0,1) + '</i>') + '</span>' +
         '<span class="ps-name">' + x.name + '</span>' +
         '<span class="state">' + slotStateWord(v) + '</span>';
@@ -122,10 +171,16 @@
       .filter(function(o){ return o.v === 0; })
       .sort(function(a, b){ return (tierOf(a.x.id) || 99) - (tierOf(b.x.id) || 99); });
 
+    var adv = advice();
+    document.getElementById("adviceMain").textContent = adv.main;
+    document.getElementById("adviceSub").textContent = adv.sub;
+
     missCount.textContent = missing.length;
     missList.innerHTML = missing.length ? missing.map(function(o){
       var t = tierOf(o.x.id);
-      return '<div class="miss"><span class="m-tier">' + (t != null ? t + '本' : '?') + '</span><span>' + o.x.name + '</span></div>';
+      var next = adv.nextId && o.x.id === adv.nextId;
+      return '<div class="miss' + (next ? ' next' : '') + '"><span class="m-tier stars">' + (t != null ? tierStars(t) : '?') + '</span><span>' + o.x.name + '</span>' +
+        (next ? '<span class="tag-next">先找</span>' : '') + '</div>';
     }).join("") : '<div class="miss">七格齐了，准备收口。</div>';
 
     hintEl.textContent = hintFor(c);
@@ -212,7 +267,9 @@
     var missing = currentCards().map(function(x, i){ return { x: x, i: i, v: state.slots[i] || 0 }; })
       .filter(function(o){ return o.v === 0; })
       .sort(function(a, b){ return (tierOf(a.x.id) || 99) - (tierOf(b.x.id) || 99); });
+    var advPip = advice();
     doc.getElementById("pipRoot").innerHTML =
+      '<div class="advice"><p class="advice-main">' + advPip.main + '</p></div>' +
       '<div class="play-status" style="padding:0 0 6px"><div class="ps"><span>回合</span><b>' + state.turn + '</b></div>' +
       '<div class="ps"><span>本数</span><b>' + state.tier + '</b></div>' +
       '<div class="ps"><span>金币</span><b>' + state.gold + '</b></div></div>' +
@@ -220,12 +277,12 @@
         var v = state.slots[i] || 0;
         var t = tierOf(x.id);
         return '<div class="ps-slot ' + (v === 2 ? "golden" : v === 1 ? "owned" : "missing") + '" data-i="' + i + '">' +
-          '<span class="num">' + (i + 1) + '</span>' + (t != null ? '<span class="tier">' + t + '本</span>' : '') +
+          '<span class="num">' + (i + 1) + '</span>' + (t != null ? '<span class="tier stars">' + tierStars(t) + '</span>' : '') +
           '<span class="ps-img">' + (CARD_DB[x.id] && CARD_DB[x.id].m ? '<img src="pool/' + x.id + '.webp" alt="">' : '<i>' + x.name.slice(0,1) + '</i>') + '</span>' +
           '<span class="ps-name">' + x.name + '</span><span class="state">' + slotStateWord(v) + '</span></div>';
       }).join("") + '</div>' +
       '<h3>还差 ' + missing.length + ' 张</h3>' +
-      missing.map(function(o){ return '<div class="miss"><span class="m-tier">' + (tierOf(o.x.id) || '?') + '本</span><span>' + o.x.name + '</span></div>'; }).join("");
+missing.map(function(o){ return '<div class="miss"><span class="m-tier stars">' + (tierOf(o.x.id) ? tierStars(tierOf(o.x.id)) : '?') + '</span><span>' + o.x.name + '</span></div>'; }).join("");
   }
 
   document.getElementById("btnPip").addEventListener("click", async function(){
@@ -282,7 +339,7 @@
     pickList.innerHTML = list.length ? list.map(function(c){
       return '<div class="pick-item" data-id="' + c.i + '">' +
         (c.m ? '<img src="pool/' + c.i + '.webp" alt="">' : '<span class="pt">?</span>') +
-        '<span>' + c.n + '</span><span class="pt">' + (c.t != null ? c.t + "本" : "") + '</span></div>';
+        '<span>' + c.n + '</span><span class="pt">' + (c.t != null ? tierStars(c.t) : "") + '</span></div>';
     }).join("") : '<p class="pick-hint">没找到</p>';
   }
 

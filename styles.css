@@ -1118,3 +1118,7 @@ body{
 .cmp-diff{font-size:11px;color:var(--dim);line-height:1.7}
 .cmp-diff b{color:var(--gold-2)}
 @media (max-width:760px){ .cmp-body{grid-template-columns:1fr} .cmp-lineup{grid-template-columns:repeat(4,minmax(0,1fr))} }
+
+/* tier stars (in-game style) */
+.stars{color:#e2b45f;letter-spacing:1px;white-space:nowrap}
+.cs-tier.stars{font-size:9px;letter-spacing:0}

@@ -1,4 +1,6 @@
 (function(){
+  function tierStars(n){ n = Number(n); if(!n || n < 1) return ""; return "★".repeat(Math.min(7, n)); }
+
   "use strict";
   var RACE = { BEAST:"野兽", DEMON:"恶魔", DRAGON:"龙", ELEMENTAL:"元素", MECHANICAL:"机械",
     MURLOC:"鱼人", NAGA:"纳迦", PIRATE:"海盗", QUILBOAR:"野猪人", UNDEAD:"亡灵",
@@ -18,7 +20,7 @@
     return c.r.split("/").map(function(x){ return RACE[x] || x; }).join(" / ");
   }
   function metaText(c){
-    var bits = [c.t + " 本"];
+    var bits = ['<span class="stars">' + tierStars(c.t) + "</span>"];
     if(c.y) bits.push("法术");
     else bits.push(c.a + " / " + c.h);
     bits.push(raceText(c));
