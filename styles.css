@@ -913,3 +913,19 @@ body{
 .fc .fc-img.noimg{position:relative}
 .fc .fc-img.noimg::after{content:"NEW";position:absolute;top:5px;right:5px;font-size:8px;letter-spacing:.08em;
   color:#1a0f09;background:var(--gold);border-radius:3px;padding:1px 4px;font-family:var(--sans)}
+
+/* three plans per tribe */
+.plans{margin-top:16px;padding:14px 16px;border:1px solid rgba(226,180,95,.24);border-radius:12px;
+  background:linear-gradient(100deg,rgba(226,180,95,.09),rgba(226,180,95,.02))}
+.plan-tabs{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.plan-tab{border:1px solid var(--line-2);background:rgba(255,255,255,.03);color:var(--muted);
+  border-radius:999px;padding:5px 14px;font-size:12.5px;cursor:pointer;font-family:var(--sans);transition:.2s}
+.plan-tab:hover{border-color:var(--gold-dim);color:var(--gold-2)}
+.plan-tab.on{background:var(--gold);border-color:var(--gold);color:#2a1708;font-weight:600}
+.plan-when{font-size:12px;color:var(--dim);margin-bottom:10px;line-height:1.65}
+@media (max-width:760px){
+  .plans{padding:12px}
+  .plan-tab{padding:4px 11px;font-size:12px}
+}
+
+.plan-label{font-size:10.5px;letter-spacing:.14em;color:var(--dim);align-self:center;margin-right:4px}

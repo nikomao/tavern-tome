@@ -51,6 +51,36 @@
     return '<span class="ci-thumb noimg" title="'+tip+'"><i>'+name.slice(0,1)+'</i></span>';
   }
 
+
+  function planSlot(nm){
+    var c = cardOf(nm);
+    if(c && c.img){
+      return '<button type="button" class="fc" data-card="'+nm+'"><span class="fc-img"><img src="'+c.img+'" alt="'+nm+'"></span><span class="fc-name">'+nm+'</span></button>';
+    }
+    if(isNoArt(nm)){
+      return '<span class="fc" title="卡图暂未收录"><span class="fc-img noimg"><i>'+nm.slice(0,1)+'</i></span><span class="fc-name">'+nm+'</span></span>';
+    }
+    return '<span class="fc generic"><span class="fc-img"><i>+</i></span><span class="fc-name">'+nm+'</span></span>';
+  }
+
+  function planBlock(t){
+    var plans = (typeof PLANS !== "undefined" && PLANS[t.id]) ? PLANS[t.id] : null;
+    if(!plans){
+      var fin = (typeof FINALS !== "undefined" && FINALS[t.id]) || [];
+      plans = [{ k: "标准", when: "按这个顺序摆。", slots: fin }];
+    }
+    var h = '<div class="plans" data-plans="'+t.id+'">';
+    h += '<div class="plan-tabs"><span class="plan-label">终盘方案</span>';
+    plans.forEach(function(p, i){
+      h += '<button type="button" class="plan-tab'+(i===0?" on":"")+'" data-plan="'+i+'">'+p.k+'</button>';
+    });
+    h += '</div>';
+    h += '<div class="plan-when">'+plans[0].when+'</div>';
+    h += '<div class="plan-line fl-cards">'+plans[0].slots.map(planSlot).join("")+'</div>';
+    h += '</div>';
+    return h;
+  }
+
   function panelHTML(t, idx){
     var c = t.color;
     var soft = hexA(c, .17);
@@ -90,19 +120,7 @@
       h += '<div class="pb '+p.k+'"><span class="n">'+(i+1)+'</span><span class="r">'+p.r+'</span><span class="m">'+p.m+'</span></div>';
     });
     h +=       '</div><p class="pos-hint">'+t.posHint+'</p>';
-    var fin = (typeof FINALS !== "undefined" && FINALS[t.id]) || [];
-    h +=       '<div class="final-line"><span class="fl-tag">终盘 7 格</span><div class="fl-cards">';
-    fin.forEach(function(nm){
-      var c = cardOf(nm);
-      if(c && c.img){
-        h += '<button type="button" class="fc" data-card="'+nm+'"><span class="fc-img"><img src="'+c.img+'" alt="'+nm+'"></span><span class="fc-name">'+nm+'</span></button>';
-      } else if(isNoArt(nm)){
-        h += '<span class="fc" title="卡图暂未收录"><span class="fc-img noimg"><i>'+nm.slice(0,1)+'</i></span><span class="fc-name">'+nm+'</span></span>';
-      } else {
-        h += '<span class="fc generic"><span class="fc-img"><i>+</i></span><span class="fc-name">'+nm+'</span></span>';
-      }
-    });
-    h +=       '</div></div></div>';
+    h +=       planBlock(t) + '</div>';
     h +=     '</div>';
     h +=     '<div class="tp-grid">';
     h +=       '<div class="tp-cell"><h4>运营节奏</h4><div class="curve">';
@@ -149,6 +167,24 @@
       });
     });
   }
+
+  /* ---------- lineup plan tabs ---------- */
+  (function(){
+    var wrap = document.getElementById("tribePanels");
+    if(!wrap) return;
+    wrap.addEventListener("click", function(e){
+      var tab = e.target.closest ? e.target.closest(".plan-tab") : null;
+      if(!tab) return;
+      var box = tab.closest(".plans");
+      var id = box.getAttribute("data-plans");
+      var plans = (typeof PLANS !== "undefined") ? PLANS[id] : null;
+      if(!plans) return;
+      var i = +tab.getAttribute("data-plan");
+      Array.prototype.forEach.call(box.querySelectorAll(".plan-tab"), function(b){ b.classList.toggle("on", b === tab); });
+      box.querySelector(".plan-when").textContent = plans[i].when;
+      box.querySelector(".plan-line").innerHTML = plans[i].slots.map(planSlot).join("");
+    });
+  })();
 
   /* ---------- deep link: ?tribe=xxx ---------- */
   (function(){
