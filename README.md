@@ -115,6 +115,17 @@ python scripts/fetch_cards.py
 
 > 自动化只负责「提醒」，不自动改梯度——环境判断仍然需要人。
 
+## 对局模式（边玩边对照）
+
+`play.html?comp=dragon_shield`
+
+- 7 格按**手工站位**排序，点击切换 缺 / 有 / 金
+- 自动生成缺卡清单，按本数排序
+- 回合、本数、金币、血量可调，状态存在 localStorage
+- 快捷键：`1–7` 标记卡牌，`空格` 下一回合，`R` 重置
+- 「置顶小窗」用 Document Picture-in-Picture（Chrome/Edge 116+），游戏开**无边框窗口化**才能一直看到
+- 手机上同一页可用，当第二屏
+
 ## 数据源与统计
 
 页面里的英雄/周报现在接入 **Firestone / ZeroToHeroes** 的公开统计（每补丁更新），并标注数据日期、分段与样本量。

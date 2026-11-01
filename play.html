@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>对局模式 · 酒馆手札</title>
+<link rel="stylesheet" href="styles.css?v=20261101l">
+<link rel="stylesheet" href="play.css?v=20261101l">
+</head>
+<body class="play-body">
+
+<header class="play-top">
+  <a class="play-back" href="index.html">← 返回</a>
+  <select id="playComp" aria-label="选择阵容"></select>
+  <span class="play-tier" id="playTier"></span>
+  <span class="play-meta" id="playMeta"></span>
+</header>
+
+<div class="play-status" id="playStatus">
+  <div class="ps"><span>回合</span><button data-k="turn" data-d="-1">−</button><b id="stTurn">1</b><button data-k="turn" data-d="1">+</button></div>
+  <div class="ps"><span>本数</span><button data-k="tier" data-d="-1">−</button><b id="stTier">1</b><button data-k="tier" data-d="1">+</button></div>
+  <div class="ps"><span>金币</span><button data-k="gold" data-d="-1">−</button><b id="stGold">3</b><button data-k="gold" data-d="1">+</button></div>
+  <div class="ps"><span>血量</span><button data-k="health" data-d="-1">−</button><b id="stHealth">30</b><button data-k="health" data-d="1">+</button></div>
+</div>
+
+<main class="play-main">
+  <section class="play-slots" id="playSlots" aria-label="七格阵容"></section>
+  <aside class="play-side">
+    <h3>还差 <b id="missCount">0</b> 张</h3>
+    <div id="missList"></div>
+    <p class="play-hint" id="playHint"></p>
+  </aside>
+</main>
+
+<footer class="play-actions">
+  <button type="button" id="btnNext">下一回合 <span>空格</span></button>
+  <button type="button" id="btnPip">置顶小窗</button>
+  <button type="button" id="btnReset">重置</button>
+</footer>
+
+<script src="data.js?v=20261101l"></script>
+<script src="pool.js?v=20261101l"></script>
+<script src="stats.js?v=20261101l"></script>
+<script src="comp-notes.js?v=20261101l"></script>
+<script src="extra-cards.js?v=20261101l"></script>
+<script src="cards.js?v=20261101l"></script>
+<script src="play.js?v=20261101l"></script>
+</body>
+</html>

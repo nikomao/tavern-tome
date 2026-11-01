@@ -931,6 +931,7 @@
           t += '<article class="comp-card" data-comp-key="' + (c.key || "") + '">' +
             '<div class="cc-head"><span class="cc-rank">#' + (i+1) + '</span><b>' + c.name + '</b>' +
             '<span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span>' +
+            (c.key ? '<a class="cc-play" href="play.html?comp=' + c.key + '">对局模式</a>' : '') +
             '<span class="cc-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4||0)*100) +
             '% · 吃鸡 ' + Math.round((c.win||0)*100) + '% · ' + (c.sample||0).toLocaleString("en-US") + ' 局</span></div>' +
             '<div class="cc-lineup">' + cards + '</div>' +
