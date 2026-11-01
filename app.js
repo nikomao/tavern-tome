@@ -359,17 +359,17 @@
       ctx.textBaseline = "middle";
       ticks.forEach(function(tv){
         var y = py(tv);
-        ctx.strokeStyle = tv === 0 ? "rgba(255,255,255,.18)" : "rgba(255,255,255,.06)";
+        ctx.strokeStyle = tv === 0 ? "rgba(255,215,160,.28)" : "rgba(255,215,160,.10)";
         ctx.lineWidth = 1;
         ctx.beginPath(); ctx.moveTo(L, y); ctx.lineTo(W-R, y); ctx.stroke();
-        ctx.fillStyle = "#5c6472";
+        ctx.fillStyle = "#8d7357";
         ctx.fillText(fmt(tv), L - 10, y);
       });
 
       // x labels
       ctx.textAlign = "center";
       ctx.textBaseline = "top";
-      ctx.fillStyle = "#5c6472";
+      ctx.fillStyle = "#8d7357";
       for(var k = 0; k <= 4; k++){
         var t = Math.round(N * k / 4);
         var x = L + (t / N) * pw;
@@ -380,8 +380,8 @@
 
       // compound fill
       var grad = ctx.createLinearGradient(0, T, 0, T+ph);
-      grad.addColorStop(0, "rgba(214,178,106,.22)");
-      grad.addColorStop(1, "rgba(214,178,106,0)");
+      grad.addColorStop(0, "rgba(240,201,121,.22)");
+      grad.addColorStop(1, "rgba(240,201,121,0)");
       ctx.beginPath();
       ctx.moveTo(px(0), py(b));
       for(var i2 = 1; i2 <= N; i2++){ ctx.lineTo(px(i2), py(b * Math.pow(2, m*i2))); }
@@ -392,14 +392,14 @@
       ctx.beginPath();
       ctx.moveTo(px(0), py(b));
       for(var j = 1; j <= N; j++){ ctx.lineTo(px(j), py(b + a*j)); }
-      ctx.strokeStyle = "#6c7381"; ctx.lineWidth = 2; ctx.stroke();
+      ctx.strokeStyle = "#8d6f4f"; ctx.lineWidth = 2; ctx.stroke();
 
       // compound
       ctx.beginPath();
       ctx.moveTo(px(0), py(b));
       for(var q = 1; q <= N; q++){ ctx.lineTo(px(q), py(b * Math.pow(2, m*q))); }
-      ctx.strokeStyle = "#e6c884"; ctx.lineWidth = 2.6;
-      ctx.shadowColor = "rgba(214,178,106,.55)"; ctx.shadowBlur = 12;
+      ctx.strokeStyle = "#f0c979"; ctx.lineWidth = 2.6;
+      ctx.shadowColor = "rgba(240,201,121,.55)"; ctx.shadowBlur = 12;
       ctx.stroke();
       ctx.shadowBlur = 0;
 
@@ -407,7 +407,7 @@
       var ex = px(N), ey = py(com);
       ctx.beginPath();
       ctx.arc(ex, ey, 4.5, 0, Math.PI*2);
-      ctx.fillStyle = "#f6e7bd"; ctx.fill();
+      ctx.fillStyle = "#ffe6b0"; ctx.fill();
       if(N > 0){
         ctx.font = "600 12px ui-monospace, Menlo, Consolas, monospace";
         ctx.fillStyle = "#f2dfae";

@@ -1,6 +1,6 @@
 /* 酒馆战棋 · 全种族数据（36.6 → 37.0 环境快照） */
 const TIERS = [
-  { id:"T0", label:"T0 · 版本答案", color:"#e8695f", note:"成型即吃鸡，闭眼抓" },
+  { id:"T0", label:"T0 · 版本答案", color:"#d96a55", note:"成型即吃鸡，闭眼抓" },
   { id:"T1", label:"T1 · 强势可玩", color:"#d6b26a", note:"有明确上限，熟练可吃鸡" },
   { id:"T2", label:"T2 · 需要胡",   color:"#7cc4f0", note:"烂分稳，吃鸡看发牌" },
   { id:"T3", label:"T3 · 绝活",     color:"#8a94a6", note:"环境不利，靠理解取胜" }
@@ -8,7 +8,7 @@ const TIERS = [
 
 const TRIBES = [
 {
-  id:"aberration", glyph:"畸", name:"畸变怪", en:"Aberration", tier:"T0", color:"#b18cf5",
+  id:"aberration", glyph:"畸", name:"畸变怪", en:"Aberration", tier:"T0", color:"#b08bd0",
   tagline:"献祭小怪召唤上古之神，用弃牌与亡语把资源灌进神明。",
   identity:"37.0 的新种族，也是当前吃鸡率最高的体系。它不靠铸币买大哥，而靠「友方畸变怪死亡」召唤神明，再用弃牌/获得手牌不断给神明喂身材。等于用别人的节奏，养自己的终端。",
   cores:[
@@ -50,7 +50,7 @@ const TRIBES = [
   summary:{ core:"神明 + 守门融合怪", turn:"7–9", ceiling:"极高", diff:"中高" }
 },
 {
-  id:"elemental", glyph:"元", name:"元素", en:"Elemental", tier:"T0", color:"#f0b45a",
+  id:"elemental", glyph:"元", name:"元素", en:"Elemental", tier:"T0", color:"#dfa04b",
   tagline:"用铜须把经济倒转，把酒馆里的元素永久喂大。",
   identity:"上限最高的种族。核心不是「买元素」，而是「让酒馆里的元素永久变大」——每一次刷新、每一张法术，都会变成下一只元素的身材。经济越转越强，是典型的复利种族。",
   cores:[
@@ -92,7 +92,7 @@ const TRIBES = [
   summary:{ core:"铜须 + 酒馆永久 buff", turn:"8–10", ceiling:"最高", diff:"高" }
 },
 {
-  id:"demon", glyph:"魔", name:"恶魔", en:"Demon", tier:"T0", color:"#e8695f",
+  id:"demon", glyph:"魔", name:"恶魔", en:"Demon", tier:"T0", color:"#d96a55",
   tagline:"吞噬，把别人的身材变成自己的。",
   identity:"恶魔的核心是「吃」。吃掉酒馆里的随从、吃掉友方频率，把身材直接叠加到自己身上；中期靠深渊使者过渡，后期靠食力征服者/愤怒卫士把「吃」变成复利。36.4 补丁后吃鸡率登顶。",
   cores:[
@@ -134,7 +134,7 @@ const TRIBES = [
   summary:{ core:"吞噬 + 食力/愤怒", turn:"7–9", ceiling:"高", diff:"中" }
 },
 {
-  id:"naga", glyph:"纳", name:"纳迦", en:"Naga", tier:"T1", color:"#5ec8e5",
+  id:"naga", glyph:"纳", name:"纳迦", en:"Naga", tier:"T1", color:"#6fb0bd",
   tagline:"塑造法术，把每回合的免费资源变成身材。",
   identity:"纳迦的核心是「塑造」：每回合稳定产出法术，巴琳达让塑造触发两次，涌流/碎地者把法术数量转成身材。锁血能力极强，是典型的「中后期突然成型」种族。",
   cores:[
@@ -175,7 +175,7 @@ const TRIBES = [
   summary:{ core:"巴琳达 + 塑造", turn:"8–10", ceiling:"高", diff:"中高" }
 },
 {
-  id:"pirate", glyph:"海", name:"海盗", en:"Pirate", tier:"T1", color:"#e8c15a",
+  id:"pirate", glyph:"海", name:"海盗", en:"Pirate", tier:"T1", color:"#d6b15a",
   tagline:"电表倒转，把铸币变成攻击力。",
   identity:"海盗的核心是「花钱」：火药运输工、苦情民谣歌手把每 5 枚铸币转化成攻击/生命，死海破坏者再把攻击力复制给频率。运营难度最高，但经济滚起来最爽。",
   cores:[
@@ -216,7 +216,7 @@ const TRIBES = [
   summary:{ core:"火药 + 死海破坏者", turn:"8–10", ceiling:"高", diff:"高" }
 },
 {
-  id:"beast", glyph:"兽", name:"野兽", en:"Beast", tier:"T1", color:"#a8d05a",
+  id:"beast", glyph:"兽", name:"野兽", en:"Beast", tier:"T1", color:"#9cae62",
   tagline:"甲虫铺场、白狼亡语，用频率压死对手。",
   identity:"野兽的核心是「死亡」：甲虫死了召唤小甲虫，白狼死了给全队 +/+，龙虾/巨蝎提供成长。中期节奏极快，但团战随机性大，是典型的「上限看脸」种族。",
   cores:[
@@ -256,7 +256,7 @@ const TRIBES = [
   summary:{ core:"白狼 + 甲虫", turn:"7–9", ceiling:"中高", diff:"中低" }
 },
 {
-  id:"dragon", glyph:"龙", name:"龙", en:"Dragon", tier:"T1", color:"#f08a9b",
+  id:"dragon", glyph:"龙", name:"龙", en:"Dragon", tier:"T1", color:"#d98a8a",
   tagline:"诗心龙永久化、怒鳞翻倍，中期最能打。",
   identity:"龙的核心是「传血加攻」：诗心龙把战斗中的属性保留下来，怒鳞潜行者把攻击翻倍，仙女龙是版本第一打手。中期即战力极强，高分段表现尤佳。",
   cores:[
@@ -296,7 +296,7 @@ const TRIBES = [
   summary:{ core:"诗心龙 + 怒鳞", turn:"8–10", ceiling:"高", diff:"中" }
 },
 {
-  id:"mech", glyph:"机", name:"机械", en:"Mech", tier:"T2", color:"#9fb0c4",
+  id:"mech", glyph:"机", name:"机械", en:"Mech", tier:"T2", color:"#a99a83",
   tagline:"磁力圣盾，把一张卡贴成一个怪物。",
   identity:"机械的核心是「磁力」：卫星、扩音机、自动起床号不断往载体上贴，形成「圣盾 + 频率 + 高攻」的三位一体。B-BOX 是上限，但成型慢，属于稳健烂分种族。",
   cores:[
@@ -337,7 +337,7 @@ const TRIBES = [
   summary:{ core:"磁力 + B-BOX", turn:"9–11", ceiling:"中", diff:"中低" }
 },
 {
-  id:"murloc", glyph:"鱼", name:"鱼人", en:"Murloc", tier:"T2", color:"#5fd6a8",
+  id:"murloc", glyph:"鱼", name:"鱼人", en:"Murloc", tier:"T2", color:"#6fb894",
   tagline:"频率下毒，用「换掉」代替「养大」。",
   identity:"鱼人的强项不是身材，而是「关键词」：下水道逃生鱼人给风怒/圣盾/潜行，怒胆喷毒鱼提供剧毒，飞行专家召唤频率。它不跟你比大小，它跟你比「谁先换掉谁」。",
   cores:[
@@ -379,7 +379,7 @@ const TRIBES = [
   summary:{ core:"逃生鱼人 + 毒", turn:"8–10", ceiling:"中高", diff:"中" }
 },
 {
-  id:"undead", glyph:"亡", name:"亡灵", en:"Undead", tier:"T3", color:"#8f9bf0",
+  id:"undead", glyph:"亡", name:"亡灵", en:"Undead", tier:"T3", color:"#9a8fc0",
   tagline:"频率与复生，用死亡堆出攻击力。",
   identity:"亡灵的核心是「宰割」：消灭一个友方亡灵，使全体亡灵永久 +8 攻。配合复生/亡语铺场，越死越强。当前版本偏弱，但「纺织工 + 电表」的混编有奇效。",
   cores:[
@@ -421,7 +421,7 @@ const TRIBES = [
   summary:{ core:"宰割 + 复生频率", turn:"8–10", ceiling:"中低", diff:"中" }
 },
 {
-  id:"quilboar", glyph:"猪", name:"野猪人", en:"Quilboar", tier:"T3", color:"#f08ab8",
+  id:"quilboar", glyph:"猪", name:"野猪人", en:"Quilboar", tier:"T3", color:"#cf8fa6",
   tagline:"鲜血宝石，把永久资产喂给全队。",
   identity:"野猪人的核心是「鲜血宝石」：每张宝石都是永久 +/+，极速野猪骑士把单点宝石变成全体宝石。问题是缺少强力打手，且宝石质量前期就得养，当前版本偏弱。",
   cores:[
