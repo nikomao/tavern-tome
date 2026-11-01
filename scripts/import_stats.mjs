@@ -47,7 +47,7 @@ const comps = (raw.comps || []).map(c => ({
   win: Number(c.win) || 0,
   avg: Number(c.avg) || 0,
   sample: Number(c.sample) || 0,
-  cards: Array.isArray(c.cards) ? c.cards.slice(0, 7) : [],
+  cards: Array.isArray(c.cards) ? c.cards.slice(0, 7).map(x => ({ id: x.id, name: x.name, status: x.status, role: x.role || 'mid' })) : [],
   heroes: Array.isArray(c.heroes) ? c.heroes.slice(0, 3) : [],
   difficulty: c.difficulty || "",
   power: c.power || ""

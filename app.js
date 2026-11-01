@@ -856,10 +856,18 @@
         var t = '<div class="cs-head">数据阵容榜 <span>' + STATS.source + ' · ' + (STATS.bracket || "") +
           " · " + (STATS.fetchedAt || "") + " · 样本 " + (STATS.sample ? Math.round(STATS.sample/10000)+" 万局" : "-") + '</span></div>';
 
+        function posHint(c){
+          var tribeName = String(c.name || "").split("·")[0];
+          var tr = (typeof TRIBES !== "undefined") ? TRIBES.filter(function(x){ return x.name === tribeName; })[0] : null;
+          if(tr && tr.posHint) return tr.posHint + '（经验站位）';
+          return '通用原则：1–2 号位放前排吸收，3–5 号位放功能，6–7 号位放核心输出';
+        }
+
         t += '<div class="comp-board">';
         STATS.comps.slice(0, 8).forEach(function(c, i){
-          var cards = (c.cards || []).map(function(x){
+          var cards = (c.cards || []).map(function(x, idx){
             return '<a class="comp-slot" href="cards.html?card=' + x.id + '" title="' + x.name + '">' +
+              '<span class="cs-no">' + (idx + 1) + '</span>' +
               '<span class="cs-img"><img loading="lazy" src="pool/' + x.id + '.webp" alt="" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><i>' + x.name.slice(0,1) + '</i></span>' +
               '<span class="cs-name">' + x.name + '</span></a>';
           }).join("");
@@ -870,6 +878,7 @@
             '<span class="cc-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4||0)*100) +
             '% · 吃鸡 ' + Math.round((c.win||0)*100) + '% · ' + (c.sample||0).toLocaleString("en-US") + ' 局</span></div>' +
             '<div class="cc-lineup">' + cards + '</div>' +
+            '<div class="cc-pos"><b>站位</b> ' + posHint(c) + '</div>' +
             '<div class="cc-foot"><span>推荐英雄：' + (heroes || "—") + '</span><span>' +
             (c.difficulty || "") + (c.power ? ' / 强度 ' + c.power : "") + '</span></div>' +
             '</article>';

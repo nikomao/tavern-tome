@@ -48,7 +48,16 @@ const tr = await getJson("https://static.zerotoheroes.com/api/bgs/trinket-stats/
 const cards = await getJson("https://api.hearthstonejson.com/v1/latest/zhCN/cards.json");
 
 const names = {};
-for (const c of cards) if (c.id) names[c.id] = c.name;
+const texts = {};
+for (const c of cards) { if (c.id) { names[c.id] = c.name; texts[c.id] = c.text || ""; } }
+
+function roleOf(id) {
+  const t = texts[id] || "";
+  if (/嘲讽|圣盾/.test(t)) return "front";
+  if (/亡语|战吼|回合结束|成长|塑造|战斗开始时/.test(t)) return "back";
+  return "mid";
+}
+const ROLE_ORDER = { front: 0, mid: 1, back: 2 };
 const stratById = {};
 for (const s of strat) if (s.compId) stratById[s.compId] = s;
 
@@ -78,7 +87,7 @@ const comps = cs.compStats
         .filter(x => x.cardId && !String(x.cardId).startsWith("#"))
         .sort((a, b) => (order[a.status] ?? 3) - (order[b.status] ?? 3) || (b.finalBoardWeight || 0) - (a.finalBoardWeight || 0))
         .slice(0, 7)
-        .map(x => ({ id: x.cardId, name: names[x.cardId] || x.name, status: x.status }));
+        .map(x => ({ id: x.cardId, name: names[x.cardId] || x.name, status: x.status, role: roleOf(x.cardId) }))
     }
     const compHeroes = (c.heroStats || [])
       .filter(h => h.dataPoints >= 50 && names[h.heroCardId])

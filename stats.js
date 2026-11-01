@@ -948,37 +948,44 @@ const STATS = {
         {
           "id": "BG29_813",
           "name": "执念诗心龙",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "front"
         },
         {
           "id": "BG36_364",
           "name": "希望信使",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "front"
         },
         {
           "id": "BG36_849",
           "name": "英勇的巢母",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "front"
         },
         {
           "id": "BGS_040",
           "name": "红衣纳迪娜",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "front"
         },
         {
           "id": "BG36_241",
           "name": "赤红守备巨龙",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         },
         {
           "id": "BGS_034",
           "name": "青铜守卫",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         },
         {
           "id": "BG34_889",
           "name": "诺兹多姆的子嗣",
-          "status": "CYCLE"
+          "status": "CYCLE",
+          "role": "back"
         }
       ],
       "heroes": [
@@ -1000,37 +1007,44 @@ const STATS = {
         {
           "id": "BG36_640",
           "name": "守门融合怪",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG35_883",
           "name": "巴琳达·斯通赫尔斯",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG32_821",
           "name": "邪火咒龙",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_370",
           "name": "得胜的地卜术师",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG30_121",
           "name": "热气球测绘员",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG36_104",
           "name": "黑暗傀儡师",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         }
       ],
       "heroes": [
@@ -1052,37 +1066,44 @@ const STATS = {
         {
           "id": "BGFYM_005",
           "name": "预言者阿菲拉斯",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_320",
           "name": "神秘的克熙尔",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG26_ICC_901",
           "name": "达卡莱附魔师",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_115",
           "name": "梦魇侵蚀怪",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_300",
           "name": "恩拉其唤冰者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG32_821",
           "name": "邪火咒龙",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_318",
           "name": "无面转化者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         }
       ],
       "heroes": [
@@ -1104,37 +1125,44 @@ const STATS = {
         {
           "id": "BG36_367",
           "name": "自动起床号",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_851",
           "name": "火花破坏机",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG26_149",
           "name": "极性B-Box拳手",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG33_823",
           "name": "空军上将罗杰斯",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG33_825",
           "name": "骄傲的私掠者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_506",
           "name": "复映无人机",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         }
       ],
       "heroes": [
@@ -1156,37 +1184,44 @@ const STATS = {
         {
           "id": "BG36_366",
           "name": "机智的机器人",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG26_152",
           "name": "多面辅助无人机",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG26_ICC_901",
           "name": "达卡莱附魔师",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG26_149",
           "name": "极性B-Box拳手",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG36_851",
           "name": "火花破坏机",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG36_506",
           "name": "复映无人机",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         },
         {
           "id": "BG34_171",
           "name": "转运构筑机",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         }
       ],
       "heroes": [
@@ -1208,37 +1243,44 @@ const STATS = {
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG22_403",
           "name": "小瞎眼",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG26_ICC_901",
           "name": "达卡莱附魔师",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG33_891",
           "name": "魔鳍真菌学家",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_701",
           "name": "海藻护卫",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG32_821",
           "name": "邪火咒龙",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG33_830",
           "name": "艾萨拉的刀客",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         }
       ],
       "heroes": [
@@ -1260,37 +1302,44 @@ const STATS = {
         {
           "id": "BG36_762",
           "name": "恶魔干扰者",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG35_883",
           "name": "巴琳达·斯通赫尔斯",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG28_633",
           "name": "邪能野猪人",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_731",
           "name": "鬼影幻术师",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG21_004",
           "name": "贪食的乌祖尔",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         },
         {
           "id": "BG36_621",
           "name": "灵巧的逃亡者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         },
         {
           "id": "BG36_503",
           "name": "缚魂狱卒",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -1312,37 +1361,44 @@ const STATS = {
         {
           "id": "BG31_323",
           "name": "极速野猪骑士",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_331",
           "name": "棘刺挖掘工",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG31_326",
           "name": "健身搏猪",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG26_ICC_901",
           "name": "达卡莱附魔师",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG31_327",
           "name": "刺棘开拓者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG33_885",
           "name": "鲜血精研者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG31_320",
           "name": "坑谷矿工",
-          "status": "CYCLE"
+          "status": "CYCLE",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -1364,37 +1420,44 @@ const STATS = {
         {
           "id": "BG28_707",
           "name": "活化艾泽里特",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG35_881",
           "name": "魔网浮灵",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG35_883",
           "name": "巴琳达·斯通赫尔斯",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG36_701",
           "name": "海藻护卫",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG22_403",
           "name": "小瞎眼",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BGS_126",
           "name": "野火元素",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -1430,37 +1493,44 @@ const STATS = {
         {
           "id": "BG28_633",
           "name": "邪能野猪人",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG35_883",
           "name": "巴琳达·斯通赫尔斯",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG36_762",
           "name": "恶魔干扰者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG33_823",
           "name": "空军上将罗杰斯",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG33_825",
           "name": "骄傲的私掠者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG30_121",
           "name": "热气球测绘员",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -1482,37 +1552,44 @@ const STATS = {
         {
           "id": "BG36_318",
           "name": "无面转化者",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG25_354",
           "name": "提图斯·瑞文戴尔",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG36_101",
           "name": "强制躺平怪",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_208",
           "name": "逐亡陆行鸟",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_103",
           "name": "恩拉其工兵",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_115",
           "name": "梦魇侵蚀怪",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG33_823",
           "name": "空军上将罗杰斯",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -1534,37 +1611,44 @@ const STATS = {
         {
           "id": "BG33_823",
           "name": "空军上将罗杰斯",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG33_825",
           "name": "骄傲的私掠者",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG34_692",
           "name": "被遗忘者纺织工",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_515",
           "name": "时尚魅影",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG31_835",
           "name": "致命打击者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG25_010",
           "name": "断手被遗忘者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         }
       ],
       "heroes": [
@@ -1586,37 +1670,44 @@ const STATS = {
         {
           "id": "BG25_008",
           "name": "永恒骑士",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG25_009",
           "name": "永恒召唤者",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG36_848",
           "name": "小巫妖囤积者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG25_354",
           "name": "提图斯·瑞文戴尔",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG28_309",
           "name": "木乃伊工匠",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_515",
           "name": "时尚魅影",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG36_511",
           "name": "丧钟死灵",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -1638,37 +1729,44 @@ const STATS = {
         {
           "id": "BG26_354",
           "name": "合唱鱼人",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG36_703",
           "name": "暮光猎潮者",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG32_330",
           "name": "好斗的斥候",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG27_556",
           "name": "凶饿的觅食者",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG33_891",
           "name": "魔鳍真菌学家",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG35_883",
           "name": "巴琳达·斯通赫尔斯",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -1690,37 +1788,44 @@ const STATS = {
         {
           "id": "BG34_140",
           "name": "飞行专家",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_700",
           "name": "下水道逃生鱼人",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG33_318",
           "name": "怒胆喷毒鱼人",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG23_318",
           "name": "莽神火车王",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BGS_131",
           "name": "致命的孢子",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG31_149",
           "name": "气泡枪手",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG34_604",
           "name": "英勇的逆袭者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -1742,37 +1847,44 @@ const STATS = {
         {
           "id": "BG32_324",
           "name": "德鲁斯特堕落屠夫",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_515",
           "name": "时尚魅影",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG32_880",
           "name": "友善的恶鬼",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG25_354",
           "name": "提图斯·瑞文戴尔",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG28_309",
           "name": "木乃伊工匠",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_511",
           "name": "丧钟死灵",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG31_835",
           "name": "致命打击者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         }
       ],
       "heroes": [
@@ -1794,37 +1906,44 @@ const STATS = {
         {
           "id": "BG36_202",
           "name": "美味龙虾",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG25_354",
           "name": "提图斯·瑞文戴尔",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG36_208",
           "name": "逐亡陆行鸟",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG36_204",
           "name": "猎头狮鹫",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_210",
           "name": "囤食土狼",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG25_016",
           "name": "辛多雷直射手",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         },
         {
           "id": "BG36_201",
           "name": "深潜狮子鱼",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -1846,37 +1965,44 @@ const STATS = {
         {
           "id": "BGS_004",
           "name": "愤怒编织者",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG32_873",
           "name": "灰烬腐蚀者",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG26_174",
           "name": "灵魂回溯者",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_733",
           "name": "艾瑞达逃脱大师",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_762",
           "name": "恶魔干扰者",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG26_524",
           "name": "舞蹈王子玛克扎尔",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -1898,37 +2024,44 @@ const STATS = {
         {
           "id": "BG36_241",
           "name": "赤红守备巨龙",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "front"
         },
         {
           "id": "BG29_813",
           "name": "执念诗心龙",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "front"
         },
         {
           "id": "BG36_245",
           "name": "符文奥术师",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG32_821",
           "name": "邪火咒龙",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BGS_040",
           "name": "红衣纳迪娜",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         },
         {
           "id": "BG36_243",
           "name": "天诞逃生飞龙",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -1950,37 +2083,44 @@ const STATS = {
         {
           "id": "BG36_344",
           "name": "掠夺大师钩牙",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_523",
           "name": "上进的逃兵",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_521",
           "name": "铐住的哗变者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_524",
           "name": "海上勒索师",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG33_823",
           "name": "空军上将罗杰斯",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG26_817",
           "name": "刀剑收藏家",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         }
       ],
       "heroes": [
@@ -2002,37 +2142,44 @@ const STATS = {
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG36_352",
           "name": "无羁雷暴",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG34_858",
           "name": "空气亡魂",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_701",
           "name": "海藻护卫",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG26_175",
           "name": "惊喜元素",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         },
         {
           "id": "BGS_123",
           "name": "酒馆旋风",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG28_707",
           "name": "活化艾泽里特",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -2054,37 +2201,44 @@ const STATS = {
         {
           "id": "BG36_209",
           "name": "暴虐巨蝎",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG31_809",
           "name": "绿松石飞掠虫",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG36_204",
           "name": "猎头狮鹫",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG26_802",
           "name": "香蕉猛猿",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG31_801",
           "name": "森林游虫",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG31_803",
           "name": "嗡鸣害虫",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         },
         {
           "id": "BG25_354",
           "name": "提图斯·瑞文戴尔",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         }
       ],
       "heroes": [
@@ -2106,37 +2260,44 @@ const STATS = {
         {
           "id": "BG30_121",
           "name": "热气球测绘员",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG28_583",
           "name": "地卜大师鲁古格",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "front"
         },
         {
           "id": "BG36_331",
           "name": "棘刺挖掘工",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG35_883",
           "name": "巴琳达·斯通赫尔斯",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG36_370",
           "name": "得胜的地卜术师",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG33_885",
           "name": "鲜血精研者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG34_684",
           "name": "堑壕斗士",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         }
       ],
       "heroes": [
@@ -2158,37 +2319,44 @@ const STATS = {
         {
           "id": "BG35_602",
           "name": "深潜巨兽",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG26_802",
           "name": "香蕉猛猿",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG35_604",
           "name": "下水道老鼠头目",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "front"
         },
         {
           "id": "BG36_204",
           "name": "猎头狮鹫",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG31_809",
           "name": "绿松石飞掠虫",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_209",
           "name": "暴虐巨蝎",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG25_354",
           "name": "提图斯·瑞文戴尔",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         }
       ],
       "heroes": [
@@ -2210,37 +2378,44 @@ const STATS = {
         {
           "id": "BGS_041",
           "name": "奥术守护者卡雷苟斯",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG29_813",
           "name": "执念诗心龙",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         },
         {
           "id": "BG34_633",
           "name": "龙族看护员",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_242",
           "name": "青铜时光行者",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG36_243",
           "name": "天诞逃生飞龙",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG24_500",
           "name": "琥珀卫士",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         }
       ],
       "heroes": [
@@ -2262,37 +2437,44 @@ const STATS = {
         {
           "id": "BG33_823",
           "name": "空军上将罗杰斯",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG33_825",
           "name": "骄傲的私掠者",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG32_821",
           "name": "邪火咒龙",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG26_817",
           "name": "刀剑收藏家",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG36_523",
           "name": "上进的逃兵",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "mid"
         },
         {
           "id": "BG36_369",
           "name": "贪婪的诈骗犯",
-          "status": "CYCLE"
+          "status": "CYCLE",
+          "role": "mid"
         }
       ],
       "heroes": [
@@ -2314,37 +2496,44 @@ const STATS = {
         {
           "id": "BG36_853",
           "name": "炫彩机器人",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG35_883",
           "name": "巴琳达·斯通赫尔斯",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "mid"
         },
         {
           "id": "BG26_152",
           "name": "多面辅助无人机",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG26_ICC_901",
           "name": "达卡莱附魔师",
-          "status": "CORE"
+          "status": "CORE",
+          "role": "back"
         },
         {
           "id": "BG36_764",
           "name": "机鳍鱼人",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG_LOE_077",
           "name": "布莱恩·铜须",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "back"
         },
         {
           "id": "BG36_854",
           "name": "救援机器人",
-          "status": "ADDON"
+          "status": "ADDON",
+          "role": "front"
         }
       ],
       "heroes": [
