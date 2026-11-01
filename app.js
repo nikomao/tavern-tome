@@ -113,6 +113,43 @@
     return h;
   }
 
+  function bestCompFor(t){
+    if(typeof STATS === "undefined" || !STATS.comps) return null;
+    var list = STATS.comps.filter(function(c){ return String(c.name).indexOf(t.name + "·") === 0; });
+    if(!list.length) return null;
+    list.sort(function(a, b){ return a.avg - b.avg; });
+    return list[0];
+  }
+
+  function bestCompHTML(t){
+    var c = bestCompFor(t);
+    if(!c) return "";
+    var list = (c.cards || []).slice();
+    var note = (typeof COMP_NOTES !== "undefined" && COMP_NOTES[c.key]) ? COMP_NOTES[c.key] : null;
+    if(note && note.order){
+      var idx = {};
+      note.order.forEach(function(n, k){ idx[n] = k; });
+      list.sort(function(a, b){
+        return (idx[a.name] == null ? 99 : idx[a.name]) - (idx[b.name] == null ? 99 : idx[b.name]);
+      });
+    }
+    var cards = list.map(function(x, i){
+      var tier = (typeof CARD_DB !== "undefined" && CARD_DB[x.id]) ? CARD_DB[x.id].t : null;
+      var stars = (typeof tierStars === "function") ? tierStars(tier) : "";
+      return '<a class="tb-card" href="cards.html?card=' + x.id + '" data-card-id="' + x.id + '" title="' + x.name + '">' +
+        '<span class="tb-no">' + (i + 1) + '</span>' +
+        '<span class="tb-img"><img loading="lazy" src="pool/' + x.id + '.webp" alt=""></span>' +
+        '<span class="tb-name">' + x.name + '</span>' +
+        '<em class="stars">' + stars + '</em></a>';
+    }).join("");
+    return '<div class="tribe-best"><div class="tb-head"><span class="tb-label">本周最佳</span><b>' + c.name + '</b>' +
+      '<span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span>' +
+      '<span class="tb-meta">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) +
+      '% · 吃鸡 ' + Math.round((c.win || 0) * 100) + '%</span>' +
+      '<a class="tb-play" href="play.html?comp=' + c.key + '">对局模式</a></div>' +
+      '<div class="tb-cards">' + cards + '</div></div>';
+  }
+
   function panelHTML(t, idx){
     var c = t.color;
     var soft = hexA(c, .17);
@@ -125,6 +162,7 @@
     h +=       '<div class="tp-title"><h3>'+t.name+'<span class="en">'+t.en+'</span></h3><p>'+t.tagline+'</p></div>';
     h +=       '<div class="tp-tier '+tierClass+'">'+t.tier+'</div>';
     h +=     '</header>';
+    h +=     bestCompHTML(t);
     h +=     '<div class="tp-body">';
     h +=       '<div class="core-wrap"><h4>核心组件<span class="h4-hint">悬停 / 点击卡图，查看完整卡牌效果</span></h4><ul class="core-list">';
     t.cores.forEach(function(x){
@@ -134,7 +172,7 @@
         var bits = [];
         if(c.n && c.n !== x.n) bits.push(c.n);
         if(c.k === "spell") bits.push("酒馆法术");
-        else if(c.t != null) bits.push("等级 " + c.t);
+        else if(c.t != null) bits.push((typeof tierStars === "function" ? tierStars(c.t) : ""));
         sub = bits.join(" · ");
       }
       h += '<li class="core-item" data-card="'+x.n+'">' +
