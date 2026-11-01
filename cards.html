@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>卡池查询 · 酒馆战棋 | 酒馆手札</title>
+<meta name="description" content="酒馆战棋完整卡池：按酒馆等级、种族、类型、关键词搜索，含卡图与完整效果。" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">棋</span><span>酒馆手札</span></a>
+    <nav class="nav">
+      <a href="index.html">手册</a>
+      <a href="cards.html" class="active">卡池</a>
+      <a href="index.html#start">入门</a>
+      <a href="index.html#tribes">种族</a>
+      <a href="index.html#meta">周报</a>
+    </nav>
+    <div class="ver">v37.0</div>
+  </div>
+</header>
+
+<main class="pool-main">
+  <div class="pool-head">
+    <div>
+      <h1>卡池查询</h1>
+      <p>收录 HearthstoneJSON 中全部酒馆战棋随从与法术（含历史卡），共 <b id="poolTotal">0</b> 张。</p>
+    </div>
+    <a class="btn ghost" href="index.html">← 返回手册</a>
+  </div>
+
+  <div class="pool-controls">
+    <input id="poolSearch" class="pool-search" type="search" placeholder="搜索卡名或效果关键词，例如「亡语」「鲜血宝石」「战吼」" autocomplete="off" />
+    <select id="poolTier">
+      <option value="">全部等级</option>
+      <option value="1">1 本</option><option value="2">2 本</option><option value="3">3 本</option>
+      <option value="4">4 本</option><option value="5">5 本</option><option value="6">6 本</option><option value="7">7 本</option>
+    </select>
+    <select id="poolRace">
+      <option value="">全部种族</option>
+      <option value="BEAST">野兽</option><option value="DEMON">恶魔</option><option value="DRAGON">龙</option>
+      <option value="ELEMENTAL">元素</option><option value="MECHANICAL">机械</option><option value="MURLOC">鱼人</option>
+      <option value="NAGA">纳迦</option><option value="PIRATE">海盗</option><option value="QUILBOAR">野猪人</option>
+      <option value="UNDEAD">亡灵</option><option value="ABERRATION">畸变怪</option><option value="ALL">全种族</option>
+    </select>
+    <select id="poolType">
+      <option value="">随从 + 法术</option>
+      <option value="minion">只看随从</option>
+      <option value="spell">只看法术</option>
+    </select>
+    <select id="poolSet">
+      <option value="">全部版本</option>
+      <option value="recent">近两年（BG31+）</option>
+      <option value="old">更早</option>
+    </select>
+  </div>
+
+  <div class="pool-status">
+    <span id="poolCount">—</span>
+    <button type="button" class="pool-reset" id="poolReset">清空筛选</button>
+  </div>
+
+  <div class="pool-grid" id="poolGrid"></div>
+  <div class="pool-more"><button type="button" class="btn ghost" id="poolMore">加载更多</button></div>
+  <p class="pool-note">卡图与卡牌数据来自社区卡牌库（HearthstoneJSON / ZeroToHeroes）。历史卡不一定出现在当前对局，请以游戏内为准。</p>
+</main>
+
+<div class="pool-modal" id="poolModal" hidden>
+  <div class="pm-card">
+    <button type="button" class="pm-close" id="pmClose" aria-label="关闭">×</button>
+    <div class="pm-img"><img id="pmImg" alt="" /></div>
+    <div class="pm-info">
+      <h3 id="pmName"></h3>
+      <div class="pm-meta" id="pmMeta"></div>
+      <p class="pm-text" id="pmText"></p>
+    </div>
+  </div>
+</div>
+
+<script src="pool.js"></script>
+<script src="pool-page.js"></script>
+</body>
+</html>

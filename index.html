@@ -22,13 +22,15 @@
   <div class="topbar-inner">
     <a class="brand" href="#top"><span class="brand-mark">棋</span><span>酒馆手札</span></a>
     <nav class="nav" id="nav">
-      <a href="#start">入门</a><a href="#laws">定律</a>
+      <a href="#start">入门</a>
+      <a href="#laws">定律</a>
       <a href="#math">数学</a>
-      <a href="#fusion">融合</a>
       <a href="#positioning">站位</a>
-      <a href="#tribes">种族</a><a href="#meta">周报</a>
+      <a href="#tribes">种族</a>
+      <a href="#heroes">英雄</a>
+      <a href="#meta">周报</a>
       <a href="#table">速查</a>
-      <a href="#flow">决策</a>
+      <a href="cards.html">卡池</a>
     </nav>
     <div class="ver">v37.0</div>
   </div>
@@ -597,6 +599,40 @@
   <p class="table-note" id="metaNote"></p>
 </section>
 
+<!-- ================= 英雄与饰品 ================= -->
+<section class="section" id="heroes">
+  <div class="section-head">
+    <div class="sec-no">英</div>
+    <div>
+      <h2>英雄与饰品：开局先选对一半</h2>
+      <p class="sub">英雄决定前 5 回合的节奏，饰品决定后 5 回合的上限。</p>
+    </div>
+  </div>
+
+  <div class="hero-guide">
+    <div class="hg-col">
+      <h3>英雄怎么选</h3>
+      <ol class="hg-rules">
+        <li><b>先看经济</b>：能给铸币、免费刷新的英雄，新手最稳。</li>
+        <li><b>再看复制</b>：能给牌、能凑三连的，容易做出核心。</li>
+        <li><b>最后看战力</b>：纯战力英雄上限低，但保命强。</li>
+      </ol>
+      <div class="hg-list" id="heroList"></div>
+    </div>
+    <div class="hg-col">
+      <h3>饰品怎么选</h3>
+      <ol class="hg-rules">
+        <li><b>小饰品先拿节奏</b>：经济 / 复制优先，别拿纯数值。</li>
+        <li><b>大饰品看阵容</b>：先定种族，再选能放大的饰品。</li>
+        <li><b>别为饰品改阵容</b>：饰品是乘数，不是方向。</li>
+        <li><b>保命饰品不丢人</b>：血量危险时，护盾 / 回血也是分。</li>
+      </ol>
+      <div class="hg-list" id="trinketList"></div>
+    </div>
+  </div>
+  <p class="table-note">英雄与饰品池会随赛季轮换，这里给的是选择方法；具体强度以当前版本为准。</p>
+</section>
+
 <!-- ================= 决策 ================= -->
 <section class="section" id="flow">
   <div class="section-head">
@@ -662,7 +698,7 @@
       <p>基于 36.6 → 37.0 补丁环境整理，供个人学习参考。卡图与卡牌数据来自社区卡牌库（HearthstoneJSON / ZeroToHeroes），仅作识别用途；卡池与数值随版本轮换，请以游戏内为准。</p>
     </div>
     <div class="footer-links">
-      <a href="#laws">定律</a><a href="#math">数学</a><a href="#fusion">融合</a><a href="#positioning">站位</a><a href="#tribes">种族</a>
+      <a href="#laws">定律</a><a href="#math">数学</a><a href="#positioning">站位</a><a href="#tribes">种族</a>
       <a href="https://github.com/nikomao/tavern-tome" target="_blank" rel="noopener">GitHub 仓库 ↗</a>
     </div>
   </div>

@@ -792,4 +792,22 @@
     });
   })();
 
+
+  /* ---------- heroes & trinkets ---------- */
+  (function(){
+    function renderGuideList(id, data){
+      var host = document.getElementById(id);
+      if(!host || typeof data === "undefined") return;
+      data.forEach(function(x){
+        var row = document.createElement("div");
+        row.className = "hg-item";
+        row.innerHTML = '<span class="hg-tag">' + x.tag + '</span>' +
+          '<div><b>' + x.n + '</b><p>' + x.why + '</p></div>';
+        host.appendChild(row);
+      });
+    }
+    if(typeof HEROES !== "undefined") renderGuideList("heroList", HEROES);
+    if(typeof TRINKETS !== "undefined") renderGuideList("trinketList", TRINKETS);
+  })();
+
 })();
