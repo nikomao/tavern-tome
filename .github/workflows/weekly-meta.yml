@@ -35,17 +35,18 @@ jobs:
             echo "已经有一个待处理的周报复核 issue，跳过。"
             exit 0
           fi
-          gh issue create \
-            --title "卡池有更新：请复核本周周报" \
-            --body "自动检测到 HearthstoneJSON 卡池哈希变化，可能发布了新补丁。
+          body=$(cat <<'EOF'
+          自动检测到 HearthstoneJSON 卡池哈希变化，可能发布了新补丁。
 
-## 复核清单
+          ## 复核清单
 
-- [ ] 更新 `data.js` 里的 `META`：周数、日期、梯度与组合
-- [ ] 更新 `data.js` 里的 `HEROES` / `TRINKETS`：英雄与饰品梯度
-- [ ] 更新 `META.note` 的数据来源说明
-- [ ] 更新 `.github/patch-hash.txt` 为最新哈希（见本次 Action 日志）
-- [ ] 检查新增卡是否需要补进 `cards.js` / 卡池
-- [ ] 本地预览后提交，Pages 会自动部署
+          - [ ] 更新 data.js 里的 META：周数、日期、梯度与组合
+          - [ ] 更新 data.js 里的 HEROES / TRINKETS：英雄与饰品梯度
+          - [ ] 更新 .github/patch-hash.txt 为最新哈希（见本次 Action 日志）
+          - [ ] 检查新增卡是否需要补进 cards.js / 卡池
+          - [ ] 本地预览后提交，Pages 会自动部署
 
-> 哈希只用于提醒，不代表一定要改梯度；如果环境没变，直接更新哈希并关闭 issue 即可。"
+          > 哈希只用于提醒，不代表一定要改梯度；如果环境没变，直接更新哈希并关闭 issue 即可。
+          EOF
+          )
+          gh issue create --title "卡池有更新：请复核本周周报" --body "$body"
