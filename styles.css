@@ -1536,7 +1536,7 @@ body{
 /* ===== real tavern screenshot background ===== */
 .bg-photo{position:fixed;inset:0;z-index:0;pointer-events:none;
   background:url("bg-tavern.jpg") center center / cover no-repeat;
-  filter:brightness(.3) saturate(.75) blur(2px);
+  filter:brightness(.2) saturate(.7) blur(2px);
   transform:scale(1.06)}
 .bg-planks{display:none !important}
 .bg-vignette{background:
