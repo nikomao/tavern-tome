@@ -23,7 +23,8 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="favicon.png" type="image/png" sizes="64x64" />
-<link rel="stylesheet" href="styles.css?v=20261104g" />
+<link rel="stylesheet" href="styles.css?v=20261105b" />
+<link rel="stylesheet" href="vendor/jsvectormap.min.css?v=20261105b">
 </head>
 <body>
 <canvas id="bgFx" aria-hidden="true"></canvas>
@@ -49,6 +50,7 @@
       <a href="#heroes" data-i18n="heroes">英雄</a>
       <a href="#meta" data-i18n="meta">周报</a>
       <a href="#news">热点</a>
+      <a href="#visitors">足迹</a>
       <a href="#finder" data-i18n="finder">反查</a>
       <a href="cards.html" data-i18n="pool">卡池</a>
       <a href="play.html" data-i18n="play">对局</a>
@@ -755,6 +757,26 @@
   <p class="news-foot">内容来自公开 RSS，版权归原作者；点击跳转原帖。</p>
 </section>
 
+
+<!-- ================= 访客足迹 ================= -->
+<section class="section" id="visitors">
+  <div class="section-head">
+    <div class="sec-no">访</div>
+    <div>
+      <h2>访客足迹</h2>
+      <p class="sub">按国家统计的访问量。越亮，说明那里来的人越多。</p>
+    </div>
+  </div>
+  <div class="visit-map-wrap">
+    <div id="worldMap" class="world-map" aria-label="访客世界地图"></div>
+    <aside class="visit-side">
+      <div class="vs-title">Top 国家 / 地区</div>
+      <ol id="visitTop" class="visit-top"><li class="muted">数据接入中…</li></ol>
+      <p class="visit-note" id="visitNote">数据来自 Cloudflare Web Analytics，每天更新。</p>
+    </aside>
+  </div>
+</section>
+
 <!-- ================= 阵容反查 ================= -->
 <section class="section" id="finder">
   <div class="section-head">
@@ -902,33 +924,36 @@
   </div>
 </div>
 
-<script src="data.js?v=20261104g"></script>
-<script src="pool.js?v=20261104g"></script>
-<script src="stats-change.js?v=20261104g"></script>
-<script src="stats-mmr.js?v=20261104g"></script>
-<script src="stats.js?v=20261104g"></script>
-<script src="comp-notes.js?v=20261104g"></script>
-<script src="extra-cards.js?v=20261104g"></script>
-<script src="cards.js?v=20261104g"></script>
-<script src="app.js?v=20261104g"></script>
-<script src="search.js?v=20261104g"></script>
-<script src="analytics-config.js?v=20261104g"></script>
-<script src="analytics.js?v=20261104g"></script>
-<script src="history.js?v=20261104g"></script>
-<script src="news.js?v=20261104g"></script>
-<script src="fun.js?v=20261104g"></script>
-<script src="card-fx.js?v=20261104g"></script>
-<script src="counter.js?v=20261104g"></script>
-<script src="popular.js?v=20261104g"></script>
-<script src="demos.js?v=20261104g"></script>
-<script src="hero.js?v=20261104g"></script>
-<script src="bg.js?v=20261104g"></script>
+<script src="data.js?v=20261105b"></script>
+<script src="pool.js?v=20261105b"></script>
+<script src="stats-change.js?v=20261105b"></script>
+<script src="stats-mmr.js?v=20261105b"></script>
+<script src="stats.js?v=20261105b"></script>
+<script src="comp-notes.js?v=20261105b"></script>
+<script src="extra-cards.js?v=20261105b"></script>
+<script src="cards.js?v=20261105b"></script>
+<script src="app.js?v=20261105b"></script>
+<script src="search.js?v=20261105b"></script>
+<script src="analytics-config.js?v=20261105b"></script>
+<script src="analytics.js?v=20261105b"></script>
+<script src="history.js?v=20261105b"></script>
+<script src="news.js?v=20261105b"></script>
+<script src="fun.js?v=20261105b"></script>
+<script src="card-fx.js?v=20261105b"></script>
+<script src="counter.js?v=20261105b"></script>
+<script src="popular.js?v=20261105b"></script>
+<script src="demos.js?v=20261105b"></script>
+<script src="hero.js?v=20261105b"></script>
+<script src="bg.js?v=20261105b"></script>
 <nav class="side-rail" id="sideRail" aria-label="章节导航">
   <button type="button" class="rail-top" id="railTop" aria-label="回到顶部">↑</button>
   <div class="rail-track" aria-hidden="true"><i id="railFill"></i></div>
   <div class="rail-dots" id="railDots"></div>
 </nav>
-<script src="rail.js?v=20261104g"></script>
-<script src="light.js?v=20261104g"></script>
+<script src="vendor/jsvectormap.min.js?v=20261105b"></script>
+<script src="vendor/world.js?v=20261105b"></script>
+<script src="rail.js?v=20261105b"></script>
+<script src="light.js?v=20261105b"></script>
+<script src="map.js?v=20261105b"></script>
 </body>
 </html>

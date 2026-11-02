@@ -17,6 +17,7 @@
     { id: "meta", label: "周报" },
     { id: "heroes", label: "英雄" },
     { id: "news", label: "热点" },
+    { id: "visitors", label: "足迹" },
     { id: "finder", label: "反查" },
     { id: "flow", label: "决策" },
     { id: "glossary", label: "术语" }
