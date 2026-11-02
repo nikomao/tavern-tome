@@ -1536,13 +1536,13 @@ body{
 /* ===== real tavern screenshot background ===== */
 .bg-photo{position:fixed;inset:0;z-index:0;pointer-events:none;
   background:url("bg-tavern.jpg") center center / cover no-repeat;
-  filter:brightness(.5) saturate(.9) blur(1.5px);
+  filter:brightness(.3) saturate(.75) blur(2px);
   transform:scale(1.06)}
 .bg-planks{display:none !important}
 .bg-vignette{background:
-  radial-gradient(120% 85% at 50% 0%, rgba(12,7,3,.25) 0%, rgba(12,7,3,.66) 55%, rgba(8,5,2,.88) 100%),
-  linear-gradient(180deg, rgba(10,6,3,.48), rgba(10,6,3,.3) 30%, rgba(8,5,2,.82))}
-#bgFx{opacity:.38}
+  radial-gradient(120% 85% at 50% 0%, rgba(10,6,3,.45) 0%, rgba(10,6,3,.8) 55%, rgba(6,4,2,.94) 100%),
+  linear-gradient(180deg, rgba(8,5,2,.62), rgba(8,5,2,.5) 30%, rgba(6,4,2,.9))}
+#bgFx{opacity:.26}
 
 .hero-stats .stat span{color:#d3bf9f}
 .hero-stats .stat em{color:#e8c98a}
