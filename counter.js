@@ -1,17 +1,19 @@
-/* 顶部累计访问人数（Abacus 公开计数器） */
+/* 顶部访客序号 + 今日新增（Abacus 公开计数器） */
 (function(){
   var el = document.getElementById("visitBadge");
   if(!el) return;
-  var NS = "tavern-tome", KEY = "visits";
-  var API = "https://abacus.jasoncameron.dev";
+  var NS = "tavern-tome", KEY = "visits", API = "https://abacus.jasoncameron.dev";
   var numEl = el.querySelector("b");
+  var todayEl = el.querySelector(".vb-today");
   var counted = false;
   try { counted = sessionStorage.getItem("tt-visit") === "1"; } catch(e){}
 
+  var d = new Date();
+  var day = d.getFullYear() + String(d.getMonth() + 1).padStart(2, "0") + String(d.getDate()).padStart(2, "0");
+  var TODAY = "today-" + day;
+
   function animate(n){
-    var from = Math.max(0, n - 30);
-    var start = performance.now();
-    var dur = 700;
+    var from = Math.max(0, n - 30), start = performance.now(), dur = 750;
     function tick(t){
       var p = Math.min(1, (t - start) / dur);
       var v = Math.round(from + (n - from) * (1 - Math.pow(1 - p, 3)));
@@ -20,30 +22,31 @@
     }
     requestAnimationFrame(tick);
   }
-  function paint(n){
+  function paint(total, today){
     el.hidden = false;
-    animate(n);
+    animate(total);
+    if(todayEl && today != null) todayEl.textContent = "今日 +" + today;
   }
-  function get(){
-    return fetch(API + "/get/" + NS + "/" + KEY, { cache: "no-store" })
-      .then(function(r){ return r.ok ? r.json() : null; });
-  }
-  function hit(){
-    return fetch(API + "/hit/" + NS + "/" + KEY, { cache: "no-store" })
-      .then(function(r){ return r.json(); });
+  function call(kind, key){
+    return fetch(API + "/" + kind + "/" + NS + "/" + key, { cache: "no-store" })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(j){ return j && j.value != null ? j.value : null; })
+      .catch(function(){ return null; });
   }
 
   if(counted){
-    get().then(function(j){
-      if(j && typeof j.value === "number") paint(j.value);
-      else hit().then(function(j2){ if(j2 && j2.value != null) paint(j2.value); });
-    }).catch(function(){});
+    Promise.all([call("get", KEY), call("get", TODAY)]).then(function(res){
+      var total = res[0], today = res[1];
+      if(total == null || today == null){
+        Promise.all([call("hit", KEY), call("hit", TODAY)]).then(function(r2){ paint(r2[0] || 0, r2[1] || 0); });
+      } else paint(total, today);
+    });
   } else {
-    hit().then(function(j){
-      if(j && j.value != null){
-        paint(j.value);
-        try { sessionStorage.setItem("tt-visit", "1"); } catch(e){}
-      }
-    }).catch(function(){});
+    Promise.all([call("hit", KEY), call("hit", TODAY)]).then(function(res){
+      var total = res[0], today = res[1];
+      if(total == null){ call("get", KEY).then(function(v){ total = v; }); }
+      paint(total || 0, today || 0);
+      try { sessionStorage.setItem("tt-visit", "1"); } catch(e){}
+    });
   }
 })();

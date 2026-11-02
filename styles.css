@@ -1352,3 +1352,6 @@ body{
 .dg-note{font-size:10.5px;color:var(--dim);line-height:1.5}
 @media (max-width:900px){ .demo-groups{grid-template-columns:1fr 1fr} }
 @media (max-width:600px){ .demo-groups{grid-template-columns:1fr} }
+
+.visit-badge .vb-today{margin-left:6px;padding-left:8px;border-left:1px solid rgba(226,180,95,.35);color:var(--muted);font-size:11.5px}
+@media (max-width:640px){ .visit-badge{font-size:11px;padding:5px 10px} .visit-badge .vb-today{font-size:10px;margin-left:4px;padding-left:6px} }
