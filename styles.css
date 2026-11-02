@@ -1449,3 +1449,24 @@ html{scrollbar-width:thin;scrollbar-color:#c99a4e #17100a}
 .fc{flex:0 0 80px}
 .ci-thumb{width:80px;height:80px}
 .tribe-best .tb-cards{gap:10px}
+
+/* ===== ambient background ===== */
+:root{--mx:0;--my:0}
+#bgFx{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55}
+.bg-vignette{position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 8%,transparent 40%,rgba(0,0,0,.55) 100%),
+             radial-gradient(80% 60% at 50% 100%,rgba(0,0,0,.5),transparent 70%)}
+.bg-grain{position:fixed;inset:-20%;z-index:1;pointer-events:none;opacity:.035;
+  background-image:repeating-radial-gradient(circle at 50% 50%,#fff 0 1px,transparent 1px 3px);
+  background-size:7px 7px;animation:grainShift 6s steps(3) infinite}
+@keyframes grainShift{0%{transform:translate(0,0)}33%{transform:translate(-2%,1%)}66%{transform:translate(1%,-2%)}100%{transform:translate(0,0)}}
+body{position:relative}
+main,.topbar,.footer,.to-top{position:relative;z-index:2}
+.hero-glow{transform:translate3d(calc(var(--mx) * -16px),calc(var(--my) * -12px),0);transition:transform .5s ease-out}
+.tavern-decor .lantern.l{transform:translate3d(calc(var(--mx) * 10px),calc(var(--my) * 6px),0);transition:transform .6s ease-out}
+.tavern-decor .lantern.r{transform:translate3d(calc(var(--mx) * -10px),calc(var(--my) * 6px),0);transition:transform .6s ease-out}
+@media (prefers-reduced-motion: reduce){ .bg-grain{animation:none} }
+
+/* center standalone badges inside full-bleed sections */
+.section.alt > .stats-badge{display:flex;width:max-content;max-width:calc(100% - 24px);margin:14px auto 0}
+.section.alt > .stats-badge + .tier-legend{margin-top:10px}
