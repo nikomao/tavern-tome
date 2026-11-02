@@ -1586,3 +1586,14 @@ body{
 .visit-note{margin:14px 0 0;font-size:10.5px;color:var(--dim);line-height:1.6}
 .jvm-container{background:transparent !important}
 @media (max-width:900px){ .visit-map-wrap{grid-template-columns:1fr} .world-map{height:320px} }
+
+/* topbar: wrap nav to second row before it gets clipped */
+@media (max-width:1450px){
+  .topbar-inner{flex-wrap:wrap;row-gap:6px}
+  .brand,.visit-badge,.lang-link{order:1}
+  .search-open,.ver{order:2}
+  .nav{order:3;flex:0 0 100%;justify-content:center;flex-wrap:wrap;overflow:visible;margin-left:0;padding:2px 0 0;gap:16px}
+}
+@media (max-width:900px){
+  .nav{display:none}
+}
