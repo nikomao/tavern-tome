@@ -1379,3 +1379,27 @@ body{
   .hero-stats{grid-template-columns:1fr 1fr;display:grid}
   .hero h1{font-size:clamp(32px,8vw,44px)}
 }
+
+/* hero sub title */
+.hero .h1-sub{margin:-12px 0 18px;font-size:clamp(14px,2vw,18px);letter-spacing:.24em;color:var(--gold-2);opacity:.9}
+/* hero 7-slot board */
+.hero-board{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;max-width:620px;margin:16px auto 6px}
+.hero-board a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 2px;border-radius:9px;
+  border:1px solid rgba(226,180,95,.18);background:rgba(255,255,255,.02);text-decoration:none;transition:.16s}
+.hero-board a:hover,.hero-board a:focus-visible{border-color:rgba(226,180,95,.55);background:rgba(226,180,95,.08);transform:translateY(-2px)}
+.hero-board b{font-size:10px;color:var(--gold);font-family:var(--serif)}
+.hero-board span{font-size:9.5px;color:var(--muted)}
+.hb-note{margin:0 0 12px;font-size:11px;color:var(--dim);min-height:16px}
+@media (max-width:640px){ .hero-board{gap:4px} .hero-board span{font-size:8.5px} }
+
+/* topbar layout fix */
+.topbar-inner{flex-wrap:nowrap}
+.brand{flex:none;white-space:nowrap}
+.visit-badge,.lang-link,.search-open{flex:none}
+.nav{flex:1 1 auto;justify-content:flex-end;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;min-width:0}
+.nav::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap}
+@media (max-width:900px){
+  .topbar-inner{gap:10px}
+  .nav{overflow-x:auto}
+}

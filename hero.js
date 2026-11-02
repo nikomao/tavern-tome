@@ -20,6 +20,44 @@
     }
   } catch(e){}
 
+  // 7 格站位：悬停显示职责
+  var board = document.getElementById("heroBoard");
+  var note = document.getElementById("hbNote");
+  if(board && note){
+    var def = note.textContent;
+    Array.prototype.forEach.call(board.querySelectorAll("a"), function(a){
+      function show(){ note.textContent = a.getAttribute("data-note"); }
+      function reset(){ note.textContent = def; }
+      a.addEventListener("mouseenter", show);
+      a.addEventListener("focus", show);
+      a.addEventListener("mouseleave", reset);
+      a.addEventListener("blur", reset);
+      a.addEventListener("touchstart", show, { passive: true });
+    });
+  }
+
+  // 按来源调整主 CTA
+  (function(){
+    var q = new URLSearchParams(location.search);
+    var ref = document.referrer || q.get("from") || "";
+    var fromCommunity = /nga|bbs\.nga|bilibili|douyin|weixin|xiaohongshu/i.test(ref);
+    var fromSearch = /google|bing|baidu|so\.com|sogou/i.test(ref);
+    var cta = document.querySelector(".hero-cta");
+    if(!cta) return;
+    var primary = cta.querySelector(".btn.primary");
+    var ghost = cta.querySelector(".btn.ghost");
+    if(!primary || !ghost) return;
+    if(fromCommunity){
+      // 社区来的更可能已经会玩：把“看阵容”提到主位
+      primary.classList.remove("primary"); primary.classList.add("ghost");
+      ghost.classList.remove("ghost"); ghost.classList.add("primary");
+      cta.insertBefore(ghost, primary);
+    } else if(fromSearch){
+      // 搜索来的多是新手：保持“第一局”为主，并把它放到最前
+      cta.insertBefore(primary, ghost);
+    }
+  })();
+
   var btn = document.getElementById("heroSearch");
   if(btn) btn.addEventListener("click", function(){
     var s = document.getElementById("searchOpen");
