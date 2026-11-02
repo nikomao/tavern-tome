@@ -1546,3 +1546,15 @@ body{
 
 .hero-stats .stat span{color:#d3bf9f}
 .hero-stats .stat em{color:#e8c98a}
+
+/* topbar: search stays outside scrollable nav */
+.search-open{flex:none;white-space:nowrap}
+.ver{flex:none}
+@media (max-width:1500px){
+  .nav{gap:14px;font-size:13px}
+}
+@media (max-width:1360px){
+  .ver{display:none}
+  .visit-badge{font-size:11px;padding:5px 10px}
+  .visit-badge .vb-today{display:none}
+}
