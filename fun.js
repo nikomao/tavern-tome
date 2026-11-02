@@ -6,7 +6,7 @@
     Array.prototype.forEach.call(secs, function(s){ s.classList.add("reveal"); });
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
-    }, { threshold: 0.06 });
+    }, { threshold: 0.01, rootMargin: "0px 0px -30px 0px" });
     Array.prototype.forEach.call(secs, function(s){ io.observe(s); });
   }
 
