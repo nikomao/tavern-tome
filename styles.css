@@ -1318,3 +1318,19 @@ body{
 @keyframes vbGlow{0%,100%{box-shadow:0 0 18px rgba(226,180,95,.18), inset 0 0 10px rgba(226,180,95,.06)}50%{box-shadow:0 0 28px rgba(226,180,95,.32), inset 0 0 14px rgba(226,180,95,.1)}}
 @media (max-width:640px){ .visit-badge{font-size:11px;padding:4px 9px} }
 @media (prefers-reduced-motion: reduce){ .vb-dot{animation:none} }
+
+/* popular strip */
+.popular-strip{max-width:1120px;margin:8px auto 0;padding:0 24px}
+.pop-head{display:flex;align-items:baseline;gap:10px;font-size:13px;color:var(--gold-2);margin-bottom:10px}
+.pop-head span{font-size:10.5px;color:var(--dim)}
+.pop-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.pop-item{display:flex;align-items:center;gap:8px;padding:9px 10px;border:1px solid rgba(226,180,95,.2);
+  border-radius:9px;text-decoration:none;background:rgba(255,255,255,.02);min-width:0}
+.pop-item:hover{border-color:var(--gold-dim);background:rgba(226,180,95,.07)}
+.pop-rank{font-size:10px;color:var(--gold);flex:none}
+.pop-item b{font-size:12px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pop-bar{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.07);overflow:hidden;min-width:18px}
+.pop-bar i{display:block;height:100%;background:linear-gradient(90deg,#e2b45f,#ffd98a)}
+.pop-n{font-size:10.5px;color:var(--dim);flex:none}
+@media (max-width:900px){ .pop-list{grid-template-columns:1fr 1fr} }
+@media (max-width:560px){ .pop-list{grid-template-columns:1fr} }
