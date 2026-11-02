@@ -1246,3 +1246,62 @@ body{
 .comp-random:hover{background:rgba(226,180,95,.16)}
 .comp-random.rolling{animation:dice .5s ease 2}
 @keyframes dice{0%{transform:rotate(0)}50%{transform:rotate(12deg) scale(1.05)}100%{transform:rotate(0)}}
+
+/* ===== card presentation upgrade ===== */
+.comp-slot, .tb-card, .fc, .ps-slot{
+  transform: perspective(760px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateZ(0);
+  transition: transform .16s ease, filter .2s ease;
+  will-change: transform;
+}
+.comp-slot:hover, .tb-card:hover, .fc:hover, .ps-slot:hover{ filter: brightness(1.05); z-index: 3; }
+
+.cs-img, .tb-img, .fc-img, .ps-slot .ps-img{
+  position: relative;
+  padding: 0;
+  border: 2px solid transparent !important;
+  border-radius: 12px;
+  background:
+    linear-gradient(#1a100a, #1a100a) padding-box,
+    linear-gradient(155deg, #f3cd83 0%, #a86f24 28%, #4a2c12 55%, #e2b45f 82%, #fff0c2 100%) border-box;
+  box-shadow: 0 8px 20px rgba(0,0,0,.5), 0 0 0 1px rgba(0,0,0,.35);
+  overflow: hidden;
+  isolation: isolate;
+}
+.cs-img img, .tb-img img, .fc-img img, .ps-slot .ps-img img{
+  border-radius: 9px;
+  transform: scale(1.18);
+  transition: transform .35s ease;
+  display: block;
+}
+.comp-slot:hover .cs-img img, .tb-card:hover .tb-img img,
+.fc:hover .fc-img img, .ps-slot:hover .ps-img img{ transform: scale(1.13); }
+
+/* shine sweep */
+.cs-img::after, .tb-img::after, .fc-img::after, .ps-slot .ps-img::after{
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(115deg, transparent 36%, rgba(255,255,255,.34) 48%, transparent 62%);
+  transform: translateX(-70%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.comp-slot:hover .cs-img::after, .tb-card:hover .tb-img::after,
+.fc:hover .fc-img::after, .ps-slot:hover .ps-img::after{
+  opacity: 1;
+  animation: cardShine .9s ease;
+}
+@keyframes cardShine{ from{ transform: translateX(-70%); } to{ transform: translateX(70%); } }
+
+/* golden / owned glow */
+.ps-slot.golden .ps-img{ box-shadow: 0 0 16px rgba(226,180,95,.55), 0 8px 20px rgba(0,0,0,.5); }
+.ps-slot.owned .ps-img{ box-shadow: 0 0 10px rgba(111,211,154,.28), 0 8px 20px rgba(0,0,0,.5); }
+
+/* tier badge sits above frame */
+.cs-tier, .tb-no, .ps-slot .num{ z-index: 5; }
+
+@media (prefers-reduced-motion: reduce){
+  .comp-slot, .tb-card, .fc, .ps-slot{ transform: none !important; transition: none; }
+  .cs-img img, .tb-img img, .fc-img img{ transform: none; }
+}
