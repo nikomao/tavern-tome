@@ -1558,3 +1558,18 @@ body{
   .visit-badge{font-size:11px;padding:5px 10px}
   .visit-badge .vb-today{display:none}
 }
+
+/* ===== reading lantern light ===== */
+.read-light{position:fixed;inset:0;z-index:1;pointer-events:none;mix-blend-mode:screen;
+  background:
+    radial-gradient(520px 420px at var(--lx,50%) var(--ly,32%), rgba(255,178,86,.20), rgba(255,140,50,.08) 45%, transparent 72%),
+    radial-gradient(900px 700px at var(--lx,50%) var(--ly,32%), rgba(255,150,60,.07), transparent 75%);
+  filter:blur(6px);
+  opacity:.95;
+  animation:lightFlicker 5.5s ease-in-out infinite}
+@keyframes lightFlicker{
+  0%,100%{opacity:.92;filter:blur(6px)}
+  35%{opacity:1;filter:blur(7px)}
+  70%{opacity:.88;filter:blur(5px)}
+}
+@media (prefers-reduced-motion: reduce){ .read-light{animation:none;opacity:.9} }
