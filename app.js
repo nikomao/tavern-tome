@@ -362,6 +362,9 @@
     var popName = pop.querySelector(".cp-name");
     var popMeta = pop.querySelector(".cp-meta");
     var popText = pop.querySelector(".cp-text");
+    var popLink = document.getElementById("cpLink");
+    var popClose = document.getElementById("cpClose");
+    var TOUCH = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
 
     function fillCard(name){
       var c = CARDS[name];
@@ -426,7 +429,45 @@
       placePop(e.clientX, e.clientY);
     });
 
+    if(popClose) popClose.addEventListener("click", function(){ pop.hidden = true; });
+
+    function openTouchCard(el){
+      var id = el.getAttribute("data-card-id");
+      var name = el.getAttribute("data-card");
+      var ok = id ? fillById(id) : (name ? fillCard(name) : false);
+      if(!ok) return false;
+      if(popLink){
+        if(id){ popLink.hidden = false; popLink.href = "cards.html?card=" + id; }
+        else { popLink.hidden = true; }
+      }
+      pop.hidden = false;
+      var r = el.getBoundingClientRect();
+      placePop(r.left + r.width / 2, r.top + r.height / 2);
+      return true;
+    }
+
+    if(TOUCH){
+      document.addEventListener("touchend", function(e){
+        var inPop = e.target.closest ? e.target.closest("#cardPop") : null;
+        if(inPop) return;
+        var el = e.target.closest ? e.target.closest("[data-card-id],[data-card]") : null;
+        if(!el){ pop.hidden = true; return; }
+        e.preventDefault();
+        openTouchCard(el);
+      }, { passive: false });
+
+      document.addEventListener("click", function(e){
+        var inPop = e.target.closest ? e.target.closest("#cardPop") : null;
+        if(inPop) return;
+        var el = e.target.closest ? e.target.closest("[data-card-id],[data-card]") : null;
+        if(!el){ pop.hidden = true; return; }
+        e.preventDefault();
+        openTouchCard(el);
+      }, true);
+    }
+
     document.addEventListener("mouseout", function(e){
+      if(TOUCH) return;
       var el = e.target.closest ? e.target.closest("[data-card-id]") : null;
       if(el && !el.contains(e.relatedTarget)) pop.hidden = true;
     });
@@ -453,13 +494,17 @@
     });
 
     document.addEventListener("mouseout", function(e){
+      if(TOUCH) return;
       var el = e.target.closest ? e.target.closest("[data-card]") : null;
       if(el && !el.contains(e.relatedTarget)) pop.hidden = true;
     });
 
     document.addEventListener("click", function(e){
       var el = e.target.closest ? e.target.closest("[data-card]") : null;
-      if(!el){ pop.hidden = true; return; }
+      if(!el){
+        if(e.target.closest && (e.target.closest("#cardPop") || e.target.closest("[data-card-id]"))) return;
+        pop.hidden = true; return;
+      }
       var r = el.getBoundingClientRect();
       if(fillCard(el.getAttribute("data-card"))){
         pop.hidden = false;
@@ -467,7 +512,7 @@
       }
     });
 
-    window.addEventListener("scroll", function(){ pop.hidden = true; }, { passive: true });
+    if(!TOUCH) window.addEventListener("scroll", function(){ pop.hidden = true; }, { passive: true });
   }
 
   /* ---------- simulator ---------- */
