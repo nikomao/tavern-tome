@@ -1403,3 +1403,29 @@ body{
   .topbar-inner{gap:10px}
   .nav{overflow-x:auto}
 }
+
+/* ===== tavern scrollbar ===== */
+html{scrollbar-width:thin;scrollbar-color:#c99a4e #17100a}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{
+  background:linear-gradient(180deg,#1b110a 0%,#241610 50%,#1b110a 100%);
+  border-left:1px solid rgba(226,180,95,.12);
+}
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,#f0c877 0%,#c58f3c 45%,#7a4a12 100%);
+  border-radius:8px;
+  border:2px solid #17100a;
+  box-shadow:inset 0 0 6px rgba(255,240,200,.35);
+}
+::-webkit-scrollbar-thumb:hover{
+  background:linear-gradient(180deg,#ffe3a0 0%,#e2b45f 45%,#9a5f1d 100%);
+}
+::-webkit-scrollbar-thumb:active{
+  background:linear-gradient(180deg,#ffd98a 0%,#d0a04a 50%,#6e3f0e 100%);
+}
+::-webkit-scrollbar-corner{background:#17100a}
+/* inner scroll areas */
+#heroList::-webkit-scrollbar,.comp-more::-webkit-scrollbar,.search-list::-webkit-scrollbar,.pick-list::-webkit-scrollbar{width:8px}
+#heroList::-webkit-scrollbar-thumb,.comp-more::-webkit-scrollbar-thumb,.search-list::-webkit-scrollbar-thumb,.pick-list::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,#e2b45f,#8a5a1e);border:1px solid #17100a;border-radius:6px;
+}
