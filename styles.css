@@ -1305,3 +1305,13 @@ body{
   .comp-slot, .tb-card, .fc, .ps-slot{ transform: none !important; transition: none; }
   .cs-img img, .tb-img img, .fc-img img{ transform: none; }
 }
+
+/* visit badge */
+.visit-badge{display:inline-flex;align-items:center;gap:7px;margin-right:10px;padding:5px 12px;border-radius:999px;
+  border:1px solid rgba(226,180,95,.45);background:linear-gradient(135deg,rgba(226,180,95,.18),rgba(226,180,95,.06));
+  color:var(--gold-2);font-size:12px;letter-spacing:.02em;white-space:nowrap;box-shadow:0 0 14px rgba(226,180,95,.12)}
+.visit-badge b{color:var(--ink);font-size:13px;font-variant-numeric:tabular-nums}
+.vb-dot{width:7px;height:7px;border-radius:50%;background:#7ee0a1;box-shadow:0 0 8px #7ee0a1;animation:vbPulse 1.8s infinite}
+@keyframes vbPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+@media (max-width:640px){ .visit-badge{font-size:11px;padding:4px 9px} }
+@media (prefers-reduced-motion: reduce){ .vb-dot{animation:none} }
