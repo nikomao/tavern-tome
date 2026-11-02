@@ -1429,3 +1429,23 @@ html{scrollbar-width:thin;scrollbar-color:#c99a4e #17100a}
 #heroList::-webkit-scrollbar-thumb,.comp-more::-webkit-scrollbar-thumb,.search-list::-webkit-scrollbar-thumb,.pick-list::-webkit-scrollbar-thumb{
   background:linear-gradient(180deg,#e2b45f,#8a5a1e);border:1px solid #17100a;border-radius:6px;
 }
+
+/* hero board with real cards */
+.hero-board{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;max-width:720px;margin:18px auto 8px}
+.hero-board a{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;padding:5px;
+  border-radius:10px;border:1px solid rgba(226,180,95,.18);background:rgba(255,255,255,.02);text-decoration:none;transition:.16s}
+.hero-board a:hover{border-color:rgba(226,180,95,.55);background:rgba(226,180,95,.08);transform:translateY(-3px)}
+.hb-img{display:block;width:100%;aspect-ratio:1/1;border-radius:8px;overflow:hidden;border:1px solid rgba(226,180,95,.3);background:#1a100a}
+.hb-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
+.hero-board b{position:absolute;top:2px;left:2px;z-index:2;width:17px;height:17px;border-radius:50%;
+  display:grid;place-items:center;font-size:10px;color:#1a100a;background:#e2b45f}
+.hb-role{font-size:10px;color:var(--muted)}
+@media (max-width:640px){ .hero-board{gap:5px} .hb-role{font-size:9px} }
+
+/* larger demo / plan / core cards */
+.demo-card{width:78px}
+.demo-card .dc-img{width:78px;height:78px}
+.demo-card .dc-name{max-width:78px;font-size:10px}
+.fc{flex:0 0 80px}
+.ci-thumb{width:80px;height:80px}
+.tribe-best .tb-cards{gap:10px}
