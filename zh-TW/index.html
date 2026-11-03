@@ -1,51 +1,66 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-TW">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>酒館戰棋 · 全種族最優解手冊 | 37.0 黑暗帝國</title>
-<meta name="description" content="爐石傳說酒館戰棋全種族陣容、站位與成長數學：講清楚為什麼身材能長到上千上萬。" />
+<title>英雄戰場 · 全部種族最佳解手冊 | 37.0 黑暗帝國</title>
+<meta name="description" content="炉石傳說英雄戰場全部種族陣容、站位與成長數学：讲清楚為什麼體質能长到上千上萬。" />
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="酒館手札" />
+<meta property="og:site_name" content="旅店手札" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta name="twitter:title" content="酒館戰棋 · 全種族最優解手冊" />
-<meta name="twitter:description" content="11 個種族 × 7 格站位 × 本週陣容資料，邊打邊對照。" />
+<meta name="twitter:title" content="英雄戰場 · 全部種族最佳解手冊" />
+<meta name="twitter:description" content="11 個種族 × 7 格站位 × 本週陣容數據，边打边对照。" />
 <meta name="twitter:image" content="https://nikom-blog.org/og.png" />
-<link rel="canonical" href="https://nikom-blog.org/zh-TW/" />
+<link rel="canonical" href="https://nikom-blog.org/" />
 <link rel="alternate" hreflang="zh-Hans" href="https://nikom-blog.org/" />
 <link rel="alternate" hreflang="zh-Hant" href="https://nikom-blog.org/zh-TW/" />
 <link rel="alternate" hreflang="x-default" href="https://nikom-blog.org/" />
-<meta property="og:title" content="酒館戰棋 · 全種族最優解手冊" />
-<meta property="og:description" content="11 個種族 × 7 格站位 × 一條指數曲線：講清楚陣容、站位，以及身材為什麼能長到上萬。" />
+<meta property="og:title" content="英雄戰場 · 全部種族最佳解手冊" />
+<meta property="og:description" content="11 個種族 × 7 格站位 × 一條指數曲線：讲清楚陣容、站位，以及體質為什麼能长到上萬。" />
 <meta property="og:image" content="https://nikom-blog.org/og.png" />
-<meta property="og:url" content="https://nikom-blog.org/zh-TW/" />
+<meta property="og:url" content="https://nikom-blog.org/" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="../favicon.png" type="image/png" sizes="64x64" />
-<link rel="stylesheet" href="../styles.css?v=20261102e" />
+<link rel="manifest" href="../manifest.json" />
+<meta name="theme-color" content="#21140c" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="旅店手札" />
+<link rel="stylesheet" href="../styles.css?v=20261105d" />
+<link rel="stylesheet" href="../vendor/jsvectormap.min.css?v=20261105d">
 </head>
 <body>
+<canvas id="bgFx" aria-hidden="true"></canvas>
+<div class="bg-photo" aria-hidden="true"></div>
+<div class="read-light" id="readLight" aria-hidden="true"></div>
+<div class="bg-vignette" aria-hidden="true"></div>
+<div class="bg-planks" aria-hidden="true"></div>
+<div class="bg-glows" aria-hidden="true"></div>
 
 <div class="grain" aria-hidden="true"></div>
 
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="#top"><span class="brand-mark">棋</span><span>酒館手札</span></a>
+    <a class="brand" href="#top"><span class="brand-mark">棋</span><span>旅店手札</span></a>
+    <span class="visit-badge" id="visitBadge" hidden title="本站訪客序號與今日新增"><i class="vb-dot"></i>第 <b>0</b> 位訪客 <span class="vb-today">今日 +0</span></span>
     <a class="lang-link" href="../index.html">簡中</a>
     <nav class="nav" id="nav">
-      <a href="#start">入門</a>
-      <a href="#laws">定律</a>
-      <a href="#math">數學</a>
-      <a href="#positioning">站位</a>
-      <a href="#tribes">種族</a>
-      <a href="#heroes">英雄</a>
-      <a href="#meta">週報</a>
-      <a href="#finder">反查</a>
-      <a href="cards.html">卡池</a>
-      <a href="play.html">對局</a>
-      <button type="button" class="search-open" id="searchOpen" aria-label="搜尋">搜尋 <span>⌘K</span></button>
+      <a href="#start" data-i18n="start">入門</a>
+      <a href="#laws" data-i18n="laws">定律</a>
+      <a href="#math" data-i18n="math">數学</a>
+      <a href="#positioning" data-i18n="positioning">站位</a>
+      <a href="#tribes" data-i18n="tribes">種族</a>
+      <a href="#heroes" data-i18n="heroes">英雄</a>
+      <a href="#meta" data-i18n="meta">週報</a>
+      <a href="#news">熱點</a>
+      <a href="#visitors">足跡</a>
+      <a href="#finder" data-i18n="finder">反查</a>
+      <a href="cards.html" data-i18n="pool">卡牌池</a>
+      <a href="play.html" data-i18n="play">對局</a>
     </nav>
+    <button type="button" class="search-open" id="searchOpen" aria-label="搜索">搜索 <span>⌘K</span></button>
     <div class="ver">v37.0</div>
   </div>
 </header>
@@ -63,117 +78,152 @@
 
   <div class="hero-inner">
     <div class="kicker"><span class="dot"></span> 37.0 補丁 · 黑暗帝國 · 2026.11</div>
-    <h1>酒館戰棋<span class="sep">·</span><br class="mobile-br" />全種族最優解</h1>
+    <h1>英雄戰場<span class="sep">·</span>手札</h1>
+    <p class="h1-sub">全部種族打法與站位</p>
     <p class="lede">
-      11 個種族，7 格站位，一條指數曲線。<br />
-      這份手札不只告訴你「擺什麼」，更講清楚<strong>為什麼</strong>——
-      為什麼同樣的 7 個格子，有人只能爛分，有人能把身材堆到上萬。
+      11 個種族，7 個手下位。<br />
+      同樣的格子，有人只能烂分，有人能把體質堆到上萬。
+      差的不是抄没抄对陣容，而是幾個關鍵回合怎麼選。
     </p>
     <div class="hero-stats">
-      <div class="stat"><b>11</b><span>種族 / 型別</span></div>
-      <div class="stat"><b>7</b><span>格站位</span></div>
-      <div class="stat"><b>3</b><span>條底層定律</span></div>
-      <div class="stat"><b>2<sup>13</sup></b><span>≈ 8192 的原因</span></div>
+      <a class="stat" href="#tribes"><b>11</b><span>個種族</span><em>看種族 →</em></a>
+      <a class="stat" href="#positioning"><b>7</b><span>格站位</span><em>学站位 →</em></a>
+      <a class="stat" href="#laws"><b>3</b><span>條規律</span><em>看規律 →</em></a>
+      <a class="stat" href="#math"><b>2<sup>13</sup></b><span>乘數示例</span><em>看曲線 →</em></a>
+    </div>
+
+    <div class="hero-board" id="heroBoard" aria-label="七格站位示意">
+      <a href="#positioning" data-card-id="TB_BaconUps_093" data-note="1 號位：小怪先手，專門破对面的聖盾術">
+        <span class="hb-img"><img src="../pool/TB_BaconUps_093.webp" alt="雄斑虎" loading="lazy"></span><b>1</b><span class="hb-role">破盾</span>
+      </a>
+      <a href="#positioning" data-card-id="BG20_102" data-note="2 號位：嘲諷主坦，吸收第一波傷害">
+        <span class="hb-img"><img src="../pool/BG20_102.webp" alt="堅牙野豬人" loading="lazy"></span><b>2</b><span class="hb-role">主坦</span>
+      </a>
+      <a href="#positioning" data-card-id="BG25_010" data-note="3 號位：複生單位，第二層墙">
+        <span class="hb-img"><img src="../pool/BG25_010.webp" alt="斷手被遺忘者" loading="lazy"></span><b>3</b><span class="hb-role">副坦</span>
+      </a>
+      <a href="#positioning" data-card-id="BG36_241" data-note="4 號位：赤紅守備这種大哥，主要输出來源">
+        <span class="hb-img"><img src="../pool/BG36_241.webp" alt="赤紅守備巨龍" loading="lazy"></span><b>4</b><span class="hb-role">主输出</span>
+      </a>
+      <a href="#positioning" data-card-id="TB_BaconUps_045" data-note="5 號位：铜須/瑞文/巴琳达，引擎永远放後排">
+        <span class="hb-img"><img src="../pool/TB_BaconUps_045.webp" alt="布莱恩·铜須" loading="lazy"></span><b>5</b><span class="hb-role">引擎</span>
+      </a>
+      <a href="#positioning" data-card-id="BG25_039" data-note="6 號位：毒或者風怒，負责終结对面大哥">
+        <span class="hb-img"><img src="../pool/BG25_039.webp" alt="刺豚野豬" loading="lazy"></span><b>6</b><span class="hb-role">終结</span>
+      </a>
+      <a href="#positioning" data-card-id="BG25_009" data-note="7 號位：死亡之聲/召喚，死了还能铺場">
+        <span class="hb-img"><img src="../pool/BG25_009.webp" alt="永恆召喚者" loading="lazy"></span><b>7</b><span class="hb-role">收割</span>
+      </a>
+    </div>
+    <p class="hb-note" id="hbNote">懸停或点按格子，看它負责什麼</p>
+
+    <div class="hero-quick" id="heroQuick">
+      <a class="hq hq-main" id="heroTopComp" href="#meta">本週 T0 加載中…</a>
+      <a class="hq" href="play.html">對局模式</a>
+      <a class="hq" href="cards.html">卡牌池查询</a>
+      <button type="button" class="hq" id="heroSearch">搜索 Ctrl+K</button>
     </div>
     <div class="hero-cta">
-      <a class="btn primary" href="#start">從零開始：第一局怎麼打</a>
+      <a class="btn primary" href="#start">第一局：先把一回合打明白</a>
       <a class="btn ghost" href="#tribes">直接看陣容</a>
     </div>
-    <p class="hero-note">* 環境快照：36.6 → 37.0（黑暗帝國上線首周）。卡池會輪換，但「為什麼」不會。</p>
+    <p class="hero-note">* 環境快照：36.6 到 37.0 首周。卡牌池會變，这些判斷方法不太會變。</p>
   </div>
 </section>
 
 <!-- ================= 從零開始 ================= -->
+<section class="popular-strip" id="popularStrip" hidden></section>
+
 <section class="section" id="start">
   <div class="section-head">
     <div class="sec-no">00</div>
     <div>
-      <h2>從零開始：第一局怎麼打</h2>
-      <p class="sub">先別管陣容。酒館戰棋的第一課，是搞清楚「一回合到底該幹什麼」。</p>
+      <h2>第一局：先把一回合打明白</h2>
+      <p class="sub">別急著記陣容。先弄清楚一回合裡你到底该做哪幾件事。</p>
     </div>
   </div>
 
   <div class="start-goal">
     <div class="sg-item"><b>8</b><span>個人一局</span></div>
-    <div class="sg-item"><b>30</b><span>點血，血量歸零出局</span></div>
-    <div class="sg-item"><b>前 4</b><span>就算贏（爛分）</span></div>
-    <div class="sg-item"><b>第 1</b><span>才算吃雞</span></div>
+    <div class="sg-item"><b>30</b><span>点血，血量歸零出局</span></div>
+    <div class="sg-item"><b>前 4</b><span>就算贏（烂分）</span></div>
+    <div class="sg-item"><b>第 1</b><span>才算奪冠</span></div>
   </div>
 
   <h3 class="block-title">一回合，只做四件事</h3>
   <div class="loop">
-    <div class="loop-step"><i>1</i><b>買</b><span>用鑄幣買隨從 / 酒館法術</span></div>
+    <div class="loop-step"><i>1</i><b>買</b><span>用金幣買手下 / 旅店法術</span></div>
     <div class="loop-arrow">→</div>
-    <div class="loop-step"><i>2</i><b>擺</b><span>按「先捱打 → 後捱打」排好</span></div>
+    <div class="loop-step"><i>2</i><b>擺</b><span>按「先挨打 → 後挨打」排好</span></div>
     <div class="loop-arrow">→</div>
-    <div class="loop-step"><i>3</i><b>打</b><span>自動戰鬥，看誰先死</span></div>
+    <div class="loop-step"><i>3</i><b>打</b><span>自動戰斗，看誰先死</span></div>
     <div class="loop-arrow">→</div>
-    <div class="loop-step"><i>4</i><b>升 / 刷</b><span>升本解鎖強卡，或花 1 幣重新整理</span></div>
+    <div class="loop-step"><i>4</i><b>升 / 刷</b><span>升本解锁強卡，或花 1 幣刷新</span></div>
   </div>
-  <p class="loop-note">每回合的鑄幣：第 1 回合 3 枚，之後每回合 +1，最多 10 枚。花不完不會留到下一回合，所以「花光」比「存錢」重要。</p>
+  <p class="loop-note">每回合的金幣：第 1 回合 3 枚，之後每回合 +1，最多 10 枚。花不完不會留到下一回合，所以「花光」比「存钱」重要。</p>
 
   <h3 class="block-title">前 10 回合的參考節奏</h3>
   <div class="table-wrap">
     <table class="pace">
-      <thead><tr><th>回合</th><th>鑄幣</th><th>通常做什麼</th><th>這一階段的目標</th></tr></thead>
+      <thead><tr><th>回合</th><th>金幣</th><th>通常做什麼</th><th>这一階段的目標</th></tr></thead>
       <tbody>
         <tr><td>1</td><td>3</td><td>買 1 張最強的一本卡</td><td>站住，別掉血</td></tr>
-        <tr><td>2</td><td>4</td><td>升 2 本（基本花光）</td><td>解鎖 2 本卡</td></tr>
+        <tr><td>2</td><td>4</td><td>升 2 本（基本花光）</td><td>解锁 2 本卡</td></tr>
         <tr><td>3</td><td>5</td><td>買 2 張，湊頻率</td><td>穩住戰力</td></tr>
         <tr><td>4</td><td>6</td><td>升 3 本 + 買 1 張</td><td>開始找引擎</td></tr>
-        <tr><td>5</td><td>7</td><td>買 2–3 張，定方向</td><td>確定這把玩什麼</td></tr>
+        <tr><td>5</td><td>7</td><td>買 2–3 張，定方向</td><td>確定这把玩什麼</td></tr>
         <tr><td>6</td><td>8</td><td>升 4 本，或者先穩血</td><td>補強</td></tr>
-        <tr><td>7–8</td><td>9–10</td><td>找核心，開始複利</td><td>成型</td></tr>
-        <tr><td>9+</td><td>10</td><td>補針對、調站位、追上限</td><td>吃雞</td></tr>
+        <tr><td>7–8</td><td>9–10</td><td>找核心，開始滚雪球</td><td>成型</td></tr>
+        <tr><td>9+</td><td>10</td><td>補針对、調站位、追上限</td><td>奪冠</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="table-note">這只是「參考節奏」，不是死規定：血量健康就升本，血量危險就先買戰力。</p>
+  <p class="table-note">这只是「參考節奏」，不是死規定：血量健康就升本，血量危險就先買戰力。</p>
 
-  <h3 class="block-title">酒館等級：你在幾本，決定你能買到什麼</h3>
+  <h3 class="block-title">旅店等级：你在幾本，決定你能買到什麼</h3>
   <div class="table-wrap">
     <table class="pace">
-      <thead><tr><th>酒館等級</th><th>場上格子</th><th>你能接觸到的東西</th></tr></thead>
+      <thead><tr><th>旅店等级</th><th>場上格子</th><th>你能接觸到的东西</th></tr></thead>
       <tbody>
-        <tr><td><span class="stars"><i class="star"></i></span></td><td>3</td><td>站場白板，先學會「買最強的」</td></tr>
+        <tr><td><span class="stars"><i class="star"></i></span></td><td>3</td><td>站場白板，先学會「買最強的」</td></tr>
         <tr><td><span class="stars"><i class="star"></i><i class="star"></i></span></td><td>4</td><td>出現第一批「成長」卡</td></tr>
-        <tr><td><span class="stars"><i class="star"></i><i class="star"></i><i class="star"></i></span></td><td>5</td><td>大多數流派的核心元件在這裡</td></tr>
-        <tr><td><span class="stars"><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i></span></td><td>6</td><td>補強卡、關鍵元件</td></tr>
+        <tr><td><span class="stars"><i class="star"></i><i class="star"></i><i class="star"></i></span></td><td>5</td><td>大多數流派的核心組件在这裡</td></tr>
+        <tr><td><span class="stars"><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i></span></td><td>6</td><td>補強卡、關鍵組件</td></tr>
         <tr><td><span class="stars"><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i></span></td><td>7</td><td>大部分終端核心（大核）</td></tr>
-        <tr><td><span class="stars"><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i></span></td><td>7</td><td>上限卡，決定你能不能吃雞</td></tr>
+        <tr><td><span class="stars"><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i></span></td><td>7</td><td>上限卡，決定你能不能奪冠</td></tr>
         <tr><td><span class="stars"><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i></span></td><td>7</td><td>終極卡，只有少數對局能摸到</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="table-note">升本 = 用這一回合的錢換「以後能買到更強的卡」。所以升本的時機看血量：血多就貪，血少就先買怪。</p>
+  <p class="table-note">升本 = 用这一回合的钱換「以後能買到更強的卡」。所以升本的時機看血量：血多就貪，血少就先買怪。</p>
 
   <h3 class="block-title">選牌之前，先問四個問題</h3>
   <div class="pick4">
     <div class="pick-card"><b>01</b><h4>它現在能打嗎？</h4><p>即戰力夠不夠。前期先活下來，再談成長。</p></div>
-    <div class="pick-card"><b>02</b><h4>它能長大嗎？</h4><p>有沒有「每回合變強」的效果。沒有成長的卡，後期就是白板。</p></div>
-    <div class="pick-card"><b>03</b><h4>它跟我的引擎搭嗎？</h4><p>你有銅須，就優先戰吼；你有瑞文，就優先亡語。別什麼都想要。</p></div>
-    <div class="pick-card"><b>04</b><h4>它值得佔一個格子嗎？</h4><p>場上只有 7 格。買它，就要賣掉一個「參與乘法」的單位。</p></div>
+    <div class="pick-card"><b>02</b><h4>它能长大嗎？</h4><p>有没有「每回合變強」的效果。没有成長的卡，後期就是白板。</p></div>
+    <div class="pick-card"><b>03</b><h4>它跟我的引擎搭嗎？</h4><p>你有铜須，就優先戰吼；你有瑞文，就優先死亡之聲。別什麼都想要。</p></div>
+    <div class="pick-card"><b>04</b><h4>它值得占一個格子嗎？</h4><p>場上只有 7 格。買它，就要賣掉一個「參與乘法」的單位。</p></div>
   </div>
 
   <div class="start-cols">
     <div class="start-col bad">
-      <h4>新手最常犯的五個錯</h4>
+      <h4>新手最常犯的五個错</h4>
       <ul class="donts">
-        <li>每回合都重新整理，把錢花在「看一眼」上</li>
-        <li>為了三連，把能打的怪賣掉，結果血崩</li>
-        <li>一直停在一本，永遠買不到核心</li>
-        <li>把大哥放在 1 號位，被對面小怪白換</li>
+        <li>每回合都刷新，把钱花在「看一眼」上</li>
+        <li>為了三连，把能打的怪賣掉，结果血崩</li>
+        <li>一直停在一本，永远買不到核心</li>
+        <li>把大哥放在 1 號位，被对面小怪白換</li>
         <li>追夢不留血，第 10 回合就被抬走</li>
       </ul>
     </div>
     <div class="start-col good">
-      <h4>已經會玩？這五條決定你能不能吃雞</h4>
+      <h4>已經會玩？这五條決定你能不能奪冠</h4>
       <ul class="vets">
-        <li><b>升本看血，不看回合</b>：血量是資源，不是數字。</li>
-        <li><b>經濟是為了更多觸發</b>：錢多不是目的，觸發次數才是。</li>
-        <li><b>轉型要趁血健康</b>：血量見底時，你只能被迫守成。</li>
-        <li><b>決賽圈先想「怎麼輸」</b>：怕毒就補聖盾，怕狂戰就夾心站位。</li>
-        <li><b>站位每回合改</b>：對手種族一變，你的 1 號位就該換人。</li>
+        <li><b>升本看血，不看回合</b>：血量是资源，不是數字。</li>
+        <li><b>經济是為了更多觸發</b>：钱多不是目的，觸發次數才是。</li>
+        <li><b>轉型要趁血健康</b>：血量见底時，你只能被迫守成。</li>
+        <li><b>決賽圈先想「怎麼输」</b>：怕毒就補聖盾術，怕狂戰就夹心站位。</li>
+        <li><b>站位每回合改</b>：对手種族一變，你的 1 號位就该換人。</li>
       </ul>
     </div>
   </div>
@@ -183,16 +233,16 @@
     <div class="sg-head">
       <div>
         <h3>練習：打完你的第一局</h3>
-        <p>10 個回合，每回合選一個動作。選錯不會真的輸，但會告訴你為什麼。</p>
+        <p>10 個回合，每回合選一個動作。選错不會真的输，但會告訴你為什麼。</p>
       </div>
       <span class="sg-badge">教練模式</span>
     </div>
     <div class="sg-hud">
       <div><span>回合</span><b data-sg-turn>1 / 10</b></div>
       <div><span>血量</span><b data-sg-hp>30</b></div>
-      <div><span>酒館</span><b data-sg-tier><span class="stars"><i class="star"></i></span></b></div>
+      <div><span>旅店</span><b data-sg-tier><span class="stars"><i class="star"></i></span></b></div>
       <div><span>戰力</span><b data-sg-power>0</b></div>
-      <div><span>鑄幣</span><b data-sg-gold>3</b></div>
+      <div><span>金幣</span><b data-sg-gold>3</b></div>
     </div>
     <div class="sg-scene" data-sg-scene></div>
     <div class="sg-options" data-sg-options></div>
@@ -203,7 +253,7 @@
 
   <div class="callout">
     <span class="callout-tag">下一步</span>
-    <p>會了「怎麼打」，再看 <a href="#laws">01 三條定律</a> 和 <a href="#tribes">全種族圖鑑</a>。前者講為什麼，後者講選什麼。</p>
+    <p>會了「怎麼打」，再看 <a href="#laws">01 三條定律</a> 和 <a href="#tribes">全部種族圖鑑</a>。前者讲為什麼，後者讲選什麼。</p>
   </div>
 </section>
 
@@ -212,16 +262,16 @@
   <div class="section-head">
     <div class="sec-no">01</div>
     <div>
-      <h2>三條底層定律</h2>
-      <p class="sub">先別背術語。這三條其實是三句大白話，配三個能直接看懂的小動畫。</p>
+      <h2>三條真正影響勝負的規律</h2>
+      <p class="sub">不背術語。三條規律，配幾組牌，看完就能用。</p>
     </div>
   </div>
 
   <article class="lesson">
     <div class="lesson-head">
       <span class="lesson-no">定律一</span>
-      <h3>加法是走路，乘法是滾雪球</h3>
-      <p class="lesson-plain">每回合固定加一點，你只是慢慢變強；每回合把現有的數字翻一倍，你會在某一回合突然「起飛」。</p>
+      <h3>加法是走路，乘法是滚雪球</h3>
+      <p class="lesson-plain">每回合固定加一点，你只是慢慢變強；每回合把現有的數字翻一倍，你會在某一回合突然「起飛」。</p>
     </div>
 
     <div class="demo race" data-demo="race">
@@ -248,14 +298,14 @@
       </div>
     </div>
 
-    <p class="lesson-take"><b>翻譯成人話：</b>看到「翻倍 / 觸發兩次 / 屬性翻倍」，優先順序永遠高於「+2/+2」。前者改的是曲線，後者改的只是一個點。</p>
+    <p class="lesson-take"><b>翻譯成人話：</b>看到「加倍 / 觸發两次 / 屬性加倍」，優先级永远高于「+2/+2」。前者改的是曲線，後者改的只是一個点。</p>
   </article>
 
   <article class="lesson">
     <div class="lesson-head">
       <span class="lesson-no">定律二</span>
-      <h3>一枚鑄幣，就是一次觸發</h3>
-      <p class="lesson-plain">你花的每一塊錢，最後都會變成「效果觸發一次」。觸發次數越多，乘數鏈跑得越快。</p>
+      <h3>一枚金幣，就是一次觸發</h3>
+      <p class="lesson-plain">你花的每一塊钱，最後都會變成「效果觸發一次」。觸發次數越多，乘數鏈跑得越快。</p>
     </div>
 
     <div class="demo trigger" data-demo="trigger">
@@ -266,7 +316,7 @@
           <div class="tg-val" data-val-a>4/4</div>
         </div>
         <div class="tg-case hot">
-          <div class="tg-title">電錶倒轉 <b>30 次觸發</b></div>
+          <div class="tg-title">電表倒轉 <b>30 次觸發</b></div>
           <div class="tg-dots" data-dots-b></div>
           <div class="tg-val hot" data-val-b>4/4</div>
         </div>
@@ -277,60 +327,60 @@
       </div>
     </div>
 
-    <p class="lesson-take"><b>翻譯成人話：</b>「電錶倒轉」不是貪錢，是在給乘數鏈加燃料。觸發次數翻三倍，你到達上萬的速度也快三倍。</p>
+    <p class="lesson-take"><b>翻譯成人話：</b>「電表倒轉」不是貪钱，是在給乘數鏈加燃料。觸發次數翻三倍，你到达上萬的速度也快三倍。</p>
   </article>
 
   <article class="lesson">
     <div class="lesson-head">
       <span class="lesson-no">定律三</span>
-      <h3>站位，是讓對手打錯人</h3>
-      <p class="lesson-plain">對面先打誰，不取決於誰最強，取決於你把他放在第幾格。放錯一格，一萬身材也可能第一下就沒了。</p>
+      <h3>站位，是讓对手打错人</h3>
+      <p class="lesson-plain">对面先打誰，不取決于誰最強，取決于你把他放在第幾格。放错一格，一萬體質也可能第一下就没了。</p>
     </div>
 
     <div class="demo board" data-demo="board">
       <div class="bc-grid">
         <div class="bc-col">
-          <div class="bc-head"><span class="bad">壞站位</span><em>大哥放最前面</em><b class="bc-arrow">← 對手從這裡打</b></div>
+          <div class="bc-head"><span class="bad">壞站位</span><em>大哥放最前面</em><b class="bc-arrow">← 对手從这裡打</b></div>
           <div class="bc-row" data-board="bad">
-            <i class="bslot carry">大哥</i><i class="bslot engine">銅須</i><i class="bslot util">巴琳達</i><i class="bslot small">小怪</i><i class="bslot small">小怪</i><i class="bslot small">小怪</i><i class="bslot small">補刀</i>
+            <i class="bslot carry">大哥</i><i class="bslot engine">铜須</i><i class="bslot util">巴琳达</i><i class="bslot small">小怪</i><i class="bslot small">小怪</i><i class="bslot small">小怪</i><i class="bslot small">補刀</i>
           </div>
         </div>
         <div class="bc-col">
-          <div class="bc-head"><span class="good">好站位</span><em>小怪先捱打</em><b class="bc-arrow">← 對手從這裡打</b></div>
+          <div class="bc-head"><span class="good">好站位</span><em>小怪先挨打</em><b class="bc-arrow">← 对手從这裡打</b></div>
           <div class="bc-row" data-board="good">
-            <i class="bslot small">小怪</i><i class="bslot tank">嘲諷</i><i class="bslot tank">復生</i><i class="bslot carry">大哥</i><i class="bslot engine">銅須</i><i class="bslot util">毒</i><i class="bslot small">補刀</i>
+            <i class="bslot small">小怪</i><i class="bslot tank">嘲諷</i><i class="bslot tank">複生</i><i class="bslot carry">大哥</i><i class="bslot engine">铜須</i><i class="bslot util">毒</i><i class="bslot small">補刀</i>
           </div>
         </div>
       </div>
       <div class="demo-foot">
-        <button type="button" class="demo-btn" data-bd-play>▶ 播放對手進攻</button>
-        <span class="demo-note" data-bd-note>對手從左邊開始，連續打三次。</span>
+        <button type="button" class="demo-btn" data-bd-play>▶ 播放对手进攻</button>
+        <span class="demo-note" data-bd-note>对手從左边開始，连續打三次。</span>
       </div>
     </div>
 
-    <p class="lesson-take"><b>翻譯成人話：</b>站位的意義，是把對手寶貴的攻擊次數，浪費在你的小怪和嘲諷上。</p>
+    <p class="lesson-take"><b>翻譯成人話：</b>站位的意義，是把对手寶贵的攻擊次數，浪費在你的小怪和嘲諷上。</p>
   </article>
 </section>
 
-<!-- ================= 數學 ================= -->
+<!-- ================= 數学 ================= -->
 <section class="section alt" id="math">
   <div class="section-head">
     <div class="sec-no">02</div>
     <div>
-      <h2>為什麼能長到上千、上萬</h2>
-      <p class="sub">數學只有一句話：加法是一條直線，乘法是一條往上翹的曲線。下面按順序看三塊。</p>
+      <h2>體質是怎麼滚到上萬的</h2>
+      <p class="sub">加法和乘法的差別，一張圖就夠。</p>
     </div>
   </div>
 
   <div class="math-plain">
     <b>一分鐘版：</b>4/4 起手，每回合翻一倍。第 5 回合 128，第 10 回合 4096，第 13 回合 32768。
-    你要找的不是「更大的數字」，而是「更多的 ×2 次數」。
+    別追大數字，追 ×2 的次數。
   </div>
 
   <div class="ds" data-demo="double">
     <div class="ds-head">
       <h3>從 4/4 翻到 32768</h3>
-      <p>每翻一次，數字 ×2。第 10 次是 4096，第 13 次是 32768——這就是「上萬」的全部秘密。</p>
+      <p>每翻一次，數字 ×2。第 10 次是 4096，第 13 次是 32768——这就是「上萬」的全部秘密。</p>
     </div>
     <div class="ds-track" data-ds-track></div>
     <div class="ds-foot"><span>第 0 次 · 4/4</span><span class="hot">第 13 次 · 32768/32768</span></div>
@@ -338,13 +388,13 @@
 
   <div class="chain">
     <h3>乘數鏈：三個引擎疊在一起</h3>
-    <p class="chain-sub">同一回合裡，每個「×2」都乘在上一個結果上。所以引擎之間不是相加，是相乘。</p>
+    <p class="chain-sub">同一回合裡，每個「×2」都乘在上一個结果上。所以引擎之間不是相加，是相乘。</p>
     <div class="chain-flow">
       <div class="chain-node base"><b>4/4</b><span>起手</span></div>
-      <div class="chain-op"><b>×2</b><span>銅須</span></div>
-      <div class="chain-node"><b>8/8</b><span>觸發兩次</span></div>
+      <div class="chain-op"><b>×2</b><span>铜須</span></div>
+      <div class="chain-node"><b>8/8</b><span>觸發两次</span></div>
       <div class="chain-op"><b>×2</b><span>瑞文</span></div>
-      <div class="chain-node"><b>16/16</b><span>亡語兩次</span></div>
+      <div class="chain-node"><b>16/16</b><span>死亡之聲两次</span></div>
       <div class="chain-op"><b>×2</b><span>雙線縫針</span></div>
       <div class="chain-node hot"><b>32/32</b><span>一回合 ×8</span></div>
     </div>
@@ -354,27 +404,27 @@
     <div class="sim-head">
       <div>
         <h3>成長模擬器</h3>
-        <p>拖動滑塊，或者點一個預設，親眼看著「加法」被「乘法」甩開。</p>
+        <p>拖動滑塊，或者点一個預設，親眼看著「加法」被「乘法」甩開。</p>
       </div>
-      <div class="scale-toggle" id="scaleToggle" role="group" aria-label="座標軸">
+      <div class="scale-toggle" id="scaleToggle" role="group" aria-label="坐標轴">
         <button data-scale="linear" class="on">線性</button>
-        <button data-scale="log">對數</button>
+        <button data-scale="log">对數</button>
       </div>
     </div>
     <div class="sim-presets">
       <button type="button" data-preset="plain">只加 6</button>
-      <button type="button" data-preset="brann">銅須：每回合多一次</button>
+      <button type="button" data-preset="brann">铜須：每回合多一次</button>
       <button type="button" data-preset="double">雙線縫針：每回合 ×4</button>
     </div>
     <div class="sim-body">
       <div class="sim-controls">
-        <label>起始身材 <output id="o-base">4</output>
+        <label>起始體質 <output id="o-base">4</output>
           <input type="range" id="base" min="1" max="20" value="4" />
         </label>
         <label>每回合加算 <output id="o-add">6</output>
           <input type="range" id="add" min="0" max="30" value="6" />
         </label>
-        <label>每回合翻倍次數 <output id="o-mult">1</output>
+        <label>每回合加倍次數 <output id="o-mult">1</output>
           <input type="range" id="mult" min="0" max="3" value="1" />
         </label>
         <label>回合數 <output id="o-turns">10</output>
@@ -388,7 +438,7 @@
       </div>
       <div class="sim-chart">
         <canvas id="chart" width="760" height="340"></canvas>
-        <div class="chart-legend"><span class="lg linear"></span>加法 <span class="lg compound"></span>複利 <span class="lg-hint">· 兩條線的縱軸差距，就是「乘數」的價值</span></div>
+        <div class="chart-legend"><span class="lg linear"></span>加法 <span class="lg compound"></span>複利 <span class="lg-hint">· 两條線的纵轴差距，就是「乘數」的價值</span></div>
       </div>
     </div>
   </div>
@@ -408,7 +458,7 @@
 
   <div class="callout danger">
     <span class="callout-tag">反直覺</span>
-    <p>很多人以為「上萬身材」需要某張超模卡。真實情況是：<strong>任何一條 ×2 的鏈，只要跑夠 13 次，4/4 就是 32768。</strong> 你要找的不是更大的數字，而是<strong>更多的「×2 次數」</strong>。</p>
+    <p>上萬體質不靠某張超模卡。<strong>任何一條 ×2 的鏈跑夠 13 次，4/4 也能到 32768。</strong> 你要找的不是更大的數字，而是<strong>更多的「×2 次數」</strong>。</p>
   </div>
 </section>
 
@@ -417,8 +467,8 @@
   <div class="section-head">
     <div class="sec-no">03</div>
     <div>
-      <h2>融合怪：為什麼它是天然的上萬載體</h2>
-      <p class="sub">「融合」不是一個動作，而是一個身份——它同時屬於所有種族。</p>
+      <h2>融合怪：天生的上萬載體</h2>
+      <p class="sub">融合怪強，不是因為數值高，是因為它什麼都能吃。</p>
     </div>
   </div>
 
@@ -428,22 +478,22 @@
       <div class="fusion-layer">
         <div class="fl-no">①</div>
         <div>
-          <h4>標籤融合：吃遍所有種族光環</h4>
-          <p>融合怪擁有<strong>全部種族標籤</strong>。魚人的 +攻、龍的傳血、納迦的塑造、元素的酒館 buff、野豬人的鮮血寶石——只要是「使你的某個種族獲得」，它都能吃到。別人只能吃一條線，它吃十一條線。</p>
+          <h4>標签融合：吃遍所有種族光環</h4>
+          <p>融合怪擁有<strong>全部種族標签</strong>。魚人的 +攻、龍的傳血、納迦的塑造、元素的旅店 buff、野豬人的鮮血寶石——只要是「使你的某個種族獲得」，它都能吃到。別人只能吃一條線，它吃十一條線。</p>
         </div>
       </div>
       <div class="fusion-layer">
         <div class="fl-no">②</div>
         <div>
-          <h4>增益合流：把散落的 buff 收進一個身體</h4>
-          <p>酒館戰棋只有 7 個格子。你不可能讓 7 個隨從都吃到所有資源，但你可以讓<strong>一個</strong>隨從吃到所有資源。融合怪就是那個「收口」——<b>雙線縫針</b>翻它的屬性、<b>恩佐斯</b>把身材分給它、<b>巴琳達</b>讓塑造翻倍後再餵給它。</p>
+          <h4>增益合流：把散落的 buff 收进一個身體</h4>
+          <p>英雄戰場只有 7 個格子。你不可能讓 7 個手下都吃到所有资源，但你可以讓<strong>一個</strong>手下吃到所有资源。融合怪就是那個「收口」——<b>雙線縫針</b>翻它的屬性、<b>恩佐斯</b>把體質分給它、<b>巴琳达</b>讓塑造加倍後再喂給它。</p>
         </div>
       </div>
       <div class="fusion-layer">
         <div class="fl-no">③</div>
         <div>
-          <h4>永久化：讓每一場戰鬥都變成存款</h4>
-          <p><b>詩心龍</b>把戰鬥內的屬性保留下來。這意味著融合怪在戰鬥裡吃到的每一次增益，不會在戰鬥結束後清零，而是變成下一場的<strong>本金</strong>。這就是複利從「回合」升級到「戰鬥」的關鍵。</p>
+          <h4>永久化：讓每一場戰斗都變成存款</h4>
+          <p><b>詩心龍</b>把戰斗內的屬性保留下來。这意味著融合怪在戰斗裡吃到的每一次增益，不會在戰斗结束後清零，而是變成下一場的<strong>本金</strong>。这就是複利從「回合」升级到「戰斗」的關鍵。</p>
         </div>
       </div>
     </div>
@@ -459,24 +509,24 @@
         <ul class="chips">
           <li>亞煞極 <small>神明成長</small></li>
           <li>守門融合怪 <small>載體</small></li>
-          <li>巴琳達 <small>塑造 ×2</small></li>
+          <li>巴琳达 <small>塑造 ×2</small></li>
           <li>喚冰者 <small>棄牌 / 法強</small></li>
-          <li>銅須 <small>經濟</small></li>
+          <li>铜須 <small>經济</small></li>
           <li>邪能豬 <small>加速發育</small></li>
         </ul>
-        <p class="case-note">骨架的每一件都在做同一件事：<strong>提高「翻倍」的發生頻率</strong>。不是加數字，是加次數。</p>
+        <p class="case-note">骨架的每一件都在做同一件事：<strong>提高「加倍」的發生頻率</strong>。不是加數字，是加次數。</p>
         <div class="why4">
           <span>為什麼是 ×4</span>
-          <p>巴琳達讓塑造法術<strong>觸發兩次</strong>（×2），雙線縫針本身讓屬性<strong>翻倍</strong>（×2）。兩個乘數相乘 = 每回合 ×4；八個回合就是 4⁸。</p>
+          <p>巴琳达讓法術塑造<strong>觸發两次</strong>（×2），雙線縫針本身讓屬性<strong>加倍</strong>（×2）。两個乘數相乘 = 每回合 ×4；八個回合就是 4⁸。</p>
         </div>
       </div>
     </aside>
   </div>
 
   <div class="warn-row">
-    <div class="warn"><b>怕毒</b><p>上萬身材也怕劇毒。解法是頻率、聖盾、或先手點掉毒魚。</p></div>
-    <div class="warn"><b>怕狂戰斧</b><p>一個狂戰斧能濺射三個。把載體夾在小怪中間，別放邊上。</p></div>
-    <div class="warn"><b>怕被針對</b><p>單載體陣容最怕「扎普 / 潛行 / 直傷」。留一個副載體，別把雞蛋放一個籃子。</p></div>
+    <div class="warn"><b>怕毒</b><p>上萬體質也怕劇毒。解法是頻率、聖盾術、或先手点掉毒鱼。</p></div>
+    <div class="warn"><b>怕狂戰斧</b><p>一個狂戰斧能溅射三個。把載體夹在小怪中間，別放边上。</p></div>
+    <div class="warn"><b>怕被針对</b><p>單載體陣容最怕「扎普 / 隱蔽 / 直傷」。留一個副載體，別把鸡蛋放一個篮子。</p></div>
   </div>
 </section>
 
@@ -485,69 +535,69 @@
   <div class="section-head">
     <div class="sec-no">04</div>
     <div>
-      <h2>站位總綱：七個格子怎麼分</h2>
-      <p class="sub">先手權、嘲諷、濺射、亡語——四個變數決定一切。</p>
+      <h2>七個格子怎麼排</h2>
+      <p class="sub">先手、嘲諷、溅射、死亡之聲，站位基本就看这四件事。</p>
     </div>
   </div>
 
   <div class="pos-intro">
-    <p><strong>先手規則：</strong>戰鬥開始時，隨從數量多的一方先攻；數量相同時隨機。所以你「多鋪一個」不只是多一個頻率，還可能搶到整場戰鬥的先手。</p>
+    <p><strong>先手規則：</strong>戰斗開始時，手下數量多的一方先攻；數量相同時隨機。所以你「多铺一個」不只是多一個頻率，还可能搶到整場戰斗的先手。</p>
   </div>
 
   <div class="board-wrap">
-    <div class="board-label">從左到右 = 從先捱打到後捱打（常規）</div>
+    <div class="board-label">從左到右 = 從先挨打到後挨打（常規）</div>
     <div class="pos-board" id="posBoard">
-      <div class="pos-slot sac" data-tip="破盾 / 送死 / 狂戰斧：用最低成本換掉對手的聖盾，或讓狂戰斧先出手。">
+      <div class="pos-slot sac" data-tip="破盾 / 送死 / 狂戰斧：用最低成本換掉对手的聖盾術，或讓狂戰斧先出手。">
         <span class="ps-num">1</span><span class="ps-role">破盾</span><span class="ps-name">小怪 / 狂戰</span>
       </div>
-      <div class="pos-slot tank" data-tip="主坦：聖盾 + 嘲諷，吸收第一波傷害，保護後面的引擎。">
-        <span class="ps-num">2</span><span class="ps-role">主坦</span><span class="ps-name">聖盾嘲諷</span>
+      <div class="pos-slot tank" data-tip="主坦：聖盾術 + 嘲諷，吸收第一波傷害，保護後面的引擎。">
+        <span class="ps-num">2</span><span class="ps-role">主坦</span><span class="ps-name">聖盾術嘲諷</span>
       </div>
-      <div class="pos-slot tank2" data-tip="副坦 / 復生：第二層牆，死了還能再站起來一次。">
-        <span class="ps-num">3</span><span class="ps-role">副坦</span><span class="ps-name">復生 / 大屁股</span>
+      <div class="pos-slot tank2" data-tip="副坦 / 複生：第二層墙，死了还能再站起來一次。">
+        <span class="ps-num">3</span><span class="ps-role">副坦</span><span class="ps-name">複生 / 大屁股</span>
       </div>
-      <div class="pos-slot carry" data-tip="主輸出：你的大身材載體，儘量放在中間偏後，避免被濺射。">
-        <span class="ps-num">4</span><span class="ps-role">主輸出</span><span class="ps-name">融合怪 / 大哥</span>
+      <div class="pos-slot carry" data-tip="主输出：你的大體質載體，尽量放在中間偏後，避免被溅射。">
+        <span class="ps-num">4</span><span class="ps-role">主输出</span><span class="ps-name">融合怪 / 大哥</span>
       </div>
-      <div class="pos-slot engine" data-tip="引擎：銅須、瑞文、巴琳達。絕不能死，必須被嘲諷保護。">
-        <span class="ps-num">5</span><span class="ps-role">引擎</span><span class="ps-name">銅須 / 瑞文</span>
+      <div class="pos-slot engine" data-tip="引擎：铜須、瑞文、巴琳达。绝不能死，必須被嘲諷保護。">
+        <span class="ps-num">5</span><span class="ps-role">引擎</span><span class="ps-name">铜須 / 瑞文</span>
       </div>
-      <div class="pos-slot finisher" data-tip="終結：劇毒、風怒、狂戰斧。用來點掉對手最難處理的那個。">
-        <span class="ps-num">6</span><span class="ps-role">終結</span><span class="ps-name">毒 / 風怒</span>
+      <div class="pos-slot finisher" data-tip="終结：劇毒、風怒、狂戰斧。用來点掉对手最难處理的那個。">
+        <span class="ps-num">6</span><span class="ps-role">終结</span><span class="ps-name">毒 / 風怒</span>
       </div>
-      <div class="pos-slot back" data-tip="收割 / 亡語：最後出手，處理殘局；或讓亡語在最後鋪場。">
-        <span class="ps-num">7</span><span class="ps-role">收割</span><span class="ps-name">亡語 / 補刀</span>
+      <div class="pos-slot back" data-tip="收割 / 死亡之聲：最後出手，處理残局；或讓死亡之聲在最後铺場。">
+        <span class="ps-num">7</span><span class="ps-role">收割</span><span class="ps-name">死亡之聲 / 補刀</span>
       </div>
     </div>
-    <div class="board-note" id="posNote">懸停任意格子，檢視它的職責。</div>
+    <div class="board-note" id="posNote">懸停任意格子，查看它的職责。</div>
   </div>
 
   <h3 class="block-title">十二條鐵律</h3>
   <div class="rules">
-    <div class="rule"><b>01</b><p>嘲諷放前排，但<strong>不要把唯一的聖盾大哥放 1 號位</strong>——先放一個無聖盾小怪吃破盾。</p></div>
-    <div class="rule"><b>02</b><p>狂戰斧放最左，前提是它<strong>能在被擊殺前先出手</strong>；如果它很大，就先墊一個小怪破盾。</p></div>
-    <div class="rule"><b>03</b><p>銅須、瑞文、巴琳達這類引擎，永遠放在<strong>至少兩個身位之後</strong>，且不要貼著狂戰斧的濺射位。</p></div>
-    <div class="rule"><b>04</b><p>兩個嘲諷之間夾一個小怪或超高血量單位，專門用來接狂戰斧的濺射。</p></div>
-    <div class="rule"><b>05</b><p>劇毒單位要放在<strong>能先攻擊</strong>的位置，它的價值是點掉對手最大的牆，而不是站樁。</p></div>
-    <div class="rule"><b>06</b><p>亡語鋪場單位放前面，讓它們早點死、早點產頻率；瑞文放最後。</p></div>
-    <div class="rule"><b>07</b><p>風怒單位放後排收割，它的兩次攻擊要打在「已經破防」的殘局上。</p></div>
-    <div class="rule"><b>08</b><p>對局中隨時數對手的隨從數：<strong>多一個就多一分先手</strong>，必要時買白板也要湊數。</p></div>
-    <div class="rule"><b>09</b><p>聖盾嘲諷是優質前排，但它<strong>怕破盾</strong>；看到對手有 1 攻小怪，就把聖盾往後挪。</p></div>
-    <div class="rule"><b>10</b><p>復生單位適合當第二層牆：它死兩次，等於白賺一次頻率。</p></div>
-    <div class="rule"><b>11</b><p>不要為了「好看」把大身材放邊上；<strong>濺射位 = 死亡位</strong>。</p></div>
-    <div class="rule"><b>12</b><p>站位是動態的：每回合根據對手種族調整，別一套站位用到黑。</p></div>
+    <div class="rule"><b>01</b><p>嘲諷放前排，但<strong>不要把唯一的聖盾術大哥放 1 號位</strong>——先放一個無聖盾術小怪吃破盾。</p></div>
+    <div class="rule"><b>02</b><p>狂戰斧放最左，前提是它<strong>能在被擊杀前先出手</strong>；如果它很大，就先墊一個小怪破盾。</p></div>
+    <div class="rule"><b>03</b><p>铜須、瑞文、巴琳达这類引擎，永远放在<strong>至少两個身位之後</strong>，且不要贴著狂戰斧的溅射位。</p></div>
+    <div class="rule"><b>04</b><p>两個嘲諷之間夹一個小怪或超高血量單位，專門用來接狂戰斧的溅射。</p></div>
+    <div class="rule"><b>05</b><p>劇毒單位要放在<strong>能先攻擊</strong>的位置，它的價值是点掉对手最大的墙，而不是站樁。</p></div>
+    <div class="rule"><b>06</b><p>死亡之聲铺場單位放前面，讓它們早点死、早点產頻率；瑞文放最後。</p></div>
+    <div class="rule"><b>07</b><p>風怒單位放後排收割，它的两次攻擊要打在「已經破防」的残局上。</p></div>
+    <div class="rule"><b>08</b><p>對局中隨時數对手的手下數：<strong>多一個就多一分先手</strong>，必要時買白板也要湊數。</p></div>
+    <div class="rule"><b>09</b><p>聖盾術嘲諷是優质前排，但它<strong>怕破盾</strong>；看到对手有 1 攻小怪，就把聖盾術往後挪。</p></div>
+    <div class="rule"><b>10</b><p>複生單位适合當第二層墙：它死两次，等于白賺一次頻率。</p></div>
+    <div class="rule"><b>11</b><p>不要為了「好看」把大體質放边上；<strong>溅射位 = 死亡位</strong>。</p></div>
+    <div class="rule"><b>12</b><p>站位是動態的：每回合根據对手種族調整，別一套站位用到黑。</p></div>
   </div>
 
-  <h3 class="block-title">針對矩陣</h3>
+  <h3 class="block-title">針对矩陣</h3>
   <div class="table-wrap">
     <table class="matrix">
-      <thead><tr><th>對手形態</th><th>威脅</th><th>你的調整</th></tr></thead>
+      <thead><tr><th>对手形態</th><th>威脅</th><th>你的調整</th></tr></thead>
       <tbody>
-        <tr><td>狂戰斧 / 濺射</td><td>一次打三個，專殺引擎</td><td>引擎後置；用 1-2 個小怪把主力夾在中間；嘲諷錯位。</td></tr>
-        <tr><td>劇毒魚</td><td>無視身材，直接換掉大哥</td><td>聖盾先手破毒；用頻率小怪吃毒；把大哥放到毒魚攻擊不到的位。</td></tr>
-        <tr><td>聖盾頻率</td><td>多次免傷，拖死你的大怪</td><td>1 號位放小怪破盾；狂戰斧先手；帶「破盾」類效果。</td></tr>
-        <tr><td>亡語鋪場</td><td>越打越多，頻率壓死</td><td>先殺瑞文；用扎普/潛行點後排；別把攻擊浪費在小亡語上。</td></tr>
-        <tr><td>單一大哥</td><td>一個 10000/10000</td><td>劇毒 + 風怒 + 聖盾三件套；或者直接轉身打臉。</td></tr>
+        <tr><td>狂戰斧 / 溅射</td><td>一次打三個，專杀引擎</td><td>引擎後置；用 1-2 個小怪把主力夹在中間；嘲諷错位。</td></tr>
+        <tr><td>劇毒鱼</td><td>無視體質，直接換掉大哥</td><td>聖盾術先手破毒；用頻率小怪吃毒；把大哥放到毒鱼攻擊不到的位。</td></tr>
+        <tr><td>聖盾術頻率</td><td>多次免傷，拖死你的大怪</td><td>1 號位放小怪破盾；狂戰斧先手；帶「破盾」類效果。</td></tr>
+        <tr><td>死亡之聲铺場</td><td>越打越多，頻率壓死</td><td>先杀瑞文；用扎普/隱蔽点後排；別把攻擊浪費在小死亡之聲上。</td></tr>
+        <tr><td>單一大哥</td><td>一個 10000/10000</td><td>劇毒 + 風怒 + 聖盾術三件套；或者直接轉身打臉。</td></tr>
       </tbody>
     </table>
   </div>
@@ -558,12 +608,12 @@
   <div class="section-head">
     <div class="sec-no">05</div>
     <div>
-      <h2>全種族圖鑑</h2>
-      <p class="sub">每個種族：定位 → 核心 → 站位 → 節奏 → 為什麼強 → 怎麼死。</p>
+      <h2>全部種族圖鑑</h2>
+      <p class="sub">每個種族：定位、核心、站位、節奏、強在哪、怎麼死。</p>
     </div>
   </div>
 
-  <p class="pool-note">這裡列的是每個流派的<strong>核心元件</strong>，不是完整卡池；卡名已與官方庫對齊：仙女龍=折躍之翼、紅龍=赤紅守備巨龍、摩托車=極速野豬騎士（恩佐斯是英雄，不是隨從）。每個種族下方可展開該種族全部卡牌。</p>
+  <p class="pool-note">这裡列的是每個流派的<strong>核心組件</strong>，不是完整卡牌池；卡名已與官方庫对齊：仙女龍=折躍之翼、紅龍=赤紅守備巨龍、摩托車=極速野豬騎士（恩佐斯是英雄，不是手下）。每個種族下方可展開该種族全部卡牌。</p>
   <div class="tier-strip" id="tierStrip"></div>
   <div class="tabs" id="tribeTabs" role="tablist"></div>
   <div class="panels" id="tribePanels"></div>
@@ -574,19 +624,19 @@
   <div class="section-head">
     <div class="sec-no">06</div>
     <div>
-      <h2>一頁速查</h2>
-      <p class="sub">開局迷茫時，先看這張表，再決定這把玩什麼。</p>
+      <h2>一页速查</h2>
+      <p class="sub">不知道玩什麼的時候，先看这張表。</p>
     </div>
   </div>
   <div class="table-wrap">
     <table class="summary" id="summaryTable">
       <thead>
-        <tr><th>種族</th><th>一句話定位</th><th>核心引擎</th><th>成型回合</th><th>上限</th><th>難度</th></tr>
+        <tr><th>種族</th><th>一句話定位</th><th>核心引擎</th><th>成型回合</th><th>上限</th><th>难度</th></tr>
       </thead>
       <tbody></tbody>
     </table>
   </div>
-  <p class="table-note">「成型回合」指具備戰鬥力、可以開始滾雪球的時點；「上限」是吃雞潛力，不是爛分能力。</p>
+  <p class="table-note">「成型回合」指具備戰斗力、可以開始滚雪球的時点；「上限」是奪冠潜力，不是烂分能力。</p>
 </section>
 
 <!-- ================= 本週最強 ================= -->
@@ -595,7 +645,7 @@
     <div class="sec-no">周</div>
     <div>
       <h2>本週最強組合</h2>
-      <p class="sub">每週更新 · <b id="metaWeek">第 1 周</b> · <span id="metaPatch">37.0</span> · 更新於 <span id="metaDate"></span></p>
+      <p class="sub">每周更新 · <b id="metaWeek">第 1 周</b> · <span id="metaPatch">37.0</span> · 更新于 <span id="metaDate"></span></p>
     </div>
   </div>
   <div class="stats-badge" id="metaStatsBadge"></div>
@@ -613,11 +663,40 @@
 
   <div class="tavern-bulletin">
     <span class="tb-pin"></span>
-    <span class="tb-label">酒館告示</span>
-    <p><b>本週環境：</b>畸變怪、元素、惡魔三家 T0 爭霸；納迦、海盜、野獸、龍穩在 T1；機械和魚人適合吃分；亡靈與野豬人偏弱，除非發牌特別好。</p>
+    <span class="tb-label">旅店告示</span>
+    <p><b>本週環境：</b>畸變體、元素、惡魔三家 T0 爭霸；納迦、海盜、野獸、龍穩在 T1；機械和魚人适合吃分；不死族與野豬人偏弱，除非發牌特別好。</p>
   </div>
   <div class="comp-tools" id="compTools" hidden>
-    <label class="ct-hero"><span>我在玩</span><select id="compHero"><option value="">不選英雄</option></select></label>
+    <div class="ct-hero" id="ctHeroWrap">
+      <span class="ct-hero-label">我在玩</span>
+      <div class="hero-picker" id="heroPicker">
+        <button type="button" class="hp-btn" id="hpBtn" aria-haspopup="dialog" aria-expanded="false" title="選择英雄以按该英雄勝率排序或过滤陣容">
+          <span class="hp-val" id="hpVal">不選英雄</span>
+          <span class="hp-tier" id="hpTier" hidden></span>
+          <span class="hp-arrow" aria-hidden="true">▾</span>
+        </button>
+        <button type="button" class="hp-clear" id="hpClear" hidden title="清除英雄選择" aria-label="清除英雄選择">✕</button>
+        <div class="hp-pop" id="hpPop" hidden>
+          <div class="hp-search-box">
+            <input type="search" class="hp-search" id="hpSearch" placeholder="🔍 搜索 116 位英雄（如：拉法姆、帕奇）" autocomplete="off" />
+          </div>
+          <div class="hp-filter-chips" id="hpFilters">
+            <button type="button" class="on" data-tier="all">全部</button>
+            <button type="button" data-tier="T0">T0</button>
+            <button type="button" data-tier="T1">T1</button>
+            <button type="button" data-tier="T2">T2</button>
+            <button type="button" data-tier="T3">T3</button>
+          </div>
+          <div class="hp-list" id="hpList" role="listbox"></div>
+          <div class="hp-foot">
+            <span class="hp-count" id="hpCount">共 116 位英雄</span>
+            <button type="button" class="hp-reset" id="hpReset">清除英雄選择</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="ct-hero-only" id="compHeroOnly" hidden title="僅顯示该英雄有數據或推薦的适配陣容">僅看该英雄适配</button>
+      <select id="compHero" style="display:none;" aria-hidden="true"><option value="">不選英雄</option></select>
+    </div>
     <div class="ct-tiers" id="compTiers">
       <button type="button" data-tier="all" class="on">全部</button>
       <button type="button" data-tier="T0">T0</button>
@@ -628,14 +707,15 @@
     <select id="compSort" aria-label="排序">
       <option value="avg">按均位</option>
       <option value="top4">按前四率</option>
-      <option value="win">按吃雞率</option>
+      <option value="win">按奪冠率</option>
       <option value="sample">按樣本</option>
     </select>
     <input id="compSearch" type="search" placeholder="搜陣容，如：龍、喝茶" autocomplete="off">
+    <button type="button" class="comp-random" id="compRandom">🎲 手气不错</button>
   </div>
 
   <div class="comp-stats" id="compStats" hidden></div>
-  <h3 class="meta-sub" id="metaSub" hidden>編輯推薦（經驗，不含勝率）</h3>
+  <h3 class="meta-sub" id="metaSub" hidden>編辑推薦（經驗，不含勝率）</h3>
   <div class="meta-top" id="metaTop"></div>
   <div class="table-wrap">
     <table class="meta-table" id="metaTable">
@@ -651,8 +731,8 @@
   <div class="section-head">
     <div class="sec-no">英</div>
     <div>
-      <h2>英雄與飾品：開局先選對一半</h2>
-      <p class="sub">英雄決定前 5 回合的節奏，飾品決定後 5 回合的上限。</p>
+      <h2>英雄和飾品，開局就定了一半</h2>
+      <p class="sub">英雄管前五個回合，飾品管後半程。</p>
     </div>
   </div>
 
@@ -678,8 +758,8 @@
     <div class="hg-col">
       <h3>英雄怎麼選</h3>
       <ol class="hg-rules">
-        <li><b>先看經濟</b>：能給鑄幣、免費重新整理的英雄，新手最穩。</li>
-        <li><b>再看複製</b>：能給牌、能湊三連的，容易做出核心。</li>
+        <li><b>先看經济</b>：能給金幣、免費刷新的英雄，新手最穩。</li>
+        <li><b>再看複制</b>：能給牌、能湊三连的，容易做出核心。</li>
         <li><b>最後看戰力</b>：純戰力英雄上限低，但保命強。</li>
       </ol>
       <div class="hg-list" id="heroList"></div>
@@ -687,15 +767,48 @@
     <div class="hg-col">
       <h3>飾品怎麼選</h3>
       <ol class="hg-rules">
-        <li><b>小飾品先拿節奏</b>：經濟 / 複製優先，別拿純數值。</li>
+        <li><b>小飾品先拿節奏</b>：經济 / 複制優先，別拿純數值。</li>
         <li><b>大飾品看陣容</b>：先定種族，再選能放大的飾品。</li>
         <li><b>別為飾品改陣容</b>：飾品是乘數，不是方向。</li>
-        <li><b>保命飾品不丟人</b>：血量危險時，護盾 / 回血也是分。</li>
+        <li><b>保命飾品不丢人</b>：血量危險時，護盾 / 回血也是分。</li>
       </ol>
       <div class="hg-list" id="trinketList"></div>
     </div>
   </div>
-  <p class="table-note">英雄與飾品池會隨賽季輪換，這裡給的是選擇方法；具體強度以當前版本為準。</p>
+  <p class="table-note">英雄與飾品池會隨賽季輪換，这裡給的是選择方法；具體強度以當前版本為准。</p>
+</section>
+
+<!-- ================= 社區熱點 ================= -->
+<section class="section" id="news">
+  <div class="section-head">
+    <div class="sec-no">闻</div>
+    <div>
+      <h2>社區熱點</h2>
+      <p class="sub">Reddit r/BobsTavern 與炉石资訊，每 6 小時自動更新。</p>
+    </div>
+  </div>
+  <div class="news-grid" id="newsList"><div class="news-loading">加載中…</div></div>
+  <p class="news-foot">內容來自公開 RSS，版權歸原作者；点擊跳轉原帖。</p>
+</section>
+
+
+<!-- ================= 訪客足跡 ================= -->
+<section class="section" id="visitors">
+  <div class="section-head">
+    <div class="sec-no">訪</div>
+    <div>
+      <h2>訪客足跡</h2>
+      <p class="sub">按國家統計的訪問量。越亮，說明那裡來的人越多。</p>
+    </div>
+  </div>
+  <div class="visit-map-wrap">
+    <div id="worldMap" class="world-map" aria-label="訪客世界地圖"></div>
+    <aside class="visit-side">
+      <div class="vs-title">Top 國家 / 地區</div>
+      <ol id="visitTop" class="visit-top"><li class="muted">數據接入中…</li></ol>
+      <p class="visit-note" id="visitNote">數據來自 Cloudflare Web Analytics，每天更新。</p>
+    </aside>
+  </div>
 </section>
 
 <!-- ================= 陣容反查 ================= -->
@@ -704,7 +817,7 @@
     <div class="sec-no">查</div>
     <div>
       <h2>陣容反查</h2>
-      <p class="sub">輸入你的英雄和手裡的牌，告訴你最該玩什麼，以及為什麼。</p>
+      <p class="sub">输入你的英雄和手裡的牌，告訴你最该玩什麼，以及為什麼。</p>
     </div>
   </div>
 
@@ -714,15 +827,15 @@
         <select id="finderHero"><option value="">先不選</option></select>
       </label>
       <label class="ff-row"><span>手裡的牌（最多 3 張）</span>
-        <input id="finderCard" list="poolNames" placeholder="輸入卡名，例如：銅須、詩心龍、白狼" autocomplete="off" />
+        <input id="finderCard" list="poolNames" placeholder="输入卡名，例如：铜須、詩心龍、白狼" autocomplete="off" />
         <datalist id="poolNames"></datalist>
       </label>
       <div class="finder-chips" id="finderChips"></div>
       <button type="button" class="btn primary" id="finderGo">推薦陣容</button>
-      <p class="finder-tip">只看「核心元件」和「種族」兩條線，不會替你做全部決策。</p>
+      <p class="finder-tip">只看「核心組件」和「種族」两條線，不會替你做全部決策。</p>
     </div>
     <div class="finder-result" id="finderResult">
-      <p class="fr-empty">選好英雄或卡牌，點「推薦陣容」。</p>
+      <p class="fr-empty">選好英雄或卡牌，点「推薦陣容」。</p>
     </div>
   </div>
 </section>
@@ -732,8 +845,8 @@
   <div class="section-head">
     <div class="sec-no">07</div>
     <div>
-      <h2>一局遊戲的四次決策</h2>
-      <p class="sub">酒館戰棋不是「抄陣容」，是「在四個時間點做對選擇」。</p>
+      <h2>一局裡真正要做的四個決定</h2>
+      <p class="sub">英雄戰場不是抄陣容，是在幾個時間点做選择。</p>
     </div>
   </div>
 
@@ -742,32 +855,32 @@
       <div class="tl-dot">1</div>
       <div class="tl-body">
         <h4>第 1–3 回合：定調</h4>
-        <p>看發牌、看英雄、看飾品。優先拿<strong>經濟</strong>與<strong>畸變怪</strong>起手；不要在這個階段追三星，除非你確定要走頻率。</p>
-        <span class="tl-key">關鍵詞：穩血 &gt; 貪經濟 &gt; 追夢</span>
+        <p>看發牌、看英雄、看飾品。優先拿<strong>經济</strong>與<strong>畸變體</strong>起手；不要在这個階段追三星，除非你確定要走頻率。</p>
+        <span class="tl-key">關鍵詞：穩血 &gt; 貪經济 &gt; 追夢</span>
       </div>
     </div>
     <div class="tl-item">
       <div class="tl-dot">2</div>
       <div class="tl-body">
         <h4>第 4–7 回合：找引擎</h4>
-        <p>確定「乘數」：銅須？瑞文？巴琳達？找到其一再決定種族。沒有引擎的陣容，後期一定打不過有引擎的。</p>
+        <p>確定「乘數」：铜須？瑞文？巴琳达？找到其一再決定種族。没有引擎的陣容，後期一定打不过有引擎的。</p>
         <span class="tl-key">關鍵詞：先定引擎，再定種族</span>
       </div>
     </div>
     <div class="tl-item">
       <div class="tl-dot">3</div>
       <div class="tl-body">
-        <h4>第 8–12 回合：收斂</h4>
-        <p>把資源收口到一個載體（融合怪 / 大哥），開始複利。這時候不要再「什麼都想要」，賣掉不參與乘法的掛件。</p>
+        <h4>第 8–12 回合：收敛</h4>
+        <p>把资源收口到一個載體（融合怪或大哥）。这時候別什麼都想要，賣掉不參與乘法的掛件。</p>
         <span class="tl-key">關鍵詞：七格只留「參與乘法」的</span>
       </div>
     </div>
     <div class="tl-item">
       <div class="tl-dot">4</div>
       <div class="tl-body">
-        <h4>第 13 回合以後：針對</h4>
-        <p>看決賽圈對手：補毒、補聖盾、補狂戰斧、調站位。身材到這個階段已經夠了，勝負在<strong>剋制關係</strong>。</p>
-        <span class="tl-key">關鍵詞：從「養成」切換到「針對」</span>
+        <h4>第 13 回合以後：針对</h4>
+        <p>看決賽圈对手：補毒、補聖盾術、補狂戰斧、調站位。體質到这個階段已經夠了，勝負在<strong>克制關系</strong>。</p>
+        <span class="tl-key">關鍵詞：從「養成」切換到「針对」</span>
       </div>
     </div>
   </div>
@@ -779,7 +892,7 @@
     <div class="sec-no">08</div>
     <div>
       <h2>術語表</h2>
-      <p class="sub">看懂這些詞，你就看懂了九成的攻略。</p>
+      <p class="sub">这些詞看懂了，大部分攻略不用再查。</p>
     </div>
   </div>
   <dl class="glossary" id="glossaryList"></dl>
@@ -788,11 +901,11 @@
 <footer class="footer">
   <div class="footer-inner">
     <div>
-      <div class="brand"><span class="brand-mark">棋</span><span>酒館手札</span></div>
-      <p>基於 36.6 → 37.0 補丁環境整理，供個人學習參考。卡圖與卡牌資料來自社群卡牌庫（HearthstoneJSON / ZeroToHeroes），僅作識別用途；卡池與數值隨版本輪換，請以遊戲內為準。</p>
+      <div class="brand"><span class="brand-mark">棋</span><span>旅店手札</span></div>
+      <p>基于 36.6 → 37.0 補丁環境整理，供個人学習參考。卡圖與卡牌數據來自社區卡牌庫（HearthstoneJSON / ZeroToHeroes），僅作識別用途；卡牌池與數值隨版本輪換，请以游戲內為准。</p>
     </div>
     <div class="footer-links">
-      <a href="#laws">定律</a><a href="#math">數學</a><a href="#positioning">站位</a><a href="#tribes">種族</a>
+      <a href="#laws">定律</a><a href="#math">數学</a><a href="#positioning">站位</a><a href="#tribes">種族</a>
       <a href="https://github.com/nikomao/tavern-tome" target="_blank" rel="noopener">GitHub 倉庫 ↗</a>
     </div>
   </div>
@@ -804,25 +917,27 @@
 <button class="to-top" id="toTop" aria-label="回到頂部">↑</button>
 
 <div class="card-pop" id="cardPop" hidden>
+  <button type="button" class="cp-close" id="cpClose" aria-label="關閉">×</button>
   <div class="cp-img"><img alt="" /></div>
   <div class="cp-body">
     <div class="cp-name"></div>
     <div class="cp-meta"></div>
     <p class="cp-text"></p>
+    <a class="cp-link" id="cpLink" href="#" hidden>查看完整卡牌池 →</a>
   </div>
 </div>
 
 <div class="search-overlay" id="searchOverlay" hidden>
-  <div class="search-box" role="dialog" aria-label="全站搜尋">
+  <div class="search-box" role="dialog" aria-label="全站搜索">
     <input id="searchInput" type="search" placeholder="搜卡牌 / 英雄 / 陣容 / 術語…" autocomplete="off" spellcheck="false">
     <div class="search-list" id="searchList"></div>
-    <p class="search-hint">↑↓ 選擇 · Enter 開啟 · Esc 關閉</p>
+    <p class="search-hint">↑↓ 選择 · Enter 打開 · Esc 關閉</p>
   </div>
 </div>
 
 <div class="cmp-overlay" id="cmpOverlay" hidden>
   <div class="cmp-box">
-    <div class="cmp-head"><b>陣容對比</b><button type="button" id="cmpClose" aria-label="關閉">×</button></div>
+    <div class="cmp-head"><b>陣容对比</b><button type="button" id="cmpClose" aria-label="關閉">×</button></div>
     <div class="cmp-body" id="cmpBody"></div>
   </div>
 </div>
@@ -830,12 +945,12 @@
 <div class="tier-modal" id="tierModal" hidden>
   <div class="tm-box">
     <h3>梯度（Tier）是什麼意思</h3>
-    <p>T0 / T1 / T2 / T3 是按<b>當前資料的平均排名（均位）</b>排序後分檔的結果，均位越低越強。</p>
+    <p>T0 / T1 / T2 / T3 是按<b>當前數據的平均排名（均位）</b>排序後分檔的结果，均位越低越強。</p>
     <ul>
       <li><b>T0</b>：最強一檔，通常是版本答案</li>
       <li><b>T1</b>：強勢，穩定吃分</li>
       <li><b>T2</b>：可用，但需要特定英雄或來牌</li>
-      <li><b>T3</b>：弱勢或冷門，絕活才玩</li>
+      <li><b>T3</b>：弱勢或冷門，绝活才玩</li>
     </ul>
     <p>分檔比例：英雄榜按前 10% / 30% / 60% 切；陣容榜按前 15% / 40% / 70% 切。</p>
     <p class="tm-note">T 只代表“平均表現”，不代表上限；樣本小的分檔會波動。</p>
@@ -843,14 +958,45 @@
   </div>
 </div>
 
-<script src="data.js?v=20261102e"></script>
-<script src="pool.js?v=20261102e"></script>
-<script src="stats-change.js?v=20261102e"></script>
-<script src="stats-mmr.js?v=20261102e"></script>
-<script src="stats.js?v=20261102e"></script>
-<script src="comp-notes.js?v=20261102e"></script>
-<script src="extra-cards.js?v=20261102e"></script>
-<script src="cards.js?v=20261102e"></script>
-<script src="app.js?v=20261102e"></script>
+<script src="data.js?v=20261105d"></script>
+<script src="pool.js?v=20261105d"></script>
+<script src="stats-change.js?v=20261105d"></script>
+<script src="stats-mmr.js?v=20261105d"></script>
+<script src="stats.js?v=20261105d"></script>
+<script src="comp-notes.js?v=20261105d"></script>
+<script src="extra-cards.js?v=20261105d"></script>
+<script src="cards.js?v=20261105d"></script>
+<script src="app.js?v=20261105d"></script>
+<script src="sim.js?v=20261105d"></script>
+<script src="finder.js?v=20261105d"></script>
+<script src="search.js?v=20261105d"></script>
+<script src="analytics-config.js?v=20261105d"></script>
+<script src="analytics.js?v=20261105d"></script>
+<script src="history.js?v=20261105d"></script>
+<script src="news.js?v=20261105d"></script>
+<script src="fun.js?v=20261105d"></script>
+<script src="card-fx.js?v=20261105d"></script>
+<script src="counter.js?v=20261105d"></script>
+<script src="popular.js?v=20261105d"></script>
+<script src="demos.js?v=20261105d"></script>
+<script src="hero.js?v=20261105d"></script>
+<script src="bg.js?v=20261105d"></script>
+<nav class="side-rail" id="sideRail" aria-label="章節导航">
+  <button type="button" class="rail-top" id="railTop" aria-label="回到頂部">↑</button>
+  <div class="rail-track" aria-hidden="true"><i id="railFill"></i></div>
+  <div class="rail-dots" id="railDots"></div>
+</nav>
+<script src="../vendor/jsvectormap.min.js?v=20261105d"></script>
+<script src="../vendor/world.js?v=20261105d"></script>
+<script src="rail.js?v=20261105d"></script>
+<script src="light.js?v=20261105d"></script>
+<script src="map.js?v=20261105d"></script>
+<script>
+  if('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')){
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('sw.js').catch(function(){});
+    });
+  }
+</script>
 </body>
 </html>

@@ -7,7 +7,7 @@ const STATS_CHANGE = {
   "sampleTo": 2202934,
   "heroes": [
     {
-      "name": "大主教奧薩爾",
+      "name": "大主教奧薩尔",
       "rankFrom": 36,
       "rankTo": 33,
       "avgFrom": 3.95,
@@ -27,7 +27,7 @@ const STATS_CHANGE = {
       "tierTo": "T2"
     },
     {
-      "name": "恐龍大師布萊恩",
+      "name": "恐龍大師布莱恩",
       "rankFrom": 87,
       "rankTo": 84,
       "avgFrom": 4.15,
@@ -37,7 +37,7 @@ const STATS_CHANGE = {
       "tierTo": "T3"
     },
     {
-      "name": "塔姆辛·羅姆",
+      "name": "塔姆辛·罗姆",
       "rankFrom": 97,
       "rankTo": 99,
       "avgFrom": 4.19,

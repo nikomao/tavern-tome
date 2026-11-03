@@ -1,0 +1,11 @@
+{
+  "name": "tavern-tome",
+  "version": "1.0.0",
+  "description": "酒馆战棋 · 全种族最优解手册",
+  "type": "module",
+  "scripts": {
+    "build:zhtw": "node scripts/build_zhtw.mjs",
+    "fetch:stats": "node scripts/fetch_firestone.mjs 100 && node scripts/import_stats.mjs stats-input.json"
+  },
+  "license": "MIT"
+}

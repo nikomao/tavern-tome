@@ -14,6 +14,8 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://nikom-blog.org/play.html" />
 <link rel="icon" href="favicon.png" type="image/png" sizes="64x64" />
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#21140c" />
 <link rel="stylesheet" href="styles.css?v=20261103g">
 <link rel="stylesheet" href="play.css?v=20261103g">
 </head>
@@ -75,5 +77,12 @@
 <script src="analytics.js?v=20261103g"></script>
 <script src="history.js?v=20261103g"></script>
 <script src="card-fx.js?v=20261103g"></script>
+<script>
+  if('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')){
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('sw.js').catch(function(){});
+    });
+  }
+</script>
 </body>
 </html>

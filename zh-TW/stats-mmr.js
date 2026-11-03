@@ -5,7 +5,7 @@ const STATS_MMR = {
   "fetchedAt": "2026-11-01",
   "heroes": [
    {
-    "name": "加拉克蘇斯大王",
+    "name": "加拉克苏斯大王",
     "tier": "T0",
     "winrate": 0.3102,
     "top4": 0.7727,
@@ -13,7 +13,7 @@ const STATS_MMR = {
     "pickrate": 85.32
    },
    {
-    "name": "貿易親王加里維克斯",
+    "name": "贸易親王加裡維克斯",
     "tier": "T0",
     "winrate": 0.3808,
     "top4": 0.743,
@@ -21,7 +21,7 @@ const STATS_MMR = {
     "pickrate": 76.32
    },
    {
-    "name": "時光扭曲者克羅米",
+    "name": "時光扭曲者克罗米",
     "tier": "T0",
     "winrate": 0.25,
     "top4": 0.765,
@@ -37,7 +37,7 @@ const STATS_MMR = {
     "pickrate": 47.37
    },
    {
-    "name": "巴羅夫領主",
+    "name": "巴罗夫領主",
     "tier": "T0",
     "winrate": 0.2421,
     "top4": 0.7409,
@@ -45,7 +45,7 @@ const STATS_MMR = {
     "pickrate": 57.99
    },
    {
-    "name": "釦子",
+    "name": "扣子",
     "tier": "T1",
     "winrate": 0.2764,
     "top4": 0.7093,
@@ -53,7 +53,7 @@ const STATS_MMR = {
     "pickrate": 70.34
    },
    {
-    "name": "範達爾·雷矛",
+    "name": "範达尔·雷矛",
     "tier": "T1",
     "winrate": 0.3058,
     "top4": 0.7233,
@@ -69,7 +69,7 @@ const STATS_MMR = {
     "pickrate": 56.98
    },
    {
-    "name": "特萊斯塔斯，寄生之魂",
+    "name": "特莱斯塔斯，寄生之魂",
     "tier": "T1",
     "winrate": 0.223,
     "top4": 0.7282,
@@ -85,7 +85,7 @@ const STATS_MMR = {
     "pickrate": 74.62
    },
    {
-    "name": "恐龍大師布萊恩",
+    "name": "恐龍大師布莱恩",
     "tier": "T1",
     "winrate": 0.2344,
     "top4": 0.7312,
@@ -93,7 +93,7 @@ const STATS_MMR = {
     "pickrate": 51.72
    },
    {
-    "name": "希爾瓦娜斯·風行者",
+    "name": "希尔瓦娜斯·風行者",
     "tier": "T1",
     "winrate": 0.2768,
     "top4": 0.7054,
@@ -101,7 +101,7 @@ const STATS_MMR = {
     "pickrate": 75.51
    },
    {
-    "name": "鐘錶先生克勞沃斯",
+    "name": "鐘表先生克勞沃斯",
     "tier": "T1",
     "winrate": 0.2833,
     "top4": 0.6884,
@@ -109,7 +109,7 @@ const STATS_MMR = {
     "pickrate": 56.23
    },
    {
-    "name": "風暴之王托里姆",
+    "name": "風暴之王托裡姆",
     "tier": "T1",
     "winrate": 0.2445,
     "top4": 0.7007,
@@ -133,7 +133,7 @@ const STATS_MMR = {
     "pickrate": 83.39
    },
    {
-    "name": "芬利·莫格頓爵士",
+    "name": "芬利·莫格顿爵士",
     "tier": "T2",
     "winrate": 0.2222,
     "top4": 0.7168,
@@ -157,7 +157,7 @@ const STATS_MMR = {
     "pickrate": 74.85
    },
    {
-    "name": "雷諾·傑克遜",
+    "name": "雷诺·杰克逊",
     "tier": "T2",
     "winrate": 0.229,
     "top4": 0.6928,
@@ -165,7 +165,7 @@ const STATS_MMR = {
     "pickrate": 75.03
    },
    {
-    "name": "克隆大師澤裡克",
+    "name": "克隆大師泽裡克",
     "tier": "T2",
     "winrate": 0.2545,
     "top4": 0.6843,
@@ -173,7 +173,7 @@ const STATS_MMR = {
     "pickrate": 69.67
    },
    {
-    "name": "凱瑞爾·羅姆",
+    "name": "凱瑞尔·罗姆",
     "tier": "T2",
     "winrate": 0.1772,
     "top4": 0.7131,
@@ -181,7 +181,7 @@ const STATS_MMR = {
     "pickrate": 48.77
    },
    {
-    "name": "摩洛克·福爾摩斯",
+    "name": "摩洛克·福尔摩斯",
     "tier": "T2",
     "winrate": 0.2397,
     "top4": 0.6925,
@@ -189,7 +189,7 @@ const STATS_MMR = {
     "pickrate": 58.09
    },
    {
-    "name": "米羅克",
+    "name": "米罗克",
     "tier": "T2",
     "winrate": 0.2089,
     "top4": 0.7025,
@@ -213,7 +213,7 @@ const STATS_MMR = {
     "pickrate": 51.86
    },
    {
-    "name": "預言者努波頓",
+    "name": "預言者努波顿",
     "tier": "T2",
     "winrate": 0.2489,
     "top4": 0.7059,
@@ -253,7 +253,7 @@ const STATS_MMR = {
     "pickrate": 68.49
    },
    {
-    "name": "尤朵拉船長",
+    "name": "尤朵拉船长",
     "tier": "T3",
     "winrate": 0.219,
     "top4": 0.6727,
@@ -293,7 +293,7 @@ const STATS_MMR = {
     "pickrate": 54.01
    },
    {
-    "name": "搖滾教父沃恩",
+    "name": "摇滚教父沃恩",
     "tier": "T3",
     "winrate": 0.2287,
     "top4": 0.6592,
@@ -309,7 +309,7 @@ const STATS_MMR = {
     "pickrate": 49.3
    },
    {
-    "name": "德雷阿佳絲",
+    "name": "德雷阿佳丝",
     "tier": "T3",
     "winrate": 0.1345,
     "top4": 0.6724,
@@ -333,7 +333,7 @@ const STATS_MMR = {
     "pickrate": 59.49
    },
    {
-    "name": "林地守護者歐穆",
+    "name": "林地守護者欧穆",
     "tier": "T3",
     "winrate": 0.1928,
     "top4": 0.6185,
@@ -341,7 +341,7 @@ const STATS_MMR = {
     "pickrate": 47.98
    },
    {
-    "name": "辛達苟薩",
+    "name": "辛达苟薩",
     "tier": "T3",
     "winrate": 0.1784,
     "top4": 0.6058,
@@ -349,7 +349,7 @@ const STATS_MMR = {
     "pickrate": 50.21
    },
    {
-    "name": "樂隊經理精英牛頭人酋長",
+    "name": "樂队經理精英牛頭人酋长",
     "tier": "T3",
     "winrate": 0.1649,
     "top4": 0.5965,
@@ -363,7 +363,7 @@ const STATS_MMR = {
   "fetchedAt": "2026-11-01",
   "heroes": [
    {
-    "name": "加拉克蘇斯大王",
+    "name": "加拉克苏斯大王",
     "tier": "T0",
     "winrate": 0.1957,
     "top4": 0.6748,
@@ -387,7 +387,7 @@ const STATS_MMR = {
     "pickrate": 67.34
    },
    {
-    "name": "釦子",
+    "name": "扣子",
     "tier": "T0",
     "winrate": 0.1796,
     "top4": 0.6216,
@@ -395,7 +395,7 @@ const STATS_MMR = {
     "pickrate": 54.92
    },
    {
-    "name": "特萊斯塔斯，寄生之魂",
+    "name": "特莱斯塔斯，寄生之魂",
     "tier": "T0",
     "winrate": 0.1499,
     "top4": 0.6294,
@@ -403,7 +403,7 @@ const STATS_MMR = {
     "pickrate": 55.43
    },
    {
-    "name": "德雷阿佳絲",
+    "name": "德雷阿佳丝",
     "tier": "T0",
     "winrate": 0.0978,
     "top4": 0.6393,
@@ -411,7 +411,7 @@ const STATS_MMR = {
     "pickrate": 43.79
    },
    {
-    "name": "典獄長",
+    "name": "典獄长",
     "tier": "T0",
     "winrate": 0.1645,
     "top4": 0.6215,
@@ -427,7 +427,7 @@ const STATS_MMR = {
     "pickrate": 41.84
    },
    {
-    "name": "貿易親王加里維克斯",
+    "name": "贸易親王加裡維克斯",
     "tier": "T0",
     "winrate": 0.228,
     "top4": 0.5941,
@@ -443,7 +443,7 @@ const STATS_MMR = {
     "pickrate": 10.47
    },
    {
-    "name": "凱瑞爾·羅姆",
+    "name": "凱瑞尔·罗姆",
     "tier": "T0",
     "winrate": 0.111,
     "top4": 0.6097,
@@ -451,7 +451,7 @@ const STATS_MMR = {
     "pickrate": 25.46
    },
    {
-    "name": "範達爾·雷矛",
+    "name": "範达尔·雷矛",
     "tier": "T0",
     "winrate": 0.1674,
     "top4": 0.6013,
@@ -491,7 +491,7 @@ const STATS_MMR = {
     "pickrate": 27.44
    },
    {
-    "name": "舞者達瑞爾",
+    "name": "舞者达瑞尔",
     "tier": "T1",
     "winrate": 0.107,
     "top4": 0.606,
@@ -499,7 +499,7 @@ const STATS_MMR = {
     "pickrate": 17.24
    },
    {
-    "name": "鐘錶先生克勞沃斯",
+    "name": "鐘表先生克勞沃斯",
     "tier": "T1",
     "winrate": 0.1593,
     "top4": 0.5931,
@@ -515,7 +515,7 @@ const STATS_MMR = {
     "pickrate": 47.76
    },
    {
-    "name": "奧拉基爾",
+    "name": "奧拉基尔",
     "tier": "T1",
     "winrate": 0.1278,
     "top4": 0.5927,
@@ -523,7 +523,7 @@ const STATS_MMR = {
     "pickrate": 22.93
    },
    {
-    "name": "雷諾·傑克遜",
+    "name": "雷诺·杰克逊",
     "tier": "T1",
     "winrate": 0.1697,
     "top4": 0.5966,
@@ -539,7 +539,7 @@ const STATS_MMR = {
     "pickrate": 40.78
    },
    {
-    "name": "德雷克塔爾",
+    "name": "德雷克塔尔",
     "tier": "T1",
     "winrate": 0.1609,
     "top4": 0.5943,
@@ -547,7 +547,7 @@ const STATS_MMR = {
     "pickrate": 21.01
    },
    {
-    "name": "芬利·莫格頓爵士",
+    "name": "芬利·莫格顿爵士",
     "tier": "T1",
     "winrate": 0.1568,
     "top4": 0.5923,
@@ -555,7 +555,7 @@ const STATS_MMR = {
     "pickrate": 45.32
    },
    {
-    "name": "亡語者布萊克松",
+    "name": "死亡之聲者布莱克松",
     "tier": "T1",
     "winrate": 0.1141,
     "top4": 0.6034,
@@ -571,7 +571,7 @@ const STATS_MMR = {
     "pickrate": 58.47
    },
    {
-    "name": "希爾瓦娜斯·風行者",
+    "name": "希尔瓦娜斯·風行者",
     "tier": "T1",
     "winrate": 0.1671,
     "top4": 0.5877,
@@ -595,7 +595,7 @@ const STATS_MMR = {
     "pickrate": 30.46
    },
    {
-    "name": "摩洛克·福爾摩斯",
+    "name": "摩洛克·福尔摩斯",
     "tier": "T1",
     "winrate": 0.1526,
     "top4": 0.5807,
@@ -603,7 +603,7 @@ const STATS_MMR = {
     "pickrate": 30.56
    },
    {
-    "name": "米羅克",
+    "name": "米罗克",
     "tier": "T1",
     "winrate": 0.1508,
     "top4": 0.5804,
@@ -611,7 +611,7 @@ const STATS_MMR = {
     "pickrate": 52.79
    },
    {
-    "name": "風暴之王托里姆",
+    "name": "風暴之王托裡姆",
     "tier": "T1",
     "winrate": 0.1466,
     "top4": 0.5824,
@@ -619,7 +619,7 @@ const STATS_MMR = {
     "pickrate": 36.75
    },
    {
-    "name": "墮落的喬治",
+    "name": "堕落的喬治",
     "tier": "T1",
     "winrate": 0.1285,
     "top4": 0.5799,
@@ -635,7 +635,7 @@ const STATS_MMR = {
     "pickrate": 14.77
    },
    {
-    "name": "巴羅夫領主",
+    "name": "巴罗夫領主",
     "tier": "T2",
     "winrate": 0.1365,
     "top4": 0.5831,
@@ -643,7 +643,7 @@ const STATS_MMR = {
     "pickrate": 27.6
    },
    {
-    "name": "巫妖巴茲亞爾",
+    "name": "巫妖巴茲亞尔",
     "tier": "T2",
     "winrate": 0.098,
     "top4": 0.5938,
@@ -667,7 +667,7 @@ const STATS_MMR = {
     "pickrate": 21.97
    },
    {
-    "name": "鉤牙船長",
+    "name": "钩牙船长",
     "tier": "T2",
     "winrate": 0.1337,
     "top4": 0.5784,
@@ -683,7 +683,7 @@ const STATS_MMR = {
     "pickrate": 18.19
    },
    {
-    "name": "尤朵拉船長",
+    "name": "尤朵拉船长",
     "tier": "T2",
     "winrate": 0.1383,
     "top4": 0.5705,
@@ -699,7 +699,7 @@ const STATS_MMR = {
     "pickrate": 24.68
    },
    {
-    "name": "克隆大師澤裡克",
+    "name": "克隆大師泽裡克",
     "tier": "T2",
     "winrate": 0.1567,
     "top4": 0.5758,
@@ -707,7 +707,7 @@ const STATS_MMR = {
     "pickrate": 44.69
    },
    {
-    "name": "館長",
+    "name": "館长",
     "tier": "T2",
     "winrate": 0.1241,
     "top4": 0.5713,
@@ -715,7 +715,7 @@ const STATS_MMR = {
     "pickrate": 22.47
    },
    {
-    "name": "大主教奧薩爾",
+    "name": "大主教奧薩尔",
     "tier": "T2",
     "winrate": 0.1357,
     "top4": 0.5659,
@@ -739,7 +739,7 @@ const STATS_MMR = {
     "pickrate": 56.56
    },
    {
-    "name": "搖滾教父沃恩",
+    "name": "摇滚教父沃恩",
     "tier": "T2",
     "winrate": 0.1567,
     "top4": 0.566,
@@ -763,7 +763,7 @@ const STATS_MMR = {
     "pickrate": 25.71
    },
    {
-    "name": "預言者努波頓",
+    "name": "預言者努波顿",
     "tier": "T2",
     "winrate": 0.1462,
     "top4": 0.5664,
@@ -779,7 +779,7 @@ const STATS_MMR = {
     "pickrate": 11.65
    },
    {
-    "name": "瓦託格爾女王",
+    "name": "瓦托格尔女王",
     "tier": "T2",
     "winrate": 0.0818,
     "top4": 0.5845,
@@ -787,7 +787,7 @@ const STATS_MMR = {
     "pickrate": 12.64
    },
    {
-    "name": "因葛，鋼鐵頌歌",
+    "name": "因葛，钢鐵颂歌",
     "tier": "T2",
     "winrate": 0.1131,
     "top4": 0.5662,
@@ -795,7 +795,7 @@ const STATS_MMR = {
     "pickrate": 18.43
    },
    {
-    "name": "無限巨龍姆諾茲多",
+    "name": "無限巨龍姆诺茲多",
     "tier": "T2",
     "winrate": 0.1395,
     "top4": 0.572,
@@ -811,7 +811,7 @@ const STATS_MMR = {
     "pickrate": 14.45
    },
    {
-    "name": "恐龍大師布萊恩",
+    "name": "恐龍大師布莱恩",
     "tier": "T2",
     "winrate": 0.1309,
     "top4": 0.5653,
@@ -835,7 +835,7 @@ const STATS_MMR = {
     "pickrate": 42.16
    },
    {
-    "name": "時光扭曲者克羅米",
+    "name": "時光扭曲者克罗米",
     "tier": "T2",
     "winrate": 0.1438,
     "top4": 0.5618,
@@ -843,7 +843,7 @@ const STATS_MMR = {
     "pickrate": 21.12
    },
    {
-    "name": "澤瑞拉",
+    "name": "泽瑞拉",
     "tier": "T2",
     "winrate": 0.1295,
     "top4": 0.5618,
@@ -851,7 +851,7 @@ const STATS_MMR = {
     "pickrate": 18.78
    },
    {
-    "name": "苔絲·格雷邁恩",
+    "name": "苔丝·格雷迈恩",
     "tier": "T2",
     "winrate": 0.14,
     "top4": 0.5441,
@@ -891,7 +891,7 @@ const STATS_MMR = {
     "pickrate": 43.49
    },
    {
-    "name": "菌菇術士弗洛格爾",
+    "name": "菌菇術士弗洛格尔",
     "tier": "T2",
     "winrate": 0.163,
     "top4": 0.5522,
@@ -899,7 +899,7 @@ const STATS_MMR = {
     "pickrate": 17.33
    },
    {
-    "name": "米爾豪斯·法力風暴",
+    "name": "米尔豪斯·法力風暴",
     "tier": "T2",
     "winrate": 0.0988,
     "top4": 0.5469,
@@ -915,7 +915,7 @@ const STATS_MMR = {
     "pickrate": 16.23
    },
    {
-    "name": "布魯坎",
+    "name": "布鲁坎",
     "tier": "T3",
     "winrate": 0.1246,
     "top4": 0.5387,
@@ -947,7 +947,7 @@ const STATS_MMR = {
     "pickrate": 52.98
    },
    {
-    "name": "凱爾薩斯·逐日者",
+    "name": "凱尔薩斯·逐日者",
     "tier": "T3",
     "winrate": 0.1187,
     "top4": 0.5377,
@@ -995,7 +995,7 @@ const STATS_MMR = {
     "pickrate": 21.19
    },
    {
-    "name": "林地守護者歐穆",
+    "name": "林地守護者欧穆",
     "tier": "T3",
     "winrate": 0.1349,
     "top4": 0.545,
@@ -1011,7 +1011,7 @@ const STATS_MMR = {
     "pickrate": 14.63
    },
    {
-    "name": "了不起的傑弗里斯",
+    "name": "了不起的杰弗裡斯",
     "tier": "T3",
     "winrate": 0.1272,
     "top4": 0.542,
@@ -1019,7 +1019,7 @@ const STATS_MMR = {
     "pickrate": 21.47
    },
    {
-    "name": "阿萊克絲塔薩",
+    "name": "阿莱克丝塔薩",
     "tier": "T3",
     "winrate": 0.1188,
     "top4": 0.5479,
@@ -1035,7 +1035,7 @@ const STATS_MMR = {
     "pickrate": 22.15
    },
    {
-    "name": "劫匪之王託瓦格爾",
+    "name": "劫匪之王托瓦格尔",
     "tier": "T3",
     "winrate": 0.1202,
     "top4": 0.5417,
@@ -1051,7 +1051,7 @@ const STATS_MMR = {
     "pickrate": 13.32
    },
    {
-    "name": "詹迪斯·巴羅夫",
+    "name": "詹迪斯·巴罗夫",
     "tier": "T3",
     "winrate": 0.0966,
     "top4": 0.5552,
@@ -1083,7 +1083,7 @@ const STATS_MMR = {
     "pickrate": 21.02
    },
    {
-    "name": "永恆者託奇",
+    "name": "永恆者托奇",
     "tier": "T3",
     "winrate": 0.1116,
     "top4": 0.547,
@@ -1091,7 +1091,7 @@ const STATS_MMR = {
     "pickrate": 17.64
    },
    {
-    "name": "瓦爾登·晨擁",
+    "name": "瓦尔登·晨擁",
     "tier": "T3",
     "winrate": 0.1026,
     "top4": 0.535,
@@ -1107,7 +1107,7 @@ const STATS_MMR = {
     "pickrate": 17.53
    },
    {
-    "name": "塔姆辛·羅姆",
+    "name": "塔姆辛·罗姆",
     "tier": "T3",
     "winrate": 0.1111,
     "top4": 0.5231,
@@ -1115,7 +1115,7 @@ const STATS_MMR = {
     "pickrate": 14.7
    },
    {
-    "name": "伊妮·積雷",
+    "name": "伊妮·积雷",
     "tier": "T3",
     "winrate": 0.1218,
     "top4": 0.5235,
@@ -1171,7 +1171,7 @@ const STATS_MMR = {
     "pickrate": 11.63
    },
    {
-    "name": "樂隊經理精英牛頭人酋長",
+    "name": "樂队經理精英牛頭人酋长",
     "tier": "T3",
     "winrate": 0.124,
     "top4": 0.506,
@@ -1179,7 +1179,7 @@ const STATS_MMR = {
     "pickrate": 26.99
    },
    {
-    "name": "薩魯法爾大王",
+    "name": "薩鲁法尔大王",
     "tier": "T3",
     "winrate": 0.0865,
     "top4": 0.5154,
@@ -1195,7 +1195,7 @@ const STATS_MMR = {
     "pickrate": 15.53
    },
    {
-    "name": "諾茲多姆",
+    "name": "诺茲多姆",
     "tier": "T3",
     "winrate": 0.1042,
     "top4": 0.4951,
@@ -1203,7 +1203,7 @@ const STATS_MMR = {
     "pickrate": 11.65
    },
    {
-    "name": "辛達苟薩",
+    "name": "辛达苟薩",
     "tier": "T3",
     "winrate": 0.1155,
     "top4": 0.4989,
@@ -1211,7 +1211,7 @@ const STATS_MMR = {
     "pickrate": 19.72
    },
    {
-    "name": "庫爾特魯斯·隕燼",
+    "name": "庫尔特鲁斯·陨烬",
     "tier": "T3",
     "winrate": 0.0988,
     "top4": 0.4865,
@@ -1235,7 +1235,7 @@ const STATS_MMR = {
     "pickrate": 14.29
    },
    {
-    "name": "霍格船長",
+    "name": "霍格船长",
     "tier": "T3",
     "winrate": 0.1051,
     "top4": 0.4788,
@@ -1243,7 +1243,7 @@ const STATS_MMR = {
     "pickrate": 18.69
    },
    {
-    "name": "米爾菲絲·法力風暴",
+    "name": "米尔菲丝·法力風暴",
     "tier": "T3",
     "winrate": 0.1188,
     "top4": 0.4821,
@@ -1259,7 +1259,7 @@ const STATS_MMR = {
     "pickrate": 17.65
    },
    {
-    "name": "吉姆·雷諾",
+    "name": "吉姆·雷诺",
     "tier": "T3",
     "winrate": 0.0644,
     "top4": 0.4257,
@@ -1273,7 +1273,7 @@ const STATS_MMR = {
   "fetchedAt": "2026-11-01",
   "heroes": [
    {
-    "name": "加拉克蘇斯大王",
+    "name": "加拉克苏斯大王",
     "tier": "T0",
     "winrate": 0.2004,
     "top4": 0.6635,
@@ -1289,7 +1289,7 @@ const STATS_MMR = {
     "pickrate": 37.65
    },
    {
-    "name": "德雷阿佳絲",
+    "name": "德雷阿佳丝",
     "tier": "T0",
     "winrate": 0.1084,
     "top4": 0.6569,
@@ -1297,7 +1297,7 @@ const STATS_MMR = {
     "pickrate": 46.09
    },
    {
-    "name": "凱瑞爾·羅姆",
+    "name": "凱瑞尔·罗姆",
     "tier": "T0",
     "winrate": 0.1265,
     "top4": 0.6296,
@@ -1305,7 +1305,7 @@ const STATS_MMR = {
     "pickrate": 29
    },
    {
-    "name": "特萊斯塔斯，寄生之魂",
+    "name": "特莱斯塔斯，寄生之魂",
     "tier": "T0",
     "winrate": 0.1594,
     "top4": 0.6293,
@@ -1313,7 +1313,7 @@ const STATS_MMR = {
     "pickrate": 55.99
    },
    {
-    "name": "釦子",
+    "name": "扣子",
     "tier": "T0",
     "winrate": 0.1735,
     "top4": 0.6124,
@@ -1321,7 +1321,7 @@ const STATS_MMR = {
     "pickrate": 54.66
    },
    {
-    "name": "亡語者布萊克松",
+    "name": "死亡之聲者布莱克松",
     "tier": "T0",
     "winrate": 0.1351,
     "top4": 0.6193,
@@ -1337,7 +1337,7 @@ const STATS_MMR = {
     "pickrate": 59.94
    },
    {
-    "name": "奧拉基爾",
+    "name": "奧拉基尔",
     "tier": "T0",
     "winrate": 0.1435,
     "top4": 0.6063,
@@ -1385,7 +1385,7 @@ const STATS_MMR = {
     "pickrate": 27.34
    },
    {
-    "name": "典獄長",
+    "name": "典獄长",
     "tier": "T1",
     "winrate": 0.1477,
     "top4": 0.6067,
@@ -1409,7 +1409,7 @@ const STATS_MMR = {
     "pickrate": 15.24
    },
    {
-    "name": "風暴之王托里姆",
+    "name": "風暴之王托裡姆",
     "tier": "T1",
     "winrate": 0.1523,
     "top4": 0.5917,
@@ -1417,7 +1417,7 @@ const STATS_MMR = {
     "pickrate": 43.07
    },
    {
-    "name": "舞者達瑞爾",
+    "name": "舞者达瑞尔",
     "tier": "T1",
     "winrate": 0.1093,
     "top4": 0.5994,
@@ -1425,7 +1425,7 @@ const STATS_MMR = {
     "pickrate": 19.62
    },
    {
-    "name": "德雷克塔爾",
+    "name": "德雷克塔尔",
     "tier": "T1",
     "winrate": 0.1655,
     "top4": 0.5971,
@@ -1433,7 +1433,7 @@ const STATS_MMR = {
     "pickrate": 25.14
    },
    {
-    "name": "範達爾·雷矛",
+    "name": "範达尔·雷矛",
     "tier": "T1",
     "winrate": 0.1602,
     "top4": 0.5927,
@@ -1441,7 +1441,7 @@ const STATS_MMR = {
     "pickrate": 26.69
    },
    {
-    "name": "希爾瓦娜斯·風行者",
+    "name": "希尔瓦娜斯·風行者",
     "tier": "T1",
     "winrate": 0.1718,
     "top4": 0.587,
@@ -1473,7 +1473,7 @@ const STATS_MMR = {
     "pickrate": 12.75
    },
    {
-    "name": "因葛，鋼鐵頌歌",
+    "name": "因葛，钢鐵颂歌",
     "tier": "T1",
     "winrate": 0.1201,
     "top4": 0.5836,
@@ -1481,7 +1481,7 @@ const STATS_MMR = {
     "pickrate": 19.36
    },
    {
-    "name": "鐘錶先生克勞沃斯",
+    "name": "鐘表先生克勞沃斯",
     "tier": "T1",
     "winrate": 0.1528,
     "top4": 0.5802,
@@ -1489,7 +1489,7 @@ const STATS_MMR = {
     "pickrate": 36.45
    },
    {
-    "name": "芬利·莫格頓爵士",
+    "name": "芬利·莫格顿爵士",
     "tier": "T1",
     "winrate": 0.1512,
     "top4": 0.5801,
@@ -1505,7 +1505,7 @@ const STATS_MMR = {
     "pickrate": 28.3
    },
    {
-    "name": "摩洛克·福爾摩斯",
+    "name": "摩洛克·福尔摩斯",
     "tier": "T1",
     "winrate": 0.1498,
     "top4": 0.5766,
@@ -1521,7 +1521,7 @@ const STATS_MMR = {
     "pickrate": 38.7
    },
    {
-    "name": "墮落的喬治",
+    "name": "堕落的喬治",
     "tier": "T1",
     "winrate": 0.1379,
     "top4": 0.577,
@@ -1529,7 +1529,7 @@ const STATS_MMR = {
     "pickrate": 19.37
    },
    {
-    "name": "阿萊克絲塔薩",
+    "name": "阿莱克丝塔薩",
     "tier": "T1",
     "winrate": 0.1521,
     "top4": 0.5828,
@@ -1537,7 +1537,7 @@ const STATS_MMR = {
     "pickrate": 16.32
    },
    {
-    "name": "瓦託格爾女王",
+    "name": "瓦托格尔女王",
     "tier": "T1",
     "winrate": 0.1086,
     "top4": 0.5783,
@@ -1545,7 +1545,7 @@ const STATS_MMR = {
     "pickrate": 12.16
    },
    {
-    "name": "館長",
+    "name": "館长",
     "tier": "T1",
     "winrate": 0.1147,
     "top4": 0.5846,
@@ -1561,7 +1561,7 @@ const STATS_MMR = {
     "pickrate": 18.96
    },
    {
-    "name": "巫妖巴茲亞爾",
+    "name": "巫妖巴茲亞尔",
     "tier": "T2",
     "winrate": 0.1162,
     "top4": 0.5864,
@@ -1569,7 +1569,7 @@ const STATS_MMR = {
     "pickrate": 16.74
    },
    {
-    "name": "尤朵拉船長",
+    "name": "尤朵拉船长",
     "tier": "T2",
     "winrate": 0.1403,
     "top4": 0.5744,
@@ -1585,7 +1585,7 @@ const STATS_MMR = {
     "pickrate": 21.23
    },
    {
-    "name": "米羅克",
+    "name": "米罗克",
     "tier": "T2",
     "winrate": 0.1525,
     "top4": 0.5687,
@@ -1593,7 +1593,7 @@ const STATS_MMR = {
     "pickrate": 47.75
    },
    {
-    "name": "大主教奧薩爾",
+    "name": "大主教奧薩尔",
     "tier": "T2",
     "winrate": 0.131,
     "top4": 0.57,
@@ -1609,7 +1609,7 @@ const STATS_MMR = {
     "pickrate": 27.03
    },
    {
-    "name": "雷諾·傑克遜",
+    "name": "雷诺·杰克逊",
     "tier": "T2",
     "winrate": 0.1663,
     "top4": 0.5661,
@@ -1657,7 +1657,7 @@ const STATS_MMR = {
     "pickrate": 17.02
    },
    {
-    "name": "布魯坎",
+    "name": "布鲁坎",
     "tier": "T2",
     "winrate": 0.1195,
     "top4": 0.5711,
@@ -1665,7 +1665,7 @@ const STATS_MMR = {
     "pickrate": 10.35
    },
    {
-    "name": "搖滾教父沃恩",
+    "name": "摇滚教父沃恩",
     "tier": "T2",
     "winrate": 0.1461,
     "top4": 0.5607,
@@ -1681,7 +1681,7 @@ const STATS_MMR = {
     "pickrate": 22.69
    },
    {
-    "name": "克蘇恩",
+    "name": "克苏恩",
     "tier": "T2",
     "winrate": 0.0985,
     "top4": 0.5701,
@@ -1697,7 +1697,7 @@ const STATS_MMR = {
     "pickrate": 48.18
    },
    {
-    "name": "無限巨龍姆諾茲多",
+    "name": "無限巨龍姆诺茲多",
     "tier": "T2",
     "winrate": 0.1344,
     "top4": 0.5685,
@@ -1705,7 +1705,7 @@ const STATS_MMR = {
     "pickrate": 39.89
    },
    {
-    "name": "鉤牙船長",
+    "name": "钩牙船长",
     "tier": "T2",
     "winrate": 0.1316,
     "top4": 0.5578,
@@ -1713,7 +1713,7 @@ const STATS_MMR = {
     "pickrate": 17.77
    },
    {
-    "name": "預言者努波頓",
+    "name": "預言者努波顿",
     "tier": "T2",
     "winrate": 0.142,
     "top4": 0.5565,
@@ -1745,7 +1745,7 @@ const STATS_MMR = {
     "pickrate": 27.65
    },
    {
-    "name": "了不起的傑弗里斯",
+    "name": "了不起的杰弗裡斯",
     "tier": "T2",
     "winrate": 0.1337,
     "top4": 0.5533,
@@ -1777,7 +1777,7 @@ const STATS_MMR = {
     "pickrate": 40.45
    },
    {
-    "name": "巴羅夫領主",
+    "name": "巴罗夫領主",
     "tier": "T2",
     "winrate": 0.134,
     "top4": 0.5598,
@@ -1809,7 +1809,7 @@ const STATS_MMR = {
     "pickrate": 31.01
    },
    {
-    "name": "薩魯法爾大王",
+    "name": "薩鲁法尔大王",
     "tier": "T2",
     "winrate": 0.0959,
     "top4": 0.5537,
@@ -1825,7 +1825,7 @@ const STATS_MMR = {
     "pickrate": 24.97
    },
    {
-    "name": "伊妮·積雷",
+    "name": "伊妮·积雷",
     "tier": "T2",
     "winrate": 0.1418,
     "top4": 0.5363,
@@ -1857,7 +1857,7 @@ const STATS_MMR = {
     "pickrate": 6.99
    },
    {
-    "name": "凱爾薩斯·逐日者",
+    "name": "凱尔薩斯·逐日者",
     "tier": "T3",
     "winrate": 0.1174,
     "top4": 0.5472,
@@ -1865,7 +1865,7 @@ const STATS_MMR = {
     "pickrate": 12.15
    },
    {
-    "name": "永恆者託奇",
+    "name": "永恆者托奇",
     "tier": "T3",
     "winrate": 0.1257,
     "top4": 0.5455,
@@ -1881,7 +1881,7 @@ const STATS_MMR = {
     "pickrate": 19.05
    },
    {
-    "name": "劫匪之王託瓦格爾",
+    "name": "劫匪之王托瓦格尔",
     "tier": "T3",
     "winrate": 0.125,
     "top4": 0.5378,
@@ -1905,7 +1905,7 @@ const STATS_MMR = {
     "pickrate": 17.18
    },
    {
-    "name": "時光扭曲者克羅米",
+    "name": "時光扭曲者克罗米",
     "tier": "T3",
     "winrate": 0.1306,
     "top4": 0.5464,
@@ -1913,7 +1913,7 @@ const STATS_MMR = {
     "pickrate": 17.59
    },
    {
-    "name": "恐龍大師布萊恩",
+    "name": "恐龍大師布莱恩",
     "tier": "T3",
     "winrate": 0.1182,
     "top4": 0.5455,
@@ -1921,7 +1921,7 @@ const STATS_MMR = {
     "pickrate": 32.83
    },
    {
-    "name": "澤瑞拉",
+    "name": "泽瑞拉",
     "tier": "T3",
     "winrate": 0.1235,
     "top4": 0.5422,
@@ -1945,7 +1945,7 @@ const STATS_MMR = {
     "pickrate": 10.9
    },
    {
-    "name": "米爾豪斯·法力風暴",
+    "name": "米尔豪斯·法力風暴",
     "tier": "T3",
     "winrate": 0.0888,
     "top4": 0.5426,
@@ -1953,7 +1953,7 @@ const STATS_MMR = {
     "pickrate": 8.46
    },
    {
-    "name": "瓦爾登·晨擁",
+    "name": "瓦尔登·晨擁",
     "tier": "T3",
     "winrate": 0.1176,
     "top4": 0.5432,
@@ -1961,7 +1961,7 @@ const STATS_MMR = {
     "pickrate": 14.92
    },
    {
-    "name": "貿易親王加里維克斯",
+    "name": "贸易親王加裡維克斯",
     "tier": "T3",
     "winrate": 0.1937,
     "top4": 0.5271,
@@ -1993,7 +1993,7 @@ const STATS_MMR = {
     "pickrate": 8.61
    },
    {
-    "name": "詹迪斯·巴羅夫",
+    "name": "詹迪斯·巴罗夫",
     "tier": "T3",
     "winrate": 0.1125,
     "top4": 0.5418,
@@ -2001,7 +2001,7 @@ const STATS_MMR = {
     "pickrate": 14.05
    },
    {
-    "name": "林地守護者歐穆",
+    "name": "林地守護者欧穆",
     "tier": "T3",
     "winrate": 0.1386,
     "top4": 0.5344,
@@ -2017,7 +2017,7 @@ const STATS_MMR = {
     "pickrate": 42.62
    },
    {
-    "name": "克隆大師澤裡克",
+    "name": "克隆大師泽裡克",
     "tier": "T3",
     "winrate": 0.1439,
     "top4": 0.5329,
@@ -2057,7 +2057,7 @@ const STATS_MMR = {
     "pickrate": 13.13
    },
    {
-    "name": "諾茲多姆",
+    "name": "诺茲多姆",
     "tier": "T3",
     "winrate": 0.119,
     "top4": 0.5222,
@@ -2065,7 +2065,7 @@ const STATS_MMR = {
     "pickrate": 11.2
    },
    {
-    "name": "庫爾特魯斯·隕燼",
+    "name": "庫尔特鲁斯·陨烬",
     "tier": "T3",
     "winrate": 0.1166,
     "top4": 0.519,
@@ -2073,7 +2073,7 @@ const STATS_MMR = {
     "pickrate": 8.95
    },
    {
-    "name": "苔絲·格雷邁恩",
+    "name": "苔丝·格雷迈恩",
     "tier": "T3",
     "winrate": 0.1242,
     "top4": 0.5132,
@@ -2081,7 +2081,7 @@ const STATS_MMR = {
     "pickrate": 21.11
    },
    {
-    "name": "樂隊經理精英牛頭人酋長",
+    "name": "樂队經理精英牛頭人酋长",
     "tier": "T3",
     "winrate": 0.1279,
     "top4": 0.5096,
@@ -2089,7 +2089,7 @@ const STATS_MMR = {
     "pickrate": 23.97
    },
    {
-    "name": "塔姆辛·羅姆",
+    "name": "塔姆辛·罗姆",
     "tier": "T3",
     "winrate": 0.0811,
     "top4": 0.5106,
@@ -2105,7 +2105,7 @@ const STATS_MMR = {
     "pickrate": 6.99
    },
    {
-    "name": "米爾菲絲·法力風暴",
+    "name": "米尔菲丝·法力風暴",
     "tier": "T3",
     "winrate": 0.15,
     "top4": 0.5067,
@@ -2113,7 +2113,7 @@ const STATS_MMR = {
     "pickrate": 15.56
    },
    {
-    "name": "霍格船長",
+    "name": "霍格船长",
     "tier": "T3",
     "winrate": 0.1089,
     "top4": 0.5017,
@@ -2121,7 +2121,7 @@ const STATS_MMR = {
     "pickrate": 14.84
    },
    {
-    "name": "艾德溫·範克里夫",
+    "name": "艾德温·範克裡夫",
     "tier": "T3",
     "winrate": 0.0778,
     "top4": 0.5053,
@@ -2137,7 +2137,7 @@ const STATS_MMR = {
     "pickrate": 19.65
    },
    {
-    "name": "辛達苟薩",
+    "name": "辛达苟薩",
     "tier": "T3",
     "winrate": 0.1226,
     "top4": 0.4879,
@@ -2169,7 +2169,7 @@ const STATS_MMR = {
     "pickrate": 10.49
    },
    {
-    "name": "炎魔之王拉格納羅斯",
+    "name": "炎魔之王拉格納罗斯",
     "tier": "T3",
     "winrate": 0.0839,
     "top4": 0.4923,
@@ -2177,7 +2177,7 @@ const STATS_MMR = {
     "pickrate": 4.23
    },
    {
-    "name": "菌菇術士弗洛格爾",
+    "name": "菌菇術士弗洛格尔",
     "tier": "T3",
     "winrate": 0.122,
     "top4": 0.4825,
@@ -2193,7 +2193,7 @@ const STATS_MMR = {
     "pickrate": 8.99
    },
    {
-    "name": "吉姆·雷諾",
+    "name": "吉姆·雷诺",
     "tier": "T3",
     "winrate": 0.0645,
     "top4": 0.4178,
@@ -2207,7 +2207,7 @@ const STATS_MMR = {
   "fetchedAt": "2026-11-01",
   "heroes": [
    {
-    "name": "加拉克蘇斯大王",
+    "name": "加拉克苏斯大王",
     "tier": "T0",
     "winrate": 0.2195,
     "top4": 0.6727,
@@ -2215,7 +2215,7 @@ const STATS_MMR = {
     "pickrate": 47.22
    },
    {
-    "name": "亡語者布萊克松",
+    "name": "死亡之聲者布莱克松",
     "tier": "T0",
     "winrate": 0.1778,
     "top4": 0.6609,
@@ -2231,7 +2231,7 @@ const STATS_MMR = {
     "pickrate": 35.92
    },
    {
-    "name": "凱瑞爾·羅姆",
+    "name": "凱瑞尔·罗姆",
     "tier": "T0",
     "winrate": 0.1476,
     "top4": 0.6645,
@@ -2239,7 +2239,7 @@ const STATS_MMR = {
     "pickrate": 29.49
    },
    {
-    "name": "德雷阿佳絲",
+    "name": "德雷阿佳丝",
     "tier": "T0",
     "winrate": 0.1369,
     "top4": 0.678,
@@ -2247,7 +2247,7 @@ const STATS_MMR = {
     "pickrate": 45.48
    },
    {
-    "name": "特萊斯塔斯，寄生之魂",
+    "name": "特莱斯塔斯，寄生之魂",
     "tier": "T0",
     "winrate": 0.1829,
     "top4": 0.6442,
@@ -2255,7 +2255,7 @@ const STATS_MMR = {
     "pickrate": 53.64
    },
    {
-    "name": "釦子",
+    "name": "扣子",
     "tier": "T0",
     "winrate": 0.1954,
     "top4": 0.6305,
@@ -2295,7 +2295,7 @@ const STATS_MMR = {
     "pickrate": 54.19
    },
    {
-    "name": "奧拉基爾",
+    "name": "奧拉基尔",
     "tier": "T0",
     "winrate": 0.1644,
     "top4": 0.629,
@@ -2303,7 +2303,7 @@ const STATS_MMR = {
     "pickrate": 27.69
    },
    {
-    "name": "典獄長",
+    "name": "典獄长",
     "tier": "T1",
     "winrate": 0.1646,
     "top4": 0.6325,
@@ -2319,7 +2319,7 @@ const STATS_MMR = {
     "pickrate": 40.78
    },
    {
-    "name": "舞者達瑞爾",
+    "name": "舞者达瑞尔",
     "tier": "T1",
     "winrate": 0.129,
     "top4": 0.6319,
@@ -2343,7 +2343,7 @@ const STATS_MMR = {
     "pickrate": 16.23
    },
    {
-    "name": "風暴之王托里姆",
+    "name": "風暴之王托裡姆",
     "tier": "T1",
     "winrate": 0.1796,
     "top4": 0.6189,
@@ -2359,7 +2359,7 @@ const STATS_MMR = {
     "pickrate": 29.11
    },
    {
-    "name": "德雷克塔爾",
+    "name": "德雷克塔尔",
     "tier": "T1",
     "winrate": 0.1882,
     "top4": 0.6187,
@@ -2367,7 +2367,7 @@ const STATS_MMR = {
     "pickrate": 27.37
    },
    {
-    "name": "範達爾·雷矛",
+    "name": "範达尔·雷矛",
     "tier": "T1",
     "winrate": 0.1879,
     "top4": 0.612,
@@ -2375,7 +2375,7 @@ const STATS_MMR = {
     "pickrate": 28.21
    },
    {
-    "name": "鐘錶先生克勞沃斯",
+    "name": "鐘表先生克勞沃斯",
     "tier": "T1",
     "winrate": 0.1765,
     "top4": 0.6097,
@@ -2391,7 +2391,7 @@ const STATS_MMR = {
     "pickrate": 39.33
    },
    {
-    "name": "因葛，鋼鐵頌歌",
+    "name": "因葛，钢鐵颂歌",
     "tier": "T1",
     "winrate": 0.1397,
     "top4": 0.6116,
@@ -2399,7 +2399,7 @@ const STATS_MMR = {
     "pickrate": 19.52
    },
    {
-    "name": "阿萊克絲塔薩",
+    "name": "阿莱克丝塔薩",
     "tier": "T1",
     "winrate": 0.1921,
     "top4": 0.6056,
@@ -2415,7 +2415,7 @@ const STATS_MMR = {
     "pickrate": 14.38
    },
    {
-    "name": "墮落的喬治",
+    "name": "堕落的喬治",
     "tier": "T1",
     "winrate": 0.1609,
     "top4": 0.6069,
@@ -2439,7 +2439,7 @@ const STATS_MMR = {
     "pickrate": 30.73
    },
    {
-    "name": "瓦託格爾女王",
+    "name": "瓦托格尔女王",
     "tier": "T1",
     "winrate": 0.1282,
     "top4": 0.6104,
@@ -2447,7 +2447,7 @@ const STATS_MMR = {
     "pickrate": 13.41
    },
    {
-    "name": "希爾瓦娜斯·風行者",
+    "name": "希尔瓦娜斯·風行者",
     "tier": "T1",
     "winrate": 0.1857,
     "top4": 0.5977,
@@ -2455,7 +2455,7 @@ const STATS_MMR = {
     "pickrate": 38.31
    },
    {
-    "name": "館長",
+    "name": "館长",
     "tier": "T1",
     "winrate": 0.1338,
     "top4": 0.6068,
@@ -2463,7 +2463,7 @@ const STATS_MMR = {
     "pickrate": 22.8
    },
    {
-    "name": "大主教奧薩爾",
+    "name": "大主教奧薩尔",
     "tier": "T1",
     "winrate": 0.15,
     "top4": 0.6014,
@@ -2479,7 +2479,7 @@ const STATS_MMR = {
     "pickrate": 21.04
    },
    {
-    "name": "巫妖巴茲亞爾",
+    "name": "巫妖巴茲亞尔",
     "tier": "T1",
     "winrate": 0.1426,
     "top4": 0.6101,
@@ -2511,7 +2511,7 @@ const STATS_MMR = {
     "pickrate": 20.03
    },
    {
-    "name": "薩魯法爾大王",
+    "name": "薩鲁法尔大王",
     "tier": "T2",
     "winrate": 0.1243,
     "top4": 0.605,
@@ -2519,7 +2519,7 @@ const STATS_MMR = {
     "pickrate": 16.35
    },
    {
-    "name": "無限巨龍姆諾茲多",
+    "name": "無限巨龍姆诺茲多",
     "tier": "T2",
     "winrate": 0.1614,
     "top4": 0.6005,
@@ -2527,7 +2527,7 @@ const STATS_MMR = {
     "pickrate": 42.41
    },
    {
-    "name": "米羅克",
+    "name": "米罗克",
     "tier": "T2",
     "winrate": 0.1735,
     "top4": 0.5924,
@@ -2543,7 +2543,7 @@ const STATS_MMR = {
     "pickrate": 28.84
    },
    {
-    "name": "摩洛克·福爾摩斯",
+    "name": "摩洛克·福尔摩斯",
     "tier": "T2",
     "winrate": 0.1642,
     "top4": 0.5946,
@@ -2551,7 +2551,7 @@ const STATS_MMR = {
     "pickrate": 22.6
    },
    {
-    "name": "克蘇恩",
+    "name": "克苏恩",
     "tier": "T2",
     "winrate": 0.1167,
     "top4": 0.6029,
@@ -2575,7 +2575,7 @@ const STATS_MMR = {
     "pickrate": 34.61
    },
    {
-    "name": "芬利·莫格頓爵士",
+    "name": "芬利·莫格顿爵士",
     "tier": "T2",
     "winrate": 0.167,
     "top4": 0.5926,
@@ -2591,7 +2591,7 @@ const STATS_MMR = {
     "pickrate": 24.21
    },
    {
-    "name": "布魯坎",
+    "name": "布鲁坎",
     "tier": "T2",
     "winrate": 0.1391,
     "top4": 0.5924,
@@ -2631,7 +2631,7 @@ const STATS_MMR = {
     "pickrate": 18.17
    },
    {
-    "name": "尤朵拉船長",
+    "name": "尤朵拉船长",
     "tier": "T2",
     "winrate": 0.1562,
     "top4": 0.5866,
@@ -2663,7 +2663,7 @@ const STATS_MMR = {
     "pickrate": 18.15
    },
    {
-    "name": "凱爾薩斯·逐日者",
+    "name": "凱尔薩斯·逐日者",
     "tier": "T2",
     "winrate": 0.1431,
     "top4": 0.5835,
@@ -2687,7 +2687,7 @@ const STATS_MMR = {
     "pickrate": 29.31
    },
    {
-    "name": "預言者努波頓",
+    "name": "預言者努波顿",
     "tier": "T2",
     "winrate": 0.1635,
     "top4": 0.5781,
@@ -2695,7 +2695,7 @@ const STATS_MMR = {
     "pickrate": 17.91
    },
    {
-    "name": "搖滾教父沃恩",
+    "name": "摇滚教父沃恩",
     "tier": "T2",
     "winrate": 0.1581,
     "top4": 0.5766,
@@ -2719,7 +2719,7 @@ const STATS_MMR = {
     "pickrate": 20.76
    },
    {
-    "name": "了不起的傑弗里斯",
+    "name": "了不起的杰弗裡斯",
     "tier": "T2",
     "winrate": 0.1572,
     "top4": 0.5745,
@@ -2735,7 +2735,7 @@ const STATS_MMR = {
     "pickrate": 19.48
    },
    {
-    "name": "瓦爾登·晨擁",
+    "name": "瓦尔登·晨擁",
     "tier": "T2",
     "winrate": 0.1458,
     "top4": 0.5775,
@@ -2743,7 +2743,7 @@ const STATS_MMR = {
     "pickrate": 17.06
    },
    {
-    "name": "鉤牙船長",
+    "name": "钩牙船长",
     "tier": "T2",
     "winrate": 0.1473,
     "top4": 0.5745,
@@ -2767,7 +2767,7 @@ const STATS_MMR = {
     "pickrate": 38.03
    },
    {
-    "name": "雷諾·傑克遜",
+    "name": "雷诺·杰克逊",
     "tier": "T3",
     "winrate": 0.1784,
     "top4": 0.5654,
@@ -2807,7 +2807,7 @@ const STATS_MMR = {
     "pickrate": 15.34
    },
    {
-    "name": "米爾豪斯·法力風暴",
+    "name": "米尔豪斯·法力風暴",
     "tier": "T3",
     "winrate": 0.1084,
     "top4": 0.5737,
@@ -2815,7 +2815,7 @@ const STATS_MMR = {
     "pickrate": 9.42
    },
    {
-    "name": "永恆者託奇",
+    "name": "永恆者托奇",
     "tier": "T3",
     "winrate": 0.1459,
     "top4": 0.5707,
@@ -2823,7 +2823,7 @@ const STATS_MMR = {
     "pickrate": 22.12
    },
    {
-    "name": "伊妮·積雷",
+    "name": "伊妮·积雷",
     "tier": "T3",
     "winrate": 0.1559,
     "top4": 0.5542,
@@ -2871,7 +2871,7 @@ const STATS_MMR = {
     "pickrate": 12.7
    },
    {
-    "name": "恐龍大師布萊恩",
+    "name": "恐龍大師布莱恩",
     "tier": "T3",
     "winrate": 0.1384,
     "top4": 0.5613,
@@ -2879,7 +2879,7 @@ const STATS_MMR = {
     "pickrate": 30.79
    },
    {
-    "name": "諾茲多姆",
+    "name": "诺茲多姆",
     "tier": "T3",
     "winrate": 0.1446,
     "top4": 0.5595,
@@ -2887,7 +2887,7 @@ const STATS_MMR = {
     "pickrate": 13.86
    },
    {
-    "name": "時光扭曲者克羅米",
+    "name": "時光扭曲者克罗米",
     "tier": "T3",
     "winrate": 0.1435,
     "top4": 0.5647,
@@ -2895,7 +2895,7 @@ const STATS_MMR = {
     "pickrate": 17.52
    },
    {
-    "name": "澤瑞拉",
+    "name": "泽瑞拉",
     "tier": "T3",
     "winrate": 0.1405,
     "top4": 0.5588,
@@ -2903,7 +2903,7 @@ const STATS_MMR = {
     "pickrate": 16.45
    },
    {
-    "name": "巴羅夫領主",
+    "name": "巴罗夫領主",
     "tier": "T3",
     "winrate": 0.1502,
     "top4": 0.5662,
@@ -2919,7 +2919,7 @@ const STATS_MMR = {
     "pickrate": 10.81
    },
    {
-    "name": "劫匪之王託瓦格爾",
+    "name": "劫匪之王托瓦格尔",
     "tier": "T3",
     "winrate": 0.1398,
     "top4": 0.5541,
@@ -2927,7 +2927,7 @@ const STATS_MMR = {
     "pickrate": 12.25
    },
    {
-    "name": "林地守護者歐穆",
+    "name": "林地守護者欧穆",
     "tier": "T3",
     "winrate": 0.155,
     "top4": 0.5577,
@@ -2951,7 +2951,7 @@ const STATS_MMR = {
     "pickrate": 34.58
    },
    {
-    "name": "詹迪斯·巴羅夫",
+    "name": "詹迪斯·巴罗夫",
     "tier": "T3",
     "winrate": 0.1307,
     "top4": 0.555,
@@ -2967,7 +2967,7 @@ const STATS_MMR = {
     "pickrate": 9.61
    },
    {
-    "name": "米爾菲絲·法力風暴",
+    "name": "米尔菲丝·法力風暴",
     "tier": "T3",
     "winrate": 0.1801,
     "top4": 0.5359,
@@ -2991,7 +2991,7 @@ const STATS_MMR = {
     "pickrate": 8.49
    },
    {
-    "name": "塔姆辛·羅姆",
+    "name": "塔姆辛·罗姆",
     "tier": "T3",
     "winrate": 0.1138,
     "top4": 0.5534,
@@ -3015,7 +3015,7 @@ const STATS_MMR = {
     "pickrate": 5.12
    },
    {
-    "name": "樂隊經理精英牛頭人酋長",
+    "name": "樂队經理精英牛頭人酋长",
     "tier": "T3",
     "winrate": 0.148,
     "top4": 0.5326,
@@ -3023,7 +3023,7 @@ const STATS_MMR = {
     "pickrate": 22.46
    },
    {
-    "name": "霍格船長",
+    "name": "霍格船长",
     "tier": "T3",
     "winrate": 0.1255,
     "top4": 0.5502,
@@ -3031,7 +3031,7 @@ const STATS_MMR = {
     "pickrate": 17.72
    },
    {
-    "name": "庫爾特魯斯·隕燼",
+    "name": "庫尔特鲁斯·陨烬",
     "tier": "T3",
     "winrate": 0.1348,
     "top4": 0.5411,
@@ -3039,7 +3039,7 @@ const STATS_MMR = {
     "pickrate": 9.79
    },
    {
-    "name": "克隆大師澤裡克",
+    "name": "克隆大師泽裡克",
     "tier": "T3",
     "winrate": 0.1565,
     "top4": 0.5396,
@@ -3047,7 +3047,7 @@ const STATS_MMR = {
     "pickrate": 27.18
    },
    {
-    "name": "貿易親王加里維克斯",
+    "name": "贸易親王加裡維克斯",
     "tier": "T3",
     "winrate": 0.1986,
     "top4": 0.5314,
@@ -3055,7 +3055,7 @@ const STATS_MMR = {
     "pickrate": 26.32
    },
    {
-    "name": "苔絲·格雷邁恩",
+    "name": "苔丝·格雷迈恩",
     "tier": "T3",
     "winrate": 0.1369,
     "top4": 0.5312,
@@ -3063,7 +3063,7 @@ const STATS_MMR = {
     "pickrate": 19.99
    },
    {
-    "name": "艾德溫·範克里夫",
+    "name": "艾德温·範克裡夫",
     "tier": "T3",
     "winrate": 0.0932,
     "top4": 0.548,
@@ -3087,7 +3087,7 @@ const STATS_MMR = {
     "pickrate": 21.98
    },
    {
-    "name": "辛達苟薩",
+    "name": "辛达苟薩",
     "tier": "T3",
     "winrate": 0.1415,
     "top4": 0.5231,
@@ -3095,7 +3095,7 @@ const STATS_MMR = {
     "pickrate": 14.99
    },
    {
-    "name": "炎魔之王拉格納羅斯",
+    "name": "炎魔之王拉格納罗斯",
     "tier": "T3",
     "winrate": 0.0973,
     "top4": 0.5362,
@@ -3119,7 +3119,7 @@ const STATS_MMR = {
     "pickrate": 9.42
    },
    {
-    "name": "吉姆·雷諾",
+    "name": "吉姆·雷诺",
     "tier": "T3",
     "winrate": 0.1092,
     "top4": 0.4984,
@@ -3127,7 +3127,7 @@ const STATS_MMR = {
     "pickrate": 10.83
    },
    {
-    "name": "菌菇術士弗洛格爾",
+    "name": "菌菇術士弗洛格尔",
     "tier": "T3",
     "winrate": 0.127,
     "top4": 0.4993,

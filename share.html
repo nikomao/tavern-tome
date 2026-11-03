@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>阵容分享图 · 酒馆手札</title>
 <link rel="icon" href="favicon.png" type="image/png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#120b07">
 <style>
   body{margin:0;background:#120b07;color:#f4e7cf;font-family:"Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;padding:20px}
   .bar{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap;justify-content:center}
@@ -34,5 +36,12 @@
 <script src="analytics-config.js?v=20261103g"></script>
 <script src="analytics.js?v=20261103g"></script>
 <script src="history.js?v=20261103g"></script>
+<script>
+  if('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')){
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('sw.js').catch(function(){});
+    });
+  }
+</script>
 </body>
 </html>

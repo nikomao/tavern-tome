@@ -3,8 +3,8 @@
 
   "use strict";
   var RACE = { BEAST:"野獸", DEMON:"惡魔", DRAGON:"龍", ELEMENTAL:"元素", MECHANICAL:"機械",
-    MURLOC:"魚人", NAGA:"納迦", PIRATE:"海盜", QUILBOAR:"野豬人", UNDEAD:"亡靈",
-    ABERRATION:"畸變怪", ALL:"全種族" };
+    MURLOC:"魚人", NAGA:"納迦", PIRATE:"海盜", QUILBOAR:"野豬人", UNDEAD:"不死族",
+    ABERRATION:"畸變體", ALL:"全部種族" };
   var PER = 60;
   var state = { q:"", tier:"", race:"", type:"", set:"", page:0 };
   var rows = [];

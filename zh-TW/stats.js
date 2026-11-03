@@ -1,4 +1,4 @@
-/* 對局統計資料（由 scripts/import_stats.mjs 生成） */
+/* 對局統計數據（由 scripts/import_stats.mjs 生成） */
 const STATS = {
   "source": "Firestone / ZeroToHeroes",
   "url": "https://static.zerotoheroes.com/api/bgs/",
@@ -8,7 +8,7 @@ const STATS = {
   "sample": 2202934,
   "heroes": [
     {
-      "name": "加拉克蘇斯大王",
+      "name": "加拉克苏斯大王",
       "tier": "T0",
       "winrate": 0.2195,
       "top4": 0.6727,
@@ -16,7 +16,7 @@ const STATS = {
       "pickrate": 47.22
     },
     {
-      "name": "亡語者布萊克松",
+      "name": "死亡之聲者布莱克松",
       "tier": "T0",
       "winrate": 0.1778,
       "top4": 0.6609,
@@ -32,7 +32,7 @@ const STATS = {
       "pickrate": 35.92
     },
     {
-      "name": "凱瑞爾·羅姆",
+      "name": "凱瑞尔·罗姆",
       "tier": "T0",
       "winrate": 0.1476,
       "top4": 0.6645,
@@ -40,7 +40,7 @@ const STATS = {
       "pickrate": 29.49
     },
     {
-      "name": "德雷阿佳絲",
+      "name": "德雷阿佳丝",
       "tier": "T0",
       "winrate": 0.1369,
       "top4": 0.678,
@@ -48,7 +48,7 @@ const STATS = {
       "pickrate": 45.48
     },
     {
-      "name": "特萊斯塔斯，寄生之魂",
+      "name": "特莱斯塔斯，寄生之魂",
       "tier": "T0",
       "winrate": 0.1829,
       "top4": 0.6442,
@@ -56,7 +56,7 @@ const STATS = {
       "pickrate": 53.64
     },
     {
-      "name": "釦子",
+      "name": "扣子",
       "tier": "T0",
       "winrate": 0.1954,
       "top4": 0.6305,
@@ -96,7 +96,7 @@ const STATS = {
       "pickrate": 54.19
     },
     {
-      "name": "奧拉基爾",
+      "name": "奧拉基尔",
       "tier": "T0",
       "winrate": 0.1644,
       "top4": 0.629,
@@ -104,7 +104,7 @@ const STATS = {
       "pickrate": 27.69
     },
     {
-      "name": "典獄長",
+      "name": "典獄长",
       "tier": "T1",
       "winrate": 0.1646,
       "top4": 0.6325,
@@ -120,7 +120,7 @@ const STATS = {
       "pickrate": 40.78
     },
     {
-      "name": "舞者達瑞爾",
+      "name": "舞者达瑞尔",
       "tier": "T1",
       "winrate": 0.129,
       "top4": 0.6319,
@@ -144,7 +144,7 @@ const STATS = {
       "pickrate": 16.23
     },
     {
-      "name": "風暴之王托里姆",
+      "name": "風暴之王托裡姆",
       "tier": "T1",
       "winrate": 0.1796,
       "top4": 0.6189,
@@ -160,7 +160,7 @@ const STATS = {
       "pickrate": 29.11
     },
     {
-      "name": "德雷克塔爾",
+      "name": "德雷克塔尔",
       "tier": "T1",
       "winrate": 0.1882,
       "top4": 0.6187,
@@ -168,7 +168,7 @@ const STATS = {
       "pickrate": 27.37
     },
     {
-      "name": "範達爾·雷矛",
+      "name": "範达尔·雷矛",
       "tier": "T1",
       "winrate": 0.1879,
       "top4": 0.612,
@@ -176,7 +176,7 @@ const STATS = {
       "pickrate": 28.21
     },
     {
-      "name": "鐘錶先生克勞沃斯",
+      "name": "鐘表先生克勞沃斯",
       "tier": "T1",
       "winrate": 0.1765,
       "top4": 0.6097,
@@ -192,7 +192,7 @@ const STATS = {
       "pickrate": 39.33
     },
     {
-      "name": "因葛，鋼鐵頌歌",
+      "name": "因葛，钢鐵颂歌",
       "tier": "T1",
       "winrate": 0.1397,
       "top4": 0.6116,
@@ -200,7 +200,7 @@ const STATS = {
       "pickrate": 19.52
     },
     {
-      "name": "阿萊克絲塔薩",
+      "name": "阿莱克丝塔薩",
       "tier": "T1",
       "winrate": 0.1921,
       "top4": 0.6056,
@@ -216,7 +216,7 @@ const STATS = {
       "pickrate": 14.38
     },
     {
-      "name": "墮落的喬治",
+      "name": "堕落的喬治",
       "tier": "T1",
       "winrate": 0.1609,
       "top4": 0.6069,
@@ -240,7 +240,7 @@ const STATS = {
       "pickrate": 30.73
     },
     {
-      "name": "瓦託格爾女王",
+      "name": "瓦托格尔女王",
       "tier": "T1",
       "winrate": 0.1282,
       "top4": 0.6104,
@@ -248,7 +248,7 @@ const STATS = {
       "pickrate": 13.41
     },
     {
-      "name": "希爾瓦娜斯·風行者",
+      "name": "希尔瓦娜斯·風行者",
       "tier": "T1",
       "winrate": 0.1857,
       "top4": 0.5977,
@@ -256,7 +256,7 @@ const STATS = {
       "pickrate": 38.31
     },
     {
-      "name": "館長",
+      "name": "館长",
       "tier": "T1",
       "winrate": 0.1338,
       "top4": 0.6068,
@@ -264,7 +264,7 @@ const STATS = {
       "pickrate": 22.8
     },
     {
-      "name": "大主教奧薩爾",
+      "name": "大主教奧薩尔",
       "tier": "T1",
       "winrate": 0.15,
       "top4": 0.6014,
@@ -280,7 +280,7 @@ const STATS = {
       "pickrate": 21.04
     },
     {
-      "name": "巫妖巴茲亞爾",
+      "name": "巫妖巴茲亞尔",
       "tier": "T1",
       "winrate": 0.1426,
       "top4": 0.6101,
@@ -312,7 +312,7 @@ const STATS = {
       "pickrate": 20.03
     },
     {
-      "name": "薩魯法爾大王",
+      "name": "薩鲁法尔大王",
       "tier": "T2",
       "winrate": 0.1243,
       "top4": 0.605,
@@ -320,7 +320,7 @@ const STATS = {
       "pickrate": 16.35
     },
     {
-      "name": "無限巨龍姆諾茲多",
+      "name": "無限巨龍姆诺茲多",
       "tier": "T2",
       "winrate": 0.1614,
       "top4": 0.6005,
@@ -328,7 +328,7 @@ const STATS = {
       "pickrate": 42.41
     },
     {
-      "name": "米羅克",
+      "name": "米罗克",
       "tier": "T2",
       "winrate": 0.1735,
       "top4": 0.5924,
@@ -344,7 +344,7 @@ const STATS = {
       "pickrate": 28.84
     },
     {
-      "name": "摩洛克·福爾摩斯",
+      "name": "摩洛克·福尔摩斯",
       "tier": "T2",
       "winrate": 0.1642,
       "top4": 0.5946,
@@ -352,7 +352,7 @@ const STATS = {
       "pickrate": 22.6
     },
     {
-      "name": "克蘇恩",
+      "name": "克苏恩",
       "tier": "T2",
       "winrate": 0.1167,
       "top4": 0.6029,
@@ -376,7 +376,7 @@ const STATS = {
       "pickrate": 34.61
     },
     {
-      "name": "芬利·莫格頓爵士",
+      "name": "芬利·莫格顿爵士",
       "tier": "T2",
       "winrate": 0.167,
       "top4": 0.5926,
@@ -392,7 +392,7 @@ const STATS = {
       "pickrate": 24.21
     },
     {
-      "name": "布魯坎",
+      "name": "布鲁坎",
       "tier": "T2",
       "winrate": 0.1391,
       "top4": 0.5924,
@@ -432,7 +432,7 @@ const STATS = {
       "pickrate": 18.17
     },
     {
-      "name": "尤朵拉船長",
+      "name": "尤朵拉船长",
       "tier": "T2",
       "winrate": 0.1562,
       "top4": 0.5866,
@@ -464,7 +464,7 @@ const STATS = {
       "pickrate": 18.15
     },
     {
-      "name": "凱爾薩斯·逐日者",
+      "name": "凱尔薩斯·逐日者",
       "tier": "T2",
       "winrate": 0.1431,
       "top4": 0.5835,
@@ -488,7 +488,7 @@ const STATS = {
       "pickrate": 29.31
     },
     {
-      "name": "預言者努波頓",
+      "name": "預言者努波顿",
       "tier": "T2",
       "winrate": 0.1635,
       "top4": 0.5781,
@@ -496,7 +496,7 @@ const STATS = {
       "pickrate": 17.91
     },
     {
-      "name": "搖滾教父沃恩",
+      "name": "摇滚教父沃恩",
       "tier": "T2",
       "winrate": 0.1581,
       "top4": 0.5766,
@@ -520,7 +520,7 @@ const STATS = {
       "pickrate": 20.76
     },
     {
-      "name": "了不起的傑弗里斯",
+      "name": "了不起的杰弗裡斯",
       "tier": "T2",
       "winrate": 0.1572,
       "top4": 0.5745,
@@ -536,7 +536,7 @@ const STATS = {
       "pickrate": 19.48
     },
     {
-      "name": "瓦爾登·晨擁",
+      "name": "瓦尔登·晨擁",
       "tier": "T2",
       "winrate": 0.1458,
       "top4": 0.5775,
@@ -544,7 +544,7 @@ const STATS = {
       "pickrate": 17.06
     },
     {
-      "name": "鉤牙船長",
+      "name": "钩牙船长",
       "tier": "T2",
       "winrate": 0.1473,
       "top4": 0.5745,
@@ -568,7 +568,7 @@ const STATS = {
       "pickrate": 38.03
     },
     {
-      "name": "雷諾·傑克遜",
+      "name": "雷诺·杰克逊",
       "tier": "T3",
       "winrate": 0.1784,
       "top4": 0.5654,
@@ -608,7 +608,7 @@ const STATS = {
       "pickrate": 15.34
     },
     {
-      "name": "米爾豪斯·法力風暴",
+      "name": "米尔豪斯·法力風暴",
       "tier": "T3",
       "winrate": 0.1084,
       "top4": 0.5737,
@@ -616,7 +616,7 @@ const STATS = {
       "pickrate": 9.42
     },
     {
-      "name": "永恆者託奇",
+      "name": "永恆者托奇",
       "tier": "T3",
       "winrate": 0.1459,
       "top4": 0.5707,
@@ -624,7 +624,7 @@ const STATS = {
       "pickrate": 22.12
     },
     {
-      "name": "伊妮·積雷",
+      "name": "伊妮·积雷",
       "tier": "T3",
       "winrate": 0.1559,
       "top4": 0.5542,
@@ -672,7 +672,7 @@ const STATS = {
       "pickrate": 12.7
     },
     {
-      "name": "恐龍大師布萊恩",
+      "name": "恐龍大師布莱恩",
       "tier": "T3",
       "winrate": 0.1384,
       "top4": 0.5613,
@@ -680,7 +680,7 @@ const STATS = {
       "pickrate": 30.79
     },
     {
-      "name": "諾茲多姆",
+      "name": "诺茲多姆",
       "tier": "T3",
       "winrate": 0.1446,
       "top4": 0.5595,
@@ -688,7 +688,7 @@ const STATS = {
       "pickrate": 13.86
     },
     {
-      "name": "時光扭曲者克羅米",
+      "name": "時光扭曲者克罗米",
       "tier": "T3",
       "winrate": 0.1435,
       "top4": 0.5647,
@@ -696,7 +696,7 @@ const STATS = {
       "pickrate": 17.52
     },
     {
-      "name": "澤瑞拉",
+      "name": "泽瑞拉",
       "tier": "T3",
       "winrate": 0.1405,
       "top4": 0.5588,
@@ -704,7 +704,7 @@ const STATS = {
       "pickrate": 16.45
     },
     {
-      "name": "巴羅夫領主",
+      "name": "巴罗夫領主",
       "tier": "T3",
       "winrate": 0.1502,
       "top4": 0.5662,
@@ -720,7 +720,7 @@ const STATS = {
       "pickrate": 10.81
     },
     {
-      "name": "劫匪之王託瓦格爾",
+      "name": "劫匪之王托瓦格尔",
       "tier": "T3",
       "winrate": 0.1398,
       "top4": 0.5541,
@@ -728,7 +728,7 @@ const STATS = {
       "pickrate": 12.25
     },
     {
-      "name": "林地守護者歐穆",
+      "name": "林地守護者欧穆",
       "tier": "T3",
       "winrate": 0.155,
       "top4": 0.5577,
@@ -752,7 +752,7 @@ const STATS = {
       "pickrate": 34.58
     },
     {
-      "name": "詹迪斯·巴羅夫",
+      "name": "詹迪斯·巴罗夫",
       "tier": "T3",
       "winrate": 0.1307,
       "top4": 0.555,
@@ -768,7 +768,7 @@ const STATS = {
       "pickrate": 9.61
     },
     {
-      "name": "米爾菲絲·法力風暴",
+      "name": "米尔菲丝·法力風暴",
       "tier": "T3",
       "winrate": 0.1801,
       "top4": 0.5359,
@@ -792,7 +792,7 @@ const STATS = {
       "pickrate": 8.49
     },
     {
-      "name": "塔姆辛·羅姆",
+      "name": "塔姆辛·罗姆",
       "tier": "T3",
       "winrate": 0.1138,
       "top4": 0.5534,
@@ -816,7 +816,7 @@ const STATS = {
       "pickrate": 5.12
     },
     {
-      "name": "樂隊經理精英牛頭人酋長",
+      "name": "樂队經理精英牛頭人酋长",
       "tier": "T3",
       "winrate": 0.148,
       "top4": 0.5326,
@@ -824,7 +824,7 @@ const STATS = {
       "pickrate": 22.46
     },
     {
-      "name": "霍格船長",
+      "name": "霍格船长",
       "tier": "T3",
       "winrate": 0.1255,
       "top4": 0.5502,
@@ -832,7 +832,7 @@ const STATS = {
       "pickrate": 17.72
     },
     {
-      "name": "庫爾特魯斯·隕燼",
+      "name": "庫尔特鲁斯·陨烬",
       "tier": "T3",
       "winrate": 0.1348,
       "top4": 0.5411,
@@ -840,7 +840,7 @@ const STATS = {
       "pickrate": 9.79
     },
     {
-      "name": "克隆大師澤裡克",
+      "name": "克隆大師泽裡克",
       "tier": "T3",
       "winrate": 0.1565,
       "top4": 0.5396,
@@ -848,7 +848,7 @@ const STATS = {
       "pickrate": 27.18
     },
     {
-      "name": "貿易親王加里維克斯",
+      "name": "贸易親王加裡維克斯",
       "tier": "T3",
       "winrate": 0.1986,
       "top4": 0.5314,
@@ -856,7 +856,7 @@ const STATS = {
       "pickrate": 26.32
     },
     {
-      "name": "苔絲·格雷邁恩",
+      "name": "苔丝·格雷迈恩",
       "tier": "T3",
       "winrate": 0.1369,
       "top4": 0.5312,
@@ -864,7 +864,7 @@ const STATS = {
       "pickrate": 19.99
     },
     {
-      "name": "艾德溫·範克里夫",
+      "name": "艾德温·範克裡夫",
       "tier": "T3",
       "winrate": 0.0932,
       "top4": 0.548,
@@ -888,7 +888,7 @@ const STATS = {
       "pickrate": 21.98
     },
     {
-      "name": "辛達苟薩",
+      "name": "辛达苟薩",
       "tier": "T3",
       "winrate": 0.1415,
       "top4": 0.5231,
@@ -896,7 +896,7 @@ const STATS = {
       "pickrate": 14.99
     },
     {
-      "name": "炎魔之王拉格納羅斯",
+      "name": "炎魔之王拉格納罗斯",
       "tier": "T3",
       "winrate": 0.0973,
       "top4": 0.5362,
@@ -920,7 +920,7 @@ const STATS = {
       "pickrate": 9.42
     },
     {
-      "name": "吉姆·雷諾",
+      "name": "吉姆·雷诺",
       "tier": "T3",
       "winrate": 0.1092,
       "top4": 0.4984,
@@ -928,7 +928,7 @@ const STATS = {
       "pickrate": 10.83
     },
     {
-      "name": "菌菇術士弗洛格爾",
+      "name": "菌菇術士弗洛格尔",
       "tier": "T3",
       "winrate": 0.127,
       "top4": 0.4993,
@@ -939,7 +939,7 @@ const STATS = {
   "comps": [
     {
       "key": "dragon_shield",
-      "name": "龍·聖盾",
+      "name": "龍·聖盾術",
       "tier": "T0",
       "top4": 0.7541,
       "win": 0.2252,
@@ -978,19 +978,19 @@ const STATS = {
         },
         {
           "id": "BGS_034",
-          "name": "青銅守衛",
+          "name": "青铜守衛",
           "status": "ADDON",
           "role": "front"
         },
         {
           "id": "BG34_889",
-          "name": "諾茲多姆的子嗣",
+          "name": "诺茲多姆的子嗣",
           "status": "CYCLE",
           "role": "back"
         }
       ],
       "heroes": [
-        "特萊斯塔斯，寄生之魂",
+        "特莱斯塔斯，寄生之魂",
         "偉大的阿卡扎曼扎拉克",
         "洛卡拉"
       ],
@@ -1014,13 +1014,13 @@ const STATS = {
         },
         {
           "id": "BG35_883",
-          "name": "巴琳達·斯通赫爾斯",
+          "name": "巴琳达·斯通赫尔斯",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "CORE",
           "role": "back"
         },
@@ -1038,7 +1038,7 @@ const STATS = {
         },
         {
           "id": "BG30_121",
-          "name": "熱氣球測繪員",
+          "name": "热气球测绘員",
           "status": "ADDON",
           "role": "mid"
         },
@@ -1050,16 +1050,16 @@ const STATS = {
         }
       ],
       "heroes": [
-        "範達爾·雷矛",
+        "範达尔·雷矛",
         "拉卡尼休",
-        "亡語者布萊克松"
+        "死亡之聲者布莱克松"
       ],
       "difficulty": "Medium",
       "power": "S"
     },
     {
       "key": "aberration_discard",
-      "name": "畸變怪·棄牌",
+      "name": "畸變體·棄牌",
       "tier": "T0",
       "top4": 0.7594,
       "win": 0.1754,
@@ -1074,13 +1074,13 @@ const STATS = {
         },
         {
           "id": "BG36_320",
-          "name": "神秘的克熙爾",
+          "name": "神秘的克熙尔",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG26_ICC_901",
-          "name": "達卡萊附魔師",
+          "name": "达卡莱附魔師",
           "status": "ADDON",
           "role": "back"
         },
@@ -1112,7 +1112,7 @@ const STATS = {
       "heroes": [
         "拉卡尼休",
         "沃金",
-        "鐘錶先生克勞沃斯"
+        "鐘表先生克勞沃斯"
       ],
       "difficulty": "Easy",
       "power": "C"
@@ -1146,33 +1146,33 @@ const STATS = {
         },
         {
           "id": "BG33_823",
-          "name": "空軍上將羅傑斯",
+          "name": "空軍上将罗杰斯",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG33_825",
-          "name": "驕傲的私掠者",
+          "name": "骄傲的私掠者",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "ADDON",
           "role": "back"
         },
         {
           "id": "BG36_506",
-          "name": "復映無人機",
+          "name": "複映無人機",
           "status": "ADDON",
           "role": "front"
         }
       ],
       "heroes": [
-        "風暴之王托里姆",
-        "德雷克塔爾",
-        "範達爾·雷矛"
+        "風暴之王托裡姆",
+        "德雷克塔尔",
+        "範达尔·雷矛"
       ],
       "difficulty": "Hard",
       "power": "S"
@@ -1194,13 +1194,13 @@ const STATS = {
         },
         {
           "id": "BG26_152",
-          "name": "多面輔助無人機",
+          "name": "多面辅助無人機",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG26_ICC_901",
-          "name": "達卡萊附魔師",
+          "name": "达卡莱附魔師",
           "status": "CORE",
           "role": "back"
         },
@@ -1218,28 +1218,28 @@ const STATS = {
         },
         {
           "id": "BG36_506",
-          "name": "復映無人機",
+          "name": "複映無人機",
           "status": "ADDON",
           "role": "front"
         },
         {
           "id": "BG34_171",
-          "name": "轉運構築機",
+          "name": "轉运构筑機",
           "status": "ADDON",
           "role": "back"
         }
       ],
       "heroes": [
-        "德雷克塔爾",
-        "風暴之王托里姆",
-        "範達爾·雷矛"
+        "德雷克塔尔",
+        "風暴之王托裡姆",
+        "範达尔·雷矛"
       ],
       "difficulty": "Easy",
       "power": "C"
     },
     {
       "key": "murloc_end_of_turn",
-      "name": "魚人·回合結束",
+      "name": "魚人·回合结束",
       "tier": "T1",
       "top4": 0.6841,
       "win": 0.2314,
@@ -1248,7 +1248,7 @@ const STATS = {
       "cards": [
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "CORE",
           "role": "back"
         },
@@ -1260,13 +1260,13 @@ const STATS = {
         },
         {
           "id": "BG26_ICC_901",
-          "name": "達卡萊附魔師",
+          "name": "达卡莱附魔師",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG33_891",
-          "name": "魔鰭真菌學家",
+          "name": "魔鳍真菌学家",
           "status": "CORE",
           "role": "mid"
         },
@@ -1292,14 +1292,14 @@ const STATS = {
       "heroes": [
         "沙德沃克",
         "夢魘之王薩維斯",
-        "特萊斯塔斯，寄生之魂"
+        "特莱斯塔斯，寄生之魂"
       ],
       "difficulty": "Hard",
       "power": "A"
     },
     {
       "key": "demon_boost_shop",
-      "name": "惡魔·養酒館",
+      "name": "惡魔·養旅店",
       "tier": "T1",
       "top4": 0.6997,
       "win": 0.2305,
@@ -1308,13 +1308,13 @@ const STATS = {
       "cards": [
         {
           "id": "BG36_762",
-          "name": "惡魔干擾者",
+          "name": "惡魔幹擾者",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG35_883",
-          "name": "巴琳達·斯通赫爾斯",
+          "name": "巴琳达·斯通赫尔斯",
           "status": "CORE",
           "role": "mid"
         },
@@ -1332,13 +1332,13 @@ const STATS = {
         },
         {
           "id": "BG21_004",
-          "name": "貪食的烏祖爾",
+          "name": "貪食的烏祖尔",
           "status": "ADDON",
           "role": "front"
         },
         {
           "id": "BG36_621",
-          "name": "靈巧的逃亡者",
+          "name": "灵巧的逃亡者",
           "status": "ADDON",
           "role": "front"
         },
@@ -1350,16 +1350,16 @@ const STATS = {
         }
       ],
       "heroes": [
-        "鐘錶先生克勞沃斯",
+        "鐘表先生克勞沃斯",
         "塔隆·血魔",
-        "範達爾·雷矛"
+        "範达尔·雷矛"
       ],
       "difficulty": "Medium",
       "power": "A"
     },
     {
       "key": "quilboar_choose_one",
-      "name": "野豬人·抉擇",
+      "name": "野豬人·二選一",
       "tier": "T1",
       "top4": 0.6608,
       "win": 0.3117,
@@ -1386,7 +1386,7 @@ const STATS = {
         },
         {
           "id": "BG26_ICC_901",
-          "name": "達卡萊附魔師",
+          "name": "达卡莱附魔師",
           "status": "ADDON",
           "role": "back"
         },
@@ -1398,19 +1398,19 @@ const STATS = {
         },
         {
           "id": "BG33_885",
-          "name": "鮮血精研者",
+          "name": "鲜血精研者",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG31_320",
-          "name": "坑谷礦工",
+          "name": "坑谷矿工",
           "status": "CYCLE",
           "role": "mid"
         }
       ],
       "heroes": [
-        "詹迪斯·巴羅夫",
+        "詹迪斯·巴罗夫",
         "夢魘之王薩維斯",
         "費林大使"
       ],
@@ -1419,7 +1419,7 @@ const STATS = {
     },
     {
       "key": "elemental_azerite",
-      "name": "元素·艾澤裡特",
+      "name": "元素·艾泽裡特",
       "tier": "T1",
       "top4": 0.6717,
       "win": 0.2103,
@@ -1428,25 +1428,25 @@ const STATS = {
       "cards": [
         {
           "id": "BG28_707",
-          "name": "活化艾澤裡特",
+          "name": "活化艾泽裡特",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG35_881",
-          "name": "魔網浮靈",
+          "name": "魔網浮灵",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG35_883",
-          "name": "巴琳達·斯通赫爾斯",
+          "name": "巴琳达·斯通赫尔斯",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "CORE",
           "role": "back"
         },
@@ -1470,8 +1470,8 @@ const STATS = {
         }
       ],
       "heroes": [
-        "範達爾·雷矛",
-        "大主教奧薩爾",
+        "範达尔·雷矛",
+        "大主教奧薩尔",
         "經理馬林"
       ],
       "difficulty": "Hard",
@@ -1509,52 +1509,52 @@ const STATS = {
         },
         {
           "id": "BG35_883",
-          "name": "巴琳達·斯通赫爾斯",
+          "name": "巴琳达·斯通赫尔斯",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG36_762",
-          "name": "惡魔干擾者",
+          "name": "惡魔幹擾者",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG33_823",
-          "name": "空軍上將羅傑斯",
+          "name": "空軍上将罗杰斯",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG33_825",
-          "name": "驕傲的私掠者",
+          "name": "骄傲的私掠者",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG30_121",
-          "name": "熱氣球測繪員",
+          "name": "热气球测绘員",
           "status": "ADDON",
           "role": "mid"
         }
       ],
       "heroes": [
-        "亡語者布萊克松",
-        "德雷克塔爾",
-        "貿易親王加里維克斯"
+        "死亡之聲者布莱克松",
+        "德雷克塔尔",
+        "贸易親王加裡維克斯"
       ],
       "difficulty": "Hard",
       "power": "S"
     },
     {
       "key": "aberration_deathrattle",
-      "name": "畸變怪·亡語",
+      "name": "畸變體·死亡之聲",
       "tier": "T1",
       "top4": 0.6829,
       "win": 0.1026,
@@ -1569,7 +1569,7 @@ const STATS = {
         },
         {
           "id": "BG25_354",
-          "name": "提圖斯·瑞文戴爾",
+          "name": "提圖斯·瑞文戴尔",
           "status": "CORE",
           "role": "back"
         },
@@ -1581,7 +1581,7 @@ const STATS = {
         },
         {
           "id": "BG36_208",
-          "name": "逐亡陸行鳥",
+          "name": "逐亡陆行鳥",
           "status": "ADDON",
           "role": "back"
         },
@@ -1599,13 +1599,13 @@ const STATS = {
         },
         {
           "id": "BG33_823",
-          "name": "空軍上將羅傑斯",
+          "name": "空軍上将罗杰斯",
           "status": "ADDON",
           "role": "mid"
         }
       ],
       "heroes": [
-        "鐘錶先生克勞沃斯",
+        "鐘表先生克勞沃斯",
         "塔隆·血魔",
         "恩佐斯"
       ],
@@ -1614,7 +1614,7 @@ const STATS = {
     },
     {
       "key": "undead_apm",
-      "name": "亡靈·APM",
+      "name": "不死族·APM",
       "tier": "T2",
       "top4": 0.6637,
       "win": 0.17,
@@ -1623,19 +1623,19 @@ const STATS = {
       "cards": [
         {
           "id": "BG33_823",
-          "name": "空軍上將羅傑斯",
+          "name": "空軍上将罗杰斯",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG33_825",
-          "name": "驕傲的私掠者",
+          "name": "骄傲的私掠者",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG34_692",
-          "name": "被遺忘者紡織工",
+          "name": "被遺忘者纺织工",
           "status": "CORE",
           "role": "mid"
         },
@@ -1659,7 +1659,7 @@ const STATS = {
         },
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "ADDON",
           "role": "back"
         }
@@ -1674,7 +1674,7 @@ const STATS = {
     },
     {
       "key": "undead_eternal_knight",
-      "name": "亡靈·永恆騎士",
+      "name": "不死族·永恆騎士",
       "tier": "T2",
       "top4": 0.6737,
       "win": 0.1326,
@@ -1695,13 +1695,13 @@ const STATS = {
         },
         {
           "id": "BG36_848",
-          "name": "小巫妖囤積者",
+          "name": "小巫妖囤积者",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG25_354",
-          "name": "提圖斯·瑞文戴爾",
+          "name": "提圖斯·瑞文戴尔",
           "status": "ADDON",
           "role": "back"
         },
@@ -1719,13 +1719,13 @@ const STATS = {
         },
         {
           "id": "BG36_511",
-          "name": "喪鐘死靈",
+          "name": "丧鐘死灵",
           "status": "ADDON",
           "role": "mid"
         }
       ],
       "heroes": [
-        "德雷克塔爾",
+        "德雷克塔尔",
         "巫妖王",
         "偉大的阿卡扎曼扎拉克"
       ],
@@ -1755,39 +1755,39 @@ const STATS = {
         },
         {
           "id": "BG32_330",
-          "name": "好鬥的斥候",
+          "name": "好斗的斥候",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG27_556",
-          "name": "兇餓的覓食者",
+          "name": "凶饿的覓食者",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG33_891",
-          "name": "魔鰭真菌學家",
+          "name": "魔鳍真菌学家",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG35_883",
-          "name": "巴琳達·斯通赫爾斯",
+          "name": "巴琳达·斯通赫尔斯",
           "status": "ADDON",
           "role": "mid"
         }
       ],
       "heroes": [
-        "鐘錶先生克勞沃斯",
-        "無限巨龍姆諾茲多",
-        "館長"
+        "鐘表先生克勞沃斯",
+        "無限巨龍姆诺茲多",
+        "館长"
       ],
       "difficulty": "Hard",
       "power": "C"
@@ -1815,7 +1815,7 @@ const STATS = {
         },
         {
           "id": "BG33_318",
-          "name": "怒膽噴毒魚人",
+          "name": "怒胆噴毒魚人",
           "status": "CORE",
           "role": "mid"
         },
@@ -1833,13 +1833,13 @@ const STATS = {
         },
         {
           "id": "BG31_149",
-          "name": "氣泡槍手",
+          "name": "气泡槍手",
           "status": "ADDON",
           "role": "back"
         },
         {
           "id": "BG34_604",
-          "name": "英勇的逆襲者",
+          "name": "英勇的逆袭者",
           "status": "ADDON",
           "role": "mid"
         }
@@ -1847,14 +1847,14 @@ const STATS = {
       "heroes": [
         "夢魘之王薩維斯",
         "帕奇維克",
-        "墮落的喬治"
+        "堕落的喬治"
       ],
       "difficulty": "Medium",
       "power": "A"
     },
     {
       "key": "undead_butcher",
-      "name": "亡靈·屠夫",
+      "name": "不死族·屠夫",
       "tier": "T2",
       "top4": 0.6463,
       "win": 0.1791,
@@ -1863,7 +1863,7 @@ const STATS = {
       "cards": [
         {
           "id": "BG32_324",
-          "name": "德魯斯特墮落屠夫",
+          "name": "德鲁斯特堕落屠夫",
           "status": "CORE",
           "role": "mid"
         },
@@ -1881,7 +1881,7 @@ const STATS = {
         },
         {
           "id": "BG25_354",
-          "name": "提圖斯·瑞文戴爾",
+          "name": "提圖斯·瑞文戴尔",
           "status": "ADDON",
           "role": "back"
         },
@@ -1893,7 +1893,7 @@ const STATS = {
         },
         {
           "id": "BG36_511",
-          "name": "喪鐘死靈",
+          "name": "丧鐘死灵",
           "status": "ADDON",
           "role": "mid"
         },
@@ -1905,7 +1905,7 @@ const STATS = {
         }
       ],
       "heroes": [
-        "德雷克塔爾",
+        "德雷克塔尔",
         "塔隆·血魔",
         "巫妖王"
       ],
@@ -1929,19 +1929,19 @@ const STATS = {
         },
         {
           "id": "BG25_354",
-          "name": "提圖斯·瑞文戴爾",
+          "name": "提圖斯·瑞文戴尔",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG36_208",
-          "name": "逐亡陸行鳥",
+          "name": "逐亡陆行鳥",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG36_204",
-          "name": "獵頭獅鷲",
+          "name": "獵頭獅鹫",
           "status": "CORE",
           "role": "mid"
         },
@@ -1959,14 +1959,14 @@ const STATS = {
         },
         {
           "id": "BG36_201",
-          "name": "深潛獅子魚",
+          "name": "深潜獅子鱼",
           "status": "ADDON",
           "role": "mid"
         }
       ],
       "heroes": [
         "塔隆·血魔",
-        "墮落的喬治",
+        "堕落的喬治",
         "掛機的阿凱"
       ],
       "difficulty": "Medium",
@@ -1983,50 +1983,50 @@ const STATS = {
       "cards": [
         {
           "id": "BGS_004",
-          "name": "憤怒編織者",
+          "name": "愤怒編织者",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG32_873",
-          "name": "灰燼腐蝕者",
+          "name": "灰烬腐蝕者",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG26_174",
-          "name": "靈魂回溯者",
+          "name": "灵魂回溯者",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG36_733",
-          "name": "艾瑞達逃脫大師",
+          "name": "艾瑞达逃脫大師",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG36_762",
-          "name": "惡魔干擾者",
+          "name": "惡魔幹擾者",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG26_524",
-          "name": "舞蹈王子瑪克扎爾",
+          "name": "舞蹈王子瑪克扎尔",
           "status": "ADDON",
           "role": "mid"
         }
       ],
       "heroes": [
-        "加拉克蘇斯大王",
-        "鐘錶先生克勞沃斯",
+        "加拉克苏斯大王",
+        "鐘表先生克勞沃斯",
         "帕奇維克"
       ],
       "difficulty": "Hard",
@@ -2061,7 +2061,7 @@ const STATS = {
         },
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "CORE",
           "role": "back"
         },
@@ -2085,8 +2085,8 @@ const STATS = {
         }
       ],
       "heroes": [
-        "鐘錶先生克勞沃斯",
-        "奧拉基爾",
+        "鐘表先生克勞沃斯",
+        "奧拉基尔",
         "拉卡尼休"
       ],
       "difficulty": "Easy",
@@ -2103,19 +2103,19 @@ const STATS = {
       "cards": [
         {
           "id": "BG36_344",
-          "name": "掠奪大師鉤牙",
+          "name": "掠奪大師钩牙",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG36_523",
-          "name": "上進的逃兵",
+          "name": "上进的逃兵",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG36_521",
-          "name": "銬住的譁變者",
+          "name": "铐住的哗變者",
           "status": "ADDON",
           "role": "back"
         },
@@ -2127,27 +2127,27 @@ const STATS = {
         },
         {
           "id": "BG33_823",
-          "name": "空軍上將羅傑斯",
+          "name": "空軍上将罗杰斯",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG26_817",
-          "name": "刀劍收藏家",
+          "name": "刀剑收藏家",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "ADDON",
           "role": "back"
         }
       ],
       "heroes": [
-        "釦子",
-        "風暴之王托里姆",
-        "預言者努波頓"
+        "扣子",
+        "風暴之王托裡姆",
+        "預言者努波顿"
       ],
       "difficulty": "Hard",
       "power": "B"
@@ -2163,19 +2163,19 @@ const STATS = {
       "cards": [
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG36_352",
-          "name": "無羈雷暴",
+          "name": "無羁雷暴",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG34_858",
-          "name": "空氣亡魂",
+          "name": "空气亡魂",
           "status": "CORE",
           "role": "mid"
         },
@@ -2187,26 +2187,26 @@ const STATS = {
         },
         {
           "id": "BG26_175",
-          "name": "驚喜元素",
+          "name": "惊喜元素",
           "status": "ADDON",
           "role": "front"
         },
         {
           "id": "BGS_123",
-          "name": "酒館旋風",
+          "name": "旅店旋風",
           "status": "ADDON",
           "role": "back"
         },
         {
           "id": "BG28_707",
-          "name": "活化艾澤裡特",
+          "name": "活化艾泽裡特",
           "status": "ADDON",
           "role": "mid"
         }
       ],
       "heroes": [
-        "鐘錶先生克勞沃斯",
-        "辛達苟薩",
+        "鐘表先生克勞沃斯",
+        "辛达苟薩",
         "經理馬林"
       ],
       "difficulty": "Hard",
@@ -2235,7 +2235,7 @@ const STATS = {
         },
         {
           "id": "BG36_204",
-          "name": "獵頭獅鷲",
+          "name": "獵頭獅鹫",
           "status": "CORE",
           "role": "mid"
         },
@@ -2247,7 +2247,7 @@ const STATS = {
         },
         {
           "id": "BG31_801",
-          "name": "森林遊蟲",
+          "name": "森林游蟲",
           "status": "ADDON",
           "role": "back"
         },
@@ -2259,14 +2259,14 @@ const STATS = {
         },
         {
           "id": "BG25_354",
-          "name": "提圖斯·瑞文戴爾",
+          "name": "提圖斯·瑞文戴尔",
           "status": "ADDON",
           "role": "back"
         }
       ],
       "heroes": [
         "迦拉克隆",
-        "因葛，鋼鐵頌歌",
+        "因葛，钢鐵颂歌",
         "洛，在世傳奇"
       ],
       "difficulty": "Medium",
@@ -2283,13 +2283,13 @@ const STATS = {
       "cards": [
         {
           "id": "BG30_121",
-          "name": "熱氣球測繪員",
+          "name": "热气球测绘員",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG28_583",
-          "name": "地卜大師魯古格",
+          "name": "地卜大師鲁古格",
           "status": "CORE",
           "role": "front"
         },
@@ -2301,7 +2301,7 @@ const STATS = {
         },
         {
           "id": "BG35_883",
-          "name": "巴琳達·斯通赫爾斯",
+          "name": "巴琳达·斯通赫尔斯",
           "status": "CORE",
           "role": "mid"
         },
@@ -2313,13 +2313,13 @@ const STATS = {
         },
         {
           "id": "BG33_885",
-          "name": "鮮血精研者",
+          "name": "鲜血精研者",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG34_684",
-          "name": "塹壕鬥士",
+          "name": "堑壕斗士",
           "status": "ADDON",
           "role": "back"
         }
@@ -2327,7 +2327,7 @@ const STATS = {
       "heroes": [
         "伊利丹·怒風",
         "死亡之翼",
-        "釦子"
+        "扣子"
       ],
       "difficulty": "Hard",
       "power": "A"
@@ -2343,7 +2343,7 @@ const STATS = {
       "cards": [
         {
           "id": "BG35_602",
-          "name": "深潛巨獸",
+          "name": "深潜巨獸",
           "status": "CORE",
           "role": "mid"
         },
@@ -2361,7 +2361,7 @@ const STATS = {
         },
         {
           "id": "BG36_204",
-          "name": "獵頭獅鷲",
+          "name": "獵頭獅鹫",
           "status": "CORE",
           "role": "mid"
         },
@@ -2379,13 +2379,13 @@ const STATS = {
         },
         {
           "id": "BG25_354",
-          "name": "提圖斯·瑞文戴爾",
+          "name": "提圖斯·瑞文戴尔",
           "status": "ADDON",
           "role": "back"
         }
       ],
       "heroes": [
-        "墮落的喬治",
+        "堕落的喬治",
         "恩佐斯",
         "格雷布"
       ],
@@ -2409,7 +2409,7 @@ const STATS = {
         },
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "CORE",
           "role": "back"
         },
@@ -2427,7 +2427,7 @@ const STATS = {
         },
         {
           "id": "BG36_242",
-          "name": "青銅時光行者",
+          "name": "青铜時光行者",
           "status": "ADDON",
           "role": "mid"
         },
@@ -2445,16 +2445,16 @@ const STATS = {
         }
       ],
       "heroes": [
-        "希爾瓦娜斯·風行者",
+        "希尔瓦娜斯·風行者",
         "鼠王",
-        "無限巨龍姆諾茲多"
+        "無限巨龍姆诺茲多"
       ],
       "difficulty": "Easy",
       "power": "C"
     },
     {
       "key": "pirate_bounty",
-      "name": "海盜·懸賞",
+      "name": "海盜·懸赏",
       "tier": "T3",
       "top4": 0.5507,
       "win": 0.0903,
@@ -2463,13 +2463,13 @@ const STATS = {
       "cards": [
         {
           "id": "BG33_823",
-          "name": "空軍上將羅傑斯",
+          "name": "空軍上将罗杰斯",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG33_825",
-          "name": "驕傲的私掠者",
+          "name": "骄傲的私掠者",
           "status": "CORE",
           "role": "mid"
         },
@@ -2481,32 +2481,32 @@ const STATS = {
         },
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "ADDON",
           "role": "back"
         },
         {
           "id": "BG26_817",
-          "name": "刀劍收藏家",
+          "name": "刀剑收藏家",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG36_523",
-          "name": "上進的逃兵",
+          "name": "上进的逃兵",
           "status": "ADDON",
           "role": "mid"
         },
         {
           "id": "BG36_369",
-          "name": "貪婪的詐騙犯",
+          "name": "貪婪的詐骗犯",
           "status": "CYCLE",
           "role": "mid"
         }
       ],
       "heroes": [
-        "鐘錶先生克勞沃斯",
-        "貿易親王加里維克斯",
+        "鐘表先生克勞沃斯",
+        "贸易親王加裡維克斯",
         "海盜帕奇斯"
       ],
       "difficulty": "Hard",
@@ -2529,31 +2529,31 @@ const STATS = {
         },
         {
           "id": "BG35_883",
-          "name": "巴琳達·斯通赫爾斯",
+          "name": "巴琳达·斯通赫尔斯",
           "status": "CORE",
           "role": "mid"
         },
         {
           "id": "BG26_152",
-          "name": "多面輔助無人機",
+          "name": "多面辅助無人機",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG26_ICC_901",
-          "name": "達卡萊附魔師",
+          "name": "达卡莱附魔師",
           "status": "CORE",
           "role": "back"
         },
         {
           "id": "BG36_764",
-          "name": "機鰭魚人",
+          "name": "機鳍魚人",
           "status": "ADDON",
           "role": "back"
         },
         {
           "id": "BG_LOE_077",
-          "name": "布萊恩·銅須",
+          "name": "布莱恩·铜須",
           "status": "ADDON",
           "role": "back"
         },
@@ -2566,18 +2566,18 @@ const STATS = {
       ],
       "heroes": [
         "穆克拉",
-        "德雷克塔爾",
-        "範達爾·雷矛"
+        "德雷克塔尔",
+        "範达尔·雷矛"
       ],
       "difficulty": "Medium",
       "power": "A"
     }
   ],
   "heroComps": {
-    "館長": [
+    "館长": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.11,
         "sample": 69
@@ -2600,7 +2600,7 @@ const STATS = {
     "費林大使": [
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 2.99,
         "sample": 234
@@ -2614,13 +2614,13 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.12,
         "sample": 221
       }
     ],
-    "風暴之王托里姆": [
+    "風暴之王托裡姆": [
       {
         "key": "mech_volumizer",
         "name": "機械·擴音機",
@@ -2637,7 +2637,7 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 2.94,
         "sample": 258
@@ -2646,7 +2646,7 @@ const STATS = {
     "經理馬林": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.89,
         "sample": 257
@@ -2689,10 +2689,10 @@ const STATS = {
         "sample": 262
       }
     ],
-    "奧拉基爾": [
+    "奧拉基尔": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.85,
         "sample": 232
@@ -2706,7 +2706,7 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.11,
         "sample": 166
@@ -2715,7 +2715,7 @@ const STATS = {
     "洛，在世傳奇": [
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 3.04,
         "sample": 188
@@ -2729,13 +2729,13 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.2,
         "sample": 212
       }
     ],
-    "搖滾教父沃恩": [
+    "摇滚教父沃恩": [
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
@@ -2752,16 +2752,16 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.22,
         "sample": 181
       }
     ],
-    "鐘錶先生克勞沃斯": [
+    "鐘表先生克勞沃斯": [
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 2.74,
         "sample": 255
@@ -2775,7 +2775,7 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 2.86,
         "sample": 228
@@ -2791,7 +2791,7 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.05,
         "sample": 212
@@ -2807,7 +2807,7 @@ const STATS = {
     "尤格-薩隆": [
       {
         "key": "murloc_end_of_turn",
-        "name": "魚人·回合結束",
+        "name": "魚人·回合结束",
         "tier": "T1",
         "avg": 2.86,
         "sample": 32
@@ -2821,23 +2821,23 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.02,
         "sample": 174
       }
     ],
-    "凱瑞爾·羅姆": [
+    "凱瑞尔·罗姆": [
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 3.01,
         "sample": 184
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.04,
         "sample": 241
@@ -2853,7 +2853,7 @@ const STATS = {
     "伊瑟拉": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.11,
         "sample": 303
@@ -2873,10 +2873,10 @@ const STATS = {
         "sample": 268
       }
     ],
-    "特萊斯塔斯，寄生之魂": [
+    "特莱斯塔斯，寄生之魂": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.57,
         "sample": 274
@@ -2890,13 +2890,13 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 2.99,
         "sample": 298
       }
     ],
-    "鉤牙船長": [
+    "钩牙船长": [
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
@@ -2913,7 +2913,7 @@ const STATS = {
       },
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 3.29,
         "sample": 124
@@ -2922,21 +2922,21 @@ const STATS = {
     "提克特斯": [
       {
         "key": "murloc_end_of_turn",
-        "name": "魚人·回合結束",
+        "name": "魚人·回合结束",
         "tier": "T1",
         "avg": 3,
         "sample": 33
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.07,
         "sample": 172
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.15,
         "sample": 214
@@ -2945,7 +2945,7 @@ const STATS = {
     "瑪裡苟斯": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.23,
         "sample": 145
@@ -2959,16 +2959,16 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.4,
         "sample": 125
       }
     ],
-    "阿萊克絲塔薩": [
+    "阿莱克丝塔薩": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.76,
         "sample": 314
@@ -2991,14 +2991,14 @@ const STATS = {
     "厄祖瑪特": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.18,
         "sample": 81
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.23,
         "sample": 67
@@ -3014,7 +3014,7 @@ const STATS = {
     "帕奇維克": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.99,
         "sample": 203
@@ -3034,17 +3034,17 @@ const STATS = {
         "sample": 142
       }
     ],
-    "無限巨龍姆諾茲多": [
+    "無限巨龍姆诺茲多": [
       {
         "key": "undead_apm",
-        "name": "亡靈·APM",
+        "name": "不死族·APM",
         "tier": "T2",
         "avg": 2.86,
         "sample": 33
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.98,
         "sample": 167
@@ -3057,17 +3057,17 @@ const STATS = {
         "sample": 230
       }
     ],
-    "時光扭曲者克羅米": [
+    "時光扭曲者克罗米": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 2.99,
         "sample": 175
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.22,
         "sample": 113
@@ -3080,24 +3080,24 @@ const STATS = {
         "sample": 160
       }
     ],
-    "林地守護者歐穆": [
+    "林地守護者欧穆": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.06,
         "sample": 189
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.16,
         "sample": 144
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.23,
         "sample": 202
@@ -3106,27 +3106,27 @@ const STATS = {
     "夢魘之王薩維斯": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.76,
         "sample": 272
       },
       {
         "key": "murloc_end_of_turn",
-        "name": "魚人·回合結束",
+        "name": "魚人·回合结束",
         "tier": "T1",
         "avg": 2.97,
         "sample": 58
       },
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 2.97,
         "sample": 246
       }
     ],
-    "預言者努波頓": [
+    "預言者努波顿": [
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
@@ -3136,30 +3136,30 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3,
         "sample": 154
       },
       {
         "key": "undead_apm",
-        "name": "亡靈·APM",
+        "name": "不死族·APM",
         "tier": "T2",
         "avg": 3.09,
         "sample": 33
       }
     ],
-    "布魯坎": [
+    "布鲁坎": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 2.92,
         "sample": 104
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.94,
         "sample": 144
@@ -3182,30 +3182,30 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.97,
         "sample": 119
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.06,
         "sample": 170
       }
     ],
-    "芬利·莫格頓爵士": [
+    "芬利·莫格顿爵士": [
       {
         "key": "murloc_end_of_turn",
-        "name": "魚人·回合結束",
+        "name": "魚人·回合结束",
         "tier": "T1",
         "avg": 2.86,
         "sample": 35
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.93,
         "sample": 213
@@ -3228,20 +3228,20 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.18,
         "sample": 249
       },
       {
         "key": "murloc_end_of_turn",
-        "name": "魚人·回合結束",
+        "name": "魚人·回合结束",
         "tier": "T1",
         "avg": 3.21,
         "sample": 78
       }
     ],
-    "薩魯法爾大王": [
+    "薩鲁法尔大王": [
       {
         "key": "mech_volumizer",
         "name": "機械·擴音機",
@@ -3258,13 +3258,13 @@ const STATS = {
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.24,
         "sample": 224
       }
     ],
-    "克隆大師澤裡克": [
+    "克隆大師泽裡克": [
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
@@ -3274,7 +3274,7 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.27,
         "sample": 190
@@ -3290,7 +3290,7 @@ const STATS = {
     "亞煞極": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.26,
         "sample": 171
@@ -3320,7 +3320,7 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.21,
         "sample": 197
@@ -3336,14 +3336,14 @@ const STATS = {
     "死亡之翼": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.94,
         "sample": 148
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.11,
         "sample": 94
@@ -3356,17 +3356,17 @@ const STATS = {
         "sample": 171
       }
     ],
-    "米羅克": [
+    "米罗克": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.87,
         "sample": 176
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.04,
         "sample": 226
@@ -3379,17 +3379,17 @@ const STATS = {
         "sample": 197
       }
     ],
-    "瓦爾登·晨擁": [
+    "瓦尔登·晨擁": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.99,
         "sample": 122
       },
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 3.19,
         "sample": 144
@@ -3405,14 +3405,14 @@ const STATS = {
     "比格沃斯先生": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.96,
         "sample": 132
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.14,
         "sample": 156
@@ -3425,17 +3425,17 @@ const STATS = {
         "sample": 146
       }
     ],
-    "釦子": [
+    "扣子": [
       {
         "key": "murloc_end_of_turn",
-        "name": "魚人·回合結束",
+        "name": "魚人·回合结束",
         "tier": "T1",
         "avg": 2.96,
         "sample": 43
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.99,
         "sample": 235
@@ -3448,40 +3448,40 @@ const STATS = {
         "sample": 288
       }
     ],
-    "大主教奧薩爾": [
+    "大主教奧薩尔": [
       {
         "key": "elemental_azerite",
-        "name": "元素·艾澤裡特",
+        "name": "元素·艾泽裡特",
         "tier": "T1",
         "avg": 3.08,
         "sample": 135
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.15,
         "sample": 116
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.26,
         "sample": 155
       }
     ],
-    "貿易親王加里維克斯": [
+    "贸易親王加裡維克斯": [
       {
         "key": "undead_apm",
-        "name": "亡靈·APM",
+        "name": "不死族·APM",
         "tier": "T2",
         "avg": 2.94,
         "sample": 31
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 2.99,
         "sample": 155
@@ -3494,17 +3494,17 @@ const STATS = {
         "sample": 115
       }
     ],
-    "巴羅夫領主": [
+    "巴罗夫領主": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3,
         "sample": 118
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.14,
         "sample": 147
@@ -3520,14 +3520,14 @@ const STATS = {
     "巫妖王": [
       {
         "key": "undead_eternal_knight",
-        "name": "亡靈·永恆騎士",
+        "name": "不死族·永恆騎士",
         "tier": "T2",
         "avg": 2.91,
         "sample": 160
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.04,
         "sample": 92
@@ -3540,10 +3540,10 @@ const STATS = {
         "sample": 140
       }
     ],
-    "舞者達瑞爾": [
+    "舞者达瑞尔": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.19,
         "sample": 154
@@ -3557,7 +3557,7 @@ const STATS = {
       },
       {
         "key": "undead_eternal_knight",
-        "name": "亡靈·永恆騎士",
+        "name": "不死族·永恆騎士",
         "tier": "T2",
         "avg": 3.38,
         "sample": 71
@@ -3566,14 +3566,14 @@ const STATS = {
     "洛卡拉": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.67,
         "sample": 102
       },
       {
         "key": "undead_eternal_knight",
-        "name": "亡靈·永恆騎士",
+        "name": "不死族·永恆騎士",
         "tier": "T2",
         "avg": 3.15,
         "sample": 59
@@ -3589,7 +3589,7 @@ const STATS = {
     "穆克拉": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.16,
         "sample": 136
@@ -3619,7 +3619,7 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.98,
         "sample": 219
@@ -3632,10 +3632,10 @@ const STATS = {
         "sample": 31
       }
     ],
-    "恐龍大師布萊恩": [
+    "恐龍大師布莱恩": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.09,
         "sample": 171
@@ -3649,13 +3649,13 @@ const STATS = {
       },
       {
         "key": "murloc_end_of_turn",
-        "name": "魚人·回合結束",
+        "name": "魚人·回合结束",
         "tier": "T1",
         "avg": 3.33,
         "sample": 125
       }
     ],
-    "範達爾·雷矛": [
+    "範达尔·雷矛": [
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
@@ -3665,7 +3665,7 @@ const STATS = {
       },
       {
         "key": "elemental_azerite",
-        "name": "元素·艾澤裡特",
+        "name": "元素·艾泽裡特",
         "tier": "T1",
         "avg": 2.82,
         "sample": 167
@@ -3678,17 +3678,17 @@ const STATS = {
         "sample": 265
       }
     ],
-    "永恆者託奇": [
+    "永恆者托奇": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.01,
         "sample": 156
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.03,
         "sample": 188
@@ -3701,10 +3701,10 @@ const STATS = {
         "sample": 219
       }
     ],
-    "凱爾薩斯·逐日者": [
+    "凱尔薩斯·逐日者": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.1,
         "sample": 107
@@ -3718,7 +3718,7 @@ const STATS = {
       },
       {
         "key": "undead_eternal_knight",
-        "name": "亡靈·永恆騎士",
+        "name": "不死族·永恆騎士",
         "tier": "T2",
         "avg": 3.16,
         "sample": 61
@@ -3727,7 +3727,7 @@ const STATS = {
     "斯卡布斯·刀油": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.2,
         "sample": 192
@@ -3741,7 +3741,7 @@ const STATS = {
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.36,
         "sample": 208
@@ -3750,30 +3750,30 @@ const STATS = {
     "泰瑟蘭·血望者": [
       {
         "key": "undead_apm",
-        "name": "亡靈·APM",
+        "name": "不死族·APM",
         "tier": "T2",
         "avg": 3.06,
         "sample": 32
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.1,
         "sample": 147
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.21,
         "sample": 103
       }
     ],
-    "艾德溫·範克里夫": [
+    "艾德温·範克裡夫": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.06,
         "sample": 43
@@ -3787,7 +3787,7 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.22,
         "sample": 32
@@ -3796,21 +3796,21 @@ const STATS = {
     "荷利戴醫生": [
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 3.15,
         "sample": 104
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.21,
         "sample": 118
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.22,
         "sample": 161
@@ -3826,14 +3826,14 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.23,
         "sample": 160
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.27,
         "sample": 128
@@ -3842,21 +3842,21 @@ const STATS = {
     "瘋狂金字塔": [
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.1,
         "sample": 104
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.23,
         "sample": 77
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.28,
         "sample": 58
@@ -3865,7 +3865,7 @@ const STATS = {
     "拉卡尼休": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 2.78,
         "sample": 244
@@ -3879,23 +3879,23 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.87,
         "sample": 187
       }
     ],
-    "澤瑞拉": [
+    "泽瑞拉": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3,
         "sample": 121
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.26,
         "sample": 142
@@ -3911,14 +3911,14 @@ const STATS = {
     "塔維什·雷矛": [
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 3.2,
         "sample": 152
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.21,
         "sample": 178
@@ -3931,7 +3931,7 @@ const STATS = {
         "sample": 185
       }
     ],
-    "苔絲·格雷邁恩": [
+    "苔丝·格雷迈恩": [
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
@@ -3948,7 +3948,7 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.58,
         "sample": 178
@@ -3957,21 +3957,21 @@ const STATS = {
     "希拉斯·暗月": [
       {
         "key": "undead_apm",
-        "name": "亡靈·APM",
+        "name": "不死族·APM",
         "tier": "T2",
         "avg": 2.9,
         "sample": 39
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.22,
         "sample": 177
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.34,
         "sample": 149
@@ -3980,21 +3980,21 @@ const STATS = {
     "沃金": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 2.85,
         "sample": 139
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.09,
         "sample": 170
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.14,
         "sample": 156
@@ -4003,14 +4003,14 @@ const STATS = {
     "迦拉克隆": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.92,
         "sample": 235
       },
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 3.01,
         "sample": 222
@@ -4023,17 +4023,17 @@ const STATS = {
         "sample": 293
       }
     ],
-    "雷諾·傑克遜": [
+    "雷诺·杰克逊": [
       {
         "key": "murloc_end_of_turn",
-        "name": "魚人·回合結束",
+        "name": "魚人·回合结束",
         "tier": "T1",
         "avg": 3.01,
         "sample": 47
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.05,
         "sample": 193
@@ -4046,7 +4046,7 @@ const STATS = {
         "sample": 253
       }
     ],
-    "米爾豪斯·法力風暴": [
+    "米尔豪斯·法力風暴": [
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
@@ -4069,7 +4069,7 @@ const STATS = {
         "sample": 69
       }
     ],
-    "德雷克塔爾": [
+    "德雷克塔尔": [
       {
         "key": "mech_volumizer",
         "name": "機械·擴音機",
@@ -4086,23 +4086,23 @@ const STATS = {
       },
       {
         "key": "undead_eternal_knight",
-        "name": "亡靈·永恆騎士",
+        "name": "不死族·永恆騎士",
         "tier": "T2",
         "avg": 2.87,
         "sample": 103
       }
     ],
-    "劫匪之王託瓦格爾": [
+    "劫匪之王托瓦格尔": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.1,
         "sample": 78
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.24,
         "sample": 119
@@ -4115,30 +4115,30 @@ const STATS = {
         "sample": 92
       }
     ],
-    "因葛，鋼鐵頌歌": [
+    "因葛，钢鐵颂歌": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.01,
         "sample": 149
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.19,
         "sample": 159
       },
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 3.2,
         "sample": 134
       }
     ],
-    "希爾瓦娜斯·風行者": [
+    "希尔瓦娜斯·風行者": [
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
@@ -4148,14 +4148,14 @@ const STATS = {
       },
       {
         "key": "murloc_end_of_turn",
-        "name": "魚人·回合結束",
+        "name": "魚人·回合结束",
         "tier": "T1",
         "avg": 3.05,
         "sample": 31
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.1,
         "sample": 203
@@ -4164,7 +4164,7 @@ const STATS = {
     "吉恩，狼人國王": [
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.05,
         "sample": 259
@@ -4178,7 +4178,7 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.11,
         "sample": 202
@@ -4187,30 +4187,30 @@ const STATS = {
     "偉大的阿卡扎曼扎拉克": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.62,
         "sample": 136
       },
       {
         "key": "undead_eternal_knight",
-        "name": "亡靈·永恆騎士",
+        "name": "不死族·永恆騎士",
         "tier": "T2",
         "avg": 3.06,
         "sample": 139
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.1,
         "sample": 209
       }
     ],
-    "尤朵拉船長": [
+    "尤朵拉船长": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.05,
         "sample": 192
@@ -4224,7 +4224,7 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.15,
         "sample": 219
@@ -4233,14 +4233,14 @@ const STATS = {
     "強化機器人": [
       {
         "key": "murloc_end_of_turn",
-        "name": "魚人·回合結束",
+        "name": "魚人·回合结束",
         "tier": "T1",
         "avg": 2.86,
         "sample": 32
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.07,
         "sample": 134
@@ -4256,14 +4256,14 @@ const STATS = {
     "伊莉斯·逐星": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.01,
         "sample": 96
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.04,
         "sample": 126
@@ -4276,17 +4276,17 @@ const STATS = {
         "sample": 156
       }
     ],
-    "辛達苟薩": [
+    "辛达苟薩": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.26,
         "sample": 119
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.29,
         "sample": 91
@@ -4299,24 +4299,24 @@ const STATS = {
         "sample": 68
       }
     ],
-    "摩洛克·福爾摩斯": [
+    "摩洛克·福尔摩斯": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.12,
         "sample": 172
       },
       {
         "key": "elemental_azerite",
-        "name": "元素·艾澤裡特",
+        "name": "元素·艾泽裡特",
         "tier": "T1",
         "avg": 3.19,
         "sample": 165
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.25,
         "sample": 141
@@ -4332,14 +4332,14 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.15,
         "sample": 130
       },
       {
         "key": "undead_eternal_knight",
-        "name": "亡靈·永恆騎士",
+        "name": "不死族·永恆騎士",
         "tier": "T2",
         "avg": 3.2,
         "sample": 83
@@ -4348,7 +4348,7 @@ const STATS = {
     "蛇眼": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3,
         "sample": 189
@@ -4362,7 +4362,7 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.27,
         "sample": 213
@@ -4371,14 +4371,14 @@ const STATS = {
     "廚師曲奇": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.9,
         "sample": 116
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.13,
         "sample": 170
@@ -4391,7 +4391,7 @@ const STATS = {
         "sample": 116
       }
     ],
-    "諾茲多姆": [
+    "诺茲多姆": [
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
@@ -4401,14 +4401,14 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.14,
         "sample": 111
       },
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 3.14,
         "sample": 100
@@ -4417,7 +4417,7 @@ const STATS = {
     "古夫·符文圖騰": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.16,
         "sample": 120
@@ -4431,7 +4431,7 @@ const STATS = {
       },
       {
         "key": "elemental_azerite",
-        "name": "元素·艾澤裡特",
+        "name": "元素·艾泽裡特",
         "tier": "T1",
         "avg": 3.25,
         "sample": 129
@@ -4447,30 +4447,30 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.2,
         "sample": 76
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.21,
         "sample": 118
       }
     ],
-    "墮落的喬治": [
+    "堕落的喬治": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.83,
         "sample": 200
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.15,
         "sample": 173
@@ -4486,7 +4486,7 @@ const STATS = {
     "沙德沃克": [
       {
         "key": "murloc_end_of_turn",
-        "name": "魚人·回合結束",
+        "name": "魚人·回合结束",
         "tier": "T1",
         "avg": 2.94,
         "sample": 69
@@ -4506,10 +4506,10 @@ const STATS = {
         "sample": 40
       }
     ],
-    "了不起的傑弗里斯": [
+    "了不起的杰弗裡斯": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 2.99,
         "sample": 116
@@ -4523,23 +4523,23 @@ const STATS = {
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.17,
         "sample": 124
       }
     ],
-    "炎魔之王拉格納羅斯": [
+    "炎魔之王拉格納罗斯": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.03,
         "sample": 62
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.25,
         "sample": 71
@@ -4562,23 +4562,23 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.28,
         "sample": 130
       },
       {
         "key": "elemental_azerite",
-        "name": "元素·艾澤裡特",
+        "name": "元素·艾泽裡特",
         "tier": "T1",
         "avg": 3.34,
         "sample": 114
       }
     ],
-    "詹迪斯·巴羅夫": [
+    "詹迪斯·巴罗夫": [
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 2.81,
         "sample": 62
@@ -4592,23 +4592,23 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.33,
         "sample": 42
       }
     ],
-    "庫爾特魯斯·隕燼": [
+    "庫尔特鲁斯·陨烬": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.14,
         "sample": 59
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.29,
         "sample": 83
@@ -4644,10 +4644,10 @@ const STATS = {
         "sample": 41
       }
     ],
-    "克蘇恩": [
+    "克苏恩": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.19,
         "sample": 100
@@ -4661,23 +4661,23 @@ const STATS = {
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.26,
         "sample": 60
       }
     ],
-    "瓦託格爾女王": [
+    "瓦托格尔女王": [
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.13,
         "sample": 110
       },
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 3.16,
         "sample": 95
@@ -4693,21 +4693,21 @@ const STATS = {
     "奧妮克希亞": [
       {
         "key": "undead_apm",
-        "name": "亡靈·APM",
+        "name": "不死族·APM",
         "tier": "T2",
         "avg": 3.36,
         "sample": 45
       },
       {
         "key": "undead_butcher",
-        "name": "亡靈·屠夫",
+        "name": "不死族·屠夫",
         "tier": "T2",
         "avg": 3.36,
         "sample": 257
       },
       {
         "key": "undead_eternal_knight",
-        "name": "亡靈·永恆騎士",
+        "name": "不死族·永恆騎士",
         "tier": "T2",
         "avg": 3.45,
         "sample": 150
@@ -4716,14 +4716,14 @@ const STATS = {
     "塔隆·血魔": [
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 2.9,
         "sample": 140
       },
       {
         "key": "aberration_deathrattle",
-        "name": "畸變怪·亡語",
+        "name": "畸變體·死亡之聲",
         "tier": "T1",
         "avg": 3.1,
         "sample": 162
@@ -4736,7 +4736,7 @@ const STATS = {
         "sample": 63
       }
     ],
-    "樂隊經理精英牛頭人酋長": [
+    "樂队經理精英牛頭人酋长": [
       {
         "key": "mech_apm",
         "name": "機械·APM",
@@ -4762,7 +4762,7 @@ const STATS = {
     "基希克斯": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.08,
         "sample": 275
@@ -4776,13 +4776,13 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龍·聖盾",
+        "name": "龍·聖盾術",
         "tier": "T0",
         "avg": 3.23,
         "sample": 111
       }
     ],
-    "亡語者布萊克松": [
+    "死亡之聲者布莱克松": [
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
@@ -4792,7 +4792,7 @@ const STATS = {
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 2.95,
         "sample": 196
@@ -4805,10 +4805,10 @@ const STATS = {
         "sample": 257
       }
     ],
-    "巫妖巴茲亞爾": [
+    "巫妖巴茲亞尔": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.29,
         "sample": 36
@@ -4828,10 +4828,10 @@ const STATS = {
         "sample": 62
       }
     ],
-    "德雷阿佳絲": [
+    "德雷阿佳丝": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 2.97,
         "sample": 329
@@ -4845,13 +4845,13 @@ const STATS = {
       },
       {
         "key": "aberration_deathrattle",
-        "name": "畸變怪·亡語",
+        "name": "畸變體·死亡之聲",
         "tier": "T1",
         "avg": 3.45,
         "sample": 321
       }
     ],
-    "加拉克蘇斯大王": [
+    "加拉克苏斯大王": [
       {
         "key": "murloc_scam",
         "name": "魚人·下毒",
@@ -4868,7 +4868,7 @@ const STATS = {
       },
       {
         "key": "undead_butcher",
-        "name": "亡靈·屠夫",
+        "name": "不死族·屠夫",
         "tier": "T2",
         "avg": 3.23,
         "sample": 41
@@ -4891,7 +4891,7 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.3,
         "sample": 66
@@ -4907,7 +4907,7 @@ const STATS = {
       },
       {
         "key": "quilboar_choose_one",
-        "name": "野豬人·抉擇",
+        "name": "野豬人·二選一",
         "tier": "T1",
         "avg": 3.33,
         "sample": 38
@@ -4923,7 +4923,7 @@ const STATS = {
     "齊恩瓦拉": [
       {
         "key": "elemental_azerite",
-        "name": "元素·艾澤裡特",
+        "name": "元素·艾泽裡特",
         "tier": "T1",
         "avg": 3.35,
         "sample": 276
@@ -4946,7 +4946,7 @@ const STATS = {
     "伊利丹·怒風": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 2.9,
         "sample": 131
@@ -4966,10 +4966,10 @@ const STATS = {
         "sample": 91
       }
     ],
-    "霍格船長": [
+    "霍格船长": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.17,
         "sample": 30
@@ -4983,13 +4983,13 @@ const STATS = {
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.53,
         "sample": 34
       }
     ],
-    "伊妮·積雷": [
+    "伊妮·积雷": [
       {
         "key": "mech_apm",
         "name": "機械·APM",
@@ -4999,7 +4999,7 @@ const STATS = {
       },
       {
         "key": "undead_butcher",
-        "name": "亡靈·屠夫",
+        "name": "不死族·屠夫",
         "tier": "T2",
         "avg": 3.34,
         "sample": 50
@@ -5012,40 +5012,40 @@ const STATS = {
         "sample": 310
       }
     ],
-    "典獄長": [
+    "典獄长": [
       {
         "key": "undead_apm",
-        "name": "亡靈·APM",
+        "name": "不死族·APM",
         "tier": "T2",
         "avg": 3.32,
         "sample": 119
       },
       {
         "key": "undead_butcher",
-        "name": "亡靈·屠夫",
+        "name": "不死族·屠夫",
         "tier": "T2",
         "avg": 3.48,
         "sample": 324
       },
       {
         "key": "undead_eternal_knight",
-        "name": "亡靈·永恆騎士",
+        "name": "不死族·永恆騎士",
         "tier": "T2",
         "avg": 3.51,
         "sample": 226
       }
     ],
-    "塔姆辛·羅姆": [
+    "塔姆辛·罗姆": [
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.02,
         "sample": 60
       },
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.4,
         "sample": 61
@@ -5061,21 +5061,21 @@ const STATS = {
     "恩佐斯": [
       {
         "key": "aberration_deathrattle",
-        "name": "畸變怪·亡語",
+        "name": "畸變體·死亡之聲",
         "tier": "T1",
         "avg": 3.12,
         "sample": 113
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.16,
         "sample": 75
       },
       {
         "key": "elemental_azerite",
-        "name": "元素·艾澤裡特",
+        "name": "元素·艾泽裡特",
         "tier": "T1",
         "avg": 3.16,
         "sample": 38
@@ -5084,7 +5084,7 @@ const STATS = {
     "格雷布": [
       {
         "key": "aberration_discard",
-        "name": "畸變怪·棄牌",
+        "name": "畸變體·棄牌",
         "tier": "T0",
         "avg": 3.26,
         "sample": 50
@@ -5098,7 +5098,7 @@ const STATS = {
       },
       {
         "key": "demon_boost_shop",
-        "name": "惡魔·養酒館",
+        "name": "惡魔·養旅店",
         "tier": "T1",
         "avg": 3.45,
         "sample": 48
@@ -5107,7 +5107,7 @@ const STATS = {
     "海盜帕奇斯": [
       {
         "key": "undead_apm",
-        "name": "亡靈·APM",
+        "name": "不死族·APM",
         "tier": "T2",
         "avg": 2.98,
         "sample": 31
@@ -5127,17 +5127,17 @@ const STATS = {
         "sample": 48
       }
     ],
-    "菌菇術士弗洛格爾": [
+    "菌菇術士弗洛格尔": [
       {
         "key": "murloc_end_of_turn",
-        "name": "魚人·回合結束",
+        "name": "魚人·回合结束",
         "tier": "T1",
         "avg": 2.72,
         "sample": 39
       },
       {
         "key": "elemental_azerite",
-        "name": "元素·艾澤裡特",
+        "name": "元素·艾泽裡特",
         "tier": "T1",
         "avg": 3.17,
         "sample": 35
@@ -5150,7 +5150,7 @@ const STATS = {
         "sample": 33
       }
     ],
-    "米爾菲絲·法力風暴": [
+    "米尔菲丝·法力風暴": [
       {
         "key": "mech_apm",
         "name": "機械·APM",
@@ -5173,7 +5173,7 @@ const STATS = {
         "sample": 183
       }
     ],
-    "吉姆·雷諾": [
+    "吉姆·雷诺": [
       {
         "key": "mech_volumizer",
         "name": "機械·擴音機",
@@ -5222,14 +5222,14 @@ const STATS = {
     "普崔塞德教授": [
       {
         "key": "undead_butcher",
-        "name": "亡靈·屠夫",
+        "name": "不死族·屠夫",
         "tier": "T2",
         "avg": 3.92,
         "sample": 256
       },
       {
         "key": "undead_eternal_knight",
-        "name": "亡靈·永恆騎士",
+        "name": "不死族·永恆騎士",
         "tier": "T2",
         "avg": 3.96,
         "sample": 130
@@ -5281,13 +5281,13 @@ const STATS = {
       "sample": 24702
     },
     {
-      "name": "鮮血魔像標籤",
+      "name": "鲜血魔像標签",
       "avg": 3.36,
       "pickrate": 38.5,
       "sample": 22407
     },
     {
-      "name": "駭客魚人肖像",
+      "name": "黑客魚人肖像",
       "avg": 3.38,
       "pickrate": 40.2,
       "sample": 6999

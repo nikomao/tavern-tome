@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-TW">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>陣容分享圖 · 酒館手札</title>
+<title>陣容分享圖 · 旅店手札</title>
 <link rel="icon" href="../favicon.png" type="image/png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#120b07">
 <style>
   body{margin:0;background:#120b07;color:#f4e7cf;font-family:"Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;padding:20px}
   .bar{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap;justify-content:center}
@@ -18,18 +20,28 @@
   <div class="bar">
     <select id="comp"></select>
     <button type="button" id="download" class="primary">下載 PNG</button>
-    <button type="button" id="copy">複製圖片</button>
+    <button type="button" id="copy">複制圖片</button>
   </div>
   <canvas id="cv" width="1080" height="1080"></canvas>
-  <p class="tip">1080×1080 · 適合微信群 / 朋友圈 / QQ 群</p>
+  <p class="tip">1080×1080 · 适合微信群 / 朋友圈 / QQ 群</p>
 
-<script src="data.js?v=20261102f"></script>
-<script src="pool.js?v=20261102f"></script>
-<script src="stats.js?v=20261102f"></script>
-<script src="comp-notes.js?v=20261102f"></script>
-<script src="extra-cards.js?v=20261102f"></script>
-<script src="cards.js?v=20261102f"></script>
-<script src="share.js?v=20261102f"></script>
+<script src="data.js?v=20261103g"></script>
+<script src="pool.js?v=20261103g"></script>
+<script src="stats.js?v=20261103g"></script>
+<script src="comp-notes.js?v=20261103g"></script>
+<script src="extra-cards.js?v=20261103g"></script>
+<script src="cards.js?v=20261103g"></script>
+<script src="share.js?v=20261103g"></script>
 <a class="lang-fab" href="../share.html">簡中</a>
+<script src="analytics-config.js?v=20261103g"></script>
+<script src="analytics.js?v=20261103g"></script>
+<script src="history.js?v=20261103g"></script>
+<script>
+  if('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')){
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('sw.js').catch(function(){});
+    });
+  }
+</script>
 </body>
 </html>

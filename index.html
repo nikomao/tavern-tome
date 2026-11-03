@@ -23,6 +23,11 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="favicon.png" type="image/png" sizes="64x64" />
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#21140c" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="酒馆手札" />
 <link rel="stylesheet" href="styles.css?v=20261105d" />
 <link rel="stylesheet" href="vendor/jsvectormap.min.css?v=20261105d">
 </head>
@@ -662,7 +667,36 @@
     <p><b>本周环境：</b>畸变怪、元素、恶魔三家 T0 争霸；纳迦、海盗、野兽、龙稳在 T1；机械和鱼人适合吃分；亡灵与野猪人偏弱，除非发牌特别好。</p>
   </div>
   <div class="comp-tools" id="compTools" hidden>
-    <label class="ct-hero"><span>我在玩</span><select id="compHero"><option value="">不选英雄</option></select></label>
+    <div class="ct-hero" id="ctHeroWrap">
+      <span class="ct-hero-label">我在玩</span>
+      <div class="hero-picker" id="heroPicker">
+        <button type="button" class="hp-btn" id="hpBtn" aria-haspopup="dialog" aria-expanded="false" title="选择英雄以按该英雄胜率排序或过滤阵容">
+          <span class="hp-val" id="hpVal">不选英雄</span>
+          <span class="hp-tier" id="hpTier" hidden></span>
+          <span class="hp-arrow" aria-hidden="true">▾</span>
+        </button>
+        <button type="button" class="hp-clear" id="hpClear" hidden title="清除英雄选择" aria-label="清除英雄选择">✕</button>
+        <div class="hp-pop" id="hpPop" hidden>
+          <div class="hp-search-box">
+            <input type="search" class="hp-search" id="hpSearch" placeholder="🔍 搜索 116 位英雄（如：拉法姆、帕奇）" autocomplete="off" />
+          </div>
+          <div class="hp-filter-chips" id="hpFilters">
+            <button type="button" class="on" data-tier="all">全部</button>
+            <button type="button" data-tier="T0">T0</button>
+            <button type="button" data-tier="T1">T1</button>
+            <button type="button" data-tier="T2">T2</button>
+            <button type="button" data-tier="T3">T3</button>
+          </div>
+          <div class="hp-list" id="hpList" role="listbox"></div>
+          <div class="hp-foot">
+            <span class="hp-count" id="hpCount">共 116 位英雄</span>
+            <button type="button" class="hp-reset" id="hpReset">清除英雄选择</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="ct-hero-only" id="compHeroOnly" hidden title="仅显示该英雄有数据或推荐的适配阵容">仅看该英雄适配</button>
+      <select id="compHero" style="display:none;" aria-hidden="true"><option value="">不选英雄</option></select>
+    </div>
     <div class="ct-tiers" id="compTiers">
       <button type="button" data-tier="all" class="on">全部</button>
       <button type="button" data-tier="T0">T0</button>
@@ -933,6 +967,8 @@
 <script src="extra-cards.js?v=20261105d"></script>
 <script src="cards.js?v=20261105d"></script>
 <script src="app.js?v=20261105d"></script>
+<script src="sim.js?v=20261105d"></script>
+<script src="finder.js?v=20261105d"></script>
 <script src="search.js?v=20261105d"></script>
 <script src="analytics-config.js?v=20261105d"></script>
 <script src="analytics.js?v=20261105d"></script>
@@ -955,5 +991,12 @@
 <script src="rail.js?v=20261105d"></script>
 <script src="light.js?v=20261105d"></script>
 <script src="map.js?v=20261105d"></script>
+<script>
+  if('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')){
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('sw.js').catch(function(){});
+    });
+  }
+</script>
 </body>
 </html>

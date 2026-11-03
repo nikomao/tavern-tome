@@ -1,4 +1,4 @@
-/* 渲染與互動 */
+/* 渲染與交互 */
 (function(){
   function tierName(t){ return t === "T0" ? "T0：最強一檔" : t === "T1" ? "T1：強勢" : t === "T2" ? "T2：可用，需要條件" : "T3：弱勢或冷門"; }
   function tierStars(n){ n = Number(n); if(!n || n < 1) return ""; return '<i class="star"></i>'.repeat(Math.min(7, n)); }
@@ -48,10 +48,10 @@
   function thumbHTML(name){
     var c = cardOf(name);
     if(c && c.img){
-      return '<span class="ci-thumb"><img src="'+c.img+'" alt="'+name+'"></span>';
+      return '<span class="ci-thumb" data-card="'+name+'" title="懸停卡圖查看完整卡牌效果"><img src="'+c.img+'" alt="'+name+'"></span>';
     }
-    var tip = isNoArt(name) ? '卡圖暫未收錄（37.0 新卡）' : '暫無卡圖';
-    return '<span class="ci-thumb noimg" title="'+tip+'"><i>'+name.slice(0,1)+'</i></span>';
+    var tip = isNoArt(name) ? '卡圖暂未收錄（37.0 新卡）' : '暂無卡圖';
+    return '<span class="ci-thumb noimg" data-card="'+name+'" title="'+tip+'"><i>'+name.slice(0,1)+'</i></span>';
   }
 
 
@@ -77,7 +77,7 @@
         '<span class="fc-img"><img src="'+c.img+'" alt="'+nm+'"></span><span class="fc-name">'+nm+'</span></button>';
     }
     if(isNoArt(nm)){
-      return '<span class="fc" title="卡圖暫未收錄"><span class="fc-img noimg"><i>'+nm.slice(0,1)+'</i></span><span class="fc-name">'+nm+'</span></span>';
+      return '<span class="fc" title="卡圖暂未收錄"><span class="fc-img noimg"><i>'+nm.slice(0,1)+'</i></span><span class="fc-name">'+nm+'</span></span>';
     }
     return '<span class="fc generic"><span class="fc-img"><i>+</i></span><span class="fc-name">'+nm+'</span></span>';
   }
@@ -86,7 +86,7 @@
     var plans = (typeof PLANS !== "undefined" && PLANS[t.id]) ? PLANS[t.id] : null;
     if(!plans){
       var fin = (typeof FINALS !== "undefined" && FINALS[t.id]) || [];
-      plans = [{ k: "標準", when: "按這個順序擺。", slots: fin }];
+      plans = [{ k: "標准", when: "按这個順序擺。", slots: fin }];
     }
     var h = '<div class="plans" data-plans="'+t.id+'">';
     h += '<div class="plan-tabs"><span class="plan-label">終盤方案</span>';
@@ -116,7 +116,7 @@
     if(!race || typeof POOL === "undefined") return "";
     var list = POOL.filter(function(c){ return (c.r || "").split("/").indexOf(race) >= 0; });
     if(!list.length) return "";
-    var h = '<details class="tribe-all"><summary>該種族全部卡牌 <b>' + list.length + '</b> 張 <span>含歷史卡 · 點開檢視</span></summary>';
+    var h = '<details class="tribe-all"><summary>该種族全部卡牌 <b>' + list.length + '</b> 張 <span>含歷史卡 · 点開查看</span></summary>';
     h += '<div class="tribe-grid">';
     list.forEach(function(c){
       h += '<a class="tc" href="cards.html?card=' + c.i + '" title="' + c.n + '">' +
@@ -125,7 +125,7 @@
         '<span class="tc-meta stars">' + tierStars(c.t) + '</span></a>';
     });
     h += '</div>';
-    h += '<a class="tribe-more" href="cards.html?race=' + race + '">在卡池頁篩選「' + t.name + '」→</a>';
+    h += '<a class="tribe-more" href="cards.html?race=' + race + '">在卡牌池页筛選「' + t.name + '」→</a>';
     h += '</details>';
     return h;
   }
@@ -159,12 +159,53 @@
         '<span class="tb-name">' + x.name + '</span>' +
         '<em class="stars">' + stars + '</em></a>';
     }).join("");
+
+    var guideHtml = "";
+    if(note && (note.whyBest || note.growth || note.steps)){
+      var stepsHtml = "";
+      if(note.steps && note.steps.length){
+        stepsHtml = '<div class="tbg-steps">' + note.steps.map(function(s){
+          return '<div class="tbg-s"><b>' + s.title + '</b><span>' + s.desc + '</span></div>';
+        }).join("") + '</div>';
+      }
+      guideHtml = '<div class="tb-guide" id="guide-' + c.key + '">' +
+        '<div class="tb-guide-grid">' +
+          (note.whyBest ? '<div class="tbg-col"><div class="tbg-title"><span class="tbg-icon">👑</span> 為什麼是本週最佳？</div><p class="tbg-text">' + note.whyBest + '</p></div>' : '') +
+          (note.growth ? '<div class="tbg-col"><div class="tbg-title"><span class="tbg-icon">🔄</span> 卡牌成長閉環（新手怎麼看懂）</div><p class="tbg-text">' + note.growth + '</p></div>' : '') +
+        '</div>' +
+        (stepsHtml ? '<div class="tbg-steps-wrap"><div class="tbg-title"><span class="tbg-icon">⚡</span> 新手實操三步法：從拿到核心到體質破萬</div>' + stepsHtml + '</div>' : '') +
+      '</div>';
+    }
+
     return '<div class="tribe-best"><div class="tb-head"><span class="tb-label">本週最佳</span><b>' + c.name + '</b>' +
       '<span class="cc-tier ' + String(c.tier).toLowerCase() + '" title="' + tierName(c.tier) + '">' + c.tier + '</span>' +
       '<span class="tb-meta">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) +
-      '% · 吃雞 ' + Math.round((c.win || 0) * 100) + '%</span>' +
+      '% · 奪冠 ' + Math.round((c.win || 0) * 100) + '%</span>' +
+      (guideHtml ? '<button type="button" class="tb-toggle-guide" data-comp="' + c.key + '">收起成長指南 ▴</button>' : '') +
       '<a class="tb-play" href="play.html?comp=' + c.key + '">對局模式</a></div>' +
-      '<div class="tb-cards">' + cards + '</div></div>';
+      '<div class="tb-cards">' + cards + '</div>' +
+      guideHtml +
+      '</div>';
+  }
+
+  function scalingHTML(t){
+    if(!t.scaling) return "";
+    var sc = t.scaling;
+    var stagesHtml = "";
+    if(sc.pipeline && sc.pipeline.length){
+      stagesHtml = '<div class="sc-stages">' + sc.pipeline.map(function(st){
+        return '<div class="sc-stage"><div class="sc-stage-title">' + st.stage + '</div><div class="sc-stage-desc">' + st.desc + '</div></div>';
+      }).join("") + '</div>';
+    }
+    return '<div class="scaling-wrap">' +
+      '<h4>種族成長流水線：资源怎麼用？體質贴給誰？怎麼破萬？<span class="h4-hint">從加法到複利的實操指引</span></h4>' +
+      '<div class="scaling-grid">' +
+        '<div class="sc-box"><div class="sc-title"><span class="sc-badge resource">核心资源</span> 资源從何而來？怎麼轉？</div><p class="sc-desc">' + sc.resource + '</p></div>' +
+        '<div class="sc-box"><div class="sc-title"><span class="sc-badge carrier">載體選择</span> 體質贴給誰？誰承載萬点？</div><p class="sc-desc">' + sc.carrier + '</p></div>' +
+      '</div>' +
+      (stagesHtml ? '<div class="sc-pipeline-box"><div class="sc-pipeline-head">📈 從零到上萬：三階膨胀流水線</div>' + stagesHtml + '</div>' : '') +
+      (sc.proTip ? '<div class="sc-protip"><span class="sc-protip-tag">💡 實操避坑：</span><span>' + sc.proTip + '</span></div>' : '') +
+    '</div>';
   }
 
   function panelHTML(t, idx){
@@ -181,18 +222,18 @@
     h +=     '</header>';
     h +=     bestCompHTML(t);
     h +=     '<div class="tp-body">';
-    h +=       '<div class="core-wrap"><h4>核心元件<span class="h4-hint">懸停 / 點選卡圖，檢視完整卡牌效果</span></h4><ul class="core-list">';
+    h +=       '<div class="core-wrap"><h4>核心組件<span class="h4-hint">懸停 / 点擊卡圖，查看完整卡牌效果</span></h4><ul class="core-list">';
     t.cores.forEach(function(x){
       var c = cardOf(x.n);
       var sub = "";
       if(c){
         var bits = [];
         if(c.n && c.n !== x.n) bits.push(c.n);
-        if(c.k === "spell") bits.push("酒館法術");
+        if(c.k === "spell") bits.push("旅店法術");
         else if(tierByName(x.n) != null) bits.push((typeof tierStars === "function" ? tierStars(tierByName(x.n)) : ""));
         sub = bits.join(" · ");
       }
-      h += '<li class="core-item" data-card="'+x.n+'">' +
+      h += '<li class="core-item">' +
              thumbHTML(x.n) +
              '<span class="ci-main">' +
                '<span class="ci-head"><b>'+x.n+'</b><span class="cr">'+x.r+'</span></span>' +
@@ -202,15 +243,16 @@
            '</li>';
     });
     h +=       '</ul></div>';
-    h +=       '<div class="pos-wrap"><h4>標準站位</h4><div class="posbar">';
+    h +=       '<div class="pos-wrap"><h4>標准站位</h4><div class="posbar">';
     t.position.forEach(function(p,i){
       h += '<div class="pb '+p.k+'"><span class="n">'+(i+1)+'</span><span class="r">'+p.r+'</span><span class="m">'+p.m+'</span></div>';
     });
     h +=       '</div><p class="pos-hint">'+t.posHint+'</p>';
     h +=       planBlock(t) + '</div>';
     h +=     '</div>';
+    h +=     scalingHTML(t);
     h +=     '<div class="tp-grid">';
-    h +=       '<div class="tp-cell"><h4>運營節奏</h4><div class="curve">';
+    h +=       '<div class="tp-cell"><h4>运营節奏</h4><div class="curve">';
     t.curve.forEach(function(cv){
       h += '<div><span>'+cv.k+'</span><b>'+cv.v+'</b></div>';
     });
@@ -218,10 +260,10 @@
     h +=       '<div class="tp-cell"><h4>為什麼強</h4><ul>';
     t.why.forEach(function(w){ h += '<li>'+w+'</li>'; });
     h +=       '</ul></div>';
-    h +=       '<div class="tp-cell"><h4>天敵與弱點</h4><ul>';
+    h +=       '<div class="tp-cell"><h4>天敵與弱点</h4><ul>';
     t.weak.forEach(function(w){ h += '<li>'+w+'</li>'; });
     h +=       '</ul></div>';
-    h +=       '<div class="tp-cell"><h4>常見錯誤</h4><ul>';
+    h +=       '<div class="tp-cell"><h4>常见错誤</h4><ul>';
     t.mistakes.forEach(function(w){ h += '<li>'+w+'</li>'; });
     h +=       '</ul></div>';
     h +=     '</div>';
@@ -256,11 +298,21 @@
     });
   }
 
-  /* ---------- lineup plan tabs ---------- */
+  /* ---------- lineup plan tabs & best comp guide toggle ---------- */
   (function(){
     var wrap = document.getElementById("tribePanels");
     if(!wrap) return;
     wrap.addEventListener("click", function(e){
+      var guideBtn = e.target.closest ? e.target.closest(".tb-toggle-guide") : null;
+      if(guideBtn){
+        var key = guideBtn.getAttribute("data-comp");
+        var guide = document.getElementById("guide-" + key);
+        if(guide){
+          var isClosed = guide.classList.toggle("collapsed");
+          guideBtn.textContent = isClosed ? "展開成長指南 ▾" : "收起成長指南 ▴";
+        }
+        return;
+      }
       var tab = e.target.closest ? e.target.closest(".plan-tab") : null;
       if(!tab) return;
       var box = tab.closest(".plans");
@@ -336,7 +388,16 @@
       entries.forEach(function(en){
         if(en.isIntersecting){
           links.forEach(function(a){
-            a.classList.toggle("active", a.getAttribute("href") === "#"+en.target.id);
+            var isActive = a.getAttribute("href") === "#"+en.target.id;
+            a.classList.toggle("active", isActive);
+            if(isActive){
+              var navEl = document.getElementById("nav");
+              if(navEl && navEl.scrollWidth > navEl.clientWidth){
+                try {
+                  a.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+                } catch(e){}
+              }
+            }
           });
         }
       });
@@ -362,6 +423,9 @@
     var popName = pop.querySelector(".cp-name");
     var popMeta = pop.querySelector(".cp-meta");
     var popText = pop.querySelector(".cp-text");
+    var popLink = document.getElementById("cpLink");
+    var popClose = document.getElementById("cpClose");
+    var TOUCH = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
 
     function fillCard(name){
       var c = CARDS[name];
@@ -376,14 +440,14 @@
       var alias = (c.n && c.n !== name) ? '<span>'+c.n+'</span>' : '';
       popName.innerHTML = '<b>'+name+'</b>'+alias;
       var meta = [];
-      if(c.k === "spell") meta.push("酒館法術");
+      if(c.k === "spell") meta.push("旅店法術");
       else {
         if(c.t != null) meta.push(tierStars(c.t));
         if(c.a != null) meta.push(c.a + " / " + c.h);
       }
       if(c.r) meta.push(c.r);
       popMeta.innerHTML = meta.join(" · ");
-      popText.textContent = c.x || "暫未收錄卡牌描述";
+      popText.textContent = c.x || "暂未收錄卡牌描述";
       return true;
     }
 
@@ -391,7 +455,7 @@
     if(typeof POOL !== "undefined"){ POOL.forEach(function(x){ POOL_BY_ID[x.i] = x; }); }
     if(typeof EXTRA_CARDS !== "undefined"){ Object.keys(EXTRA_CARDS).forEach(function(k){ POOL_BY_ID[k] = EXTRA_CARDS[k]; }); }
     var RACE_CN = { BEAST:"野獸", DEMON:"惡魔", DRAGON:"龍", ELEMENTAL:"元素", MECHANICAL:"機械",
-      MURLOC:"魚人", NAGA:"納迦", PIRATE:"海盜", QUILBOAR:"野豬人", UNDEAD:"亡靈", ABERRATION:"畸變怪" };
+      MURLOC:"魚人", NAGA:"納迦", PIRATE:"海盜", QUILBOAR:"野豬人", UNDEAD:"不死族", ABERRATION:"畸變體" };
 
     function fillById(id){
       var c = POOL_BY_ID[id];
@@ -403,27 +467,87 @@
         popImg.removeAttribute("src");
         popImg.style.display = "none";
       }
-      popName.innerHTML = "<b>" + c.n + "</b>";
+      var en = (window.__lang === "en" && window.EN_CARDS && window.EN_CARDS[id]) ? window.EN_CARDS[id] : null;
+      popName.innerHTML = "<b>" + (en ? en.n : c.n) + "</b>";
       var meta = [];
       if(c.t != null) meta.push(tierStars(c.t));
       if(c.a != null) meta.push(c.a + " / " + c.h);
-      var races = String(c.r || "").split("/").map(function(r){ return RACE_CN[r] || r; }).filter(Boolean);
+      var EN_RACE = { BEAST:"Beast", DEMON:"Demon", DRAGON:"Dragon", ELEMENTAL:"Elemental", MECHANICAL:"Mech",
+        MURLOC:"Murloc", NAGA:"Naga", PIRATE:"Pirate", QUILBOAR:"Quilboar", UNDEAD:"Undead", ABERRATION:"Aberration" };
+      var isEn = (window.__lang === "en");
+      var races = String(c.r || "").split("/").map(function(r){ return isEn ? (EN_RACE[r] || r) : (RACE_CN[r] || r); }).filter(Boolean);
       if(races.length) meta.push(races.join(" / "));
       popMeta.innerHTML = meta.join(" · ");
-      popText.textContent = c.x || "暫無卡牌描述";
+      popText.textContent = (en && en.x) ? en.x : (c.x || "暂無卡牌描述");
       return true;
     }
 
+    function getCardTarget(target){
+      if(!target || !target.closest) return null;
+      // Never trigger popover on names, roles, or text descriptions to preserve reading experience
+      if(target.closest(".cs-name, .tb-name, .fc-name, .mc-card em, .hb-role, .ci-main, .ci-head, .cd, .cr, .ci-sub, .cc-head, .cc-pos, .cc-foot, .cc-metrics")){
+        return null;
+      }
+      return target.closest("[data-card-id], [data-card]");
+    }
+
     document.addEventListener("mouseover", function(e){
-      var el = e.target.closest ? e.target.closest("[data-card-id]") : null;
-      if(!el) return;
-      if(!fillById(el.getAttribute("data-card-id"))) return;
+      if(TOUCH) return;
+      var el = getCardTarget(e.target);
+      if(!el){
+        if(e.target.closest && (e.target.closest(".cs-name, .tb-name, .fc-name, .mc-card em, .ci-main, .ci-head, .cd, .cr, .ci-sub, .cc-head, .cc-pos, .cc-foot") || !e.target.closest("#cardPop"))){
+          pop.hidden = true;
+        }
+        return;
+      }
+      var id = el.getAttribute("data-card-id");
+      var name = el.getAttribute("data-card");
+      var ok = id ? fillById(id) : (name ? fillCard(name) : false);
+      if(!ok){ pop.hidden = true; return; }
       pop.hidden = false;
       placePop(e.clientX, e.clientY);
     });
 
+    if(popClose) popClose.addEventListener("click", function(){ pop.hidden = true; });
+
+    function openTouchCard(el){
+      var id = el.getAttribute("data-card-id");
+      var name = el.getAttribute("data-card");
+      var ok = id ? fillById(id) : (name ? fillCard(name) : false);
+      if(!ok) return false;
+      if(popLink){
+        if(id){ popLink.hidden = false; popLink.href = "cards.html?card=" + id; }
+        else { popLink.hidden = true; }
+      }
+      pop.hidden = false;
+      var r = el.getBoundingClientRect();
+      placePop(r.left + r.width / 2, r.top + r.height / 2);
+      return true;
+    }
+
+    if(TOUCH){
+      document.addEventListener("touchend", function(e){
+        var inPop = e.target.closest ? e.target.closest("#cardPop") : null;
+        if(inPop) return;
+        var el = getCardTarget(e.target);
+        if(!el){ pop.hidden = true; return; }
+        e.preventDefault();
+        openTouchCard(el);
+      }, { passive: false });
+
+      document.addEventListener("click", function(e){
+        var inPop = e.target.closest ? e.target.closest("#cardPop") : null;
+        if(inPop) return;
+        var el = getCardTarget(e.target);
+        if(!el){ pop.hidden = true; return; }
+        e.preventDefault();
+        openTouchCard(el);
+      }, true);
+    }
+
     document.addEventListener("mouseout", function(e){
-      var el = e.target.closest ? e.target.closest("[data-card-id]") : null;
+      if(TOUCH) return;
+      var el = getCardTarget(e.target);
       if(el && !el.contains(e.relatedTarget)) pop.hidden = true;
     });
 
@@ -436,186 +560,33 @@
       pop.style.top = Math.max(12, top) + "px";
     }
 
-    document.addEventListener("mouseover", function(e){
-      var el = e.target.closest ? e.target.closest("[data-card]") : null;
-      if(!el) return;
-      if(!fillCard(el.getAttribute("data-card"))) return;
-      pop.hidden = false;
-      placePop(e.clientX, e.clientY);
-    });
-
     document.addEventListener("mousemove", function(e){
-      if(!pop.hidden) placePop(e.clientX, e.clientY);
-    });
-
-    document.addEventListener("mouseout", function(e){
-      var el = e.target.closest ? e.target.closest("[data-card]") : null;
-      if(el && !el.contains(e.relatedTarget)) pop.hidden = true;
+      if(!pop.hidden){
+        if(e.target.closest && e.target.closest(".cs-name, .tb-name, .fc-name, .mc-card em, .ci-main, .ci-head, .cd, .cr, .ci-sub")){
+          pop.hidden = true;
+          return;
+        }
+        placePop(e.clientX, e.clientY);
+      }
     });
 
     document.addEventListener("click", function(e){
-      var el = e.target.closest ? e.target.closest("[data-card]") : null;
-      if(!el){ pop.hidden = true; return; }
+      var el = getCardTarget(e.target);
+      if(!el){
+        if(e.target.closest && (e.target.closest("#cardPop") || e.target.closest("[data-card-id],[data-card]"))) return;
+        pop.hidden = true; return;
+      }
+      var id = el.getAttribute("data-card-id");
+      var name = el.getAttribute("data-card");
       var r = el.getBoundingClientRect();
-      if(fillCard(el.getAttribute("data-card"))){
+      var ok = id ? fillById(id) : (name ? fillCard(name) : false);
+      if(ok){
         pop.hidden = false;
         placePop(r.left + r.width / 2, r.bottom - 10);
       }
     });
 
-    window.addEventListener("scroll", function(){ pop.hidden = true; }, { passive: true });
-  }
-
-  /* ---------- simulator ---------- */
-  var $ = function(id){ return document.getElementById(id); };
-  var base=$("base"), add=$("add"), mult=$("mult"), turns=$("turns");
-  var canvas = $("chart");
-  if(base && canvas){
-    var ctx = canvas.getContext("2d");
-    var W = 760, H = 340, scaleMode = "linear";
-    var toggle = document.getElementById("scaleToggle");
-
-    function fitCanvas(){
-      var rect = canvas.getBoundingClientRect();
-      W = Math.max(360, Math.round(rect.width || 760));
-      H = 340;
-      var dpr = window.devicePixelRatio || 1;
-      canvas.width = Math.round(W * dpr);
-      canvas.height = Math.round(H * dpr);
-      canvas.style.width = "100%";
-      canvas.style.height = H + "px";
-      ctx.setTransform(dpr,0,0,dpr,0,0);
-    }
-
-    function niceMax(v){
-      if(v <= 10) return 10;
-      var p = Math.pow(10, Math.floor(Math.log10(v)));
-      var n = v / p;
-      var m = n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10;
-      return m * p;
-    }
-
-    function draw(){
-      var b = +base.value, a = +add.value, m = +mult.value, N = +turns.value;
-      $("o-base").textContent = b;
-      $("o-add").textContent = a;
-      $("o-mult").textContent = m;
-      $("o-turns").textContent = N;
-
-      var lin = b + a * N;
-      var com = b * Math.pow(2, m * N);
-      $("r-linear").textContent = fmt(lin);
-      $("r-compound").textContent = fmt(com);
-      var ratio = com / Math.max(lin, 0.0001);
-      $("r-ratio").textContent = (ratio < 10 ? ratio.toFixed(1) : fmt(ratio)) + "×";
-
-      var maxV = Math.max(lin, com, 10);
-      var L = 76, R = 26, T = 24, B = 40;
-      var pw = W - L - R, ph = H - T - B;
-      var top, ticks = [], i, e;
-
-      if(scaleMode === "log"){
-        top = Math.max(1, Math.ceil(Math.log10(maxV * 1.6)));
-        for(e = 0; e <= top; e++) ticks.push(Math.pow(10, e));
-      } else {
-        top = niceMax(maxV * 1.08);
-        for(i = 0; i <= 5; i++) ticks.push(top * i / 5);
-      }
-
-      ctx.clearRect(0,0,W,H);
-
-      function py(v){
-        if(scaleMode === "log"){
-          var lv = Math.log10(Math.max(v, 1));
-          return T + ph - (lv / top) * ph;
-        }
-        return T + ph - (v / top) * ph;
-      }
-
-      // grid + y labels
-      ctx.font = "11px ui-monospace, Menlo, Consolas, monospace";
-      ctx.textAlign = "right";
-      ctx.textBaseline = "middle";
-      ticks.forEach(function(tv){
-        var y = py(tv);
-        ctx.strokeStyle = tv === 0 ? "rgba(255,215,160,.28)" : "rgba(255,215,160,.10)";
-        ctx.lineWidth = 1;
-        ctx.beginPath(); ctx.moveTo(L, y); ctx.lineTo(W-R, y); ctx.stroke();
-        ctx.fillStyle = "#8d7357";
-        ctx.fillText(fmt(tv), L - 10, y);
-      });
-
-      // x labels
-      ctx.textAlign = "center";
-      ctx.textBaseline = "top";
-      ctx.fillStyle = "#8d7357";
-      for(var k = 0; k <= 4; k++){
-        var t = Math.round(N * k / 4);
-        var x = L + (t / N) * pw;
-        ctx.fillText("R" + t, x, H - B + 12);
-      }
-
-      function px(t){ return L + (t / N) * pw; }
-
-      // compound fill
-      var grad = ctx.createLinearGradient(0, T, 0, T+ph);
-      grad.addColorStop(0, "rgba(240,201,121,.22)");
-      grad.addColorStop(1, "rgba(240,201,121,0)");
-      ctx.beginPath();
-      ctx.moveTo(px(0), py(b));
-      for(var i2 = 1; i2 <= N; i2++){ ctx.lineTo(px(i2), py(b * Math.pow(2, m*i2))); }
-      ctx.lineTo(px(N), T+ph); ctx.lineTo(px(0), T+ph); ctx.closePath();
-      ctx.fillStyle = grad; ctx.fill();
-
-      // linear
-      ctx.beginPath();
-      ctx.moveTo(px(0), py(b));
-      for(var j = 1; j <= N; j++){ ctx.lineTo(px(j), py(b + a*j)); }
-      ctx.strokeStyle = "#8d6f4f"; ctx.lineWidth = 2; ctx.stroke();
-
-      // compound
-      ctx.beginPath();
-      ctx.moveTo(px(0), py(b));
-      for(var q = 1; q <= N; q++){ ctx.lineTo(px(q), py(b * Math.pow(2, m*q))); }
-      ctx.strokeStyle = "#f0c979"; ctx.lineWidth = 2.6;
-      ctx.shadowColor = "rgba(240,201,121,.55)"; ctx.shadowBlur = 12;
-      ctx.stroke();
-      ctx.shadowBlur = 0;
-
-      // endpoint dot + value
-      var ex = px(N), ey = py(com);
-      ctx.beginPath();
-      ctx.arc(ex, ey, 4.5, 0, Math.PI*2);
-      ctx.fillStyle = "#ffe6b0"; ctx.fill();
-      if(N > 0){
-        ctx.font = "600 12px ui-monospace, Menlo, Consolas, monospace";
-        ctx.fillStyle = "#f2dfae";
-        ctx.textAlign = "right";
-        ctx.textBaseline = "bottom";
-        ctx.fillText(fmt(com), Math.min(ex - 8, W - 4), Math.max(ey - 8, 14));
-      }
-    }
-
-    fitCanvas(); draw();
-    [base, add, mult, turns].forEach(function(el){
-      el.addEventListener("input", draw);
-    });
-    if(toggle){
-      toggle.addEventListener("click", function(ev){
-        var btn = ev.target.closest("button");
-        if(!btn) return;
-        scaleMode = btn.getAttribute("data-scale");
-        Array.prototype.forEach.call(toggle.querySelectorAll("button"), function(x){
-          x.classList.toggle("on", x === btn);
-        });
-        draw();
-      });
-    }
-    var rt;
-    window.addEventListener("resize", function(){
-      clearTimeout(rt);
-      rt = setTimeout(function(){ fitCanvas(); draw(); }, 120);
-    });
+    if(!TOUCH) window.addEventListener("scroll", function(){ pop.hidden = true; }, { passive: true });
   }
 
   /* ---------- lesson demos (01 / 02) ---------- */
@@ -682,7 +653,7 @@
     onceVisible(root, play);
   })();
 
-  /* 定律二：鑄幣 = 觸發次數 */
+  /* 定律二：金幣 = 觸發次數 */
   (function(){
     var root = document.querySelector('[data-demo="trigger"]');
     if(!root) return;
@@ -756,7 +727,7 @@
       Array.prototype.forEach.call(root.querySelectorAll(".bslot"), function(s){
         s.classList.remove("hit", "dead");
       });
-      note.textContent = "對手從左邊開始，連續打三次。";
+      note.textContent = "对手從左边開始，连續打三次。";
       btn.disabled = false;
     }
     function play(){
@@ -774,7 +745,7 @@
         })(i);
       }
       timers.push(setTimeout(function(){
-        note.innerHTML = "壞站位：<b>大哥、銅須、巴琳達</b>全沒了；好站位：只死了三個小怪，<b>大哥和銅須還活著</b>。";
+        note.innerHTML = "壞站位：<b>大哥、铜須、巴琳达</b>全没了；好站位：只死了三個小怪，<b>大哥和铜須还活著</b>。";
         btn.disabled = false;
       }, 220 + 3 * 900));
     }
@@ -783,7 +754,7 @@
     onceVisible(root, function(){ if(!reduceMotion) play(); });
   })();
 
-  /* 02：翻倍積木 */
+  /* 02：加倍积木 */
   (function(){
     var track = document.querySelector("[data-ds-track]");
     if(!track) return;
@@ -806,7 +777,7 @@
     });
   })();
 
-  /* 02：乘數鏈逐段點亮 */
+  /* 02：乘數鏈逐段点亮 */
   (function(){
     var flow = document.querySelector(".chain-flow");
     if(!flow) return;
@@ -837,108 +808,6 @@
   })();
 
 
-  /* ---------- first-game simulator ---------- */
-  (function(){
-    var root = document.getElementById("simGame");
-    if(!root || typeof SIM === "undefined") return;
-    var el = {
-      turn: root.querySelector("[data-sg-turn]"),
-      hp: root.querySelector("[data-sg-hp]"),
-      tier: root.querySelector("[data-sg-tier]"),
-      power: root.querySelector("[data-sg-power]"),
-      gold: root.querySelector("[data-sg-gold]"),
-      scene: root.querySelector("[data-sg-scene]"),
-      options: root.querySelector("[data-sg-options]"),
-      feedback: root.querySelector("[data-sg-feedback]"),
-      result: root.querySelector("[data-sg-result]")
-    };
-    var state;
-
-    function reset(){
-      state = { i: 0, hp: 30, tier: 1, power: 0, good: 0 };
-      el.result.hidden = true;
-      el.result.innerHTML = "";
-      el.feedback.hidden = true;
-      render();
-    }
-
-    function render(){
-      var t = SIM.turns[state.i];
-      el.turn.textContent = (state.i + 1) + " / " + SIM.turns.length;
-      el.hp.textContent = Math.max(0, state.hp);
-      el.tier.innerHTML = '<span class="stars">' + tierStars(state.tier) + '</span>';
-      el.power.textContent = state.power;
-      el.gold.textContent = t.gold;
-      el.scene.textContent = t.scene;
-      el.options.innerHTML = "";
-      el.options.hidden = false;
-      el.feedback.hidden = true;
-      el.feedback.innerHTML = "";
-      t.opts.forEach(function(o, idx){
-        var b = document.createElement("button");
-        b.type = "button";
-        b.className = "sg-opt";
-        b.innerHTML = '<span class="k">' + (idx + 1) + '</span><span class="t">' + o.t + '</span>';
-        b.addEventListener("click", function(){ choose(idx); });
-        el.options.appendChild(b);
-      });
-    }
-
-    function choose(idx){
-      var t = SIM.turns[state.i], o = t.opts[idx], e = o.e || {};
-      state.power = Math.max(0, state.power + (e.power || 0));
-      state.tier += (e.tier || 0);
-      state.hp += (e.hp || 0);
-      if(o.good) state.good++;
-
-      var opp = SIM.opp[state.i];
-      var win = state.power >= opp;
-      var dmg = 0;
-      if(!win){ dmg = 3 + Math.floor(state.i / 2); state.hp -= dmg; }
-
-      el.options.hidden = true;
-      el.feedback.hidden = false;
-      el.feedback.className = "sg-feedback " + (o.good ? "ok" : "no");
-      el.feedback.innerHTML =
-        '<div class="sg-fb-head">' + (o.good ? "✓ 好選擇" : "✗ 可以更好") +
-        " · 戰鬥" + (win ? "勝利" : "失敗 −" + dmg + " 血") + '</div>' +
-        '<p>' + o.fb + '</p>' +
-        '<div class="sg-fb-state">戰力 ' + state.power + ' / 對手 ' + opp + ' · 血量 ' + Math.max(0, state.hp) + '</div>';
-
-      var last = state.i === SIM.turns.length - 1 || state.hp <= 0;
-      var next = document.createElement("button");
-      next.type = "button";
-      next.className = "sg-next";
-      next.textContent = last ? "看結果 →" : "下一回合 →";
-      next.addEventListener("click", function(){
-        if(last){ showResult(); } else { state.i++; render(); }
-      });
-      el.feedback.appendChild(next);
-
-      el.hp.textContent = Math.max(0, state.hp);
-      el.power.textContent = state.power;
-      el.tier.innerHTML = '<span class="stars">' + tierStars(state.tier) + '</span>';
-    }
-
-    function showResult(){
-      var grade = state.hp <= 0 ? "D" : state.good >= 9 ? "S" : state.good >= 7 ? "A" : state.good >= 5 ? "B" : "C";
-      el.feedback.hidden = true;
-      el.result.hidden = false;
-      el.result.innerHTML =
-        '<div class="sg-grade">' + grade + '</div>' +
-        '<div class="sg-sum"><b>' + state.good + ' / 10</b> 個回合做了正確選擇<br>終局：' +
-        Math.max(0, state.hp) + ' 血 · ' + state.tier + ' 本 · 戰力 ' + state.power + '</div>' +
-        '<p>' + (grade === "S"
-          ? "節奏很標準：先站住、再升本、再收口。現在可以去看 01 的三條定律了。"
-          : "記住一句話：血量健康就升本，血量危險就先買戰力；錢要花在能長大的卡上。") + '</p>' +
-        '<button type="button" class="sg-next" id="sgRestart">↻ 再玩一次</button>';
-      var btn = document.getElementById("sgRestart");
-      if(btn) btn.addEventListener("click", reset);
-    }
-
-    reset();
-  })();
-
   /* ---------- weekly meta ---------- */
   (function(){
     if(typeof META === "undefined") return;
@@ -956,7 +825,7 @@
       var host = document.getElementById("compStats");
       var tools = document.getElementById("compTools");
       var sub = document.getElementById("metaSub");
-      var st = { hero: "", tier: "all", sort: "avg", q: "" };
+      var st = { hero: "", tier: "all", sort: "avg", q: "", heroOnly: false };
 
       var DB = {};
       if(typeof POOL !== "undefined") POOL.forEach(function(c){ DB[c.i] = c; });
@@ -964,6 +833,9 @@
       function tierOfCard(id){ var c = DB[id]; return c && c.t != null ? c.t : null; }
 
       var heroNames = [];
+      var heroInfoMap = {};
+      (STATS.heroes || []).forEach(function(h){ heroInfoMap[h.name] = h; });
+
       if(STATS.heroComps){
         var order = {};
         (STATS.heroes || []).forEach(function(h, i){ order[h.name] = i; });
@@ -979,6 +851,204 @@
         heroSel.value = st.hero;
       }
 
+      /* Hero Searchable Filter Picker */
+      var hpBtn = document.getElementById("hpBtn");
+      var hpVal = document.getElementById("hpVal");
+      var hpTier = document.getElementById("hpTier");
+      var hpClear = document.getElementById("hpClear");
+      var hpPop = document.getElementById("hpPop");
+      var hpSearch = document.getElementById("hpSearch");
+      var hpFilters = document.getElementById("hpFilters");
+      var hpList = document.getElementById("hpList");
+      var hpCount = document.getElementById("hpCount");
+      var hpReset = document.getElementById("hpReset");
+      var compHeroOnly = document.getElementById("compHeroOnly");
+      var currentFilterTier = "all";
+
+      function updatePickerUI(name){
+        if(!hpVal) return;
+        if(name){
+          hpVal.textContent = name;
+          var info = heroInfoMap[name];
+          if(info && info.tier){
+            hpTier.textContent = info.tier;
+            hpTier.className = "hp-tier " + info.tier.toLowerCase();
+            hpTier.hidden = false;
+          } else {
+            hpTier.hidden = true;
+          }
+          if(hpClear) hpClear.hidden = false;
+          if(compHeroOnly) compHeroOnly.hidden = false;
+        } else {
+          hpVal.textContent = "不選英雄";
+          if(hpTier) hpTier.hidden = true;
+          if(hpClear) hpClear.hidden = true;
+          if(compHeroOnly){
+            compHeroOnly.hidden = true;
+            compHeroOnly.classList.remove("on");
+            st.heroOnly = false;
+          }
+        }
+      }
+
+      function selectHero(name){
+        st.hero = name || "";
+        try { localStorage.setItem("tt-comp-hero", st.hero); } catch(e){}
+        if(heroSel) heroSel.value = st.hero;
+        updatePickerUI(st.hero);
+        closePicker();
+        renderBoard();
+      }
+
+      function openPicker(){
+        if(!hpPop) return;
+        hpPop.hidden = false;
+        if(hpBtn) hpBtn.setAttribute("aria-expanded", "true");
+        if(hpSearch){
+          hpSearch.value = "";
+          setTimeout(function(){ try { hpSearch.focus(); } catch(e){} }, 40);
+        }
+        currentFilterTier = "all";
+        if(hpFilters){
+          Array.prototype.forEach.call(hpFilters.children, function(b){
+            b.classList.toggle("on", b.getAttribute("data-tier") === "all");
+          });
+        }
+        renderPickerItems();
+      }
+
+      function closePicker(){
+        if(!hpPop) return;
+        hpPop.hidden = true;
+        if(hpBtn) hpBtn.setAttribute("aria-expanded", "false");
+      }
+
+      function escapeHtml(str){
+        return String(str || "").replace(/[&<>"']/g, function(m){
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m];
+        });
+      }
+
+      function highlightMatch(text, q){
+        if(!q) return escapeHtml(text);
+        var idx = text.toLowerCase().indexOf(q.toLowerCase());
+        if(idx < 0) return escapeHtml(text);
+        return escapeHtml(text.slice(0, idx)) +
+          '<mark>' + escapeHtml(text.slice(idx, idx + q.length)) + '</mark>' +
+          escapeHtml(text.slice(idx + q.length));
+      }
+
+      function renderPickerItems(){
+        if(!hpList) return;
+        var q = (hpSearch ? hpSearch.value : "").trim();
+        var matched = heroNames.filter(function(n){
+          var info = heroInfoMap[n] || {};
+          if(currentFilterTier !== "all" && info.tier !== currentFilterTier) return false;
+          if(q && n.toLowerCase().indexOf(q.toLowerCase()) < 0) return false;
+          return true;
+        });
+
+        var html = '';
+        if(!q && currentFilterTier === "all"){
+          html += '<div class="hp-item hp-item-none" data-hero="">✕ 不選英雄（顯示全局陣容）</div>';
+        }
+
+        if(!matched.length){
+          html += '<div class="hp-empty">未找到匹配英雄，換個搜索詞試試</div>';
+        } else {
+          matched.forEach(function(n){
+            var info = heroInfoMap[n] || {};
+            var comps = (STATS.heroComps && STATS.heroComps[n]) || [];
+            var isSel = (st.hero === n);
+            html += '<div class="hp-item' + (isSel ? ' is-selected' : '') + '" data-hero="' + escapeHtml(n) + '" role="option" aria-selected="' + (isSel ? 'true' : 'false') + '">' +
+              '<span class="hp-item-name">' + highlightMatch(n, q) + '</span>' +
+              (info.tier ? '<span class="hp-item-tier ' + info.tier.toLowerCase() + '">' + info.tier + '</span>' : '') +
+              (info.avg != null ? '<span class="hp-item-meta">均位 ' + Number(info.avg).toFixed(2) + (info.top4 ? ' · ' + Math.round(info.top4 * 100) + '% 前四' : '') + '</span>' : '') +
+              (comps.length ? '<span class="hp-item-comps">适配 ' + comps.length + ' 套</span>' : '') +
+              '</div>';
+          });
+        }
+
+        hpList.innerHTML = html;
+        if(hpCount){
+          hpCount.textContent = (!q && currentFilterTier === "all") ?
+            ("共 " + heroNames.length + " 位英雄") :
+            ("找到 " + matched.length + " 位英雄");
+        }
+      }
+
+      if(hpBtn){
+        hpBtn.addEventListener("click", function(e){
+          e.stopPropagation();
+          if(hpPop && !hpPop.hidden) closePicker();
+          else openPicker();
+        });
+      }
+      if(hpClear){
+        hpClear.addEventListener("click", function(e){
+          e.stopPropagation();
+          selectHero("");
+        });
+      }
+      if(hpReset){
+        hpReset.addEventListener("click", function(){
+          selectHero("");
+        });
+      }
+      if(hpSearch){
+        hpSearch.addEventListener("input", function(){
+          renderPickerItems();
+        });
+        hpSearch.addEventListener("keydown", function(e){
+          if(e.key === "Escape"){
+            closePicker();
+          } else if(e.key === "Enter"){
+            var firstItem = hpList.querySelector(".hp-item[data-hero]");
+            if(firstItem){
+              selectHero(firstItem.getAttribute("data-hero"));
+            }
+          }
+        });
+      }
+      if(hpFilters){
+        hpFilters.addEventListener("click", function(e){
+          var b = e.target.closest("button[data-tier]");
+          if(!b) return;
+          currentFilterTier = b.getAttribute("data-tier") || "all";
+          Array.prototype.forEach.call(hpFilters.children, function(btn){
+            btn.classList.toggle("on", btn === b);
+          });
+          renderPickerItems();
+        });
+      }
+      if(hpList){
+        hpList.addEventListener("click", function(e){
+          var item = e.target.closest(".hp-item");
+          if(!item) return;
+          var hName = item.getAttribute("data-hero") || "";
+          selectHero(hName);
+        });
+      }
+      document.addEventListener("click", function(e){
+        if(hpPop && !hpPop.hidden && !e.target.closest("#heroPicker")){
+          closePicker();
+        }
+      });
+      document.addEventListener("keydown", function(e){
+        if(e.key === "Escape" && hpPop && !hpPop.hidden){
+          closePicker();
+        }
+      });
+      if(compHeroOnly){
+        compHeroOnly.addEventListener("click", function(){
+          st.heroOnly = !st.heroOnly;
+          compHeroOnly.classList.toggle("on", st.heroOnly);
+          renderBoard();
+        });
+      }
+
+      updatePickerUI(st.hero);
+
       function heroStat(key){
         if(!st.hero || !STATS.heroComps || !STATS.heroComps[st.hero]) return null;
         var list = STATS.heroComps[st.hero];
@@ -990,7 +1060,7 @@
         var tribeName = String(c.name || "").split("·")[0];
         var tr = (typeof TRIBES !== "undefined") ? TRIBES.filter(function(x){ return x.name === tribeName; })[0] : null;
         if(tr && tr.posHint) return tr.posHint + "（經驗站位）";
-        return "通用原則：1–2 號位放前排吸收，3–5 號位放功能，6–7 號位放核心輸出";
+        return "通用原則：1–2 號位放前排吸收，3–5 號位放功能，6–7 號位放核心输出";
       }
 
       function compCardHTML(c, rank){
@@ -1018,10 +1088,10 @@
           '<span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span>' +
           (c.key ? '<a class="cc-play" href="play.html?comp=' + c.key + '">對局模式</a>' : '') +
           (c.key ? '<a class="cc-share" href="share.html?comp=' + c.key + '">分享圖</a>' : '') +
-          (c.key ? '<button type="button" class="cc-cmp" data-cmp="' + c.key + '">對比</button>' : '') +
+          (c.key ? '<button type="button" class="cc-cmp" data-cmp="' + c.key + '">对比</button>' : '') +
           heroBadge +
           '<span class="cc-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) +
-          '% · 吃雞 ' + Math.round((c.win || 0) * 100) + '% · ' + (c.sample || 0).toLocaleString("en-US") + ' 局</span></div>' +
+          '% · 奪冠 ' + Math.round((c.win || 0) * 100) + '% · ' + (c.sample || 0).toLocaleString("en-US") + ' 局</span></div>' +
           '<div class="cc-lineup">' + cards + '</div>' +
           '<div class="cc-pos"><b>站位</b> ' + ((note && note.pos) ? note.pos + '（手工站位）' : posHint(c)) + '</div>' +
           '<div class="cc-foot"><span>推薦英雄：' + ((c.heroes || []).join(" · ") || "—") + '</span><span>' +
@@ -1033,6 +1103,11 @@
         var list = STATS.comps.filter(function(c){
           if(st.tier !== "all" && c.tier !== st.tier) return false;
           if(st.q && c.name.toLowerCase().indexOf(st.q.toLowerCase()) < 0) return false;
+          if(st.hero && st.heroOnly){
+            var ha = heroStat(c.key);
+            var inRec = (c.heroes || []).indexOf(st.hero) >= 0;
+            if(!ha && !inRec) return false;
+          }
           return true;
         });
         list.sort(function(a, b){
@@ -1048,12 +1123,15 @@
           return a.avg - b.avg;
         });
 
-        var t = '<div class="cs-head">資料陣容榜 <span>' + STATS.source + ' · ' + (STATS.bracket || "") +
+        var t = '<div class="cs-head">數據陣容榜 <span>' + STATS.source + ' · ' + (STATS.bracket || "") +
           " · " + (STATS.fetchedAt || "") + " · 樣本 " + (STATS.sample ? Math.round(STATS.sample / 10000) + " 萬局" : "-") +
-          (st.hero ? " · 按 " + st.hero + " 排序" : "") + '</span></div>';
+          (st.hero ? (st.heroOnly ? " · 僅看 " + st.hero + " 适配陣容" : " · 按 " + st.hero + " 排序") : "") + '</span></div>';
 
         if(!list.length){
-          host.innerHTML = t + '<p class="cs-empty">沒有符合條件的陣容，換個梯度或清空搜尋試試。</p>';
+          var emptyMsg = (st.hero && st.heroOnly) ?
+            ('「' + st.hero + '」暂無專屬高勝率陣容推薦，可取消「僅看该英雄适配」查看全局推薦。') :
+            '没有符合條件的陣容，換個梯度或清空搜索試試。';
+          host.innerHTML = t + '<p class="cs-empty">' + emptyMsg + '</p>';
           host.hidden = false;
           return;
         }
@@ -1080,9 +1158,7 @@
 
       if(heroSel){
         heroSel.addEventListener("change", function(){
-          st.hero = heroSel.value;
-          try { localStorage.setItem("tt-comp-hero", st.hero); } catch(e){}
-          renderBoard();
+          selectHero(heroSel.value);
         });
       }
       var cmp = [];
@@ -1111,7 +1187,7 @@
           return '<div class="cmp-slot"><img src="../pool/' + x.id + '.webp" alt="" onerror="this.style.opacity=0"><span>' + x.name + '</span><em class="stars" title="' + (t != null ? t + ' 本' : '') + '">' + (t != null ? tierStars(t) : '') + '</em></div>';
         }).join("");
         return '<div class="cmp-col"><h3>' + c.name + ' <span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span></h3>' +
-          '<div class="cmp-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) + '% · 吃雞 ' +
+          '<div class="cmp-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) + '% · 奪冠 ' +
           Math.round((c.win || 0) * 100) + '% · ' + (c.sample || 0).toLocaleString("en-US") + ' 局</div>' +
           '<div class="cmp-lineup">' + slots + '</div>' +
           '<div class="cmp-diff"><b>獨有</b>：' + (only.length ? only.join("、") : "無") + '<br><b>推薦英雄</b>：' +
@@ -1263,13 +1339,13 @@
         if (h.top4) bits.push("前四 " + pct(h.top4));
         if (h.avg) bits.push("均位 " + Number(h.avg).toFixed(2));
         var detail = [];
-        if (h.winrate) detail.push("吃雞 " + pct(h.winrate));
+        if (h.winrate) detail.push("奪冠 " + pct(h.winrate));
         if (h.pickrate) detail.push("選取 " + h.pickrate + "%");
         return {
           n: h.name,
           rank: h.tier,
           tag: bits.join(" · "),
-          why: base ? base.why : (detail.length ? detail.join(" · ") : "資料來自 " + (STATS.source || "外部統計"))
+          why: base ? base.why : (detail.length ? detail.join(" · ") : "數據來自 " + (STATS.source || "外部統計"))
         };
       }) : (typeof HEROES !== "undefined" ? HEROES : []);
       renderGuideList("heroList", list);
@@ -1278,17 +1354,17 @@
       if(!el) return;
       if(d){
         el.className = "stats-badge live";
-        el.innerHTML = "資料：<b>Firestone</b> · " + LABEL[SEG] + " · " + (d.fetchedAt || "") +
+        el.innerHTML = "數據：<b>Firestone</b> · " + LABEL[SEG] + " · " + (d.fetchedAt || "") +
           " · 樣本 " + (d.sample ? Math.round(d.sample / 10000) + " 萬局" : "-");
       } else if(typeof STATS !== "undefined" && STATS && STATS.heroes && STATS.heroes.length){
         el.className = "stats-badge live";
-        el.innerHTML = "資料：<b>" + STATS.source + "</b>" +
+        el.innerHTML = "數據：<b>" + STATS.source + "</b>" +
           (STATS.bracket ? " · " + STATS.bracket : "") +
           (STATS.fetchedAt ? " · " + STATS.fetchedAt : "") +
           (STATS.sample ? " · 樣本 " + Math.round(STATS.sample / 10000) + " 萬局" : "");
       } else {
         el.className = "stats-badge manual";
-        el.textContent = "英雄梯度：社群整理（非統計） · 待接入實時資料";
+        el.textContent = "英雄梯度：社區整理（非統計） · 待接入實時數據";
       }
     }
 
@@ -1311,177 +1387,17 @@
       if(!el) return;
       if(hasData){
         el.className = "stats-badge live";
-        el.innerHTML = "資料：<b>" + STATS.source + "</b>" +
+        el.innerHTML = "數據：<b>" + STATS.source + "</b>" +
           (STATS.bracket ? " · " + STATS.bracket : "") +
           (STATS.region ? " · " + STATS.region : "") +
           (STATS.fetchedAt ? " · " + STATS.fetchedAt : "") +
           (STATS.sample ? " · 樣本 " + (STATS.sample >= 10000 ? Math.round(STATS.sample / 10000) + " 萬局" : STATS.sample) : "");
       } else {
         el.className = "stats-badge manual";
-        el.textContent = label + "：社群整理（非統計） · 待接入實時資料";
+        el.textContent = label + "：社區整理（非統計） · 待接入實時數據";
       }
     }
     badge("metaStatsBadge", !!(typeof STATS !== "undefined" && STATS && STATS.comps && STATS.comps.length), "週報");
-  })();
-
-/* ---------- lineup finder ---------- */
-  (function(){
-    var input = document.getElementById("finderCard");
-    if(!input || typeof POOL === "undefined" || typeof TRIBES === "undefined") return;
-
-    var CN2CODE = { "野獸":"BEAST", "惡魔":"DEMON", "龍":"DRAGON", "元素":"ELEMENTAL", "機械":"MECHANICAL",
-      "魚人":"MURLOC", "納迦":"NAGA", "海盜":"PIRATE", "野豬人":"QUILBOAR", "亡靈":"UNDEAD",
-      "畸變怪":"ABERRATION", "全種族":"ALL" };
-    var byName = new Map();
-
-    function addRecord(name, official, races, text){
-      if(!name) return;
-      var rec = { name: name, official: official || name, races: races || [], text: text || "" };
-      if(!byName.has(name)) byName.set(name, rec);
-      if(rec.official && !byName.has(rec.official)) byName.set(rec.official, rec);
-    }
-
-    if(typeof CARDS !== "undefined"){
-      Object.keys(CARDS).forEach(function(k){
-        var c = CARDS[k];
-        var races = (c.r || "").split(/\s*\/\s*/).map(function(x){ return CN2CODE[x] || x; });
-        addRecord(k, c.n, races, c.x);
-      });
-    }
-    POOL.forEach(function(c){ addRecord(c.n, c.n, (c.r || "").split("/"), c.x); });
-
-    var dl = document.getElementById("poolNames");
-    if(dl){
-      var names = Array.from(new Set(Array.from(byName.keys()))).sort(function(a, b){ return a.localeCompare(b, "zh"); });
-      names.forEach(function(n){ var o = document.createElement("option"); o.value = n; dl.appendChild(o); });
-    }
-
-    var heroSel = document.getElementById("finderHero");
-    var heroNames = [];
-    if(typeof STATS !== "undefined" && STATS.heroComps){
-      var order = {};
-      (STATS.heroes || []).forEach(function(h, i){ order[h.name] = i; });
-      heroNames = Object.keys(STATS.heroComps).sort(function(a, b){ return (order[a] == null ? 999 : order[a]) - (order[b] == null ? 999 : order[b]); });
-    }
-    if(!heroNames.length && typeof HEROES !== "undefined"){ heroNames = HEROES.map(function(h){ return h.n; }); }
-    heroNames.forEach(function(n){ var o = document.createElement("option"); o.value = n; o.textContent = n; heroSel.appendChild(o); });
-
-    function pct(v){ return Math.round((Number(v) || 0) * 100) + "%"; }
-
-    function renderHeroComps(name){
-      var recs = (typeof STATS !== "undefined" && STATS.heroComps && STATS.heroComps[name]) || [];
-      if(!recs.length) return false;
-      var h = '<div class="fr-recs"><div class="fr-recs-head">' + name + ' 的推薦陣容</div>';
-      recs.forEach(function(r, i){
-        var full = (STATS.comps || []).filter(function(c){ return c.key === r.key; })[0] || {};
-        h += '<a class="fr-comp" href="#meta" data-comp="' + r.key + '">' +
-          '<span class="fr-comp-rank">#' + (i + 1) + '</span>' +
-          '<b>' + r.name + '</b>' +
-          '<span class="fr-comp-tier ' + String(r.tier).toLowerCase() + '">' + r.tier + '</span>' +
-          '<span class="fr-comp-meta">均位 ' + r.avg + ' · 前四 ' + pct(full.top4) + ' · 吃雞 ' + pct(full.win) + ' · ' + r.sample + ' 局</span>' +
-          '</a>';
-      });
-      h += '<p class="fr-recs-tip">點任意一套，跳到週報區看 7 格卡牌與站位。</p></div>';
-      result.innerHTML = h;
-      return true;
-    }
-
-    heroSel.addEventListener("change", function(){
-      if(!heroSel.value) return;
-      if(!renderHeroComps(heroSel.value)){
-        result.innerHTML = '<p class="fr-empty">這個英雄暫時沒有足夠樣本的陣容推薦。</p>';
-      }
-    });
-
-    var chipsEl = document.getElementById("finderChips");
-    var result = document.getElementById("finderResult");
-    var picked = [];
-
-    function renderChips(){
-      chipsEl.innerHTML = "";
-      picked.forEach(function(n){
-        var b = document.createElement("button");
-        b.type = "button";
-        b.className = "fchip";
-        b.innerHTML = n + ' <i>×</i>';
-        b.addEventListener("click", function(){ picked = picked.filter(function(x){ return x !== n; }); renderChips(); });
-        chipsEl.appendChild(b);
-      });
-    }
-    function addChip(name){
-      if(!name || !byName.has(name) || picked.indexOf(name) >= 0 || picked.length >= 3) return;
-      picked.push(name); renderChips(); input.value = "";
-    }
-    input.addEventListener("change", function(){ addChip(input.value.trim()); });
-    input.addEventListener("keydown", function(e){ if(e.key === "Enter"){ e.preventDefault(); addChip(input.value.trim()); } });
-
-    var RACE2TRIBE = { BEAST:"beast", DEMON:"demon", DRAGON:"dragon", ELEMENTAL:"elemental",
-      MECHANICAL:"mech", MURLOC:"murloc", NAGA:"naga", PIRATE:"pirate", QUILBOAR:"quilboar",
-      UNDEAD:"undead", ABERRATION:"aberration" };
-    var HERO_MAP = { "經濟":["elemental","pirate"], "戰力":["beast","mech"], "戰吼":["murloc","dragon"],
-      "重新整理":["naga","elemental"], "頻率":["beast","undead"], "偷牌":["pirate","demon"], "魚人":["murloc"] };
-    var KEY = { elemental:["元素","酒館法術"], naga:["塑造"], mech:["磁力"], murloc:["魚人","戰吼","劇毒"],
-      beast:["野獸","亡語"], undead:["亡靈","復生"], pirate:["海盜","鑄幣"], demon:["惡魔","吞噬"],
-      dragon:["龍"], quilboar:["鮮血寶石"], aberration:["畸變","神明"] };
-
-    function coreOfficial(t){
-      return t.cores.map(function(x){
-        var c = (typeof CARDS !== "undefined") ? CARDS[x.n] : null;
-        return c ? c.n : x.n;
-      });
-    }
-
-    function compute(){
-      var hero = (typeof HEROES !== "undefined") ? HEROES.filter(function(h){ return h.n === heroSel.value; })[0] : null;
-      if(!picked.length && !hero){ result.innerHTML = '<p class="fr-empty">至少選一個英雄或一張牌。</p>'; return; }
-      if(!picked.length){
-        var map = HERO_MAP[hero.tag] || [];
-        if(!map.length){ result.innerHTML = '<p class="fr-empty">「' + hero.n + '」比較百搭，再輸入 1–2 張手裡的核心牌，就能算出方向。</p>'; return; }
-        var names = map.map(function(id){ var t = TRIBES.filter(function(x){ return x.id === id; })[0]; return t ? t.name : id; });
-        result.innerHTML = '<p class="fr-empty">「' + hero.n + '」適合：' + names.join("、") + '。再輸入手裡的牌可以算得更準。</p>';
-        return;
-      }
-
-      var scores = TRIBES.map(function(t){
-        var s = 0, reasons = [];
-        if(hero){
-          var map = HERO_MAP[hero.tag] || [];
-          if(map.indexOf(t.id) >= 0){ s += 2; reasons.push("英雄「" + hero.n + "」適合" + t.name); }
-          else if(hero.tag === "複製" || hero.tag === "點金"){ s += 0.6; reasons.push("英雄「" + hero.n + "」的複製能力對任何流派都有用"); }
-        }
-        var cores = coreOfficial(t);
-        picked.forEach(function(name){
-          var rec = byName.get(name);
-          if(!rec) return;
-          if(cores.indexOf(rec.official) >= 0){ s += 3.5; reasons.push("「" + name + "」是" + t.name + "的核心元件"); return; }
-          var hit = rec.races.some(function(r){ return RACE2TRIBE[r] === t.id; });
-          if(hit){ s += 2; reasons.push("「" + name + "」是" + t.name + "種族"); return; }
-          var keys = KEY[t.id] || [];
-          if(keys.some(function(k){ return rec.text.indexOf(k) >= 0; })){
-            s += 1; reasons.push("「" + name + "」的效果和" + t.name + "相關");
-          }
-        });
-        return { t: t, s: s, reasons: reasons };
-      }).filter(function(x){ return x.s >= 1.5; }).sort(function(a, b){ return b.s - a.s; }).slice(0, 3);
-
-      if(!scores.length){
-        result.innerHTML = '<p class="fr-empty">這幾張牌暫時拼不出明確方向，再加一張核心牌試試。</p>';
-        return;
-      }
-      var max = scores[0].s;
-      result.innerHTML = scores.map(function(x, i){
-        var pct = Math.round(x.s / max * 100);
-        return '<div class="fr-item">' +
-          '<div class="fr-top"><b>#' + (i + 1) + ' ' + x.t.name + '</b><span class="fr-score">' + pct + '%</span></div>' +
-          '<div class="fr-bar"><i style="width:' + pct + '%"></i></div>' +
-          '<p class="fr-tag">' + x.t.tagline + '</p>' +
-          '<ul class="fr-why">' + x.reasons.slice(0, 3).map(function(r){ return '<li>' + r + '</li>'; }).join("") + '</ul>' +
-          '<a class="fr-link" href="index.html?tribe=' + x.t.id + '#tribes">看圖鑑 →</a></div>';
-      }).join("");
-    }
-
-    document.getElementById("finderGo").addEventListener("click", compute);
-    renderChips();
   })();
 
 })();
@@ -1530,7 +1446,7 @@
   if(!host || typeof STATS_CHANGE === "undefined" || !STATS_CHANGE) return;
   var c = STATS_CHANGE;
   function fmt(n){ return n ? Math.round(n / 10000) + " 萬" : "-"; }
-  var range = (c.from && c.to && c.from !== c.to) ? (c.from + " → " + c.to) : "對比上一版";
+  var range = (c.from && c.to && c.from !== c.to) ? (c.from + " → " + c.to) : "对比上一版";
   var h = '<div class="sc-head">本週變化 <span>' + range +
     " · 樣本 " + fmt(c.sampleFrom) + " → " + fmt(c.sampleTo) + '</span></div>';
 
@@ -1548,161 +1464,13 @@
       (x.avgFrom === x.avgTo ? "" : "（均位 " + x.avgFrom + " → " + x.avgTo + "）") + "</span></div>");
   });
 
-  if(c.first) h += '<div class="sc-row">首次接入真實資料，已記錄基線；下週開始顯示升降。</div>';
+  if(c.first) h += '<div class="sc-row">首次接入真實數據，已記錄基線；下周開始顯示升降。</div>';
   else if(!rows.length) h += '<div class="sc-row">本週陣容與英雄排名無顯著變化。</div>';
   else h += rows.join("");
 
   host.innerHTML = h;
   host.hidden = false;
 })();
-
-/* ---------- global search ---------- */
-(function(){
-  var overlay = document.getElementById("searchOverlay");
-  var input = document.getElementById("searchInput");
-  var list = document.getElementById("searchList");
-  if(!overlay || !input || !list) return;
-
-  var idx = null, active = -1, shown = [];
-
-  var ALIAS = {
-    "血魔":"塔隆·血魔", "銅須":"布萊恩·銅須", "詩心龍":"執念詩心龍", "白狼":"巨狼戈德林",
-    "摩托車":"極速野豬騎士", "摩托豬":"極速野豬騎士", "仙女龍":"折躍之翼", "紅龍":"赤紅守備巨龍",
-    "瑞文":"提圖斯·瑞文戴爾", "巴琳達":"巴琳達·斯通赫爾斯", "卡雷":"奧術守護者卡雷苟斯",
-    "尤朵拉":"尤朵拉船長", "鉤牙":"鉤牙船長", "雷諾":"雷諾·傑克遜",
-    "螺絲":"炎魔之王拉格納羅斯", "大螺絲":"炎魔之王拉格納羅斯", "苔絲":"苔絲·格雷邁恩"
-  };
-
-  function buildIndex(){
-    var items = [], seen = {};
-    function add(type, name, sub, href, data){
-      if(!name || seen[type + "|" + name]) return;
-      seen[type + "|" + name] = 1;
-      var al = Object.keys(ALIAS).filter(function(k){ return ALIAS[k] === name; }).join(" ");
-      items.push({ type: type, name: name, sub: sub || "", href: href || "", data: data || {}, alias: al });
-    }
-    var RACE_CN = { BEAST:"野獸", DEMON:"惡魔", DRAGON:"龍", ELEMENTAL:"元素", MECHANICAL:"機械",
-      MURLOC:"魚人", NAGA:"納迦", PIRATE:"海盜", QUILBOAR:"野豬人", UNDEAD:"亡靈", ABERRATION:"畸變怪" };
-    if(typeof POOL !== "undefined"){
-      POOL.forEach(function(c){
-        var races = String(c.r || "").split("/").map(function(r){ return RACE_CN[r] || r; }).filter(Boolean).join("/");
-        add("卡牌", c.n, (c.t != null ? tierStars(c.t) + " · " : "") + races, "cards.html?card=" + c.i, { id: c.i });
-      });
-    }
-    if(typeof STATS !== "undefined" && STATS.heroComps){
-      Object.keys(STATS.heroComps).forEach(function(n){
-        var top = STATS.heroComps[n][0];
-        add("英雄", n, top ? "推薦 " + top.name : "", "", { hero: n });
-      });
-    }
-    if(typeof STATS !== "undefined" && STATS.comps){
-      STATS.comps.forEach(function(c){
-        add("陣容", c.name, "均位 " + c.avg + " · " + c.tier, "", { comp: c.key });
-      });
-    }
-    if(typeof GLOSSARY !== "undefined"){
-      GLOSSARY.forEach(function(g){ add("術語", g[0], g[1], "#glossary"); });
-    }
-    [["start","入門"],["laws","三條定律"],["math","數學"],["positioning","站位"],["tribes","種族"],
-     ["heroes","英雄與飾品"],["meta","週報"],["finder","陣容反查"],["glossary","術語"]].forEach(function(s){
-      add("章節", s[1], "", "#" + s[0]);
-    });
-    return items;
-  }
-
-  function open(){
-    if(!idx) idx = buildIndex();
-    overlay.hidden = false;
-    input.value = "";
-    render("");
-    setTimeout(function(){ input.focus(); }, 20);
-  }
-  function close(){ overlay.hidden = true; active = -1; }
-
-  function render(q){
-    q = String(q || "").trim().toLowerCase();
-    var pool = idx;
-    if(q){
-      pool = idx.filter(function(x){
-        return x.name.toLowerCase().indexOf(q) >= 0 || (x.alias || "").toLowerCase().indexOf(q) >= 0;
-      });
-      pool.sort(function(a, b){
-        var an = a.name.toLowerCase(), bn = b.name.toLowerCase();
-        var as = (an.indexOf(q) === 0 || (a.alias || "").toLowerCase() === q) ? 0 : 1;
-        var bs = (bn.indexOf(q) === 0 || (b.alias || "").toLowerCase() === q) ? 0 : 1;
-        return as - bs || a.name.length - b.name.length;
-      });
-    }
-    shown = pool.slice(0, 12);
-    active = shown.length ? 0 : -1;
-    if(!shown.length){
-      list.innerHTML = '<div class="sr-empty">沒找到「' + q + '」相關的內容</div>';
-      return;
-    }
-    list.innerHTML = shown.map(function(x, i){
-      var byAlias = x.alias && x.name.toLowerCase().indexOf(q) < 0;
-      return '<a class="sr' + (i === 0 ? " on" : "") + '" href="' + (x.href || "#") + '" data-i="' + i + '">' +
-        '<span class="sr-type">' + x.type + '</span><span class="sr-name">' + x.name + '</span>' +
-        '<span class="sr-sub">' + (byAlias ? "俗稱：" + x.alias.split(" ")[0] + " · " : "") + x.sub + '</span></a>';
-    }).join("");
-  }
-
-  function choose(i){
-    var x = shown[i];
-    if(!x) return;
-    if(x.data.comp){
-      close();
-      var link = document.querySelector('[data-comp="' + x.data.comp + '"]');
-      if(link) link.click();
-      else if(window.__jumpComp) window.__jumpComp(x.data.comp);
-      return;
-    }
-    if(x.data.hero){
-      close();
-      var sel = document.getElementById("finderHero");
-      if(sel){ sel.value = x.data.hero; sel.dispatchEvent(new Event("change", { bubbles: true })); }
-      var f = document.getElementById("finder");
-      if(f) f.scrollIntoView({ behavior: "smooth", block: "start" });
-      return;
-    }
-    close();
-    if(x.href) location.href = x.href;
-  }
-
-  function setActive(i){
-    if(!shown.length) return;
-    active = (i + shown.length) % shown.length;
-    Array.prototype.forEach.call(list.children, function(el, k){ el.classList.toggle("on", k === active); });
-    var el = list.children[active];
-    if(el && el.scrollIntoView) el.scrollIntoView({ block: "nearest" });
-  }
-
-  input.addEventListener("input", function(){ render(input.value); });
-  input.addEventListener("keydown", function(e){
-    if(e.key === "ArrowDown"){ e.preventDefault(); setActive(active + 1); }
-    else if(e.key === "ArrowUp"){ e.preventDefault(); setActive(active - 1); }
-    else if(e.key === "Enter"){ e.preventDefault(); choose(active); }
-    else if(e.key === "Escape"){ close(); }
-  });
-  list.addEventListener("click", function(e){
-    var a = e.target.closest ? e.target.closest(".sr") : null;
-    if(!a) return;
-    e.preventDefault();
-    choose(+a.getAttribute("data-i"));
-  });
-  overlay.addEventListener("click", function(e){ if(e.target === overlay) close(); });
-
-  var btn = document.getElementById("searchOpen");
-  if(btn) btn.addEventListener("click", open);
-
-  document.addEventListener("keydown", function(e){
-    var tag = (document.activeElement && document.activeElement.tagName) || "";
-    if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k"){ e.preventDefault(); open(); return; }
-    if(e.key === "/" && tag !== "INPUT" && tag !== "TEXTAREA" && overlay.hidden){ e.preventDefault(); open(); return; }
-    if(e.key === "Escape" && !overlay.hidden) close();
-  });
-})();
-
 
 /* ---------- tier legend modal ---------- */
 (function(){

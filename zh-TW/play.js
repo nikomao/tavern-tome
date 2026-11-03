@@ -12,7 +12,7 @@
   var metaEl = document.getElementById("playMeta");
 
   if(!comps.length){
-    if(slotsEl) slotsEl.innerHTML = '<p class="play-hint">陣容資料未載入，請重新整理。</p>';
+    if(slotsEl) slotsEl.innerHTML = '<p class="play-hint">陣容數據未加載，请刷新。</p>';
     return;
   }
 
@@ -41,7 +41,7 @@
   var DEFAULTS = { turn: 1, tier: 1, gold: 3, health: 30, slots: [], cards: null };
   var state = load();
 
-  // 從分享連結恢復局面
+  // 從分享鏈接恢複局面
   (function(){
     if(params.get("t")) state.turn = Math.max(1, Math.min(30, +params.get("t") || 1));
     if(params.get("ti")) state.tier = Math.max(1, Math.min(7, +params.get("ti") || 1));
@@ -105,23 +105,23 @@
 
     if(!missing.length){
       return { main: "七格齊了：先調站位，再考慮追金。",
-        sub: state.gold >= 10 ? "錢多可以 D 一次找金，否則存錢上本。" : "別亂 D，把金幣留給下一輪。", nextId: null };
+        sub: state.gold >= 10 ? "钱多可以 D 一次找金，否則存钱上本。" : "別亂 D，把金幣留給下一輪。", nextId: null };
     }
 
     if(state.health <= 12){
-      var wall = missing.filter(function(m){ return /嘲諷|聖盾/.test(m.text); }).sort(function(a, b){ return b.w - a.w; })[0];
+      var wall = missing.filter(function(m){ return /嘲諷|聖盾術/.test(m.text); }).sort(function(a, b){ return b.w - a.w; })[0];
       if(wall){
-        return { main: "血線危險：先找「" + wall.x.name + "」穩血（嘲諷/聖盾）",
-          sub: "別追貪，先活過這一輪。", nextId: wall.x.id };
+        return { main: "血線危險：先找「" + wall.x.name + "」穩血（嘲諷/聖盾術）",
+          sub: "別追貪，先活过这一輪。", nextId: wall.x.id };
       }
     }
 
     if(affordable.length){
       var n = affordable[0];
-      var sub = state.gold >= 8 ? "錢夠，可以 D 一次找它；別 D 到 0。"
-        : state.gold <= 2 ? "錢少，先存錢，下回合再找。"
-        : "邊打邊找，優先拿它，別為了重新整理把錢花光。";
-      return { main: "現在最該找：" + n.x.name + " " + (n.t != null ? tierStars(n.t) : "?") + " · " + roleCN(n.role),
+      var sub = state.gold >= 8 ? "钱夠，可以 D 一次找它；別 D 到 0。"
+        : state.gold <= 2 ? "钱少，先存钱，下回合再找。"
+        : "边打边找，優先拿它，別為了刷新把钱花光。";
+      return { main: "現在最该找：" + n.x.name + " " + (n.t != null ? tierStars(n.t) : "?") + " · " + roleCN(n.role),
         sub: sub, nextId: n.x.id };
     }
 
@@ -129,10 +129,10 @@
       locked.sort(function(a, b){ return (a.t || 99) - (b.t || 99) || b.w - a.w; });
       var l = locked[0];
       return { main: "先升到 " + tierStars(l.t) + " 本，再找「" + l.x.name + "」",
-        sub: "當前 " + tierStars(state.tier) + "，高本卡刷不到，別浪費錢 D。", nextId: l.x.id };
+        sub: "當前 " + tierStars(state.tier) + "，高本卡刷不到，別浪費钱 D。", nextId: l.x.id };
     }
 
-    return { main: "先穩血，等核心卡。", sub: "當前沒有可執行的下一步。", nextId: null };
+    return { main: "先穩血，等核心卡。", sub: "當前没有可執行的下一步。", nextId: null };
   }
 
   function ensureSlots(){
@@ -147,7 +147,7 @@
     ensureSlots();
     var c = current();
     tierEl.textContent = c.tier;
-    metaEl.textContent = "均位 " + c.avg + " · 前四 " + Math.round((c.top4 || 0) * 100) + "% · 吃雞 " + Math.round((c.win || 0) * 100) + "%" +
+    metaEl.textContent = "均位 " + c.avg + " · 前四 " + Math.round((c.top4 || 0) * 100) + "% · 奪冠 " + Math.round((c.win || 0) * 100) + "%" +
       (heroParam ? " · 按英雄推薦" : "");
 
     slotsEl.innerHTML = "";
@@ -157,7 +157,7 @@
       var d = document.createElement("div");
       d.className = "ps-slot " + (v === 2 ? "golden" : v === 1 ? "owned" : "missing");
       d.setAttribute("data-i", i);
-      d.title = x.name + " · 點選切換 缺/有/金";
+      d.title = x.name + " · 点擊切換 缺/有/金";
       d.innerHTML = '<span class="num">' + (i + 1) + '</span>' +
         '<button class="swap" data-swap="' + i + '" title="替換">⇄</button>' +
         (t != null ? '<span class="tier stars" title="' + t + ' 本">' + tierStars(t) + '</span>' : '') +
@@ -181,7 +181,7 @@
       var next = adv.nextId && o.x.id === adv.nextId;
       return '<div class="miss' + (next ? ' next' : '') + '"><span class="m-tier stars">' + (t != null ? tierStars(t) : '?') + '</span><span>' + o.x.name + '</span>' +
         (next ? '<span class="tag-next">先找</span>' : '') + '</div>';
-    }).join("") : '<div class="miss">七格齊了，準備收口。</div>';
+    }).join("") : '<div class="miss">七格齊了，准備收口。</div>';
 
     hintEl.textContent = hintFor(c);
 
@@ -238,7 +238,7 @@
   });
 
   document.getElementById("btnReset").addEventListener("click", function(){
-    if(!confirm("重置這一局的狀態？")) return;
+    if(!confirm("重置这一局的状態？")) return;
     state = JSON.parse(JSON.stringify(DEFAULTS));
     render();
   });
@@ -281,13 +281,13 @@
           '<span class="ps-img">' + (CARD_DB[x.id] && CARD_DB[x.id].m ? '<img src="../pool/' + x.id + '.webp" alt="">' : '<i>' + x.name.slice(0,1) + '</i>') + '</span>' +
           '<span class="ps-name">' + x.name + '</span><span class="state">' + slotStateWord(v) + '</span></div>';
       }).join("") + '</div>' +
-      '<h3>還差 ' + missing.length + ' 張</h3>' +
+      '<h3>还差 ' + missing.length + ' 張</h3>' +
 missing.map(function(o){ return '<div class="miss"><span class="m-tier stars">' + (tierOf(o.x.id) ? tierStars(tierOf(o.x.id)) : '?') + '</span><span>' + o.x.name + '</span></div>'; }).join("");
   }
 
   document.getElementById("btnPip").addEventListener("click", async function(){
     if(!("documentPictureInPicture" in window)){
-      alert("當前瀏覽器不支援置頂小窗，請用 Chrome / Edge 116+。");
+      alert("當前浏覽器不支持置頂小窗，请用 Chrome / Edge 116+。");
       return;
     }
     if(pipWin){ pipWin.focus(); return; }
@@ -309,7 +309,7 @@ missing.map(function(o){ return '<div class="miss"><span class="m-tier stars">' 
     renderPip();
   });
 
-  /* ---- 卡牌替換/新增 ---- */
+  /* ---- 卡牌替換/添加 ---- */
   var overlay = document.getElementById("pickOverlay");
   var pickInput = document.getElementById("pickInput");
   var pickList = document.getElementById("pickList");
@@ -340,7 +340,7 @@ missing.map(function(o){ return '<div class="miss"><span class="m-tier stars">' 
       return '<div class="pick-item" data-id="' + c.i + '">' +
         (c.m ? '<img src="../pool/' + c.i + '.webp" alt="">' : '<span class="pt">?</span>') +
         '<span>' + c.n + '</span><span class="pt">' + (c.t != null ? tierStars(c.t) : "") + '</span></div>';
-    }).join("") : '<p class="pick-hint">沒找到</p>';
+    }).join("") : '<p class="pick-hint">没找到</p>';
   }
 
   pickInput.addEventListener("input", function(){ renderPicks(pickInput.value); });
@@ -354,7 +354,7 @@ missing.map(function(o){ return '<div class="miss"><span class="m-tier stars">' 
     var list = currentCards().slice();
     if(pickIndex >= 0) list[pickIndex] = { id: id, name: card.n };
     else {
-      if(list.length >= 7){ alert("最多 7 格，請用格子上的 ⇄ 替換。"); return; }
+      if(list.length >= 7){ alert("最多 7 格，请用格子上的 ⇄ 替換。"); return; }
       list.push({ id: id, name: card.n });
     }
     state.cards = list;
@@ -375,9 +375,9 @@ missing.map(function(o){ return '<div class="miss"><span class="m-tier stars">' 
     if(state.cards && state.cards.length) q.push("c=" + state.cards.map(function(x){ return x.id; }).join(","));
     var url = location.origin + location.pathname + "?" + q.join("&");
     if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(url).then(function(){ shareBtn.textContent = "已複製"; setTimeout(function(){ shareBtn.textContent = "複製連結"; }, 1500); });
+      navigator.clipboard.writeText(url).then(function(){ shareBtn.textContent = "已複制"; setTimeout(function(){ shareBtn.textContent = "複制鏈接"; }, 1500); });
     } else {
-      prompt("複製連結", url);
+      prompt("複制鏈接", url);
     }
   });
 

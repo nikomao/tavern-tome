@@ -1,0 +1,29 @@
+{
+  "name": "酒馆战棋 · 全种族最优解手册",
+  "short_name": "酒馆手札",
+  "description": "炉石传说酒馆战棋全种族阵容、成长流水线与实战站位",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#170e08",
+  "theme_color": "#21140c",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "preview.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

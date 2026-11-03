@@ -80,7 +80,7 @@
 
     // header
     ctx.fillStyle = "#9c8a74"; ctx.font = "24px 'Microsoft YaHei'";
-    ctx.fillText("酒館手札 · 本週陣容", 64, 96);
+    ctx.fillText("旅店手札 · 本週陣容", 64, 96);
 
     ctx.fillStyle = "#f4e7cf"; ctx.font = "bold 68px 'Microsoft YaHei'";
     var nameW = ctx.measureText(c.name).width;
@@ -96,7 +96,7 @@
 
     // metrics
     ctx.fillStyle = "#c9b79b"; ctx.font = "26px 'Microsoft YaHei'";
-    var metrics = "均位 " + Number(c.avg).toFixed(2) + "　前四 " + Math.round((c.top4||0)*100) + "%　吃雞 " + Math.round((c.win||0)*100) + "%　樣本 " + (c.sample||0).toLocaleString("en-US");
+    var metrics = "均位 " + Number(c.avg).toFixed(2) + "　前四 " + Math.round((c.top4||0)*100) + "%　奪冠 " + Math.round((c.win||0)*100) + "%　樣本 " + (c.sample||0).toLocaleString("en-US");
     ctx.fillText(metrics, 64, 246);
 
     // cards
@@ -138,7 +138,7 @@
 
     // position
     var note = (typeof COMP_NOTES !== "undefined" && COMP_NOTES[c.key]) ? COMP_NOTES[c.key] : null;
-    var posText = (note && note.pos) ? note.pos : "站位：1–2 號位放前排吸收，3–5 號位放功能，6–7 號位放核心輸出。";
+    var posText = (note && note.pos) ? note.pos : "站位：1–2 號位放前排吸收，3–5 號位放功能，6–7 號位放核心输出。";
     ctx.fillStyle = "#e2b45f"; ctx.font = "bold 24px 'Microsoft YaHei'";
     ctx.fillText("站位", 64, y0 + size + 120);
     var y = wrap(posText, 64, y0 + size + 158, cv.width - 128, 40, "24px 'Microsoft YaHei'", "#c9b79b");
@@ -157,12 +157,12 @@
     ctx.beginPath(); ctx.moveTo(64, cv.height - 108); ctx.lineTo(cv.width - 64, cv.height - 108); ctx.stroke();
 
     ctx.fillStyle = "#f4e7cf"; ctx.font = "bold 28px 'Microsoft YaHei'";
-    ctx.fillText("酒館手札", 64, cv.height - 62);
+    ctx.fillText("旅店手札", 64, cv.height - 62);
     ctx.fillStyle = "#e2b45f"; ctx.font = "24px 'Microsoft YaHei'"; ctx.textAlign = "right";
     ctx.fillText("nikom-blog.org", cv.width - 64, cv.height - 62);
     ctx.textAlign = "left";
     ctx.fillStyle = "#9c8a74"; ctx.font = "18px 'Microsoft YaHei'";
-    ctx.fillText("資料：Firestone / ZeroToHeroes · " + (STATS.fetchedAt || ""), 64, cv.height - 28);
+    ctx.fillText("數據：Firestone / ZeroToHeroes · " + (STATS.fetchedAt || ""), 64, cv.height - 28);
   }
 
   draw();
@@ -173,7 +173,7 @@
     cv.toBlob(function(b){
       var a = document.createElement("a");
       a.href = URL.createObjectURL(b);
-      a.download = (comps.filter(function(x){ return x.key === key; })[0] || {}).name + "-酒館手札.png";
+      a.download = (comps.filter(function(x){ return x.key === key; })[0] || {}).name + "-旅店手札.png";
       a.click();
       setTimeout(function(){ URL.revokeObjectURL(a.href); }, 3000);
     }, "image/png");
@@ -188,8 +188,8 @@
           catch(e){ rej(e); }
         }, "image/png");
       });
-      btn.textContent = "已複製";
-      setTimeout(function(){ btn.textContent = "複製圖片"; }, 1500);
-    } catch(e) { alert("當前瀏覽器不支援複製圖片，請用「下載 PNG」。"); }
+      btn.textContent = "已複制";
+      setTimeout(function(){ btn.textContent = "複制圖片"; }, 1500);
+    } catch(e) { alert("當前浏覽器不支持複制圖片，请用「下載 PNG」。"); }
   });
 })();
