@@ -1,61 +1,54 @@
 {
- "updated": "2026-11-02T12:41:11.413Z",
+ "updated": "2026-11-03T00:39:08.747Z",
  "items": [
+  {
+   "source": "Reddit",
+   "title": "Don't you think Blizzard nerfed Pirates too much?",
+   "url": "https://www.reddit.com/r/BobsTavern/comments/1xmd36n/dont_you_think_blizzard_nerfed_pirates_too_much/",
+   "ts": 1793662172000,
+   "kind": "discussion"
+  },
+  {
+   "source": "Reddit",
+   "title": "Entire lobby going quills and demons except for one guy who went 8th",
+   "url": "https://www.reddit.com/r/BobsTavern/comments/1xmarou/entire_lobby_going_quills_and_demons_except_for/",
+   "ts": 1793656464000,
+   "kind": "discussion"
+  },
+  {
+   "source": "Reddit",
+   "title": "Very well",
+   "url": "https://www.reddit.com/r/BobsTavern/comments/1xmad6l/very_well/",
+   "ts": 1793655524000,
+   "kind": "discussion"
+  },
+  {
+   "source": "Reddit",
+   "title": "TIL: Enhance-o Mechano can give Fishbait Divine Shield and Windfury Beasts attack twice into them.",
+   "url": "https://www.reddit.com/r/BobsTavern/comments/1xma202/til_enhanceo_mechano_can_give_fishbait_divine/",
+   "ts": 1793654811000,
+   "kind": "discussion"
+  },
+  {
+   "source": "Reddit",
+   "title": "Does anyone actually prefer Aberrations to Naga?",
+   "url": "https://www.reddit.com/r/BobsTavern/comments/1xm3uct/does_anyone_actually_prefer_aberrations_to_naga/",
+   "ts": 1793641209000,
+   "kind": "discussion"
+  },
+  {
+   "source": "Reddit",
+   "title": "Balance patch sneak peak for tomorrow",
+   "url": "https://www.reddit.com/r/BobsTavern/comments/1xm3n0k/balance_patch_sneak_peak_for_tomorrow/",
+   "ts": 1793640759000,
+   "kind": "discussion"
+  },
   {
    "source": "Reddit",
    "title": "You ain't taking it Altman",
    "url": "https://www.reddit.com/r/BobsTavern/comments/1xluz53/you_aint_taking_it_altman/",
    "ts": 1793619797000,
    "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "Apm Mechs is fun",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xlszo1/apm_mechs_is_fun/",
-   "ts": 1793612796000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "I love you Snazzy Phantom",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xlqw4s/i_love_you_snazzy_phantom/",
-   "ts": 1793604591000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "Celebrating my first (and probably only, lol) time on the Leaderboards!",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xlp51l/celebrating_my_first_and_probably_only_lol_time/",
-   "ts": 1793598171000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "When does this god forsaken season ends?",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xll6s9/when_does_this_god_forsaken_season_ends/",
-   "ts": 1793585583000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "First time 10k!",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xlgm2a/first_time_10k/",
-   "ts": 1793572649000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "Who needs diversity?",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xlf91z/who_needs_diversity/",
-   "ts": 1793569173000,
-   "kind": "discussion"
-  },
-  {
-   "source": "中关村在线",
-   "title": "伊利丹在酒馆战棋为何弱势？ - 中关村在线",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5CUHlqSnEwczNTNTNiQ0xPUWZwRlhlQ2Q4ajlWTnpRWWJBbVhUTnhGTW9YWFp1YkZYbF84WC14dFZpNXVTVm1id1dKc0tLcnh0Yk1JbA?oc=5",
-   "ts": 1792958157000,
-   "kind": "news"
   },
   {
    "source": "Reddit",
@@ -72,16 +65,16 @@
    "kind": "news"
   },
   {
-   "source": "Blizzard News",
-   "title": "[Updated 9/29/2026] 36.6 Patch Notes — Hearthstone - Blizzard News",
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNd3dFM2ZUNV9wLWhodUIzNVZKeXk2VGJ4Wi05dFpRR2pVYXNLY2d4WFFlbXVack92LW5CUnZJT1BXXzJXYlo1V1JSaFIyb0Vpc2o3SFN0eXFPcGdsNWFnb0NCbjdaQ2l1WTgtNUhnQWI5bDdnSDJ6MUZ5d2ZzRlpxZ1IyejFfVDV3ajJz?oc=5",
+   "source": "Blizzard Entertainment",
+   "title": "[Updated 9/29/2026] 36.6 Patch Notes - Blizzard Entertainment",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBsMzFfOFBZNnF3TEVxbXFOVHdtN3IwREJIc1IzWnpwa0hyTDF4LVAwOFg2aE1DYkJDeS1sN1NYSVFPdFJUbmw3RjlMWGRGV25yZkoyWWRtUG9FWW4x?oc=5",
    "ts": 1790665200000,
    "kind": "news"
   },
   {
-   "source": "Blizzard Entertainment",
-   "title": "[Updated 9/29/2026] 36.6 Patch Notes - Blizzard Entertainment",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBsMzFfOFBZNnF3TEVxbXFOVHdtN3IwREJIc1IzWnpwa0hyTDF4LVAwOFg2aE1DYkJDeS1sN1NYSVFPdFJUbmw3RjlMWGRGV25yZkoyWWRtUG9FWW4x?oc=5",
+   "source": "Blizzard News",
+   "title": "[Updated 9/29/2026] 36.6 Patch Notes — Hearthstone - Blizzard News",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNd3dFM2ZUNV9wLWhodUIzNVZKeXk2VGJ4Wi05dFpRR2pVYXNLY2d4WFFlbXVack92LW5CUnZJT1BXXzJXYlo1V1JSaFIyb0Vpc2o3SFN0eXFPcGdsNWFnb0NCbjdaQ2l1WTgtNUhnQWI5bDdnSDJ6MUZ5d2ZzRlpxZ1IyejFfVDV3ajJz?oc=5",
    "ts": 1790665200000,
    "kind": "news"
   },
@@ -95,22 +88,29 @@
   {
    "source": "Blizzard Entertainment",
    "title": "Aberrations Join Battlegrounds at BlizzCon! - Blizzard Entertainment",
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPQ0pYTVNzVERuN1BDU0ctZXRPZUh6a3h1djhFWjVZX1R0Um9zME9uUmhZOTVPZVRZYXltNEZXdFdyVkdTUkVudW9RMTdhVXZTNnlUdFI5eEM3d2l1LWFGN3NfLVpPT3dRcmFZNzZaVkZsOTdFaHFqSjBzWUNQcjdLUWhFRDh0TXVlSEJPTDlreWhOYzJoR3JnWnJ3NA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1qTEk4S05va1VJbnpXbzNWZFVvM0RzUjIwNHpJTU40cmdPX25zSzdlMnVxcVBJb1VVTjF1QkNORGI2MElkdFV6Y010eDBORnlXNEd4emsyd0xRVW1p?oc=5",
    "ts": 1789196400000,
    "kind": "news"
   },
   {
-   "source": "Blizzard Entertainment",
-   "title": "36.2.2 Patch Notes - Blizzard Entertainment",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBSWFRDeS1sT3Qxa1BGUnBJZ2dpbkVlNEhBRWZvT0pvMzZ5THQwdFhYU2NEOXpFZzNWcnVGSGpQSlk0QnZzM1FqclB5cnV0czh5VG5iRW5aR25odjJoeFJ2TnNocWNwNmRoM2ZHVkRpVjNzUGF1YlFKZw?oc=5",
-   "ts": 1787036400000,
+   "source": "Esports.gg",
+   "title": "Hearthstone patch notes today: Chow Down removed, Battlegrounds updates, and more - Esports.gg",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUlpCc0ljRURjVmc1UWV4OGV4YlRsMmt0c1RHMGtnLVkyWGV2TGRYWjBxTVFSSlBybmpqX3ZNclZyNlgweWswV0ZaaGxiUWxOdHlVUGRJei01b3dCVWVXbEliN0FqNnk0M08wdnVydUk1RjczY1hvSHFEYTVqc0ZwU3l0QlBKVElwN3k3NTFIajV2Q3NDMlRNOW1UVFVfbWIwU0gxZ2hSb2ZweDZMYlkyaVN2N1dOdw?oc=5",
+   "ts": 1788418800000,
    "kind": "news"
   },
   {
-   "source": "Blizzard Entertainment",
-   "title": "Announcing Battlegrounds Season 14: Dark Gifts of Dalaran! - Blizzard Entertainment",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOMGp2bUpUZENFQnMxd3lwbGswNmlXTkRjWVYzQTg4VzQtSnpBSXFhUFVZajFSMTFZSEVVTVZGUy02WGxoREQwVk11UzBvaHRaS0xieFBoY2x6X2hfZ1RFVWplWHlFNjVFdWdlZnJyNFd6SlJISVVkdzdJZmVtVExsNlRoZ3M5dG9FSmJFNDE1X0ZlUExFNjdvQmhuVW02UmxDOE9LQXNDMDM5OEZyYUE?oc=5",
-   "ts": 1785135600000,
+   "source": "17173",
+   "title": "《炉石传说》英雄选择不用愁，酒馆战棋一图流英雄解读 - 17173",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE16QVdvTnY4V2lkQ3A1WXlYY2E1RGFtWEhIYjlrT3plVmk5bUlUQm5lN3NqT1dhRzE1elFaYTMzeFRkeHNGanhoZFpWdGN6MVFQYjBIdnFJYXJVOTBLWWFsRjZYOHI?oc=5",
+   "ts": 1784876400000,
+   "kind": "news"
+  },
+  {
+   "source": "Blizzard News",
+   "title": "35.6.2 Patch Notes — Hearthstone - Blizzard News",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9RenYxQTRDUV9WdzEwaENxWHNCc3ZvQWM4R2lhNUZDYmloSm5Hd1VPT2M1TXZZQ3E1bUNuVW1OQ2d3TXZxNlE4RHFRcnBHcWxVcVdLankxVHB6Tkw2VHd1bmZhb0JPTjgzMXpSTlU2ZndDTWUxT0E?oc=5",
+   "ts": 1781161200000,
    "kind": "news"
   }
  ]
