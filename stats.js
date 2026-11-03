@@ -2,226 +2,210 @@
 const STATS = {
   "source": "Firestone / ZeroToHeroes",
   "url": "https://static.zerotoheroes.com/api/bgs/",
-  "fetchedAt": "2026-11-01",
+  "fetchedAt": "2026-11-02",
   "bracket": "全部 MMR",
   "region": "ALL",
-  "sample": 2202934,
+  "sample": 2263201,
   "heroes": [
     {
       "name": "加拉克苏斯大王",
       "tier": "T0",
-      "winrate": 0.2195,
-      "top4": 0.6727,
+      "winrate": 0.219,
+      "top4": 0.6734,
       "avg": 3.55,
-      "pickrate": 47.22
+      "pickrate": 47.31
     },
     {
       "name": "亡语者布莱克松",
       "tier": "T0",
-      "winrate": 0.1778,
-      "top4": 0.6609,
+      "winrate": 0.1774,
+      "top4": 0.6612,
       "avg": 3.65,
-      "pickrate": 32
+      "pickrate": 32.1
     },
     {
       "name": "帕奇维克",
       "tier": "T0",
-      "winrate": 0.1515,
-      "top4": 0.6689,
+      "winrate": 0.1516,
+      "top4": 0.6685,
       "avg": 3.66,
-      "pickrate": 35.92
+      "pickrate": 35.96
     },
     {
       "name": "凯瑞尔·罗姆",
       "tier": "T0",
-      "winrate": 0.1476,
-      "top4": 0.6645,
+      "winrate": 0.1472,
+      "top4": 0.6641,
       "avg": 3.68,
-      "pickrate": 29.49
+      "pickrate": 29.52
     },
     {
       "name": "德雷阿佳丝",
       "tier": "T0",
-      "winrate": 0.1369,
-      "top4": 0.678,
+      "winrate": 0.1368,
+      "top4": 0.6775,
       "avg": 3.69,
-      "pickrate": 45.48
+      "pickrate": 45.39
     },
     {
       "name": "特莱斯塔斯，寄生之魂",
       "tier": "T0",
-      "winrate": 0.1829,
-      "top4": 0.6442,
+      "winrate": 0.1827,
+      "top4": 0.644,
       "avg": 3.76,
-      "pickrate": 53.64
+      "pickrate": 53.68
     },
     {
       "name": "扣子",
       "tier": "T0",
-      "winrate": 0.1954,
-      "top4": 0.6305,
+      "winrate": 0.1959,
+      "top4": 0.6312,
       "avg": 3.77,
-      "pickrate": 52.23
-    },
-    {
-      "name": "经理马林",
-      "tier": "T0",
-      "winrate": 0.1986,
-      "top4": 0.6288,
-      "avg": 3.78,
-      "pickrate": 55.06
+      "pickrate": 52.29
     },
     {
       "name": "挂机的阿凯",
       "tier": "T0",
-      "winrate": 0.1727,
-      "top4": 0.6342,
+      "winrate": 0.1723,
+      "top4": 0.6346,
       "avg": 3.78,
-      "pickrate": 49.5
+      "pickrate": 49.52
     },
     {
       "name": "伊利丹·怒风",
       "tier": "T0",
-      "winrate": 0.1659,
-      "top4": 0.6311,
+      "winrate": 0.1668,
+      "top4": 0.631,
       "avg": 3.78,
-      "pickrate": 28.83
+      "pickrate": 28.87
+    },
+    {
+      "name": "经理马林",
+      "tier": "T0",
+      "winrate": 0.1983,
+      "top4": 0.6282,
+      "avg": 3.79,
+      "pickrate": 55.1
     },
     {
       "name": "梦魇之王萨维斯",
       "tier": "T0",
-      "winrate": 0.2017,
-      "top4": 0.6235,
+      "winrate": 0.2016,
+      "top4": 0.6233,
       "avg": 3.79,
-      "pickrate": 54.19
+      "pickrate": 54.18
     },
     {
       "name": "奥拉基尔",
       "tier": "T0",
-      "winrate": 0.1644,
-      "top4": 0.629,
+      "winrate": 0.1638,
+      "top4": 0.6292,
       "avg": 3.8,
-      "pickrate": 27.69
-    },
-    {
-      "name": "典狱长",
-      "tier": "T1",
-      "winrate": 0.1646,
-      "top4": 0.6325,
-      "avg": 3.83,
-      "pickrate": 23.25
+      "pickrate": 27.74
     },
     {
       "name": "塔隆·血魔",
       "tier": "T1",
       "winrate": 0.1766,
       "top4": 0.6283,
-      "avg": 3.83,
-      "pickrate": 40.78
+      "avg": 3.82,
+      "pickrate": 40.84
     },
     {
       "name": "舞者达瑞尔",
       "tier": "T1",
-      "winrate": 0.129,
-      "top4": 0.6319,
+      "winrate": 0.1295,
+      "top4": 0.6317,
       "avg": 3.84,
-      "pickrate": 21.93
+      "pickrate": 21.9
     },
     {
       "name": "死亡之翼",
       "tier": "T1",
-      "winrate": 0.1289,
-      "top4": 0.6329,
+      "winrate": 0.129,
+      "top4": 0.6318,
       "avg": 3.84,
-      "pickrate": 11.35
+      "pickrate": 11.36
+    },
+    {
+      "name": "典狱长",
+      "tier": "T1",
+      "winrate": 0.1633,
+      "top4": 0.6314,
+      "avg": 3.84,
+      "pickrate": 23.28
     },
     {
       "name": "沃金",
       "tier": "T1",
-      "winrate": 0.1476,
-      "top4": 0.6218,
+      "winrate": 0.1469,
+      "top4": 0.6222,
       "avg": 3.85,
-      "pickrate": 16.23
+      "pickrate": 16.25
     },
     {
       "name": "风暴之王托里姆",
       "tier": "T1",
-      "winrate": 0.1796,
-      "top4": 0.6189,
+      "winrate": 0.1794,
+      "top4": 0.6188,
       "avg": 3.86,
-      "pickrate": 44.56
+      "pickrate": 44.55
+    },
+    {
+      "name": "德雷克塔尔",
+      "tier": "T1",
+      "winrate": 0.1888,
+      "top4": 0.6192,
+      "avg": 3.86,
+      "pickrate": 27.41
     },
     {
       "name": "尤格-萨隆",
       "tier": "T1",
       "winrate": 0.1676,
-      "top4": 0.6203,
+      "top4": 0.6207,
       "avg": 3.86,
-      "pickrate": 29.11
-    },
-    {
-      "name": "德雷克塔尔",
-      "tier": "T1",
-      "winrate": 0.1882,
-      "top4": 0.6187,
-      "avg": 3.86,
-      "pickrate": 27.37
-    },
-    {
-      "name": "范达尔·雷矛",
-      "tier": "T1",
-      "winrate": 0.1879,
-      "top4": 0.612,
-      "avg": 3.88,
-      "pickrate": 28.21
+      "pickrate": 29.12
     },
     {
       "name": "钟表先生克劳沃斯",
       "tier": "T1",
-      "winrate": 0.1765,
+      "winrate": 0.1766,
       "top4": 0.6097,
       "avg": 3.88,
-      "pickrate": 37.26
+      "pickrate": 37.32
+    },
+    {
+      "name": "范达尔·雷矛",
+      "tier": "T1",
+      "winrate": 0.1883,
+      "top4": 0.6116,
+      "avg": 3.88,
+      "pickrate": 28.21
     },
     {
       "name": "巫妖王",
       "tier": "T1",
-      "winrate": 0.1586,
-      "top4": 0.6115,
-      "avg": 3.88,
-      "pickrate": 39.33
+      "winrate": 0.1583,
+      "top4": 0.6117,
+      "avg": 3.89,
+      "pickrate": 39.36
     },
     {
       "name": "因葛，钢铁颂歌",
       "tier": "T1",
-      "winrate": 0.1397,
-      "top4": 0.6116,
-      "avg": 3.89,
-      "pickrate": 19.52
-    },
-    {
-      "name": "阿莱克丝塔萨",
-      "tier": "T1",
-      "winrate": 0.1921,
-      "top4": 0.6056,
+      "winrate": 0.1391,
+      "top4": 0.6109,
       "avg": 3.9,
-      "pickrate": 20.33
+      "pickrate": 19.51
     },
     {
       "name": "穆克拉",
       "tier": "T1",
-      "winrate": 0.1262,
-      "top4": 0.6153,
+      "winrate": 0.1265,
+      "top4": 0.6152,
       "avg": 3.91,
-      "pickrate": 14.38
-    },
-    {
-      "name": "堕落的乔治",
-      "tier": "T1",
-      "winrate": 0.1609,
-      "top4": 0.6069,
-      "avg": 3.91,
-      "pickrate": 23.03
+      "pickrate": 14.4
     },
     {
       "name": "伟大的阿卡扎曼扎拉克",
@@ -229,204 +213,220 @@ const STATS = {
       "winrate": 0.1496,
       "top4": 0.6077,
       "avg": 3.91,
-      "pickrate": 22.62
+      "pickrate": 22.69
     },
     {
       "name": "洛，在世传奇",
       "tier": "T1",
-      "winrate": 0.1554,
-      "top4": 0.6061,
+      "winrate": 0.1553,
+      "top4": 0.6062,
       "avg": 3.91,
-      "pickrate": 30.73
+      "pickrate": 30.77
     },
     {
-      "name": "瓦托格尔女王",
+      "name": "阿莱克丝塔萨",
       "tier": "T1",
-      "winrate": 0.1282,
-      "top4": 0.6104,
-      "avg": 3.93,
-      "pickrate": 13.41
+      "winrate": 0.1924,
+      "top4": 0.606,
+      "avg": 3.91,
+      "pickrate": 20.38
+    },
+    {
+      "name": "堕落的乔治",
+      "tier": "T1",
+      "winrate": 0.1602,
+      "top4": 0.6066,
+      "avg": 3.92,
+      "pickrate": 23.05
     },
     {
       "name": "希尔瓦娜斯·风行者",
       "tier": "T1",
-      "winrate": 0.1857,
-      "top4": 0.5977,
+      "winrate": 0.186,
+      "top4": 0.5969,
+      "avg": 3.92,
+      "pickrate": 38.34
+    },
+    {
+      "name": "瓦托格尔女王",
+      "tier": "T1",
+      "winrate": 0.1276,
+      "top4": 0.6109,
       "avg": 3.93,
-      "pickrate": 38.31
+      "pickrate": 13.44
     },
     {
       "name": "馆长",
       "tier": "T1",
-      "winrate": 0.1338,
-      "top4": 0.6068,
+      "winrate": 0.1333,
+      "top4": 0.6073,
       "avg": 3.94,
-      "pickrate": 22.8
+      "pickrate": 22.79
     },
     {
-      "name": "大主教奥萨尔",
+      "name": "恩佐斯",
       "tier": "T1",
-      "winrate": 0.15,
-      "top4": 0.6014,
+      "winrate": 0.1478,
+      "top4": 0.605,
       "avg": 3.95,
-      "pickrate": 16.33
+      "pickrate": 22.32
     },
     {
       "name": "塔维什·雷矛",
       "tier": "T1",
-      "winrate": 0.1435,
-      "top4": 0.6027,
+      "winrate": 0.1433,
+      "top4": 0.603,
       "avg": 3.95,
-      "pickrate": 21.04
+      "pickrate": 21.06
     },
     {
       "name": "巫妖巴兹亚尔",
       "tier": "T1",
-      "winrate": 0.1426,
-      "top4": 0.6101,
+      "winrate": 0.1423,
+      "top4": 0.6103,
       "avg": 3.95,
-      "pickrate": 19.11
+      "pickrate": 19.17
     },
     {
-      "name": "恩佐斯",
+      "name": "大主教奥萨尔",
       "tier": "T2",
-      "winrate": 0.148,
-      "top4": 0.6044,
+      "winrate": 0.1505,
+      "top4": 0.6011,
       "avg": 3.95,
-      "pickrate": 22.37
-    },
-    {
-      "name": "吞噬者穆坦努斯",
-      "tier": "T2",
-      "winrate": 0.1282,
-      "top4": 0.6053,
-      "avg": 3.96,
-      "pickrate": 24.93
+      "pickrate": 16.35
     },
     {
       "name": "比格沃斯先生",
       "tier": "T2",
-      "winrate": 0.1713,
-      "top4": 0.5934,
+      "winrate": 0.1708,
+      "top4": 0.5927,
       "avg": 3.96,
       "pickrate": 20.03
-    },
-    {
-      "name": "萨鲁法尔大王",
-      "tier": "T2",
-      "winrate": 0.1243,
-      "top4": 0.605,
-      "avg": 3.96,
-      "pickrate": 16.35
-    },
-    {
-      "name": "无限巨龙姆诺兹多",
-      "tier": "T2",
-      "winrate": 0.1614,
-      "top4": 0.6005,
-      "avg": 3.97,
-      "pickrate": 42.41
     },
     {
       "name": "米罗克",
       "tier": "T2",
       "winrate": 0.1735,
-      "top4": 0.5924,
+      "top4": 0.593,
+      "avg": 3.96,
+      "pickrate": 44.98
+    },
+    {
+      "name": "吞噬者穆坦努斯",
+      "tier": "T2",
+      "winrate": 0.1284,
+      "top4": 0.606,
+      "avg": 3.96,
+      "pickrate": 24.93
+    },
+    {
+      "name": "萨鲁法尔大王",
+      "tier": "T2",
+      "winrate": 0.1242,
+      "top4": 0.6041,
       "avg": 3.97,
-      "pickrate": 45.04
+      "pickrate": 16.37
     },
     {
-      "name": "提克特斯",
+      "name": "无限巨龙姆诺兹多",
       "tier": "T2",
-      "winrate": 0.1601,
-      "top4": 0.5895,
-      "avg": 3.98,
-      "pickrate": 28.84
-    },
-    {
-      "name": "摩洛克·福尔摩斯",
-      "tier": "T2",
-      "winrate": 0.1642,
-      "top4": 0.5946,
-      "avg": 3.98,
-      "pickrate": 22.6
-    },
-    {
-      "name": "克苏恩",
-      "tier": "T2",
-      "winrate": 0.1167,
-      "top4": 0.6029,
-      "avg": 3.98,
-      "pickrate": 11.76
+      "winrate": 0.1608,
+      "top4": 0.6007,
+      "avg": 3.97,
+      "pickrate": 42.42
     },
     {
       "name": "亚煞极",
       "tier": "T2",
-      "winrate": 0.1441,
-      "top4": 0.5913,
+      "winrate": 0.1451,
+      "top4": 0.5917,
       "avg": 3.98,
       "pickrate": 18.52
     },
     {
+      "name": "提克特斯",
+      "tier": "T2",
+      "winrate": 0.1599,
+      "top4": 0.5903,
+      "avg": 3.98,
+      "pickrate": 28.9
+    },
+    {
       "name": "迦拉克隆",
       "tier": "T2",
-      "winrate": 0.1472,
+      "winrate": 0.1474,
       "top4": 0.6017,
       "avg": 3.99,
-      "pickrate": 34.61
+      "pickrate": 34.66
     },
     {
       "name": "芬利·莫格顿爵士",
       "tier": "T2",
       "winrate": 0.167,
-      "top4": 0.5926,
+      "top4": 0.5921,
       "avg": 3.99,
-      "pickrate": 38.55
+      "pickrate": 38.54
     },
     {
-      "name": "强化机器人",
+      "name": "摩洛克·福尔摩斯",
       "tier": "T2",
-      "winrate": 0.1441,
-      "top4": 0.591,
-      "avg": 4,
-      "pickrate": 24.21
+      "winrate": 0.164,
+      "top4": 0.5945,
+      "avg": 3.99,
+      "pickrate": 22.55
     },
     {
-      "name": "布鲁坎",
+      "name": "克苏恩",
       "tier": "T2",
-      "winrate": 0.1391,
-      "top4": 0.5924,
-      "avg": 4,
-      "pickrate": 11.5
+      "winrate": 0.1156,
+      "top4": 0.6024,
+      "avg": 3.99,
+      "pickrate": 11.81
     },
     {
       "name": "伊瑟拉",
       "tier": "T2",
-      "winrate": 0.1402,
-      "top4": 0.5827,
+      "winrate": 0.1409,
+      "top4": 0.5838,
       "avg": 4,
-      "pickrate": 18.12
+      "pickrate": 18.11
+    },
+    {
+      "name": "布鲁坎",
+      "tier": "T2",
+      "winrate": 0.1377,
+      "top4": 0.5929,
+      "avg": 4,
+      "pickrate": 11.55
+    },
+    {
+      "name": "强化机器人",
+      "tier": "T2",
+      "winrate": 0.1445,
+      "top4": 0.5912,
+      "avg": 4,
+      "pickrate": 24.24
     },
     {
       "name": "鼠王",
       "tier": "T2",
-      "winrate": 0.1481,
-      "top4": 0.5888,
+      "winrate": 0.1482,
+      "top4": 0.5885,
       "avg": 4.01,
-      "pickrate": 19.04
+      "pickrate": 19.02
     },
     {
       "name": "泰瑟兰·血望者",
       "tier": "T2",
-      "winrate": 0.1449,
-      "top4": 0.5876,
+      "winrate": 0.1451,
+      "top4": 0.5873,
       "avg": 4.01,
       "pickrate": 14.76
     },
     {
       "name": "拉卡尼休",
       "tier": "T2",
-      "winrate": 0.134,
+      "winrate": 0.1348,
       "top4": 0.5983,
       "avg": 4.01,
       "pickrate": 18.17
@@ -434,450 +434,450 @@ const STATS = {
     {
       "name": "尤朵拉船长",
       "tier": "T2",
-      "winrate": 0.1562,
+      "winrate": 0.1556,
       "top4": 0.5866,
       "avg": 4.02,
-      "pickrate": 29.69
+      "pickrate": 29.67
     },
     {
       "name": "希拉斯·暗月",
       "tier": "T2",
-      "winrate": 0.1473,
-      "top4": 0.5833,
+      "winrate": 0.147,
+      "top4": 0.5837,
       "avg": 4.03,
-      "pickrate": 22.94
+      "pickrate": 22.92
     },
     {
       "name": "洛卡拉",
       "tier": "T2",
-      "winrate": 0.1194,
-      "top4": 0.5928,
+      "winrate": 0.1192,
+      "top4": 0.5915,
       "avg": 4.03,
-      "pickrate": 9.13
+      "pickrate": 9.16
     },
     {
       "name": "天空上尉库拉格",
       "tier": "T2",
-      "winrate": 0.1605,
+      "winrate": 0.1602,
       "top4": 0.5793,
       "avg": 4.04,
-      "pickrate": 18.15
+      "pickrate": 18.18
+    },
+    {
+      "name": "阮大师",
+      "tier": "T2",
+      "winrate": 0.1686,
+      "top4": 0.5757,
+      "avg": 4.04,
+      "pickrate": 41.73
     },
     {
       "name": "凯尔萨斯·逐日者",
       "tier": "T2",
       "winrate": 0.1431,
-      "top4": 0.5835,
+      "top4": 0.584,
       "avg": 4.04,
-      "pickrate": 15
-    },
-    {
-      "name": "阮大师",
-      "tier": "T2",
-      "winrate": 0.1683,
-      "top4": 0.5751,
-      "avg": 4.04,
-      "pickrate": 41.73
+      "pickrate": 14.97
     },
     {
       "name": "沙德沃克",
       "tier": "T2",
-      "winrate": 0.1543,
-      "top4": 0.5811,
+      "winrate": 0.1546,
+      "top4": 0.5807,
       "avg": 4.05,
-      "pickrate": 29.31
+      "pickrate": 29.28
     },
     {
       "name": "预言者努波顿",
       "tier": "T2",
-      "winrate": 0.1635,
-      "top4": 0.5781,
-      "avg": 4.06,
-      "pickrate": 17.91
-    },
-    {
-      "name": "摇滚教父沃恩",
-      "tier": "T2",
-      "winrate": 0.1581,
-      "top4": 0.5766,
-      "avg": 4.06,
-      "pickrate": 22.32
-    },
-    {
-      "name": "荷利戴医生",
-      "tier": "T2",
-      "winrate": 0.1359,
-      "top4": 0.5856,
-      "avg": 4.06,
-      "pickrate": 15.74
-    },
-    {
-      "name": "斯卡布斯·刀油",
-      "tier": "T2",
-      "winrate": 0.1438,
-      "top4": 0.5767,
-      "avg": 4.06,
-      "pickrate": 20.76
+      "winrate": 0.1638,
+      "top4": 0.5787,
+      "avg": 4.05,
+      "pickrate": 17.92
     },
     {
       "name": "了不起的杰弗里斯",
       "tier": "T2",
       "winrate": 0.1572,
-      "top4": 0.5745,
+      "top4": 0.5749,
       "avg": 4.06,
-      "pickrate": 26.89
+      "pickrate": 26.87
     },
     {
-      "name": "狂风之翼",
+      "name": "摇滚教父沃恩",
       "tier": "T2",
-      "winrate": 0.1619,
-      "top4": 0.5761,
-      "avg": 4.07,
-      "pickrate": 19.48
+      "winrate": 0.1577,
+      "top4": 0.5763,
+      "avg": 4.06,
+      "pickrate": 22.37
+    },
+    {
+      "name": "斯卡布斯·刀油",
+      "tier": "T2",
+      "winrate": 0.1434,
+      "top4": 0.5757,
+      "avg": 4.06,
+      "pickrate": 20.75
+    },
+    {
+      "name": "荷利戴医生",
+      "tier": "T2",
+      "winrate": 0.1362,
+      "top4": 0.5853,
+      "avg": 4.06,
+      "pickrate": 15.71
     },
     {
       "name": "瓦尔登·晨拥",
       "tier": "T2",
-      "winrate": 0.1458,
-      "top4": 0.5775,
-      "avg": 4.08,
+      "winrate": 0.1465,
+      "top4": 0.5789,
+      "avg": 4.07,
       "pickrate": 17.06
+    },
+    {
+      "name": "狂风之翼",
+      "tier": "T2",
+      "winrate": 0.162,
+      "top4": 0.5758,
+      "avg": 4.07,
+      "pickrate": 19.48
     },
     {
       "name": "钩牙船长",
       "tier": "T2",
-      "winrate": 0.1473,
-      "top4": 0.5745,
+      "winrate": 0.1469,
+      "top4": 0.5743,
       "avg": 4.08,
-      "pickrate": 16.06
+      "pickrate": 16.01
     },
     {
       "name": "蛇眼",
       "tier": "T2",
-      "winrate": 0.1605,
-      "top4": 0.5735,
+      "winrate": 0.1607,
+      "top4": 0.5743,
       "avg": 4.08,
-      "pickrate": 30.76
+      "pickrate": 30.74
+    },
+    {
+      "name": "海盗帕奇斯",
+      "tier": "T2",
+      "winrate": 0.1225,
+      "top4": 0.58,
+      "avg": 4.08,
+      "pickrate": 19.59
     },
     {
       "name": "费林大使",
-      "tier": "T2",
-      "winrate": 0.1694,
-      "top4": 0.5674,
+      "tier": "T3",
+      "winrate": 0.1698,
+      "top4": 0.5682,
       "avg": 4.09,
-      "pickrate": 38.03
+      "pickrate": 38.06
     },
     {
       "name": "雷诺·杰克逊",
       "tier": "T3",
       "winrate": 0.1784,
-      "top4": 0.5654,
+      "top4": 0.5657,
       "avg": 4.09,
       "pickrate": 38.64
     },
     {
       "name": "格雷布",
       "tier": "T3",
-      "winrate": 0.129,
-      "top4": 0.5737,
+      "winrate": 0.1286,
+      "top4": 0.5736,
       "avg": 4.09,
-      "pickrate": 21.97
-    },
-    {
-      "name": "海盗帕奇斯",
-      "tier": "T3",
-      "winrate": 0.1214,
-      "top4": 0.5782,
-      "avg": 4.09,
-      "pickrate": 19.66
-    },
-    {
-      "name": "齐恩瓦拉",
-      "tier": "T3",
-      "winrate": 0.1364,
-      "top4": 0.5769,
-      "avg": 4.1,
-      "pickrate": 27.37
-    },
-    {
-      "name": "玛里苟斯",
-      "tier": "T3",
-      "winrate": 0.1366,
-      "top4": 0.5701,
-      "avg": 4.11,
-      "pickrate": 15.34
+      "pickrate": 21.94
     },
     {
       "name": "米尔豪斯·法力风暴",
       "tier": "T3",
-      "winrate": 0.1084,
-      "top4": 0.5737,
-      "avg": 4.11,
-      "pickrate": 9.42
+      "winrate": 0.1088,
+      "top4": 0.5753,
+      "avg": 4.1,
+      "pickrate": 9.41
+    },
+    {
+      "name": "齐恩瓦拉",
+      "tier": "T3",
+      "winrate": 0.1359,
+      "top4": 0.5773,
+      "avg": 4.1,
+      "pickrate": 27.34
     },
     {
       "name": "永恒者托奇",
       "tier": "T3",
-      "winrate": 0.1459,
-      "top4": 0.5707,
+      "winrate": 0.1461,
+      "top4": 0.5702,
       "avg": 4.11,
-      "pickrate": 22.12
+      "pickrate": 22.14
+    },
+    {
+      "name": "玛里苟斯",
+      "tier": "T3",
+      "winrate": 0.1367,
+      "top4": 0.5699,
+      "avg": 4.11,
+      "pickrate": 15.32
     },
     {
       "name": "伊妮·积雷",
       "tier": "T3",
-      "winrate": 0.1559,
-      "top4": 0.5542,
-      "avg": 4.13,
+      "winrate": 0.1561,
+      "top4": 0.5543,
+      "avg": 4.12,
       "pickrate": 17.25
     },
     {
       "name": "厨师曲奇",
       "tier": "T3",
-      "winrate": 0.1566,
-      "top4": 0.5592,
+      "winrate": 0.1568,
+      "top4": 0.5591,
       "avg": 4.13,
-      "pickrate": 19.18
+      "pickrate": 19.14
     },
     {
       "name": "至尊盗王拉法姆",
       "tier": "T3",
-      "winrate": 0.1359,
-      "top4": 0.5654,
-      "avg": 4.13,
-      "pickrate": 15.67
-    },
-    {
-      "name": "奥妮克希亚",
-      "tier": "T3",
-      "winrate": 0.1156,
-      "top4": 0.5749,
+      "winrate": 0.1362,
+      "top4": 0.5651,
       "avg": 4.14,
-      "pickrate": 10.11
+      "pickrate": 15.64
     },
     {
       "name": "厄祖玛特",
       "tier": "T3",
-      "winrate": 0.1205,
-      "top4": 0.5644,
+      "winrate": 0.1195,
+      "top4": 0.5648,
       "avg": 4.14,
-      "pickrate": 7.28
+      "pickrate": 7.29
     },
     {
       "name": "伊莉斯·逐星",
       "tier": "T3",
-      "winrate": 0.1435,
-      "top4": 0.5599,
+      "winrate": 0.1441,
+      "top4": 0.5602,
       "avg": 4.14,
-      "pickrate": 12.7
+      "pickrate": 12.73
     },
     {
-      "name": "恐龙大师布莱恩",
+      "name": "奥妮克希亚",
       "tier": "T3",
-      "winrate": 0.1384,
-      "top4": 0.5613,
-      "avg": 4.15,
-      "pickrate": 30.79
-    },
-    {
-      "name": "诺兹多姆",
-      "tier": "T3",
-      "winrate": 0.1446,
-      "top4": 0.5595,
-      "avg": 4.15,
-      "pickrate": 13.86
+      "winrate": 0.1153,
+      "top4": 0.5762,
+      "avg": 4.14,
+      "pickrate": 10.1
     },
     {
       "name": "时光扭曲者克罗米",
       "tier": "T3",
-      "winrate": 0.1435,
-      "top4": 0.5647,
+      "winrate": 0.1439,
+      "top4": 0.5645,
       "avg": 4.15,
-      "pickrate": 17.52
+      "pickrate": 17.51
     },
     {
       "name": "泽瑞拉",
       "tier": "T3",
-      "winrate": 0.1405,
-      "top4": 0.5588,
+      "winrate": 0.1407,
+      "top4": 0.5602,
       "avg": 4.15,
-      "pickrate": 16.45
+      "pickrate": 16.44
+    },
+    {
+      "name": "诺兹多姆",
+      "tier": "T3",
+      "winrate": 0.1439,
+      "top4": 0.5586,
+      "avg": 4.15,
+      "pickrate": 13.87
+    },
+    {
+      "name": "恐龙大师布莱恩",
+      "tier": "T3",
+      "winrate": 0.1375,
+      "top4": 0.5605,
+      "avg": 4.15,
+      "pickrate": 30.72
     },
     {
       "name": "巴罗夫领主",
       "tier": "T3",
-      "winrate": 0.1502,
-      "top4": 0.5662,
+      "winrate": 0.1499,
+      "top4": 0.5652,
       "avg": 4.16,
       "pickrate": 17.83
     },
     {
       "name": "玛维·影歌",
       "tier": "T3",
-      "winrate": 0.1424,
-      "top4": 0.5566,
+      "winrate": 0.1414,
+      "top4": 0.5573,
       "avg": 4.16,
       "pickrate": 10.81
     },
     {
-      "name": "劫匪之王托瓦格尔",
-      "tier": "T3",
-      "winrate": 0.1398,
-      "top4": 0.5541,
-      "avg": 4.17,
-      "pickrate": 12.25
-    },
-    {
       "name": "林地守护者欧穆",
       "tier": "T3",
-      "winrate": 0.155,
-      "top4": 0.5577,
+      "winrate": 0.1548,
+      "top4": 0.557,
       "avg": 4.17,
-      "pickrate": 22.73
+      "pickrate": 22.75
     },
     {
       "name": "吉恩，狼人国王",
       "tier": "T3",
-      "winrate": 0.1717,
+      "winrate": 0.1722,
       "top4": 0.551,
       "avg": 4.17,
-      "pickrate": 40.69
+      "pickrate": 40.65
+    },
+    {
+      "name": "劫匪之王托瓦格尔",
+      "tier": "T3",
+      "winrate": 0.1391,
+      "top4": 0.5548,
+      "avg": 4.17,
+      "pickrate": 12.22
     },
     {
       "name": "森林之王塞纳留斯",
       "tier": "T3",
-      "winrate": 0.205,
-      "top4": 0.5447,
+      "winrate": 0.2053,
+      "top4": 0.5445,
       "avg": 4.18,
-      "pickrate": 34.58
+      "pickrate": 34.59
     },
     {
       "name": "詹迪斯·巴罗夫",
       "tier": "T3",
-      "winrate": 0.1307,
-      "top4": 0.555,
+      "winrate": 0.1318,
+      "top4": 0.5557,
       "avg": 4.18,
-      "pickrate": 14.1
+      "pickrate": 14.08
     },
     {
       "name": "斯尼德",
       "tier": "T3",
-      "winrate": 0.1225,
-      "top4": 0.5499,
+      "winrate": 0.1233,
+      "top4": 0.5506,
       "avg": 4.19,
-      "pickrate": 9.61
+      "pickrate": 9.6
     },
     {
       "name": "米尔菲丝·法力风暴",
       "tier": "T3",
-      "winrate": 0.1801,
-      "top4": 0.5359,
+      "winrate": 0.1797,
+      "top4": 0.5347,
       "avg": 4.19,
-      "pickrate": 19.98
-    },
-    {
-      "name": "阿兰娜·逐星",
-      "tier": "T3",
-      "winrate": 0.1527,
-      "top4": 0.5474,
-      "avg": 4.2,
-      "pickrate": 14.4
-    },
-    {
-      "name": "疯狂金字塔",
-      "tier": "T3",
-      "winrate": 0.1187,
-      "top4": 0.5528,
-      "avg": 4.2,
-      "pickrate": 8.49
+      "pickrate": 19.93
     },
     {
       "name": "塔姆辛·罗姆",
       "tier": "T3",
-      "winrate": 0.1138,
-      "top4": 0.5534,
-      "avg": 4.2,
-      "pickrate": 8.62
+      "winrate": 0.1156,
+      "top4": 0.5556,
+      "avg": 4.19,
+      "pickrate": 8.66
     },
     {
-      "name": "德纳修斯大帝",
+      "name": "阿兰娜·逐星",
       "tier": "T3",
-      "winrate": 0.1693,
-      "top4": 0.5419,
+      "winrate": 0.1521,
+      "top4": 0.5479,
+      "avg": 4.2,
+      "pickrate": 14.42
+    },
+    {
+      "name": "疯狂金字塔",
+      "tier": "T3",
+      "winrate": 0.118,
+      "top4": 0.5517,
       "avg": 4.21,
-      "pickrate": 44.29
+      "pickrate": 8.48
     },
     {
       "name": "刀锋女王凯瑞甘",
       "tier": "T3",
-      "winrate": 0.1051,
-      "top4": 0.5535,
+      "winrate": 0.106,
+      "top4": 0.5527,
       "avg": 4.22,
-      "pickrate": 5.12
+      "pickrate": 5.1
+    },
+    {
+      "name": "德纳修斯大帝",
+      "tier": "T3",
+      "winrate": 0.169,
+      "top4": 0.5416,
+      "avg": 4.22,
+      "pickrate": 44.24
     },
     {
       "name": "乐队经理精英牛头人酋长",
       "tier": "T3",
-      "winrate": 0.148,
-      "top4": 0.5326,
+      "winrate": 0.1478,
+      "top4": 0.5321,
       "avg": 4.23,
-      "pickrate": 22.46
+      "pickrate": 22.42
     },
     {
       "name": "霍格船长",
       "tier": "T3",
-      "winrate": 0.1255,
-      "top4": 0.5502,
+      "winrate": 0.1259,
+      "top4": 0.55,
       "avg": 4.23,
-      "pickrate": 17.72
-    },
-    {
-      "name": "库尔特鲁斯·陨烬",
-      "tier": "T3",
-      "winrate": 0.1348,
-      "top4": 0.5411,
-      "avg": 4.24,
-      "pickrate": 9.79
+      "pickrate": 17.67
     },
     {
       "name": "克隆大师泽里克",
       "tier": "T3",
       "winrate": 0.1565,
-      "top4": 0.5396,
+      "top4": 0.54,
       "avg": 4.24,
-      "pickrate": 27.18
+      "pickrate": 27.2
+    },
+    {
+      "name": "库尔特鲁斯·陨烬",
+      "tier": "T3",
+      "winrate": 0.1349,
+      "top4": 0.54,
+      "avg": 4.24,
+      "pickrate": 9.75
     },
     {
       "name": "贸易亲王加里维克斯",
       "tier": "T3",
-      "winrate": 0.1986,
-      "top4": 0.5314,
+      "winrate": 0.1987,
+      "top4": 0.5319,
       "avg": 4.25,
-      "pickrate": 26.32
+      "pickrate": 26.25
     },
     {
       "name": "苔丝·格雷迈恩",
       "tier": "T3",
-      "winrate": 0.1369,
-      "top4": 0.5312,
+      "winrate": 0.1375,
+      "top4": 0.5322,
       "avg": 4.27,
-      "pickrate": 19.99
-    },
-    {
-      "name": "艾德温·范克里夫",
-      "tier": "T3",
-      "winrate": 0.0932,
-      "top4": 0.548,
-      "avg": 4.27,
-      "pickrate": 6.18
+      "pickrate": 20
     },
     {
       "name": "古夫·符文图腾",
       "tier": "T3",
-      "winrate": 0.1499,
-      "top4": 0.5294,
+      "winrate": 0.1502,
+      "top4": 0.5291,
       "avg": 4.28,
-      "pickrate": 16.38
+      "pickrate": 16.34
+    },
+    {
+      "name": "艾德温·范克里夫",
+      "tier": "T3",
+      "winrate": 0.0927,
+      "top4": 0.5473,
+      "avg": 4.28,
+      "pickrate": 6.19
     },
     {
       "name": "基希克斯",
@@ -885,55 +885,55 @@ const STATS = {
       "winrate": 0.1227,
       "top4": 0.5381,
       "avg": 4.29,
-      "pickrate": 21.98
+      "pickrate": 21.87
     },
     {
       "name": "辛达苟萨",
       "tier": "T3",
-      "winrate": 0.1415,
-      "top4": 0.5231,
+      "winrate": 0.1414,
+      "top4": 0.523,
       "avg": 4.3,
-      "pickrate": 14.99
+      "pickrate": 14.97
     },
     {
       "name": "炎魔之王拉格纳罗斯",
       "tier": "T3",
-      "winrate": 0.0973,
-      "top4": 0.5362,
-      "avg": 4.33,
-      "pickrate": 6.69
+      "winrate": 0.0967,
+      "top4": 0.5371,
+      "avg": 4.32,
+      "pickrate": 6.67
     },
     {
       "name": "阿塔尼斯",
       "tier": "T3",
-      "winrate": 0.1247,
-      "top4": 0.5224,
+      "winrate": 0.125,
+      "top4": 0.5228,
       "avg": 4.35,
       "pickrate": 11.32
     },
     {
       "name": "普崔塞德教授",
       "tier": "T3",
-      "winrate": 0.1037,
-      "top4": 0.5101,
+      "winrate": 0.1027,
+      "top4": 0.5116,
       "avg": 4.39,
-      "pickrate": 9.42
+      "pickrate": 9.41
     },
     {
       "name": "吉姆·雷诺",
       "tier": "T3",
-      "winrate": 0.1092,
-      "top4": 0.4984,
+      "winrate": 0.1089,
+      "top4": 0.4983,
       "avg": 4.4,
-      "pickrate": 10.83
+      "pickrate": 10.85
     },
     {
       "name": "菌菇术士弗洛格尔",
       "tier": "T3",
-      "winrate": 0.127,
-      "top4": 0.4993,
+      "winrate": 0.1258,
+      "top4": 0.5002,
       "avg": 4.47,
-      "pickrate": 10.43
+      "pickrate": 10.41
     }
   ],
   "comps": [
@@ -941,10 +941,10 @@ const STATS = {
       "key": "dragon_shield",
       "name": "龙·圣盾",
       "tier": "T0",
-      "top4": 0.7541,
-      "win": 0.2252,
-      "avg": 3.08,
-      "sample": 22777,
+      "top4": 0.7596,
+      "win": 0.227,
+      "avg": 3.07,
+      "sample": 25320,
       "cards": [
         {
           "id": "BG29_813",
@@ -991,8 +991,8 @@ const STATS = {
       ],
       "heroes": [
         "特莱斯塔斯，寄生之魂",
-        "伟大的阿卡扎曼扎拉克",
-        "洛卡拉"
+        "奥拉基尔",
+        "拉卡尼休"
       ],
       "difficulty": "Easy",
       "power": "A"
@@ -1001,10 +1001,10 @@ const STATS = {
       "key": "neutral_tea_set",
       "name": "中立·喝茶",
       "tier": "T0",
-      "top4": 0.7424,
-      "win": 0.2172,
-      "avg": 3.16,
-      "sample": 33040,
+      "top4": 0.747,
+      "win": 0.2232,
+      "avg": 3.13,
+      "sample": 36219,
       "cards": [
         {
           "id": "BG36_640",
@@ -1051,8 +1051,8 @@ const STATS = {
       ],
       "heroes": [
         "范达尔·雷矛",
-        "拉卡尼休",
-        "亡语者布莱克松"
+        "德雷克塔尔",
+        "钟表先生克劳沃斯"
       ],
       "difficulty": "Medium",
       "power": "S"
@@ -1061,10 +1061,10 @@ const STATS = {
       "key": "aberration_discard",
       "name": "畸变怪·弃牌",
       "tier": "T0",
-      "top4": 0.7594,
-      "win": 0.1754,
+      "top4": 0.7626,
+      "win": 0.1781,
       "avg": 3.16,
-      "sample": 29342,
+      "sample": 31898,
       "cards": [
         {
           "id": "BGFYM_005",
@@ -1111,8 +1111,8 @@ const STATS = {
       ],
       "heroes": [
         "拉卡尼休",
-        "沃金",
-        "钟表先生克劳沃斯"
+        "钟表先生克劳沃斯",
+        "风暴之王托里姆"
       ],
       "difficulty": "Easy",
       "power": "C"
@@ -1121,10 +1121,10 @@ const STATS = {
       "key": "mech_apm",
       "name": "机械·APM",
       "tier": "T0",
-      "top4": 0.6748,
-      "win": 0.2414,
-      "avg": 3.32,
-      "sample": 21838,
+      "top4": 0.6781,
+      "win": 0.245,
+      "avg": 3.31,
+      "sample": 24747,
       "cards": [
         {
           "id": "BG36_367",
@@ -1171,8 +1171,8 @@ const STATS = {
       ],
       "heroes": [
         "风暴之王托里姆",
-        "德雷克塔尔",
-        "范达尔·雷矛"
+        "范达尔·雷矛",
+        "德雷克塔尔"
       ],
       "difficulty": "Hard",
       "power": "S"
@@ -1181,10 +1181,10 @@ const STATS = {
       "key": "mech_volumizer",
       "name": "机械·扩音机",
       "tier": "T0",
-      "top4": 0.6688,
-      "win": 0.2471,
-      "avg": 3.33,
-      "sample": 43097,
+      "top4": 0.6725,
+      "win": 0.2492,
+      "avg": 3.32,
+      "sample": 46462,
       "cards": [
         {
           "id": "BG36_366",
@@ -1230,8 +1230,8 @@ const STATS = {
         }
       ],
       "heroes": [
+        "特莱斯塔斯，寄生之魂",
         "德雷克塔尔",
-        "风暴之王托里姆",
         "范达尔·雷矛"
       ],
       "difficulty": "Easy",
@@ -1241,10 +1241,10 @@ const STATS = {
       "key": "murloc_end_of_turn",
       "name": "鱼人·回合结束",
       "tier": "T1",
-      "top4": 0.6841,
-      "win": 0.2314,
+      "top4": 0.6952,
+      "win": 0.2498,
       "avg": 3.33,
-      "sample": 2995,
+      "sample": 3433,
       "cards": [
         {
           "id": "BG_LOE_077",
@@ -1290,8 +1290,8 @@ const STATS = {
         }
       ],
       "heroes": [
-        "沙德沃克",
         "梦魇之王萨维斯",
+        "雷诺·杰克逊",
         "特莱斯塔斯，寄生之魂"
       ],
       "difficulty": "Hard",
@@ -1301,10 +1301,10 @@ const STATS = {
       "key": "demon_boost_shop",
       "name": "恶魔·养酒馆",
       "tier": "T1",
-      "top4": 0.6997,
-      "win": 0.2305,
-      "avg": 3.36,
-      "sample": 37264,
+      "top4": 0.7005,
+      "win": 0.2324,
+      "avg": 3.35,
+      "sample": 41354,
       "cards": [
         {
           "id": "BG36_762",
@@ -1351,8 +1351,8 @@ const STATS = {
       ],
       "heroes": [
         "钟表先生克劳沃斯",
-        "塔隆·血魔",
-        "范达尔·雷矛"
+        "范达尔·雷矛",
+        "塔隆·血魔"
       ],
       "difficulty": "Medium",
       "power": "A"
@@ -1361,10 +1361,10 @@ const STATS = {
       "key": "quilboar_choose_one",
       "name": "野猪人·抉择",
       "tier": "T1",
-      "top4": 0.6608,
-      "win": 0.3117,
+      "top4": 0.6632,
+      "win": 0.3146,
       "avg": 3.36,
-      "sample": 19341,
+      "sample": 21167,
       "cards": [
         {
           "id": "BG31_323",
@@ -1410,9 +1410,9 @@ const STATS = {
         }
       ],
       "heroes": [
-        "詹迪斯·巴罗夫",
+        "凯瑞尔·罗姆",
         "梦魇之王萨维斯",
-        "费林大使"
+        "狂风之翼"
       ],
       "difficulty": "Medium",
       "power": "C"
@@ -1421,10 +1421,10 @@ const STATS = {
       "key": "elemental_azerite",
       "name": "元素·艾泽里特",
       "tier": "T1",
-      "top4": 0.6717,
-      "win": 0.2103,
-      "avg": 3.42,
-      "sample": 25035,
+      "top4": 0.6749,
+      "win": 0.2082,
+      "avg": 3.43,
+      "sample": 28423,
       "cards": [
         {
           "id": "BG28_707",
@@ -1471,8 +1471,8 @@ const STATS = {
       ],
       "heroes": [
         "范达尔·雷矛",
-        "大主教奥萨尔",
-        "经理马林"
+        "死亡之翼",
+        "钟表先生克劳沃斯"
       ],
       "difficulty": "Hard",
       "power": "S"
@@ -1481,85 +1481,23 @@ const STATS = {
       "key": "elemental_cycle",
       "name": "元素·倒转",
       "tier": "T1",
-      "top4": 0.7026,
-      "win": 0.1921,
-      "avg": 3.48,
-      "sample": 4060,
+      "top4": 0.6961,
+      "win": 0.1964,
+      "avg": 3.47,
+      "sample": 3161,
       "cards": [],
-      "heroes": [
-        "齐恩瓦拉"
-      ],
+      "heroes": [],
       "difficulty": "",
       "power": ""
-    },
-    {
-      "key": "quilboar_felboar_spam",
-      "name": "野猪人·邪能猪",
-      "tier": "T1",
-      "top4": 0.674,
-      "win": 0.2056,
-      "avg": 3.54,
-      "sample": 26062,
-      "cards": [
-        {
-          "id": "BG28_633",
-          "name": "邪能野猪人",
-          "status": "CORE",
-          "role": "mid"
-        },
-        {
-          "id": "BG35_883",
-          "name": "巴琳达·斯通赫尔斯",
-          "status": "CORE",
-          "role": "mid"
-        },
-        {
-          "id": "BG_LOE_077",
-          "name": "布莱恩·铜须",
-          "status": "CORE",
-          "role": "back"
-        },
-        {
-          "id": "BG36_762",
-          "name": "恶魔干扰者",
-          "status": "ADDON",
-          "role": "mid"
-        },
-        {
-          "id": "BG33_823",
-          "name": "空军上将罗杰斯",
-          "status": "ADDON",
-          "role": "mid"
-        },
-        {
-          "id": "BG33_825",
-          "name": "骄傲的私掠者",
-          "status": "ADDON",
-          "role": "mid"
-        },
-        {
-          "id": "BG30_121",
-          "name": "热气球测绘员",
-          "status": "ADDON",
-          "role": "mid"
-        }
-      ],
-      "heroes": [
-        "亡语者布莱克松",
-        "德雷克塔尔",
-        "贸易亲王加里维克斯"
-      ],
-      "difficulty": "Hard",
-      "power": "S"
     },
     {
       "key": "aberration_deathrattle",
       "name": "畸变怪·亡语",
       "tier": "T1",
-      "top4": 0.6829,
-      "win": 0.1026,
-      "avg": 3.56,
-      "sample": 25745,
+      "top4": 0.6862,
+      "win": 0.1046,
+      "avg": 3.54,
+      "sample": 25175,
       "cards": [
         {
           "id": "BG36_318",
@@ -1605,21 +1543,81 @@ const STATS = {
         }
       ],
       "heroes": [
+        "风暴之王托里姆",
         "钟表先生克劳沃斯",
-        "塔隆·血魔",
-        "恩佐斯"
+        "塔隆·血魔"
       ],
       "difficulty": "Easy",
       "power": "B"
     },
     {
+      "key": "murloc_scam",
+      "name": "鱼人·下毒",
+      "tier": "T1",
+      "top4": 0.6585,
+      "win": 0.1999,
+      "avg": 3.55,
+      "sample": 12762,
+      "cards": [
+        {
+          "id": "BG34_140",
+          "name": "飞行专家",
+          "status": "CORE",
+          "role": "mid"
+        },
+        {
+          "id": "BG36_700",
+          "name": "下水道逃生鱼人",
+          "status": "CORE",
+          "role": "mid"
+        },
+        {
+          "id": "BG33_318",
+          "name": "怒胆喷毒鱼人",
+          "status": "CORE",
+          "role": "mid"
+        },
+        {
+          "id": "BG23_318",
+          "name": "莽神火车王",
+          "status": "ADDON",
+          "role": "back"
+        },
+        {
+          "id": "BGS_131",
+          "name": "致命的孢子",
+          "status": "ADDON",
+          "role": "mid"
+        },
+        {
+          "id": "BG31_149",
+          "name": "气泡枪手",
+          "status": "ADDON",
+          "role": "back"
+        },
+        {
+          "id": "BG34_604",
+          "name": "英勇的逆袭者",
+          "status": "ADDON",
+          "role": "mid"
+        }
+      ],
+      "heroes": [
+        "凯瑞尔·罗姆",
+        "比格沃斯先生",
+        "伟大的阿卡扎曼扎拉克"
+      ],
+      "difficulty": "Medium",
+      "power": "A"
+    },
+    {
       "key": "undead_apm",
       "name": "亡灵·APM",
       "tier": "T2",
-      "top4": 0.6637,
-      "win": 0.17,
-      "avg": 3.57,
-      "sample": 4112,
+      "top4": 0.6763,
+      "win": 0.1722,
+      "avg": 3.55,
+      "sample": 4779,
       "cards": [
         {
           "id": "BG33_823",
@@ -1666,20 +1664,80 @@ const STATS = {
       ],
       "heroes": [
         "经理马林",
-        "梦魇之王萨维斯",
-        "尤格-萨隆"
+        "尤格-萨隆",
+        "巫妖王"
       ],
       "difficulty": "Medium",
+      "power": "S"
+    },
+    {
+      "key": "quilboar_felboar_spam",
+      "name": "野猪人·邪能猪",
+      "tier": "T2",
+      "top4": 0.6729,
+      "win": 0.2057,
+      "avg": 3.55,
+      "sample": 28246,
+      "cards": [
+        {
+          "id": "BG28_633",
+          "name": "邪能野猪人",
+          "status": "CORE",
+          "role": "mid"
+        },
+        {
+          "id": "BG35_883",
+          "name": "巴琳达·斯通赫尔斯",
+          "status": "CORE",
+          "role": "mid"
+        },
+        {
+          "id": "BG_LOE_077",
+          "name": "布莱恩·铜须",
+          "status": "CORE",
+          "role": "back"
+        },
+        {
+          "id": "BG36_762",
+          "name": "恶魔干扰者",
+          "status": "ADDON",
+          "role": "mid"
+        },
+        {
+          "id": "BG33_823",
+          "name": "空军上将罗杰斯",
+          "status": "ADDON",
+          "role": "mid"
+        },
+        {
+          "id": "BG33_825",
+          "name": "骄傲的私掠者",
+          "status": "ADDON",
+          "role": "mid"
+        },
+        {
+          "id": "BG30_121",
+          "name": "热气球测绘员",
+          "status": "ADDON",
+          "role": "mid"
+        }
+      ],
+      "heroes": [
+        "范达尔·雷矛",
+        "亡语者布莱克松",
+        "经理马林"
+      ],
+      "difficulty": "Hard",
       "power": "S"
     },
     {
       "key": "undead_eternal_knight",
       "name": "亡灵·永恒骑士",
       "tier": "T2",
-      "top4": 0.6737,
+      "top4": 0.6768,
       "win": 0.1326,
       "avg": 3.58,
-      "sample": 12177,
+      "sample": 14088,
       "cards": [
         {
           "id": "BG25_008",
@@ -1725,9 +1783,9 @@ const STATS = {
         }
       ],
       "heroes": [
-        "德雷克塔尔",
         "巫妖王",
-        "伟大的阿卡扎曼扎拉克"
+        "德雷克塔尔",
+        "萨鲁法尔大王"
       ],
       "difficulty": "Easy",
       "power": "C"
@@ -1736,10 +1794,10 @@ const STATS = {
       "key": "murloc_handbuff",
       "name": "鱼人·手牌 buff",
       "tier": "T2",
-      "top4": 0.66,
-      "win": 0.1384,
-      "avg": 3.63,
-      "sample": 15487,
+      "top4": 0.6641,
+      "win": 0.1369,
+      "avg": 3.64,
+      "sample": 17318,
       "cards": [
         {
           "id": "BG26_354",
@@ -1787,79 +1845,19 @@ const STATS = {
       "heroes": [
         "钟表先生克劳沃斯",
         "无限巨龙姆诺兹多",
-        "馆长"
+        "穆克拉"
       ],
       "difficulty": "Hard",
       "power": "C"
     },
     {
-      "key": "murloc_scam",
-      "name": "鱼人·下毒",
-      "tier": "T2",
-      "top4": 0.6453,
-      "win": 0.1952,
-      "avg": 3.63,
-      "sample": 11916,
-      "cards": [
-        {
-          "id": "BG34_140",
-          "name": "飞行专家",
-          "status": "CORE",
-          "role": "mid"
-        },
-        {
-          "id": "BG36_700",
-          "name": "下水道逃生鱼人",
-          "status": "CORE",
-          "role": "mid"
-        },
-        {
-          "id": "BG33_318",
-          "name": "怒胆喷毒鱼人",
-          "status": "CORE",
-          "role": "mid"
-        },
-        {
-          "id": "BG23_318",
-          "name": "莽神火车王",
-          "status": "ADDON",
-          "role": "back"
-        },
-        {
-          "id": "BGS_131",
-          "name": "致命的孢子",
-          "status": "ADDON",
-          "role": "mid"
-        },
-        {
-          "id": "BG31_149",
-          "name": "气泡枪手",
-          "status": "ADDON",
-          "role": "back"
-        },
-        {
-          "id": "BG34_604",
-          "name": "英勇的逆袭者",
-          "status": "ADDON",
-          "role": "mid"
-        }
-      ],
-      "heroes": [
-        "梦魇之王萨维斯",
-        "帕奇维克",
-        "堕落的乔治"
-      ],
-      "difficulty": "Medium",
-      "power": "A"
-    },
-    {
       "key": "undead_butcher",
       "name": "亡灵·屠夫",
       "tier": "T2",
-      "top4": 0.6463,
-      "win": 0.1791,
-      "avg": 3.66,
-      "sample": 34054,
+      "top4": 0.6473,
+      "win": 0.1789,
+      "avg": 3.67,
+      "sample": 36154,
       "cards": [
         {
           "id": "BG32_324",
@@ -1905,9 +1903,9 @@ const STATS = {
         }
       ],
       "heroes": [
-        "德雷克塔尔",
         "塔隆·血魔",
-        "巫妖王"
+        "巫妖王",
+        "伟大的阿卡扎曼扎拉克"
       ],
       "difficulty": "Medium",
       "power": "A"
@@ -1916,10 +1914,10 @@ const STATS = {
       "key": "beast_lobster",
       "name": "野兽·龙虾",
       "tier": "T2",
-      "top4": 0.6011,
-      "win": 0.2231,
+      "top4": 0.6044,
+      "win": 0.2233,
       "avg": 3.76,
-      "sample": 60241,
+      "sample": 66909,
       "cards": [
         {
           "id": "BG36_202",
@@ -1965,9 +1963,9 @@ const STATS = {
         }
       ],
       "heroes": [
+        "霍格船长",
         "塔隆·血魔",
-        "堕落的乔治",
-        "挂机的阿凯"
+        "伊利丹·怒风"
       ],
       "difficulty": "Medium",
       "power": "S"
@@ -1976,10 +1974,10 @@ const STATS = {
       "key": "demon_self_damage",
       "name": "恶魔·自伤",
       "tier": "T2",
-      "top4": 0.6271,
-      "win": 0.1468,
+      "top4": 0.6306,
+      "win": 0.148,
       "avg": 3.76,
-      "sample": 54994,
+      "sample": 60166,
       "cards": [
         {
           "id": "BGS_004",
@@ -2036,10 +2034,10 @@ const STATS = {
       "key": "dragon_spell_power",
       "name": "龙·法强",
       "tier": "T2",
-      "top4": 0.6276,
-      "win": 0.119,
-      "avg": 3.78,
-      "sample": 19666,
+      "top4": 0.6273,
+      "win": 0.1201,
+      "avg": 3.79,
+      "sample": 22486,
       "cards": [
         {
           "id": "BG36_241",
@@ -2085,81 +2083,21 @@ const STATS = {
         }
       ],
       "heroes": [
-        "钟表先生克劳沃斯",
-        "奥拉基尔",
-        "拉卡尼休"
+        "拉卡尼休",
+        "特莱斯塔斯，寄生之魂",
+        "奥拉基尔"
       ],
       "difficulty": "Easy",
-      "power": "B"
-    },
-    {
-      "key": "pirate_discover",
-      "name": "海盗·发现",
-      "tier": "T3",
-      "top4": 0.6084,
-      "win": 0.1626,
-      "avg": 3.79,
-      "sample": 30792,
-      "cards": [
-        {
-          "id": "BG36_344",
-          "name": "掠夺大师钩牙",
-          "status": "CORE",
-          "role": "mid"
-        },
-        {
-          "id": "BG36_523",
-          "name": "上进的逃兵",
-          "status": "CORE",
-          "role": "mid"
-        },
-        {
-          "id": "BG36_521",
-          "name": "铐住的哗变者",
-          "status": "ADDON",
-          "role": "back"
-        },
-        {
-          "id": "BG36_524",
-          "name": "海上勒索师",
-          "status": "ADDON",
-          "role": "mid"
-        },
-        {
-          "id": "BG33_823",
-          "name": "空军上将罗杰斯",
-          "status": "ADDON",
-          "role": "mid"
-        },
-        {
-          "id": "BG26_817",
-          "name": "刀剑收藏家",
-          "status": "ADDON",
-          "role": "mid"
-        },
-        {
-          "id": "BG_LOE_077",
-          "name": "布莱恩·铜须",
-          "status": "ADDON",
-          "role": "back"
-        }
-      ],
-      "heroes": [
-        "扣子",
-        "风暴之王托里姆",
-        "预言者努波顿"
-      ],
-      "difficulty": "Hard",
       "power": "B"
     },
     {
       "key": "elemental_tempest",
       "name": "元素·风暴",
       "tier": "T3",
-      "top4": 0.5643,
-      "win": 0.1352,
-      "avg": 3.8,
-      "sample": 11669,
+      "top4": 0.5733,
+      "win": 0.1336,
+      "avg": 3.79,
+      "sample": 12516,
       "cards": [
         {
           "id": "BG_LOE_077",
@@ -2205,21 +2143,81 @@ const STATS = {
         }
       ],
       "heroes": [
+        "米尔豪斯·法力风暴",
         "钟表先生克劳沃斯",
-        "辛达苟萨",
-        "经理马林"
+        "沙德沃克"
       ],
       "difficulty": "Hard",
       "power": "C"
     },
     {
+      "key": "pirate_discover",
+      "name": "海盗·发现",
+      "tier": "T3",
+      "top4": 0.6104,
+      "win": 0.162,
+      "avg": 3.79,
+      "sample": 32792,
+      "cards": [
+        {
+          "id": "BG36_344",
+          "name": "掠夺大师钩牙",
+          "status": "CORE",
+          "role": "mid"
+        },
+        {
+          "id": "BG36_523",
+          "name": "上进的逃兵",
+          "status": "CORE",
+          "role": "mid"
+        },
+        {
+          "id": "BG36_521",
+          "name": "铐住的哗变者",
+          "status": "ADDON",
+          "role": "back"
+        },
+        {
+          "id": "BG36_524",
+          "name": "海上勒索师",
+          "status": "ADDON",
+          "role": "mid"
+        },
+        {
+          "id": "BG33_823",
+          "name": "空军上将罗杰斯",
+          "status": "ADDON",
+          "role": "mid"
+        },
+        {
+          "id": "BG26_817",
+          "name": "刀剑收藏家",
+          "status": "ADDON",
+          "role": "mid"
+        },
+        {
+          "id": "BG_LOE_077",
+          "name": "布莱恩·铜须",
+          "status": "ADDON",
+          "role": "back"
+        }
+      ],
+      "heroes": [
+        "预言者努波顿",
+        "扣子",
+        "雷诺·杰克逊"
+      ],
+      "difficulty": "Hard",
+      "power": "B"
+    },
+    {
       "key": "beast_beetle",
       "name": "野兽·甲虫",
       "tier": "T3",
-      "top4": 0.6274,
-      "win": 0.1143,
-      "avg": 3.82,
-      "sample": 20694,
+      "top4": 0.6292,
+      "win": 0.1146,
+      "avg": 3.83,
+      "sample": 22472,
       "cards": [
         {
           "id": "BG36_209",
@@ -2266,7 +2264,7 @@ const STATS = {
       ],
       "heroes": [
         "迦拉克隆",
-        "因葛，钢铁颂歌",
+        "恩佐斯",
         "洛，在世传奇"
       ],
       "difficulty": "Medium",
@@ -2276,10 +2274,10 @@ const STATS = {
       "key": "quilboar_gem_spam",
       "name": "野猪人·宝石",
       "tier": "T3",
-      "top4": 0.5939,
-      "win": 0.1668,
-      "avg": 3.86,
-      "sample": 35359,
+      "top4": 0.5983,
+      "win": 0.1698,
+      "avg": 3.85,
+      "sample": 41628,
       "cards": [
         {
           "id": "BG30_121",
@@ -2325,9 +2323,9 @@ const STATS = {
         }
       ],
       "heroes": [
-        "伊利丹·怒风",
+        "范达尔·雷矛",
         "死亡之翼",
-        "扣子"
+        "钟表先生克劳沃斯"
       ],
       "difficulty": "Hard",
       "power": "A"
@@ -2336,10 +2334,10 @@ const STATS = {
       "key": "beast_leviathan",
       "name": "野兽·巨兽",
       "tier": "T3",
-      "top4": 0.5975,
-      "win": 0.0953,
+      "top4": 0.6036,
+      "win": 0.0943,
       "avg": 3.92,
-      "sample": 7173,
+      "sample": 7628,
       "cards": [
         {
           "id": "BG35_602",
@@ -2385,9 +2383,9 @@ const STATS = {
         }
       ],
       "heroes": [
-        "堕落的乔治",
         "恩佐斯",
-        "格雷布"
+        "特莱斯塔斯，寄生之魂",
+        "迦拉克隆"
       ],
       "difficulty": "Medium",
       "power": "A"
@@ -2396,10 +2394,10 @@ const STATS = {
       "key": "dragon_kalecgos",
       "name": "龙·卡雷苟斯",
       "tier": "T3",
-      "top4": 0.6017,
-      "win": 0.1009,
-      "avg": 3.99,
-      "sample": 15529,
+      "top4": 0.6004,
+      "win": 0.0998,
+      "avg": 4.01,
+      "sample": 16298,
       "cards": [
         {
           "id": "BGS_041",
@@ -2445,9 +2443,9 @@ const STATS = {
         }
       ],
       "heroes": [
+        "特莱斯塔斯，寄生之魂",
         "希尔瓦娜斯·风行者",
-        "鼠王",
-        "无限巨龙姆诺兹多"
+        "玛维·影歌"
       ],
       "difficulty": "Easy",
       "power": "C"
@@ -2456,10 +2454,10 @@ const STATS = {
       "key": "pirate_bounty",
       "name": "海盗·悬赏",
       "tier": "T3",
-      "top4": 0.5507,
-      "win": 0.0903,
-      "avg": 4.06,
-      "sample": 6616,
+      "top4": 0.5532,
+      "win": 0.0916,
+      "avg": 4.08,
+      "sample": 7611,
       "cards": [
         {
           "id": "BG33_823",
@@ -2507,7 +2505,7 @@ const STATS = {
       "heroes": [
         "钟表先生克劳沃斯",
         "贸易亲王加里维克斯",
-        "海盗帕奇斯"
+        "扣子"
       ],
       "difficulty": "Hard",
       "power": "B"
@@ -2516,10 +2514,10 @@ const STATS = {
       "key": "mech_glambot",
       "name": "机械·魅力机器人",
       "tier": "T3",
-      "top4": 0.5118,
-      "win": 0.1188,
-      "avg": 4.21,
-      "sample": 12629,
+      "top4": 0.5105,
+      "win": 0.116,
+      "avg": 4.2,
+      "sample": 12804,
       "cards": [
         {
           "id": "BG36_853",
@@ -2565,174 +2563,36 @@ const STATS = {
         }
       ],
       "heroes": [
-        "穆克拉",
-        "德雷克塔尔",
-        "范达尔·雷矛"
+        "亡语者布莱克松",
+        "范达尔·雷矛",
+        "德雷克塔尔"
       ],
       "difficulty": "Medium",
       "power": "A"
     }
   ],
   "heroComps": {
-    "馆长": [
+    "迦拉克隆": [
       {
         "key": "dragon_shield",
         "name": "龙·圣盾",
         "tier": "T0",
-        "avg": 3.11,
-        "sample": 69
+        "avg": 2.84,
+        "sample": 263
       },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.16,
-        "sample": 146
-      },
-      {
-        "key": "murloc_scam",
-        "name": "鱼人·下毒",
-        "tier": "T2",
-        "avg": 3.28,
-        "sample": 69
-      }
-    ],
-    "费林大使": [
       {
         "key": "quilboar_choose_one",
         "name": "野猪人·抉择",
         "tier": "T1",
-        "avg": 2.99,
-        "sample": 234
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.04,
-        "sample": 293
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.12,
-        "sample": 221
-      }
-    ],
-    "风暴之王托里姆": [
-      {
-        "key": "mech_volumizer",
-        "name": "机械·扩音机",
-        "tier": "T0",
-        "avg": 2.85,
-        "sample": 323
-      },
-      {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 2.87,
-        "sample": 273
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 2.94,
-        "sample": 258
-      }
-    ],
-    "经理马林": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.89,
-        "sample": 257
-      },
-      {
-        "key": "elemental_cycle",
-        "name": "元素·倒转",
-        "tier": "T1",
-        "avg": 2.93,
-        "sample": 40
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 2.95,
-        "sample": 286
-      }
-    ],
-    "森林之王塞纳留斯": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 2.99,
-        "sample": 259
-      },
-      {
-        "key": "elemental_cycle",
-        "name": "元素·倒转",
-        "tier": "T1",
-        "avg": 3.11,
-        "sample": 37
-      },
-      {
-        "key": "mech_volumizer",
-        "name": "机械·扩音机",
-        "tier": "T0",
         "avg": 3.13,
-        "sample": 262
-      }
-    ],
-    "奥拉基尔": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.85,
-        "sample": 232
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 2.98,
-        "sample": 203
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.11,
-        "sample": 166
-      }
-    ],
-    "洛，在世传奇": [
-      {
-        "key": "quilboar_choose_one",
-        "name": "野猪人·抉择",
-        "tier": "T1",
-        "avg": 3.04,
-        "sample": 188
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.19,
         "sample": 233
       },
       {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
         "tier": "T0",
-        "avg": 3.2,
-        "sample": 212
+        "avg": 3.14,
+        "sample": 321
       }
     ],
     "摇滚教父沃恩": [
@@ -2740,68 +2600,528 @@ const STATS = {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
         "tier": "T0",
-        "avg": 3,
-        "sample": 182
+        "avg": 2.87,
+        "sample": 218
       },
       {
-        "key": "mech_apm",
-        "name": "机械·APM",
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 3.22,
+        "sample": 157
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.25,
+        "sample": 160
+      }
+    ],
+    "帕奇维克": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.93,
+        "sample": 229
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
         "tier": "T0",
         "avg": 3.16,
-        "sample": 137
+        "sample": 280
       },
       {
         "key": "aberration_discard",
         "name": "畸变怪·弃牌",
         "tier": "T0",
-        "avg": 3.22,
-        "sample": 181
+        "avg": 3.17,
+        "sample": 253
       }
     ],
-    "钟表先生克劳沃斯": [
+    "巫妖王": [
+      {
+        "key": "undead_eternal_knight",
+        "name": "亡灵·永恒骑士",
+        "tier": "T2",
+        "avg": 2.93,
+        "sample": 190
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.11,
+        "sample": 164
+      },
+      {
+        "key": "undead_apm",
+        "name": "亡灵·APM",
+        "tier": "T2",
+        "avg": 3.15,
+        "sample": 50
+      }
+    ],
+    "挂机的阿凯": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.96,
+        "sample": 263
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3,
+        "sample": 306
+      },
       {
         "key": "demon_boost_shop",
         "name": "恶魔·养酒馆",
         "tier": "T1",
-        "avg": 2.74,
-        "sample": 255
+        "avg": 3.09,
+        "sample": 324
+      }
+    ],
+    "经理马林": [
+      {
+        "key": "elemental_cycle",
+        "name": "元素·倒转",
+        "tier": "T1",
+        "avg": 2.73,
+        "sample": 32
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 2.9,
+        "sample": 311
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.93,
+        "sample": 290
+      }
+    ],
+    "了不起的杰弗里斯": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.05,
+        "sample": 153
+      },
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 3.08,
+        "sample": 140
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.19,
+        "sample": 122
+      }
+    ],
+    "阿莱克丝塔萨": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.77,
+        "sample": 348
       },
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
         "tier": "T0",
         "avg": 2.84,
-        "sample": 231
+        "sample": 71
       },
+      {
+        "key": "dragon_spell_power",
+        "name": "龙·法强",
+        "tier": "T2",
+        "avg": 3.71,
+        "sample": 313
+      }
+    ],
+    "劫匪之王托瓦格尔": [
       {
         "key": "aberration_discard",
         "name": "畸变怪·弃牌",
         "tier": "T0",
-        "avg": 2.86,
-        "sample": 228
-      }
-    ],
-    "阮大师": [
-      {
-        "key": "elemental_cycle",
-        "name": "元素·倒转",
-        "tier": "T1",
-        "avg": 3.04,
-        "sample": 34
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.05,
-        "sample": 212
+        "avg": 3.26,
+        "sample": 129
       },
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
         "tier": "T0",
+        "avg": 3.31,
+        "sample": 153
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.36,
+        "sample": 83
+      }
+    ],
+    "吉恩，狼人国王": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.98,
+        "sample": 230
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.06,
+        "sample": 265
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.18,
+        "sample": 281
+      }
+    ],
+    "伊莉斯·逐星": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.07,
+        "sample": 105
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.1,
+        "sample": 156
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.12,
+        "sample": 134
+      }
+    ],
+    "沃金": [
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.01,
+        "sample": 155
+      },
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.06,
+        "sample": 134
+      },
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 3.1,
+        "sample": 199
+      }
+    ],
+    "扣子": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.9,
+        "sample": 264
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.01,
+        "sample": 311
+      },
+      {
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
+        "tier": "T0",
+        "avg": 3.04,
+        "sample": 343
+      }
+    ],
+    "无限巨龙姆诺兹多": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.97,
+        "sample": 199
+      },
+      {
+        "key": "undead_apm",
+        "name": "亡灵·APM",
+        "tier": "T2",
+        "avg": 3.06,
+        "sample": 34
+      },
+      {
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
+        "tier": "T0",
+        "avg": 3.11,
+        "sample": 248
+      }
+    ],
+    "希拉斯·暗月": [
+      {
+        "key": "undead_apm",
+        "name": "亡灵·APM",
+        "tier": "T2",
+        "avg": 3,
+        "sample": 42
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.22,
+        "sample": 201
+      },
+      {
+        "key": "murloc_scam",
+        "name": "鱼人·下毒",
+        "tier": "T1",
         "avg": 3.27,
-        "sample": 274
+        "sample": 84
+      }
+    ],
+    "大主教奥萨尔": [
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.15,
+        "sample": 177
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.19,
+        "sample": 145
+      },
+      {
+        "key": "elemental_azerite",
+        "name": "元素·艾泽里特",
+        "tier": "T1",
+        "avg": 3.23,
+        "sample": 159
+      }
+    ],
+    "芬利·莫格顿爵士": [
+      {
+        "key": "murloc_end_of_turn",
+        "name": "鱼人·回合结束",
+        "tier": "T1",
+        "avg": 2.76,
+        "sample": 42
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.08,
+        "sample": 285
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.1,
+        "sample": 236
+      }
+    ],
+    "古夫·符文图腾": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.19,
+        "sample": 171
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.29,
+        "sample": 131
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.3,
+        "sample": 153
+      }
+    ],
+    "伊瑟拉": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.1,
+        "sample": 332
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.77,
+        "sample": 59
+      },
+      {
+        "key": "dragon_spell_power",
+        "name": "龙·法强",
+        "tier": "T2",
+        "avg": 3.87,
+        "sample": 313
+      }
+    ],
+    "因葛，钢铁颂歌": [
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.23,
+        "sample": 174
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.26,
+        "sample": 200
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.27,
+        "sample": 172
+      }
+    ],
+    "厨师曲奇": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3,
+        "sample": 130
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.05,
+        "sample": 188
+      },
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.17,
+        "sample": 130
+      }
+    ],
+    "范达尔·雷矛": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 2.74,
+        "sample": 221
+      },
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 2.81,
+        "sample": 256
+      },
+      {
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
+        "tier": "T0",
+        "avg": 2.83,
+        "sample": 286
+      }
+    ],
+    "瓦托格尔女王": [
+      {
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 3.01,
+        "sample": 98
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.15,
+        "sample": 123
+      },
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 3.29,
+        "sample": 153
+      }
+    ],
+    "洛，在世传奇": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.19,
+        "sample": 258
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.2,
+        "sample": 228
+      },
+      {
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 3.21,
+        "sample": 199
       }
     ],
     "尤格-萨隆": [
@@ -2810,182 +3130,67 @@ const STATS = {
         "name": "鱼人·回合结束",
         "tier": "T1",
         "avg": 2.86,
-        "sample": 32
+        "sample": 43
       },
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
         "tier": "T0",
         "avg": 2.92,
-        "sample": 237
+        "sample": 250
       },
       {
         "key": "dragon_shield",
         "name": "龙·圣盾",
         "tier": "T0",
-        "avg": 3.02,
-        "sample": 174
+        "avg": 3.06,
+        "sample": 195
       }
     ],
-    "凯瑞尔·罗姆": [
+    "亚煞极": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.21,
+        "sample": 202
+      },
       {
         "key": "quilboar_choose_one",
         "name": "野猪人·抉择",
         "tier": "T1",
-        "avg": 3.01,
-        "sample": 184
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.04,
-        "sample": 241
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.06,
-        "sample": 237
-      }
-    ],
-    "伊瑟拉": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.11,
-        "sample": 303
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.71,
-        "sample": 59
-      },
-      {
-        "key": "dragon_kalecgos",
-        "name": "龙·卡雷苟斯",
-        "tier": "T3",
-        "avg": 3.89,
-        "sample": 268
-      }
-    ],
-    "特莱斯塔斯，寄生之魂": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.57,
-        "sample": 274
-      },
-      {
-        "key": "mech_volumizer",
-        "name": "机械·扩音机",
-        "tier": "T0",
-        "avg": 2.87,
-        "sample": 313
+        "avg": 3.24,
+        "sample": 150
       },
       {
         "key": "aberration_discard",
         "name": "畸变怪·弃牌",
         "tier": "T0",
-        "avg": 2.99,
-        "sample": 298
+        "avg": 3.25,
+        "sample": 195
       }
     ],
-    "钩牙船长": [
+    "森林之王塞纳留斯": [
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
         "tier": "T0",
-        "avg": 3.16,
-        "sample": 177
+        "avg": 2.91,
+        "sample": 282
+      },
+      {
+        "key": "murloc_end_of_turn",
+        "name": "鱼人·回合结束",
+        "tier": "T1",
+        "avg": 3.05,
+        "sample": 40
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
         "tier": "T0",
-        "avg": 3.19,
-        "sample": 97
-      },
-      {
-        "key": "quilboar_choose_one",
-        "name": "野猪人·抉择",
-        "tier": "T1",
-        "avg": 3.29,
-        "sample": 124
-      }
-    ],
-    "提克特斯": [
-      {
-        "key": "murloc_end_of_turn",
-        "name": "鱼人·回合结束",
-        "tier": "T1",
-        "avg": 3,
-        "sample": 33
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.07,
-        "sample": 172
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.15,
-        "sample": 214
-      }
-    ],
-    "玛里苟斯": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.23,
-        "sample": 145
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.29,
-        "sample": 143
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.4,
-        "sample": 125
-      }
-    ],
-    "阿莱克丝塔萨": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.76,
-        "sample": 314
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 2.89,
-        "sample": 62
-      },
-      {
-        "key": "dragon_spell_power",
-        "name": "龙·法强",
-        "tier": "T2",
-        "avg": 3.74,
-        "sample": 274
+        "avg": 3.14,
+        "sample": 229
       }
     ],
     "厄祖玛特": [
@@ -2993,275 +3198,91 @@ const STATS = {
         "key": "aberration_discard",
         "name": "畸变怪·弃牌",
         "tier": "T0",
-        "avg": 3.18,
-        "sample": 81
+        "avg": 2.96,
+        "sample": 78
       },
       {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.23,
-        "sample": 67
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.07,
+        "sample": 76
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
         "tier": "T0",
-        "avg": 3.33,
-        "sample": 42
+        "avg": 3.25,
+        "sample": 54
       }
     ],
-    "帕奇维克": [
+    "特莱斯塔斯，寄生之魂": [
       {
         "key": "dragon_shield",
         "name": "龙·圣盾",
         "tier": "T0",
-        "avg": 2.99,
-        "sample": 203
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.19,
-        "sample": 246
-      },
-      {
-        "key": "murloc_scam",
-        "name": "鱼人·下毒",
-        "tier": "T2",
-        "avg": 3.19,
-        "sample": 142
-      }
-    ],
-    "无限巨龙姆诺兹多": [
-      {
-        "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
-        "avg": 2.86,
-        "sample": 33
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.98,
-        "sample": 167
+        "avg": 2.65,
+        "sample": 305
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
         "tier": "T0",
-        "avg": 3.11,
-        "sample": 230
-      }
-    ],
-    "时光扭曲者克罗米": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 2.99,
-        "sample": 175
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.22,
-        "sample": 113
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.29,
-        "sample": 160
-      }
-    ],
-    "林地守护者欧穆": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.06,
-        "sample": 189
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.16,
-        "sample": 144
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.23,
-        "sample": 202
-      }
-    ],
-    "梦魇之王萨维斯": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.76,
-        "sample": 272
+        "avg": 2.8,
+        "sample": 340
       },
       {
         "key": "murloc_end_of_turn",
         "name": "鱼人·回合结束",
         "tier": "T1",
-        "avg": 2.97,
-        "sample": 58
-      },
-      {
-        "key": "quilboar_choose_one",
-        "name": "野猪人·抉择",
-        "tier": "T1",
-        "avg": 2.97,
-        "sample": 246
+        "avg": 3.02,
+        "sample": 128
       }
     ],
-    "预言者努波顿": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 2.89,
-        "sample": 159
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3,
-        "sample": 154
-      },
-      {
-        "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
-        "avg": 3.09,
-        "sample": 33
-      }
-    ],
-    "布鲁坎": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 2.92,
-        "sample": 104
-      },
+    "阮大师": [
       {
         "key": "dragon_shield",
         "name": "龙·圣盾",
         "tier": "T0",
-        "avg": 2.94,
-        "sample": 144
+        "avg": 3.01,
+        "sample": 241
       },
-      {
-        "key": "quilboar_felboar_spam",
-        "name": "野猪人·邪能猪",
-        "tier": "T1",
-        "avg": 3.18,
-        "sample": 80
-      }
-    ],
-    "狂风之翼": [
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
         "tier": "T0",
-        "avg": 2.92,
-        "sample": 197
+        "avg": 3.2,
+        "sample": 303
       },
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.25,
+        "sample": 234
+      }
+    ],
+    "拉卡尼休": [
       {
         "key": "dragon_shield",
         "name": "龙·圣盾",
         "tier": "T0",
-        "avg": 2.97,
-        "sample": 119
+        "avg": 2.73,
+        "sample": 206
       },
       {
         "key": "aberration_discard",
         "name": "畸变怪·弃牌",
         "tier": "T0",
-        "avg": 3.06,
-        "sample": 170
-      }
-    ],
-    "芬利·莫格顿爵士": [
-      {
-        "key": "murloc_end_of_turn",
-        "name": "鱼人·回合结束",
-        "tier": "T1",
-        "avg": 2.86,
-        "sample": 35
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.93,
-        "sample": 213
+        "avg": 2.75,
+        "sample": 262
       },
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
         "tier": "T0",
-        "avg": 3.06,
-        "sample": 266
-      }
-    ],
-    "德纳修斯大帝": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.11,
-        "sample": 279
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.18,
-        "sample": 249
-      },
-      {
-        "key": "murloc_end_of_turn",
-        "name": "鱼人·回合结束",
-        "tier": "T1",
-        "avg": 3.21,
-        "sample": 78
-      }
-    ],
-    "萨鲁法尔大王": [
-      {
-        "key": "mech_volumizer",
-        "name": "机械·扩音机",
-        "tier": "T0",
-        "avg": 3.18,
-        "sample": 197
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.22,
-        "sample": 93
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.24,
-        "sample": 224
+        "avg": 2.87,
+        "sample": 211
       }
     ],
     "克隆大师泽里克": [
@@ -3269,68 +3290,45 @@ const STATS = {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
         "tier": "T0",
-        "avg": 3.16,
-        "sample": 217
+        "avg": 3.09,
+        "sample": 230
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.2,
+        "sample": 183
       },
       {
         "key": "aberration_discard",
         "name": "畸变怪·弃牌",
         "tier": "T0",
-        "avg": 3.27,
+        "avg": 3.3,
         "sample": 190
-      },
+      }
+    ],
+    "风暴之王托里姆": [
       {
         "key": "mech_apm",
         "name": "机械·APM",
         "tier": "T0",
-        "avg": 3.35,
-        "sample": 175
-      }
-    ],
-    "亚煞极": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.26,
-        "sample": 171
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.3,
-        "sample": 193
+        "avg": 2.85,
+        "sample": 318
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
         "tier": "T0",
-        "avg": 3.34,
-        "sample": 203
-      }
-    ],
-    "吞噬者穆坦努斯": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.13,
-        "sample": 188
+        "avg": 2.87,
+        "sample": 353
       },
       {
         "key": "aberration_discard",
         "name": "畸变怪·弃牌",
         "tier": "T0",
-        "avg": 3.21,
-        "sample": 197
-      },
-      {
-        "key": "elemental_cycle",
-        "name": "元素·倒转",
-        "tier": "T1",
-        "avg": 3.21,
-        "sample": 30
+        "avg": 2.92,
+        "sample": 276
       }
     ],
     "死亡之翼": [
@@ -3338,965 +3336,45 @@ const STATS = {
         "key": "dragon_shield",
         "name": "龙·圣盾",
         "tier": "T0",
-        "avg": 2.94,
-        "sample": 148
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.11,
-        "sample": 94
-      },
-      {
-        "key": "mech_volumizer",
-        "name": "机械·扩音机",
-        "tier": "T0",
-        "avg": 3.12,
-        "sample": 171
-      }
-    ],
-    "米罗克": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.87,
-        "sample": 176
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.04,
-        "sample": 226
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.06,
-        "sample": 197
-      }
-    ],
-    "瓦尔登·晨拥": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.99,
-        "sample": 122
-      },
-      {
-        "key": "quilboar_choose_one",
-        "name": "野猪人·抉择",
-        "tier": "T1",
-        "avg": 3.19,
-        "sample": 144
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.2,
-        "sample": 161
-      }
-    ],
-    "比格沃斯先生": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
         "avg": 2.96,
-        "sample": 132
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.14,
-        "sample": 156
-      },
-      {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 3.2,
-        "sample": 146
-      }
-    ],
-    "扣子": [
-      {
-        "key": "murloc_end_of_turn",
-        "name": "鱼人·回合结束",
-        "tier": "T1",
-        "avg": 2.96,
-        "sample": 43
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.99,
-        "sample": 235
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.01,
-        "sample": 288
-      }
-    ],
-    "大主教奥萨尔": [
-      {
-        "key": "elemental_azerite",
-        "name": "元素·艾泽里特",
-        "tier": "T1",
-        "avg": 3.08,
-        "sample": 135
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.15,
-        "sample": 116
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.26,
         "sample": 155
-      }
-    ],
-    "贸易亲王加里维克斯": [
-      {
-        "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
-        "avg": 2.94,
-        "sample": 31
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 2.99,
-        "sample": 155
-      },
-      {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 3.15,
-        "sample": 115
-      }
-    ],
-    "巴罗夫领主": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3,
-        "sample": 118
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.14,
-        "sample": 147
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.26,
-        "sample": 186
-      }
-    ],
-    "巫妖王": [
-      {
-        "key": "undead_eternal_knight",
-        "name": "亡灵·永恒骑士",
-        "tier": "T2",
-        "avg": 2.91,
-        "sample": 160
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.04,
-        "sample": 92
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.08,
-        "sample": 140
-      }
-    ],
-    "舞者达瑞尔": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.19,
-        "sample": 154
-      },
-      {
-        "key": "mech_volumizer",
-        "name": "机械·扩音机",
-        "tier": "T0",
-        "avg": 3.37,
-        "sample": 237
-      },
-      {
-        "key": "undead_eternal_knight",
-        "name": "亡灵·永恒骑士",
-        "tier": "T2",
-        "avg": 3.38,
-        "sample": 71
-      }
-    ],
-    "洛卡拉": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.67,
-        "sample": 102
-      },
-      {
-        "key": "undead_eternal_knight",
-        "name": "亡灵·永恒骑士",
-        "tier": "T2",
-        "avg": 3.15,
-        "sample": 59
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.25,
-        "sample": 63
-      }
-    ],
-    "穆克拉": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.16,
-        "sample": 136
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.17,
-        "sample": 166
-      },
-      {
-        "key": "murloc_scam",
-        "name": "鱼人·下毒",
-        "tier": "T2",
-        "avg": 3.3,
-        "sample": 60
-      }
-    ],
-    "挂机的阿凯": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 2.95,
-        "sample": 279
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.98,
-        "sample": 219
-      },
-      {
-        "key": "elemental_cycle",
-        "name": "元素·倒转",
-        "tier": "T1",
-        "avg": 3.03,
-        "sample": 31
-      }
-    ],
-    "恐龙大师布莱恩": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.09,
-        "sample": 171
-      },
-      {
-        "key": "elemental_cycle",
-        "name": "元素·倒转",
-        "tier": "T1",
-        "avg": 3.23,
-        "sample": 39
-      },
-      {
-        "key": "murloc_end_of_turn",
-        "name": "鱼人·回合结束",
-        "tier": "T1",
-        "avg": 3.33,
-        "sample": 125
-      }
-    ],
-    "范达尔·雷矛": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 2.52,
-        "sample": 201
       },
       {
         "key": "elemental_azerite",
         "name": "元素·艾泽里特",
         "tier": "T1",
-        "avg": 2.82,
-        "sample": 167
-      },
-      {
-        "key": "mech_volumizer",
-        "name": "机械·扩音机",
-        "tier": "T0",
-        "avg": 2.86,
-        "sample": 265
-      }
-    ],
-    "永恒者托奇": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
         "avg": 3.01,
-        "sample": 156
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.03,
-        "sample": 188
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.26,
-        "sample": 219
-      }
-    ],
-    "凯尔萨斯·逐日者": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.1,
-        "sample": 107
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.14,
-        "sample": 154
-      },
-      {
-        "key": "undead_eternal_knight",
-        "name": "亡灵·永恒骑士",
-        "tier": "T2",
-        "avg": 3.16,
-        "sample": 61
-      }
-    ],
-    "斯卡布斯·刀油": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.2,
-        "sample": 192
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.28,
-        "sample": 203
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.36,
-        "sample": 208
-      }
-    ],
-    "泰瑟兰·血望者": [
-      {
-        "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
-        "avg": 3.06,
-        "sample": 32
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.1,
-        "sample": 147
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.21,
-        "sample": 103
-      }
-    ],
-    "艾德温·范克里夫": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.06,
-        "sample": 43
-      },
-      {
-        "key": "dragon_spell_power",
-        "name": "龙·法强",
-        "tier": "T2",
-        "avg": 3.06,
-        "sample": 39
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.22,
-        "sample": 32
-      }
-    ],
-    "荷利戴医生": [
-      {
-        "key": "quilboar_choose_one",
-        "name": "野猪人·抉择",
-        "tier": "T1",
-        "avg": 3.15,
-        "sample": 104
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.21,
-        "sample": 118
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.22,
-        "sample": 161
-      }
-    ],
-    "鼠王": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.06,
-        "sample": 170
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.23,
-        "sample": 160
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.27,
-        "sample": 128
-      }
-    ],
-    "疯狂金字塔": [
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.1,
-        "sample": 104
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.23,
-        "sample": 77
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.28,
-        "sample": 58
-      }
-    ],
-    "拉卡尼休": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 2.78,
-        "sample": 244
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 2.8,
-        "sample": 186
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.87,
-        "sample": 187
-      }
-    ],
-    "泽瑞拉": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3,
-        "sample": 121
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.26,
-        "sample": 142
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.29,
-        "sample": 167
-      }
-    ],
-    "塔维什·雷矛": [
-      {
-        "key": "quilboar_choose_one",
-        "name": "野猪人·抉择",
-        "tier": "T1",
-        "avg": 3.2,
-        "sample": 152
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.21,
-        "sample": 178
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.3,
-        "sample": 185
-      }
-    ],
-    "苔丝·格雷迈恩": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.17,
-        "sample": 186
-      },
-      {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 3.28,
-        "sample": 131
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.58,
-        "sample": 178
-      }
-    ],
-    "希拉斯·暗月": [
-      {
-        "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
-        "avg": 2.9,
-        "sample": 39
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.22,
-        "sample": 177
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.34,
-        "sample": 149
-      }
-    ],
-    "沃金": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 2.85,
-        "sample": 139
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.09,
-        "sample": 170
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.14,
-        "sample": 156
-      }
-    ],
-    "迦拉克隆": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.92,
-        "sample": 235
-      },
-      {
-        "key": "quilboar_choose_one",
-        "name": "野猪人·抉择",
-        "tier": "T1",
-        "avg": 3.01,
-        "sample": 222
+        "sample": 97
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
         "tier": "T0",
         "avg": 3.18,
-        "sample": 293
-      }
-    ],
-    "雷诺·杰克逊": [
-      {
-        "key": "murloc_end_of_turn",
-        "name": "鱼人·回合结束",
-        "tier": "T1",
-        "avg": 3.01,
-        "sample": 47
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.05,
-        "sample": 193
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.11,
-        "sample": 253
-      }
-    ],
-    "米尔豪斯·法力风暴": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.1,
-        "sample": 82
-      },
-      {
-        "key": "murloc_scam",
-        "name": "鱼人·下毒",
-        "tier": "T2",
-        "avg": 3.27,
-        "sample": 48
-      },
-      {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 3.29,
-        "sample": 69
-      }
-    ],
-    "德雷克塔尔": [
-      {
-        "key": "mech_volumizer",
-        "name": "机械·扩音机",
-        "tier": "T0",
-        "avg": 2.82,
-        "sample": 260
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 2.87,
-        "sample": 179
-      },
-      {
-        "key": "undead_eternal_knight",
-        "name": "亡灵·永恒骑士",
-        "tier": "T2",
-        "avg": 2.87,
-        "sample": 103
-      }
-    ],
-    "劫匪之王托瓦格尔": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.1,
-        "sample": 78
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.24,
-        "sample": 119
-      },
-      {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 3.25,
-        "sample": 92
-      }
-    ],
-    "因葛，钢铁颂歌": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.01,
-        "sample": 149
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.19,
-        "sample": 159
-      },
-      {
-        "key": "quilboar_choose_one",
-        "name": "野猪人·抉择",
-        "tier": "T1",
-        "avg": 3.2,
-        "sample": 134
-      }
-    ],
-    "希尔瓦娜斯·风行者": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.01,
-        "sample": 172
-      },
-      {
-        "key": "murloc_end_of_turn",
-        "name": "鱼人·回合结束",
-        "tier": "T1",
-        "avg": 3.05,
-        "sample": 31
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.1,
         "sample": 203
       }
     ],
-    "吉恩，狼人国王": [
+    "钟表先生克劳沃斯": [
       {
         "key": "demon_boost_shop",
         "name": "恶魔·养酒馆",
         "tier": "T1",
-        "avg": 3.05,
-        "sample": 259
-      },
-      {
-        "key": "elemental_cycle",
-        "name": "元素·倒转",
-        "tier": "T1",
-        "avg": 3.07,
-        "sample": 35
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.11,
-        "sample": 202
-      }
-    ],
-    "伟大的阿卡扎曼扎拉克": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.62,
-        "sample": 136
-      },
-      {
-        "key": "undead_eternal_knight",
-        "name": "亡灵·永恒骑士",
-        "tier": "T2",
-        "avg": 3.06,
-        "sample": 139
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.1,
-        "sample": 209
-      }
-    ],
-    "尤朵拉船长": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.05,
-        "sample": 192
+        "avg": 2.71,
+        "sample": 284
       },
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
         "tier": "T0",
-        "avg": 3.12,
-        "sample": 246
+        "avg": 2.8,
+        "sample": 248
       },
       {
         "key": "aberration_discard",
         "name": "畸变怪·弃牌",
         "tier": "T0",
-        "avg": 3.15,
-        "sample": 219
-      }
-    ],
-    "强化机器人": [
-      {
-        "key": "murloc_end_of_turn",
-        "name": "鱼人·回合结束",
-        "tier": "T1",
-        "avg": 2.86,
-        "sample": 32
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.07,
-        "sample": 134
-      },
-      {
-        "key": "murloc_scam",
-        "name": "鱼人·下毒",
-        "tier": "T2",
-        "avg": 3.23,
-        "sample": 204
-      }
-    ],
-    "伊莉斯·逐星": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.01,
-        "sample": 96
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.04,
-        "sample": 126
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.28,
-        "sample": 156
-      }
-    ],
-    "辛达苟萨": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.26,
-        "sample": 119
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.29,
-        "sample": 91
-      },
-      {
-        "key": "elemental_tempest",
-        "name": "元素·风暴",
-        "tier": "T3",
-        "avg": 3.38,
-        "sample": 68
+        "avg": 2.84,
+        "sample": 244
       }
     ],
     "摩洛克·福尔摩斯": [
@@ -4304,22 +3382,206 @@ const STATS = {
         "key": "aberration_discard",
         "name": "畸变怪·弃牌",
         "tier": "T0",
-        "avg": 3.12,
-        "sample": 172
-      },
-      {
-        "key": "elemental_azerite",
-        "name": "元素·艾泽里特",
-        "tier": "T1",
-        "avg": 3.19,
-        "sample": 165
+        "avg": 3.05,
+        "sample": 196
       },
       {
         "key": "dragon_shield",
         "name": "龙·圣盾",
         "tier": "T0",
-        "avg": 3.25,
-        "sample": 141
+        "avg": 3.19,
+        "sample": 161
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.3,
+        "sample": 227
+      }
+    ],
+    "玛里苟斯": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3,
+        "sample": 126
+      },
+      {
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 3.27,
+        "sample": 117
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.29,
+        "sample": 143
+      }
+    ],
+    "梦魇之王萨维斯": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.9,
+        "sample": 290
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 2.93,
+        "sample": 315
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 2.94,
+        "sample": 314
+      }
+    ],
+    "尤朵拉船长": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.97,
+        "sample": 199
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.03,
+        "sample": 275
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.17,
+        "sample": 242
+      }
+    ],
+    "德纳修斯大帝": [
+      {
+        "key": "murloc_end_of_turn",
+        "name": "鱼人·回合结束",
+        "tier": "T1",
+        "avg": 3.08,
+        "sample": 92
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.17,
+        "sample": 308
+      },
+      {
+        "key": "elemental_azerite",
+        "name": "元素·艾泽里特",
+        "tier": "T1",
+        "avg": 3.18,
+        "sample": 255
+      }
+    ],
+    "奥拉基尔": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.72,
+        "sample": 243
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 2.89,
+        "sample": 228
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.03,
+        "sample": 197
+      }
+    ],
+    "鼠王": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 2.99,
+        "sample": 191
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.15,
+        "sample": 183
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.29,
+        "sample": 133
+      }
+    ],
+    "堕落的乔治": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.96,
+        "sample": 222
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.05,
+        "sample": 172
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.17,
+        "sample": 176
+      }
+    ],
+    "狂风之翼": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 2.86,
+        "sample": 225
+      },
+      {
+        "key": "murloc_end_of_turn",
+        "name": "鱼人·回合结束",
+        "tier": "T1",
+        "avg": 2.86,
+        "sample": 35
+      },
+      {
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 3,
+        "sample": 179
       }
     ],
     "天空上尉库拉格": [
@@ -4328,21 +3590,159 @@ const STATS = {
         "name": "中立·喝茶",
         "tier": "T0",
         "avg": 3.04,
-        "sample": 204
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.15,
-        "sample": 130
+        "sample": 219
       },
       {
         "key": "undead_eternal_knight",
         "name": "亡灵·永恒骑士",
         "tier": "T2",
-        "avg": 3.2,
-        "sample": 83
+        "avg": 3.24,
+        "sample": 89
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.27,
+        "sample": 152
+      }
+    ],
+    "永恒者托奇": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.9,
+        "sample": 182
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.16,
+        "sample": 206
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.28,
+        "sample": 232
+      }
+    ],
+    "凯瑞尔·罗姆": [
+      {
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 2.97,
+        "sample": 198
+      },
+      {
+        "key": "murloc_scam",
+        "name": "鱼人·下毒",
+        "tier": "T1",
+        "avg": 2.99,
+        "sample": 112
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.08,
+        "sample": 264
+      }
+    ],
+    "雷诺·杰克逊": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.94,
+        "sample": 218
+      },
+      {
+        "key": "murloc_end_of_turn",
+        "name": "鱼人·回合结束",
+        "tier": "T1",
+        "avg": 3.01,
+        "sample": 54
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.12,
+        "sample": 282
+      }
+    ],
+    "伟大的阿卡扎曼扎拉克": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.74,
+        "sample": 140
+      },
+      {
+        "key": "murloc_scam",
+        "name": "鱼人·下毒",
+        "tier": "T1",
+        "avg": 3.1,
+        "sample": 117
+      },
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 3.16,
+        "sample": 230
+      }
+    ],
+    "德雷克塔尔": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 2.79,
+        "sample": 198
+      },
+      {
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
+        "tier": "T0",
+        "avg": 2.82,
+        "sample": 290
+      },
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 2.88,
+        "sample": 179
+      }
+    ],
+    "希尔瓦娜斯·风行者": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.01,
+        "sample": 201
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.09,
+        "sample": 148
+      },
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 3.11,
+        "sample": 230
       }
     ],
     "蛇眼": [
@@ -4350,344 +3750,22 @@ const STATS = {
         "key": "dragon_shield",
         "name": "龙·圣盾",
         "tier": "T0",
-        "avg": 3,
-        "sample": 189
+        "avg": 2.92,
+        "sample": 210
       },
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
         "tier": "T0",
-        "avg": 3.06,
-        "sample": 233
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.27,
-        "sample": 213
-      }
-    ],
-    "厨师曲奇": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.9,
-        "sample": 116
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.13,
-        "sample": 170
-      },
-      {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 3.17,
-        "sample": 116
-      }
-    ],
-    "诺兹多姆": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.11,
-        "sample": 115
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.14,
-        "sample": 111
+        "avg": 3.07,
+        "sample": 243
       },
       {
         "key": "quilboar_choose_one",
         "name": "野猪人·抉择",
         "tier": "T1",
-        "avg": 3.14,
-        "sample": 100
-      }
-    ],
-    "古夫·符文图腾": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.16,
-        "sample": 120
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.24,
-        "sample": 162
-      },
-      {
-        "key": "elemental_azerite",
-        "name": "元素·艾泽里特",
-        "tier": "T1",
-        "avg": 3.25,
-        "sample": 129
-      }
-    ],
-    "玛维·影歌": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.12,
-        "sample": 110
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.2,
-        "sample": 76
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.21,
-        "sample": 118
-      }
-    ],
-    "堕落的乔治": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.83,
-        "sample": 200
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.15,
-        "sample": 173
-      },
-      {
-        "key": "murloc_scam",
-        "name": "鱼人·下毒",
-        "tier": "T2",
-        "avg": 3.21,
-        "sample": 140
-      }
-    ],
-    "沙德沃克": [
-      {
-        "key": "murloc_end_of_turn",
-        "name": "鱼人·回合结束",
-        "tier": "T1",
-        "avg": 2.94,
-        "sample": 69
-      },
-      {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 3.11,
-        "sample": 155
-      },
-      {
-        "key": "elemental_cycle",
-        "name": "元素·倒转",
-        "tier": "T1",
-        "avg": 3.11,
-        "sample": 40
-      }
-    ],
-    "了不起的杰弗里斯": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 2.99,
-        "sample": 116
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.02,
-        "sample": 133
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.17,
-        "sample": 124
-      }
-    ],
-    "炎魔之王拉格纳罗斯": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.03,
-        "sample": 62
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.25,
-        "sample": 71
-      },
-      {
-        "key": "dragon_spell_power",
-        "name": "龙·法强",
-        "tier": "T2",
-        "avg": 3.55,
-        "sample": 39
-      }
-    ],
-    "阿兰娜·逐星": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 2.99,
-        "sample": 136
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
         "avg": 3.28,
-        "sample": 130
-      },
-      {
-        "key": "elemental_azerite",
-        "name": "元素·艾泽里特",
-        "tier": "T1",
-        "avg": 3.34,
-        "sample": 114
-      }
-    ],
-    "詹迪斯·巴罗夫": [
-      {
-        "key": "quilboar_choose_one",
-        "name": "野猪人·抉择",
-        "tier": "T1",
-        "avg": 2.81,
-        "sample": 62
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.12,
-        "sample": 76
-      },
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.33,
-        "sample": 42
-      }
-    ],
-    "库尔特鲁斯·陨烬": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.14,
-        "sample": 59
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.29,
-        "sample": 83
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.3,
-        "sample": 82
-      }
-    ],
-    "至尊盗王拉法姆": [
-      {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 3.3,
-        "sample": 45
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.32,
-        "sample": 101
-      },
-      {
-        "key": "murloc_scam",
-        "name": "鱼人·下毒",
-        "tier": "T2",
-        "avg": 3.54,
-        "sample": 41
-      }
-    ],
-    "克苏恩": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.19,
-        "sample": 100
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.25,
-        "sample": 49
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.26,
-        "sample": 60
-      }
-    ],
-    "瓦托格尔女王": [
-      {
-        "key": "dragon_shield",
-        "name": "龙·圣盾",
-        "tier": "T0",
-        "avg": 3.13,
-        "sample": 110
-      },
-      {
-        "key": "quilboar_choose_one",
-        "name": "野猪人·抉择",
-        "tier": "T1",
-        "avg": 3.16,
-        "sample": 95
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.34,
-        "sample": 240
+        "sample": 194
       }
     ],
     "奥妮克希亚": [
@@ -4695,22 +3773,275 @@ const STATS = {
         "key": "undead_apm",
         "name": "亡灵·APM",
         "tier": "T2",
-        "avg": 3.36,
-        "sample": 45
+        "avg": 3.27,
+        "sample": 50
       },
       {
-        "key": "undead_butcher",
-        "name": "亡灵·屠夫",
-        "tier": "T2",
-        "avg": 3.36,
-        "sample": 257
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.4,
+        "sample": 43
       },
       {
         "key": "undead_eternal_knight",
         "name": "亡灵·永恒骑士",
         "tier": "T2",
-        "avg": 3.45,
-        "sample": 150
+        "avg": 3.47,
+        "sample": 173
+      }
+    ],
+    "米罗克": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.81,
+        "sample": 183
+      },
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 2.98,
+        "sample": 247
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.02,
+        "sample": 223
+      }
+    ],
+    "洛卡拉": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.82,
+        "sample": 110
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.15,
+        "sample": 95
+      },
+      {
+        "key": "undead_eternal_knight",
+        "name": "亡灵·永恒骑士",
+        "tier": "T2",
+        "avg": 3.2,
+        "sample": 69
+      }
+    ],
+    "费林大使": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.09,
+        "sample": 308
+      },
+      {
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 3.13,
+        "sample": 255
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.19,
+        "sample": 250
+      }
+    ],
+    "辛达苟萨": [
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.23,
+        "sample": 126
+      },
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.32,
+        "sample": 136
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.41,
+        "sample": 163
+      }
+    ],
+    "布鲁坎": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.76,
+        "sample": 157
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 2.96,
+        "sample": 113
+      },
+      {
+        "key": "aberration_deathrattle",
+        "name": "畸变怪·亡语",
+        "tier": "T1",
+        "avg": 3.24,
+        "sample": 71
+      }
+    ],
+    "时光扭曲者克罗米": [
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.03,
+        "sample": 183
+      },
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 3.15,
+        "sample": 195
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.24,
+        "sample": 165
+      }
+    ],
+    "恐龙大师布莱恩": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.02,
+        "sample": 183
+      },
+      {
+        "key": "murloc_end_of_turn",
+        "name": "鱼人·回合结束",
+        "tier": "T1",
+        "avg": 3.25,
+        "sample": 145
+      },
+      {
+        "key": "elemental_cycle",
+        "name": "元素·倒转",
+        "tier": "T1",
+        "avg": 3.25,
+        "sample": 31
+      }
+    ],
+    "穆克拉": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.07,
+        "sample": 180
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.13,
+        "sample": 140
+      },
+      {
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 3.2,
+        "sample": 104
+      }
+    ],
+    "凯尔萨斯·逐日者": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.12,
+        "sample": 114
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.19,
+        "sample": 162
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.27,
+        "sample": 163
+      }
+    ],
+    "预言者努波顿": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 2.97,
+        "sample": 197
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.03,
+        "sample": 178
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.2,
+        "sample": 141
+      }
+    ],
+    "巴罗夫领主": [
+      {
+        "key": "undead_apm",
+        "name": "亡灵·APM",
+        "tier": "T2",
+        "avg": 3.22,
+        "sample": 48
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.25,
+        "sample": 208
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.31,
+        "sample": 143
       }
     ],
     "塔隆·血魔": [
@@ -4718,45 +4049,22 @@ const STATS = {
         "key": "demon_boost_shop",
         "name": "恶魔·养酒馆",
         "tier": "T1",
-        "avg": 2.9,
-        "sample": 140
+        "avg": 2.85,
+        "sample": 163
       },
       {
-        "key": "aberration_deathrattle",
-        "name": "畸变怪·亡语",
-        "tier": "T1",
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
         "avg": 3.1,
-        "sample": 162
+        "sample": 75
       },
       {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 3.17,
-        "sample": 63
-      }
-    ],
-    "乐队经理精英牛头人酋长": [
-      {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 3.19,
-        "sample": 187
-      },
-      {
-        "key": "mech_volumizer",
-        "name": "机械·扩音机",
-        "tier": "T0",
-        "avg": 3.19,
-        "sample": 241
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.34,
-        "sample": 224
+        "key": "undead_eternal_knight",
+        "name": "亡灵·永恒骑士",
+        "tier": "T2",
+        "avg": 3.13,
+        "sample": 213
       }
     ],
     "基希克斯": [
@@ -4765,44 +4073,734 @@ const STATS = {
         "name": "畸变怪·弃牌",
         "tier": "T0",
         "avg": 3.08,
-        "sample": 275
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.22,
-        "sample": 166
+        "sample": 300
       },
       {
         "key": "dragon_shield",
         "name": "龙·圣盾",
         "tier": "T0",
-        "avg": 3.23,
-        "sample": 111
-      }
-    ],
-    "亡语者布莱克松": [
+        "avg": 3.13,
+        "sample": 104
+      },
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
         "tier": "T0",
-        "avg": 2.82,
-        "sample": 249
+        "avg": 3.19,
+        "sample": 174
+      }
+    ],
+    "库尔特鲁斯·陨烬": [
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.13,
+        "sample": 93
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.17,
+        "sample": 90
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.22,
+        "sample": 65
+      }
+    ],
+    "强化机器人": [
+      {
+        "key": "murloc_end_of_turn",
+        "name": "鱼人·回合结束",
+        "tier": "T1",
+        "avg": 2.91,
+        "sample": 37
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.21,
+        "sample": 168
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.22,
+        "sample": 152
+      }
+    ],
+    "钩牙船长": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 2.97,
+        "sample": 197
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.14,
+        "sample": 162
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.26,
+        "sample": 104
+      }
+    ],
+    "比格沃斯先生": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.89,
+        "sample": 160
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 2.99,
+        "sample": 214
+      },
+      {
+        "key": "murloc_scam",
+        "name": "鱼人·下毒",
+        "tier": "T1",
+        "avg": 3.05,
+        "sample": 96
+      }
+    ],
+    "克苏恩": [
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.22,
+        "sample": 104
       },
       {
         "key": "demon_boost_shop",
         "name": "恶魔·养酒馆",
         "tier": "T1",
-        "avg": 2.95,
-        "sample": 196
+        "avg": 3.27,
+        "sample": 61
+      },
+      {
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
+        "tier": "T0",
+        "avg": 3.32,
+        "sample": 99
+      }
+    ],
+    "艾德温·范克里夫": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.1,
+        "sample": 48
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.1,
+        "sample": 36
       },
       {
         "key": "quilboar_felboar_spam",
         "name": "野猪人·邪能猪",
+        "tier": "T2",
+        "avg": 3.25,
+        "sample": 32
+      }
+    ],
+    "沙德沃克": [
+      {
+        "key": "murloc_end_of_turn",
+        "name": "鱼人·回合结束",
         "tier": "T1",
-        "avg": 3.05,
-        "sample": 257
+        "avg": 3.03,
+        "sample": 77
+      },
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.07,
+        "sample": 184
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.09,
+        "sample": 222
+      }
+    ],
+    "塔维什·雷矛": [
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.1,
+        "sample": 192
+      },
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 3.31,
+        "sample": 229
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.33,
+        "sample": 160
+      }
+    ],
+    "提克特斯": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.07,
+        "sample": 199
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.2,
+        "sample": 236
+      },
+      {
+        "key": "murloc_end_of_turn",
+        "name": "鱼人·回合结束",
+        "tier": "T1",
+        "avg": 3.2,
+        "sample": 44
+      }
+    ],
+    "至尊盗王拉法姆": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.36,
+        "sample": 66
+      },
+      {
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
+        "tier": "T0",
+        "avg": 3.39,
+        "sample": 135
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.42,
+        "sample": 106
+      }
+    ],
+    "斯卡布斯·刀油": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.32,
+        "sample": 159
+      },
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 3.35,
+        "sample": 220
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.38,
+        "sample": 222
+      }
+    ],
+    "吞噬者穆坦努斯": [
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.13,
+        "sample": 215
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.15,
+        "sample": 208
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.3,
+        "sample": 186
+      }
+    ],
+    "诺兹多姆": [
+      {
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 3.08,
+        "sample": 105
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.15,
+        "sample": 132
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.17,
+        "sample": 129
+      }
+    ],
+    "泰瑟兰·血望者": [
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.08,
+        "sample": 154
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.16,
+        "sample": 114
+      },
+      {
+        "key": "undead_apm",
+        "name": "亡灵·APM",
+        "tier": "T2",
+        "avg": 3.17,
+        "sample": 35
+      }
+    ],
+    "萨鲁法尔大王": [
+      {
+        "key": "undead_eternal_knight",
+        "name": "亡灵·永恒骑士",
+        "tier": "T2",
+        "avg": 3.11,
+        "sample": 50
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.13,
+        "sample": 95
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.22,
+        "sample": 132
+      }
+    ],
+    "舞者达瑞尔": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.12,
+        "sample": 176
+      },
+      {
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 3.21,
+        "sample": 148
+      },
+      {
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
+        "tier": "T0",
+        "avg": 3.32,
+        "sample": 256
+      }
+    ],
+    "荷利戴医生": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3,
+        "sample": 158
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.03,
+        "sample": 124
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.14,
+        "sample": 180
+      }
+    ],
+    "疯狂金字塔": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.03,
+        "sample": 61
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.08,
+        "sample": 79
+      },
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.26,
+        "sample": 66
+      }
+    ],
+    "乐队经理精英牛头人酋长": [
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.19,
+        "sample": 204
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.31,
+        "sample": 243
+      },
+      {
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
+        "tier": "T0",
+        "avg": 3.38,
+        "sample": 261
+      }
+    ],
+    "贸易亲王加里维克斯": [
+      {
+        "key": "undead_apm",
+        "name": "亡灵·APM",
+        "tier": "T2",
+        "avg": 2.69,
+        "sample": 36
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.06,
+        "sample": 168
+      },
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.08,
+        "sample": 129
+      }
+    ],
+    "刀锋女王凯瑞甘": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.02,
+        "sample": 32
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.07,
+        "sample": 53
+      },
+      {
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
+        "tier": "T0",
+        "avg": 3.2,
+        "sample": 52
+      }
+    ],
+    "斯尼德": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 2.58,
+        "sample": 30
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.3,
+        "sample": 67
+      },
+      {
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
+        "tier": "T0",
+        "avg": 3.42,
+        "sample": 157
+      }
+    ],
+    "林地守护者欧穆": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.06,
+        "sample": 160
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.08,
+        "sample": 199
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.23,
+        "sample": 226
+      }
+    ],
+    "瓦尔登·晨拥": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3,
+        "sample": 134
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.18,
+        "sample": 156
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.24,
+        "sample": 155
+      }
+    ],
+    "米尔豪斯·法力风暴": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.16,
+        "sample": 89
+      },
+      {
+        "key": "elemental_tempest",
+        "name": "元素·风暴",
+        "tier": "T3",
+        "avg": 3.32,
+        "sample": 56
+      },
+      {
+        "key": "aberration_deathrattle",
+        "name": "畸变怪·亡语",
+        "tier": "T1",
+        "avg": 3.46,
+        "sample": 76
+      }
+    ],
+    "玛维·影歌": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.06,
+        "sample": 85
+      },
+      {
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 3.19,
+        "sample": 83
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.21,
+        "sample": 130
+      }
+    ],
+    "苔丝·格雷迈恩": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.19,
+        "sample": 198
+      },
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.41,
+        "sample": 141
+      },
+      {
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 3.43,
+        "sample": 150
+      }
+    ],
+    "泽瑞拉": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.11,
+        "sample": 125
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.3,
+        "sample": 180
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.36,
+        "sample": 160
+      }
+    ],
+    "炎魔之王拉格纳罗斯": [
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.15,
+        "sample": 85
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.25,
+        "sample": 67
+      },
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.4,
+        "sample": 44
+      }
+    ],
+    "阿兰娜·逐星": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.26,
+        "sample": 141
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.3,
+        "sample": 134
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.33,
+        "sample": 119
+      }
+    ],
+    "格雷布": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.1,
+        "sample": 30
+      },
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 3.33,
+        "sample": 54
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.38,
+        "sample": 47
       }
     ],
     "巫妖巴兹亚尔": [
@@ -4810,22 +4808,68 @@ const STATS = {
         "key": "aberration_discard",
         "name": "畸变怪·弃牌",
         "tier": "T0",
-        "avg": 3.29,
-        "sample": 36
+        "avg": 2.9,
+        "sample": 34
+      },
+      {
+        "key": "quilboar_felboar_spam",
+        "name": "野猪人·邪能猪",
+        "tier": "T2",
+        "avg": 3.37,
+        "sample": 63
+      },
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.59,
+        "sample": 33
+      }
+    ],
+    "馆长": [
+      {
+        "key": "dragon_shield",
+        "name": "龙·圣盾",
+        "tier": "T0",
+        "avg": 3.09,
+        "sample": 69
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.18,
+        "sample": 172
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
         "tier": "T0",
-        "avg": 3.47,
-        "sample": 51
+        "avg": 3.33,
+        "sample": 157
+      }
+    ],
+    "詹迪斯·巴罗夫": [
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.2,
+        "sample": 83
       },
       {
-        "key": "quilboar_felboar_spam",
-        "name": "野猪人·邪能猪",
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
         "tier": "T1",
-        "avg": 3.52,
-        "sample": 62
+        "avg": 3.24,
+        "sample": 65
+      },
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.35,
+        "sample": 87
       }
     ],
     "德雷阿佳丝": [
@@ -4833,114 +4877,22 @@ const STATS = {
         "key": "aberration_discard",
         "name": "畸变怪·弃牌",
         "tier": "T0",
-        "avg": 2.97,
-        "sample": 329
+        "avg": 2.98,
+        "sample": 360
       },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.19,
-        "sample": 162
-      },
-      {
-        "key": "aberration_deathrattle",
-        "name": "畸变怪·亡语",
-        "tier": "T1",
-        "avg": 3.45,
-        "sample": 321
-      }
-    ],
-    "加拉克苏斯大王": [
       {
         "key": "murloc_scam",
         "name": "鱼人·下毒",
-        "tier": "T2",
-        "avg": 2.95,
-        "sample": 31
-      },
-      {
-        "key": "demon_self_damage",
-        "name": "恶魔·自伤",
-        "tier": "T2",
-        "avg": 3.21,
-        "sample": 329
-      },
-      {
-        "key": "undead_butcher",
-        "name": "亡灵·屠夫",
-        "tier": "T2",
-        "avg": 3.23,
-        "sample": 41
-      }
-    ],
-    "刀锋女王凯瑞甘": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.09,
-        "sample": 43
-      },
-      {
-        "key": "mech_volumizer",
-        "name": "机械·扩音机",
-        "tier": "T0",
-        "avg": 3.24,
-        "sample": 59
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.3,
-        "sample": 66
-      }
-    ],
-    "斯尼德": [
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.18,
-        "sample": 56
+        "tier": "T1",
+        "avg": 3.11,
+        "sample": 33
       },
       {
         "key": "quilboar_choose_one",
         "name": "野猪人·抉择",
         "tier": "T1",
-        "avg": 3.33,
-        "sample": 38
-      },
-      {
-        "key": "quilboar_felboar_spam",
-        "name": "野猪人·邪能猪",
-        "tier": "T1",
-        "avg": 3.41,
-        "sample": 41
-      }
-    ],
-    "齐恩瓦拉": [
-      {
-        "key": "elemental_azerite",
-        "name": "元素·艾泽里特",
-        "tier": "T1",
-        "avg": 3.35,
-        "sample": 276
-      },
-      {
-        "key": "elemental_cycle",
-        "name": "元素·倒转",
-        "tier": "T1",
-        "avg": 3.4,
-        "sample": 50
-      },
-      {
-        "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
-        "avg": 3.44,
-        "sample": 77
+        "avg": 3.21,
+        "sample": 34
       }
     ],
     "伊利丹·怒风": [
@@ -4948,45 +4900,68 @@ const STATS = {
         "key": "aberration_discard",
         "name": "畸变怪·弃牌",
         "tier": "T0",
-        "avg": 2.9,
-        "sample": 131
+        "avg": 3.04,
+        "sample": 144
+      },
+      {
+        "key": "quilboar_choose_one",
+        "name": "野猪人·抉择",
+        "tier": "T1",
+        "avg": 3.09,
+        "sample": 164
       },
       {
         "key": "neutral_tea_set",
         "name": "中立·喝茶",
         "tier": "T0",
-        "avg": 3.07,
-        "sample": 139
-      },
-      {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 3.19,
-        "sample": 91
+        "avg": 3.11,
+        "sample": 161
       }
     ],
-    "霍格船长": [
+    "亡语者布莱克松": [
       {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.17,
-        "sample": 30
+        "key": "murloc_scam",
+        "name": "鱼人·下毒",
+        "tier": "T1",
+        "avg": 2.38,
+        "sample": 36
       },
       {
-        "key": "mech_apm",
-        "name": "机械·APM",
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
         "tier": "T0",
-        "avg": 3.5,
-        "sample": 57
+        "avg": 2.83,
+        "sample": 275
       },
       {
         "key": "demon_boost_shop",
         "name": "恶魔·养酒馆",
         "tier": "T1",
-        "avg": 3.53,
-        "sample": 34
+        "avg": 2.92,
+        "sample": 221
+      }
+    ],
+    "齐恩瓦拉": [
+      {
+        "key": "elemental_azerite",
+        "name": "元素·艾泽里特",
+        "tier": "T1",
+        "avg": 3.36,
+        "sample": 322
+      },
+      {
+        "key": "murloc_scam",
+        "name": "鱼人·下毒",
+        "tier": "T1",
+        "avg": 3.46,
+        "sample": 37
+      },
+      {
+        "key": "elemental_cycle",
+        "name": "元素·倒转",
+        "tier": "T1",
+        "avg": 3.5,
+        "sample": 39
       }
     ],
     "伊妮·积雷": [
@@ -4994,22 +4969,68 @@ const STATS = {
         "key": "mech_apm",
         "name": "机械·APM",
         "tier": "T0",
-        "avg": 3.2,
-        "sample": 223
+        "avg": 3.24,
+        "sample": 260
       },
       {
-        "key": "undead_butcher",
-        "name": "亡灵·屠夫",
-        "tier": "T2",
-        "avg": 3.34,
-        "sample": 50
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.33,
+        "sample": 40
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
         "tier": "T0",
-        "avg": 3.45,
-        "sample": 310
+        "avg": 3.33,
+        "sample": 345
+      }
+    ],
+    "恩佐斯": [
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 3.04,
+        "sample": 81
+      },
+      {
+        "key": "elemental_azerite",
+        "name": "元素·艾泽里特",
+        "tier": "T1",
+        "avg": 3.11,
+        "sample": 46
+      },
+      {
+        "key": "aberration_discard",
+        "name": "畸变怪·弃牌",
+        "tier": "T0",
+        "avg": 3.15,
+        "sample": 68
+      }
+    ],
+    "加拉克苏斯大王": [
+      {
+        "key": "murloc_scam",
+        "name": "鱼人·下毒",
+        "tier": "T1",
+        "avg": 2.53,
+        "sample": 31
+      },
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.11,
+        "sample": 33
+      },
+      {
+        "key": "demon_self_damage",
+        "name": "恶魔·自伤",
+        "tier": "T2",
+        "avg": 3.21,
+        "sample": 361
       }
     ],
     "典狱长": [
@@ -5017,114 +5038,22 @@ const STATS = {
         "key": "undead_apm",
         "name": "亡灵·APM",
         "tier": "T2",
-        "avg": 3.32,
-        "sample": 119
+        "avg": 3.47,
+        "sample": 147
       },
       {
         "key": "undead_butcher",
         "name": "亡灵·屠夫",
         "tier": "T2",
-        "avg": 3.48,
-        "sample": 324
+        "avg": 3.5,
+        "sample": 358
       },
       {
         "key": "undead_eternal_knight",
         "name": "亡灵·永恒骑士",
         "tier": "T2",
-        "avg": 3.51,
-        "sample": 226
-      }
-    ],
-    "塔姆辛·罗姆": [
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.02,
-        "sample": 60
-      },
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.4,
-        "sample": 61
-      },
-      {
-        "key": "mech_volumizer",
-        "name": "机械·扩音机",
-        "tier": "T0",
-        "avg": 3.46,
-        "sample": 69
-      }
-    ],
-    "恩佐斯": [
-      {
-        "key": "aberration_deathrattle",
-        "name": "畸变怪·亡语",
-        "tier": "T1",
-        "avg": 3.12,
-        "sample": 113
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.16,
-        "sample": 75
-      },
-      {
-        "key": "elemental_azerite",
-        "name": "元素·艾泽里特",
-        "tier": "T1",
-        "avg": 3.16,
-        "sample": 38
-      }
-    ],
-    "格雷布": [
-      {
-        "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
-        "avg": 3.26,
-        "sample": 50
-      },
-      {
-        "key": "beast_leviathan",
-        "name": "野兽·巨兽",
-        "tier": "T3",
-        "avg": 3.37,
-        "sample": 138
-      },
-      {
-        "key": "demon_boost_shop",
-        "name": "恶魔·养酒馆",
-        "tier": "T1",
-        "avg": 3.45,
-        "sample": 48
-      }
-    ],
-    "海盗帕奇斯": [
-      {
-        "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
-        "avg": 2.98,
-        "sample": 31
-      },
-      {
-        "key": "quilboar_felboar_spam",
-        "name": "野猪人·邪能猪",
-        "tier": "T1",
-        "avg": 3.31,
-        "sample": 47
-      },
-      {
-        "key": "beast_lobster",
-        "name": "野兽·龙虾",
-        "tier": "T2",
-        "avg": 3.54,
-        "sample": 48
+        "avg": 3.58,
+        "sample": 268
       }
     ],
     "菌菇术士弗洛格尔": [
@@ -5132,68 +5061,91 @@ const STATS = {
         "key": "murloc_end_of_turn",
         "name": "鱼人·回合结束",
         "tier": "T1",
-        "avg": 2.72,
-        "sample": 39
+        "avg": 2.63,
+        "sample": 43
       },
       {
         "key": "elemental_azerite",
         "name": "元素·艾泽里特",
         "tier": "T1",
-        "avg": 3.17,
-        "sample": 35
+        "avg": 3.13,
+        "sample": 40
       },
       {
         "key": "pirate_discover",
         "name": "海盗·发现",
         "tier": "T3",
-        "avg": 3.68,
-        "sample": 33
+        "avg": 3.43,
+        "sample": 34
       }
     ],
-    "米尔菲丝·法力风暴": [
-      {
-        "key": "mech_apm",
-        "name": "机械·APM",
-        "tier": "T0",
-        "avg": 3.01,
-        "sample": 235
-      },
+    "霍格船长": [
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
         "tier": "T0",
-        "avg": 3.24,
-        "sample": 313
+        "avg": 3.1,
+        "sample": 43
       },
       {
-        "key": "mech_glambot",
-        "name": "机械·魅力机器人",
-        "tier": "T3",
-        "avg": 4.48,
-        "sample": 183
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.14,
+        "sample": 64
+      },
+      {
+        "key": "beast_lobster",
+        "name": "野兽·龙虾",
+        "tier": "T2",
+        "avg": 3.34,
+        "sample": 68
       }
     ],
-    "吉姆·雷诺": [
+    "塔姆辛·罗姆": [
       {
-        "key": "mech_volumizer",
-        "name": "机械·扩音机",
+        "key": "mech_apm",
+        "name": "机械·APM",
         "tier": "T0",
-        "avg": 3.52,
-        "sample": 244
+        "avg": 3.02,
+        "sample": 30
+      },
+      {
+        "key": "demon_boost_shop",
+        "name": "恶魔·养酒馆",
+        "tier": "T1",
+        "avg": 3.09,
+        "sample": 65
+      },
+      {
+        "key": "neutral_tea_set",
+        "name": "中立·喝茶",
+        "tier": "T0",
+        "avg": 3.36,
+        "sample": 32
+      }
+    ],
+    "海盗帕奇斯": [
+      {
+        "key": "undead_apm",
+        "name": "亡灵·APM",
+        "tier": "T2",
+        "avg": 3.13,
+        "sample": 35
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
         "tier": "T0",
-        "avg": 3.54,
-        "sample": 142
+        "avg": 3.55,
+        "sample": 75
       },
       {
-        "key": "mech_glambot",
-        "name": "机械·魅力机器人",
+        "key": "pirate_discover",
+        "name": "海盗·发现",
         "tier": "T3",
-        "avg": 4.65,
-        "sample": 106
+        "avg": 3.57,
+        "sample": 355
       }
     ],
     "阿塔尼斯": [
@@ -5201,22 +5153,68 @@ const STATS = {
         "key": "mech_apm",
         "name": "机械·APM",
         "tier": "T0",
-        "avg": 3.4,
-        "sample": 113
+        "avg": 3.22,
+        "sample": 142
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
         "tier": "T0",
-        "avg": 3.42,
-        "sample": 233
+        "avg": 3.49,
+        "sample": 252
       },
       {
         "key": "demon_self_damage",
         "name": "恶魔·自伤",
         "tier": "T2",
-        "avg": 4.41,
-        "sample": 34
+        "avg": 4.03,
+        "sample": 36
+      }
+    ],
+    "米尔菲丝·法力风暴": [
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.04,
+        "sample": 270
+      },
+      {
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
+        "tier": "T0",
+        "avg": 3.2,
+        "sample": 345
+      },
+      {
+        "key": "beast_lobster",
+        "name": "野兽·龙虾",
+        "tier": "T2",
+        "avg": 3.49,
+        "sample": 37
+      }
+    ],
+    "吉姆·雷诺": [
+      {
+        "key": "mech_apm",
+        "name": "机械·APM",
+        "tier": "T0",
+        "avg": 3.42,
+        "sample": 158
+      },
+      {
+        "key": "mech_volumizer",
+        "name": "机械·扩音机",
+        "tier": "T0",
+        "avg": 3.49,
+        "sample": 265
+      },
+      {
+        "key": "mech_glambot",
+        "name": "机械·魅力机器人",
+        "tier": "T3",
+        "avg": 4.57,
+        "sample": 103
       }
     ],
     "普崔塞德教授": [
@@ -5224,22 +5222,22 @@ const STATS = {
         "key": "undead_butcher",
         "name": "亡灵·屠夫",
         "tier": "T2",
-        "avg": 3.92,
-        "sample": 256
+        "avg": 3.88,
+        "sample": 288
       },
       {
         "key": "undead_eternal_knight",
         "name": "亡灵·永恒骑士",
         "tier": "T2",
-        "avg": 3.96,
-        "sample": 130
+        "avg": 3.94,
+        "sample": 152
       },
       {
         "key": "beast_lobster",
         "name": "野兽·龙虾",
         "tier": "T2",
-        "avg": 4.18,
-        "sample": 37
+        "avg": 4.09,
+        "sample": 39
       }
     ]
   },
@@ -5247,50 +5245,50 @@ const STATS = {
     {
       "name": "腐泥肖像",
       "avg": 3.06,
-      "pickrate": 63.5,
-      "sample": 24506
+      "pickrate": 63.7,
+      "sample": 22489
     },
     {
       "name": "永恒肖像",
-      "avg": 3.09,
+      "avg": 3.08,
       "pickrate": 24.6,
-      "sample": 5519
+      "sample": 5246
     },
     {
       "name": "加重护手",
       "avg": 3.16,
       "pickrate": 30.6,
-      "sample": 33718
+      "sample": 32181
     },
     {
       "name": "永恒肖像",
-      "avg": 3.19,
-      "pickrate": 28.2,
-      "sample": 6600
+      "avg": 3.2,
+      "pickrate": 28.4,
+      "sample": 6354
     },
     {
       "name": "尖利肖像",
       "avg": 3.22,
-      "pickrate": 39,
-      "sample": 14305
+      "pickrate": 39.4,
+      "sample": 13893
     },
     {
       "name": "血缚耳环",
-      "avg": 3.34,
-      "pickrate": 42,
-      "sample": 24702
+      "avg": 3.35,
+      "pickrate": 42.2,
+      "sample": 24066
     },
     {
       "name": "鲜血魔像标签",
       "avg": 3.36,
-      "pickrate": 38.5,
-      "sample": 22407
+      "pickrate": 38.8,
+      "sample": 21947
     },
     {
       "name": "黑客鱼人肖像",
-      "avg": 3.38,
-      "pickrate": 40.2,
-      "sample": 6999
+      "avg": 3.37,
+      "pickrate": 40.3,
+      "sample": 6581
     }
   ]
 };
