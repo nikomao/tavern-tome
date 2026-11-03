@@ -48,6 +48,7 @@
     <a class="lang-link" href="../index.html">簡中</a>
     <nav class="nav" id="nav">
       <a href="#start" data-i18n="start">入門</a>
+      <a href="#curves">節奏</a>
       <a href="#laws" data-i18n="laws">定律</a>
       <a href="#math" data-i18n="math">數学</a>
       <a href="#positioning" data-i18n="positioning">站位</a>
@@ -253,7 +254,167 @@
 
   <div class="callout">
     <span class="callout-tag">下一步</span>
-    <p>會了「怎麼打」，再看 <a href="#laws">01 三條定律</a> 和 <a href="#tribes">全部種族圖鑑</a>。前者讲為什麼，後者讲選什麼。</p>
+    <p>會了「怎麼打」，再看 <a href="#curves">節奏與決策樹</a>、<a href="#laws">01 三條定律</a> 和 <a href="#tribes">全部種族圖鑑</a>。掌握每回合花钱與升本的時機。</p>
+  </div>
+</section>
+
+<!-- ================= 升本節奏與決策樹 ================= -->
+<section class="section" id="curves">
+  <div class="section-head">
+    <div class="sec-no">階</div>
+    <div>
+      <h2>旅店節奏與關鍵回合決策樹</h2>
+      <p class="sub">新手與老手最大的差距，不是認不認識卡牌，而是幾塊钱怎麼花、第幾回合该升本。</p>
+    </div>
+  </div>
+
+  <div class="curves-section">
+    <div class="curves-tabs" role="tablist">
+      <button type="button" class="curves-tab active" data-curve="standard">🛡️ 標准穩健流 (常規运营)</button>
+      <button type="button" class="curves-tab" data-curve="fast5">⚡ 科技速5流 (天胡速攀)</button>
+      <button type="button" class="curves-tab" data-curve="staylow">🔨 低本锁搜流 (惡魔/機械胚子)</button>
+      <button type="button" class="curves-tab" data-curve="endgame">⚔️ 決戰拆招秘籍 (針对卡與棄核換即戰力)</button>
+    </div>
+
+    <!-- 1. 標准穩健流 -->
+    <div class="curves-pane active" id="curve-standard">
+      <div class="curves-hero-box">
+        <div>
+          <b>适用英雄與環境：</b>
+          <p>绝大多數常規英雄（無特殊經济技能時通用）。穩吃烂分、衝擊前三的首選骨架。</p>
+        </div>
+        <span class="curves-risk">鎖血紅線：血量 &lt; 18 必須停止升本全搜戰力</span>
+      </div>
+      <div class="curve-flow-grid">
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 1</span><span class="tn-gold">3 金幣</span></div>
+          <div class="tn-action">抓 1 星理財手下怪或高戰力過渡手下</div>
+          <div class="tn-desc">優先抓取【千纸幼龍】、【粗暴的猢狲】或產出资源的理財手下手下。刷出两張理財手下可「買 1 凍 1」。</div>
+          <div class="tn-warn">⚠️ 禁忌：绝对不要刷新旅店！花 1 塊钱刷新等于白白浪費 33% 的初始啟動资本。</div>
+        </div>
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 2</span><span class="tn-gold">4 金幣</span></div>
+          <div class="tn-action">升 2 星旅店 (4 金幣)</div>
+          <div class="tn-desc">固定動作。無需犹豫，全場除個別特殊英雄外皆升本，戰力差距極小。</div>
+        </div>
+        <div class="turn-node key">
+          <div class="tn-head"><span class="tn-round">回合 3</span><span class="tn-gold">5 金幣</span></div>
+          <div class="tn-action">【分水岭二選一】賣理財手下升 3 本 或 賣 1 買 2 穩血</div>
+          <div class="tn-desc">若手頭有理財手下手下/衍生物：果斷賣掉湊 6 幣，升 3 星旅店搶科技；若場面極弱且無理財手下：賣掉最弱怪抓 2 張 2 星優质手下保血！</div>
+          <div class="tn-warn">⚠️ 禁忌：千萬不要「升本後空过」，若本回合不買怪且場面空虚，會被入 6–8 血。</div>
+        </div>
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 4</span><span class="tn-gold">6 金幣</span></div>
+          <div class="tn-action">抓 2 張最高即戰力手下，拉满 7 格場面</div>
+          <div class="tn-desc">繼續铺满場面。戰棋前中期「手下數量 &gt; 手下质量」，哪怕是白板，多一個攻擊頻次就能多換掉对面一個盾。</div>
+        </div>
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 5</span><span class="tn-gold">7 金幣</span></div>
+          <div class="tn-action">升 3 星旅店 (若之前未升) + 抓 1 張手下</div>
+          <div class="tn-desc">花費 4 金幣升 3 本，剩餘 3 金幣正好抓取 1 張強力 3 星胚子（如青铜守衛、偏折機器人雏形）。</div>
+        </div>
+        <div class="turn-node key">
+          <div class="tn-head"><span class="tn-round">回合 6</span><span class="tn-gold">8 金幣</span></div>
+          <div class="tn-action">升 4 星旅店 (黃金枢紐回合)</div>
+          <div class="tn-desc">4 星旅店是各大流派核心卡（執念詩心龍前置龍、达卡莱附魔師、機械合體組件）的聚集地，必須在 8 費准時抵达。</div>
+        </div>
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 7</span><span class="tn-gold">9 金幣</span></div>
+          <div class="tn-action">【大搜定型期】搜核心定方向，合三连找 5 本大怪</div>
+          <div class="tn-desc">本回合把金幣花在刷新與找核心上，根據來牌锁定最終體系（龍/野獸/惡魔/元素），合出三连碰 5 本牌。</div>
+        </div>
+        <div class="turn-node key">
+          <div class="tn-head"><span class="tn-round">回合 8+</span><span class="tn-gold">10 金幣</span></div>
+          <div class="tn-action">升 5 星旅店，锁定 T0 核心體系</div>
+          <div class="tn-desc">升 5 本全力寻找【铜須】、【达卡莱】、【詩心龍】或【卡尔加】。一旦就位，直接開啟萬点成長乘數！</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. 科技速5流 -->
+    <div class="curves-pane" id="curve-fast5">
+      <div class="curves-hero-box">
+        <div>
+          <b>适用英雄與環境：</b>
+          <p>森林守護者欧穆、钩牙船长、米尔豪斯·法力風暴、阿莱克丝塔薩等自帶充裕經济或減費能力的強力英雄。</p>
+        </div>
+        <span class="curves-risk">核心優勢：搶先抽空公共卡牌池中的核心橙卡，讓慢速对手無牌可拿</span>
+      </div>
+      <div class="curve-flow-grid">
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 1–3</span><span class="tn-gold">3–5 金幣</span></div>
+          <div class="tn-action">極速搶 3 本，借助技能節省金幣</div>
+          <div class="tn-desc">欧穆升本給 2 幣，米尔豪斯買怪只需 2 幣。在回合 3 依靠英雄技能直接跳上 3 星旅店。</div>
+        </div>
+        <div class="turn-node key">
+          <div class="tn-head"><span class="tn-round">回合 5–6</span><span class="tn-gold">7–8 金幣</span></div>
+          <div class="tn-action">连跳 4 本並直逼 5 本</div>
+          <div class="tn-desc">比常規流派提早 1–2 個回合升入高本。此時即使被对手入两波（各 4–6 血），只要剩餘血量 &gt; 20，完全在可承受阈值之內。</div>
+        </div>
+        <div class="turn-node key">
+          <div class="tn-head"><span class="tn-round">回合 7</span><span class="tn-gold">9 金幣</span></div>
+          <div class="tn-action">入主 5 本大搜！獨享铜須/詩心龍公共池</div>
+          <div class="tn-desc">英雄戰場所有玩家共享同一個卡牌池（5 本單卡全池僅有 15 張）。你第 7 回合到 5 本，就比別人更先抽到核心，直接锁死对手上限！</div>
+          <div class="tn-warn">⚠️ 紧急剎車：若在第 6 回合血量跌破 18 点，必須立即放棄速 5，就地搜牌拉戰力鎖血！</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. 低本锁搜流 -->
+    <div class="curves-pane" id="curve-staylow">
+      <div class="curves-hero-box">
+        <div>
+          <b>适用體系：</b>
+          <p>惡魔自残成長流（找愤怒編织者/灵魂倒帶者）、機械合體流、特定野獸三连。核心牌密集分布在 2–3 本。</p>
+        </div>
+        <span class="curves-risk">翻車点：长時間停留在低本若搜不到三连，容易被高本體系一波清算</span>
+      </div>
+      <div class="curve-flow-grid">
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 3–5</span><span class="tn-gold">5–7 金幣</span></div>
+          <div class="tn-action">锁定 2–3 本，集中资源湊金色胚子</div>
+          <div class="tn-desc">不隨大流升本。利用低本牌池種類少的天然優勢，反複搜取相同手下合出金色，同時将自残/合體體質堆到 50+。</div>
+        </div>
+        <div class="turn-node key">
+          <div class="tn-head"><span class="tn-round">回合 6–7</span><span class="tn-gold">8–9 金幣</span></div>
+          <div class="tn-action">手握 2–3 個三连獎券，连升两本「直碰 5/6 本大怪」</div>
+          <div class="tn-desc">利用打造成型的巨型胚子锁住血量，在同一回合一口气升本，然後打出三连發現 5 星或 6 星關鍵終结卡。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. 決戰拆招秘籍 -->
+    <div class="curves-pane" id="curve-endgame">
+      <div class="curves-hero-box">
+        <div>
+          <b>大師级博弈思維：</b>
+          <p>进入最後 1v1 或前四強決賽圈，比的不是誰面板大，而是誰更能針对对手的弱点。</p>
+        </div>
+        <span class="curves-risk">黃金法則：戰斗前最後 10 秒，必須重新排布 1–7 號位！</span>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h4>💡 棄核置換法則 (Sell the Engine)</h4>
+          <p>【新手最致命的错】：帶著 2/2 白板铜須、4/4 卡尔加或诺米打入決賽！它們在備戰階段已經完成使命，在戰斗中就是純粹的白板送死怪！戰斗前果斷賣掉，換入【聖盾術烈毒】、【風怒】或【火車王】，相當于全队憑空多出一個頂级戰力！</p>
+          <div class="tech-tags"><span class="tech-tag">備戰最後 10 秒</span><span class="tech-tag">賣掉铜須/卡尔加</span><span class="tech-tag">換即戰力毒/盾</span></div>
+        </div>
+        <div class="tech-card">
+          <h4>🛡️ 狂暴之斧夹心站位 (Anti-Cleave)</h4>
+          <p>对手有狂暴之斧（死神4000型、狂戰海盜、洞穴多頭蛇）時，【嘲諷怪绝对不能放在中間】！若放在 4 號位，狂戰一刀順劈斬 3/4/5 號位，全場瞬間蒸發。正確站位：把嘲諷大怪擺在 1 號位或 7 號位边緣，讓狂暴之斧只能順劈斬空气！</p>
+          <div class="tech-tags"><span class="tech-tag">嘲諷靠边放</span><span class="tech-tag">核心引擎绝不贴嘲諷</span><span class="tech-tag">两翼保護</span></div>
+        </div>
+        <div class="tech-card">
+          <h4>☠️ 萬点體質單核克制 (Anti-Giant 10,000 Stats)</h4>
+          <p>面对对手 10,000/10,000 的大樹或融合怪，拼體質毫無勝算。唯一解法：【聖盾術烈毒】、【複生烈毒】或【火車王裡诺艾】精准对位換掉；前置低攻聖盾術小怪先手破掉对面的聖盾術，紧接著烈毒一擊必杀！</p>
+          <div class="tech-tags"><span class="tech-tag">火車王</span><span class="tech-tag">烈毒魚人</span><span class="tech-tag">聖盾術破盾怪</span></div>
+        </div>
+        <div class="tech-card">
+          <h4>⚡ 針对死亡之聲與全場聖盾術 (Anti-Shield & Titus)</h4>
+          <p>对手全队聖盾術或满編套娃機械/不死族？1 號位塞入一個【坑道爆破師】，进場打出全場 AOE，瞬間破光敵我全部聖盾術並清掉小樹苗/低血複生！或者後排補上【扎普·斯罗格】，先手精准刺杀对手核心提圖斯·瑞文戴尔！</p>
+          <div class="tech-tags"><span class="tech-tag">坑道爆破師</span><span class="tech-tag">扎普·斯罗格</span><span class="tech-tag">破除瑞文</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -525,7 +686,7 @@
 
   <div class="warn-row">
     <div class="warn"><b>怕毒</b><p>上萬體質也怕劇毒。解法是頻率、聖盾術、或先手点掉毒鱼。</p></div>
-    <div class="warn"><b>怕狂戰斧</b><p>一個狂戰斧能溅射三個。把載體夹在小怪中間，別放边上。</p></div>
+    <div class="warn"><b>怕狂暴之斧</b><p>一個狂暴之斧能溅射三個。把載體夹在小怪中間，別放边上。</p></div>
     <div class="warn"><b>怕被針对</b><p>單載體陣容最怕「扎普 / 隱蔽 / 直傷」。留一個副載體，別把鸡蛋放一個篮子。</p></div>
   </div>
 </section>
@@ -547,7 +708,7 @@
   <div class="board-wrap">
     <div class="board-label">從左到右 = 從先挨打到後挨打（常規）</div>
     <div class="pos-board" id="posBoard">
-      <div class="pos-slot sac" data-tip="破盾 / 送死 / 狂戰斧：用最低成本換掉对手的聖盾術，或讓狂戰斧先出手。">
+      <div class="pos-slot sac" data-tip="破盾 / 送死 / 狂暴之斧：用最低成本換掉对手的聖盾術，或讓狂暴之斧先出手。">
         <span class="ps-num">1</span><span class="ps-role">破盾</span><span class="ps-name">小怪 / 狂戰</span>
       </div>
       <div class="pos-slot tank" data-tip="主坦：聖盾術 + 嘲諷，吸收第一波傷害，保護後面的引擎。">
@@ -562,7 +723,7 @@
       <div class="pos-slot engine" data-tip="引擎：铜須、瑞文、巴琳达。绝不能死，必須被嘲諷保護。">
         <span class="ps-num">5</span><span class="ps-role">引擎</span><span class="ps-name">铜須 / 瑞文</span>
       </div>
-      <div class="pos-slot finisher" data-tip="終结：劇毒、風怒、狂戰斧。用來点掉对手最难處理的那個。">
+      <div class="pos-slot finisher" data-tip="終结：劇毒、風怒、狂暴之斧。用來点掉对手最难處理的那個。">
         <span class="ps-num">6</span><span class="ps-role">終结</span><span class="ps-name">毒 / 風怒</span>
       </div>
       <div class="pos-slot back" data-tip="收割 / 死亡之聲：最後出手，處理残局；或讓死亡之聲在最後铺場。">
@@ -575,9 +736,9 @@
   <h3 class="block-title">十二條鐵律</h3>
   <div class="rules">
     <div class="rule"><b>01</b><p>嘲諷放前排，但<strong>不要把唯一的聖盾術大哥放 1 號位</strong>——先放一個無聖盾術小怪吃破盾。</p></div>
-    <div class="rule"><b>02</b><p>狂戰斧放最左，前提是它<strong>能在被擊杀前先出手</strong>；如果它很大，就先墊一個小怪破盾。</p></div>
-    <div class="rule"><b>03</b><p>铜須、瑞文、巴琳达这類引擎，永远放在<strong>至少两個身位之後</strong>，且不要贴著狂戰斧的溅射位。</p></div>
-    <div class="rule"><b>04</b><p>两個嘲諷之間夹一個小怪或超高血量單位，專門用來接狂戰斧的溅射。</p></div>
+    <div class="rule"><b>02</b><p>狂暴之斧放最左，前提是它<strong>能在被擊杀前先出手</strong>；如果它很大，就先墊一個小怪破盾。</p></div>
+    <div class="rule"><b>03</b><p>铜須、瑞文、巴琳达这類引擎，永远放在<strong>至少两個身位之後</strong>，且不要贴著狂暴之斧的溅射位。</p></div>
+    <div class="rule"><b>04</b><p>两個嘲諷之間夹一個小怪或超高血量單位，專門用來接狂暴之斧的溅射。</p></div>
     <div class="rule"><b>05</b><p>劇毒單位要放在<strong>能先攻擊</strong>的位置，它的價值是点掉对手最大的墙，而不是站樁。</p></div>
     <div class="rule"><b>06</b><p>死亡之聲铺場單位放前面，讓它們早点死、早点產頻率；瑞文放最後。</p></div>
     <div class="rule"><b>07</b><p>風怒單位放後排收割，它的两次攻擊要打在「已經破防」的残局上。</p></div>
@@ -593,9 +754,9 @@
     <table class="matrix">
       <thead><tr><th>对手形態</th><th>威脅</th><th>你的調整</th></tr></thead>
       <tbody>
-        <tr><td>狂戰斧 / 溅射</td><td>一次打三個，專杀引擎</td><td>引擎後置；用 1-2 個小怪把主力夹在中間；嘲諷错位。</td></tr>
+        <tr><td>狂暴之斧 / 溅射</td><td>一次打三個，專杀引擎</td><td>引擎後置；用 1-2 個小怪把主力夹在中間；嘲諷错位。</td></tr>
         <tr><td>劇毒鱼</td><td>無視體質，直接換掉大哥</td><td>聖盾術先手破毒；用頻率小怪吃毒；把大哥放到毒鱼攻擊不到的位。</td></tr>
-        <tr><td>聖盾術頻率</td><td>多次免傷，拖死你的大怪</td><td>1 號位放小怪破盾；狂戰斧先手；帶「破盾」類效果。</td></tr>
+        <tr><td>聖盾術頻率</td><td>多次免傷，拖死你的大怪</td><td>1 號位放小怪破盾；狂暴之斧先手；帶「破盾」類效果。</td></tr>
         <tr><td>死亡之聲铺場</td><td>越打越多，頻率壓死</td><td>先杀瑞文；用扎普/隱蔽点後排；別把攻擊浪費在小死亡之聲上。</td></tr>
         <tr><td>單一大哥</td><td>一個 10000/10000</td><td>劇毒 + 風怒 + 聖盾術三件套；或者直接轉身打臉。</td></tr>
       </tbody>
@@ -900,7 +1061,7 @@
       <div class="tl-dot">4</div>
       <div class="tl-body">
         <h4>第 13 回合以後：針对</h4>
-        <p>看決賽圈对手：補毒、補聖盾術、補狂戰斧、調站位。體質到这個階段已經夠了，勝負在<strong>克制關系</strong>。</p>
+        <p>看決賽圈对手：補毒、補聖盾術、補狂暴之斧、調站位。體質到这個階段已經夠了，勝負在<strong>克制關系</strong>。</p>
         <span class="tl-key">關鍵詞：從「養成」切換到「針对」</span>
       </div>
     </div>
@@ -985,6 +1146,7 @@
 <script src="stats-mmr.js?v=20261105d"></script>
 <script src="stats.js?v=20261105d"></script>
 <script src="comp-notes.js?v=20261105d"></script>
+<script src="hero-guide-data.js?v=20261105d"></script>
 <script src="extra-cards.js?v=20261105d"></script>
 <script src="cards.js?v=20261105d"></script>
 <script src="app.js?v=20261105d"></script>

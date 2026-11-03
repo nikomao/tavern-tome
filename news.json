@@ -1,117 +1,149 @@
 {
- "updated": "2026-11-03T13:44:35.711Z",
- "items": [
-  {
-   "source": "Reddit",
-   "title": "Have your ever seen this?",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xmmvdr/have_your_ever_seen_this/",
-   "ts": 1793691841000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "What Pirate economy cards are you hoping to see next season",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xmhgtp/what_pirate_economy_cards_are_you_hoping_to_see/",
-   "ts": 1793674172000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "Entire lobby going quills and demons except for one guy who went 8th",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xmarou/entire_lobby_going_quills_and_demons_except_for/",
-   "ts": 1793656464000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "Very well",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xmad6l/very_well/",
-   "ts": 1793655524000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "TIL: Enhance-o Mechano can give Fishbait Divine Shield and Windfury Beasts attack twice into them.",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xma202/til_enhanceo_mechano_can_give_fishbait_divine/",
-   "ts": 1793654811000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "Balance patch sneak peak for tomorrow",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xm3n0k/balance_patch_sneak_peak_for_tomorrow/",
-   "ts": 1793640759000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "You ain't taking it Altman",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xluz53/you_aint_taking_it_altman/",
-   "ts": 1793619797000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Reddit",
-   "title": "37.0.1 Hotfix Patch - Rolling out on October 19",
-   "url": "https://www.reddit.com/r/BobsTavern/comments/1xa02xx/3701_hotfix_patch_rolling_out_on_october_19/",
-   "ts": 1792423984000,
-   "kind": "discussion"
-  },
-  {
-   "source": "Blizzard Entertainment",
-   "title": "37.0 Patch Notes - Blizzard Entertainment",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1JS3UwQ1pMb3FEaTdPUWlZc3lqVHVDZEhNWGRwdmJfOFNrWkdIYUVHdjVTQ0hiMzBvVzVpTkNpZzRVeEllQ3VHTGQ4Ml9GN2FfTWROenJkM1ZEdThIU1JNMldDN25QUTZCQXpHRmt4YmtocmtVZDA1cw?oc=5",
-   "ts": 1791788400000,
-   "kind": "news"
-  },
-  {
-   "source": "Blizzard Entertainment",
-   "title": "[Updated 9/29/2026] 36.6 Patch Notes - Blizzard Entertainment",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBsMzFfOFBZNnF3TEVxbXFOVHdtN3IwREJIc1IzWnpwa0hyTDF4LVAwOFg2aE1DYkJDeS1sN1NYSVFPdFJUbmw3RjlMWGRGV25yZkoyWWRtUG9FWW4x?oc=5",
-   "ts": 1790665200000,
-   "kind": "news"
-  },
-  {
-   "source": "Blizzard News",
-   "title": "[Updated 9/29/2026] 36.6 Patch Notes — Hearthstone - Blizzard News",
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNd3dFM2ZUNV9wLWhodUIzNVZKeXk2VGJ4Wi05dFpRR2pVYXNLY2d4WFFlbXVack92LW5CUnZJT1BXXzJXYlo1V1JSaFIyb0Vpc2o3SFN0eXFPcGdsNWFnb0NCbjdaQ2l1WTgtNUhnQWI5bDdnSDJ6MUZ5d2ZzRlpxZ1IyejFfVDV3ajJz?oc=5",
-   "ts": 1790665200000,
-   "kind": "news"
-  },
-  {
-   "source": "手机新浪网",
-   "title": "#孙颖莎vs王曼昱##炉石酒馆战棋##文婕斋主人# ​ - 手机新浪网",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBvYW1Mc1R6eEVwdzBVUzVHTDhXQUUtUERFYzZHZFFkWHRtY0JsdzAwVDk0a2czV3lFT19KMHptSkhZeVZsNEZBSkp6cVY3SFBoTVIxSzBpdEhBZGNzaldsVXM4MA?oc=5",
-   "ts": 1790492400000,
-   "kind": "news"
-  },
-  {
-   "source": "Blizzard Entertainment",
-   "title": "Aberrations Join Battlegrounds at BlizzCon! - Blizzard Entertainment",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1qTEk4S05va1VJbnpXbzNWZFVvM0RzUjIwNHpJTU40cmdPX25zSzdlMnVxcVBJb1VVTjF1QkNORGI2MElkdFV6Y010eDBORnlXNEd4emsyd0xRVW1p?oc=5",
-   "ts": 1789196400000,
-   "kind": "news"
-  },
-  {
-   "source": "Esports.gg",
-   "title": "Hearthstone patch notes today: Chow Down removed, Battlegrounds updates, and more - Esports.gg",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUlpCc0ljRURjVmc1UWV4OGV4YlRsMmt0c1RHMGtnLVkyWGV2TGRYWjBxTVFSSlBybmpqX3ZNclZyNlgweWswV0ZaaGxiUWxOdHlVUGRJei01b3dCVWVXbEliN0FqNnk0M08wdnVydUk1RjczY1hvSHFEYTVqc0ZwU3l0QlBKVElwN3k3NTFIajV2Q3NDMlRNOW1UVFVfbWIwU0gxZ2hSb2ZweDZMYlkyaVN2N1dOdw?oc=5",
-   "ts": 1788418800000,
-   "kind": "news"
-  },
-  {
-   "source": "17173",
-   "title": "《炉石传说》英雄选择不用愁，酒馆战棋一图流英雄解读 - 17173",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE16QVdvTnY4V2lkQ3A1WXlYY2E1RGFtWEhIYjlrT3plVmk5bUlUQm5lN3NqT1dhRzE1elFaYTMzeFRkeHNGanhoZFpWdGN6MVFQYjBIdnFJYXJVOTBLWWFsRjZYOHI?oc=5",
-   "ts": 1784876400000,
-   "kind": "news"
-  },
-  {
-   "source": "Blizzard News",
-   "title": "35.6.2 Patch Notes — Hearthstone - Blizzard News",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9RenYxQTRDUV9WdzEwaENxWHNCc3ZvQWM4R2lhNUZDYmloSm5Hd1VPT2M1TXZZQ3E1bUNuVW1OQ2d3TXZxNlE4RHFRcnBHcWxVcVdLankxVHB6Tkw2VHd1bmZhb0JPTjgzMXpSTlU2ZndDTWUxT0E?oc=5",
-   "ts": 1781161200000,
-   "kind": "news"
-  }
- ]
+  "updated": "2026-11-03T13:35:22.912Z",
+  "total": 13,
+  "items": [
+    {
+      "source": "Reddit",
+      "title": "Don't you think Blizzard nerfed Pirates too much?",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xmd36n/dont_you_think_blizzard_nerfed_pirates_too_much/",
+      "ts": 1793662172000,
+      "kind": "meta",
+      "tagZh": "天梯平衡",
+      "tagZhtw": "天梯平衡",
+      "titleZh": "你不觉得暴雪削弱海盗太多了吗？",
+      "titleZhtw": "你不觉得暴雪削弱海盜太多了吗？"
+    },
+    {
+      "source": "Reddit",
+      "title": "Entire lobby going quills and demons except for one guy who went 8th",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xmarou/entire_lobby_going_quills_and_demons_except_for/",
+      "ts": 1793656464000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "本局全员里的所有玩家都去野猪人和恶魔，除了一个获得第8名的家伙",
+      "titleZhtw": "本局全员里的所有玩家都去野豬人和惡魔，除了一个獲得第8名的家伙"
+    },
+    {
+      "source": "Reddit",
+      "title": "TIL: Enhance-o Mechano can give Fishbait Divine Shield and Windfury Beasts attack twice into them.",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xma202/til_enhanceo_mechano_can_give_fishbait_divine/",
+      "ts": 1793654811000,
+      "kind": "mechanic",
+      "tagZh": "机制冷知识",
+      "tagZhtw": "機制冷知識",
+      "titleZh": "机制冷知识 ：强化机器人可以给鱼饵圣盾和风怒兽攻击两次。",
+      "titleZhtw": "機制冷知識 ：強化機器人可以给魚餌聖盾術和風怒兽攻击两次。"
+    },
+    {
+      "source": "Reddit",
+      "title": "Does anyone actually prefer Aberrations to Naga?",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xm3uct/does_anyone_actually_prefer_aberrations_to_naga/",
+      "ts": 1793641209000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "真的有人更喜欢畸变而不是纳迦吗？",
+      "titleZhtw": "真的有人更喜欢畸變體而不是納迦吗？"
+    },
+    {
+      "source": "Reddit",
+      "title": "Balance patch sneak peak for tomorrow",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xm3n0k/balance_patch_sneak_peak_for_tomorrow/",
+      "ts": 1793640759000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "明天的平衡更新补丁前瞻偷跑",
+      "titleZhtw": "明天的平衡更新更新檔搶先預覽"
+    },
+    {
+      "source": "Reddit",
+      "title": "37.0.1 Hotfix Patch - Rolling out on October 19",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xa02xx/3701_hotfix_patch_rolling_out_on_october_19/",
+      "ts": 1792423984000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "37.0.1热修补丁更新- 10月19日推出",
+      "titleZhtw": "37.0.1即時修正更新檔更新- 10月19日推出"
+    },
+    {
+      "source": "Blizzard Entertainment",
+      "title": "37.0 Patch Notes - Blizzard Entertainment",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1JS3UwQ1pMb3FEaTdPUWlZc3lqVHVDZEhNWGRwdmJfOFNrWkdIYUVHdjVTQ0hiMzBvVzVpTkNpZzRVeEllQ3VHTGQ4Ml9GN2FfTWROenJkM1ZEdThIU1JNMldDN25QUTZCQXpHRmt4YmtocmtVZDA1cw?oc=5",
+      "ts": 1791788400000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "37.0版本更新公告-暴雪官方",
+      "titleZhtw": "37.0版本更新說明-暴雪官方"
+    },
+    {
+      "source": "Blizzard Entertainment",
+      "title": "[Updated 9/29/2026] 36.6 Patch Notes - Blizzard Entertainment",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBsMzFfOFBZNnF3TEVxbXFOVHdtN3IwREJIc1IzWnpwa0hyTDF4LVAwOFg2aE1DYkJDeS1sN1NYSVFPdFJUbmw3RjlMWGRGV25yZkoyWWRtUG9FWW4x?oc=5",
+      "ts": 1790665200000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "[2026年9月29日更新] 36.6版本更新公告-暴雪官方",
+      "titleZhtw": "[2026年9月29日更新] 36.6版本更新說明-暴雪官方"
+    },
+    {
+      "source": "Blizzard News",
+      "title": "[Updated 9/29/2026] 36.6 Patch Notes — Hearthstone - Blizzard News",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNd3dFM2ZUNV9wLWhodUIzNVZKeXk2VGJ4Wi05dFpRR2pVYXNLY2d4WFFlbXVack92LW5CUnZJT1BXXzJXYlo1V1JSaFIyb0Vpc2o3SFN0eXFPcGdsNWFnb0NCbjdaQ2l1WTgtNUhnQWI5bDdnSDJ6MUZ5d2ZzRlpxZ1IyejFfVDV3ajJz?oc=5",
+      "ts": 1790665200000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "[2026年9月29日更新] 36.6版本更新公告—《炉石传说》-暴雪新闻",
+      "titleZhtw": "[2026年9月29日更新] 36.6版本更新說明—《爐石戰記》-暴雪新闻"
+    },
+    {
+      "source": "Blizzard Entertainment",
+      "title": "Aberrations Join Battlegrounds at BlizzCon! - Blizzard Entertainment",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1qTEk4S05va1VJbnpXbzNWZFVvM0RzUjIwNHpJTU40cmdPX25zSzdlMnVxcVBJb1VVTjF1QkNORGI2MElkdFV6Y010eDBORnlXNEd4emsyd0xRVW1p?oc=5",
+      "ts": 1789196400000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "畸变加入BlizzCon的战场！ -暴雪官方",
+      "titleZhtw": "畸變體加入BlizzCon的戰场！ -暴雪官方"
+    },
+    {
+      "source": "Esports.gg",
+      "title": "Hearthstone patch notes today: Chow Down removed, Battlegrounds updates, and more - Esports.gg",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUlpCc0ljRURjVmc1UWV4OGV4YlRsMmt0c1RHMGtnLVkyWGV2TGRYWjBxTVFSSlBybmpqX3ZNclZyNlgweWswV0ZaaGxiUWxOdHlVUGRJei01b3dCVWVXbEliN0FqNnk0M08wdnVydUk1RjczY1hvSHFEYTVqc0ZwU3l0QlBKVElwN3k3NTFIajV2Q3NDMlRNOW1UVFVfbWIwU0gxZ2hSb2ZweDZMYlkyaVN2N1dOdw?oc=5",
+      "ts": 1788418800000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "《炉石传说》今日版本更新公告：已移除Chow Down、战场更新和更多内容- Esports.gg",
+      "titleZhtw": "《爐石戰記》今日版本更新說明：已移除Chow Down、戰场更新和更多内容- Esports.gg"
+    },
+    {
+      "source": "17173",
+      "title": "《炉石传说》英雄选择不用愁，酒馆战棋一图流英雄解读 - 17173",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE16QVdvTnY4V2lkQ3A1WXlYY2E1RGFtWEhIYjlrT3plVmk5bUlUQm5lN3NqT1dhRzE1elFaYTMzeFRkeHNGanhoZFpWdGN6MVFQYjBIdnFJYXJVOTBLWWFsRjZYOHI?oc=5",
+      "ts": 1784876400000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "《炉石传说》英雄选择不用愁，酒馆战棋一图流英雄解读 - 17173",
+      "titleZhtw": "《爐石戰記》英雄選擇不用愁，英雄戰場一圖流英雄解读 - 17173"
+    },
+    {
+      "source": "Blizzard News",
+      "title": "35.6.2 Patch Notes — Hearthstone - Blizzard News",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9RenYxQTRDUV9WdzEwaENxWHNCc3ZvQWM4R2lhNUZDYmloSm5Hd1VPT2M1TXZZQ3E1bUNuVW1OQ2d3TXZxNlE4RHFRcnBHcWxVcVdLankxVHB6Tkw2VHd1bmZhb0JPTjgzMXpSTlU2ZndDTWUxT0E?oc=5",
+      "ts": 1781161200000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "35.6.2版本更新公告—炉石传说-暴雪新闻",
+      "titleZhtw": "35.6.2版本更新說明—爐石戰記-暴雪新闻"
+    }
+  ]
 }

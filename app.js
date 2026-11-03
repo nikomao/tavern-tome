@@ -496,6 +496,48 @@
     var popClose = document.getElementById("cpClose");
     var TOUCH = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
 
+    function renderPopExtra(c, cardName){
+      var extraBox = pop.querySelector(".cp-extra");
+      if(!extraBox){
+        extraBox = document.createElement("div");
+        extraBox.className = "cp-extra";
+        popText.parentNode.insertBefore(extraBox, popLink);
+      }
+      var parts = [];
+      if(c && c.a != null && c.h != null){
+        parts.push('<span class="cp-golden">✨ 金色 <b>' + (c.a * 2) + '/' + (c.h * 2) + '</b> (翻倍)</span>');
+      }
+      if(cardName && typeof COMP_NOTES !== "undefined"){
+        for(var k in COMP_NOTES){
+          var m = COMP_NOTES[k].cardsMapping;
+          if(!m) continue;
+          if(m.carrier && m.carrier.indexOf(cardName) !== -1){
+            parts.push('<span class="cp-role carrier">🎯 核心承载宿主</span>');
+            break;
+          } else if(m.engine && m.engine.indexOf(cardName) !== -1){
+            parts.push('<span class="cp-role engine">⚡ 核心乘数引擎</span>');
+            break;
+          } else if(m.finisher && m.finisher.indexOf(cardName) !== -1){
+            parts.push('<span class="cp-role finisher">👑 终局终结位</span>');
+            break;
+          }
+        }
+      }
+      extraBox.innerHTML = parts.join(" ");
+    }
+
+    function formatCardKeywords(text){
+      return String(text || "")
+        .replace(/战吼/g, '<span class="cp-kw battlecry">战吼</span>')
+        .replace(/亡语/g, '<span class="cp-kw deathrattle">亡语</span>')
+        .replace(/圣盾/g, '<span class="cp-kw shield">圣盾</span>')
+        .replace(/烈毒|剧毒/g, '<span class="cp-kw poison">烈毒</span>')
+        .replace(/风怒/g, '<span class="cp-kw windfury">风怒</span>')
+        .replace(/嘲讽/g, '<span class="cp-kw taunt">嘲讽</span>')
+        .replace(/复生/g, '<span class="cp-kw reborn">复生</span>')
+        .replace(/磁力/g, '<span class="cp-kw magnetic">磁力</span>');
+    }
+
     function fillCard(name){
       var c = CARDS[name];
       if(!c) return false;
@@ -516,7 +558,8 @@
       }
       if(c.r) meta.push(c.r);
       popMeta.innerHTML = meta.join(" · ");
-      popText.textContent = c.x || "暂未收录卡牌描述";
+      popText.innerHTML = formatCardKeywords(c.x || "暂未收录卡牌描述");
+      renderPopExtra(c, name);
       return true;
     }
 
@@ -537,7 +580,8 @@
         popImg.style.display = "none";
       }
       var en = (window.__lang === "en" && window.EN_CARDS && window.EN_CARDS[id]) ? window.EN_CARDS[id] : null;
-      popName.innerHTML = "<b>" + (en ? en.n : c.n) + "</b>";
+      var cName = (en ? en.n : c.n) || "";
+      popName.innerHTML = "<b>" + cName + "</b>";
       var meta = [];
       if(c.t != null) meta.push(tierStars(c.t));
       if(c.a != null) meta.push(c.a + " / " + c.h);
@@ -547,7 +591,9 @@
       var races = String(c.r || "").split("/").map(function(r){ return isEn ? (EN_RACE[r] || r) : (RACE_CN[r] || r); }).filter(Boolean);
       if(races.length) meta.push(races.join(" / "));
       popMeta.innerHTML = meta.join(" · ");
-      popText.textContent = (en && en.x) ? en.x : (c.x || "暂无卡牌描述");
+      var rawDesc = (en && en.x) ? en.x : (c.x || "暂无卡牌描述");
+      popText.innerHTML = formatCardKeywords(rawDesc);
+      renderPopExtra(c, cName);
       return true;
     }
 
@@ -1532,6 +1578,70 @@
       var host = document.getElementById(id);
       if(!host || !data) return;
       host.innerHTML = "";
+
+      if(id === "heroList"){
+        var TRIBE_CLS = {
+          "恶魔":"demon", "野猪人":"quilboar", "龙族":"dragon", "龙·圣盾":"dragon",
+          "元素":"elemental", "机械":"mech", "鱼人":"murloc", "亡灵":"undead", "野兽":"beast", "海盗":"mech"
+        };
+
+        data.forEach(function(x){
+          var g = (typeof HERO_GUIDE_DATA !== "undefined" && HERO_GUIDE_DATA[x.n]) ? HERO_GUIDE_DATA[x.n] : null;
+          var row = document.createElement("div");
+          row.className = "hg-item hero-rich";
+          var rank = x.rank || (g ? g.tier : "T2");
+          var tag = x.tag || (x.winrate ? "胜率 " + pct(x.winrate) : "");
+
+          var heroId = g ? g.id : "TB_BaconShop_HERO_37";
+          var avatarHtml = '<div class="hc-avatar"><img loading="lazy" src="https://art.hearthstonejson.com/v1/256x/' + heroId + '.jpg" alt="' + x.n + '" onerror="this.style.display=\'none\';"></div>';
+
+          var tribes = (g && g.tribes) ? g.tribes : [];
+          var tribesHtml = tribes.length ? ('<div class="hc-tribes"><span class="hc-lbl">推荐种族：</span>' + tribes.map(function(t){
+            var c = TRIBE_CLS[t] || "";
+            return '<span class="hc-tribe-pill ' + c + '">' + t + '</span>';
+          }).join("") + (g && g.difficulty ? '<span class="hc-diff">' + g.difficulty + '</span>' : '') + '</div>') : '';
+
+          var powerHtml = (g && g.powerName) ? ('<div class="hc-power"><span class="hc-pw-tag">⚡ 技能【' + g.powerName + '】' + (g.powerCost ? '(' + g.powerCost + ')' : '') + '</span><span class="hc-pw-desc">' + g.powerDesc + '</span></div>') : '';
+
+          var stratHtml = (g && g.strategy) ? ('<div class="hc-strat"><span class="hc-lbl">🎯 打法推荐：</span>' + g.strategy + '</div>') : ('<p>' + (x.why || "") + '</p>');
+
+          var trapHtml = (g && g.trap) ? ('<div class="hc-trap"><span class="hc-lbl">⚠️ 避坑要点：</span>' + g.trap + '</div>') : '';
+
+          var keyCards = (g && g.keyCards) ? g.keyCards : [];
+          var cardsHtml = "";
+          if(keyCards.length){
+            cardsHtml = '<div class="hc-cards"><span class="hc-lbl">核心搭档：</span><div class="hc-card-grid">' + keyCards.map(function(c){
+              return '<a class="hc-card-item" href="cards.html?card=' + c.id + '" data-card-id="' + c.id + '" title="' + c.name + ' - ' + (c.role || '') + '">' +
+                '<span class="hc-ci-img"><img loading="lazy" src="pool/' + c.id + '.webp" alt="' + c.name + '"></span>' +
+                '<span class="hc-ci-name">' + c.name + '</span>' +
+                (c.role ? '<span class="hc-ci-role">' + c.role + '</span>' : '') +
+              '</a>';
+            }).join("") + '</div></div>';
+          }
+
+          row.innerHTML = 
+            '<div class="hc-top">' +
+              avatarHtml +
+              '<div class="hc-info">' +
+                '<div class="hc-title-row">' +
+                  '<b class="hc-name">' + x.n + '</b>' +
+                  '<span class="hg-rank ' + String(rank).toLowerCase() + '" title="' + tierName(rank) + '">' + rank + '</span>' +
+                  '<a class="hc-play" href="play.html?hero=' + encodeURIComponent(x.n) + '">对局模拟 →</a>' +
+                '</div>' +
+                (tag ? '<span class="hc-stats">' + tag + '</span>' : '') +
+              '</div>' +
+            '</div>' +
+            powerHtml +
+            tribesHtml +
+            stratHtml +
+            trapHtml +
+            cardsHtml;
+
+          host.appendChild(row);
+        });
+        return;
+      }
+
       data.forEach(function(x){
         var row = document.createElement("div");
         row.className = "hg-item";
@@ -1703,4 +1813,49 @@
   var b = document.getElementById("tierClose");
   if(b) b.addEventListener("click", close);
   document.addEventListener("keydown", function(e){ if(e.key === "Escape" && !modal.hidden) close(); });
+})();
+
+/* ---------- 3D Card Interactive Tilt & Living Sheen ---------- */
+(function initCardTilt(){
+  if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var isTouch = "ontouchstart" in window || (navigator.maxTouchPoints > 0);
+  if(isTouch) return;
+
+  document.addEventListener("mousemove", function(e){
+    var card = e.target.closest ? e.target.closest(".comp-slot, .tb-card, .fc, .ps-slot, .hero-board a, .tc-card") : null;
+    if(!card) return;
+    var rect = card.getBoundingClientRect();
+    if(!rect.width || !rect.height) return;
+    var px = (e.clientX - rect.left) / rect.width - 0.5;
+    var py = (e.clientY - rect.top) / rect.height - 0.5;
+    card.style.setProperty("--rx", (-py * 16).toFixed(1) + "deg");
+    card.style.setProperty("--ry", (px * 16).toFixed(1) + "deg");
+  }, { passive: true });
+
+  document.addEventListener("mouseout", function(e){
+    var card = e.target.closest ? e.target.closest(".comp-slot, .tb-card, .fc, .ps-slot, .hero-board a, .tc-card") : null;
+    if(card && (!e.relatedTarget || !card.contains(e.relatedTarget))){
+      card.style.setProperty("--rx", "0deg");
+      card.style.setProperty("--ry", "0deg");
+    }
+  }, { passive: true });
+})();
+
+/* ---------- Tavern Leveling Curves Tab Switcher ---------- */
+(function initCurvesTabs(){
+  var tabs = document.querySelectorAll(".curves-tab");
+  var panes = document.querySelectorAll(".curves-pane");
+  if(!tabs.length || !panes.length) return;
+
+  tabs.forEach(function(tab){
+    tab.addEventListener("click", function(){
+      var targetId = tab.getAttribute("data-curve");
+      if(!targetId) return;
+      tabs.forEach(function(t){ t.classList.remove("active"); });
+      panes.forEach(function(p){ p.classList.remove("active"); });
+      tab.classList.add("active");
+      var targetPane = document.getElementById("curve-" + targetId);
+      if(targetPane) targetPane.classList.add("active");
+    });
+  });
 })();

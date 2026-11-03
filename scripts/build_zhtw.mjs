@@ -5,7 +5,7 @@
  * 
  * 用法: node scripts/build_zhtw.mjs
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, copyFileSync, mkdirSync, existsSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -76,7 +76,15 @@ const HS_TERMS = [
   ["登顶", "登頂"],
   ["均位", "均位"],
   ["前四", "前四"],
-  ["吃鸡", "奪冠"]
+  ["吃鸡", "奪冠"],
+  ["决策树", "決策樹"],
+  ["黄金法则", "黃金法則"],
+  ["弃核换战力", "棄核換即戰力"],
+  ["狂战斧", "狂暴之斧"],
+  ["顺劈", "順劈斬"],
+  ["锁血", "鎖血"],
+  ["理财", "理財手下"],
+  ["打工人", "過渡手下"]
 ];
 
 // 通用简繁汉字对照表（精选常用 500+ 字）
@@ -261,6 +269,7 @@ const FILES = [
   ["share.html", true],
   ["data.js", false],
   ["comp-notes.js", false],
+  ["hero-guide-data.js", false],
   ["app.js", false],
   ["sim.js", false],
   ["finder.js", false],
@@ -293,5 +302,9 @@ const FILES = [
 console.log("正在同步构建繁体中文版 (zh-TW)...");
 for (const [file, isHtml] of FILES) {
   convertFile(file, isHtml);
+}
+if (existsSync(resolve(root, "news.json"))) {
+  copyFileSync(resolve(root, "news.json"), resolve(twDir, "news.json"));
+  console.log("✓ 同步 news.json 至 zh-TW/news.json");
 }
 console.log("繁体中文同步完成！");

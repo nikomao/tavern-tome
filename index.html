@@ -48,6 +48,7 @@
     <a class="lang-link" href="zh-TW/index.html">繁中</a>
     <nav class="nav" id="nav">
       <a href="#start" data-i18n="start">入门</a>
+      <a href="#curves">节奏</a>
       <a href="#laws" data-i18n="laws">定律</a>
       <a href="#math" data-i18n="math">数学</a>
       <a href="#positioning" data-i18n="positioning">站位</a>
@@ -253,7 +254,167 @@
 
   <div class="callout">
     <span class="callout-tag">下一步</span>
-    <p>会了「怎么打」，再看 <a href="#laws">01 三条定律</a> 和 <a href="#tribes">全种族图鉴</a>。前者讲为什么，后者讲选什么。</p>
+    <p>会了「怎么打」，再看 <a href="#curves">节奏与决策树</a>、<a href="#laws">01 三条定律</a> 和 <a href="#tribes">全种族图鉴</a>。掌握每回合花钱与升本的时机。</p>
+  </div>
+</section>
+
+<!-- ================= 升本节奏与决策树 ================= -->
+<section class="section" id="curves">
+  <div class="section-head">
+    <div class="sec-no">阶</div>
+    <div>
+      <h2>酒馆节奏与关键回合决策树</h2>
+      <p class="sub">新手与老手最大的差距，不是认不认识卡牌，而是几块钱怎么花、第几回合该升本。</p>
+    </div>
+  </div>
+
+  <div class="curves-section">
+    <div class="curves-tabs" role="tablist">
+      <button type="button" class="curves-tab active" data-curve="standard">🛡️ 标准稳健流 (常规运营)</button>
+      <button type="button" class="curves-tab" data-curve="fast5">⚡ 科技速5流 (天胡速攀)</button>
+      <button type="button" class="curves-tab" data-curve="staylow">🔨 低本锁搜流 (恶魔/机械胚子)</button>
+      <button type="button" class="curves-tab" data-curve="endgame">⚔️ 决战拆招秘籍 (针对卡与弃核换战力)</button>
+    </div>
+
+    <!-- 1. 标准稳健流 -->
+    <div class="curves-pane active" id="curve-standard">
+      <div class="curves-hero-box">
+        <div>
+          <b>适用英雄与环境：</b>
+          <p>绝大多数常规英雄（无特殊经济技能时通用）。稳吃烂分、冲击前三的首选骨架。</p>
+        </div>
+        <span class="curves-risk">锁血红线：血量 &lt; 18 必须停止升本全搜战力</span>
+      </div>
+      <div class="curve-flow-grid">
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 1</span><span class="tn-gold">3 铸币</span></div>
+          <div class="tn-action">抓 1 星理财怪或高战力打工人</div>
+          <div class="tn-desc">优先抓取【千纸幼龙】、【粗暴的猢狲】或产出资源的理财随从。刷出两张理财可「买 1 冻 1」。</div>
+          <div class="tn-warn">⚠️ 禁忌：绝对不要刷新酒馆！花 1 块钱刷新等于白白浪费 33% 的初始启动资本。</div>
+        </div>
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 2</span><span class="tn-gold">4 铸币</span></div>
+          <div class="tn-action">升 2 星酒馆 (4 铸币)</div>
+          <div class="tn-desc">固定动作。无需犹豫，全场除个别特殊英雄外皆升本，战力差距极小。</div>
+        </div>
+        <div class="turn-node key">
+          <div class="tn-head"><span class="tn-round">回合 3</span><span class="tn-gold">5 铸币</span></div>
+          <div class="tn-action">【分水岭抉择】卖理财升 3 本 或 卖 1 买 2 稳血</div>
+          <div class="tn-desc">若手头有理财随从/衍生物：果断卖掉凑 6 币，升 3 星酒馆抢科技；若场面极弱且无理财：卖掉最弱怪抓 2 张 2 星优质随从保血！</div>
+          <div class="tn-warn">⚠️ 禁忌：千万不要「升本后空过」，若本回合不买怪且场面空虚，会被入 6–8 血。</div>
+        </div>
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 4</span><span class="tn-gold">6 铸币</span></div>
+          <div class="tn-action">抓 2 张最高即战力随从，拉满 7 格场面</div>
+          <div class="tn-desc">继续铺满场面。战棋前中期「随从数量 &gt; 随从质量」，哪怕是白板，多一个攻击频次就能多换掉对面一个盾。</div>
+        </div>
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 5</span><span class="tn-gold">7 铸币</span></div>
+          <div class="tn-action">升 3 星酒馆 (若之前未升) + 抓 1 张随从</div>
+          <div class="tn-desc">花费 4 铸币升 3 本，剩余 3 铸币正好抓取 1 张强力 3 星胚子（如青铜守卫、偏折机器人雏形）。</div>
+        </div>
+        <div class="turn-node key">
+          <div class="tn-head"><span class="tn-round">回合 6</span><span class="tn-gold">8 铸币</span></div>
+          <div class="tn-action">升 4 星酒馆 (黄金枢纽回合)</div>
+          <div class="tn-desc">4 星酒馆是各大流派核心卡（执念诗心龙前置龙、达卡莱附魔师、机械磁力组件）的聚集地，必须在 8 费准时抵达。</div>
+        </div>
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 7</span><span class="tn-gold">9 铸币</span></div>
+          <div class="tn-action">【大搜定型期】搜核心定方向，合三连找 5 本大怪</div>
+          <div class="tn-desc">本回合把铸币花在刷新与找核心上，根据来牌锁定最终体系（龙/野兽/恶魔/元素），合出三连碰 5 本牌。</div>
+        </div>
+        <div class="turn-node key">
+          <div class="tn-head"><span class="tn-round">回合 8+</span><span class="tn-gold">10 铸币</span></div>
+          <div class="tn-action">升 5 星酒馆，锁定 T0 核心体系</div>
+          <div class="tn-desc">升 5 本全力寻找【铜须】、【达卡莱】、【诗心龙】或【卡尔加】。一旦就位，直接开启万点成长乘数！</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. 科技速5流 -->
+    <div class="curves-pane" id="curve-fast5">
+      <div class="curves-hero-box">
+        <div>
+          <b>适用英雄与环境：</b>
+          <p>森林守护者欧穆、钩牙船长、米尔豪斯·法力风暴、阿莱克丝塔萨等自带充裕经济或减费能力的强力英雄。</p>
+        </div>
+        <span class="curves-risk">核心优势：抢先抽空公共卡池中的核心橙卡，让慢速对手无牌可拿</span>
+      </div>
+      <div class="curve-flow-grid">
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 1–3</span><span class="tn-gold">3–5 铸币</span></div>
+          <div class="tn-action">极速抢 3 本，借助技能节省铸币</div>
+          <div class="tn-desc">欧穆升本给 2 币，米尔豪斯买怪只需 2 币。在回合 3 依靠英雄技能直接跳上 3 星酒馆。</div>
+        </div>
+        <div class="turn-node key">
+          <div class="tn-head"><span class="tn-round">回合 5–6</span><span class="tn-gold">7–8 铸币</span></div>
+          <div class="tn-action">连跳 4 本并直逼 5 本</div>
+          <div class="tn-desc">比常规流派提早 1–2 个回合升入高本。此时即使被对手入两波（各 4–6 血），只要剩余血量 &gt; 20，完全在可承受阈值之内。</div>
+        </div>
+        <div class="turn-node key">
+          <div class="tn-head"><span class="tn-round">回合 7</span><span class="tn-gold">9 铸币</span></div>
+          <div class="tn-action">入主 5 本大搜！独享铜须/诗心龙公共池</div>
+          <div class="tn-desc">酒馆战棋所有玩家共享同一个卡池（5 本单卡全池仅有 15 张）。你第 7 回合到 5 本，就比别人更先抽到核心，直接锁死对手上限！</div>
+          <div class="tn-warn">⚠️ 紧急刹车：若在第 6 回合血量跌破 18 点，必须立即放弃速 5，就地搜牌拉战力锁血！</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. 低本锁搜流 -->
+    <div class="curves-pane" id="curve-staylow">
+      <div class="curves-hero-box">
+        <div>
+          <b>适用体系：</b>
+          <p>恶魔自残成长流（找愤怒编织者/灵魂倒带者）、机械磁力流、特定野兽三连。核心牌密集分布在 2–3 本。</p>
+        </div>
+        <span class="curves-risk">翻车点：长时间停留在低本若搜不到三连，容易被高本体系一波清算</span>
+      </div>
+      <div class="curve-flow-grid">
+        <div class="turn-node">
+          <div class="tn-head"><span class="tn-round">回合 3–5</span><span class="tn-gold">5–7 铸币</span></div>
+          <div class="tn-action">锁定 2–3 本，集中资源凑金色胚子</div>
+          <div class="tn-desc">不随大流升本。利用低本牌池种类少的天然优势，反复搜取相同随从合出金色，同时将自残/磁力身材堆到 50+。</div>
+        </div>
+        <div class="turn-node key">
+          <div class="tn-head"><span class="tn-round">回合 6–7</span><span class="tn-gold">8–9 铸币</span></div>
+          <div class="tn-action">手握 2–3 个三连奖券，连升两本「直碰 5/6 本大怪」</div>
+          <div class="tn-desc">利用打造成型的巨型胚子锁住血量，在同一回合一口气升本，然后打出三连发现 5 星或 6 星关键终结卡。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. 决战拆招秘籍 -->
+    <div class="curves-pane" id="curve-endgame">
+      <div class="curves-hero-box">
+        <div>
+          <b>大师级博弈思维：</b>
+          <p>进入最后 1v1 或前四强决赛圈，比的不是谁面板大，而是谁更能针对对手的弱点。</p>
+        </div>
+        <span class="curves-risk">黄金法则：战斗前最后 10 秒，必须重新排布 1–7 号位！</span>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h4>💡 弃核置换法则 (Sell the Engine)</h4>
+          <p>【新手最致命的错】：带着 2/2 白板铜须、4/4 卡尔加或诺米打入决赛！它们在备战阶段已经完成使命，在战斗中就是纯粹的白板送死怪！战斗前果断卖掉，换入【圣盾烈毒】、【风怒】或【火车王】，相当于全队凭空多出一个顶级战力！</p>
+          <div class="tech-tags"><span class="tech-tag">备战最后 10 秒</span><span class="tech-tag">卖掉铜须/卡尔加</span><span class="tech-tag">换即战力毒/盾</span></div>
+        </div>
+        <div class="tech-card">
+          <h4>🛡️ 狂战斧夹心站位 (Anti-Cleave)</h4>
+          <p>对手有狂战斧（死神4000型、狂战海盗、洞穴多头蛇）时，【嘲讽怪绝对不能放在中间】！若放在 4 号位，狂战一刀顺劈 3/4/5 号位，全场瞬间蒸发。正确站位：把嘲讽大怪摆在 1 号位或 7 号位边缘，让狂战斧只能顺劈空气！</p>
+          <div class="tech-tags"><span class="tech-tag">嘲讽靠边放</span><span class="tech-tag">核心引擎绝不贴嘲讽</span><span class="tech-tag">两翼保护</span></div>
+        </div>
+        <div class="tech-card">
+          <h4>☠️ 万点身材单核克制 (Anti-Giant 10,000 Stats)</h4>
+          <p>面对对手 10,000/10,000 的大树或融合怪，拼身材毫无胜算。唯一解法：【圣盾烈毒】、【复生烈毒】或【火车王里诺艾】精准对位换掉；前置低攻圣盾小怪先手破掉对面的圣盾，紧接着烈毒一击必杀！</p>
+          <div class="tech-tags"><span class="tech-tag">火车王</span><span class="tech-tag">烈毒鱼人</span><span class="tech-tag">圣盾破盾怪</span></div>
+        </div>
+        <div class="tech-card">
+          <h4>⚡ 针对亡语与全场圣盾 (Anti-Shield & Titus)</h4>
+          <p>对手全队圣盾或满编套娃机械/亡灵？1 号位塞入一个【坑道爆破师】，进场打出全场 AOE，瞬间破光敌我全部圣盾并清掉小树苗/低血复生！或者后排补上【扎普·斯罗格】，先手精准刺杀对手核心提图斯·瑞文戴尔！</p>
+          <div class="tech-tags"><span class="tech-tag">坑道爆破师</span><span class="tech-tag">扎普·斯罗格</span><span class="tech-tag">破除瑞文</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -985,6 +1146,7 @@
 <script src="stats-mmr.js?v=20261105d"></script>
 <script src="stats.js?v=20261105d"></script>
 <script src="comp-notes.js?v=20261105d"></script>
+<script src="hero-guide-data.js?v=20261105d"></script>
 <script src="extra-cards.js?v=20261105d"></script>
 <script src="cards.js?v=20261105d"></script>
 <script src="app.js?v=20261105d"></script>
