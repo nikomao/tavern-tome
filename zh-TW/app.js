@@ -138,6 +138,81 @@
     return list[0];
   }
 
+  function compTeachingHTML(c, note, rank){
+    if(!note) return "";
+    var defaultOpen = rank < 2 ? " open" : "";
+    var h = '<details class="comp-teaching"' + defaultOpen + ' id="teach-' + (c.key || "") + '">';
+    h += '<summary class="ct-summary">';
+    h += '<span class="ct-summary-title"><b>💡 新手實操教学</b>：卡牌流向 · 數值推演舉例 · 牌面替換过程</span>';
+    h += '<span class="ct-summary-hint">点按展開/收起 ▾</span>';
+    h += '</summary>';
+    h += '<div class="ct-body">';
+
+    // 1. 卡牌对應與资源流向
+    if(note.cardsMapping){
+      var cm = note.cardsMapping;
+      h += '<div class="ct-block ct-flow">';
+      h += '<div class="ct-block-head"><span class="ct-badge flow">🎯 卡牌对應與资源流向</span> 资源從哪來？贴給誰？誰負责加倍？</div>';
+      h += '<div class="ct-flow-grid">';
+      h += '<div class="ct-flow-item"><span class="ct-role src">1. 资源產出（發薪水）</span><p>' + cm.source + '</p></div>';
+      h += '<div class="ct-flow-arrow">→</div>';
+      h += '<div class="ct-flow-item"><span class="ct-role eng">2. 乘數放大（加杠杆）</span><p>' + cm.engine + '</p></div>';
+      h += '<div class="ct-flow-arrow">→</div>';
+      h += '<div class="ct-flow-item highlight"><span class="ct-role car">3. 唯一承載（贴給誰）</span><p><b>' + cm.carrier + '</b></p></div>';
+      h += '<div class="ct-flow-arrow">→</div>';
+      h += '<div class="ct-flow-item"><span class="ct-role fin">4. 決勝終结</span><p>' + cm.finisher + '</p></div>';
+      h += '</div></div>';
+    }
+
+    // 2. 數值推演舉例
+    if(note.mathExample && note.mathExample.steps){
+      var me = note.mathExample;
+      h += '<div class="ct-block ct-math">';
+      h += '<div class="ct-block-head"><span class="ct-badge math">🔢 實操數值推演舉例</span> ' + me.title + '</div>';
+      h += '<div class="ct-math-list">';
+      me.steps.forEach(function(s, idx){
+        h += '<div class="ct-math-step">';
+        h += '<div class="ct-math-step-head"><b>階段 ' + (idx + 1) + '：' + s.round + '</b><span class="ct-math-state">' + s.state + '</span></div>';
+        h += '<p class="ct-math-desc">' + s.math + '</p>';
+        h += '</div>';
+      });
+      h += '</div></div>';
+    }
+
+    // 3. 陣容替換过程
+    if(note.transitions && note.transitions.length){
+      h += '<div class="ct-block ct-trans">';
+      h += '<div class="ct-block-head"><span class="ct-badge trans">🔄 陣容过渡與替換變化</span> 前期留什麼？核心來時誰換誰？決賽淘汰誰？</div>';
+      h += '<div class="ct-trans-grid">';
+      note.transitions.forEach(function(tr){
+        h += '<div class="ct-trans-col">';
+        h += '<div class="ct-trans-title">' + tr.phase + '</div>';
+        if(tr.pick) h += '<div class="ct-trans-row"><span class="ct-tlabel pick">抓牌</span>' + tr.pick + '</div>';
+        if(tr.hold) h += '<div class="ct-trans-row"><span class="ct-tlabel hold">保留</span>' + tr.hold + '</div>';
+        if(tr.replace) h += '<div class="ct-trans-row"><span class="ct-tlabel rep">替換</span><b>' + tr.replace + '</b></div>';
+        if(tr.trigger) h += '<div class="ct-trans-row"><span class="ct-tlabel trig">信號</span>' + tr.trigger + '</div>';
+        if(tr.drop) h += '<div class="ct-trans-row"><span class="ct-tlabel drop">淘汰</span>' + tr.drop + '</div>';
+        if(tr.final) h += '<div class="ct-trans-row"><span class="ct-tlabel fin">決勝</span>' + tr.final + '</div>';
+        h += '</div>';
+      });
+      h += '</div></div>';
+    }
+
+    // 4. 新手避坑
+    if(note.mistakes && note.mistakes.length){
+      h += '<div class="ct-block ct-mistakes">';
+      h += '<div class="ct-block-head"><span class="ct-badge mis">⚠️ 新手致命避坑</span> 照著玩為什麼还是速八？</div>';
+      h += '<ul class="ct-mis-list">';
+      note.mistakes.forEach(function(m){
+        h += '<li>' + m + '</li>';
+      });
+      h += '</ul></div>';
+    }
+
+    h += '</div></details>';
+    return h;
+  }
+
   function bestCompHTML(t){
     var c = bestCompFor(t);
     if(!c) return "";
@@ -160,31 +235,15 @@
         '<em class="stars">' + stars + '</em></a>';
     }).join("");
 
-    var guideHtml = "";
-    if(note && (note.whyBest || note.growth || note.steps)){
-      var stepsHtml = "";
-      if(note.steps && note.steps.length){
-        stepsHtml = '<div class="tbg-steps">' + note.steps.map(function(s){
-          return '<div class="tbg-s"><b>' + s.title + '</b><span>' + s.desc + '</span></div>';
-        }).join("") + '</div>';
-      }
-      guideHtml = '<div class="tb-guide" id="guide-' + c.key + '">' +
-        '<div class="tb-guide-grid">' +
-          (note.whyBest ? '<div class="tbg-col"><div class="tbg-title"><span class="tbg-icon">👑</span> 為什麼是本週最佳？</div><p class="tbg-text">' + note.whyBest + '</p></div>' : '') +
-          (note.growth ? '<div class="tbg-col"><div class="tbg-title"><span class="tbg-icon">🔄</span> 卡牌成長閉環（新手怎麼看懂）</div><p class="tbg-text">' + note.growth + '</p></div>' : '') +
-        '</div>' +
-        (stepsHtml ? '<div class="tbg-steps-wrap"><div class="tbg-title"><span class="tbg-icon">⚡</span> 新手實操三步法：從拿到核心到體質破萬</div>' + stepsHtml + '</div>' : '') +
-      '</div>';
-    }
+    var teachingHtml = compTeachingHTML(c, note, 0);
 
     return '<div class="tribe-best"><div class="tb-head"><span class="tb-label">本週最佳</span><b>' + c.name + '</b>' +
       '<span class="cc-tier ' + String(c.tier).toLowerCase() + '" title="' + tierName(c.tier) + '">' + c.tier + '</span>' +
       '<span class="tb-meta">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) +
       '% · 奪冠 ' + Math.round((c.win || 0) * 100) + '%</span>' +
-      (guideHtml ? '<button type="button" class="tb-toggle-guide" data-comp="' + c.key + '">收起成長指南 ▴</button>' : '') +
       '<a class="tb-play" href="play.html?comp=' + c.key + '">對局模式</a></div>' +
       '<div class="tb-cards">' + cards + '</div>' +
-      guideHtml +
+      teachingHtml +
       '</div>';
   }
 
@@ -197,11 +256,21 @@
         return '<div class="sc-stage"><div class="sc-stage-title">' + st.stage + '</div><div class="sc-stage-desc">' + st.desc + '</div></div>';
       }).join("") + '</div>';
     }
+    var exampleHtml = "";
+    if(sc.concreteExample){
+      exampleHtml = '<div class="sc-box sc-example-box" style="grid-column:1/-1;border-color:rgba(226,180,95,.4);background:rgba(226,180,95,.06);">' +
+        '<div class="sc-title" style="color:var(--gold-2);"><span class="sc-badge math">🔢 實操數值推演舉例</span> ' + (sc.concreteExample.title || '成長算式推演') + '</div>' +
+        '<p class="sc-desc" style="color:var(--ink);line-height:1.6;">' + sc.concreteExample.math + '</p>' +
+        '</div>';
+    }
     return '<div class="scaling-wrap">' +
       '<h4>種族成長流水線：资源怎麼用？體質贴給誰？怎麼破萬？<span class="h4-hint">從加法到複利的實操指引</span></h4>' +
       '<div class="scaling-grid">' +
         '<div class="sc-box"><div class="sc-title"><span class="sc-badge resource">核心资源</span> 资源從何而來？怎麼轉？</div><p class="sc-desc">' + sc.resource + '</p></div>' +
-        '<div class="sc-box"><div class="sc-title"><span class="sc-badge carrier">載體選择</span> 體質贴給誰？誰承載萬点？</div><p class="sc-desc">' + sc.carrier + '</p></div>' +
+        '<div class="sc-box"><div class="sc-title"><span class="sc-badge carrier">載體選择</span> 體質贴給誰？誰承載萬点？</div><p class="sc-desc">' +
+          (sc.carrierTarget ? '<b style="color:var(--gold-2);display:block;margin-bottom:4px;">🎯 锁定宿主：' + sc.carrierTarget + '</b>' : '') +
+          sc.carrier + '</p></div>' +
+        exampleHtml +
       '</div>' +
       (stagesHtml ? '<div class="sc-pipeline-box"><div class="sc-pipeline-head">📈 從零到上萬：三階膨胀流水線</div>' + stagesHtml + '</div>' : '') +
       (sc.proTip ? '<div class="sc-protip"><span class="sc-protip-tag">💡 實操避坑：</span><span>' + sc.proTip + '</span></div>' : '') +
@@ -1108,6 +1177,7 @@
           '<div class="cc-lineup">' + cards + '</div>' +
           '<div class="cc-pos"><b>站位</b> ' + ((note && note.pos) ? note.pos + '（手工站位）' : posHint(c)) + '</div>' +
           trinketHTML +
+          compTeachingHTML(c, note, rank) +
           '<div class="cc-foot"><span>推薦英雄：' + ((c.heroes || []).join(" · ") || "—") + '</span><span>' +
           (c.difficulty || "") + (c.power ? ' / 強度 ' + c.power : "") + '</span></div>' +
           '</article>';
