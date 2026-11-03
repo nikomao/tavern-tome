@@ -190,8 +190,57 @@
     document.getElementById("stGold").textContent = state.gold;
     document.getElementById("stHealth").textContent = state.health;
 
+    renderCurveHud();
     save();
     renderPip();
+  }
+
+  var CURVE_BENCHMARK = [
+    { turn: 1, tier: 1, tip: "T1 (3幣)：買 1 個过渡手下，理財怪優先。" },
+    { turn: 2, tier: 2, tip: "T2 (4幣)：標准節奏升 2 本旅店（消耗 4 金幣）。" },
+    { turn: 3, tier: 2, tip: "T3 (5幣)：賣 1 買 2，或買 1 手下 + 搜牌/旅店法術。" },
+    { turn: 4, tier: 3, tip: "T4 (6幣)：標准節奏升 3 本旅店（消耗 6 金幣）。" },
+    { turn: 5, tier: 3, tip: "T5 (7幣)：购買 2 個 3 本優质戰斗力手下保血量。" },
+    { turn: 6, tier: 3, tip: "T6 (8幣)：補強場面；若血量健康且優勢大可直接跳 4 本。" },
+    { turn: 7, tier: 4, tip: "T7 (9幣)：標准節奏升 4 本旅店，開始確立流派方向。" },
+    { turn: 8, tier: 4, tip: "T8 (10幣)：寻找 4 本核心發動機，穩固戰力基础。" },
+    { turn: 9, tier: 5, tip: "T9 (10幣)：升级 5 本旅店，搜寻流派終極核心手下。" }
+  ];
+
+  function renderCurveHud(){
+    var hud = document.getElementById("playCurveHud");
+    if(!hud) return;
+    var turn = state.turn;
+    var tier = state.tier;
+    var benchItem = CURVE_BENCHMARK.filter(function(b){ return b.turn === turn; })[0];
+    var benchTier = benchItem ? benchItem.tier : (turn >= 9 ? 5 : 1);
+    var tip = benchItem ? benchItem.tip : "T" + turn + "+ 終盤：搜齊 7 格關鍵手下，追金並針对敵方站位調換（防下毒/風怒）。";
+
+    var diff = tier - benchTier;
+    var badgeClass = "on-pace", badgeText = "標准節奏";
+    if(diff > 0){
+      badgeClass = "ahead"; badgeText = "領先 " + diff + " 本";
+    } else if(diff < 0){
+      badgeClass = "behind"; badgeText = "落後 " + Math.abs(diff) + " 本";
+    }
+
+    var steps = CURVE_BENCHMARK.map(function(b){
+      var isCur = b.turn === turn;
+      var isDone = b.turn < turn;
+      var cls = "pch-step" + (isCur ? " current" : "") + (isDone ? " done" : "");
+      return '<div class="' + cls + '">' +
+        '<span class="pst-turn">T' + b.turn + '</span>' +
+        '<span class="pst-tier">' + b.tier + '本</span>' +
+        '</div>';
+    }).join("");
+
+    hud.innerHTML =
+      '<div class="pch-head">' +
+        '<span class="pch-title">📈 標准升本節奏線</span>' +
+        '<span class="pch-badge ' + badgeClass + '">' + badgeText + '</span>' +
+      '</div>' +
+      '<p class="pch-tip">' + tip + '</p>' +
+      '<div class="pch-timeline">' + steps + '</div>';
   }
 
   function hintFor(c){

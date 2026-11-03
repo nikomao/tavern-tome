@@ -117,6 +117,8 @@
     }
 
     var scores = TRIBES.map(function(t){
+      var banned = (typeof window !== "undefined" && window.__bannedTribes) || [];
+      if(banned.indexOf(t.name) >= 0) return { t: t, s: -999, reasons: ["该種族已被禁選"] };
       var s = 0, reasons = [];
       if(hero){
         var map = HERO_MAP[hero.tag] || [];

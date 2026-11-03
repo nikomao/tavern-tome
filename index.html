@@ -712,6 +712,27 @@
     </select>
     <input id="compSearch" type="search" placeholder="搜阵容，如：龙、喝茶" autocomplete="off">
     <button type="button" class="comp-random" id="compRandom">🎲 手气不错</button>
+    <div class="comp-view-toggle" id="compViewToggle" role="radiogroup" aria-label="视图切换">
+      <button type="button" class="cvt-btn on" data-view="cards" title="详细卡片视图">⊞ 卡片</button>
+      <button type="button" class="cvt-btn" data-view="compact" title="紧凑看板视图">☰ 看板</button>
+    </div>
+    <div class="ct-banned" id="compBanned">
+      <span class="ct-banned-label">🚫 禁选种族</span>
+      <div class="ct-banned-chips" id="bannedChips" role="group" aria-label="本局禁选种族过滤">
+        <button type="button" class="ct-bchip" data-tribe="野兽">野兽</button>
+        <button type="button" class="ct-bchip" data-tribe="机械">机械</button>
+        <button type="button" class="ct-bchip" data-tribe="恶魔">恶魔</button>
+        <button type="button" class="ct-bchip" data-tribe="鱼人">鱼人</button>
+        <button type="button" class="ct-bchip" data-tribe="龙">龙</button>
+        <button type="button" class="ct-bchip" data-tribe="元素">元素</button>
+        <button type="button" class="ct-bchip" data-tribe="海盗">海盗</button>
+        <button type="button" class="ct-bchip" data-tribe="野猪人">野猪人</button>
+        <button type="button" class="ct-bchip" data-tribe="纳迦">纳迦</button>
+        <button type="button" class="ct-bchip" data-tribe="亡灵">亡灵</button>
+        <button type="button" class="ct-bchip" data-tribe="畸变怪">畸变怪</button>
+      </div>
+      <button type="button" class="ct-banned-clear" id="bannedClear" hidden title="清除所有禁选">重置</button>
+    </div>
   </div>
 
   <div class="comp-stats" id="compStats" hidden></div>
@@ -981,6 +1002,19 @@
 <script src="demos.js?v=20261105d"></script>
 <script src="hero.js?v=20261105d"></script>
 <script src="bg.js?v=20261105d"></script>
+<div class="pwa-banner" id="pwaBanner" hidden>
+  <div class="pb-content">
+    <div class="pb-icon">🍺</div>
+    <div class="pb-info">
+      <strong>安装酒馆手札 (PWA)</strong>
+      <span>离线可用 · 桌面/手机一键秒开 · 像原生应用一样运行</span>
+    </div>
+  </div>
+  <div class="pb-actions">
+    <button type="button" class="btn primary small" id="pwaInstall">立即安装</button>
+    <button type="button" class="pb-close" id="pwaClose" aria-label="关闭">✕</button>
+  </div>
+</div>
 <nav class="side-rail" id="sideRail" aria-label="章节导航">
   <button type="button" class="rail-top" id="railTop" aria-label="回到顶部">↑</button>
   <div class="rail-track" aria-hidden="true"><i id="railFill"></i></div>

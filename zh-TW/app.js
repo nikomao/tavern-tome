@@ -825,7 +825,9 @@
       var host = document.getElementById("compStats");
       var tools = document.getElementById("compTools");
       var sub = document.getElementById("metaSub");
-      var st = { hero: "", tier: "all", sort: "avg", q: "", heroOnly: false };
+      var savedView = "cards";
+      try { savedView = localStorage.getItem("tt-comp-view") || "cards"; } catch(e){}
+      var st = { hero: "", tier: "all", sort: "avg", q: "", heroOnly: false, bannedTribes: [], view: savedView };
 
       var DB = {};
       if(typeof POOL !== "undefined") POOL.forEach(function(c){ DB[c.i] = c; });
@@ -1083,6 +1085,17 @@
             '<span class="cs-img"><img loading="lazy" src="../pool/' + x.id + '.webp" alt="" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><i>' + x.name.slice(0,1) + '</i></span>' +
             '<span class="cs-name">' + x.name + '</span></a>';
         }).join("");
+        var trinketHTML = "";
+        if(note && note.trinket){
+          var tk = note.trinket;
+          trinketHTML = '<div class="cc-trinket">' +
+            '<div class="cct-head"><span class="cct-badge">核心飾品推薦</span>' +
+            '<span class="cct-item"><b>' + tk.core + '</b> <i class="cct-tier">' + tk.coreTier + '</i></span>' +
+            (tk.alt ? '<span class="cct-divider">/</span><span class="cct-item"><b>' + tk.alt + '</b> <i class="cct-tier">' + tk.altTier + '</i></span>' : '') +
+            '</div>' +
+            '<p class="cct-desc"><b>聯動质變：</b>' + tk.synergy + '</p>' +
+            '</div>';
+        }
         return '<article class="comp-card" data-comp-key="' + (c.key || "") + '" id="comp-' + (c.key || "") + '">' +
           '<div class="cc-head"><span class="cc-rank">#' + (rank + 1) + '</span><b>' + c.name + '</b>' +
           '<span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span>' +
@@ -1094,15 +1107,62 @@
           '% · 奪冠 ' + Math.round((c.win || 0) * 100) + '% · ' + (c.sample || 0).toLocaleString("en-US") + ' 局</span></div>' +
           '<div class="cc-lineup">' + cards + '</div>' +
           '<div class="cc-pos"><b>站位</b> ' + ((note && note.pos) ? note.pos + '（手工站位）' : posHint(c)) + '</div>' +
+          trinketHTML +
           '<div class="cc-foot"><span>推薦英雄：' + ((c.heroes || []).join(" · ") || "—") + '</span><span>' +
           (c.difficulty || "") + (c.power ? ' / 強度 ' + c.power : "") + '</span></div>' +
           '</article>';
+      }
+
+      function compRowHTML(c, rank){
+        var list = (c.cards || []).slice();
+        var note = (typeof COMP_NOTES !== "undefined" && c.key && COMP_NOTES[c.key]) ? COMP_NOTES[c.key] : null;
+        if(note && note.order){
+          var idx = {};
+          note.order.forEach(function(n, k){ idx[n] = k; });
+          list.sort(function(a, b){
+            return (idx[a.name] == null ? 99 : idx[a.name]) - (idx[b.name] == null ? 99 : idx[b.name]);
+          });
+        }
+        var hs = heroStat(c.key);
+        var heroBadge = hs ? '<span class="cr-hero' + (hs.avg > c.avg ? ' bad' : '') + '">你在玩：均位 ' + hs.avg + '</span>' : '';
+        var cardsMini = list.map(function(x, i){
+          var t = tierOfCard(x.id);
+          return '<a class="cr-slot" href="cards.html?card=' + x.id + '" data-card-id="' + x.id + '" title="' + (i + 1) + '. ' + x.name + (t != null ? ' (' + t + '本)' : '') + '">' +
+            '<img loading="lazy" src="../pool/' + x.id + '.webp" alt="" onerror="this.remove()">' +
+            '<span class="cr-no">' + (i + 1) + '</span>' +
+            '</a>';
+        }).join("");
+
+        var tk = (note && note.trinket) ?
+          ('<span class="cr-trinket" title="飾品聯動：' + (note.trinket.synergy || '') + '">💎 ' + note.trinket.core + ' (' + note.trinket.coreTier + ')</span>') : '';
+
+        return '<div class="comp-row" data-comp-key="' + (c.key || "") + '" id="comp-row-' + (c.key || "") + '">' +
+          '<div class="cr-main">' +
+            '<span class="cr-rank">#' + (rank + 1) + '</span>' +
+            '<span class="cr-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span>' +
+            '<b class="cr-name">' + c.name + '</b>' +
+            tk +
+            heroBadge +
+          '</div>' +
+          '<div class="cr-lineup">' + cardsMini + '</div>' +
+          '<div class="cr-metrics">' +
+            '<span class="crm-avg">均位 <b>' + Number(c.avg).toFixed(2) + '</b></span>' +
+            '<span class="crm-top4">前四 <b>' + Math.round((c.top4 || 0) * 100) + '%</b></span>' +
+            '<span class="crm-win">奪冠 <b>' + Math.round((c.win || 0) * 100) + '%</b></span>' +
+          '</div>' +
+          '<div class="cr-actions">' +
+            (c.key ? '<a class="cr-play-btn" href="play.html?comp=' + c.key + '">對局</a>' : '') +
+            (c.key ? '<button type="button" class="cc-cmp cr-cmp" data-cmp="' + c.key + '">对比</button>' : '') +
+          '</div>' +
+        '</div>';
       }
 
       function renderBoard(){
         var list = STATS.comps.filter(function(c){
           if(st.tier !== "all" && c.tier !== st.tier) return false;
           if(st.q && c.name.toLowerCase().indexOf(st.q.toLowerCase()) < 0) return false;
+          var trName = String(c.name || "").split("·")[0];
+          if(st.bannedTribes && st.bannedTribes.indexOf(trName) >= 0) return false;
           if(st.hero && st.heroOnly){
             var ha = heroStat(c.key);
             var inRec = (c.heroes || []).indexOf(st.hero) >= 0;
@@ -1125,21 +1185,29 @@
 
         var t = '<div class="cs-head">數據陣容榜 <span>' + STATS.source + ' · ' + (STATS.bracket || "") +
           " · " + (STATS.fetchedAt || "") + " · 樣本 " + (STATS.sample ? Math.round(STATS.sample / 10000) + " 萬局" : "-") +
+          (st.bannedTribes && st.bannedTribes.length ? " · 已禁選 " + st.bannedTribes.join("、") : "") +
           (st.hero ? (st.heroOnly ? " · 僅看 " + st.hero + " 适配陣容" : " · 按 " + st.hero + " 排序") : "") + '</span></div>';
 
         if(!list.length){
-          var emptyMsg = (st.hero && st.heroOnly) ?
-            ('「' + st.hero + '」暂無專屬高勝率陣容推薦，可取消「僅看该英雄适配」查看全局推薦。') :
-            '没有符合條件的陣容，換個梯度或清空搜索試試。';
+          var emptyMsg = (st.bannedTribes && st.bannedTribes.length) ?
+            ('當前禁選種族（' + st.bannedTribes.join("、") + '）已过滤全部匹配陣容，可点擊上方「重置」或取消部分禁選。') :
+            ((st.hero && st.heroOnly) ?
+              ('「' + st.hero + '」暂無專屬高勝率陣容推薦，可取消「僅看该英雄适配」查看全局推薦。') :
+              '没有符合條件的陣容，換個梯度或清空搜索試試。');
           host.innerHTML = t + '<p class="cs-empty">' + emptyMsg + '</p>';
           host.hidden = false;
           return;
         }
 
-        t += '<div class="comp-board">' + list.slice(0, 8).map(function(c, i){ return compCardHTML(c, i); }).join("") + '</div>';
-        if(list.length > 8){
-          t += '<details class="comp-more"><summary>更多陣容（9–' + list.length + '，僅統計）</summary>' +
-            '<div class="comp-board">' + list.slice(8).map(function(c, i){ return compCardHTML(c, i + 8); }).join("") + '</div></details>';
+        var isCompact = st.view === "compact";
+        if(isCompact){
+          t += '<div class="comp-board compact">' + list.map(function(c, i){ return compRowHTML(c, i); }).join("") + '</div>';
+        } else {
+          t += '<div class="comp-board">' + list.slice(0, 8).map(function(c, i){ return compCardHTML(c, i); }).join("") + '</div>';
+          if(list.length > 8){
+            t += '<details class="comp-more"><summary>更多陣容（9–' + list.length + '，僅統計）</summary>' +
+              '<div class="comp-board">' + list.slice(8).map(function(c, i){ return compCardHTML(c, i + 8); }).join("") + '</div></details>';
+          }
         }
         if(STATS.trinkets && STATS.trinkets.length){
           t += '<div class="trinket-board"><div class="cs-head">本週強勢飾品 <span>按平均排名</span></div><div class="trinket-grid">';
@@ -1227,11 +1295,13 @@
         var m = /^#comp-(.+)$/.exec(location.hash || "");
         if(!m) return;
         var key = decodeURIComponent(m[1]);
-        var card = document.querySelector('.comp-card[data-comp-key="' + key + '"]');
+        var card = document.querySelector('.comp-card[data-comp-key="' + key + '"]') ||
+          document.querySelector('.comp-row[data-comp-key="' + key + '"]');
         if(!card){
           var det = document.querySelector(".comp-more");
           if(det) det.open = true;
-          card = document.querySelector('.comp-card[data-comp-key="' + key + '"]');
+          card = document.querySelector('.comp-card[data-comp-key="' + key + '"]') ||
+            document.querySelector('.comp-row[data-comp-key="' + key + '"]');
         }
         if(!card) return;
         card.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -1259,6 +1329,84 @@
         searchEl.addEventListener("input", function(){
           clearTimeout(timer);
           timer = setTimeout(function(){ st.q = searchEl.value.trim(); renderBoard(); }, 180);
+        });
+      }
+
+      var viewToggle = document.getElementById("compViewToggle");
+      if(viewToggle){
+        Array.prototype.forEach.call(viewToggle.querySelectorAll(".cvt-btn"), function(btn){
+          btn.classList.toggle("on", btn.getAttribute("data-view") === st.view);
+        });
+        viewToggle.addEventListener("click", function(e){
+          var b = e.target.closest ? e.target.closest(".cvt-btn") : null;
+          if(!b) return;
+          st.view = b.getAttribute("data-view");
+          try { localStorage.setItem("tt-comp-view", st.view); } catch(err){}
+          Array.prototype.forEach.call(viewToggle.querySelectorAll(".cvt-btn"), function(x){ x.classList.toggle("on", x === b); });
+          renderBoard();
+        });
+      }
+
+      var bannedChips = document.getElementById("bannedChips");
+      var bannedClear = document.getElementById("bannedClear");
+      if(bannedChips){
+        bannedChips.addEventListener("click", function(e){
+          var b = e.target.closest ? e.target.closest(".ct-bchip") : null;
+          if(!b) return;
+          var tribe = b.getAttribute("data-tribe");
+          var idx = st.bannedTribes.indexOf(tribe);
+          if(idx >= 0){
+            st.bannedTribes.splice(idx, 1);
+            b.classList.remove("is-banned");
+          } else {
+            st.bannedTribes.push(tribe);
+            b.classList.add("is-banned");
+          }
+          window.__bannedTribes = st.bannedTribes.slice();
+          if(bannedClear) bannedClear.hidden = (st.bannedTribes.length === 0);
+          renderBoard();
+        });
+      }
+      if(bannedClear){
+        bannedClear.addEventListener("click", function(){
+          st.bannedTribes = [];
+          window.__bannedTribes = [];
+          if(bannedChips){
+            Array.prototype.forEach.call(bannedChips.querySelectorAll(".ct-bchip"), function(x){
+              x.classList.remove("is-banned");
+            });
+          }
+          bannedClear.hidden = true;
+          renderBoard();
+        });
+      }
+
+      var deferredPrompt = null;
+      var pwaBanner = document.getElementById("pwaBanner");
+      var pwaInstall = document.getElementById("pwaInstall");
+      var pwaClose = document.getElementById("pwaClose");
+      window.addEventListener("beforeinstallprompt", function(e){
+        e.preventDefault();
+        deferredPrompt = e;
+        try {
+          if(pwaBanner && !localStorage.getItem("tt-pwa-dismissed")){
+            pwaBanner.hidden = false;
+          }
+        } catch(err){}
+      });
+      if(pwaInstall){
+        pwaInstall.addEventListener("click", async function(){
+          if(!deferredPrompt) return;
+          deferredPrompt.prompt();
+          var choice = await deferredPrompt.userChoice;
+          deferredPrompt = null;
+          if(pwaBanner) pwaBanner.hidden = true;
+        });
+      }
+      if(pwaClose){
+        pwaClose.addEventListener("click", function(){
+          if(pwaBanner) pwaBanner.hidden = true;
+          try { localStorage.setItem("tt-pwa-dismissed", "1"); } catch(err){}
         });
       }
 
