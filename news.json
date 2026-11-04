@@ -1,7 +1,40 @@
 {
-  "updated": "2026-11-04T05:09:37.963Z",
+  "updated": "2026-11-04T13:54:06.491Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "Quillboar still OP",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xnm6bb/quillboar_still_op/",
+      "ts": 1793792855000,
+      "kind": "mechanic",
+      "tagZh": "机制冷知识",
+      "tagZhtw": "機制冷知識",
+      "titleZh": "野猪人 STILL OP",
+      "titleZhtw": "野豬人 STILL OP"
+    },
+    {
+      "source": "Reddit",
+      "title": "Assuming it was last patch this season Silent Deliverer interaction in duos survived for whole season...",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xnjjt1/assuming_it_was_last_patch_this_season_silent/",
+      "ts": 1793783085000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "假设这是本赛季的最后一个补丁， Silent Deliverer在二人组中的互动幸存了整整一个赛季……",
+      "titleZhtw": "假设這是本赛季的最後一个更新檔， Silent Deliverer在二人组中的互動幸存了整整一个赛季……"
+    },
+    {
+      "source": "Reddit",
+      "title": "So much for wand of divination being banned in quilboar lobbies like the patch notes claimed.",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xniana/so_much_for_wand_of_divination_being_banned_in/",
+      "ts": 1793778192000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "在野猪人本局全员中禁止使用占卜魔杖，就像补丁笔记所宣称的那样。",
+      "titleZhtw": "在野豬人本局全员中禁止使用占卜魔杖，就像更新檔笔记所宣称的那样。"
+    },
     {
       "source": "Reddit",
       "title": "Yes , Blizzard I like playing Pirates now",
@@ -166,39 +199,6 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "36.6.3版本更新公告—炉石传说-暴雪新闻",
       "titleZhtw": "36.6.3版本更新說明—爐石戰記-暴雪新闻"
-    },
-    {
-      "source": "Blizzard Entertainment",
-      "title": "[Updated 9/29/2026] 36.6 Patch Notes - Blizzard Entertainment",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBsMzFfOFBZNnF3TEVxbXFOVHdtN3IwREJIc1IzWnpwa0hyTDF4LVAwOFg2aE1DYkJDeS1sN1NYSVFPdFJUbmw3RjlMWGRGV25yZkoyWWRtUG9FWW4x?oc=5",
-      "ts": 1790665200000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "[2026年9月29日更新] 36.6版本更新公告-暴雪官方",
-      "titleZhtw": "[2026年9月29日更新] 36.6版本更新說明-暴雪官方"
-    },
-    {
-      "source": "Blizzard News",
-      "title": "[Updated 9/29/2026] 36.6 Patch Notes — Hearthstone - Blizzard News",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNd3dFM2ZUNV9wLWhodUIzNVZKeXk2VGJ4Wi05dFpRR2pVYXNLY2d4WFFlbXVack92LW5CUnZJT1BXXzJXYlo1V1JSaFIyb0Vpc2o3SFN0eXFPcGdsNWFnb0NCbjdaQ2l1WTgtNUhnQWI5bDdnSDJ6MUZ5d2ZzRlpxZ1IyejFfVDV3ajJz?oc=5",
-      "ts": 1790665200000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "[2026年9月29日更新] 36.6版本更新公告—《炉石传说》-暴雪新闻",
-      "titleZhtw": "[2026年9月29日更新] 36.6版本更新說明—《爐石戰記》-暴雪新闻"
-    },
-    {
-      "source": "17173",
-      "title": "《炉石传说》9月23日，全新随从类型——畸变怪入侵酒馆战棋！ - 17173",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9mMkZ0amx6YUh1SjlSY2hOT0ZqZkw4cDNxbGNpMks0TTNvX2VWaW5FZWlOcGE1RmVyNzc5enp3SU5HSmRfUHg2TkQycWFwY09MUUZ0cDkydXEwQUg5UEhiZ3VGQTM?oc=5",
-      "ts": 1789455600000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "《炉石传说》9月23日，全新随从类型——畸变怪入侵酒馆战棋！ - 17173",
-      "titleZhtw": "《爐石戰記》9月23日，全新手下类型——畸變體怪入侵英雄戰場！ - 17173"
     }
   ]
 }
