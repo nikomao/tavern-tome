@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-04T23:18:14.580Z",
+  "updated": "2026-11-05T05:30:23.694Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "Anyone else feeling like the quilboar nerfs were a tad underwhelming?",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xo6ksm/anyone_else_feeling_like_the_quilboar_nerfs_were/",
+      "ts": 1793843931000,
+      "kind": "meta",
+      "tagZh": "天梯平衡",
+      "tagZhtw": "天梯平衡",
+      "titleZh": "有没有人觉得那群昆布神经兮兮的神经兮兮的神经兮兮的呢？",
+      "titleZhtw": "有没有人觉得那群昆布神经兮兮的神经兮兮的神经兮兮的呢？"
+    },
     {
       "source": "Reddit",
       "title": "Quillboar still OP",
@@ -61,7 +72,7 @@
       "source": "Blizzard Entertainment",
       "title": "37.0.2 Patch Notes - Blizzard Entertainment",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9adVdYbTNGZG5wTFJnQWg5SzRwaXUzaUhIb1cxQWFNSk5nOVhnbDlodnZDOHVuMU9yaXE4d2FMaDkzdWR4RVVadThVa184NjRJd0pfU3lLY2JLR0Vv?oc=5",
-      "ts": 1793724161000,
+      "ts": 1793722736000,
       "kind": "patch",
       "tagZh": "官方补丁",
       "tagZhtw": "官方更新檔",
@@ -188,17 +199,6 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "37.0版本更新公告-暴雪官方",
       "titleZhtw": "37.0版本更新說明-暴雪官方"
-    },
-    {
-      "source": "Blizzard News",
-      "title": "36.6.3 Patch Notes — Hearthstone - Blizzard News",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE52TGxzREJUSTBpd3VRQUFnLUp4amZkaVBxbUxuLUtsemdQZXZNV0RDOTluRXFWT2ZsSlNTMlNTUTFBMWlOVDAtaUdSbWNnVWZNYncyUnJzaVhWLWhPUEkydlUyUXlMRUotM20xY0ljaVFRdkg3Vnc?oc=5",
-      "ts": 1790838000000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "36.6.3版本更新公告—炉石传说-暴雪新闻",
-      "titleZhtw": "36.6.3版本更新說明—爐石戰記-暴雪新闻"
     }
   ]
 }
