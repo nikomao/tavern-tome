@@ -999,7 +999,7 @@ const STATS = {
     },
     {
       "key": "neutral_tea_set",
-      "name": "畸变怪·神明喝茶",
+      "name": "全种族·神明喝茶",
       "tier": "T1",
       "top4": 0.735,
       "win": 0.245,
@@ -1060,15 +1060,27 @@ const STATS = {
     {
       "key": "aberration_discard",
       "name": "畸变怪·弃牌爆发",
-      "tier": "T1",
-      "top4": 0.73,
-      "win": 0.235,
-      "avg": 3.2,
-      "sample": 31898,
+      "tier": "T0",
+      "top4": 0.765,
+      "win": 0.285,
+      "avg": 3.08,
+      "sample": 34898,
       "cards": [
         {
-          "id": "BGFYM_005",
-          "name": "预言者阿菲拉斯",
+          "id": "BG36_318",
+          "name": "无面转化者",
+          "status": "CORE",
+          "role": "front"
+        },
+        {
+          "id": "BG36_115",
+          "name": "梦魇侵蚀怪",
+          "status": "CORE",
+          "role": "front"
+        },
+        {
+          "id": "BG36_300",
+          "name": "恩拉其唤冰者",
           "status": "CORE",
           "role": "mid"
         },
@@ -1076,24 +1088,6 @@ const STATS = {
           "id": "BG36_320",
           "name": "神秘的克熙尔",
           "status": "CORE",
-          "role": "back"
-        },
-        {
-          "id": "BG26_ICC_901",
-          "name": "达卡莱附魔师",
-          "status": "ADDON",
-          "role": "back"
-        },
-        {
-          "id": "BG36_115",
-          "name": "梦魇侵蚀怪",
-          "status": "ADDON",
-          "role": "back"
-        },
-        {
-          "id": "BG36_300",
-          "name": "恩拉其唤冰者",
-          "status": "ADDON",
           "role": "mid"
         },
         {
@@ -1103,9 +1097,15 @@ const STATS = {
           "role": "back"
         },
         {
-          "id": "BG36_318",
-          "name": "无面转化者",
+          "id": "BG26_ICC_901",
+          "name": "达卡莱附魔师",
           "status": "ADDON",
+          "role": "back"
+        },
+        {
+          "id": "BGFYM_005",
+          "name": "预言者阿菲拉斯",
+          "status": "CORE",
           "role": "back"
         }
       ],
@@ -1115,7 +1115,67 @@ const STATS = {
         "风暴之王托里姆"
       ],
       "difficulty": "Easy",
-      "power": "C"
+      "power": "S"
+    },
+    {
+      "key": "naga_spellcraft",
+      "name": "纳迦·法术塑造",
+      "tier": "T1",
+      "top4": 0.712,
+      "win": 0.228,
+      "avg": 3.38,
+      "sample": 26500,
+      "cards": [
+        {
+          "id": "BG31_035",
+          "name": "碎地者",
+          "status": "CORE",
+          "role": "front"
+        },
+        {
+          "id": "BG36_622",
+          "name": "涌流毁灭者",
+          "status": "CORE",
+          "role": "front"
+        },
+        {
+          "id": "BG33_920",
+          "name": "怒鳞潜行者",
+          "status": "CORE",
+          "role": "mid"
+        },
+        {
+          "id": "BG35_883",
+          "name": "巴琳达·斯通赫尔斯",
+          "status": "CORE",
+          "role": "mid"
+        },
+        {
+          "id": "BG36_508",
+          "name": "机警的咒术师",
+          "status": "ADDON",
+          "role": "mid"
+        },
+        {
+          "id": "BG26_505",
+          "name": "热情沙锤手",
+          "status": "ADDON",
+          "role": "back"
+        },
+        {
+          "id": "BG26_502",
+          "name": "深沉蓝调歌手",
+          "status": "ADDON",
+          "role": "back"
+        }
+      ],
+      "heroes": [
+        "艾萨拉女王",
+        "瓦丝琪女士",
+        "塞纳留斯"
+      ],
+      "difficulty": "Medium",
+      "power": "A"
     },
     {
       "key": "mech_apm",
@@ -2598,7 +2658,7 @@ const STATS = {
     "摇滚教父沃恩": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.87,
         "sample": 218
@@ -2628,7 +2688,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.16,
         "sample": 280
@@ -2651,7 +2711,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.11,
         "sample": 164
@@ -2674,7 +2734,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3,
         "sample": 306
@@ -2697,7 +2757,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.9,
         "sample": 311
@@ -2713,7 +2773,7 @@ const STATS = {
     "了不起的杰弗里斯": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.05,
         "sample": 153
@@ -2743,7 +2803,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.84,
         "sample": 71
@@ -2766,7 +2826,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.31,
         "sample": 153
@@ -2789,7 +2849,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.06,
         "sample": 265
@@ -2812,7 +2872,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.1,
         "sample": 156
@@ -2858,7 +2918,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.01,
         "sample": 311
@@ -2950,7 +3010,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.08,
         "sample": 285
@@ -2966,7 +3026,7 @@ const STATS = {
     "古夫·符文图腾": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.19,
         "sample": 171
@@ -2996,7 +3056,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.77,
         "sample": 59
@@ -3019,7 +3079,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.26,
         "sample": 200
@@ -3058,7 +3118,7 @@ const STATS = {
     "范达尔·雷矛": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.74,
         "sample": 221
@@ -3104,7 +3164,7 @@ const STATS = {
     "洛，在世传奇": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.19,
         "sample": 258
@@ -3134,7 +3194,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.92,
         "sample": 250
@@ -3150,7 +3210,7 @@ const STATS = {
     "亚煞极": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.21,
         "sample": 202
@@ -3173,7 +3233,7 @@ const STATS = {
     "森林之王塞纳留斯": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.91,
         "sample": 282
@@ -3203,7 +3263,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.07,
         "sample": 76
@@ -3249,7 +3309,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.2,
         "sample": 303
@@ -3279,7 +3339,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.87,
         "sample": 211
@@ -3288,7 +3348,7 @@ const STATS = {
     "克隆大师泽里克": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.09,
         "sample": 230
@@ -3364,7 +3424,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.8,
         "sample": 248
@@ -3394,7 +3454,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.3,
         "sample": 227
@@ -3440,7 +3500,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.94,
         "sample": 314
@@ -3456,7 +3516,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.03,
         "sample": 275
@@ -3479,7 +3539,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.17,
         "sample": 308
@@ -3502,7 +3562,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.89,
         "sample": 228
@@ -3518,7 +3578,7 @@ const STATS = {
     "鼠王": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.99,
         "sample": 191
@@ -3555,7 +3615,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.17,
         "sample": 176
@@ -3564,7 +3624,7 @@ const STATS = {
     "狂风之翼": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.86,
         "sample": 225
@@ -3587,7 +3647,7 @@ const STATS = {
     "天空上尉库拉格": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.04,
         "sample": 219
@@ -3624,7 +3684,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.28,
         "sample": 232
@@ -3670,7 +3730,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.12,
         "sample": 282
@@ -3702,7 +3762,7 @@ const STATS = {
     "德雷克塔尔": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.79,
         "sample": 198
@@ -3725,7 +3785,7 @@ const STATS = {
     "希尔瓦娜斯·风行者": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.01,
         "sample": 201
@@ -3755,7 +3815,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.07,
         "sample": 243
@@ -3808,7 +3868,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.02,
         "sample": 223
@@ -3840,7 +3900,7 @@ const STATS = {
     "费林大使": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.09,
         "sample": 308
@@ -3877,7 +3937,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.41,
         "sample": 163
@@ -3923,7 +3983,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.24,
         "sample": 165
@@ -3955,7 +4015,7 @@ const STATS = {
     "穆克拉": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.07,
         "sample": 180
@@ -3992,7 +4052,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.27,
         "sample": 163
@@ -4001,7 +4061,7 @@ const STATS = {
     "预言者努波顿": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.97,
         "sample": 197
@@ -4031,7 +4091,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.25,
         "sample": 208
@@ -4084,7 +4144,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.19,
         "sample": 174
@@ -4139,7 +4199,7 @@ const STATS = {
     "钩牙船长": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.97,
         "sample": 197
@@ -4169,7 +4229,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.99,
         "sample": 214
@@ -4245,7 +4305,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.09,
         "sample": 222
@@ -4314,7 +4374,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.42,
         "sample": 106
@@ -4337,7 +4397,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.38,
         "sample": 222
@@ -4353,7 +4413,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.15,
         "sample": 208
@@ -4376,7 +4436,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.15,
         "sample": 132
@@ -4461,7 +4521,7 @@ const STATS = {
     "荷利戴医生": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3,
         "sample": 158
@@ -4514,7 +4574,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.31,
         "sample": 243
@@ -4537,7 +4597,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.06,
         "sample": 168
@@ -4560,7 +4620,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.07,
         "sample": 53
@@ -4583,7 +4643,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.3,
         "sample": 67
@@ -4613,7 +4673,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.23,
         "sample": 226
@@ -4629,7 +4689,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.18,
         "sample": 156
@@ -4645,7 +4705,7 @@ const STATS = {
     "米尔豪斯·法力风暴": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.16,
         "sample": 89
@@ -4682,7 +4742,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.21,
         "sample": 130
@@ -4691,7 +4751,7 @@ const STATS = {
     "苔丝·格雷迈恩": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.19,
         "sample": 198
@@ -4721,7 +4781,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.3,
         "sample": 180
@@ -4760,7 +4820,7 @@ const STATS = {
     "阿兰娜·逐星": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.26,
         "sample": 141
@@ -4797,7 +4857,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.38,
         "sample": 47
@@ -4836,7 +4896,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.18,
         "sample": 172
@@ -4852,7 +4912,7 @@ const STATS = {
     "詹迪斯·巴罗夫": [
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.2,
         "sample": 83
@@ -4912,7 +4972,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.11,
         "sample": 161
@@ -4928,7 +4988,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 2.83,
         "sample": 275
@@ -4974,7 +5034,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.33,
         "sample": 40
@@ -5089,7 +5149,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.14,
         "sample": 64
@@ -5119,7 +5179,7 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "畸变怪·神明喝茶",
+        "name": "全种族·神明喝茶",
         "tier": "T1",
         "avg": 3.36,
         "sample": 32
