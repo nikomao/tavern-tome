@@ -1,7 +1,7 @@
 /* 本周变化（由 scripts/diff_stats.mjs 生成） */
 const STATS_CHANGE = {
   "from": "2026-11-01",
-  "to": "2026-11-02",
+  "to": "2026-11-05",
   "first": false,
   "sampleFrom": 2202934,
   "sampleTo": 2263201,
@@ -69,70 +69,37 @@ const STATS_CHANGE = {
   ],
   "comps": [
     {
-      "key": "murloc_scam",
-      "name": "鱼人·下毒",
-      "rankFrom": 16,
-      "rankTo": 12,
-      "avgFrom": 3.63,
-      "avgTo": 3.55,
-      "delta": -0.08,
-      "tierFrom": "T2",
-      "tierTo": "T1"
-    },
-    {
       "key": "quilboar_felboar_spam",
-      "name": "野猪人·邪能猪",
-      "rankFrom": 11,
-      "rankTo": 14,
-      "avgFrom": 3.54,
-      "avgTo": 3.55,
-      "delta": 0.01,
-      "tierFrom": "T1",
-      "tierTo": "T2"
-    },
-    {
-      "key": "aberration_deathrattle",
-      "name": "畸变怪·亡语",
-      "rankFrom": 12,
-      "rankTo": 11,
-      "avgFrom": 3.56,
-      "avgTo": 3.54,
-      "delta": -0.02,
-      "tierFrom": "T1",
-      "tierTo": "T1"
-    },
-    {
-      "key": "murloc_handbuff",
-      "name": "鱼人·手牌 buff",
-      "rankFrom": 15,
-      "rankTo": 16,
-      "avgFrom": 3.63,
-      "avgTo": 3.64,
-      "delta": 0.01,
-      "tierFrom": "T2",
-      "tierTo": "T2"
-    },
-    {
-      "key": "elemental_tempest",
-      "name": "元素·风暴",
-      "rankFrom": 22,
-      "rankTo": 21,
-      "avgFrom": 3.8,
-      "avgTo": 3.79,
-      "delta": -0.01,
-      "tierFrom": "T3",
-      "tierTo": "T3"
-    },
-    {
-      "key": "undead_eternal_knight",
-      "name": "亡灵·永恒骑士",
+      "name": "野猪人·邪能鲜血",
       "rankFrom": 14,
-      "rankTo": 15,
-      "avgFrom": 3.58,
-      "avgTo": 3.58,
-      "delta": 0,
+      "rankTo": 1,
+      "avgFrom": 3.55,
+      "avgTo": 3.02,
+      "delta": -0.53,
       "tierFrom": "T2",
-      "tierTo": "T2"
+      "tierTo": "T0"
+    },
+    {
+      "key": "elemental_azerite",
+      "name": "元素·艾泽里特倒转",
+      "rankFrom": 9,
+      "rankTo": 3,
+      "avgFrom": 3.43,
+      "avgTo": 3.12,
+      "delta": -0.31,
+      "tierFrom": "T1",
+      "tierTo": "T0"
+    },
+    {
+      "key": "murloc_scam",
+      "name": "鱼人·下水道下毒",
+      "rankFrom": 12,
+      "rankTo": 6,
+      "avgFrom": 3.54,
+      "avgTo": 3.24,
+      "delta": -0.3,
+      "tierFrom": "T2",
+      "tierTo": "T1"
     }
   ]
 };

@@ -2,7 +2,7 @@
 const STATS = {
   "source": "Firestone / ZeroToHeroes",
   "url": "https://static.zerotoheroes.com/api/bgs/",
-  "fetchedAt": "2026-11-02",
+  "fetchedAt": "2026-11-05",
   "bracket": "全部 MMR",
   "region": "ALL",
   "sample": 2263201,
@@ -939,10 +939,10 @@ const STATS = {
   "comps": [
     {
       "key": "dragon_shield",
-      "name": "龙·圣盾",
+      "name": "龙·执念圣盾",
       "tier": "T0",
-      "top4": 0.7596,
-      "win": 0.227,
+      "top4": 0.765,
+      "win": 0.228,
       "avg": 3.07,
       "sample": 25320,
       "cards": [
@@ -999,11 +999,11 @@ const STATS = {
     },
     {
       "key": "neutral_tea_set",
-      "name": "中立·喝茶",
-      "tier": "T0",
-      "top4": 0.747,
-      "win": 0.2232,
-      "avg": 3.13,
+      "name": "畸变怪·神明喝茶",
+      "tier": "T1",
+      "top4": 0.735,
+      "win": 0.245,
+      "avg": 3.18,
       "sample": 36219,
       "cards": [
         {
@@ -1059,11 +1059,11 @@ const STATS = {
     },
     {
       "key": "aberration_discard",
-      "name": "畸变怪·弃牌",
-      "tier": "T0",
-      "top4": 0.7626,
-      "win": 0.1781,
-      "avg": 3.16,
+      "name": "畸变怪·弃牌爆发",
+      "tier": "T1",
+      "top4": 0.73,
+      "win": 0.235,
+      "avg": 3.2,
       "sample": 31898,
       "cards": [
         {
@@ -1120,10 +1120,10 @@ const STATS = {
     {
       "key": "mech_apm",
       "name": "机械·APM",
-      "tier": "T0",
+      "tier": "T2",
       "top4": 0.6781,
       "win": 0.245,
-      "avg": 3.31,
+      "avg": 3.35,
       "sample": 24747,
       "cards": [
         {
@@ -1180,10 +1180,10 @@ const STATS = {
     {
       "key": "mech_volumizer",
       "name": "机械·扩音机",
-      "tier": "T0",
+      "tier": "T2",
       "top4": 0.6725,
       "win": 0.2492,
-      "avg": 3.32,
+      "avg": 3.36,
       "sample": 46462,
       "cards": [
         {
@@ -1419,11 +1419,11 @@ const STATS = {
     },
     {
       "key": "elemental_azerite",
-      "name": "元素·艾泽里特",
-      "tier": "T1",
-      "top4": 0.6749,
-      "win": 0.2082,
-      "avg": 3.43,
+      "name": "元素·艾泽里特倒转",
+      "tier": "T0",
+      "top4": 0.748,
+      "win": 0.28,
+      "avg": 3.12,
       "sample": 28423,
       "cards": [
         {
@@ -1552,11 +1552,11 @@ const STATS = {
     },
     {
       "key": "murloc_scam",
-      "name": "鱼人·下毒",
+      "name": "鱼人·下水道下毒",
       "tier": "T1",
-      "top4": 0.6585,
-      "win": 0.1999,
-      "avg": 3.55,
+      "top4": 0.718,
+      "win": 0.215,
+      "avg": 3.24,
       "sample": 12762,
       "cards": [
         {
@@ -1612,11 +1612,11 @@ const STATS = {
     },
     {
       "key": "undead_apm",
-      "name": "亡灵·APM",
-      "tier": "T2",
-      "top4": 0.6763,
-      "win": 0.1722,
-      "avg": 3.55,
+      "name": "亡灵·纺织工复生",
+      "tier": "T1",
+      "top4": 0.702,
+      "win": 0.188,
+      "avg": 3.28,
       "sample": 4779,
       "cards": [
         {
@@ -1672,11 +1672,11 @@ const STATS = {
     },
     {
       "key": "quilboar_felboar_spam",
-      "name": "野猪人·邪能猪",
-      "tier": "T2",
-      "top4": 0.6729,
-      "win": 0.2057,
-      "avg": 3.55,
+      "name": "野猪人·邪能鲜血",
+      "tier": "T0",
+      "top4": 0.778,
+      "win": 0.312,
+      "avg": 3.02,
       "sample": 28246,
       "cards": [
         {
@@ -2575,7 +2575,7 @@ const STATS = {
     "迦拉克隆": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.84,
         "sample": 263
@@ -2590,7 +2590,7 @@ const STATS = {
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.14,
         "sample": 321
       }
@@ -2598,8 +2598,8 @@ const STATS = {
     "摇滚教父沃恩": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.87,
         "sample": 218
       },
@@ -2612,7 +2612,7 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.25,
         "sample": 160
@@ -2621,22 +2621,22 @@ const STATS = {
     "帕奇维克": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.93,
         "sample": 229
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.16,
         "sample": 280
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.17,
         "sample": 253
       }
@@ -2651,15 +2651,15 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.11,
         "sample": 164
       },
       {
         "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
+        "name": "亡灵·纺织工复生",
+        "tier": "T1",
         "avg": 3.15,
         "sample": 50
       }
@@ -2667,15 +2667,15 @@ const STATS = {
     "挂机的阿凯": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.96,
         "sample": 263
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3,
         "sample": 306
       },
@@ -2697,14 +2697,14 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.9,
         "sample": 311
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.93,
         "sample": 290
@@ -2713,8 +2713,8 @@ const STATS = {
     "了不起的杰弗里斯": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.05,
         "sample": 153
       },
@@ -2727,7 +2727,7 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.19,
         "sample": 122
@@ -2736,15 +2736,15 @@ const STATS = {
     "阿莱克丝塔萨": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.77,
         "sample": 348
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.84,
         "sample": 71
       },
@@ -2759,21 +2759,21 @@ const STATS = {
     "劫匪之王托瓦格尔": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.26,
         "sample": 129
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.31,
         "sample": 153
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.36,
         "sample": 83
@@ -2782,22 +2782,22 @@ const STATS = {
     "吉恩，狼人国王": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.98,
         "sample": 230
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.06,
         "sample": 265
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.18,
         "sample": 281
       }
@@ -2805,22 +2805,22 @@ const STATS = {
     "伊莉斯·逐星": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.07,
         "sample": 105
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.1,
         "sample": 156
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.12,
         "sample": 134
       }
@@ -2828,15 +2828,15 @@ const STATS = {
     "沃金": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.01,
         "sample": 155
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.06,
         "sample": 134
       },
@@ -2851,22 +2851,22 @@ const STATS = {
     "扣子": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.9,
         "sample": 264
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.01,
         "sample": 311
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.04,
         "sample": 343
       }
@@ -2874,22 +2874,22 @@ const STATS = {
     "无限巨龙姆诺兹多": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.97,
         "sample": 199
       },
       {
         "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
+        "name": "亡灵·纺织工复生",
+        "tier": "T1",
         "avg": 3.06,
         "sample": 34
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.11,
         "sample": 248
       }
@@ -2897,21 +2897,21 @@ const STATS = {
     "希拉斯·暗月": [
       {
         "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
+        "name": "亡灵·纺织工复生",
+        "tier": "T1",
         "avg": 3,
         "sample": 42
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.22,
         "sample": 201
       },
       {
         "key": "murloc_scam",
-        "name": "鱼人·下毒",
+        "name": "鱼人·下水道下毒",
         "tier": "T1",
         "avg": 3.27,
         "sample": 84
@@ -2920,22 +2920,22 @@ const STATS = {
     "大主教奥萨尔": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.15,
         "sample": 177
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.19,
         "sample": 145
       },
       {
         "key": "elemental_azerite",
-        "name": "元素·艾泽里特",
-        "tier": "T1",
+        "name": "元素·艾泽里特倒转",
+        "tier": "T0",
         "avg": 3.23,
         "sample": 159
       }
@@ -2950,14 +2950,14 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.08,
         "sample": 285
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.1,
         "sample": 236
@@ -2966,22 +2966,22 @@ const STATS = {
     "古夫·符文图腾": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.19,
         "sample": 171
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.29,
         "sample": 131
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.3,
         "sample": 153
       }
@@ -2989,15 +2989,15 @@ const STATS = {
     "伊瑟拉": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.1,
         "sample": 332
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.77,
         "sample": 59
       },
@@ -3012,21 +3012,21 @@ const STATS = {
     "因葛，钢铁颂歌": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.23,
         "sample": 174
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.26,
         "sample": 200
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.27,
         "sample": 172
@@ -3035,22 +3035,22 @@ const STATS = {
     "厨师曲奇": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3,
         "sample": 130
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.05,
         "sample": 188
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.17,
         "sample": 130
       }
@@ -3058,8 +3058,8 @@ const STATS = {
     "范达尔·雷矛": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.74,
         "sample": 221
       },
@@ -3073,7 +3073,7 @@ const STATS = {
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 2.83,
         "sample": 286
       }
@@ -3088,7 +3088,7 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.15,
         "sample": 123
@@ -3104,14 +3104,14 @@ const STATS = {
     "洛，在世传奇": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.19,
         "sample": 258
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.2,
         "sample": 228
@@ -3134,14 +3134,14 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.92,
         "sample": 250
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.06,
         "sample": 195
@@ -3150,8 +3150,8 @@ const STATS = {
     "亚煞极": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.21,
         "sample": 202
       },
@@ -3164,8 +3164,8 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.25,
         "sample": 195
       }
@@ -3173,8 +3173,8 @@ const STATS = {
     "森林之王塞纳留斯": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.91,
         "sample": 282
       },
@@ -3188,7 +3188,7 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.14,
         "sample": 229
       }
@@ -3196,22 +3196,22 @@ const STATS = {
     "厄祖玛特": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 2.96,
         "sample": 78
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.07,
         "sample": 76
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.25,
         "sample": 54
       }
@@ -3219,7 +3219,7 @@ const STATS = {
     "特莱斯塔斯，寄生之魂": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.65,
         "sample": 305
@@ -3227,7 +3227,7 @@ const STATS = {
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 2.8,
         "sample": 340
       },
@@ -3242,22 +3242,22 @@ const STATS = {
     "阮大师": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.01,
         "sample": 241
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.2,
         "sample": 303
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.25,
         "sample": 234
       }
@@ -3265,22 +3265,22 @@ const STATS = {
     "拉卡尼休": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.73,
         "sample": 206
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 2.75,
         "sample": 262
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.87,
         "sample": 211
       }
@@ -3288,22 +3288,22 @@ const STATS = {
     "克隆大师泽里克": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.09,
         "sample": 230
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.2,
         "sample": 183
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.3,
         "sample": 190
       }
@@ -3312,21 +3312,21 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 2.85,
         "sample": 318
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 2.87,
         "sample": 353
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 2.92,
         "sample": 276
       }
@@ -3334,22 +3334,22 @@ const STATS = {
     "死亡之翼": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.96,
         "sample": 155
       },
       {
         "key": "elemental_azerite",
-        "name": "元素·艾泽里特",
-        "tier": "T1",
+        "name": "元素·艾泽里特倒转",
+        "tier": "T0",
         "avg": 3.01,
         "sample": 97
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.18,
         "sample": 203
       }
@@ -3364,15 +3364,15 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.8,
         "sample": 248
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 2.84,
         "sample": 244
       }
@@ -3380,22 +3380,22 @@ const STATS = {
     "摩洛克·福尔摩斯": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.05,
         "sample": 196
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.19,
         "sample": 161
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.3,
         "sample": 227
       }
@@ -3403,7 +3403,7 @@ const STATS = {
     "玛里苟斯": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3,
         "sample": 126
@@ -3417,8 +3417,8 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.29,
         "sample": 143
       }
@@ -3426,22 +3426,22 @@ const STATS = {
     "梦魇之王萨维斯": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.9,
         "sample": 290
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 2.93,
         "sample": 315
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.94,
         "sample": 314
       }
@@ -3449,22 +3449,22 @@ const STATS = {
     "尤朵拉船长": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.97,
         "sample": 199
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.03,
         "sample": 275
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.17,
         "sample": 242
       }
@@ -3479,15 +3479,15 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.17,
         "sample": 308
       },
       {
         "key": "elemental_azerite",
-        "name": "元素·艾泽里特",
-        "tier": "T1",
+        "name": "元素·艾泽里特倒转",
+        "tier": "T0",
         "avg": 3.18,
         "sample": 255
       }
@@ -3495,22 +3495,22 @@ const STATS = {
     "奥拉基尔": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.72,
         "sample": 243
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.89,
         "sample": 228
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.03,
         "sample": 197
       }
@@ -3518,21 +3518,21 @@ const STATS = {
     "鼠王": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.99,
         "sample": 191
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.15,
         "sample": 183
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.29,
         "sample": 133
@@ -3541,22 +3541,22 @@ const STATS = {
     "堕落的乔治": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.96,
         "sample": 222
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.05,
         "sample": 172
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.17,
         "sample": 176
       }
@@ -3564,8 +3564,8 @@ const STATS = {
     "狂风之翼": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.86,
         "sample": 225
       },
@@ -3587,8 +3587,8 @@ const STATS = {
     "天空上尉库拉格": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.04,
         "sample": 219
       },
@@ -3601,7 +3601,7 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.27,
         "sample": 152
@@ -3610,22 +3610,22 @@ const STATS = {
     "永恒者托奇": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.9,
         "sample": 182
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.16,
         "sample": 206
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.28,
         "sample": 232
       }
@@ -3640,14 +3640,14 @@ const STATS = {
       },
       {
         "key": "murloc_scam",
-        "name": "鱼人·下毒",
+        "name": "鱼人·下水道下毒",
         "tier": "T1",
         "avg": 2.99,
         "sample": 112
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.08,
         "sample": 264
@@ -3656,7 +3656,7 @@ const STATS = {
     "雷诺·杰克逊": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.94,
         "sample": 218
@@ -3670,8 +3670,8 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.12,
         "sample": 282
       }
@@ -3679,14 +3679,14 @@ const STATS = {
     "伟大的阿卡扎曼扎拉克": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.74,
         "sample": 140
       },
       {
         "key": "murloc_scam",
-        "name": "鱼人·下毒",
+        "name": "鱼人·下水道下毒",
         "tier": "T1",
         "avg": 3.1,
         "sample": 117
@@ -3702,22 +3702,22 @@ const STATS = {
     "德雷克塔尔": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.79,
         "sample": 198
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 2.82,
         "sample": 290
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 2.88,
         "sample": 179
       }
@@ -3725,14 +3725,14 @@ const STATS = {
     "希尔瓦娜斯·风行者": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.01,
         "sample": 201
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.09,
         "sample": 148
@@ -3748,15 +3748,15 @@ const STATS = {
     "蛇眼": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.92,
         "sample": 210
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.07,
         "sample": 243
       },
@@ -3771,15 +3771,15 @@ const STATS = {
     "奥妮克希亚": [
       {
         "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
+        "name": "亡灵·纺织工复生",
+        "tier": "T1",
         "avg": 3.27,
         "sample": 50
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.4,
         "sample": 43
       },
@@ -3794,7 +3794,7 @@ const STATS = {
     "米罗克": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.81,
         "sample": 183
@@ -3808,8 +3808,8 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.02,
         "sample": 223
       }
@@ -3817,15 +3817,15 @@ const STATS = {
     "洛卡拉": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.82,
         "sample": 110
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.15,
         "sample": 95
       },
@@ -3840,8 +3840,8 @@ const STATS = {
     "费林大使": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.09,
         "sample": 308
       },
@@ -3854,7 +3854,7 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.19,
         "sample": 250
@@ -3863,22 +3863,22 @@ const STATS = {
     "辛达苟萨": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.23,
         "sample": 126
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.32,
         "sample": 136
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.41,
         "sample": 163
       }
@@ -3886,15 +3886,15 @@ const STATS = {
     "布鲁坎": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.76,
         "sample": 157
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 2.96,
         "sample": 113
       },
@@ -3909,8 +3909,8 @@ const STATS = {
     "时光扭曲者克罗米": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.03,
         "sample": 183
       },
@@ -3923,8 +3923,8 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.24,
         "sample": 165
       }
@@ -3932,7 +3932,7 @@ const STATS = {
     "恐龙大师布莱恩": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.02,
         "sample": 183
@@ -3955,14 +3955,14 @@ const STATS = {
     "穆克拉": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.07,
         "sample": 180
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.13,
         "sample": 140
@@ -3978,22 +3978,22 @@ const STATS = {
     "凯尔萨斯·逐日者": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.12,
         "sample": 114
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.19,
         "sample": 162
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.27,
         "sample": 163
       }
@@ -4001,21 +4001,21 @@ const STATS = {
     "预言者努波顿": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.97,
         "sample": 197
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.03,
         "sample": 178
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.2,
         "sample": 141
@@ -4024,21 +4024,21 @@ const STATS = {
     "巴罗夫领主": [
       {
         "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
+        "name": "亡灵·纺织工复生",
+        "tier": "T1",
         "avg": 3.22,
         "sample": 48
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.25,
         "sample": 208
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.31,
         "sample": 143
@@ -4055,7 +4055,7 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.1,
         "sample": 75
       },
@@ -4070,22 +4070,22 @@ const STATS = {
     "基希克斯": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.08,
         "sample": 300
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.13,
         "sample": 104
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.19,
         "sample": 174
       }
@@ -4094,20 +4094,20 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.13,
         "sample": 93
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.17,
         "sample": 90
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.22,
         "sample": 65
@@ -4123,14 +4123,14 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.21,
         "sample": 168
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.22,
         "sample": 152
@@ -4139,21 +4139,21 @@ const STATS = {
     "钩牙船长": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.97,
         "sample": 197
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.14,
         "sample": 162
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.26,
         "sample": 104
@@ -4162,21 +4162,21 @@ const STATS = {
     "比格沃斯先生": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.89,
         "sample": 160
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.99,
         "sample": 214
       },
       {
         "key": "murloc_scam",
-        "name": "鱼人·下毒",
+        "name": "鱼人·下水道下毒",
         "tier": "T1",
         "avg": 3.05,
         "sample": 96
@@ -4185,8 +4185,8 @@ const STATS = {
     "克苏恩": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.22,
         "sample": 104
       },
@@ -4200,7 +4200,7 @@ const STATS = {
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.32,
         "sample": 99
       }
@@ -4208,22 +4208,22 @@ const STATS = {
     "艾德温·范克里夫": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.1,
         "sample": 48
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.1,
         "sample": 36
       },
       {
         "key": "quilboar_felboar_spam",
-        "name": "野猪人·邪能猪",
-        "tier": "T2",
+        "name": "野猪人·邪能鲜血",
+        "tier": "T0",
         "avg": 3.25,
         "sample": 32
       }
@@ -4239,14 +4239,14 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.07,
         "sample": 184
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.09,
         "sample": 222
       }
@@ -4254,8 +4254,8 @@ const STATS = {
     "塔维什·雷矛": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.1,
         "sample": 192
       },
@@ -4268,7 +4268,7 @@ const STATS = {
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.33,
         "sample": 160
@@ -4277,15 +4277,15 @@ const STATS = {
     "提克特斯": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.07,
         "sample": 199
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.2,
         "sample": 236
       },
@@ -4300,7 +4300,7 @@ const STATS = {
     "至尊盗王拉法姆": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.36,
         "sample": 66
@@ -4308,14 +4308,14 @@ const STATS = {
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.39,
         "sample": 135
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.42,
         "sample": 106
       }
@@ -4323,7 +4323,7 @@ const STATS = {
     "斯卡布斯·刀油": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.32,
         "sample": 159
@@ -4337,8 +4337,8 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.38,
         "sample": 222
       }
@@ -4346,21 +4346,21 @@ const STATS = {
     "吞噬者穆坦努斯": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.13,
         "sample": 215
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.15,
         "sample": 208
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.3,
         "sample": 186
@@ -4376,15 +4376,15 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.15,
         "sample": 132
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.17,
         "sample": 129
       }
@@ -4392,22 +4392,22 @@ const STATS = {
     "泰瑟兰·血望者": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.08,
         "sample": 154
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.16,
         "sample": 114
       },
       {
         "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
+        "name": "亡灵·纺织工复生",
+        "tier": "T1",
         "avg": 3.17,
         "sample": 35
       }
@@ -4422,14 +4422,14 @@ const STATS = {
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.13,
         "sample": 95
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.22,
         "sample": 132
@@ -4438,7 +4438,7 @@ const STATS = {
     "舞者达瑞尔": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.12,
         "sample": 176
@@ -4453,7 +4453,7 @@ const STATS = {
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.32,
         "sample": 256
       }
@@ -4461,22 +4461,22 @@ const STATS = {
     "荷利戴医生": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3,
         "sample": 158
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.03,
         "sample": 124
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.14,
         "sample": 180
       }
@@ -4484,22 +4484,22 @@ const STATS = {
     "疯狂金字塔": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.03,
         "sample": 61
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.08,
         "sample": 79
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.26,
         "sample": 66
       }
@@ -4508,21 +4508,21 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.19,
         "sample": 204
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.31,
         "sample": 243
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.38,
         "sample": 261
       }
@@ -4530,22 +4530,22 @@ const STATS = {
     "贸易亲王加里维克斯": [
       {
         "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
+        "name": "亡灵·纺织工复生",
+        "tier": "T1",
         "avg": 2.69,
         "sample": 36
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.06,
         "sample": 168
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.08,
         "sample": 129
       }
@@ -4553,22 +4553,22 @@ const STATS = {
     "刀锋女王凯瑞甘": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.02,
         "sample": 32
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.07,
         "sample": 53
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.2,
         "sample": 52
       }
@@ -4576,22 +4576,22 @@ const STATS = {
     "斯尼德": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 2.58,
         "sample": 30
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.3,
         "sample": 67
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.42,
         "sample": 157
       }
@@ -4599,22 +4599,22 @@ const STATS = {
     "林地守护者欧穆": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.06,
         "sample": 160
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.08,
         "sample": 199
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.23,
         "sample": 226
       }
@@ -4622,22 +4622,22 @@ const STATS = {
     "瓦尔登·晨拥": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3,
         "sample": 134
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.18,
         "sample": 156
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.24,
         "sample": 155
       }
@@ -4645,8 +4645,8 @@ const STATS = {
     "米尔豪斯·法力风暴": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.16,
         "sample": 89
       },
@@ -4668,7 +4668,7 @@ const STATS = {
     "玛维·影歌": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.06,
         "sample": 85
@@ -4682,8 +4682,8 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.21,
         "sample": 130
       }
@@ -4691,15 +4691,15 @@ const STATS = {
     "苔丝·格雷迈恩": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.19,
         "sample": 198
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.41,
         "sample": 141
       },
@@ -4714,22 +4714,22 @@ const STATS = {
     "泽瑞拉": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.11,
         "sample": 125
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.3,
         "sample": 180
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.36,
         "sample": 160
       }
@@ -4737,14 +4737,14 @@ const STATS = {
     "炎魔之王拉格纳罗斯": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.15,
         "sample": 85
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.25,
         "sample": 67
@@ -4752,7 +4752,7 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.4,
         "sample": 44
       }
@@ -4760,21 +4760,21 @@ const STATS = {
     "阿兰娜·逐星": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.26,
         "sample": 141
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.3,
         "sample": 134
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.33,
         "sample": 119
@@ -4783,7 +4783,7 @@ const STATS = {
     "格雷布": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.1,
         "sample": 30
@@ -4797,8 +4797,8 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.38,
         "sample": 47
       }
@@ -4806,21 +4806,21 @@ const STATS = {
     "巫妖巴兹亚尔": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 2.9,
         "sample": 34
       },
       {
         "key": "quilboar_felboar_spam",
-        "name": "野猪人·邪能猪",
-        "tier": "T2",
+        "name": "野猪人·邪能鲜血",
+        "tier": "T0",
         "avg": 3.37,
         "sample": 63
       },
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.59,
         "sample": 33
@@ -4829,22 +4829,22 @@ const STATS = {
     "馆长": [
       {
         "key": "dragon_shield",
-        "name": "龙·圣盾",
+        "name": "龙·执念圣盾",
         "tier": "T0",
         "avg": 3.09,
         "sample": 69
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.18,
         "sample": 172
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.33,
         "sample": 157
       }
@@ -4852,8 +4852,8 @@ const STATS = {
     "詹迪斯·巴罗夫": [
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.2,
         "sample": 83
       },
@@ -4867,7 +4867,7 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.35,
         "sample": 87
       }
@@ -4875,14 +4875,14 @@ const STATS = {
     "德雷阿佳丝": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 2.98,
         "sample": 360
       },
       {
         "key": "murloc_scam",
-        "name": "鱼人·下毒",
+        "name": "鱼人·下水道下毒",
         "tier": "T1",
         "avg": 3.11,
         "sample": 33
@@ -4898,8 +4898,8 @@ const STATS = {
     "伊利丹·怒风": [
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.04,
         "sample": 144
       },
@@ -4912,8 +4912,8 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.11,
         "sample": 161
       }
@@ -4921,15 +4921,15 @@ const STATS = {
     "亡语者布莱克松": [
       {
         "key": "murloc_scam",
-        "name": "鱼人·下毒",
+        "name": "鱼人·下水道下毒",
         "tier": "T1",
         "avg": 2.38,
         "sample": 36
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 2.83,
         "sample": 275
       },
@@ -4944,14 +4944,14 @@ const STATS = {
     "齐恩瓦拉": [
       {
         "key": "elemental_azerite",
-        "name": "元素·艾泽里特",
-        "tier": "T1",
+        "name": "元素·艾泽里特倒转",
+        "tier": "T0",
         "avg": 3.36,
         "sample": 322
       },
       {
         "key": "murloc_scam",
-        "name": "鱼人·下毒",
+        "name": "鱼人·下水道下毒",
         "tier": "T1",
         "avg": 3.46,
         "sample": 37
@@ -4968,21 +4968,21 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.24,
         "sample": 260
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.33,
         "sample": 40
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.33,
         "sample": 345
       }
@@ -4997,15 +4997,15 @@ const STATS = {
       },
       {
         "key": "elemental_azerite",
-        "name": "元素·艾泽里特",
-        "tier": "T1",
+        "name": "元素·艾泽里特倒转",
+        "tier": "T0",
         "avg": 3.11,
         "sample": 46
       },
       {
         "key": "aberration_discard",
-        "name": "畸变怪·弃牌",
-        "tier": "T0",
+        "name": "畸变怪·弃牌爆发",
+        "tier": "T1",
         "avg": 3.15,
         "sample": 68
       }
@@ -5013,7 +5013,7 @@ const STATS = {
     "加拉克苏斯大王": [
       {
         "key": "murloc_scam",
-        "name": "鱼人·下毒",
+        "name": "鱼人·下水道下毒",
         "tier": "T1",
         "avg": 2.53,
         "sample": 31
@@ -5021,7 +5021,7 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.11,
         "sample": 33
       },
@@ -5036,8 +5036,8 @@ const STATS = {
     "典狱长": [
       {
         "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
+        "name": "亡灵·纺织工复生",
+        "tier": "T1",
         "avg": 3.47,
         "sample": 147
       },
@@ -5066,8 +5066,8 @@ const STATS = {
       },
       {
         "key": "elemental_azerite",
-        "name": "元素·艾泽里特",
-        "tier": "T1",
+        "name": "元素·艾泽里特倒转",
+        "tier": "T0",
         "avg": 3.13,
         "sample": 40
       },
@@ -5083,14 +5083,14 @@ const STATS = {
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.1,
         "sample": 43
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.14,
         "sample": 64
       },
@@ -5106,7 +5106,7 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.02,
         "sample": 30
       },
@@ -5119,8 +5119,8 @@ const STATS = {
       },
       {
         "key": "neutral_tea_set",
-        "name": "中立·喝茶",
-        "tier": "T0",
+        "name": "畸变怪·神明喝茶",
+        "tier": "T1",
         "avg": 3.36,
         "sample": 32
       }
@@ -5128,15 +5128,15 @@ const STATS = {
     "海盗帕奇斯": [
       {
         "key": "undead_apm",
-        "name": "亡灵·APM",
-        "tier": "T2",
+        "name": "亡灵·纺织工复生",
+        "tier": "T1",
         "avg": 3.13,
         "sample": 35
       },
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.55,
         "sample": 75
       },
@@ -5152,14 +5152,14 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.22,
         "sample": 142
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.49,
         "sample": 252
       },
@@ -5175,14 +5175,14 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.04,
         "sample": 270
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.2,
         "sample": 345
       },
@@ -5198,14 +5198,14 @@ const STATS = {
       {
         "key": "mech_apm",
         "name": "机械·APM",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.42,
         "sample": 158
       },
       {
         "key": "mech_volumizer",
         "name": "机械·扩音机",
-        "tier": "T0",
+        "tier": "T2",
         "avg": 3.49,
         "sample": 265
       },

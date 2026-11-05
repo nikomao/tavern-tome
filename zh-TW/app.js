@@ -1512,12 +1512,25 @@
     }
 
     function cardFor(n){
-      if(typeof CARDS === "undefined" || !CARDS) return null;
-      if(CARDS[n]) return CARDS[n];
-      var keys = Object.keys(CARDS), low = String(n).toLowerCase();
-      for(var i = 0; i < keys.length; i++){
-        var k = keys[i].toLowerCase();
-        if(k.indexOf(low) >= 0 || low.indexOf(k) >= 0) return CARDS[keys[i]];
+      if(typeof CARDS !== "undefined" && CARDS){
+        if(CARDS[n]) return CARDS[n];
+        var keys = Object.keys(CARDS), low = String(n).toLowerCase();
+        for(var i = 0; i < keys.length; i++){
+          var k = keys[i].toLowerCase();
+          if(k.indexOf(low) >= 0 || low.indexOf(k) >= 0) return CARDS[keys[i]];
+        }
+      }
+      if(window.findCard){
+        var found = window.findCard(n);
+        if(found && found.img) return { n: found.name, img: found.img };
+      }
+      if(typeof POOL !== "undefined" && POOL){
+        for(var j = 0; j < POOL.length; j++){
+          var p = POOL[j];
+          if(p.n === n || p.n.indexOf(n) >= 0 || n.indexOf(p.n) >= 0){
+            return { n: p.n, img: "../pool/" + p.i + ".webp" };
+          }
+        }
       }
       return null;
     }

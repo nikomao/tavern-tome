@@ -1,5 +1,5 @@
 /* Tavern Tome Service Worker for PWA & Offline Support */
-const CACHE_NAME = "tt-pwa-v1";
+const CACHE_NAME = "tt-pwa-v20261105-meta";
 
 const PRECACHE_ASSETS = [
   "./",
@@ -20,6 +20,7 @@ const PRECACHE_ASSETS = [
   "./comp-notes.js",
   "./extra-cards.js",
   "./cards.js",
+  "./card-modal.js",
   "./app.js",
   "./sim.js",
   "./finder.js",
@@ -72,19 +73,20 @@ self.addEventListener("fetch", function(e){
   if(req.method !== "GET") return;
 
   var url = new URL(req.url);
-  // Cache-First strategy for local static assets
+
+  // Network-First for core code, data & navigation so updates are never trapped in cache
   e.respondWith(
-    caches.match(req).then(function(cached){
-      if(cached) return cached;
-      return fetch(req).then(function(res){
-        if(res && res.status === 200 && (url.pathname.includes("/pool/") || url.pathname.includes("/cards/"))){
-          var clone = res.clone();
-          caches.open(CACHE_NAME).then(function(cache){
-            cache.put(req, clone);
-          });
-        }
-        return res;
-      }).catch(function(){
+    fetch(req).then(function(res){
+      if(res && res.status === 200){
+        var clone = res.clone();
+        caches.open(CACHE_NAME).then(function(cache){
+          cache.put(req, clone);
+        });
+      }
+      return res;
+    }).catch(function(){
+      return caches.match(req).then(function(cached){
+        if(cached) return cached;
         if(req.mode === "navigate"){
           return caches.match("./index.html");
         }
