@@ -1771,29 +1771,106 @@
   var c = STATS_CHANGE;
   function fmt(n){ return n ? Math.round(n / 10000) + " 万" : "-"; }
   var range = (c.from && c.to && c.from !== c.to) ? (c.from + " → " + c.to) : "对比上一版";
-  var h = '<div class="sc-head">本周变化 <span>' + range +
+  var h = '<div class="sc-head"><span class="sc-title">本周变化</span><span class="sc-range">' + range +
     " · 样本 " + fmt(c.sampleFrom) + " → " + fmt(c.sampleTo) + '</span></div>';
 
+  function getCardData(nameOrId){
+    if(window.findCard){
+      var hit = window.findCard(nameOrId);
+      if(hit) return { name: hit.name, img: hit.img || "" };
+    }
+    if(typeof CARDS !== "undefined" && CARDS){
+      if(CARDS[nameOrId]) return { name: nameOrId, img: CARDS[nameOrId].img || "" };
+      if(nameOrId === "布莱恩·铜须" && CARDS["铜须"]) return { name: "布莱恩·铜须", img: CARDS["铜须"].img };
+    }
+    if(typeof POOL !== "undefined" && POOL){
+      for(var i = 0; i < POOL.length; i++){
+        var p = POOL[i];
+        if(p.i === nameOrId || p.n === nameOrId || p.n.indexOf(nameOrId) >= 0 || nameOrId.indexOf(p.n) >= 0){
+          return { name: p.n, img: "pool/" + p.i + ".webp" };
+        }
+      }
+    }
+    return { name: nameOrId, img: "" };
+  }
+
+  function renderCardsHTML(cards, label){
+    if(!cards || !cards.length) return "";
+    var items = cards.slice(0, 5).map(function(cd){
+      var info = getCardData(cd.id || cd.name);
+      var cname = cd.name || info.name;
+      var imgTag = info.img ? '<img class="sc-cimg" src="' + info.img + '" alt="" loading="lazy">' : '';
+      return '<span class="sc-card-chip card-chip" data-card="' + cname + '" role="button" tabindex="0" title="点击查看【' + cname + '】详情">' +
+        imgTag + '<span class="sc-cname">' + cname + '</span></span>';
+    });
+    return '<div class="sc-cards"><span class="sc-clabel">' + (label || "核心卡牌：") + '</span><div class="sc-clist">' + items.join("") + '</div></div>';
+  }
+
   var rows = [];
+
   (c.comps || []).forEach(function(x){
     var up = x.rankTo < x.rankFrom;
-    rows.push('<div class="sc-row"><span class="' + (up ? "sc-up" : "sc-down") + '">' + (up ? "↑" : "↓") + "</span>" +
-      '<span class="sc-tag">阵容</span><b>' + x.name + '</b><span>#' + x.rankFrom + " → #" + x.rankTo +
-      (x.avgFrom === x.avgTo ? "" : "（均位 " + x.avgFrom + " → " + x.avgTo + "）") + "</span></div>");
+    var cards = [];
+    if(typeof STATS !== "undefined" && STATS.comps){
+      var compObj = STATS.comps.find(function(item){ return item.key === x.key || item.name === x.name; });
+      if(compObj && compObj.cards) cards = compObj.cards;
+    }
+    if(!cards.length && typeof META !== "undefined" && META.comps){
+      var metaObj = META.comps.find(function(item){ return item.name.indexOf(x.name) >= 0 || x.name.indexOf(item.name) >= 0; });
+      if(metaObj && metaObj.core) cards = metaObj.core.map(function(cn){ return { name: cn }; });
+    }
+
+    var cardsHTML = renderCardsHTML(cards, "核心卡牌：");
+    var jumpLink = x.key ? '<a class="sc-link" href="#comp-' + x.key + '">查看完整站位 →</a>' : '';
+
+    rows.push('<div class="sc-row sc-comp-item">' +
+      '<div class="sc-top-line">' +
+        '<span class="' + (up ? "sc-up" : "sc-down") + '">' + (up ? "↑" : "↓") + "</span>" +
+        '<span class="sc-tag sc-tag-comp">阵容</span>' +
+        '<b class="sc-name">' + x.name + '</b>' +
+        '<span class="sc-meta">#' + x.rankFrom + " → #" + x.rankTo +
+        (x.avgFrom === x.avgTo ? "" : "（均位 " + x.avgFrom + " → " + x.avgTo + "）") + "</span>" +
+        jumpLink +
+      '</div>' +
+      cardsHTML +
+    '</div>');
   });
+
   (c.heroes || []).forEach(function(x){
     var up = x.rankTo < x.rankFrom;
-    rows.push('<div class="sc-row"><span class="' + (up ? "sc-up" : "sc-down") + '">' + (up ? "↑" : "↓") + "</span>" +
-      '<span class="sc-tag">英雄</span><b>' + x.name + '</b><span>#' + x.rankFrom + " → #" + x.rankTo +
-      (x.avgFrom === x.avgTo ? "" : "（均位 " + x.avgFrom + " → " + x.avgTo + "）") + "</span></div>");
+    var heroCards = [];
+    if(typeof HERO_GUIDE_DATA !== "undefined" && HERO_GUIDE_DATA[x.name] && HERO_GUIDE_DATA[x.name].keyCards){
+      heroCards = HERO_GUIDE_DATA[x.name].keyCards;
+    }
+    if(!heroCards.length && typeof STATS !== "undefined" && STATS.heroComps && STATS.heroComps[x.name] && STATS.heroComps[x.name].length){
+      var topCompKey = STATS.heroComps[x.name][0].key;
+      var fullComp = (STATS.comps || []).find(function(item){ return item.key === topCompKey; });
+      if(fullComp && fullComp.cards) heroCards = fullComp.cards;
+    }
+
+    var cardsHTML = renderCardsHTML(heroCards, "适配核心：");
+    var jumpLink = '<a class="sc-link" href="#heroes" data-hero="' + x.name + '">查看英雄攻略 →</a>';
+
+    rows.push('<div class="sc-row sc-hero-item">' +
+      '<div class="sc-top-line">' +
+        '<span class="' + (up ? "sc-up" : "sc-down") + '">' + (up ? "↑" : "↓") + "</span>" +
+        '<span class="sc-tag sc-tag-hero">英雄</span>' +
+        '<b class="sc-name">' + x.name + '</b>' +
+        '<span class="sc-meta">#' + x.rankFrom + " → #" + x.rankTo +
+        (x.avgFrom === x.avgTo ? "" : "（均位 " + x.avgFrom + " → " + x.avgTo + "）") + "</span>" +
+        jumpLink +
+      '</div>' +
+      cardsHTML +
+    '</div>');
   });
 
   if(c.first) h += '<div class="sc-row">首次接入真实数据，已记录基线；下周开始显示升降。</div>';
   else if(!rows.length) h += '<div class="sc-row">本周阵容与英雄排名无显著变化。</div>';
-  else h += rows.join("");
+  else h += '<div class="sc-list">' + rows.join("") + '</div>';
 
   host.innerHTML = h;
   host.hidden = false;
+  if(window.enhanceCardMentions) window.enhanceCardMentions(host);
 })();
 
 /* ---------- tier legend modal ---------- */
