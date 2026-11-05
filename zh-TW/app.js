@@ -72,14 +72,14 @@
     var c = cardOf(nm);
     if(c && c.img){
       var st = (typeof tierStars === "function") ? tierStars(tierByName(nm)) : "";
-      return '<button type="button" class="fc" data-card="'+nm+'">' +
+      return '<button type="button" class="fc" data-card="'+nm+'" title="点擊查看卡牌效果">' +
         (st ? '<span class="fc-tier"><span class="stars">'+st+'</span></span>' : '') +
         '<span class="fc-img"><img src="'+c.img+'" alt="'+nm+'"></span><span class="fc-name">'+nm+'</span></button>';
     }
     if(isNoArt(nm)){
-      return '<span class="fc" title="卡圖暂未收錄"><span class="fc-img noimg"><i>'+nm.slice(0,1)+'</i></span><span class="fc-name">'+nm+'</span></span>';
+      return '<button type="button" class="fc" data-card="'+nm+'" title="点擊查看卡牌效果"><span class="fc-img noimg"><i>'+nm.slice(0,1)+'</i></span><span class="fc-name">'+nm+'</span></button>';
     }
-    return '<span class="fc generic"><span class="fc-img"><i>+</i></span><span class="fc-name">'+nm+'</span></span>';
+    return '<button type="button" class="fc generic" data-card="'+nm+'" title="点擊查看卡牌效果"><span class="fc-img"><i>+</i></span><span class="fc-name">'+nm+'</span></button>';
   }
 
   function planBlock(t){
@@ -305,7 +305,7 @@
       h += '<li class="core-item">' +
              thumbHTML(x.n) +
              '<span class="ci-main">' +
-               '<span class="ci-head"><b>'+x.n+'</b><span class="cr">'+x.r+'</span></span>' +
+               '<span class="ci-head"><b class="card-name-btn" data-card="'+x.n+'" role="button" tabindex="0" title="点擊查看卡牌效果">'+x.n+'</b><span class="cr">'+x.r+'</span></span>' +
                (sub ? '<span class="ci-sub">'+sub+'</span>' : '') +
                '<span class="cd">'+x.d+'</span>' +
              '</span>' +
@@ -351,6 +351,7 @@
     });
     tabWrap.innerHTML = tabsHtml;
     panelWrap.innerHTML = panelsHtml;
+    if(window.enhanceCardMentions) window.enhanceCardMentions(panelWrap);
 
     tabWrap.addEventListener("click", function(e){
       var btn = e.target.closest(".tab");
@@ -599,24 +600,24 @@
 
     function getCardTarget(target){
       if(!target || !target.closest) return null;
-      // Never trigger popover on names, roles, or text descriptions to preserve reading experience
-      if(target.closest(".cs-name, .tb-name, .fc-name, .mc-card em, .hb-role, .ci-main, .ci-head, .cd, .cr, .ci-sub, .cc-head, .cc-pos, .cc-foot, .cc-metrics")){
-        return null;
-      }
-      return target.closest("[data-card-id], [data-card]");
+      return target.closest("[data-card-id], [data-card], .card-chip, .card-name-btn, .comp-slot, .cr-slot, .tb-card, .fc, .tc, .mc-card, .cmp-slot, .hc-card-item, .demo-card");
     }
 
     document.addEventListener("mouseover", function(e){
       if(TOUCH) return;
       var el = getCardTarget(e.target);
       if(!el){
-        if(e.target.closest && (e.target.closest(".cs-name, .tb-name, .fc-name, .mc-card em, .ci-main, .ci-head, .cd, .cr, .ci-sub, .cc-head, .cc-pos, .cc-foot") || !e.target.closest("#cardPop"))){
+        if(e.target.closest && !e.target.closest("#cardPop")){
           pop.hidden = true;
         }
         return;
       }
       var id = el.getAttribute("data-card-id");
       var name = el.getAttribute("data-card");
+      if(!id && !name){
+        var nameEl = el.querySelector ? el.querySelector(".cs-name, .tb-name, .fc-name, .tc-name, .hc-ci-name, .dc-name, em, b") : null;
+        if(nameEl) name = nameEl.textContent.trim();
+      }
       var ok = id ? fillById(id) : (name ? fillCard(name) : false);
       if(!ok){ pop.hidden = true; return; }
       pop.hidden = false;
@@ -625,39 +626,10 @@
 
     if(popClose) popClose.addEventListener("click", function(){ pop.hidden = true; });
 
-    function openTouchCard(el){
-      var id = el.getAttribute("data-card-id");
-      var name = el.getAttribute("data-card");
-      var ok = id ? fillById(id) : (name ? fillCard(name) : false);
-      if(!ok) return false;
-      if(popLink){
-        if(id){ popLink.hidden = false; popLink.href = "cards.html?card=" + id; }
-        else { popLink.hidden = true; }
-      }
-      pop.hidden = false;
-      var r = el.getBoundingClientRect();
-      placePop(r.left + r.width / 2, r.top + r.height / 2);
-      return true;
-    }
-
-    if(TOUCH){
-      document.addEventListener("touchend", function(e){
-        var inPop = e.target.closest ? e.target.closest("#cardPop") : null;
-        if(inPop) return;
-        var el = getCardTarget(e.target);
-        if(!el){ pop.hidden = true; return; }
-        e.preventDefault();
-        openTouchCard(el);
-      }, { passive: false });
-
-      document.addEventListener("click", function(e){
-        var inPop = e.target.closest ? e.target.closest("#cardPop") : null;
-        if(inPop) return;
-        var el = getCardTarget(e.target);
-        if(!el){ pop.hidden = true; return; }
-        e.preventDefault();
-        openTouchCard(el);
-      }, true);
+    // 移動端/iPad 禁用 touch hover 與 touchend，徹底避免滑屏誤觸
+    // 只有明確点擊卡牌時由 card-modal.js 彈出居中卡牌詳情模態框
+    if(TOUCH && pop){
+      pop.style.display = "none";
     }
 
     document.addEventListener("mouseout", function(e){
@@ -677,10 +649,6 @@
 
     document.addEventListener("mousemove", function(e){
       if(!pop.hidden){
-        if(e.target.closest && e.target.closest(".cs-name, .tb-name, .fc-name, .mc-card em, .ci-main, .ci-head, .cd, .cr, .ci-sub")){
-          pop.hidden = true;
-          return;
-        }
         placePop(e.clientX, e.clientY);
       }
     });
@@ -693,6 +661,16 @@
       }
       var id = el.getAttribute("data-card-id");
       var name = el.getAttribute("data-card");
+      if(!id && !name){
+        var nameEl = el.querySelector ? el.querySelector(".cs-name, .tb-name, .fc-name, .tc-name, .hc-ci-name, .dc-name, em, b") : null;
+        if(nameEl) name = nameEl.textContent.trim();
+      }
+      if(window.openCardModal && (id || name)){
+        e.preventDefault();
+        window.openCardModal(id || name);
+        pop.hidden = true;
+        return;
+      }
       var r = el.getBoundingClientRect();
       var ok = id ? fillById(id) : (name ? fillCard(name) : false);
       if(ok){
@@ -1338,6 +1316,7 @@
         Array.prototype.forEach.call(host.querySelectorAll("[data-cmp]"), function(x){
           x.classList.toggle("on", cmp.indexOf(x.getAttribute("data-cmp")) >= 0);
         });
+        if(window.enhanceCardMentions) window.enhanceCardMentions(host);
       }
 
       if(heroSel){
@@ -1368,7 +1347,7 @@
         var only = orderedCards(c).filter(function(x){ return oids.indexOf(x.id) < 0; }).map(function(x){ return x.name; });
         var slots = orderedCards(c).slice(0, 7).map(function(x, i){
           var t = tierOfCard(x.id);
-          return '<div class="cmp-slot"><img src="../pool/' + x.id + '.webp" alt="" onerror="this.style.opacity=0"><span>' + x.name + '</span><em class="stars" title="' + (t != null ? t + ' 本' : '') + '">' + (t != null ? tierStars(t) : '') + '</em></div>';
+          return '<div class="cmp-slot" data-card-id="' + x.id + '" data-card="' + x.name + '" role="button" tabindex="0" title="点擊查看卡牌具體信息"><img src="../pool/' + x.id + '.webp" alt="" onerror="this.style.opacity=0"><span>' + x.name + '</span><em class="stars" title="' + (t != null ? t + ' 本' : '') + '">' + (t != null ? tierStars(t) : '') + '</em></div>';
         }).join("");
         return '<div class="cmp-col"><h3>' + c.name + ' <span class="cc-tier ' + String(c.tier).toLowerCase() + '">' + c.tier + '</span></h3>' +
           '<div class="cmp-metrics">均位 ' + Number(c.avg).toFixed(2) + ' · 前四 ' + Math.round((c.top4 || 0) * 100) + '% · 奪冠 ' +
@@ -1551,7 +1530,7 @@
         '<p class="mc-line">' + c.line + '</p>' +
         '<div class="mc-core">' + c.core.map(function(x){
           var card = cardFor(x);
-          return '<span class="mc-card" data-card="' + x + '">' + (card && card.img ? '<img src="' + card.img + '" alt="" loading="lazy">' : '') + '<em>' + x + '</em></span>';
+          return '<span class="mc-card" data-card="' + x + '" role="button" tabindex="0" title="点擊查看卡牌效果">' + (card && card.img ? '<img src="' + card.img + '" alt="" loading="lazy">' : '') + '<em>' + x + '</em></span>';
         }).join("") + '</div>' +
         '<p class="mc-good"><b>強</b>' + c.good + '</p>' +
         '<p class="mc-bad"><b>怕</b>' + c.bad + '</p>';
@@ -1698,6 +1677,10 @@
 
     drawHeroes();
     if(typeof TRINKETS !== "undefined") renderGuideList("trinketList", TRINKETS);
+    if(window.enhanceCardMentions){
+      var hl = document.getElementById("heroList");
+      if(hl) window.enhanceCardMentions(hl);
+    }
 
     var sw = document.getElementById("segSwitch");
     if(sw){

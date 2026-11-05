@@ -282,6 +282,7 @@ const FILES = [
   ["stats-mmr.js", false],
   ["stats-change.js", false],
   ["extra-cards.js", false],
+  ["card-modal.js", false],
   ["search.js", false],
   ["demos.js", false],
   ["hero.js", false],

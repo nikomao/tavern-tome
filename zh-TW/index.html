@@ -825,7 +825,7 @@
   <div class="tavern-bulletin">
     <span class="tb-pin"></span>
     <span class="tb-label">旅店告示</span>
-    <p><b>本週環境：</b>畸變體、元素、惡魔三家 T0 爭霸；納迦、海盜、野獸、龍穩在 T1；機械和魚人适合吃分；不死族與野豬人偏弱，除非發牌特別好。</p>
+    <p><b>本週環境（11月第1周）：</b>野豬人（邪能鲜血）、龍族（執念聖盾術）、元素（艾泽裡特倒轉）三強領跑 T0；畸變體（神明喝茶）、下毒魚人與纺织工不死族穩居 T1 強勢梯队；決賽圈重点備戰下毒对位與坑道爆破師破盾。</p>
   </div>
   <div class="comp-tools" id="compTools" hidden>
     <div class="ct-hero" id="ctHeroWrap">
@@ -1140,6 +1140,29 @@
   </div>
 </div>
 
+<div class="pool-modal" id="globalCardModal" hidden aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="pm-card">
+    <button type="button" class="pm-close" id="gcmClose" aria-label="關閉">×</button>
+    <div class="pm-img" id="gcmImgWrap">
+      <img id="gcmImg" alt="" />
+      <div class="pm-noimg" id="gcmNoImg" style="display:none;"><i>?</i><span>卡圖收錄中</span></div>
+    </div>
+    <div class="pm-info">
+      <div class="pm-title-row">
+        <h3 id="gcmName"></h3>
+        <span class="pm-alias" id="gcmAlias" style="display:none;"></span>
+      </div>
+      <div class="pm-meta" id="gcmMeta"></div>
+      <p class="pm-text" id="gcmText"></p>
+      <div class="pm-extra" id="gcmExtra"></div>
+      <div class="pm-footer">
+        <div class="pm-tribes" id="gcmTribes"></div>
+        <a class="pm-pool-link" id="gcmPoolLink" href="#" target="_blank" rel="noopener">在完整卡牌池中查看 →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="data.js?v=20261105d"></script>
 <script src="pool.js?v=20261105d"></script>
 <script src="stats-change.js?v=20261105d"></script>
@@ -1149,6 +1172,7 @@
 <script src="hero-guide-data.js?v=20261105d"></script>
 <script src="extra-cards.js?v=20261105d"></script>
 <script src="cards.js?v=20261105d"></script>
+<script src="card-modal.js?v=20261105d"></script>
 <script src="app.js?v=20261105d"></script>
 <script src="sim.js?v=20261105d"></script>
 <script src="finder.js?v=20261105d"></script>

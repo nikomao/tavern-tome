@@ -66,7 +66,8 @@
     active = shown.length ? 0 : -1;
     if(!shown.length){ list.innerHTML = '<div class="sr-empty">没找到「' + q + '」相关的内容</div>'; return; }
     list.innerHTML = shown.map(function(x, i){
-      return '<a class="sr' + (i === 0 ? " on" : "") + '" href="' + (x.href || "#") + '" data-i="' + i + '">' +
+      var cardAttrs = (x.type === "卡牌") ? (' data-card-id="' + (x.data.id || "") + '" data-card="' + x.name + '"') : '';
+      return '<a class="sr' + (i === 0 ? " on" : "") + '" href="' + (x.href || "#") + '" data-i="' + i + '"' + cardAttrs + '>' +
         '<span class="sr-type">' + x.type + '</span><span class="sr-name">' + x.name + '</span>' +
         '<span class="sr-sub">' + x.sub + '</span></a>';
     }).join("");
@@ -75,6 +76,11 @@
   function choose(i){
     var x = shown[i];
     if(!x) return;
+    if(x.type === "卡牌" && window.openCardModal){
+      close();
+      window.openCardModal(x.data.id || x.name);
+      return;
+    }
     if(x.data.comp){
       close();
       var link = document.querySelector('[data-comp="' + x.data.comp + '"]');

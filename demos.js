@@ -36,7 +36,7 @@
   function cardChip(name){
     var c = byName[name];
     if(!c) return "";
-    return '<a class="demo-card" href="cards.html?card=' + c.i + '" data-card-id="' + c.i + '" title="' + name + '">' +
+    return '<a class="demo-card" href="cards.html?card=' + c.i + '" data-card-id="' + c.i + '" data-card="' + name + '" title="点击查看卡牌效果">' +
       '<span class="dc-img"><img loading="lazy" src="pool/' + c.i + '.webp" alt="' + name + '"></span>' +
       '<span class="dc-name">' + name + '</span></a>';
   }

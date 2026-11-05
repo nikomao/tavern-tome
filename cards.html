@@ -81,21 +81,33 @@
   <p class="pool-note">卡图与卡牌数据来自社区卡牌库（HearthstoneJSON / ZeroToHeroes）。历史卡不一定出现在当前对局，请以游戏内为准。</p>
 </main>
 
-<div class="pool-modal" id="poolModal" hidden>
+<div class="pool-modal" id="poolModal" hidden aria-hidden="true" role="dialog" aria-modal="true">
   <div class="pm-card">
     <button type="button" class="pm-close" id="pmClose" aria-label="关闭">×</button>
-    <div class="pm-img"><img id="pmImg" alt="" /></div>
+    <div class="pm-img" id="pmImgWrap">
+      <img id="pmImg" alt="" />
+      <div class="pm-noimg" id="gcmNoImg" style="display:none;"><i>?</i><span>卡图收录中</span></div>
+    </div>
     <div class="pm-info">
-      <h3 id="pmName"></h3>
+      <div class="pm-title-row">
+        <h3 id="pmName"></h3>
+        <span class="pm-alias" id="pmAlias" style="display:none;"></span>
+      </div>
       <div class="pm-meta" id="pmMeta"></div>
       <p class="pm-text" id="pmText"></p>
-      <div class="pm-tribes" id="pmTribes"></div>
+      <div class="pm-extra" id="gcmExtra"></div>
+      <div class="pm-footer">
+        <div class="pm-tribes" id="pmTribes"></div>
+      </div>
     </div>
   </div>
 </div>
 
-<script src="pool.js?v=20261103g"></script>
-<script src="pool-page.js?v=20261103g"></script>
+<script src="pool.js?v=20261105d"></script>
+<script src="comp-notes.js?v=20261105d"></script>
+<script src="cards.js?v=20261105d"></script>
+<script src="card-modal.js?v=20261105d"></script>
+<script src="pool-page.js?v=20261105d"></script>
 <a class="lang-fab" href="zh-TW/cards.html">繁中</a>
 <script src="analytics-config.js?v=20261103g"></script>
 <script src="analytics.js?v=20261103g"></script>

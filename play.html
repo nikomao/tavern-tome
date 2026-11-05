@@ -66,13 +66,37 @@
   </div>
 </div>
 
-<script src="data.js?v=20261103g"></script>
-<script src="pool.js?v=20261103g"></script>
-<script src="stats.js?v=20261103g"></script>
-<script src="comp-notes.js?v=20261103g"></script>
-<script src="extra-cards.js?v=20261103g"></script>
-<script src="cards.js?v=20261103g"></script>
-<script src="play.js?v=20261103g"></script>
+<div class="pool-modal" id="globalCardModal" hidden aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="pm-card">
+    <button type="button" class="pm-close" id="gcmClose" aria-label="关闭">×</button>
+    <div class="pm-img" id="gcmImgWrap">
+      <img id="gcmImg" alt="" />
+      <div class="pm-noimg" id="gcmNoImg" style="display:none;"><i>?</i><span>卡图收录中</span></div>
+    </div>
+    <div class="pm-info">
+      <div class="pm-title-row">
+        <h3 id="gcmName"></h3>
+        <span class="pm-alias" id="gcmAlias" style="display:none;"></span>
+      </div>
+      <div class="pm-meta" id="gcmMeta"></div>
+      <p class="pm-text" id="gcmText"></p>
+      <div class="pm-extra" id="gcmExtra"></div>
+      <div class="pm-footer">
+        <div class="pm-tribes" id="gcmTribes"></div>
+        <a class="pm-pool-link" id="gcmPoolLink" href="#" target="_blank" rel="noopener">在完整卡池中查看 →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="data.js?v=20261105d"></script>
+<script src="pool.js?v=20261105d"></script>
+<script src="stats.js?v=20261105d"></script>
+<script src="comp-notes.js?v=20261105d"></script>
+<script src="extra-cards.js?v=20261105d"></script>
+<script src="cards.js?v=20261105d"></script>
+<script src="card-modal.js?v=20261105d"></script>
+<script src="play.js?v=20261105d"></script>
 <a class="lang-fab" href="zh-TW/play.html">繁中</a>
 <script src="analytics-config.js?v=20261103g"></script>
 <script src="analytics.js?v=20261103g"></script>

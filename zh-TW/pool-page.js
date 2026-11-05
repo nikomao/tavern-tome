@@ -47,11 +47,13 @@
     b.type = "button";
     b.className = "pc";
     b.setAttribute("data-idx", idx);
+    b.setAttribute("data-card-id", c.i);
+    b.setAttribute("data-card", c.n);
     var img = c.m
       ? '<img loading="lazy" src="../pool/' + c.i + '.webp" alt="' + c.n + '">'
       : '<span class="pc-noimg">?</span>';
     b.innerHTML = '<span class="pc-img">' + img + '</span>' +
-      '<span class="pc-info"><b>' + c.n + '</b><em>' + metaText(c) + '</em></span>';
+      '<span class="pc-info"><b class="card-name-btn">' + c.n + '</b><em>' + metaText(c) + '</em></span>';
     return b;
   }
 
@@ -76,6 +78,10 @@
 
   var timer;
   function showCard(c){
+    if(window.openCardModal && (c.i || c.n)){
+      window.openCardModal(c.i || c.n);
+      return;
+    }
     document.getElementById("pmName").textContent = c.n;
     document.getElementById("pmMeta").innerHTML = metaText(c);
     document.getElementById("pmText").textContent = c.x || "（無卡牌描述）";

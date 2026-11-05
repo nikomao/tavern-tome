@@ -162,7 +162,7 @@
         '<button class="swap" data-swap="' + i + '" title="替换">⇄</button>' +
         (t != null ? '<span class="tier stars" title="' + t + ' 本">' + tierStars(t) + '</span>' : '') +
         '<span class="ps-img">' + (CARD_DB[x.id] && CARD_DB[x.id].m ? '<img src="pool/' + x.id + '.webp" alt="" onerror="this.style.display=\'none\'">' : '<i>' + x.name.slice(0,1) + '</i>') + '</span>' +
-        '<span class="ps-name">' + x.name + '</span>' +
+        '<span class="ps-name card-name-btn" data-card-id="' + x.id + '" data-card="' + x.name + '" title="点击查看卡牌效果">' + x.name + '</span>' +
         '<span class="state">' + slotStateWord(v) + '</span>';
       slotsEl.appendChild(d);
     });
@@ -174,12 +174,15 @@
     var adv = advice();
     document.getElementById("adviceMain").innerHTML = adv.main;
     document.getElementById("adviceSub").innerHTML = adv.sub;
+    if(window.enhanceCardMentions){
+      window.enhanceCardMentions(document.getElementById("playAdvice"));
+    }
 
     missCount.textContent = missing.length;
     missList.innerHTML = missing.length ? missing.map(function(o){
       var t = tierOf(o.x.id);
       var next = adv.nextId && o.x.id === adv.nextId;
-      return '<div class="miss' + (next ? ' next' : '') + '"><span class="m-tier stars">' + (t != null ? tierStars(t) : '?') + '</span><span>' + o.x.name + '</span>' +
+      return '<div class="miss' + (next ? ' next' : '') + '" data-card-id="' + o.x.id + '" data-card="' + o.x.name + '" role="button" tabindex="0" title="点击查看卡牌效果"><span class="m-tier stars">' + (t != null ? tierStars(t) : '?') + '</span><span class="card-name-btn">' + o.x.name + '</span>' +
         (next ? '<span class="tag-next">先找</span>' : '') + '</div>';
     }).join("") : '<div class="miss">七格齐了，准备收口。</div>';
 
@@ -266,9 +269,26 @@
   slotsEl.addEventListener("click", function(e){
     var sw = e.target.closest ? e.target.closest(".swap") : null;
     if(sw){ e.preventDefault(); openPicker(+sw.getAttribute("data-swap")); return; }
+    var nm = e.target.closest ? e.target.closest(".ps-name") : null;
+    if(nm){
+      e.preventDefault();
+      var cardId = nm.getAttribute("data-card-id") || nm.getAttribute("data-card") || nm.textContent.trim();
+      if(window.openCardModal && window.openCardModal(cardId)) return;
+    }
     var s = e.target.closest ? e.target.closest(".ps-slot") : null;
     if(s) toggle(+s.getAttribute("data-i"));
   });
+
+  if(missList){
+    missList.addEventListener("click", function(e){
+      var m = e.target.closest ? e.target.closest(".miss") : null;
+      if(!m) return;
+      var cardId = m.getAttribute("data-card-id") || m.getAttribute("data-card");
+      if(window.openCardModal && cardId){
+        window.openCardModal(cardId);
+      }
+    });
+  }
 
   document.getElementById("playStatus").addEventListener("click", function(e){
     var b = e.target.closest ? e.target.closest("button[data-k]") : null;
