@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-05T05:30:23.694Z",
+  "updated": "2026-11-05T14:09:17.633Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "The fuck undead starter pack",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xoj5ws/the_fuck_undead_starter_pack/",
+      "ts": 1793886731000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "他妈的不死族新手包",
+      "titleZhtw": "他妈的不死族新手包"
+    },
     {
       "source": "Reddit",
       "title": "Anyone else feeling like the quilboar nerfs were a tad underwhelming?",
@@ -69,17 +80,6 @@
       "titleZhtw": "更新檔的最佳更改"
     },
     {
-      "source": "Blizzard Entertainment",
-      "title": "37.0.2 Patch Notes - Blizzard Entertainment",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9adVdYbTNGZG5wTFJnQWg5SzRwaXUzaUhIb1cxQWFNSk5nOVhnbDlodnZDOHVuMU9yaXE4d2FMaDkzdWR4RVVadThVa184NjRJd0pfU3lLY2JLR0Vv?oc=5",
-      "ts": 1793722736000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "37.0.2版本更新公告-暴雪官方",
-      "titleZhtw": "37.0.2版本更新說明-暴雪官方"
-    },
-    {
       "source": "Reddit",
       "title": "37.0.2 Visual Patch Notes(14 locales!)",
       "url": "https://www.reddit.com/r/BobsTavern/comments/1xmx6yb/3702_visual_patch_notes14_locales/",
@@ -89,6 +89,17 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "37.0.2可视化版本更新公告（ 14个区域设置！ ）",
       "titleZhtw": "37.0.2可视化版本更新說明（ 14个区域设置！ ）"
+    },
+    {
+      "source": "Blizzard Entertainment",
+      "title": "37.0.2 Patch Notes - Blizzard Entertainment",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9adVdYbTNGZG5wTFJnQWg5SzRwaXUzaUhIb1cxQWFNSk5nOVhnbDlodnZDOHVuMU9yaXE4d2FMaDkzdWR4RVVadThVa184NjRJd0pfU3lLY2JLR0Vv?oc=5",
+      "ts": 1793721889000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "37.0.2版本更新公告-暴雪官方",
+      "titleZhtw": "37.0.2版本更新說明-暴雪官方"
     },
     {
       "source": "Reddit",
@@ -188,17 +199,6 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "37.0.1热修补丁更新- 10月19日推出",
       "titleZhtw": "37.0.1即時修正更新檔更新- 10月19日推出"
-    },
-    {
-      "source": "Blizzard Entertainment",
-      "title": "37.0 Patch Notes - Blizzard Entertainment",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9RUGpzUWExa2xTeVJPQm9NeFVYX3puTkgzN3pleldiQzJQTzFwU19hcUg5VnRpMjZvNXBSOUdQbnhxNDUyRDJyUWxMNDIyYUF2emJfNkswd3RPVU1Y?oc=5",
-      "ts": 1791788400000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "37.0版本更新公告-暴雪官方",
-      "titleZhtw": "37.0版本更新說明-暴雪官方"
     }
   ]
 }
