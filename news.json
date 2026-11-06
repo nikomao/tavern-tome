@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-06T13:51:01.023Z",
+  "updated": "2026-11-06T22:46:58.338Z",
   "total": 18,
   "items": [
+    {
+      "source": "Blizzard Entertainment",
+      "title": "37.0.2 Patch Notes - Blizzard Entertainment",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9adVdYbTNGZG5wTFJnQWg5SzRwaXUzaUhIb1cxQWFNSk5nOVhnbDlodnZDOHVuMU9yaXE4d2FMaDkzdWR4RVVadThVa184NjRJd0pfU3lLY2JLR0Vv?oc=5",
+      "ts": 1793998557000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "37.0.2版本更新公告-暴雪官方",
+      "titleZhtw": "37.0.2版本更新說明-暴雪官方"
+    },
     {
       "source": "Reddit",
       "title": "building an army of wildfires vs murloc scam",
@@ -155,17 +166,6 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "补丁的最佳更改",
       "titleZhtw": "更新檔的最佳更改"
-    },
-    {
-      "source": "Blizzard Entertainment",
-      "title": "37.0.2 Patch Notes - Blizzard Entertainment",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9adVdYbTNGZG5wTFJnQWg5SzRwaXUzaUhIb1cxQWFNSk5nOVhnbDlodnZDOHVuMU9yaXE4d2FMaDkzdWR4RVVadThVa184NjRJd0pfU3lLY2JLR0Vv?oc=5",
-      "ts": 1793724161000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "37.0.2版本更新公告-暴雪官方",
-      "titleZhtw": "37.0.2版本更新說明-暴雪官方"
     },
     {
       "source": "Reddit",
