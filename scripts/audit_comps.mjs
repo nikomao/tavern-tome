@@ -50,8 +50,8 @@ function mentions(text) {
 }
 
 function turnOf(round) {
-  const m = String(round).match(/(\d+)/);
-  return m ? Number(m[1]) : null;
+  const all = String(round).match(/\d+/g);
+  return all && all.length ? Math.max(...all.map(Number)) : null;
 }
 
 // --- 1) 数值算式校验：a × b × c = d / a + b = c
