@@ -1,7 +1,40 @@
 {
-  "updated": "2026-11-06T05:28:47.534Z",
+  "updated": "2026-11-06T13:51:01.023Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "building an army of wildfires vs murloc scam",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xp7zx3/building_an_army_of_wildfires_vs_murloc_scam/",
+      "ts": 1793954857000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "建立一支野火大军vs 鱼人诈骗",
+      "titleZhtw": "建立一支野火大军vs 魚人诈骗"
+    },
+    {
+      "source": "Reddit",
+      "title": "Battlegrounds boons",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xp68c8/battlegrounds_boons/",
+      "ts": 1793947884000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "酒馆战棋 BOONS",
+      "titleZhtw": "英雄戰場 BOONS"
+    },
+    {
+      "source": "Reddit",
+      "title": "I don’t feel good about this one, but new highest stat minion without combat buffs",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xp4z8a/i_dont_feel_good_about_this_one_but_new_highest/",
+      "ts": 1793943338000,
+      "kind": "meta",
+      "tagZh": "天梯平衡",
+      "tagZhtw": "天梯平衡",
+      "titleZh": "我对此感到不舒服，但新的没有战斗增益的最高属性小兵",
+      "titleZhtw": "我對此感到不舒服，但新的没有戰斗增益的最高属性小兵"
+    },
     {
       "source": "Reddit",
       "title": "I have beasts in a non-beast lobby thanks to 'ralley'",
@@ -166,39 +199,6 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "37.0.2版本更新公告",
       "titleZhtw": "37.0.2版本更新說明"
-    },
-    {
-      "source": "Reddit",
-      "title": "What Pirate economy cards are you hoping to see next season",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xmhgtp/what_pirate_economy_cards_are_you_hoping_to_see/",
-      "ts": 1793674172000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "您希望下赛季看到哪些海盗经济卡",
-      "titleZhtw": "您希望下赛季看到哪些海盜经济卡"
-    },
-    {
-      "source": "Reddit",
-      "title": "Don't you think Blizzard nerfed Pirates too much?",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xmd36n/dont_you_think_blizzard_nerfed_pirates_too_much/",
-      "ts": 1793662172000,
-      "kind": "meta",
-      "tagZh": "天梯平衡",
-      "tagZhtw": "天梯平衡",
-      "titleZh": "你不觉得暴雪削弱海盗太多了吗？",
-      "titleZhtw": "你不觉得暴雪削弱海盜太多了吗？"
-    },
-    {
-      "source": "Reddit",
-      "title": "Entire lobby going quills and demons except for one guy who went 8th",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xmarou/entire_lobby_going_quills_and_demons_except_for/",
-      "ts": 1793656464000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "本局全员里的所有玩家都去野猪人和恶魔，除了一个获得第8名的家伙",
-      "titleZhtw": "本局全员里的所有玩家都去野豬人和惡魔，除了一个獲得第8名的家伙"
     }
   ]
 }
