@@ -1,7 +1,62 @@
 {
-  "updated": "2026-11-05T05:30:23.694Z",
+  "updated": "2026-11-06T05:28:47.534Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "I have beasts in a non-beast lobby thanks to 'ralley'",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xp05sy/i_have_beasts_in_a_nonbeast_lobby_thanks_to_ralley/",
+      "ts": 1793928266000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "由于“ralley” ，我在一个非野兽本局全员里有野兽",
+      "titleZhtw": "由于“ralley” ，我在一个非野獸本局全员里有野獸"
+    },
+    {
+      "source": "Reddit",
+      "title": "Riddle me this battlegrounds community",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xouwmf/riddle_me_this_battlegrounds_community/",
+      "ts": 1793914241000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "向我提出这个战场社区的谜题",
+      "titleZhtw": "向我提出這个戰场社区的谜题"
+    },
+    {
+      "source": "Reddit",
+      "title": "Turn 8, and he already in the 6 tavern.",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xombni/turn_8_and_he_already_in_the_6_tavern/",
+      "ts": 1793894377000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "8号转弯，他已经在6号酒馆了。",
+      "titleZhtw": "8号轉弯，他已经在6号旅店了。"
+    },
+    {
+      "source": "Reddit",
+      "title": "After patch: Only 4 players left by turn 10 every single game...",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xokqtv/after_patch_only_4_players_left_by_turn_10_every/",
+      "ts": 1793890661000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "补丁后：每场比赛第10回合只剩下4名玩家……",
+      "titleZhtw": "更新檔後：每场比赛第10回合只剩下4名玩家……"
+    },
+    {
+      "source": "Reddit",
+      "title": "The fuck undead starter pack",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xoj5ws/the_fuck_undead_starter_pack/",
+      "ts": 1793886731000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "他妈的不死族新手包",
+      "titleZhtw": "他妈的不死族新手包"
+    },
     {
       "source": "Reddit",
       "title": "Anyone else feeling like the quilboar nerfs were a tad underwhelming?",
@@ -72,7 +127,7 @@
       "source": "Blizzard Entertainment",
       "title": "37.0.2 Patch Notes - Blizzard Entertainment",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9adVdYbTNGZG5wTFJnQWg5SzRwaXUzaUhIb1cxQWFNSk5nOVhnbDlodnZDOHVuMU9yaXE4d2FMaDkzdWR4RVVadThVa184NjRJd0pfU3lLY2JLR0Vv?oc=5",
-      "ts": 1793722736000,
+      "ts": 1793724161000,
       "kind": "patch",
       "tagZh": "官方补丁",
       "tagZhtw": "官方更新檔",
@@ -144,61 +199,6 @@
       "tagZhtw": "社群熱議",
       "titleZh": "本局全员里的所有玩家都去野猪人和恶魔，除了一个获得第8名的家伙",
       "titleZhtw": "本局全员里的所有玩家都去野豬人和惡魔，除了一个獲得第8名的家伙"
-    },
-    {
-      "source": "Reddit",
-      "title": "TIL: Enhance-o Mechano can give Fishbait Divine Shield and Windfury Beasts attack twice into them.",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xma202/til_enhanceo_mechano_can_give_fishbait_divine/",
-      "ts": 1793654811000,
-      "kind": "mechanic",
-      "tagZh": "机制冷知识",
-      "tagZhtw": "機制冷知識",
-      "titleZh": "机制冷知识 ：强化机器人可以给鱼饵圣盾和风怒兽攻击两次。",
-      "titleZhtw": "機制冷知識 ：強化機器人可以给魚餌聖盾術和風怒兽攻击两次。"
-    },
-    {
-      "source": "Reddit",
-      "title": "Does anyone actually prefer Aberrations to Naga?",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xm3uct/does_anyone_actually_prefer_aberrations_to_naga/",
-      "ts": 1793641209000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "真的有人更喜欢畸变而不是纳迦吗？",
-      "titleZhtw": "真的有人更喜欢畸變體而不是納迦吗？"
-    },
-    {
-      "source": "Reddit",
-      "title": "Balance patch sneak peak for tomorrow",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xm3n0k/balance_patch_sneak_peak_for_tomorrow/",
-      "ts": 1793640759000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "明天的平衡更新补丁前瞻偷跑",
-      "titleZhtw": "明天的平衡更新更新檔前瞻偷跑"
-    },
-    {
-      "source": "Reddit",
-      "title": "37.0.1 Hotfix Patch - Rolling out on October 19",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xa02xx/3701_hotfix_patch_rolling_out_on_october_19/",
-      "ts": 1792423984000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "37.0.1热修补丁更新- 10月19日推出",
-      "titleZhtw": "37.0.1即時修正更新檔更新- 10月19日推出"
-    },
-    {
-      "source": "Blizzard Entertainment",
-      "title": "37.0 Patch Notes - Blizzard Entertainment",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9RUGpzUWExa2xTeVJPQm9NeFVYX3puTkgzN3pleldiQzJQTzFwU19hcUg5VnRpMjZvNXBSOUdQbnhxNDUyRDJyUWxMNDIyYUF2emJfNkswd3RPVU1Y?oc=5",
-      "ts": 1791788400000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "37.0版本更新公告-暴雪官方",
-      "titleZhtw": "37.0版本更新說明-暴雪官方"
     }
   ]
 }
