@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-07T12:35:42.017Z",
+  "updated": "2026-11-07T21:31:32.847Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "Beefiest Battlegrounds Duo combo",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xqg3n8/beefiest_battlegrounds_duo_combo/",
+      "ts": 1794083344000,
+      "kind": "mechanic",
+      "tagZh": "机制冷知识",
+      "tagZhtw": "機制冷知識",
+      "titleZh": "最牛逼战场二人组组合",
+      "titleZhtw": "最牛逼戰场二人组组合"
+    },
     {
       "source": "Reddit",
       "title": "Okay, this thing might be preeeeetty good in beast lobbies",
@@ -12,6 +23,17 @@
       "tagZhtw": "社群熱議",
       "titleZh": "好吧，这东西在野兽本局全员里可能很不错",
       "titleZhtw": "好吧，這东西在野獸本局全员里可能很不错"
+    },
+    {
+      "source": "Blizzard Entertainment",
+      "title": "37.0.2 Patch Notes - Blizzard Entertainment",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9adVdYbTNGZG5wTFJnQWg5SzRwaXUzaUhIb1cxQWFNSk5nOVhnbDlodnZDOHVuMU9yaXE4d2FMaDkzdWR4RVVadThVa184NjRJd0pfU3lLY2JLR0Vv?oc=5",
+      "ts": 1793998557000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "37.0.2版本更新公告-暴雪官方",
+      "titleZhtw": "37.0.2版本更新說明-暴雪官方"
     },
     {
       "source": "Reddit",
@@ -177,28 +199,6 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "37.0.2可视化版本更新公告（ 14个区域设置！ ）",
       "titleZhtw": "37.0.2可视化版本更新說明（ 14个区域设置！ ）"
-    },
-    {
-      "source": "Blizzard Entertainment",
-      "title": "37.0.2 Patch Notes - Blizzard Entertainment",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9adVdYbTNGZG5wTFJnQWg5SzRwaXUzaUhIb1cxQWFNSk5nOVhnbDlodnZDOHVuMU9yaXE4d2FMaDkzdWR4RVVadThVa184NjRJd0pfU3lLY2JLR0Vv?oc=5",
-      "ts": 1793721889000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "37.0.2版本更新公告-暴雪官方",
-      "titleZhtw": "37.0.2版本更新說明-暴雪官方"
-    },
-    {
-      "source": "Reddit",
-      "title": "Visual Patch notes for Patch 36.6.3 by Nomi.gg",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xmwsrh/visual_patch_notes_for_patch_3663_by_nomigg/",
-      "ts": 1793721606000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "Nomi.gg的Patch 36.6.3视觉版本更新公告",
-      "titleZhtw": "Nomi.gg的Patch 36.6.3视觉版本更新說明"
     }
   ]
 }
