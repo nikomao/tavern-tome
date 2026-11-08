@@ -1,7 +1,29 @@
 {
-  "updated": "2026-11-08T12:52:46.555Z",
+  "updated": "2026-11-08T21:46:46.421Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "Full hand mechanics",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xr33gp/full_hand_mechanics/",
+      "ts": 1794157056000,
+      "kind": "mechanic",
+      "tagZh": "机制冷知识",
+      "tagZhtw": "機制冷知識",
+      "titleZh": "全手力学",
+      "titleZhtw": "全手力学"
+    },
+    {
+      "source": "Reddit",
+      "title": "What a wild ride. Got mech rolled into pirate. Then rolled into elemental.",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xqyhg9/what_a_wild_ride_got_mech_rolled_into_pirate_then/",
+      "ts": 1794144686000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "多么疯狂的旅程。机甲被卷进了海盗。然后轧制成元素。",
+      "titleZhtw": "多麼疯狂的旅程。機甲被卷進了海盜。然後轧制成元素。"
+    },
     {
       "source": "Reddit",
       "title": "Some Custom Cards! Predictions for next patch.",
@@ -177,28 +199,6 @@
       "tagZhtw": "天梯平衡",
       "titleZh": "有没有人觉得那群昆布神经兮兮的神经兮兮的神经兮兮的呢？",
       "titleZhtw": "有没有人觉得那群昆布神经兮兮的神经兮兮的神经兮兮的呢？"
-    },
-    {
-      "source": "Reddit",
-      "title": "Quillboar still OP",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xnm6bb/quillboar_still_op/",
-      "ts": 1793792855000,
-      "kind": "mechanic",
-      "tagZh": "机制冷知识",
-      "tagZhtw": "機制冷知識",
-      "titleZh": "野猪人 STILL OP",
-      "titleZhtw": "野豬人 STILL OP"
-    },
-    {
-      "source": "Reddit",
-      "title": "Assuming it was last patch this season Silent Deliverer interaction in duos survived for whole season...",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xnjjt1/assuming_it_was_last_patch_this_season_silent/",
-      "ts": 1793783085000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "假设这是本赛季的最后一个补丁， Silent Deliverer在二人组中的互动幸存了整整一个赛季……",
-      "titleZhtw": "假设這是本赛季的最後一个更新檔， Silent Deliverer在二人组中的互動幸存了整整一个赛季……"
     }
   ]
 }
