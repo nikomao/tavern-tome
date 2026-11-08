@@ -1,7 +1,29 @@
 {
-  "updated": "2026-11-07T21:31:32.847Z",
+  "updated": "2026-11-08T04:51:19.218Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "Truly an elemental board",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xqnahy/truly_an_elemental_board/",
+      "ts": 1794103978000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "真正的元素板",
+      "titleZhtw": "真正的元素板"
+    },
+    {
+      "source": "Reddit",
+      "title": "This was so dirty even undead couldn't beat it",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xqn6tf/this_was_so_dirty_even_undead_couldnt_beat_it/",
+      "ts": 1794103643000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "这是如此的肮脏，连亡灵都无法打败它",
+      "titleZhtw": "這是如此的肮脏，连不死族都无法打败它"
+    },
     {
       "source": "Reddit",
       "title": "Beefiest Battlegrounds Duo combo",
@@ -177,28 +199,6 @@
       "tagZhtw": "社群熱議",
       "titleZh": "是的，暴雪我现在喜欢玩海盗游戏",
       "titleZhtw": "是的，暴雪我現在喜欢玩海盜游戏"
-    },
-    {
-      "source": "Reddit",
-      "title": "Best change of the patch",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xn0nh8/best_change_of_the_patch/",
-      "ts": 1793729953000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "补丁的最佳更改",
-      "titleZhtw": "更新檔的最佳更改"
-    },
-    {
-      "source": "Reddit",
-      "title": "37.0.2 Visual Patch Notes(14 locales!)",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xmx6yb/3702_visual_patch_notes14_locales/",
-      "ts": 1793722472000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "37.0.2可视化版本更新公告（ 14个区域设置！ ）",
-      "titleZhtw": "37.0.2可视化版本更新說明（ 14个区域设置！ ）"
     }
   ]
 }
