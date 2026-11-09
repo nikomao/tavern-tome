@@ -1,7 +1,40 @@
 {
-  "updated": "2026-11-09T04:59:02.370Z",
+  "updated": "2026-11-09T15:26:06.705Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "Elemental trinket does not work with Toki Hero power",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xrsmkn/elemental_trinket_does_not_work_with_toki_hero/",
+      "ts": 1794233431000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "元素饰品不适用于TOKI HERO POWER",
+      "titleZhtw": "元素饰品不适用于TOKI HERO POWER"
+    },
+    {
+      "source": "Reddit",
+      "title": "So they just wont buff dragons but force us play it with this bs instead",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xrqw50/so_they_just_wont_buff_dragons_but_force_us_play/",
+      "ts": 1794228767000,
+      "kind": "meta",
+      "tagZh": "天梯平衡",
+      "tagZhtw": "天梯平衡",
+      "titleZh": "所以他们只是不加增强龙，而是强迫我们用这个bs来玩",
+      "titleZhtw": "所以他们只是不加增強龙，而是强迫我们用這个bs来玩"
+    },
+    {
+      "source": "Reddit",
+      "title": "You've heard of scam murlocs but have you heard of scam dogs?",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xrmz65/youve_heard_of_scam_murlocs_but_have_you_heard_of/",
+      "ts": 1794215230000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "您听说过诈骗杂种，但您听说过诈骗犬吗？",
+      "titleZhtw": "您听說过诈骗杂种，但您听說过诈骗犬吗？"
+    },
     {
       "source": "Reddit",
       "title": "Full hand mechanics",
@@ -166,39 +199,6 @@
       "tagZhtw": "社群熱議",
       "titleZh": "8号转弯，他已经在6号酒馆了。",
       "titleZhtw": "8号轉弯，他已经在6号旅店了。"
-    },
-    {
-      "source": "Reddit",
-      "title": "After patch: Only 4 players left by turn 10 every single game...",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xokqtv/after_patch_only_4_players_left_by_turn_10_every/",
-      "ts": 1793890661000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "补丁后：每场比赛第10回合只剩下4名玩家……",
-      "titleZhtw": "更新檔後：每场比赛第10回合只剩下4名玩家……"
-    },
-    {
-      "source": "Reddit",
-      "title": "The fuck undead starter pack",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xoj5ws/the_fuck_undead_starter_pack/",
-      "ts": 1793886731000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "他妈的不死族新手包",
-      "titleZhtw": "他妈的不死族新手包"
-    },
-    {
-      "source": "Reddit",
-      "title": "Anyone else feeling like the quilboar nerfs were a tad underwhelming?",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xo6ksm/anyone_else_feeling_like_the_quilboar_nerfs_were/",
-      "ts": 1793843931000,
-      "kind": "meta",
-      "tagZh": "天梯平衡",
-      "tagZhtw": "天梯平衡",
-      "titleZh": "有没有人觉得那群昆布神经兮兮的神经兮兮的神经兮兮的呢？",
-      "titleZhtw": "有没有人觉得那群昆布神经兮兮的神经兮兮的神经兮兮的呢？"
     }
   ]
 }
