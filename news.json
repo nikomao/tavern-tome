@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-10T14:27:53.092Z",
+  "updated": "2026-11-10T22:55:09.469Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "They really have to nerf these minions",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xszijq/they_really_have_to_nerf_these_minions/",
+      "ts": 1794346711000,
+      "kind": "meta",
+      "tagZh": "天梯平衡",
+      "tagZhtw": "天梯平衡",
+      "titleZh": "他们真的必须削弱这些小兵",
+      "titleZhtw": "他们真的必须削弱這些小兵"
+    },
     {
       "source": "Reddit",
       "title": "Why are mechs in particular nerfed so hard by animations?",
@@ -188,17 +199,6 @@
       "tagZhtw": "社群熱議",
       "titleZh": "建立一支野火大军vs 鱼人诈骗",
       "titleZhtw": "建立一支野火大军vs 魚人诈骗"
-    },
-    {
-      "source": "Reddit",
-      "title": "Battlegrounds boons",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xp68c8/battlegrounds_boons/",
-      "ts": 1793947884000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "酒馆战棋 BOONS",
-      "titleZhtw": "英雄戰場 BOONS"
     }
   ]
 }
