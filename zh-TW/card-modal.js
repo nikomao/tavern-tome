@@ -371,10 +371,14 @@
   function ensureModalDOM(){
     if(modalEl && document.body.contains(modalEl)) return modalEl;
 
-    // 檢查是否页面已有 poolModal (如 cards.html)
-    var existing = document.getElementById("poolModal");
+    // 檢查是否页面已有 poolModal (cards.html) 或預置的 globalCardModal (play.html / index.html)
+    var existing = document.getElementById("poolModal") || document.getElementById("globalCardModal");
     if(existing){
       modalEl = existing;
+      if(!modalEl.getAttribute("data-gcm-bound")){
+        bindModalEvents(modalEl);
+        modalEl.setAttribute("data-gcm-bound", "1");
+      }
       return modalEl;
     }
 
@@ -580,13 +584,13 @@
     }
 
     // 忽略特定功能按钮
-    if(e.target.closest(".swap, .to-top, .search-open, #searchOverlay, #tierModal")) return;
+    if(e.target.closest(".swap, .ps-tools, .to-top, .search-open, #searchOverlay, #tierModal")) return;
 
     var target = e.target;
 
     // 寻找任何可能代表卡牌的目標元素
     var chip = target.closest(".card-chip, .card-name-btn");
-    var slot = target.closest("[data-card-id], [data-card], .comp-slot, .cr-slot, .tb-card, .fc, .tc, .mc-card, .cmp-slot, .hc-card-item, .demo-card, .fchip, .hero-board a, .core-item .ci-head b, .ps-slot .ps-name, #missList .miss");
+    var slot = target.closest("[data-card-id], [data-card], .comp-slot, .cr-slot, .tb-card, .fc, .tc, .mc-card, .cmp-slot, .hc-card-item, .demo-card, .fchip, .hero-board a, .core-item .ci-head b, #missList .miss");
 
     var el = chip || slot;
     if(!el) return;
@@ -660,7 +664,7 @@
       ".ct-flow-item p", ".ct-trans-row", ".ct-block-head", ".ct-mis-list li", ".ct-math-desc",
       ".sc-desc", ".sc-stage-desc", ".pos-hint", ".cc-pos", "#summaryTable td:nth-child(3)",
       "#glossaryList dd", "#glossaryList dt", ".hc-strat", ".hc-trap", ".tn-desc", ".tn-action",
-      ".tech-tag", ".rule p", ".dg-note", ".mc-line", ".mc-good", ".mc-bad", "#adviceMain", "#adviceSub"
+      ".tech-tag", ".rule p", ".dg-note", ".mc-line", ".mc-good", ".mc-bad", "#adviceMain", "#adviceSub", ".psc-body p", ".psc-list li", ".ppb-text"
     ];
 
     selectors.forEach(function(sel){

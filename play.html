@@ -16,27 +16,59 @@
 <link rel="icon" href="favicon.png" type="image/png" sizes="64x64" />
 <link rel="manifest" href="manifest.json" />
 <meta name="theme-color" content="#21140c" />
-<link rel="stylesheet" href="styles.css?v=20261111b">
-<link rel="stylesheet" href="play.css?v=20261111b">
+<link rel="stylesheet" href="styles.css?v=20261111c">
+<link rel="stylesheet" href="play.css?v=20261111c">
 </head>
 <body class="play-body">
 
 <header class="play-top">
   <a class="play-back" href="index.html">← 返回</a>
-  <select id="playComp" aria-label="选择阵容"></select>
-  <span class="play-tier" id="playTier"></span>
+  <div class="play-comp-wrap">
+    <select id="playComp" aria-label="选择阵容"></select>
+    <span class="play-tier" id="playTier"></span>
+  </div>
+  <div class="play-hero-wrap" id="playHeroWrap">
+    <button type="button" class="play-hero-btn" id="playHeroBtn" aria-expanded="false">选英雄 ▾</button>
+    <button type="button" class="play-hero-clear" id="playHeroClear" hidden title="清除英雄筛选" aria-label="清除英雄筛选">✕</button>
+    <div class="play-hero-pop" id="playHeroPop" hidden>
+      <input type="search" id="playHeroSearch" placeholder="搜英雄名（支持116位英雄）…" autocomplete="off">
+      <div class="play-hero-list" id="playHeroList"></div>
+    </div>
+  </div>
   <span class="play-meta" id="playMeta"></span>
+  <a class="lang-fab play-lang" href="zh-TW/play.html">繁中</a>
 </header>
 
+<div class="play-share-banner" id="shareBanner" hidden>
+  <span>正在预览分享的对局快照，尚未覆盖本地存档。</span>
+  <div class="psb-btns">
+    <button type="button" id="btnPromoteShare">保存为我的对局</button>
+    <button type="button" id="btnExitShare">回到我上次进度</button>
+  </div>
+</div>
+
+<div class="play-hero-recs" id="playHeroRecs" hidden></div>
+
+<div class="play-filter-bar" id="playFilterBar" aria-label="筛选与禁选">
+  <div class="pfb-chips" id="pfbTribes"></div>
+  <button type="button" class="pfb-ban-toggle" id="btnBanMode" title="开启后点击种族芯片即可标记为本局已 Ban（禁用）">🚫 标记禁用</button>
+  <button type="button" class="pfb-clear" id="btnClearFilters" hidden>重置筛选</button>
+</div>
+
 <div class="play-status" id="playStatus">
-  <div class="ps"><span>回合</span><button data-k="turn" data-d="-1">−</button><b id="stTurn">1</b><button data-k="turn" data-d="1">+</button></div>
-  <div class="ps"><span>本数</span><button data-k="tier" data-d="-1">−</button><b id="stTier">1</b><button data-k="tier" data-d="1">+</button></div>
-  <div class="ps"><span>金币</span><button data-k="gold" data-d="-1">−</button><b id="stGold">3</b><button data-k="gold" data-d="1">+</button></div>
-  <div class="ps"><span>血量</span><button data-k="health" data-d="-1">−</button><b id="stHealth">30</b><button data-k="health" data-d="1">+</button></div>
+  <div class="ps"><span>回合</span><button type="button" data-k="turn" data-d="-1">−</button><b id="stTurn">1</b><button type="button" data-k="turn" data-d="1">+</button></div>
+  <div class="ps"><span>本数</span><button type="button" data-k="tier" data-d="-1">−</button><b id="stTier">1</b><button type="button" data-k="tier" data-d="1">+</button></div>
+  <div class="ps"><span>金币</span><button type="button" data-k="gold" data-d="-1">−</button><b id="stGold">3</b><button type="button" data-k="gold" data-d="1">+</button><button type="button" class="ps-tog on" id="btnAutoGold" title="下回合自动按酒馆规则补满上限金币（T1=3…T8+=10）">自动补币</button></div>
+  <div class="ps"><span>血量</span><button type="button" class="ps-step" data-k="health" data-d="-5">−5</button><button type="button" data-k="health" data-d="-1">−</button><b id="stHealth">30</b><button type="button" data-k="health" data-d="1">+</button><button type="button" class="ps-step" data-k="health" data-d="5">+5</button></div>
+  <div class="ps-shortcuts" title="快捷键说明">1-7 标卡 · 空格 下回合 · ↑ 升本 · Z 撤回</div>
 </div>
 
 <main class="play-main">
-  <section class="play-slots" id="playSlots" aria-label="七格阵容"></section>
+  <div class="play-board">
+    <div class="play-pos-bar" id="playPosBar" hidden></div>
+    <section class="play-slots" id="playSlots" aria-label="七格阵容"></section>
+    <section class="play-stage-card" id="playStageCard" hidden></section>
+  </div>
   <aside class="play-side">
     <div class="play-curve-hud" id="playCurveHud"></div>
     <div class="advice" id="playAdvice">
@@ -44,15 +76,17 @@
       <p class="advice-main" id="adviceMain"></p>
       <p class="advice-sub" id="adviceSub"></p>
     </div>
-    <h3>还差 <b id="missCount">0</b> 张</h3>
+    <h3>还差 <b id="missCount">0</b> 张 <span class="miss-legend">（点卡看效果）</span></h3>
     <div id="missList"></div>
-    <button type="button" class="play-add" id="btnAdd">＋ 添加卡牌</button>
+    <button type="button" class="play-add" id="btnAdd">＋ 添加 / 对策卡</button>
     <p class="play-hint" id="playHint"></p>
   </aside>
 </main>
 
 <footer class="play-actions">
-  <button type="button" id="btnNext">下一回合 <span>空格</span></button>
+  <button type="button" class="pa-primary" id="btnNext">下一回合 <span>空格</span></button>
+  <button type="button" id="btnTierUp">升至 2 本 <span>↑</span></button>
+  <button type="button" id="btnUndo" disabled>撤回 <span>Z</span></button>
   <button type="button" id="btnPip">置顶小窗</button>
   <button type="button" id="btnShare">复制链接</button>
   <button type="button" id="btnReset">重置</button>
@@ -60,9 +94,13 @@
 
 <div class="pick-overlay" id="pickOverlay" hidden>
   <div class="pick-box">
-    <input id="pickInput" type="search" placeholder="搜卡名，例如：铜须、诗心龙" autocomplete="off">
+    <div class="pick-head">
+      <input id="pickInput" type="search" placeholder="搜卡名或关键词，例如：铜须、嘲讽、圣盾、火车王" autocomplete="off">
+      <button type="button" class="pick-restore" id="btnPickRestore" hidden>恢复默认格</button>
+    </div>
+    <div class="pick-filters" id="pickFilters"></div>
     <div class="pick-list" id="pickList"></div>
-    <p class="pick-hint">Esc 关闭</p>
+    <p class="pick-hint">默认推荐当前可买与常用对策卡 · Esc 关闭</p>
   </div>
 </div>
 
@@ -89,19 +127,18 @@
   </div>
 </div>
 
-<script src="data.js?v=20261111b"></script>
-<script src="pool.js?v=20261111b"></script>
-<script src="stats.js?v=20261111b"></script>
-<script src="comp-notes.js?v=20261111b"></script>
-<script src="extra-cards.js?v=20261111b"></script>
-<script src="cards.js?v=20261111b"></script>
-<script src="card-modal.js?v=20261111b"></script>
-<script src="play.js?v=20261111b"></script>
-<a class="lang-fab" href="zh-TW/play.html">繁中</a>
-<script src="analytics-config.js?v=20261111b"></script>
-<script src="analytics.js?v=20261111b"></script>
-<script src="history.js?v=20261111b"></script>
-<script src="card-fx.js?v=20261111b"></script>
+<script src="data.js?v=20261111c"></script>
+<script src="pool.js?v=20261111c"></script>
+<script src="stats.js?v=20261111c"></script>
+<script src="comp-notes.js?v=20261111c"></script>
+<script src="extra-cards.js?v=20261111c"></script>
+<script src="cards.js?v=20261111c"></script>
+<script src="card-modal.js?v=20261111c"></script>
+<script src="play.js?v=20261111c"></script>
+<script src="analytics-config.js?v=20261111c"></script>
+<script src="analytics.js?v=20261111c"></script>
+<script src="history.js?v=20261111c"></script>
+<script src="card-fx.js?v=20261111c"></script>
 <script>
   if('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')){
     window.addEventListener('load', function(){
