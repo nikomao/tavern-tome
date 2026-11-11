@@ -38,6 +38,24 @@
   // Verified tech/engine counter card IDs in POOL
   var TECH_IDS = ["BG23_318","BGS_131","BG_DAL_775","BG25_016","BG25_354","BG_LOE_077","BG26_ICC_901","BG35_883"];
 
+  var ENGINE_QUICK_CARDS = [
+    { id: "BG_LOE_077", role: "戰吼×2" },
+    { id: "BG35_883",   role: "指向×2" },
+    { id: "BG25_354",   role: "死亡之聲×2" },
+    { id: "BG33_823",   role: "9幣懸赏" },
+    { id: "BG26_ICC_901", role: "回合末×2" },
+    { id: "BG29_813",   role: "永久保留" },
+    { id: "BG30_121",   role: "寶石×2" },
+    { id: "BG26_149",   role: "合體雙吸" },
+    { id: "BG28_707",   role: "養旅店" }
+  ];
+  var ENGINE_KNOWN_IDS = {};
+  ENGINE_QUICK_CARDS.forEach(function(e){ ENGINE_KNOWN_IDS[e.id] = true; });
+  ENGINE_KNOWN_IDS["BG22_403"] = true; // 小瞎眼
+  ENGINE_KNOWN_IDS["BGFYM_005"] = true; // 預言者阿菲拉斯
+  ENGINE_KNOWN_IDS["BG36_320"] = true; // 神秘的克熙尔
+  ENGINE_KNOWN_IDS["BG28_633"] = true; // 邪能野豬人
+
   var TRIBE_DEFS = [
     { id: "ALL_FILTER", label: "全部" },
     { id: "T0_FILTER", label: "僅看 T0" },
@@ -91,6 +109,8 @@
     filter: "ALL_FILTER",
     banMode: false,
     bans: {},
+    engineFilterId: null,
+    checks: {},
     stageTab: null, // null = follow turn phase
     stageTabTurnGroup: -1,
     pipMode: "full", // "full" | "mini"
@@ -312,12 +332,14 @@
     ui.stageTab = null;
     ui.stageTabTurnGroup = -1;
     ui.pipDetailId = null;
-
+    ui.checks = {};
     var nextComp = current();
     var baseList = ordered(nextComp);
     state.cards = null;
     state.slots = baseList.map(function(x){
-      return ownedById[x.id] || ownedByName[x.name] || 0;
+      var v = ownedById[x.id] || ownedByName[x.name] || 0;
+      if(opts.markCardId && x.id === opts.markCardId && v === 0) v = 1;
+      return v;
     });
     render();
     if(!ui.viewingShare){
@@ -442,6 +464,256 @@
         (td.race ? ' data-race="' + td.race + '"' : '') + '>' +
         (isBanned ? "🚫 " : "") + esc(td.label) + '</button>';
     }).join("");
+  }
+
+  function engineCardName(eng){
+    var card = CARD_DB[eng.id];
+    return card ? card.n : eng.id;
+  }
+
+  function compMatchesEngine(c, engId){
+    var eName = engineCardName({ id: engId });
+    if((c.cards || []).some(function(x){ return x.id === engId || x.name === eName; })) return true;
+    var note = (typeof COMP_NOTES !== "undefined" && c.key) ? COMP_NOTES[c.key] : null;
+    if(note && note.pipeline && note.pipeline.engine){
+      return note.pipeline.engine.indexOf(eName) >= 0;
+    }
+    return false;
+  }
+
+  function renderEngineBar(){
+    var bar = document.getElementById("playEngineBar");
+    var res = document.getElementById("playEngineRes");
+    if(!bar || !res) return;
+
+    bar.innerHTML = '<span class="peb-label">摸到關鍵卡速查：</span>' +
+      ENGINE_QUICK_CARDS.map(function(eng){
+        var card = CARD_DB[eng.id];
+        if(!card) return "";
+        var matches = comps.filter(function(c){ return compMatchesEngine(c, eng.id) && !isCompBanned(c); });
+        var on = ui.engineFilterId === eng.id;
+        return '<button type="button" class="peb-chip' + (on ? " on" : "") + '" data-eng="' + esc(eng.id) + '" title="' + esc(card.n) + '（' + esc(eng.role) + '）">' +
+          (card.m ? '<img src="../pool/' + esc(eng.id) + '.webp" alt="">' : '') +
+          '<span>' + esc(card.n) + '</span><em>' + matches.length + '套</em></button>';
+      }).join("");
+
+    if(!ui.engineFilterId){
+      res.hidden = true;
+      res.innerHTML = "";
+      return;
+    }
+
+    var engCard = CARD_DB[ui.engineFilterId];
+    var engName = engCard ? engCard.n : ui.engineFilterId;
+    var ownedIds = {}, ownedNames = {};
+    currentCards().forEach(function(x, i){
+      if((state.slots[i] || 0) > 0){
+        ownedIds[x.id] = true;
+        ownedNames[x.name] = true;
+      }
+    });
+    ownedIds[ui.engineFilterId] = true;
+    ownedNames[engName] = true;
+
+    var matched = comps.filter(function(c){ return compMatchesEngine(c, ui.engineFilterId); });
+    var tierOrder = { T0: 0, T1: 1, T2: 2, T3: 3 };
+    function missingCoreCount(comp){
+      return (comp.cards || []).filter(function(x){
+        return String(x.status || "").toUpperCase() === "CORE" && !ownedIds[x.id] && !ownedNames[x.name];
+      }).length;
+    }
+    matched.sort(function(a, b){
+      var ab = isCompBanned(a) ? 1 : 0, bb = isCompBanned(b) ? 1 : 0;
+      if(ab !== bb) return ab - bb;
+      var ma = missingCoreCount(a), mb = missingCoreCount(b);
+      if(ma !== mb) return ma - mb;
+      var ta = tierOrder[a.tier] != null ? tierOrder[a.tier] : 9;
+      var tb = tierOrder[b.tier] != null ? tierOrder[b.tier] : 9;
+      return ta - tb || (a.avg || 9) - (b.avg || 9);
+    });
+
+    res.hidden = false;
+    res.innerHTML =
+      '<div class="per-head">' +
+        '<span>拿到 <b>' + esc(engName) + '</b> 後可直接成型的 ' + matched.length + ' 套體系（已按缺卡數與強度排序）</span>' +
+        '<button type="button" class="per-close" data-eng-close="1">收起</button>' +
+      '</div>' +
+      '<div class="per-grid">' + matched.map(function(comp){
+        var banned = isCompBanned(comp);
+        var need = (comp.cards || []).filter(function(x){
+          return String(x.status || "").toUpperCase() === "CORE" && !ownedIds[x.id] && !ownedNames[x.name];
+        });
+        var missTxt = !need.length
+          ? '<span class="hot">核心全齊！可直接起飛</span>'
+          : '只缺核心：' + need.slice(0, 3).map(function(x){ return x.name; }).join("、") + (need.length > 3 ? " 等" + need.length + "張" : "");
+        return '<div class="per-card' + (banned ? " banned" : "") + '">' +
+          '<div class="per-top"><b>' + esc(comp.name) + '</b><span class="per-tier">' + esc(comp.tier) + ' · 均' + esc(comp.avg) + (banned ? ' · 已禁' : '') + '</span></div>' +
+          '<div class="per-miss">' + missTxt + '</div>' +
+          '<button type="button" class="per-btn" data-eng-pick="' + esc(comp.key) + '">' + (comp.key === key ? "當前陣容" : "切去玩並標已有 →") + '</button>' +
+        '</div>';
+      }).join("") + '</div>';
+  }
+
+  function getPipelineReport(c){
+    var note = (typeof COMP_NOTES !== "undefined" && c.key) ? COMP_NOTES[c.key] : null;
+    var cards = currentCards();
+    var p = (note && note.pipeline) ? note.pipeline : null;
+
+    var stagesDef = [
+      { key: "source", label: "① 原料來源" },
+      { key: "engine", label: "② 乘數引擎" },
+      { key: "carrier", label: "③ 核心載體" },
+      { key: "finisher", label: "④ 終端放大" }
+    ];
+
+    function fallbackNames(stageKey){
+      var picked = [];
+      cards.forEach(function(x){
+        var r = roleForCard(c, x);
+        var isEng = !!ENGINE_KNOWN_IDS[x.id];
+        if(stageKey === "engine" && isEng) picked.push(x.name);
+        else if(stageKey === "source" && r === "CYCLE" && !isEng) picked.push(x.name);
+        else if(stageKey === "carrier" && r === "CORE" && !isEng) picked.push(x.name);
+        else if(stageKey === "finisher" && r === "ADDON" && !isEng) picked.push(x.name);
+      });
+      if(stageKey === "engine" && !picked.length){
+        cards.forEach(function(x){ if(roleForCard(c, x) === "CORE") picked.push(x.name); });
+      }
+      if(!picked.length && stageKey === "carrier"){
+        cards.slice(0, 2).forEach(function(x){ picked.push(x.name); });
+      }
+      return picked.slice(0, 3);
+    }
+
+    var stages = stagesDef.map(function(sd){
+      var names = (p && p[sd.key] && p[sd.key].length) ? p[sd.key] : fallbackNames(sd.key);
+      // Prefer displaying cards that exist in current board when pipeline has fallback aliases
+      var onBoard = [];
+      var extraNames = [];
+      names.forEach(function(nm){
+        var foundIdx = -1;
+        cards.forEach(function(x, idx){ if(x.name === nm) foundIdx = idx; });
+        if(foundIdx >= 0) onBoard.push({ name: nm, val: state.slots[foundIdx] || 0 });
+        else extraNames.push(nm);
+      });
+      var poolItems = onBoard.length ? onBoard : names.map(function(nm){ return { name: nm, val: 0 }; });
+      var maxVal = 0;
+      poolItems.forEach(function(it){ if(it.val > maxVal) maxVal = it.val; });
+      // Also check if user manually marked any slot golden that is conceptually mapped even if swapped
+      var shownNames = (onBoard.length ? onBoard.map(function(it){ return it.name; }) : names).slice(0, 2);
+      return {
+        key: sd.key,
+        label: sd.label,
+        status: maxVal, // 0 missing, 1 owned, 2 golden
+        names: shownNames,
+        missingNames: poolItems.filter(function(it){ return it.val === 0; }).map(function(it){ return it.name; })
+      };
+    });
+
+    var eng = stages[1], src = stages[0], car = stages[2];
+    var level = "linear", badge = "⚠ 僅線性成長", diag = "";
+    if(eng.status === 0){
+      level = "linear";
+      badge = "⚠ 僅線性成長";
+      var needEng = eng.names.slice(0, 2).map(function(n){ return "【" + n + "】"; }).join(" / ");
+      diag = "<strong>當前缺核心乘數：</strong>暂為線性疊加，拿到 " + (needEng || "核心引擎") + " 才能跨入千/萬级成長。";
+    } else if(src.status === 0 || car.status === 0){
+      level = "primed";
+      badge = "▶ 引擎已就位";
+      var needOther = (src.status === 0 ? src.names : car.names).slice(0, 2).map(function(n){ return "【" + n + "】"; }).join(" / ");
+      diag = "<strong>核心引擎已啟動！</strong>抓紧補齊 " + (needOther || "載體/原料") + "，所有增益将開始成倍滚大。";
+    } else {
+      level = "online";
+      badge = "✨ 上萬公式已啟動";
+      var goldCand = null;
+      cards.forEach(function(x, i){
+        if(!goldCand && (state.slots[i] || 0) === 1 && roleForCard(c, x) === "CORE") goldCand = x.name;
+      });
+      diag = goldCand
+        ? "<strong>四環打通，已可衝萬！</strong>重点追金【" + goldCand + "】提升乘數上限，同時防好【莽神火車王】/【致命的孢子】。"
+        : "<strong>全環齊備且核心多為金色！</strong>保持站位護住後排引擎，最後只針对对手補破盾/防偷。";
+    }
+
+    return { stages: stages, level: level, badge: badge, diag: diag };
+  }
+
+  function renderPipelineHud(c){
+    var host = document.getElementById("playPipelineHud");
+    if(!host) return null;
+    var rep = getPipelineReport(c);
+    host.innerHTML =
+      '<div class="ppl-top">' +
+        '<div class="ppl-diag">' + rep.diag + '</div>' +
+        '<span class="ppl-badge ' + rep.level + '">' + rep.badge + '</span>' +
+      '</div>' +
+      '<div class="ppl-steps">' + rep.stages.map(function(st){
+        var cls = st.status === 2 ? "golden" : st.status === 1 ? "owned" : "missing";
+        var stateTxt = st.status === 2 ? "★ 金色" : st.status === 1 ? "✅ 已就位" : "❌ 缺配件";
+        var cardTxt = st.names.length ? st.names.map(function(n){ return "【" + n + "】"; }).join(" ") : "按對局補卡";
+        return '<div class="ppl-step ' + cls + '">' +
+          '<div class="ppl-head"><span>' + st.label + '</span><span class="ppl-state">' + stateTxt + '</span></div>' +
+          '<div class="ppl-cards">' + esc(cardTxt) + '</div>' +
+        '</div>';
+      }).join("") + '</div>';
+
+    if(window.enhanceCardMentions) window.enhanceCardMentions(host);
+    return rep;
+  }
+
+  function getTurnOrderText(c){
+    var note = (typeof COMP_NOTES !== "undefined" && c.key) ? COMP_NOTES[c.key] : null;
+    if(note && note.turnOrder) return note.turnOrder;
+    var cards = currentCards();
+    var has = function(id){ return cards.some(function(x){ return x.id === id; }); };
+    if(has("BG25_354")) return "① 死亡之聲主力擺 1–2 號位先送死，騰出召喚格 ② 【提圖斯·瑞文戴尔】永远锁最右防順劈斬";
+    if(has("BG29_813")) return "① 主力输出龍紧贴【執念詩心龍】 ② 先破聖盾術再吃戰斗永久增益，別賣相邻位";
+    if(has("BG35_883")) return "① 先保【巴琳达·斯通赫尔斯】在場 ② 所有指向法術集中喂同一核心 ③ 別空場交法術";
+    if(has("BG26_ICC_901")) return "① 回合末引擎擺後排再点结束回合 ② 確認【达卡莱附魔師】在場吃雙倍结算";
+    if(has("BG_LOE_077")) return "① 先下【布莱恩·铜須】再打手中戰吼/經济牌 ② 按順序用完金幣再決定升本或找对策";
+    return "① 先放核心放大器再交资源，增益全喂同一主核 ② 留 1 個機動位隨時補破盾或对策卡";
+  }
+
+  function renderTurnOrder(c){
+    var bar = document.getElementById("playTurnOrder");
+    if(!bar) return;
+    var txt = getTurnOrderText(c);
+    if(!txt){ bar.hidden = true; return; }
+    bar.hidden = false;
+    bar.innerHTML = '<span class="pto-tag">⚡ 回合內操作順序</span><span class="pto-text">' + esc(txt) + '</span>';
+    if(window.enhanceCardMentions) window.enhanceCardMentions(bar);
+  }
+
+  function renderCounterBox(c, missingTotal){
+    var box = document.getElementById("playCounterBox");
+    if(!box) return;
+    var show = state.turn >= 10 || (missingTotal <= 1 && state.turn >= 8) || (state.health <= 15 && state.turn >= 7);
+    if(!show){
+      box.hidden = true;
+      return;
+    }
+    var note = (typeof COMP_NOTES !== "undefined" && c.key) ? COMP_NOTES[c.key] : null;
+    var arch = note && note.archetype;
+    var step3 = arch === "preserve"
+      ? "核对關鍵聯動相邻/後排站位（如【執念詩心龍】贴紧或【提圖斯·瑞文戴尔】锁最右），留足召喚格。"
+      : arch === "funnel"
+      ? "確認所有法術與吞食只集中同一核心，前排擺小嘲諷替單核挡【致命的孢子】。"
+      : "手牌與回合末前確認關鍵計數（如【神秘的克熙尔】留 3 張手牌，【布莱恩·铜須】/【达卡莱附魔師】避開順劈斬）。";
+
+    var items = [
+      "後排保護：引擎手下靠最右且不紧贴嘲諷，防对面狂暴之斧順劈斬一換二。",
+      "破盾防毒：先手位擺複生/聖盾術或【辛多雷直射手】，必要時補【莽神火車王】/【致命的孢子】換最大核。",
+      step3
+    ];
+    box.hidden = false;
+    box.innerHTML =
+      '<div class="pce-head">🛡 決戰防偷 3 项自檢 <span>点擊可劃掉確認</span></div>' +
+      '<ul class="pce-list">' + items.map(function(txt, idx){
+        var done = !!ui.checks[idx];
+        return '<li class="' + (done ? "checked" : "") + '" data-chk="' + idx + '">' +
+          '<span class="pce-chk">' + (done ? "✓" : "") + '</span><span>' + esc(txt) + '</span></li>';
+      }).join("") + '</ul>';
+
+    if(window.enhanceCardMentions) window.enhanceCardMentions(box);
   }
 
   function renderPosBar(c){
@@ -653,8 +925,11 @@
     metaEl.textContent = "均位 " + c.avg + " · 前四 " + Math.round((c.top4 || 0) * 100) + "% · 奪冠 " + Math.round((c.win || 0) * 100) + "%" +
       (ui.hero ? " · 英雄：" + ui.hero : "");
 
+    renderEngineBar();
+    var pipeRep = renderPipelineHud(c);
     renderPosBar(c);
     renderSlots(c);
+    renderTurnOrder(c);
     renderStageCard(c);
 
     var adv = advice();
@@ -668,6 +943,8 @@
       window.enhanceCardMentions(document.getElementById("playAdvice"));
     }
 
+    var bucketsNow = getMissingBuckets();
+    renderCounterBox(c, bucketsNow.total);
     renderMissing(adv);
     hintEl.textContent = hintFor(c);
 
@@ -690,7 +967,7 @@
 
     renderCurveHud();
     save();
-    renderPip();
+    renderPip(pipeRep);
   }
 
   /* ---- Slot interaction & Drag-drop reorder ---- */
@@ -836,6 +1113,57 @@
     switchComp(b.getAttribute("data-comp-pick"));
   });
 
+  var engineWrap = document.getElementById("playEngineWrap");
+  if(engineWrap){
+    engineWrap.addEventListener("click", function(e){
+      var closeBtn = e.target.closest ? e.target.closest("[data-eng-close]") : null;
+      if(closeBtn){
+        ui.engineFilterId = null;
+        renderEngineBar();
+        return;
+      }
+      var chip = e.target.closest ? e.target.closest("[data-eng]") : null;
+      if(chip){
+        var eid = chip.getAttribute("data-eng");
+        ui.engineFilterId = (ui.engineFilterId === eid) ? null : eid;
+        renderEngineBar();
+        return;
+      }
+      var pick = e.target.closest ? e.target.closest("[data-eng-pick]") : null;
+      if(pick){
+        var nextKey = pick.getAttribute("data-eng-pick");
+        var markId = ui.engineFilterId;
+        ui.engineFilterId = null;
+        if(nextKey === key){
+          pushUndo();
+          var marked = false;
+          currentCards().forEach(function(x, idx){
+            if(x.id === markId && (state.slots[idx] || 0) === 0){
+              state.slots[idx] = 1;
+              marked = true;
+            }
+          });
+          if(marked) render(); else renderEngineBar();
+        } else {
+          switchComp(nextKey, { markCardId: markId });
+        }
+      }
+    });
+  }
+
+  var counterBoxEl = document.getElementById("playCounterBox");
+  if(counterBoxEl){
+    counterBoxEl.addEventListener("click", function(e){
+      if(e.target.closest && e.target.closest(".card-chip,[data-card]")) return;
+      var li = e.target.closest ? e.target.closest("[data-chk]") : null;
+      if(!li) return;
+      var idx = li.getAttribute("data-chk");
+      ui.checks[idx] = !ui.checks[idx];
+      var c = current();
+      renderCounterBox(c, getMissingBuckets().total);
+    });
+  }
+
   // Hero Picker Popover
   (function(){
     var wrap = document.getElementById("playHeroWrap");
@@ -913,6 +1241,7 @@
     pushUndo();
     state = JSON.parse(JSON.stringify(DEFAULTS));
     ui.stageTab = null;
+    ui.checks = {};
     render();
   });
 
@@ -957,14 +1286,16 @@
 
   /* ---- Interactive Document PiP (Full / Mini Horizontal HUD) ---- */
   var pipWin = null;
-  function renderPip(){
+  function renderPip(pipeRep){
     if(!pipWin || pipWin.closed) return;
     var c = current();
+    var rep = pipeRep || getPipelineReport(c);
     var doc = pipWin.document;
     doc.body.className = "play-body pip-body" + (ui.pipMode === "mini" ? " pip-mini" : "");
     var cards = currentCards();
     var buckets = getMissingBuckets();
     var advPip = advice();
+    var turnOrd = getTurnOrderText(c);
     var detailCard = ui.pipDetailId ? CARD_DB[ui.pipDetailId] : null;
     var detailHTML = detailCard ? (
       '<div class="pip-detail"><div><b>' + esc(detailCard.n) + '</b>（' + (detailCard.t || "?") + '本）' +
@@ -988,7 +1319,8 @@
           '<span class="m-tier stars">' + tierStars(o.t) + '</span><span>' + esc(o.x.name) + '</span>' +
           '<span class="tag-lock">需' + o.t + '本</span></div>';
       }).join("");
-      extraHTML = '<div class="pip-extra">' +
+      extraHTML = (turnOrd ? '<div class="pip-turn-order"><b>⚡ 操作：</b>' + esc(turnOrd.replace(/[【】]/g, "")) + '</div>' : '') +
+        '<div class="pip-extra">' +
         '<h3>还差 ' + buckets.total + ' 張' + (buckets.avail.length ? '（綠色為當前 ' + state.tier + ' 本可出）' : '') + '</h3>' +
         (buckets.total ? (availHTML + lockHTML) : '<div class="miss">七格齊了，留意对面針对站位。</div>') +
       '</div>';
@@ -1002,6 +1334,7 @@
         '<span class="pip-stat"><b>' + state.tier + '本</b></span>' +
         '<span class="pip-stat">幣<b>' + state.gold + '</b></span>' +
         '<span class="pip-stat">血<b>' + state.health + '</b></span>' +
+        '<span class="pip-pipe-badge ' + rep.level + '">' + rep.badge + '</span>' +
         '<button type="button" class="pip-btn primary" data-pip-action="next">下回合</button>' +
         '<button type="button" class="pip-btn" data-pip-action="tierUp"' + (state.tier >= 7 ? ' disabled' : '') + '>升本</button>' +
         '<button type="button" class="pip-btn" data-pip-action="dmg5">-5血</button>' +

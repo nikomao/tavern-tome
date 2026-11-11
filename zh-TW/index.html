@@ -28,8 +28,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="旅店手札" />
-<link rel="stylesheet" href="../styles.css?v=20261111c" />
-<link rel="stylesheet" href="../vendor/jsvectormap.min.css?v=20261111c">
+<link rel="stylesheet" href="../styles.css?v=20261111d" />
+<link rel="stylesheet" href="../vendor/jsvectormap.min.css?v=20261111d">
 </head>
 <body>
 <canvas id="bgFx" aria-hidden="true"></canvas>
@@ -561,11 +561,60 @@
     </div>
   </div>
 
+  <div class="st4-wrap" id="scalingTemplates">
+    <div class="st4-head">
+      <h3>28 套陣容，本质只有这 4 個「上萬公式」</h3>
+      <p>不用死背全部卡表：認出自己手裡是什麼模型，缺哪個環節就補哪張核心，点卡片可直接切入對局模式。</p>
+    </div>
+    <div class="st4-grid">
+      <article class="st4-card">
+        <div class="st4-tag">公式 1 · 戰斗永久保留</div>
+        <h4>戰斗增益 × 永久锁下</h4>
+        <div class="st4-formula">戰斗加倍 / 死亡之聲 × 相邻或永久繼承</div>
+        <p class="st4-body">用【執念詩心龍】把【诺茲多姆的子嗣】加倍的戰斗屬性永久留下，或靠【美味龍蝦】配【提圖斯·瑞文戴尔】把增益滚到下一回合。</p>
+        <div class="st4-links">
+          <a class="st4-cta" href="play.html?comp=dragon_shield">龍·執念聖盾術 →</a>
+          <a class="st4-cta sub" href="play.html?comp=beast_lobster">野獸·龍蝦 →</a>
+        </div>
+      </article>
+      <article class="st4-card">
+        <div class="st4-tag">公式 2 · 次數乘數疊加</div>
+        <h4>小资源 × 觸發加倍</h4>
+        <div class="st4-formula">戰吼/回合末/死亡之聲 × 铜須或达卡莱</div>
+        <p class="st4-body">配齊【布莱恩·铜須】、【达卡莱附魔師】或【小瞎眼】後，單次事件一次變两次甚至四次——【神秘的克熙尔】與合體無人機全靠它破萬。</p>
+        <div class="st4-links">
+          <a class="st4-cta" href="play.html?comp=aberration_discard">畸變體·棄牌 →</a>
+          <a class="st4-cta sub" href="play.html?comp=mech_apm">機械·APM →</a>
+        </div>
+      </article>
+      <article class="st4-card">
+        <div class="st4-tag">公式 3 · 養肥商店再單吸</div>
+        <h4>旅店養厚 × 集中吞吸</h4>
+        <div class="st4-formula">商店全體加厚 × 定向吞食 / 轉攻</div>
+        <p class="st4-body">先靠【活化艾泽裡特】或【惡魔幹擾者】+【灵巧的逃亡者】把旅店手下養大，再用【邪能野豬人】、【奧術吸收】或【巴琳达·斯通赫尔斯】吸进主力。</p>
+        <div class="st4-links">
+          <a class="st4-cta" href="play.html?comp=elemental_azerite">元素·艾泽裡特 →</a>
+          <a class="st4-cta sub" href="play.html?comp=demon_boost_shop">惡魔·養旅店 →</a>
+        </div>
+      </article>
+      <article class="st4-card">
+        <div class="st4-tag">公式 4 · 抬單價再批量泼</div>
+        <h4>抬高單價 × 高頻全队浇灌</h4>
+        <div class="st4-formula">單張法術/寶石增值 × 雙倍施放載體</div>
+        <p class="st4-body">先拿【鲜血精研者】或【邪火咒龍】把單張寶石與旅店法術數值抬起來，再喂給【守門融合怪】配【巴琳达·斯通赫尔斯】和【热气球测绘員】集體起飛。</p>
+        <div class="st4-links">
+          <a class="st4-cta" href="play.html?comp=neutral_tea_set">全部種族·神明喝茶 →</a>
+          <a class="st4-cta sub" href="play.html?comp=quilboar_choose_one">野豬人·二選一 →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+
   <div class="sim" id="sim">
     <div class="sim-head">
       <div>
-        <h3>成長模擬器</h3>
-        <p>拖動滑塊，或者点一個預設，親眼看著「加法」被「乘法」甩開。</p>
+        <h3>成長模擬器 · 公式 &amp; 實戰陣型推演</h3>
+        <p>既可以用滑塊直观对比「純加法 vs 複利」，也可以切換真實 T0/T1 陣容看湊齊 5/6 本核心前後幾回合破萬。</p>
       </div>
       <div class="scale-toggle" id="scaleToggle" role="group" aria-label="坐標轴">
         <button data-scale="linear" class="on">線性</button>
@@ -576,9 +625,25 @@
       <button type="button" data-preset="plain">只加 6</button>
       <button type="button" data-preset="brann">铜須：每回合多一次</button>
       <button type="button" data-preset="double">雙線縫針：每回合 ×4</button>
+      <span class="sim-preset-sep" aria-hidden="true">|</span>
+      <button type="button" data-comp-sim="dragon_shield">實戰：龍·執念聖盾術</button>
+      <button type="button" data-comp-sim="mech_volumizer">實戰：機械·擴音機</button>
+      <button type="button" data-comp-sim="aberration_discard">實戰：畸變體·棄牌</button>
+      <button type="button" data-comp-sim="quilboar_choose_one">實戰：野豬人·二選一</button>
+    </div>
+    <div class="sim-real-panel" id="simRealPanel" hidden>
+      <div class="srp-desc" id="simRealDesc"></div>
+      <div class="srp-controls">
+        <label class="srp-chk"><input type="checkbox" id="simHasEngine" checked /> <span>湊齊 5/6 本核心倍增引擎</span></label>
+        <label class="srp-chk"><input type="checkbox" id="simIsGold" /> <span>核心三连變金（加倍加速）</span></label>
+        <label class="srp-turn">引擎到位：<b id="o-engTurn">T7</b>
+          <input type="range" id="simEngTurn" min="6" max="12" value="7" />
+        </label>
+        <a class="srp-play" id="simPlayLink" href="play.html?comp=dragon_shield">进對局練这套 →</a>
+      </div>
     </div>
     <div class="sim-body">
-      <div class="sim-controls">
+      <div class="sim-controls" id="simMathControls">
         <label>起始體質 <output id="o-base">4</output>
           <input type="range" id="base" min="1" max="20" value="4" />
         </label>
@@ -592,14 +657,14 @@
           <input type="range" id="turns" min="2" max="20" value="10" />
         </label>
         <div class="sim-readout">
-          <div><span>純加法</span><b id="r-linear">64</b></div>
-          <div><span>複利</span><b id="r-compound" class="hot">4,096</b></div>
-          <div><span>倍差</span><b id="r-ratio">64×</b></div>
+          <div><span id="l-linear">純加法</span><b id="r-linear">64</b></div>
+          <div><span id="l-compound">複利</span><b id="r-compound" class="hot">4,096</b></div>
+          <div><span id="l-ratio">倍差</span><b id="r-ratio">64×</b></div>
         </div>
       </div>
       <div class="sim-chart">
         <canvas id="chart" width="760" height="340"></canvas>
-        <div class="chart-legend"><span class="lg linear"></span>加法 <span class="lg compound"></span>複利 <span class="lg-hint">· 两條線的纵轴差距，就是「乘數」的價值</span></div>
+        <div class="chart-legend"><span class="lg linear"></span><span id="lgLinear">加法</span> <span class="lg compound"></span><span id="lgCompound">複利</span> <span class="lg-hint" id="lgHint">· 两條線的纵轴差距，就是「乘數」的價值</span></div>
       </div>
     </div>
   </div>
@@ -1163,31 +1228,31 @@
   </div>
 </div>
 
-<script src="data.js?v=20261111c"></script>
-<script src="pool.js?v=20261111c"></script>
-<script src="stats-change.js?v=20261111c"></script>
-<script src="stats-mmr.js?v=20261111c"></script>
-<script src="stats.js?v=20261111c"></script>
-<script src="comp-notes.js?v=20261111c"></script>
-<script src="hero-guide-data.js?v=20261111c"></script>
-<script src="extra-cards.js?v=20261111c"></script>
-<script src="cards.js?v=20261111c"></script>
-<script src="card-modal.js?v=20261111c"></script>
-<script src="app.js?v=20261111c"></script>
-<script src="sim.js?v=20261111c"></script>
-<script src="finder.js?v=20261111c"></script>
-<script src="search.js?v=20261111c"></script>
-<script src="analytics-config.js?v=20261111c"></script>
-<script src="analytics.js?v=20261111c"></script>
-<script src="history.js?v=20261111c"></script>
-<script src="news.js?v=20261111c"></script>
-<script src="fun.js?v=20261111c"></script>
-<script src="card-fx.js?v=20261111c"></script>
-<script src="counter.js?v=20261111c"></script>
-<script src="popular.js?v=20261111c"></script>
-<script src="demos.js?v=20261111c"></script>
-<script src="hero.js?v=20261111c"></script>
-<script src="bg.js?v=20261111c"></script>
+<script src="data.js?v=20261111d"></script>
+<script src="pool.js?v=20261111d"></script>
+<script src="stats-change.js?v=20261111d"></script>
+<script src="stats-mmr.js?v=20261111d"></script>
+<script src="stats.js?v=20261111d"></script>
+<script src="comp-notes.js?v=20261111d"></script>
+<script src="hero-guide-data.js?v=20261111d"></script>
+<script src="extra-cards.js?v=20261111d"></script>
+<script src="cards.js?v=20261111d"></script>
+<script src="card-modal.js?v=20261111d"></script>
+<script src="app.js?v=20261111d"></script>
+<script src="sim.js?v=20261111d"></script>
+<script src="finder.js?v=20261111d"></script>
+<script src="search.js?v=20261111d"></script>
+<script src="analytics-config.js?v=20261111d"></script>
+<script src="analytics.js?v=20261111d"></script>
+<script src="history.js?v=20261111d"></script>
+<script src="news.js?v=20261111d"></script>
+<script src="fun.js?v=20261111d"></script>
+<script src="card-fx.js?v=20261111d"></script>
+<script src="counter.js?v=20261111d"></script>
+<script src="popular.js?v=20261111d"></script>
+<script src="demos.js?v=20261111d"></script>
+<script src="hero.js?v=20261111d"></script>
+<script src="bg.js?v=20261111d"></script>
 <div class="pwa-banner" id="pwaBanner" hidden>
   <div class="pb-content">
     <div class="pb-icon">🍺</div>
@@ -1206,11 +1271,11 @@
   <div class="rail-track" aria-hidden="true"><i id="railFill"></i></div>
   <div class="rail-dots" id="railDots"></div>
 </nav>
-<script src="../vendor/jsvectormap.min.js?v=20261111c"></script>
-<script src="../vendor/world.js?v=20261111c"></script>
-<script src="rail.js?v=20261111c"></script>
-<script src="light.js?v=20261111c"></script>
-<script src="map.js?v=20261111c"></script>
+<script src="../vendor/jsvectormap.min.js?v=20261111d"></script>
+<script src="../vendor/world.js?v=20261111d"></script>
+<script src="rail.js?v=20261111d"></script>
+<script src="light.js?v=20261111d"></script>
+<script src="map.js?v=20261111d"></script>
 <script>
   if('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')){
     window.addEventListener('load', function(){

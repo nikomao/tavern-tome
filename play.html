@@ -16,8 +16,8 @@
 <link rel="icon" href="favicon.png" type="image/png" sizes="64x64" />
 <link rel="manifest" href="manifest.json" />
 <meta name="theme-color" content="#21140c" />
-<link rel="stylesheet" href="styles.css?v=20261111c">
-<link rel="stylesheet" href="play.css?v=20261111c">
+<link rel="stylesheet" href="styles.css?v=20261111d">
+<link rel="stylesheet" href="play.css?v=20261111d">
 </head>
 <body class="play-body">
 
@@ -55,6 +55,11 @@
   <button type="button" class="pfb-clear" id="btnClearFilters" hidden>重置筛选</button>
 </div>
 
+<div class="play-engine-wrap" id="playEngineWrap">
+  <div class="play-engine-bar" id="playEngineBar" aria-label="摸到核心直通车"></div>
+  <div class="play-engine-res" id="playEngineRes" hidden></div>
+</div>
+
 <div class="play-status" id="playStatus">
   <div class="ps"><span>回合</span><button type="button" data-k="turn" data-d="-1">−</button><b id="stTurn">1</b><button type="button" data-k="turn" data-d="1">+</button></div>
   <div class="ps"><span>本数</span><button type="button" data-k="tier" data-d="-1">−</button><b id="stTier">1</b><button type="button" data-k="tier" data-d="1">+</button></div>
@@ -65,8 +70,10 @@
 
 <main class="play-main">
   <div class="play-board">
+    <section class="play-pipeline-hud" id="playPipelineHud" aria-label="造上万流水线诊断"></section>
     <div class="play-pos-bar" id="playPosBar" hidden></div>
     <section class="play-slots" id="playSlots" aria-label="七格阵容"></section>
+    <div class="play-turn-order" id="playTurnOrder" hidden></div>
     <section class="play-stage-card" id="playStageCard" hidden></section>
   </div>
   <aside class="play-side">
@@ -76,6 +83,7 @@
       <p class="advice-main" id="adviceMain"></p>
       <p class="advice-sub" id="adviceSub"></p>
     </div>
+    <div class="play-counter-box" id="playCounterBox" hidden></div>
     <h3>还差 <b id="missCount">0</b> 张 <span class="miss-legend">（点卡看效果）</span></h3>
     <div id="missList"></div>
     <button type="button" class="play-add" id="btnAdd">＋ 添加 / 对策卡</button>
@@ -127,18 +135,18 @@
   </div>
 </div>
 
-<script src="data.js?v=20261111c"></script>
-<script src="pool.js?v=20261111c"></script>
-<script src="stats.js?v=20261111c"></script>
-<script src="comp-notes.js?v=20261111c"></script>
-<script src="extra-cards.js?v=20261111c"></script>
-<script src="cards.js?v=20261111c"></script>
-<script src="card-modal.js?v=20261111c"></script>
-<script src="play.js?v=20261111c"></script>
-<script src="analytics-config.js?v=20261111c"></script>
-<script src="analytics.js?v=20261111c"></script>
-<script src="history.js?v=20261111c"></script>
-<script src="card-fx.js?v=20261111c"></script>
+<script src="data.js?v=20261111d"></script>
+<script src="pool.js?v=20261111d"></script>
+<script src="stats.js?v=20261111d"></script>
+<script src="comp-notes.js?v=20261111d"></script>
+<script src="extra-cards.js?v=20261111d"></script>
+<script src="cards.js?v=20261111d"></script>
+<script src="card-modal.js?v=20261111d"></script>
+<script src="play.js?v=20261111d"></script>
+<script src="analytics-config.js?v=20261111d"></script>
+<script src="analytics.js?v=20261111d"></script>
+<script src="history.js?v=20261111d"></script>
+<script src="card-fx.js?v=20261111d"></script>
 <script>
   if('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')){
     window.addEventListener('load', function(){

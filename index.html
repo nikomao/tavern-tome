@@ -28,8 +28,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="酒馆手札" />
-<link rel="stylesheet" href="styles.css?v=20261111c" />
-<link rel="stylesheet" href="vendor/jsvectormap.min.css?v=20261111c">
+<link rel="stylesheet" href="styles.css?v=20261111d" />
+<link rel="stylesheet" href="vendor/jsvectormap.min.css?v=20261111d">
 </head>
 <body>
 <canvas id="bgFx" aria-hidden="true"></canvas>
@@ -561,11 +561,60 @@
     </div>
   </div>
 
+  <div class="st4-wrap" id="scalingTemplates">
+    <div class="st4-head">
+      <h3>28 套阵容，本质只有这 4 个「上万公式」</h3>
+      <p>不用死背全部卡表：认出自己手里是什么模型，缺哪个环节就补哪张核心，点卡片可直接切入对局模式。</p>
+    </div>
+    <div class="st4-grid">
+      <article class="st4-card">
+        <div class="st4-tag">公式 1 · 战斗永久保留</div>
+        <h4>战斗增益 × 永久锁下</h4>
+        <div class="st4-formula">战斗翻倍 / 亡语 × 相邻或永久继承</div>
+        <p class="st4-body">用【执念诗心龙】把【诺兹多姆的子嗣】翻倍的战斗属性永久留下，或靠【美味龙虾】配【提图斯·瑞文戴尔】把增益滚到下一回合。</p>
+        <div class="st4-links">
+          <a class="st4-cta" href="play.html?comp=dragon_shield">龙·执念圣盾 →</a>
+          <a class="st4-cta sub" href="play.html?comp=beast_lobster">野兽·龙虾 →</a>
+        </div>
+      </article>
+      <article class="st4-card">
+        <div class="st4-tag">公式 2 · 次数乘数叠加</div>
+        <h4>小资源 × 触发翻倍</h4>
+        <div class="st4-formula">战吼/回合末/亡语 × 铜须或达卡莱</div>
+        <p class="st4-body">配齐【布莱恩·铜须】、【达卡莱附魔师】或【小瞎眼】后，单次事件一次变两次甚至四次——【神秘的克熙尔】与磁力无人机全靠它破万。</p>
+        <div class="st4-links">
+          <a class="st4-cta" href="play.html?comp=aberration_discard">畸变怪·弃牌 →</a>
+          <a class="st4-cta sub" href="play.html?comp=mech_apm">机械·APM →</a>
+        </div>
+      </article>
+      <article class="st4-card">
+        <div class="st4-tag">公式 3 · 养肥商店再单吸</div>
+        <h4>酒馆养厚 × 集中吞吸</h4>
+        <div class="st4-formula">商店全体加厚 × 定向吞食 / 转攻</div>
+        <p class="st4-body">先靠【活化艾泽里特】或【恶魔干扰者】+【灵巧的逃亡者】把酒馆随从养大，再用【邪能野猪人】、【奥术吸收】或【巴琳达·斯通赫尔斯】吸进主力。</p>
+        <div class="st4-links">
+          <a class="st4-cta" href="play.html?comp=elemental_azerite">元素·艾泽里特 →</a>
+          <a class="st4-cta sub" href="play.html?comp=demon_boost_shop">恶魔·养酒馆 →</a>
+        </div>
+      </article>
+      <article class="st4-card">
+        <div class="st4-tag">公式 4 · 抬单价再批量泼</div>
+        <h4>抬高单价 × 高频全队浇灌</h4>
+        <div class="st4-formula">单张法术/宝石增值 × 双倍施放载体</div>
+        <p class="st4-body">先拿【鲜血精研者】或【邪火咒龙】把单张宝石与酒馆法术数值抬起来，再喂给【守门融合怪】配【巴琳达·斯通赫尔斯】和【热气球测绘员】集体起飞。</p>
+        <div class="st4-links">
+          <a class="st4-cta" href="play.html?comp=neutral_tea_set">全种族·神明喝茶 →</a>
+          <a class="st4-cta sub" href="play.html?comp=quilboar_choose_one">野猪人·抉择 →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+
   <div class="sim" id="sim">
     <div class="sim-head">
       <div>
-        <h3>成长模拟器</h3>
-        <p>拖动滑块，或者点一个预设，亲眼看着「加法」被「乘法」甩开。</p>
+        <h3>成长模拟器 · 公式 &amp; 实战阵型推演</h3>
+        <p>既可以用滑块直观对比「纯加法 vs 复利」，也可以切换真实 T0/T1 阵容看凑齐 5/6 本核心前后几回合破万。</p>
       </div>
       <div class="scale-toggle" id="scaleToggle" role="group" aria-label="坐标轴">
         <button data-scale="linear" class="on">线性</button>
@@ -576,9 +625,25 @@
       <button type="button" data-preset="plain">只加 6</button>
       <button type="button" data-preset="brann">铜须：每回合多一次</button>
       <button type="button" data-preset="double">双线缝针：每回合 ×4</button>
+      <span class="sim-preset-sep" aria-hidden="true">|</span>
+      <button type="button" data-comp-sim="dragon_shield">实战：龙·执念圣盾</button>
+      <button type="button" data-comp-sim="mech_volumizer">实战：机械·扩音机</button>
+      <button type="button" data-comp-sim="aberration_discard">实战：畸变怪·弃牌</button>
+      <button type="button" data-comp-sim="quilboar_choose_one">实战：野猪人·抉择</button>
+    </div>
+    <div class="sim-real-panel" id="simRealPanel" hidden>
+      <div class="srp-desc" id="simRealDesc"></div>
+      <div class="srp-controls">
+        <label class="srp-chk"><input type="checkbox" id="simHasEngine" checked /> <span>凑齐 5/6 本核心倍增引擎</span></label>
+        <label class="srp-chk"><input type="checkbox" id="simIsGold" /> <span>核心三连变金（翻倍加速）</span></label>
+        <label class="srp-turn">引擎到位：<b id="o-engTurn">T7</b>
+          <input type="range" id="simEngTurn" min="6" max="12" value="7" />
+        </label>
+        <a class="srp-play" id="simPlayLink" href="play.html?comp=dragon_shield">进对局练这套 →</a>
+      </div>
     </div>
     <div class="sim-body">
-      <div class="sim-controls">
+      <div class="sim-controls" id="simMathControls">
         <label>起始身材 <output id="o-base">4</output>
           <input type="range" id="base" min="1" max="20" value="4" />
         </label>
@@ -592,14 +657,14 @@
           <input type="range" id="turns" min="2" max="20" value="10" />
         </label>
         <div class="sim-readout">
-          <div><span>纯加法</span><b id="r-linear">64</b></div>
-          <div><span>复利</span><b id="r-compound" class="hot">4,096</b></div>
-          <div><span>倍差</span><b id="r-ratio">64×</b></div>
+          <div><span id="l-linear">纯加法</span><b id="r-linear">64</b></div>
+          <div><span id="l-compound">复利</span><b id="r-compound" class="hot">4,096</b></div>
+          <div><span id="l-ratio">倍差</span><b id="r-ratio">64×</b></div>
         </div>
       </div>
       <div class="sim-chart">
         <canvas id="chart" width="760" height="340"></canvas>
-        <div class="chart-legend"><span class="lg linear"></span>加法 <span class="lg compound"></span>复利 <span class="lg-hint">· 两条线的纵轴差距，就是「乘数」的价值</span></div>
+        <div class="chart-legend"><span class="lg linear"></span><span id="lgLinear">加法</span> <span class="lg compound"></span><span id="lgCompound">复利</span> <span class="lg-hint" id="lgHint">· 两条线的纵轴差距，就是「乘数」的价值</span></div>
       </div>
     </div>
   </div>
@@ -1163,31 +1228,31 @@
   </div>
 </div>
 
-<script src="data.js?v=20261111c"></script>
-<script src="pool.js?v=20261111c"></script>
-<script src="stats-change.js?v=20261111c"></script>
-<script src="stats-mmr.js?v=20261111c"></script>
-<script src="stats.js?v=20261111c"></script>
-<script src="comp-notes.js?v=20261111c"></script>
-<script src="hero-guide-data.js?v=20261111c"></script>
-<script src="extra-cards.js?v=20261111c"></script>
-<script src="cards.js?v=20261111c"></script>
-<script src="card-modal.js?v=20261111c"></script>
-<script src="app.js?v=20261111c"></script>
-<script src="sim.js?v=20261111c"></script>
-<script src="finder.js?v=20261111c"></script>
-<script src="search.js?v=20261111c"></script>
-<script src="analytics-config.js?v=20261111c"></script>
-<script src="analytics.js?v=20261111c"></script>
-<script src="history.js?v=20261111c"></script>
-<script src="news.js?v=20261111c"></script>
-<script src="fun.js?v=20261111c"></script>
-<script src="card-fx.js?v=20261111c"></script>
-<script src="counter.js?v=20261111c"></script>
-<script src="popular.js?v=20261111c"></script>
-<script src="demos.js?v=20261111c"></script>
-<script src="hero.js?v=20261111c"></script>
-<script src="bg.js?v=20261111c"></script>
+<script src="data.js?v=20261111d"></script>
+<script src="pool.js?v=20261111d"></script>
+<script src="stats-change.js?v=20261111d"></script>
+<script src="stats-mmr.js?v=20261111d"></script>
+<script src="stats.js?v=20261111d"></script>
+<script src="comp-notes.js?v=20261111d"></script>
+<script src="hero-guide-data.js?v=20261111d"></script>
+<script src="extra-cards.js?v=20261111d"></script>
+<script src="cards.js?v=20261111d"></script>
+<script src="card-modal.js?v=20261111d"></script>
+<script src="app.js?v=20261111d"></script>
+<script src="sim.js?v=20261111d"></script>
+<script src="finder.js?v=20261111d"></script>
+<script src="search.js?v=20261111d"></script>
+<script src="analytics-config.js?v=20261111d"></script>
+<script src="analytics.js?v=20261111d"></script>
+<script src="history.js?v=20261111d"></script>
+<script src="news.js?v=20261111d"></script>
+<script src="fun.js?v=20261111d"></script>
+<script src="card-fx.js?v=20261111d"></script>
+<script src="counter.js?v=20261111d"></script>
+<script src="popular.js?v=20261111d"></script>
+<script src="demos.js?v=20261111d"></script>
+<script src="hero.js?v=20261111d"></script>
+<script src="bg.js?v=20261111d"></script>
 <div class="pwa-banner" id="pwaBanner" hidden>
   <div class="pb-content">
     <div class="pb-icon">🍺</div>
@@ -1206,11 +1271,11 @@
   <div class="rail-track" aria-hidden="true"><i id="railFill"></i></div>
   <div class="rail-dots" id="railDots"></div>
 </nav>
-<script src="vendor/jsvectormap.min.js?v=20261111c"></script>
-<script src="vendor/world.js?v=20261111c"></script>
-<script src="rail.js?v=20261111c"></script>
-<script src="light.js?v=20261111c"></script>
-<script src="map.js?v=20261111c"></script>
+<script src="vendor/jsvectormap.min.js?v=20261111d"></script>
+<script src="vendor/world.js?v=20261111d"></script>
+<script src="rail.js?v=20261111d"></script>
+<script src="light.js?v=20261111d"></script>
+<script src="map.js?v=20261111d"></script>
 <script>
   if('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')){
     window.addEventListener('load', function(){

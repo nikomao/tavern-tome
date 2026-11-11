@@ -664,7 +664,9 @@
       ".ct-flow-item p", ".ct-trans-row", ".ct-block-head", ".ct-mis-list li", ".ct-math-desc",
       ".sc-desc", ".sc-stage-desc", ".pos-hint", ".cc-pos", "#summaryTable td:nth-child(3)",
       "#glossaryList dd", "#glossaryList dt", ".hc-strat", ".hc-trap", ".tn-desc", ".tn-action",
-      ".tech-tag", ".rule p", ".dg-note", ".mc-line", ".mc-good", ".mc-bad", "#adviceMain", "#adviceSub", ".psc-body p", ".psc-list li", ".ppb-text"
+      ".tech-tag", ".rule p", ".dg-note", ".mc-line", ".mc-good", ".mc-bad", "#adviceMain", "#adviceSub",
+      ".psc-body p", ".psc-list li", ".ppb-text", ".ppl-diag", ".ppl-cards", ".pto-text", ".pce-list li",
+      ".st4-body"
     ];
 
     selectors.forEach(function(sel){

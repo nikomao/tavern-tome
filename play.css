@@ -212,14 +212,85 @@
 .pip-body.pip-mini .play-slots{grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
 .pip-body.pip-mini .ps-slot .ps-tools,.pip-body.pip-mini .ps-role{display:none !important}
 .pip-body.pip-mini .ps-slot .ps-name{font-size:10px}
-.pip-body.pip-mini .pip-extra{display:none}
+.pip-body.pip-mini .pip-extra,.pip-body.pip-mini .pip-turn-order{display:none}
 .pip-body.pip-mini .advice{padding:5px 8px;margin-bottom:5px}
+
+/* Engine Finder Strip */
+.play-engine-wrap{max-width:1240px;margin:0 auto 10px}
+.play-engine-bar{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:6px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02)}
+.peb-label{font-size:11.5px;color:var(--gold-2);font-weight:700;white-space:nowrap;margin-right:2px}
+.peb-chip{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:#e2d2b5;border-radius:999px;padding:3px 9px 3px 4px;font-size:11.5px;cursor:pointer;font-family:inherit;white-space:nowrap;transition:.15s}
+.peb-chip:hover{border-color:var(--gold-dim);color:var(--gold-2)}
+.peb-chip.on{background:rgba(226,180,95,.22);border-color:var(--gold);color:var(--gold-2);font-weight:700}
+.peb-chip img{width:20px;height:20px;border-radius:50%;object-fit:cover;object-position:50% 25%;border:1px solid rgba(226,180,95,.35)}
+.peb-chip em{font-style:normal;font-size:10px;color:#a89375}
+.peb-chip.on em{color:#edd08f}
+.play-engine-res{margin-top:6px;padding:10px 12px;border-radius:10px;border:1px solid rgba(226,180,95,.3);background:linear-gradient(135deg,rgba(46,28,18,.95),rgba(24,14,10,.95))}
+.per-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;font-size:12.5px;color:#ead7b8}
+.per-head b{color:var(--gold-2)}
+.per-close{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);border-radius:6px;padding:2px 8px;font-size:11.5px;cursor:pointer}
+.per-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
+.per-card{display:flex;flex-direction:column;gap:4px;padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.025)}
+.per-card.banned{opacity:.55}
+.per-top{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.per-top b{font-size:12.5px;color:#f4e8d2}
+.per-tier{font-size:10px;font-weight:700;padding:1px 6px;border-radius:999px;background:rgba(226,180,95,.18);color:var(--gold-2)}
+.per-miss{font-size:11.5px;color:#bfa98a;line-height:1.45}
+.per-miss .hot{color:#6ee7a8;font-weight:600}
+.per-btn{align-self:flex-start;margin-top:2px;border:1px solid rgba(226,180,95,.45);background:rgba(226,180,95,.12);color:var(--gold-2);border-radius:6px;padding:3px 9px;font-size:11.5px;font-weight:600;cursor:pointer}
+.per-btn:hover{background:var(--gold);color:#201208}
+
+/* 4-Stage Scaling Pipeline Diagnostic HUD */
+.play-pipeline-hud{margin-bottom:10px;padding:9px 11px;border-radius:10px;border:1px solid rgba(226,180,95,.22);background:linear-gradient(135deg,rgba(42,25,16,.8),rgba(24,14,9,.85))}
+.ppl-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:7px}
+.ppl-diag{font-size:12.5px;color:#ecd9bc;line-height:1.45}
+.ppl-diag strong{color:var(--gold-2)}
+.ppl-badge{font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.ppl-badge.linear{background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.4);color:#fbbf24}
+.ppl-badge.primed{background:rgba(56,189,248,.14);border:1px solid rgba(56,189,248,.38);color:#7dd3fc}
+.ppl-badge.online{background:rgba(74,222,128,.15);border:1px solid rgba(74,222,128,.45);color:#6ee7a8}
+.ppl-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.ppl-step{padding:6px 8px;border-radius:8px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02)}
+.ppl-step.owned{border-color:rgba(74,222,128,.38);background:rgba(74,222,128,.07)}
+.ppl-step.golden{border-color:rgba(226,180,95,.65);background:rgba(226,180,95,.12)}
+.ppl-step.missing{border-color:rgba(248,113,113,.26);background:rgba(248,113,113,.04)}
+.ppl-head{display:flex;justify-content:space-between;align-items:center;gap:4px;font-size:10.5px;color:#b89f80;margin-bottom:3px}
+.ppl-state{font-weight:700}
+.ppl-step.owned .ppl-state{color:#6ee7a8}
+.ppl-step.golden .ppl-state{color:#f3cb72}
+.ppl-step.missing .ppl-state{color:#fca5a5}
+.ppl-cards{font-size:11.5px;color:#ead9be;line-height:1.4;word-break:break-word}
+
+/* Intra-turn Execution Sequence Strip */
+.play-turn-order{display:flex;align-items:flex-start;gap:8px;margin-top:9px;padding:8px 11px;border-radius:9px;border:1px solid rgba(226,180,95,.28);background:rgba(226,180,95,.07);font-size:12.5px;line-height:1.55;color:#efdcb9}
+.pto-tag{flex:0 0 auto;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:5px;background:rgba(226,180,95,.2);color:var(--gold-2);margin-top:2px}
+.pto-text{flex:1;min-width:0}
+
+/* Endgame 3-Point Counter Checklist */
+.play-counter-box{padding:10px 12px;border-radius:10px;border:1px solid rgba(248,113,113,.3);background:linear-gradient(135deg,rgba(66,22,22,.42),rgba(28,15,12,.9))}
+.pce-head{display:flex;justify-content:space-between;align-items:center;gap:6px;font-size:11.5px;font-weight:700;color:#fca5a5;margin-bottom:6px}
+.pce-head span{font-weight:400;color:#c7a89a;font-size:10.5px}
+.pce-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px}
+.pce-list li{display:flex;align-items:flex-start;gap:7px;font-size:12px;line-height:1.48;color:#ead7c8;padding:4px 6px;border-radius:6px;background:rgba(255,255,255,.03);cursor:pointer;transition:.14s}
+.pce-list li:hover{background:rgba(255,255,255,.06)}
+.pce-list li.checked{opacity:.58;text-decoration:line-through;color:#9bc7aa}
+.pce-chk{flex:0 0 16px;height:16px;border-radius:4px;border:1px solid rgba(252,165,165,.45);display:inline-flex;align-items:center;justify-content:center;font-size:10.5px;margin-top:2px;color:#6ee7a8}
+.pce-list li.checked .pce-chk{border-color:#6ee7a8;background:rgba(74,222,128,.16)}
+
+/* PiP Turn Order & Pipeline Pill */
+.pip-pipe-badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:999px;white-space:nowrap}
+.pip-pipe-badge.linear{background:rgba(245,158,11,.18);color:#fbbf24}
+.pip-pipe-badge.primed{background:rgba(56,189,248,.16);color:#7dd3fc}
+.pip-pipe-badge.online{background:rgba(74,222,128,.18);color:#6ee7a8}
+.pip-turn-order{margin:6px 0;padding:5px 8px;border-radius:7px;background:rgba(226,180,95,.09);border:1px solid rgba(226,180,95,.26);font-size:11px;line-height:1.45;color:#efdcb9}
 
 @media (max-width:860px){
   .play-main{grid-template-columns:1fr}
   .play-slots{grid-template-columns:repeat(4,minmax(0,1fr))}
   .ps-tools{opacity:.92}
   .ps-shortcuts{display:none}
+  .play-engine-bar{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .ppl-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .play-actions{gap:5px;padding:8px 8px;overflow-x:auto}
   .play-actions button{font-size:12.5px;padding:9px 6px}
   .play-actions button span{display:none}
