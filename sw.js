@@ -1,5 +1,5 @@
 /* Tavern Tome Service Worker for PWA & Offline Support */
-const CACHE_NAME = "tt-pwa-v20261105i";
+const CACHE_NAME = "tt-pwa-v20261111a";
 
 const PRECACHE_ASSETS = [
   "./",

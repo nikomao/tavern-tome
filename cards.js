@@ -14,11 +14,11 @@ const CARDS = {
  "赤红守备巨龙": {
   "n": "赤红守备巨龙",
   "t": 6,
-  "a": 8,
-  "h": 9,
+  "a": 9,
+  "h": 7,
   "r": "龙",
   "k": "minion",
-  "x": "圣盾。进击：施放威猛龙息。",
+  "x": "圣盾。风怒。进击：施放威猛龙息。",
   "img": "pool/BG36_241.webp",
   "art": "tile"
  },
@@ -47,12 +47,12 @@ const CARDS = {
  "白狼": {
   "n": "巨狼戈德林",
   "t": 5,
-  "a": 14,
-  "h": 14,
+  "a": 7,
+  "h": 7,
   "r": "野兽",
   "k": "minion",
-  "x": "亡语：直到下个回合，你的野兽拥有+14/+14。",
-  "img": "pool/TB_BaconUps_085.webp",
+  "x": "亡语：直到下个回合，你的野兽拥有+7/+7。",
+  "img": "pool/BGS_018.webp",
   "art": "tile"
  },
  "疑之影": {
@@ -63,7 +63,7 @@ const CARDS = {
   "r": "畸变怪",
   "k": "minion",
   "x": "每当一张牌被置入你的手牌，使你的神明获得+4/+5。",
-  "img": "cards/BG36_109.webp",
+  "img": "pool/BG36_109.webp",
   "art": "tile"
  },
  "守门融合怪": {
@@ -74,7 +74,7 @@ const CARDS = {
   "r": "全种族",
   "k": "minion",
   "x": "每当你对本随从施放一个法术，本随从施放乱放的茶具。",
-  "img": "cards/BG36_640.webp",
+  "img": "pool/BG36_640.webp",
   "art": "tile"
  },
  "克苏恩": {
@@ -85,7 +85,7 @@ const CARDS = {
   "r": "畸变怪",
   "k": "minion",
   "x": "神明。在本随从被唤醒后，使你的其他随从获得属性值，获得的总量为本随从的属性值。",
-  "img": "cards/BGFYM_000.webp",
+  "img": "pool/BGFYM_000.webp",
   "art": "tile"
  },
  "亚煞极": {
@@ -96,7 +96,7 @@ const CARDS = {
   "r": "畸变怪",
   "k": "minion",
   "x": "神明。亡语：召唤你在本场战斗中死亡的前2个畸变怪，且其具有其最大属性值（神明除外）。",
-  "img": "cards/BGFYM_011.webp",
+  "img": "pool/BGFYM_011.webp",
   "art": "tile"
  },
  "黑暗悖论体": {
@@ -107,7 +107,7 @@ const CARDS = {
   "r": "全种族",
   "k": "minion",
   "x": "在每局对战中，本随从都有不同的黑暗之赐，属性值和等级！",
-  "img": "cards/BG36_360.webp",
+  "img": "pool/BG36_360.webp",
   "art": "tile"
  },
  "强制躺平怪": {
@@ -118,7 +118,7 @@ const CARDS = {
   "r": "畸变怪",
   "k": "minion",
   "x": "亡语：随机获取一张消耗1枚铸币的酒馆法术牌。",
-  "img": "cards/BG36_101.webp",
+  "img": "pool/BG36_101.webp",
   "art": "tile"
  },
  "克苏恩的触手": {
@@ -140,7 +140,7 @@ const CARDS = {
   "r": "",
   "k": "minion",
   "x": "你的战吼会触发 两次。",
-  "img": "cards/BG_LOE_077.webp",
+  "img": "pool/BG_LOE_077.webp",
   "art": "tile"
  },
  "狂放的法力涌流": {
@@ -151,7 +151,7 @@ const CARDS = {
   "r": "元素",
   "k": "minion",
   "x": "在你使用一张元素牌后，使你的元素获得+2/+3。",
-  "img": "cards/BG32_846.webp",
+  "img": "pool/BG32_846.webp",
   "art": "tile"
  },
  "酒馆旋风": {
@@ -162,7 +162,7 @@ const CARDS = {
   "r": "元素",
   "k": "minion",
   "x": "战吼：随机获取一张元素牌。",
-  "img": "cards/BGS_123.webp",
+  "img": "pool/BGS_123.webp",
   "art": "render"
  },
  "灯神": {
@@ -179,12 +179,12 @@ const CARDS = {
  "活化艾泽里特": {
   "n": "活化艾泽里特",
   "t": 5,
-  "a": 8,
+  "a": 6,
   "h": 6,
   "r": "元素",
   "k": "minion",
-  "x": "每当你施放一个酒馆法术，使酒馆中的元素在本局对战中获得+4/+3。",
-  "img": "cards/BG28_707.webp",
+  "x": "每当你施放一个酒馆法术，使酒馆中的元素在本局对战中获得+3/+3。",
+  "img": "pool/BG28_707.webp",
   "art": "tile"
  },
  "俱之煞": {
@@ -195,7 +195,7 @@ const CARDS = {
   "r": "畸变怪",
   "k": "minion",
   "x": "每当你施放一个酒馆法术，使你的随从和神明获得+3/+3。",
-  "img": "cards/BG36_111.webp",
+  "img": "pool/BG36_111.webp",
   "art": "tile"
  },
  "奥术吸收": {
@@ -206,7 +206,7 @@ const CARDS = {
   "r": "",
   "k": "spell",
   "x": "使一个友方元素获得酒馆中生命值最高的随从的一半 属性值。",
-  "img": "cards/BG35_911.webp",
+  "img": "pool/BG35_911.webp",
   "art": "tile"
  },
  "愤怒卫士": {
@@ -217,7 +217,7 @@ const CARDS = {
   "r": "恶魔",
   "k": "minion",
   "x": "在你出售一个随从后，在你的下一次刷新中添加一个恶魔饲料。",
-  "img": "cards/BG35_155.webp",
+  "img": "pool/BG35_155.webp",
   "art": "tile"
  },
  "裂地陨星": {
@@ -228,7 +228,7 @@ const CARDS = {
   "r": "元素",
   "k": "minion",
   "x": "在你出售一个元素后，获得+4/+4。",
-  "img": "cards/BG31_843.webp",
+  "img": "pool/BG31_843.webp",
   "art": "tile"
  },
  "食力征服者": {
@@ -239,7 +239,7 @@ const CARDS = {
   "r": "恶魔",
   "k": "minion",
   "x": "每当一个随从被吞食，在本回合中使酒馆中的随从获得+1/+1。",
-  "img": "cards/BG35_153.webp",
+  "img": "pool/BG35_153.webp",
   "art": "tile"
  },
  "深渊使者": {
@@ -250,7 +250,7 @@ const CARDS = {
   "r": "畸变怪",
   "k": "minion",
   "x": "发动（0）：弃一张牌以随机获取一张酒馆法术牌。",
-  "img": "cards/BG36_311.webp",
+  "img": "pool/BG36_311.webp",
   "art": "tile"
  },
  "邪能野猪": {
@@ -261,7 +261,7 @@ const CARDS = {
   "r": "野猪人",
   "k": "minion",
   "x": "在你施放3个法术后，吞食酒馆中的一个随从，获得其属性值。（还剩3个！）",
-  "img": "cards/BG28_633.webp",
+  "img": "pool/BG28_633.webp",
   "art": "render"
  },
  "梦魇侵蚀怪": {
@@ -272,7 +272,7 @@ const CARDS = {
   "r": "畸变怪",
   "k": "minion",
   "x": "在你的回合结束时，获取一张腐泥侵蚀。",
-  "img": "cards/BG36_115.webp",
+  "img": "pool/BG36_115.webp",
   "art": "tile"
  },
  "神秘的克熙尔": {
@@ -283,7 +283,7 @@ const CARDS = {
   "r": "畸变怪",
   "k": "minion",
   "x": "在你的回合结束时，弃掉你最左边的3张酒馆法术牌。每弃掉一张，便获得+7/+7。",
-  "img": "cards/BG36_320.webp",
+  "img": "pool/BG36_320.webp",
   "art": "tile"
  },
  "堕落屠夫": {
@@ -294,7 +294,7 @@ const CARDS = {
   "r": "亡灵",
   "k": "minion",
   "x": "复仇（4）：获取一张宰割。",
-  "img": "cards/BG32_324.webp",
+  "img": "pool/BG32_324.webp",
   "art": "tile"
  },
  "瑞文": {
@@ -305,7 +305,7 @@ const CARDS = {
   "r": "",
   "k": "minion",
   "x": "你的亡语额外触发一次。",
-  "img": "cards/BG25_354.webp",
+  "img": "pool/BG25_354.webp",
   "art": "render"
  },
  "巴琳达": {
@@ -316,7 +316,7 @@ const CARDS = {
   "r": "",
   "k": "minion",
   "x": "你的以友方随从为目标的法术会施放 两次。",
-  "img": "cards/BG35_883.webp",
+  "img": "pool/BG35_883.webp",
   "art": "tile"
  },
  "机警的咒术师": {
@@ -327,7 +327,7 @@ const CARDS = {
   "r": "纳迦",
   "k": "minion",
   "x": "发动（1）：随机施放2个酒馆法术（尽可能以本随从为目标）。",
-  "img": "cards/BG36_508.webp",
+  "img": "pool/BG36_508.webp",
   "art": "tile"
  },
  "海床纳迦": {
@@ -338,7 +338,7 @@ const CARDS = {
   "r": "纳迦",
   "k": "minion",
   "x": "进击：对本随从右边的随从施放主厨 甄选。",
-  "img": "cards/BG34_925.webp",
+  "img": "pool/BG34_925.webp",
   "art": "tile"
  },
  "涌流毁灭者": {
@@ -349,7 +349,7 @@ const CARDS = {
   "r": "纳迦",
   "k": "minion",
   "x": "每当你对纳迦施放法术，使你的随从获得+2/+3。",
-  "img": "cards/BG36_622.webp",
+  "img": "pool/BG36_622.webp",
   "art": "tile"
  },
  "碎地者": {
@@ -360,7 +360,7 @@ const CARDS = {
   "r": "纳迦",
   "k": "minion",
   "x": "在你使用一张纳迦牌后，获得+1/+1。（在本局对战中，你每施放3个法术都会提升！）3在你使用一张纳迦牌后，获得+1/+1。（施放0/3个法术即可提升！）",
-  "img": "cards/BG31_035.webp",
+  "img": "pool/BG31_035.webp",
   "art": "tile"
  },
  "火药运输工": {
@@ -370,8 +370,8 @@ const CARDS = {
   "h": 5,
   "r": "海盗",
   "k": "minion",
-  "x": "每当你花掉5枚铸币，使你的海盗获得+3/+1。（还剩6枚！）",
-  "img": "cards/BG26_810.webp",
+  "x": "每当你花掉5枚铸币，使你的海盗获得+3/+1。（还剩5枚！）",
+  "img": "pool/BG26_810.webp",
   "art": "render"
  },
  "怒鳞潜行者": {
@@ -382,7 +382,7 @@ const CARDS = {
   "r": "纳迦",
   "k": "minion",
   "x": "在另一个友方纳迦获得生命值后，使其获得等量的攻击力。",
-  "img": "cards/BG33_920.webp",
+  "img": "pool/BG33_920.webp",
   "art": "tile"
  },
  "破碎主母": {
@@ -393,7 +393,7 @@ const CARDS = {
   "r": "纳迦",
   "k": "minion",
   "x": "每当你施放一个法术，使你的随从获得+3生命值。",
-  "img": "cards/BG33_923.webp",
+  "img": "pool/BG33_923.webp",
   "art": "tile"
  },
  "苦情民谣歌手": {
@@ -404,29 +404,29 @@ const CARDS = {
   "r": "海盗",
   "k": "minion",
   "x": "战吼：使一个海盗获得+2生命值。（在本回合中你每花费一枚铸币都会提升！）",
-  "img": "cards/BG26_814.webp",
+  "img": "pool/BG26_814.webp",
   "art": "render"
  },
  "舰长尤朵拉": {
   "n": "舰长尤朵拉",
   "t": 5,
-  "a": 8,
+  "a": 10,
   "h": 3,
   "r": "海盗",
   "k": "minion",
-  "x": "亡语：使你的随从获得+6/+6，金色随从可永久保留此效果。",
-  "img": "cards/BG33_828.webp",
+  "x": "亡语：使你的随从获得+8/+8，金色随从可永久保留此效果。",
+  "img": "pool/BG33_828.webp",
   "art": "tile"
  },
  "上进的逃兵": {
   "n": "上进的逃兵",
   "t": 5,
-  "a": 6,
-  "h": 6,
+  "a": 7,
+  "h": 5,
   "r": "海盗",
   "k": "minion",
-  "x": "在你花掉6枚铸币后，获取一张上锁宝箱。如果你已有宝箱，改为使其提前1回合打开。（还剩6枚！）",
-  "img": "cards/BG36_523.webp",
+  "x": "在你花掉5枚铸币后，获取一张上锁宝箱。如果你已有宝箱，改为使其提前1回合打开。（还剩5枚！）",
+  "img": "pool/BG36_523.webp",
   "art": "tile"
  },
  "死海破坏者": {
@@ -437,7 +437,7 @@ const CARDS = {
   "r": "亡灵",
   "k": "minion",
   "x": "进击：使4个其他友方随从获得本随从的攻击力。",
-  "img": "cards/BG34_765.webp",
+  "img": "pool/BG34_765.webp",
   "art": "tile"
  },
  "达卡莱附魔师": {
@@ -448,7 +448,7 @@ const CARDS = {
   "r": "",
   "k": "minion",
   "x": "你的回合结束效果会触发两次。",
-  "img": "cards/BG26_ICC_901.webp",
+  "img": "pool/BG26_ICC_901.webp",
   "art": "render"
  },
  "永恒大亨": {
@@ -459,7 +459,7 @@ const CARDS = {
   "r": "亡灵",
   "k": "minion",
   "x": "复仇（5）：召唤一个永恒骑士并使其立即发起攻击。",
-  "img": "cards/BG34_403.webp",
+  "img": "pool/BG34_403.webp",
   "art": "tile"
  },
  "巨蝎": {
@@ -470,7 +470,7 @@ const CARDS = {
   "r": "野兽",
   "k": "minion",
   "x": "在一个友方随从攻击后，在本局对战中，你的甲虫拥有+4/+4。亡语：召唤一只2/2的甲虫。",
-  "img": "cards/BG36_209.webp",
+  "img": "pool/BG36_209.webp",
   "art": "tile"
  },
  "美味龙虾": {
@@ -481,7 +481,7 @@ const CARDS = {
   "r": "野兽",
   "k": "minion",
   "x": "亡语：随机使一只友方野兽获得+2/+1。提升你此后美味龙虾的 效果。",
-  "img": "cards/BG36_202.webp",
+  "img": "pool/BG36_202.webp",
   "art": "tile"
  },
  "丝柔烁光蛾": {
@@ -492,7 +492,7 @@ const CARDS = {
   "r": "野兽",
   "k": "minion",
   "x": "每当本随从受到伤害，在本局对战中，你的甲虫拥有+2/+2。亡语：召唤一只2/2的甲虫。",
-  "img": "cards/BG32_204.webp",
+  "img": "pool/BG32_204.webp",
   "art": "tile"
  },
  "狼宝宝": {
@@ -503,7 +503,7 @@ const CARDS = {
   "r": "野兽",
   "k": "minion",
   "x": "进击：使你的其他随从获得+4/+1。",
-  "img": "cards/BG36_207.webp",
+  "img": "pool/BG36_207.webp",
   "art": "tile"
  },
  "蝎子甲虫": {
@@ -525,7 +525,7 @@ const CARDS = {
   "r": "龙",
   "k": "minion",
   "x": "圣盾。相邻的龙可永久保留战斗阶段获得的额外关键词和属性值。",
-  "img": "cards/BG29_813.webp",
+  "img": "pool/BG29_813.webp",
   "art": "tile"
  },
  "B-BOX": {
@@ -536,7 +536,7 @@ const CARDS = {
   "r": "MECHANICAL",
   "k": "minion",
   "x": "每当你对一个不同的随从磁力吸附时，还会对本随从磁力吸附。",
-  "img": "cards/BG26_149.webp",
+  "img": "pool/BG26_149.webp",
   "art": "render"
  },
  "法术威猛龙息": {
@@ -547,7 +547,7 @@ const CARDS = {
   "r": "",
   "k": "spell",
   "x": "使你的随从获得+3/+2。对你的龙重复一次。对你具有圣盾的随从重复一次。",
-  "img": "cards/BG36_246.webp",
+  "img": "pool/BG36_246.webp",
   "art": "tile"
  },
  "魅惑之翼": {
@@ -558,18 +558,18 @@ const CARDS = {
   "r": "龙",
   "k": "minion",
   "x": "进击：使2条友方的龙获得本随从的生命值上限（魅惑之翼除外）。",
-  "img": "cards/BG33_240.webp",
+  "img": "pool/BG33_240.webp",
   "art": "tile"
  },
  "火花破坏机": {
   "n": "火花破坏机",
   "t": 5,
-  "a": 6,
+  "a": 8,
   "h": 8,
   "r": "MECHANICAL",
   "k": "minion",
-  "x": "每当你使用一张机械牌，对其磁力吸附一个2/3的卫星并提升此效果。",
-  "img": "cards/BG36_851.webp",
+  "x": "每当你使用一张机械牌，对其磁力吸附一个2/2的卫星并提升此效果。",
+  "img": "pool/BG36_851.webp",
   "art": "tile"
  },
  "机巧发明机": {
@@ -580,7 +580,7 @@ const CARDS = {
   "r": "MECHANICAL",
   "k": "minion",
   "x": "亡语：在本场战斗中，你的机械拥有+2攻击力。（在本局对战中你每磁力吸附一次都会提升！）",
-  "img": "cards/BG35_890.webp",
+  "img": "pool/BG35_890.webp",
   "art": "tile"
  },
  "自动起床号": {
@@ -591,7 +591,7 @@ const CARDS = {
   "r": "MECHANICAL",
   "k": "minion",
   "x": "在你购买3张牌后，随机为本随从磁力吸附一个扩音机，并获取一张该扩音机的复制。（还剩3张！）",
-  "img": "cards/BG36_367.webp",
+  "img": "pool/BG36_367.webp",
   "art": "tile"
  },
  "扩音机": {
@@ -602,7 +602,7 @@ const CARDS = {
   "r": "MECHANICAL",
   "k": "minion",
   "x": "磁力。本随从第一次被使用或磁力吸附时，你的扩音机在本局对战中拥有+3攻击力（无论它们在哪）。",
-  "img": "cards/BG34_170t.webp",
+  "img": "pool/BG34_170t.webp",
   "art": "tile"
  },
  "卫星": {
@@ -624,7 +624,7 @@ const CARDS = {
   "r": "MECHANICAL",
   "k": "minion",
   "x": "在本局对战中，你每召唤过一个其他星元自动机，便拥有+3/+2（无论本随从在哪）。",
-  "img": "cards/BG_TTN_401.webp",
+  "img": "pool/BG_TTN_401.webp",
   "art": "render"
  },
  "下水道逃生鱼人": {
@@ -635,7 +635,7 @@ const CARDS = {
   "r": "鱼人",
   "k": "minion",
   "x": "发动（1）：使另一个鱼人获得+7/+7和一个随机额外关键词。",
-  "img": "cards/BG36_700.webp",
+  "img": "pool/BG36_700.webp",
   "art": "tile"
  },
  "小瞎眼": {
@@ -646,7 +646,7 @@ const CARDS = {
   "r": "鱼人",
   "k": "minion",
   "x": "在你的回合结束时，触发相邻随从的战吼。",
-  "img": "cards/BG22_403.webp",
+  "img": "pool/BG22_403.webp",
   "art": "render"
  },
  "怒胆喷毒鱼": {
@@ -657,7 +657,7 @@ const CARDS = {
   "r": "鱼人",
   "k": "minion",
   "x": "烈毒。进击：使另一个友方鱼人获得烈毒。",
-  "img": "cards/BG33_318.webp",
+  "img": "pool/BG33_318.webp",
   "art": "tile"
  },
  "飞行专家": {
@@ -668,7 +668,7 @@ const CARDS = {
   "r": "鱼人",
   "k": "minion",
   "x": "进击：召唤你手牌中攻击力最高的鱼人，其登场仅限本场战斗。",
-  "img": "cards/BG34_140.webp",
+  "img": "pool/BG34_140.webp",
   "art": "tile"
  },
  "合唱鱼人": {
@@ -679,7 +679,7 @@ const CARDS = {
   "r": "鱼人",
   "k": "minion",
   "x": "战斗开始时：获得你手牌中所有随从牌的属性值。",
-  "img": "cards/BG26_354.webp",
+  "img": "pool/BG26_354.webp",
   "art": "render"
  },
  "宰割": {
@@ -690,7 +690,7 @@ const CARDS = {
   "r": "",
   "k": "spell",
   "x": "消灭一个友方亡灵。在本局对战中，你的亡灵拥有+8攻击力（无论它们在哪）。8消灭一个友方亡灵。在本局对战中，你的亡灵拥有+8/+0（无论它们在哪）。",
-  "img": "cards/BG28_604.webp",
+  "img": "pool/BG28_604.webp",
   "art": "render"
  },
  "深潜巨兽": {
@@ -701,7 +701,7 @@ const CARDS = {
   "r": "野兽",
   "k": "minion",
   "x": "每当你召唤野兽时，使其获得+3攻击力并永久提升此效果。",
-  "img": "cards/BG35_602.webp",
+  "img": "pool/BG35_602.webp",
   "art": "tile"
  },
  "招潮者先知": {
@@ -712,7 +712,7 @@ const CARDS = {
   "r": "鱼人",
   "k": "minion",
   "x": "你的酒馆法术使随从额外获得+1/+1。在你使用2张鱼人牌后，在本回合中提升此效果。（还剩2张！）",
-  "img": "cards/BG35_895.webp",
+  "img": "pool/BG35_895.webp",
   "art": "tile"
  },
  "克尔苏加德": {
@@ -723,7 +723,7 @@ const CARDS = {
   "r": "亡灵",
   "k": "minion",
   "x": "在你的回合结束时，消灭本随从左侧的亡灵并再次召唤完全相同的复制。",
-  "img": "cards/BG28_308.webp",
+  "img": "pool/BG28_308.webp",
   "art": "render"
  },
  "障蔽女妖": {
@@ -734,7 +734,7 @@ const CARDS = {
   "r": "亡灵",
   "k": "minion",
   "x": "在一个友方随从复生后，获得圣盾和+8/+8。",
-  "img": "cards/BG36_514.webp",
+  "img": "pool/BG36_514.webp",
   "art": "tile"
  },
  "尘骨": {
@@ -745,7 +745,7 @@ const CARDS = {
   "r": "亡灵",
   "k": "minion",
   "x": "进击： 在本局对战中，你的亡灵拥有+1攻击力（无论它们在哪）。",
-  "img": "cards/BG33_323.webp",
+  "img": "pool/BG33_323.webp",
   "art": "tile"
  },
  "永恒召唤者": {
@@ -756,7 +756,7 @@ const CARDS = {
   "r": "亡灵",
   "k": "minion",
   "x": "复生。亡语：召唤1个永恒骑士。",
-  "img": "cards/BG25_009.webp",
+  "img": "pool/BG25_009.webp",
   "art": "render"
  },
  "小巫妖囤积者": {
@@ -767,7 +767,7 @@ const CARDS = {
   "r": "亡灵",
   "k": "minion",
   "x": "复仇（3）：获取本场战斗中在你初始战队中的一个随从的一张原始版复制。",
-  "img": "cards/BG36_848.webp",
+  "img": "pool/BG36_848.webp",
   "art": "tile"
  },
  "纺织工": {
@@ -778,7 +778,7 @@ const CARDS = {
   "r": "亡灵",
   "k": "minion",
   "x": "在你施放一个酒馆法术后，你的亡灵在本局对战中拥有+3攻击力（无论它们 在哪）。",
-  "img": "cards/BG34_692.webp",
+  "img": "pool/BG34_692.webp",
   "art": "tile"
  },
  "剃刀沼泽织藤者": {
@@ -789,7 +789,7 @@ const CARDS = {
   "r": "野猪人",
   "k": "minion",
   "x": "进击：本随从对自身使用4张永久的鲜血宝石。",
-  "img": "cards/BG33_883.webp",
+  "img": "pool/BG33_883.webp",
   "art": "tile"
  },
  "极速野猪骑士": {
@@ -800,7 +800,7 @@ const CARDS = {
   "r": "野猪人",
   "k": "minion",
   "x": "在你使用一张抉择牌后，本随从对你的所有野猪人各使用2张鲜血宝石。",
-  "img": "cards/BG31_323.webp",
+  "img": "pool/BG31_323.webp",
   "art": "tile"
  },
  "邪能猪": {
@@ -811,7 +811,7 @@ const CARDS = {
   "r": "野猪人",
   "k": "minion",
   "x": "在你施放3个法术后，吞食酒馆中的一个随从，获得其属性值。（还剩3个！）",
-  "img": "cards/BG28_633.webp",
+  "img": "pool/BG28_633.webp",
   "art": "render"
  },
  "舞扇者": {
@@ -822,18 +822,18 @@ const CARDS = {
   "r": "野猪人",
   "k": "minion",
   "x": "战吼，亡语：获取一张鲜血宝石弹幕。",
-  "img": "cards/BG34_682.webp",
+  "img": "pool/BG34_682.webp",
   "art": "tile"
  },
  "囚牢恶霸": {
   "n": "囚牢恶霸",
   "t": 7,
-  "a": 6,
-  "h": 15,
+  "a": 13,
+  "h": 17,
   "r": "野猪人",
   "k": "minion",
   "x": "进击：召唤一个具有本随从属性值的魔像，并使其率先攻击目标。",
-  "img": "cards/BG36_333.webp",
+  "img": "pool/BG36_333.webp",
   "art": "tile"
  },
  "宝石走私商": {
@@ -844,18 +844,18 @@ const CARDS = {
   "r": "野猪人",
   "k": "minion",
   "x": "战吼：本随从对你的所有其他随从各使用2张鲜血宝石。",
-  "img": "cards/BG25_155.webp",
+  "img": "pool/BG25_155.webp",
   "art": "render"
  },
  "热气球": {
   "n": "热气球测绘员",
-  "t": 4,
+  "t": 5,
   "a": 3,
   "h": 7,
   "r": "野猪人",
   "k": "minion",
   "x": "从你手牌中使用 的鲜血宝石会额外施放一次。",
-  "img": "cards/BG30_121.webp",
+  "img": "pool/BG30_121.webp",
   "art": "tile"
  }
 };

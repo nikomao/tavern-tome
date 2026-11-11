@@ -1,3138 +1,3378 @@
 /* 各 MMR 分段英雄榜（由 scripts/fetch_mmr.mjs 生成） */
 const STATS_MMR = {
  "1": {
-  "sample": 22909,
-  "fetchedAt": "2026-11-02",
+  "sample": 4191,
+  "fetchedAt": "2026-11-10",
   "heroes": [
    {
-    "name": "加拉克苏斯大王",
+    "name": "比格沃斯先生",
     "tier": "T0",
-    "winrate": 0.3091,
-    "top4": 0.7688,
-    "avg": 2.96,
-    "pickrate": 85.3
+    "winrate": 0.0625,
+    "top4": 0.9375,
+    "avg": 2.63,
+    "pickrate": 42.11
    },
    {
-    "name": "贸易親王加裡維克斯",
+    "name": "風暴之王托裡姆",
     "tier": "T0",
-    "winrate": 0.386,
-    "top4": 0.7447,
-    "avg": 3.02,
-    "pickrate": 76.11
+    "winrate": 0.3972,
+    "top4": 0.8085,
+    "avg": 2.69,
+    "pickrate": 77.9
    },
    {
     "name": "時光扭曲者克罗米",
     "tier": "T0",
-    "winrate": 0.2537,
-    "top4": 0.7662,
-    "avg": 3.17,
-    "pickrate": 46.96
-   },
-   {
-    "name": "強化機器人",
-    "tier": "T0",
-    "winrate": 0.2261,
-    "top4": 0.7435,
-    "avg": 3.23,
-    "pickrate": 47.82
-   },
-   {
-    "name": "巴罗夫領主",
-    "tier": "T0",
-    "winrate": 0.2417,
-    "top4": 0.737,
-    "avg": 3.24,
-    "pickrate": 58.28
-   },
-   {
-    "name": "帕奇維克",
-    "tier": "T1",
-    "winrate": 0.158,
-    "top4": 0.7602,
-    "avg": 3.28,
-    "pickrate": 56.85
-   },
-   {
-    "name": "範达尔·雷矛",
-    "tier": "T1",
-    "winrate": 0.2986,
-    "top4": 0.7156,
-    "avg": 3.31,
-    "pickrate": 46.88
-   },
-   {
-    "name": "扣子",
-    "tier": "T1",
-    "winrate": 0.2705,
-    "top4": 0.7032,
-    "avg": 3.32,
-    "pickrate": 70.4
-   },
-   {
-    "name": "特莱斯塔斯，寄生之魂",
-    "tier": "T1",
-    "winrate": 0.2234,
-    "top4": 0.7293,
-    "avg": 3.32,
-    "pickrate": 65.01
-   },
-   {
-    "name": "希尔瓦娜斯·風行者",
-    "tier": "T1",
-    "winrate": 0.2771,
-    "top4": 0.7056,
-    "avg": 3.33,
-    "pickrate": 75.83
-   },
-   {
-    "name": "夢魘之王薩維斯",
-    "tier": "T1",
-    "winrate": 0.2382,
-    "top4": 0.7068,
-    "avg": 3.34,
-    "pickrate": 74.58
-   },
-   {
-    "name": "鐘表先生克勞沃斯",
-    "tier": "T1",
-    "winrate": 0.2837,
-    "top4": 0.6887,
-    "avg": 3.35,
-    "pickrate": 56.39
-   },
-   {
-    "name": "恐龍大師布莱恩",
-    "tier": "T1",
-    "winrate": 0.2338,
-    "top4": 0.7262,
-    "avg": 3.35,
-    "pickrate": 51.28
-   },
-   {
-    "name": "塔隆·血魔",
-    "tier": "T1",
-    "winrate": 0.28,
-    "top4": 0.708,
-    "avg": 3.35,
-    "pickrate": 82.24
-   },
-   {
-    "name": "風暴之王托裡姆",
-    "tier": "T2",
-    "winrate": 0.2401,
-    "top4": 0.7025,
-    "avg": 3.35,
-    "pickrate": 51.87
-   },
-   {
-    "name": "芬利·莫格顿爵士",
-    "tier": "T2",
-    "winrate": 0.2234,
-    "top4": 0.7145,
-    "avg": 3.38,
-    "pickrate": 66.67
-   },
-   {
-    "name": "經理馬林",
-    "tier": "T2",
-    "winrate": 0.2425,
-    "top4": 0.6984,
-    "avg": 3.4,
-    "pickrate": 82.45
-   },
-   {
-    "name": "摩洛克·福尔摩斯",
-    "tier": "T2",
-    "winrate": 0.2435,
-    "top4": 0.6974,
-    "avg": 3.4,
-    "pickrate": 58.02
-   },
-   {
-    "name": "巫妖王",
-    "tier": "T2",
-    "winrate": 0.1984,
-    "top4": 0.7024,
-    "avg": 3.4,
-    "pickrate": 75
-   },
-   {
-    "name": "米罗克",
-    "tier": "T2",
-    "winrate": 0.208,
-    "top4": 0.7034,
-    "avg": 3.41,
-    "pickrate": 82.16
-   },
-   {
-    "name": "洛，在世傳奇",
-    "tier": "T2",
-    "winrate": 0.2028,
-    "top4": 0.7189,
-    "avg": 3.41,
-    "pickrate": 50.27
-   },
-   {
-    "name": "雷诺·杰克逊",
-    "tier": "T2",
-    "winrate": 0.2309,
-    "top4": 0.6912,
-    "avg": 3.42,
-    "pickrate": 74.78
-   },
-   {
-    "name": "凱瑞尔·罗姆",
-    "tier": "T2",
-    "winrate": 0.175,
-    "top4": 0.7167,
-    "avg": 3.42,
-    "pickrate": 48.98
-   },
-   {
-    "name": "克隆大師泽裡克",
-    "tier": "T2",
-    "winrate": 0.2528,
-    "top4": 0.684,
-    "avg": 3.43,
-    "pickrate": 69.29
-   },
-   {
-    "name": "天空上尉庫拉格",
-    "tier": "T2",
-    "winrate": 0.229,
-    "top4": 0.7065,
-    "avg": 3.43,
-    "pickrate": 51.76
-   },
-   {
-    "name": "迦拉克隆",
-    "tier": "T2",
-    "winrate": 0.171,
-    "top4": 0.7166,
-    "avg": 3.44,
-    "pickrate": 59
-   },
-   {
-    "name": "預言者努波顿",
-    "tier": "T2",
-    "winrate": 0.2489,
-    "top4": 0.7067,
-    "avg": 3.45,
-    "pickrate": 46.07
-   },
-   {
-    "name": "沙德沃克",
-    "tier": "T3",
-    "winrate": 0.2146,
-    "top4": 0.6621,
-    "avg": 3.49,
-    "pickrate": 43.78
-   },
-   {
-    "name": "吉恩，狼人國王",
-    "tier": "T3",
-    "winrate": 0.233,
-    "top4": 0.668,
-    "avg": 3.5,
-    "pickrate": 61.48
-   },
-   {
-    "name": "森林之王塞納留斯",
-    "tier": "T3",
-    "winrate": 0.2882,
-    "top4": 0.67,
-    "avg": 3.51,
-    "pickrate": 72.92
-   },
-   {
-    "name": "掛機的阿凱",
-    "tier": "T3",
-    "winrate": 0.215,
-    "top4": 0.675,
-    "avg": 3.54,
-    "pickrate": 68.46
-   },
-   {
-    "name": "狂風之翼",
-    "tier": "T3",
-    "winrate": 0.2218,
-    "top4": 0.6736,
-    "avg": 3.57,
-    "pickrate": 46.09
-   },
-   {
-    "name": "尤朵拉船长",
-    "tier": "T3",
-    "winrate": 0.2127,
-    "top4": 0.6667,
-    "avg": 3.57,
-    "pickrate": 60.99
-   },
-   {
-    "name": "德納修斯大帝",
-    "tier": "T3",
-    "winrate": 0.2504,
-    "top4": 0.664,
-    "avg": 3.6,
-    "pickrate": 67.07
-   },
-   {
-    "name": "蛇眼",
-    "tier": "T3",
-    "winrate": 0.2171,
-    "top4": 0.6667,
-    "avg": 3.61,
-    "pickrate": 48.95
-   },
-   {
-    "name": "阮大師",
-    "tier": "T3",
-    "winrate": 0.2068,
-    "top4": 0.6649,
-    "avg": 3.62,
-    "pickrate": 74
-   },
-   {
-    "name": "尤格-薩隆",
-    "tier": "T3",
-    "winrate": 0.1741,
-    "top4": 0.6792,
-    "avg": 3.62,
-    "pickrate": 53.2
-   },
-   {
-    "name": "摇滚教父沃恩",
-    "tier": "T3",
-    "winrate": 0.2267,
-    "top4": 0.6578,
-    "avg": 3.65,
-    "pickrate": 47.45
-   },
-   {
-    "name": "德雷阿佳丝",
-    "tier": "T3",
-    "winrate": 0.1365,
-    "top4": 0.6724,
-    "avg": 3.65,
-    "pickrate": 65.4
-   },
-   {
-    "name": "偉大的阿卡扎曼扎拉克",
-    "tier": "T3",
-    "winrate": 0.1385,
-    "top4": 0.6538,
-    "avg": 3.69,
-    "pickrate": 45.58
-   },
-   {
-    "name": "費林大使",
-    "tier": "T3",
-    "winrate": 0.219,
-    "top4": 0.6423,
-    "avg": 3.73,
-    "pickrate": 59.56
-   },
-   {
-    "name": "林地守護者欧穆",
-    "tier": "T3",
-    "winrate": 0.1984,
-    "top4": 0.6148,
-    "avg": 3.84,
-    "pickrate": 48.58
-   },
-   {
-    "name": "辛达苟薩",
-    "tier": "T3",
-    "winrate": 0.1855,
-    "top4": 0.6129,
-    "avg": 3.85,
-    "pickrate": 49.3
-   },
-   {
-    "name": "樂队經理精英牛頭人酋长",
-    "tier": "T3",
-    "winrate": 0.1644,
-    "top4": 0.5993,
-    "avg": 3.9,
-    "pickrate": 50.53
-   }
-  ]
- },
- "10": {
-  "sample": 227632,
-  "fetchedAt": "2026-11-02",
-  "heroes": [
-   {
-    "name": "加拉克苏斯大王",
-    "tier": "T0",
-    "winrate": 0.1961,
-    "top4": 0.6743,
-    "avg": 3.6,
-    "pickrate": 56.37
-   },
-   {
-    "name": "帕奇維克",
-    "tier": "T0",
-    "winrate": 0.1272,
-    "top4": 0.6535,
-    "avg": 3.78,
-    "pickrate": 37.72
-   },
-   {
-    "name": "扣子",
-    "tier": "T0",
-    "winrate": 0.1796,
-    "top4": 0.6214,
-    "avg": 3.84,
-    "pickrate": 55.08
-   },
-   {
-    "name": "經理馬林",
-    "tier": "T0",
-    "winrate": 0.1804,
-    "top4": 0.6213,
-    "avg": 3.84,
-    "pickrate": 67.35
-   },
-   {
-    "name": "特莱斯塔斯，寄生之魂",
-    "tier": "T0",
-    "winrate": 0.1492,
-    "top4": 0.629,
-    "avg": 3.9,
-    "pickrate": 55.49
-   },
-   {
-    "name": "德雷阿佳丝",
-    "tier": "T0",
-    "winrate": 0.0974,
-    "top4": 0.6393,
-    "avg": 3.91,
-    "pickrate": 43.6
-   },
-   {
-    "name": "典獄长",
-    "tier": "T0",
-    "winrate": 0.1618,
-    "top4": 0.6199,
-    "avg": 3.92,
-    "pickrate": 28.5
-   },
-   {
-    "name": "贸易親王加裡維克斯",
-    "tier": "T0",
-    "winrate": 0.2281,
-    "top4": 0.5949,
-    "avg": 3.93,
-    "pickrate": 43.81
-   },
-   {
-    "name": "凱瑞尔·罗姆",
-    "tier": "T0",
-    "winrate": 0.1089,
-    "top4": 0.6091,
-    "avg": 3.96,
-    "pickrate": 25.5
-   },
-   {
-    "name": "偉大的阿卡扎曼扎拉克",
-    "tier": "T0",
-    "winrate": 0.1355,
-    "top4": 0.6031,
-    "avg": 3.96,
-    "pickrate": 24.38
-   },
-   {
-    "name": "塔隆·血魔",
-    "tier": "T0",
-    "winrate": 0.1558,
-    "top4": 0.6093,
-    "avg": 3.96,
-    "pickrate": 47.75
-   },
-   {
-    "name": "死亡之翼",
-    "tier": "T0",
-    "winrate": 0.12,
-    "top4": 0.6083,
-    "avg": 3.96,
-    "pickrate": 10.54
-   },
-   {
-    "name": "巫妖王",
-    "tier": "T1",
-    "winrate": 0.1453,
-    "top4": 0.6002,
-    "avg": 3.96,
-    "pickrate": 41.84
-   },
-   {
-    "name": "恩佐斯",
-    "tier": "T1",
-    "winrate": 0.148,
-    "top4": 0.5942,
-    "avg": 3.96,
-    "pickrate": 30.29
-   },
-   {
-    "name": "夢魘之王薩維斯",
-    "tier": "T1",
-    "winrate": 0.1718,
-    "top4": 0.5924,
-    "avg": 3.97,
-    "pickrate": 61.33
-   },
-   {
-    "name": "鐘表先生克勞沃斯",
-    "tier": "T1",
-    "winrate": 0.1585,
-    "top4": 0.5932,
-    "avg": 3.97,
-    "pickrate": 34.82
-   },
-   {
-    "name": "迦拉克隆",
-    "tier": "T1",
-    "winrate": 0.1305,
-    "top4": 0.6133,
-    "avg": 3.98,
-    "pickrate": 40.87
-   },
-   {
-    "name": "奧拉基尔",
-    "tier": "T1",
-    "winrate": 0.1295,
-    "top4": 0.594,
-    "avg": 3.98,
-    "pickrate": 22.9
-   },
-   {
-    "name": "德雷克塔尔",
-    "tier": "T1",
-    "winrate": 0.1597,
-    "top4": 0.5981,
-    "avg": 3.98,
-    "pickrate": 21.14
-   },
-   {
-    "name": "洛，在世傳奇",
-    "tier": "T1",
-    "winrate": 0.1452,
-    "top4": 0.6,
-    "avg": 3.98,
-    "pickrate": 27.49
-   },
-   {
-    "name": "範达尔·雷矛",
-    "tier": "T1",
-    "winrate": 0.1681,
-    "top4": 0.5965,
-    "avg": 3.98,
-    "pickrate": 22.5
-   },
-   {
-    "name": "舞者达瑞尔",
-    "tier": "T1",
-    "winrate": 0.1052,
-    "top4": 0.6052,
-    "avg": 3.98,
-    "pickrate": 17.31
-   },
-   {
-    "name": "雷诺·杰克逊",
-    "tier": "T1",
-    "winrate": 0.169,
-    "top4": 0.5946,
-    "avg": 3.99,
-    "pickrate": 54.11
-   },
-   {
-    "name": "死亡之聲者布莱克松",
-    "tier": "T1",
-    "winrate": 0.1128,
-    "top4": 0.6016,
-    "avg": 3.99,
-    "pickrate": 26.44
-   },
-   {
-    "name": "芬利·莫格顿爵士",
-    "tier": "T1",
-    "winrate": 0.1571,
-    "top4": 0.5917,
-    "avg": 4,
-    "pickrate": 45.33
-   },
-   {
-    "name": "掛機的阿凱",
-    "tier": "T1",
-    "winrate": 0.143,
-    "top4": 0.5947,
-    "avg": 4,
-    "pickrate": 58.42
-   },
-   {
-    "name": "希尔瓦娜斯·風行者",
-    "tier": "T1",
-    "winrate": 0.1677,
-    "top4": 0.5867,
-    "avg": 4.01,
-    "pickrate": 44.23
-   },
-   {
-    "name": "森林之王塞納留斯",
-    "tier": "T1",
-    "winrate": 0.1967,
-    "top4": 0.584,
-    "avg": 4.02,
-    "pickrate": 49.63
-   },
-   {
-    "name": "伊利丹·怒風",
-    "tier": "T1",
-    "winrate": 0.143,
-    "top4": 0.5815,
-    "avg": 4.02,
-    "pickrate": 30.43
-   },
-   {
-    "name": "摩洛克·福尔摩斯",
-    "tier": "T1",
-    "winrate": 0.1529,
-    "top4": 0.5826,
-    "avg": 4.04,
-    "pickrate": 30.36
-   },
-   {
-    "name": "米罗克",
-    "tier": "T1",
-    "winrate": 0.1523,
-    "top4": 0.5813,
-    "avg": 4.04,
-    "pickrate": 53.03
+    "winrate": 0.2667,
+    "top4": 0.8667,
+    "avg": 2.8,
+    "pickrate": 63.83
    },
    {
     "name": "沃金",
-    "tier": "T1",
-    "winrate": 0.1229,
-    "top4": 0.5847,
-    "avg": 4.05,
-    "pickrate": 14.86
+    "tier": "T0",
+    "winrate": 0.1818,
+    "top4": 0.8182,
+    "avg": 2.91,
+    "pickrate": 43.14
    },
    {
-    "name": "風暴之王托裡姆",
+    "name": "塔隆·血魔",
+    "tier": "T0",
+    "winrate": 0.3333,
+    "top4": 0.7857,
+    "avg": 2.98,
+    "pickrate": 80.77
+   },
+   {
+    "name": "洛，在世傳奇",
+    "tier": "T0",
+    "winrate": 0.2973,
+    "top4": 0.7838,
+    "avg": 3.03,
+    "pickrate": 62.93
+   },
+   {
+    "name": "加拉克苏斯大王",
+    "tier": "T0",
+    "winrate": 0.1915,
+    "top4": 0.8298,
+    "avg": 3.04,
+    "pickrate": 83.93
+   },
+   {
+    "name": "沙德沃克",
+    "tier": "T0",
+    "winrate": 0.3077,
+    "top4": 0.7692,
+    "avg": 3.19,
+    "pickrate": 53.06
+   },
+   {
+    "name": "雷诺·杰克逊",
     "tier": "T1",
-    "winrate": 0.1446,
-    "top4": 0.5818,
-    "avg": 4.05,
-    "pickrate": 36.77
+    "winrate": 0.291,
+    "top4": 0.6791,
+    "avg": 3.22,
+    "pickrate": 80.12
+   },
+   {
+    "name": "特莱斯塔斯，寄生之魂",
+    "tier": "T1",
+    "winrate": 0.1947,
+    "top4": 0.7522,
+    "avg": 3.26,
+    "pickrate": 69.14
+   },
+   {
+    "name": "贸易親王加裡維克斯",
+    "tier": "T1",
+    "winrate": 0.3509,
+    "top4": 0.7193,
+    "avg": 3.26,
+    "pickrate": 77.03
+   },
+   {
+    "name": "希拉斯·暗月",
+    "tier": "T1",
+    "winrate": 0.3043,
+    "top4": 0.7391,
+    "avg": 3.3,
+    "pickrate": 46.94
+   },
+   {
+    "name": "尤朵拉船长",
+    "tier": "T1",
+    "winrate": 0.2326,
+    "top4": 0.6977,
+    "avg": 3.31,
+    "pickrate": 61.59
+   },
+   {
+    "name": "芬利·莫格顿爵士",
+    "tier": "T1",
+    "winrate": 0.2185,
+    "top4": 0.7059,
+    "avg": 3.35,
+    "pickrate": 71.52
+   },
+   {
+    "name": "摩洛克·福尔摩斯",
+    "tier": "T1",
+    "winrate": 0.2763,
+    "top4": 0.7105,
+    "avg": 3.35,
+    "pickrate": 61.29
+   },
+   {
+    "name": "天空上尉庫拉格",
+    "tier": "T1",
+    "winrate": 0.129,
+    "top4": 0.7581,
+    "avg": 3.36,
+    "pickrate": 59.62
+   },
+   {
+    "name": "森林之王塞納留斯",
+    "tier": "T1",
+    "winrate": 0.2992,
+    "top4": 0.7008,
+    "avg": 3.38,
+    "pickrate": 73.53
+   },
+   {
+    "name": "提克特斯",
+    "tier": "T1",
+    "winrate": 0.3333,
+    "top4": 0.7273,
+    "avg": 3.39,
+    "pickrate": 47.06
+   },
+   {
+    "name": "無限巨龍姆诺茲多",
+    "tier": "T1",
+    "winrate": 0.0909,
+    "top4": 0.7273,
+    "avg": 3.41,
+    "pickrate": 66.67
+   },
+   {
+    "name": "巴罗夫領主",
+    "tier": "T1",
+    "winrate": 0.1719,
+    "top4": 0.7344,
+    "avg": 3.42,
+    "pickrate": 60.95
    },
    {
     "name": "堕落的喬治",
     "tier": "T1",
-    "winrate": 0.1278,
-    "top4": 0.5782,
-    "avg": 4.06,
-    "pickrate": 16.82
-   },
-   {
-    "name": "比格沃斯先生",
-    "tier": "T2",
-    "winrate": 0.1473,
-    "top4": 0.5742,
-    "avg": 4.07,
-    "pickrate": 18.24
-   },
-   {
-    "name": "巴罗夫領主",
-    "tier": "T2",
-    "winrate": 0.1357,
-    "top4": 0.5818,
-    "avg": 4.08,
-    "pickrate": 27.63
+    "winrate": 0.2083,
+    "top4": 0.7083,
+    "avg": 3.42,
+    "pickrate": 63.16
    },
    {
     "name": "克隆大師泽裡克",
-    "tier": "T2",
-    "winrate": 0.1564,
-    "top4": 0.5768,
-    "avg": 4.08,
-    "pickrate": 44.6
+    "tier": "T1",
+    "winrate": 0.2091,
+    "top4": 0.6909,
+    "avg": 3.42,
+    "pickrate": 67.9
    },
    {
-    "name": "天空上尉庫拉格",
-    "tier": "T2",
-    "winrate": 0.1444,
-    "top4": 0.571,
-    "avg": 4.08,
-    "pickrate": 24.94
-   },
-   {
-    "name": "泰瑟蘭·血望者",
-    "tier": "T2",
-    "winrate": 0.1337,
-    "top4": 0.5768,
-    "avg": 4.09,
-    "pickrate": 15.26
-   },
-   {
-    "name": "提克特斯",
-    "tier": "T2",
-    "winrate": 0.1423,
-    "top4": 0.5726,
-    "avg": 4.09,
-    "pickrate": 24.69
-   },
-   {
-    "name": "強化機器人",
-    "tier": "T2",
-    "winrate": 0.1375,
-    "top4": 0.569,
-    "avg": 4.09,
-    "pickrate": 22.08
-   },
-   {
-    "name": "館长",
-    "tier": "T2",
-    "winrate": 0.1241,
-    "top4": 0.5704,
-    "avg": 4.09,
-    "pickrate": 22.43
+    "name": "偉大的阿卡扎曼扎拉克",
+    "tier": "T1",
+    "winrate": 0.2632,
+    "top4": 0.6579,
+    "avg": 3.42,
+    "pickrate": 51.35
    },
    {
     "name": "钩牙船长",
-    "tier": "T2",
-    "winrate": 0.1333,
-    "top4": 0.5776,
-    "avg": 4.09,
-    "pickrate": 20.9
-   },
-   {
-    "name": "尤朵拉船长",
-    "tier": "T2",
-    "winrate": 0.1368,
-    "top4": 0.5707,
-    "avg": 4.1,
-    "pickrate": 40.07
-   },
-   {
-    "name": "巫妖巴茲亞尔",
-    "tier": "T2",
-    "winrate": 0.0983,
-    "top4": 0.5886,
-    "avg": 4.11,
-    "pickrate": 20.67
-   },
-   {
-    "name": "阮大師",
-    "tier": "T2",
-    "winrate": 0.1493,
-    "top4": 0.5694,
-    "avg": 4.11,
-    "pickrate": 56.53
-   },
-   {
-    "name": "大主教奧薩尔",
-    "tier": "T2",
-    "winrate": 0.1347,
-    "top4": 0.5651,
-    "avg": 4.11,
-    "pickrate": 15.26
+    "tier": "T1",
+    "winrate": 0.2667,
+    "top4": 0.7,
+    "avg": 3.43,
+    "pickrate": 50
    },
    {
     "name": "瓦托格尔女王",
     "tier": "T2",
-    "winrate": 0.0844,
-    "top4": 0.589,
-    "avg": 4.11,
-    "pickrate": 12.62
+    "winrate": 0.1905,
+    "top4": 0.6667,
+    "avg": 3.43,
+    "pickrate": 51.22
    },
    {
-    "name": "穆克拉",
+    "name": "阿莱克丝塔薩",
     "tier": "T2",
-    "winrate": 0.0966,
-    "top4": 0.5864,
-    "avg": 4.12,
-    "pickrate": 11.66
-   },
-   {
-    "name": "尤格-薩隆",
-    "tier": "T2",
-    "winrate": 0.1378,
-    "top4": 0.5716,
-    "avg": 4.13,
-    "pickrate": 28
-   },
-   {
-    "name": "預言者努波顿",
-    "tier": "T2",
-    "winrate": 0.1459,
-    "top4": 0.5689,
-    "avg": 4.13,
-    "pickrate": 19.56
-   },
-   {
-    "name": "沙德沃克",
-    "tier": "T2",
-    "winrate": 0.1381,
-    "top4": 0.5646,
-    "avg": 4.14,
-    "pickrate": 25.65
-   },
-   {
-    "name": "摇滚教父沃恩",
-    "tier": "T2",
-    "winrate": 0.1563,
-    "top4": 0.5645,
-    "avg": 4.14,
-    "pickrate": 23.6
-   },
-   {
-    "name": "拉卡尼休",
-    "tier": "T2",
-    "winrate": 0.104,
-    "top4": 0.5621,
-    "avg": 4.14,
-    "pickrate": 14.28
-   },
-   {
-    "name": "因葛，钢鐵颂歌",
-    "tier": "T2",
-    "winrate": 0.114,
-    "top4": 0.5637,
-    "avg": 4.15,
-    "pickrate": 18.56
-   },
-   {
-    "name": "無限巨龍姆诺茲多",
-    "tier": "T2",
-    "winrate": 0.1399,
-    "top4": 0.5712,
-    "avg": 4.16,
-    "pickrate": 35.21
-   },
-   {
-    "name": "恐龍大師布莱恩",
-    "tier": "T2",
-    "winrate": 0.1296,
-    "top4": 0.5639,
-    "avg": 4.17,
-    "pickrate": 32.73
-   },
-   {
-    "name": "伊莉斯·逐星",
-    "tier": "T2",
-    "winrate": 0.1405,
-    "top4": 0.5509,
-    "avg": 4.17,
-    "pickrate": 14.48
-   },
-   {
-    "name": "塔維什·雷矛",
-    "tier": "T2",
-    "winrate": 0.1197,
-    "top4": 0.5658,
-    "avg": 4.17,
-    "pickrate": 19.04
-   },
-   {
-    "name": "費林大使",
-    "tier": "T2",
-    "winrate": 0.15,
-    "top4": 0.5569,
-    "avg": 4.17,
-    "pickrate": 42.02
-   },
-   {
-    "name": "泽瑞拉",
-    "tier": "T2",
-    "winrate": 0.1293,
-    "top4": 0.5632,
-    "avg": 4.17,
-    "pickrate": 18.73
-   },
-   {
-    "name": "苔丝·格雷迈恩",
-    "tier": "T2",
-    "winrate": 0.14,
-    "top4": 0.5468,
-    "avg": 4.18,
-    "pickrate": 22.92
-   },
-   {
-    "name": "時光扭曲者克罗米",
-    "tier": "T2",
-    "winrate": 0.1432,
-    "top4": 0.5576,
-    "avg": 4.19,
-    "pickrate": 21.09
-   },
-   {
-    "name": "斯卡布斯·刀油",
-    "tier": "T2",
-    "winrate": 0.1219,
-    "top4": 0.5478,
-    "avg": 4.19,
-    "pickrate": 23.23
-   },
-   {
-    "name": "吉恩，狼人國王",
-    "tier": "T2",
-    "winrate": 0.16,
-    "top4": 0.5511,
-    "avg": 4.2,
-    "pickrate": 43.37
-   },
-   {
-    "name": "米尔豪斯·法力風暴",
-    "tier": "T2",
-    "winrate": 0.0988,
-    "top4": 0.5463,
-    "avg": 4.2,
-    "pickrate": 11.36
-   },
-   {
-    "name": "瑪維·影歌",
-    "tier": "T2",
-    "winrate": 0.1275,
-    "top4": 0.5596,
-    "avg": 4.21,
-    "pickrate": 14.04
+    "winrate": 0.1667,
+    "top4": 0.7222,
+    "avg": 3.45,
+    "pickrate": 64.29
    },
    {
     "name": "廚師曲奇",
     "tier": "T2",
-    "winrate": 0.1537,
-    "top4": 0.5465,
-    "avg": 4.21,
-    "pickrate": 18.54
+    "winrate": 0.2,
+    "top4": 0.68,
+    "avg": 3.48,
+    "pickrate": 43.1
    },
    {
-    "name": "亞煞極",
-    "tier": "T3",
-    "winrate": 0.1139,
-    "top4": 0.5414,
-    "avg": 4.21,
-    "pickrate": 16.19
-   },
-   {
-    "name": "希拉斯·暗月",
-    "tier": "T3",
-    "winrate": 0.1283,
-    "top4": 0.5507,
-    "avg": 4.22,
-    "pickrate": 18.78
-   },
-   {
-    "name": "布鲁坎",
-    "tier": "T3",
-    "winrate": 0.1248,
-    "top4": 0.534,
-    "avg": 4.22,
-    "pickrate": 10.92
-   },
-   {
-    "name": "蛇眼",
-    "tier": "T3",
-    "winrate": 0.1371,
-    "top4": 0.5544,
-    "avg": 4.23,
-    "pickrate": 30.52
-   },
-   {
-    "name": "德納修斯大帝",
-    "tier": "T3",
-    "winrate": 0.1543,
-    "top4": 0.5449,
-    "avg": 4.23,
-    "pickrate": 52.82
-   },
-   {
-    "name": "凱尔薩斯·逐日者",
-    "tier": "T3",
-    "winrate": 0.1184,
-    "top4": 0.5364,
-    "avg": 4.23,
-    "pickrate": 12.51
-   },
-   {
-    "name": "鼠王",
-    "tier": "T3",
-    "winrate": 0.1126,
-    "top4": 0.5557,
-    "avg": 4.24,
-    "pickrate": 18.09
-   },
-   {
-    "name": "阿蘭娜·逐星",
-    "tier": "T3",
-    "winrate": 0.1434,
-    "top4": 0.5446,
-    "avg": 4.24,
-    "pickrate": 15.2
-   },
-   {
-    "name": "菌菇術士弗洛格尔",
-    "tier": "T3",
-    "winrate": 0.1597,
-    "top4": 0.5441,
-    "avg": 4.24,
-    "pickrate": 17.31
-   },
-   {
-    "name": "至尊盜王拉法姆",
-    "tier": "T3",
-    "winrate": 0.1156,
-    "top4": 0.547,
-    "avg": 4.25,
-    "pickrate": 21.07
-   },
-   {
-    "name": "了不起的杰弗裡斯",
-    "tier": "T3",
-    "winrate": 0.1297,
-    "top4": 0.5438,
-    "avg": 4.25,
-    "pickrate": 21.47
-   },
-   {
-    "name": "狂風之翼",
-    "tier": "T3",
-    "winrate": 0.1338,
-    "top4": 0.5505,
-    "avg": 4.26,
-    "pickrate": 21.53
-   },
-   {
-    "name": "林地守護者欧穆",
-    "tier": "T3",
-    "winrate": 0.1373,
-    "top4": 0.5448,
-    "avg": 4.27,
-    "pickrate": 24.83
-   },
-   {
-    "name": "詹迪斯·巴罗夫",
-    "tier": "T3",
-    "winrate": 0.1025,
-    "top4": 0.5546,
-    "avg": 4.27,
-    "pickrate": 19.22
-   },
-   {
-    "name": "荷利戴醫生",
-    "tier": "T3",
-    "winrate": 0.0895,
-    "top4": 0.5629,
-    "avg": 4.27,
-    "pickrate": 13.29
+    "name": "德雷克塔尔",
+    "tier": "T2",
+    "winrate": 0.1481,
+    "top4": 0.6667,
+    "avg": 3.48,
+    "pickrate": 52.94
    },
    {
     "name": "吞噬者穆坦努斯",
-    "tier": "T3",
-    "winrate": 0.0863,
-    "top4": 0.5454,
-    "avg": 4.27,
-    "pickrate": 13.41
+    "tier": "T2",
+    "winrate": 0,
+    "top4": 0.6875,
+    "avg": 3.5,
+    "pickrate": 45.71
    },
    {
-    "name": "劫匪之王托瓦格尔",
-    "tier": "T3",
-    "winrate": 0.1221,
-    "top4": 0.5423,
-    "avg": 4.28,
-    "pickrate": 14.66
+    "name": "扣子",
+    "tier": "T2",
+    "winrate": 0.198,
+    "top4": 0.6634,
+    "avg": 3.52,
+    "pickrate": 68.71
    },
    {
-    "name": "斯尼德",
-    "tier": "T3",
-    "winrate": 0.1215,
-    "top4": 0.5228,
-    "avg": 4.28,
-    "pickrate": 14.54
+    "name": "狂風之翼",
+    "tier": "T2",
+    "winrate": 0.25,
+    "top4": 0.6875,
+    "avg": 3.54,
+    "pickrate": 62.34
    },
    {
-    "name": "海盜帕奇斯",
-    "tier": "T3",
-    "winrate": 0.1243,
-    "top4": 0.5292,
-    "avg": 4.3,
-    "pickrate": 17.55
-   },
-   {
-    "name": "瑪裡苟斯",
-    "tier": "T3",
-    "winrate": 0.1045,
-    "top4": 0.5421,
-    "avg": 4.3,
-    "pickrate": 12.8
-   },
-   {
-    "name": "齊恩瓦拉",
-    "tier": "T3",
-    "winrate": 0.1157,
-    "top4": 0.5247,
-    "avg": 4.3,
-    "pickrate": 22.19
-   },
-   {
-    "name": "瓦尔登·晨擁",
-    "tier": "T3",
-    "winrate": 0.1062,
-    "top4": 0.5356,
-    "avg": 4.31,
-    "pickrate": 13.57
-   },
-   {
-    "name": "阿莱克丝塔薩",
-    "tier": "T3",
-    "winrate": 0.1168,
-    "top4": 0.5443,
-    "avg": 4.31,
-    "pickrate": 18.71
-   },
-   {
-    "name": "永恆者托奇",
-    "tier": "T3",
-    "winrate": 0.1094,
-    "top4": 0.5464,
-    "avg": 4.32,
-    "pickrate": 17.62
-   },
-   {
-    "name": "塔姆辛·罗姆",
-    "tier": "T3",
-    "winrate": 0.1111,
-    "top4": 0.5231,
-    "avg": 4.32,
-    "pickrate": 14.68
-   },
-   {
-    "name": "普崔塞德教授",
-    "tier": "T3",
-    "winrate": 0.1057,
-    "top4": 0.5198,
-    "avg": 4.33,
-    "pickrate": 21.07
-   },
-   {
-    "name": "伊妮·积雷",
-    "tier": "T3",
-    "winrate": 0.119,
-    "top4": 0.5177,
-    "avg": 4.34,
-    "pickrate": 18.12
-   },
-   {
-    "name": "洛卡拉",
-    "tier": "T3",
-    "winrate": 0.0881,
-    "top4": 0.5238,
-    "avg": 4.35,
-    "pickrate": 9.14
-   },
-   {
-    "name": "奧妮克希亞",
-    "tier": "T3",
-    "winrate": 0.1034,
-    "top4": 0.5371,
-    "avg": 4.35,
-    "pickrate": 11.57
-   },
-   {
-    "name": "伊瑟拉",
-    "tier": "T3",
-    "winrate": 0.0979,
-    "top4": 0.5245,
-    "avg": 4.35,
-    "pickrate": 14.95
-   },
-   {
-    "name": "厄祖瑪特",
-    "tier": "T3",
-    "winrate": 0.1057,
-    "top4": 0.5122,
-    "avg": 4.36,
-    "pickrate": 8.1
-   },
-   {
-    "name": "刀鋒女王凱瑞甘",
-    "tier": "T3",
-    "winrate": 0.0763,
-    "top4": 0.5115,
-    "avg": 4.37,
-    "pickrate": 7.6
-   },
-   {
-    "name": "格雷布",
-    "tier": "T3",
-    "winrate": 0.0943,
-    "top4": 0.5232,
-    "avg": 4.37,
-    "pickrate": 20.84
+    "name": "米罗克",
+    "tier": "T2",
+    "winrate": 0.3231,
+    "top4": 0.6615,
+    "avg": 3.54,
+    "pickrate": 81.25
    },
    {
     "name": "樂队經理精英牛頭人酋长",
-    "tier": "T3",
-    "winrate": 0.1244,
-    "top4": 0.5093,
-    "avg": 4.39,
-    "pickrate": 26.93
+    "tier": "T2",
+    "winrate": 0.209,
+    "top4": 0.6716,
+    "avg": 3.57,
+    "pickrate": 63.81
    },
    {
-    "name": "薩鲁法尔大王",
-    "tier": "T3",
-    "winrate": 0.0866,
-    "top4": 0.5122,
-    "avg": 4.42,
-    "pickrate": 10.66
+    "name": "帕奇維克",
+    "tier": "T2",
+    "winrate": 0.2097,
+    "top4": 0.629,
+    "avg": 3.58,
+    "pickrate": 67.39
    },
    {
-    "name": "古夫·符文圖騰",
+    "name": "典獄长",
+    "tier": "T2",
+    "winrate": 0.1667,
+    "top4": 0.7083,
+    "avg": 3.58,
+    "pickrate": 70.59
+   },
+   {
+    "name": "因葛，钢鐵颂歌",
+    "tier": "T2",
+    "winrate": 0.2059,
+    "top4": 0.6471,
+    "avg": 3.59,
+    "pickrate": 48.57
+   },
+   {
+    "name": "德納修斯大帝",
+    "tier": "T2",
+    "winrate": 0.2901,
+    "top4": 0.6412,
+    "avg": 3.61,
+    "pickrate": 72.38
+   },
+   {
+    "name": "阮大師",
+    "tier": "T2",
+    "winrate": 0.237,
+    "top4": 0.637,
+    "avg": 3.61,
+    "pickrate": 72.04
+   },
+   {
+    "name": "預言者努波顿",
+    "tier": "T2",
+    "winrate": 0.1628,
+    "top4": 0.6512,
+    "avg": 3.61,
+    "pickrate": 45.74
+   },
+   {
+    "name": "蛇眼",
+    "tier": "T2",
+    "winrate": 0.2174,
+    "top4": 0.6957,
+    "avg": 3.61,
+    "pickrate": 60.53
+   },
+   {
+    "name": "斯卡布斯·刀油",
+    "tier": "T2",
+    "winrate": 0.1563,
+    "top4": 0.625,
+    "avg": 3.63,
+    "pickrate": 46.38
+   },
+   {
+    "name": "吉恩，狼人國王",
+    "tier": "T2",
+    "winrate": 0.2353,
+    "top4": 0.6471,
+    "avg": 3.64,
+    "pickrate": 65.81
+   },
+   {
+    "name": "費林大使",
+    "tier": "T2",
+    "winrate": 0.2169,
+    "top4": 0.6386,
+    "avg": 3.66,
+    "pickrate": 57.64
+   },
+   {
+    "name": "伊利丹·怒風",
+    "tier": "T2",
+    "winrate": 0.1515,
+    "top4": 0.697,
+    "avg": 3.67,
+    "pickrate": 71.74
+   },
+   {
+    "name": "鐘表先生克勞沃斯",
+    "tier": "T2",
+    "winrate": 0.2535,
+    "top4": 0.5915,
+    "avg": 3.68,
+    "pickrate": 54.62
+   },
+   {
+    "name": "掛機的阿凱",
+    "tier": "T2",
+    "winrate": 0.1442,
+    "top4": 0.6827,
+    "avg": 3.69,
+    "pickrate": 72.73
+   },
+   {
+    "name": "尤格-薩隆",
+    "tier": "T2",
+    "winrate": 0.2069,
+    "top4": 0.6379,
+    "avg": 3.69,
+    "pickrate": 55.45
+   },
+   {
+    "name": "恩佐斯",
     "tier": "T3",
-    "winrate": 0.1303,
-    "top4": 0.5168,
-    "avg": 4.44,
-    "pickrate": 15.4
+    "winrate": 0.0625,
+    "top4": 0.625,
+    "avg": 3.69,
+    "pickrate": 84.21
+   },
+   {
+    "name": "經理馬林",
+    "tier": "T3",
+    "winrate": 0.2815,
+    "top4": 0.6741,
+    "avg": 3.7,
+    "pickrate": 83.23
+   },
+   {
+    "name": "夢魘之王薩維斯",
+    "tier": "T3",
+    "winrate": 0.2483,
+    "top4": 0.6276,
+    "avg": 3.72,
+    "pickrate": 75.13
+   },
+   {
+    "name": "凱瑞尔·罗姆",
+    "tier": "T3",
+    "winrate": 0.1316,
+    "top4": 0.6842,
+    "avg": 3.74,
+    "pickrate": 60.32
    },
    {
     "name": "辛达苟薩",
     "tier": "T3",
-    "winrate": 0.1173,
-    "top4": 0.5013,
-    "avg": 4.47,
-    "pickrate": 19.6
+    "winrate": 0.1875,
+    "top4": 0.6875,
+    "avg": 3.75,
+    "pickrate": 54.39
    },
    {
-    "name": "庫尔特鲁斯·陨烬",
+    "name": "德雷阿佳丝",
     "tier": "T3",
-    "winrate": 0.0988,
-    "top4": 0.4838,
-    "avg": 4.5,
-    "pickrate": 10.4
+    "winrate": 0.0952,
+    "top4": 0.7143,
+    "avg": 3.76,
+    "pickrate": 70
+   },
+   {
+    "name": "巫妖王",
+    "tier": "T3",
+    "winrate": 0.0811,
+    "top4": 0.5946,
+    "avg": 3.76,
+    "pickrate": 84.09
+   },
+   {
+    "name": "強化機器人",
+    "tier": "T3",
+    "winrate": 0.2051,
+    "top4": 0.5897,
+    "avg": 3.82,
+    "pickrate": 45.88
+   },
+   {
+    "name": "苔丝·格雷迈恩",
+    "tier": "T3",
+    "winrate": 0.1429,
+    "top4": 0.6,
+    "avg": 3.86,
+    "pickrate": 51.47
+   },
+   {
+    "name": "瑪維·影歌",
+    "tier": "T3",
+    "winrate": 0.2273,
+    "top4": 0.6364,
+    "avg": 3.86,
+    "pickrate": 52.38
+   },
+   {
+    "name": "荷利戴醫生",
+    "tier": "T3",
+    "winrate": 0.1333,
+    "top4": 0.6,
+    "avg": 3.87,
+    "pickrate": 40.54
+   },
+   {
+    "name": "海盜帕奇斯",
+    "tier": "T3",
+    "winrate": 0.2,
+    "top4": 0.6667,
+    "avg": 3.87,
+    "pickrate": 65.22
+   },
+   {
+    "name": "恐龍大師布莱恩",
+    "tier": "T3",
+    "winrate": 0.1667,
+    "top4": 0.6042,
+    "avg": 3.88,
+    "pickrate": 50.53
+   },
+   {
+    "name": "瓦尔登·晨擁",
+    "tier": "T3",
+    "winrate": 0.2778,
+    "top4": 0.6111,
+    "avg": 3.89,
+    "pickrate": 47.37
+   },
+   {
+    "name": "摇滚教父沃恩",
+    "tier": "T3",
+    "winrate": 0.175,
+    "top4": 0.575,
+    "avg": 3.93,
+    "pickrate": 48.19
+   },
+   {
+    "name": "迦拉克隆",
+    "tier": "T3",
+    "winrate": 0.1739,
+    "top4": 0.5652,
+    "avg": 3.93,
+    "pickrate": 57.02
+   },
+   {
+    "name": "林地守護者欧穆",
+    "tier": "T3",
+    "winrate": 0.16,
+    "top4": 0.6,
+    "avg": 3.96,
+    "pickrate": 56.82
+   },
+   {
+    "name": "範达尔·雷矛",
+    "tier": "T3",
+    "winrate": 0.1622,
+    "top4": 0.5946,
+    "avg": 4,
+    "pickrate": 58.06
    },
    {
     "name": "诺茲多姆",
     "tier": "T3",
-    "winrate": 0.1021,
-    "top4": 0.4859,
-    "avg": 4.51,
-    "pickrate": 11.74
-   },
-   {
-    "name": "瘋狂金字塔",
-    "tier": "T3",
-    "winrate": 0.0909,
-    "top4": 0.4828,
-    "avg": 4.52,
-    "pickrate": 9.13
-   },
-   {
-    "name": "霍格船长",
-    "tier": "T3",
-    "winrate": 0.1071,
-    "top4": 0.4802,
-    "avg": 4.57,
-    "pickrate": 18.7
-   },
-   {
-    "name": "米尔菲丝·法力風暴",
-    "tier": "T3",
-    "winrate": 0.1214,
-    "top4": 0.4834,
-    "avg": 4.59,
-    "pickrate": 16.87
-   },
-   {
-    "name": "阿塔尼斯",
-    "tier": "T3",
-    "winrate": 0.0795,
-    "top4": 0.4773,
-    "avg": 4.59,
-    "pickrate": 14.29
-   },
-   {
-    "name": "基希克斯",
-    "tier": "T3",
-    "winrate": 0.0742,
-    "top4": 0.483,
-    "avg": 4.63,
-    "pickrate": 17.56
-   },
-   {
-    "name": "吉姆·雷诺",
-    "tier": "T3",
-    "winrate": 0.0647,
-    "top4": 0.4279,
-    "avg": 4.81,
-    "pickrate": 14.85
-   }
-  ]
- },
- "50": {
-  "sample": 1135272,
-  "fetchedAt": "2026-11-02",
-  "heroes": [
-   {
-    "name": "加拉克苏斯大王",
-    "tier": "T0",
-    "winrate": 0.1998,
-    "top4": 0.6641,
-    "avg": 3.62,
-    "pickrate": 51.23
-   },
-   {
-    "name": "帕奇維克",
-    "tier": "T0",
-    "winrate": 0.1342,
-    "top4": 0.6479,
-    "avg": 3.76,
-    "pickrate": 37.71
-   },
-   {
-    "name": "德雷阿佳丝",
-    "tier": "T0",
-    "winrate": 0.1082,
-    "top4": 0.6557,
-    "avg": 3.84,
-    "pickrate": 45.97
-   },
-   {
-    "name": "凱瑞尔·罗姆",
-    "tier": "T0",
-    "winrate": 0.1261,
-    "top4": 0.6297,
-    "avg": 3.84,
-    "pickrate": 29.01
-   },
-   {
-    "name": "特莱斯塔斯，寄生之魂",
-    "tier": "T0",
-    "winrate": 0.1593,
-    "top4": 0.6292,
-    "avg": 3.86,
-    "pickrate": 56.08
-   },
-   {
-    "name": "扣子",
-    "tier": "T0",
-    "winrate": 0.174,
-    "top4": 0.6132,
-    "avg": 3.88,
-    "pickrate": 54.78
-   },
-   {
-    "name": "死亡之聲者布莱克松",
-    "tier": "T0",
-    "winrate": 0.1348,
-    "top4": 0.6202,
-    "avg": 3.89,
-    "pickrate": 27.98
-   },
-   {
-    "name": "經理馬林",
-    "tier": "T0",
-    "winrate": 0.1774,
-    "top4": 0.6066,
-    "avg": 3.91,
-    "pickrate": 60.01
-   },
-   {
-    "name": "掛機的阿凱",
-    "tier": "T0",
-    "winrate": 0.1501,
-    "top4": 0.6065,
-    "avg": 3.93,
-    "pickrate": 53.94
-   },
-   {
-    "name": "奧拉基尔",
-    "tier": "T0",
-    "winrate": 0.1436,
-    "top4": 0.6069,
-    "avg": 3.93,
-    "pickrate": 26.69
-   },
-   {
-    "name": "塔隆·血魔",
-    "tier": "T0",
-    "winrate": 0.1587,
-    "top4": 0.6109,
-    "avg": 3.94,
-    "pickrate": 43.17
-   },
-   {
-    "name": "夢魘之王薩維斯",
-    "tier": "T0",
-    "winrate": 0.173,
-    "top4": 0.5914,
-    "avg": 3.97,
-    "pickrate": 57.31
-   },
-   {
-    "name": "伊利丹·怒風",
-    "tier": "T1",
-    "winrate": 0.1429,
-    "top4": 0.5918,
-    "avg": 3.97,
-    "pickrate": 27.42
-   },
-   {
-    "name": "巫妖王",
-    "tier": "T1",
-    "winrate": 0.1427,
-    "top4": 0.5968,
-    "avg": 3.97,
-    "pickrate": 41.48
-   },
-   {
-    "name": "典獄长",
-    "tier": "T1",
-    "winrate": 0.1459,
-    "top4": 0.606,
-    "avg": 3.98,
-    "pickrate": 22.87
-   },
-   {
-    "name": "沃金",
-    "tier": "T1",
-    "winrate": 0.1287,
-    "top4": 0.5966,
-    "avg": 3.99,
-    "pickrate": 15.24
-   },
-   {
-    "name": "德雷克塔尔",
-    "tier": "T1",
-    "winrate": 0.1664,
-    "top4": 0.5977,
-    "avg": 3.99,
-    "pickrate": 25.28
-   },
-   {
-    "name": "偉大的阿卡扎曼扎拉克",
-    "tier": "T1",
-    "winrate": 0.1338,
-    "top4": 0.5941,
-    "avg": 3.99,
-    "pickrate": 22.99
-   },
-   {
-    "name": "舞者达瑞尔",
-    "tier": "T1",
-    "winrate": 0.1093,
-    "top4": 0.5995,
+    "winrate": 0.1765,
+    "top4": 0.5294,
     "avg": 4,
-    "pickrate": 19.62
+    "pickrate": 45.71
    },
    {
-    "name": "風暴之王托裡姆",
-    "tier": "T1",
-    "winrate": 0.1519,
-    "top4": 0.5926,
+    "name": "斯尼德",
+    "tier": "T3",
+    "winrate": 0.1176,
+    "top4": 0.6471,
     "avg": 4,
-    "pickrate": 43.07
-   },
-   {
-    "name": "範达尔·雷矛",
-    "tier": "T1",
-    "winrate": 0.1613,
-    "top4": 0.5918,
-    "avg": 4,
-    "pickrate": 26.74
-   },
-   {
-    "name": "希尔瓦娜斯·風行者",
-    "tier": "T1",
-    "winrate": 0.172,
-    "top4": 0.5858,
-    "avg": 4.01,
-    "pickrate": 41.68
-   },
-   {
-    "name": "死亡之翼",
-    "tier": "T1",
-    "winrate": 0.1057,
-    "top4": 0.5939,
-    "avg": 4.02,
-    "pickrate": 8.24
-   },
-   {
-    "name": "洛，在世傳奇",
-    "tier": "T1",
-    "winrate": 0.1359,
-    "top4": 0.5884,
-    "avg": 4.03,
-    "pickrate": 29.59
-   },
-   {
-    "name": "穆克拉",
-    "tier": "T1",
-    "winrate": 0.1059,
-    "top4": 0.596,
-    "avg": 4.03,
-    "pickrate": 12.78
-   },
-   {
-    "name": "鐘表先生克勞沃斯",
-    "tier": "T1",
-    "winrate": 0.1527,
-    "top4": 0.5804,
-    "avg": 4.04,
-    "pickrate": 36.54
-   },
-   {
-    "name": "芬利·莫格顿爵士",
-    "tier": "T1",
-    "winrate": 0.1518,
-    "top4": 0.5801,
-    "avg": 4.05,
-    "pickrate": 40.71
-   },
-   {
-    "name": "因葛，钢鐵颂歌",
-    "tier": "T1",
-    "winrate": 0.1193,
-    "top4": 0.5824,
-    "avg": 4.05,
-    "pickrate": 19.33
-   },
-   {
-    "name": "尤格-薩隆",
-    "tier": "T1",
-    "winrate": 0.1415,
-    "top4": 0.5825,
-    "avg": 4.06,
-    "pickrate": 28.32
-   },
-   {
-    "name": "迦拉克隆",
-    "tier": "T1",
-    "winrate": 0.1306,
-    "top4": 0.5919,
-    "avg": 4.07,
-    "pickrate": 38.78
-   },
-   {
-    "name": "阿莱克丝塔薩",
-    "tier": "T1",
-    "winrate": 0.1524,
-    "top4": 0.5842,
-    "avg": 4.07,
-    "pickrate": 16.35
-   },
-   {
-    "name": "摩洛克·福尔摩斯",
-    "tier": "T1",
-    "winrate": 0.1497,
-    "top4": 0.577,
-    "avg": 4.07,
-    "pickrate": 24.62
-   },
-   {
-    "name": "巫妖巴茲亞尔",
-    "tier": "T1",
-    "winrate": 0.117,
-    "top4": 0.5874,
-    "avg": 4.08,
-    "pickrate": 16.8
-   },
-   {
-    "name": "堕落的喬治",
-    "tier": "T1",
-    "winrate": 0.1373,
-    "top4": 0.5764,
-    "avg": 4.08,
-    "pickrate": 19.48
-   },
-   {
-    "name": "館长",
-    "tier": "T1",
-    "winrate": 0.114,
-    "top4": 0.584,
-    "avg": 4.08,
-    "pickrate": 20.11
-   },
-   {
-    "name": "瓦托格尔女王",
-    "tier": "T2",
-    "winrate": 0.1081,
-    "top4": 0.5794,
-    "avg": 4.08,
-    "pickrate": 12.18
-   },
-   {
-    "name": "比格沃斯先生",
-    "tier": "T2",
-    "winrate": 0.1491,
-    "top4": 0.57,
-    "avg": 4.09,
-    "pickrate": 18.98
-   },
-   {
-    "name": "塔維什·雷矛",
-    "tier": "T2",
-    "winrate": 0.125,
-    "top4": 0.5765,
-    "avg": 4.09,
-    "pickrate": 21.26
-   },
-   {
-    "name": "尤朵拉船长",
-    "tier": "T2",
-    "winrate": 0.1399,
-    "top4": 0.5743,
-    "avg": 4.1,
-    "pickrate": 33.8
-   },
-   {
-    "name": "恩佐斯",
-    "tier": "T2",
-    "winrate": 0.1266,
-    "top4": 0.5793,
-    "avg": 4.1,
-    "pickrate": 21.09
-   },
-   {
-    "name": "米罗克",
-    "tier": "T2",
-    "winrate": 0.1522,
-    "top4": 0.5688,
-    "avg": 4.11,
-    "pickrate": 47.72
-   },
-   {
-    "name": "大主教奧薩尔",
-    "tier": "T2",
-    "winrate": 0.1305,
-    "top4": 0.5694,
-    "avg": 4.12,
-    "pickrate": 14.38
-   },
-   {
-    "name": "提克特斯",
-    "tier": "T2",
-    "winrate": 0.1373,
-    "top4": 0.5656,
-    "avg": 4.12,
-    "pickrate": 27.11
-   },
-   {
-    "name": "雷诺·杰克逊",
-    "tier": "T2",
-    "winrate": 0.1664,
-    "top4": 0.5657,
-    "avg": 4.13,
-    "pickrate": 45.31
-   },
-   {
-    "name": "吞噬者穆坦努斯",
-    "tier": "T2",
-    "winrate": 0.1042,
-    "top4": 0.5756,
-    "avg": 4.13,
-    "pickrate": 19.94
-   },
-   {
-    "name": "天空上尉庫拉格",
-    "tier": "T2",
-    "winrate": 0.1475,
-    "top4": 0.5613,
-    "avg": 4.14,
-    "pickrate": 19.71
-   },
-   {
-    "name": "亞煞極",
-    "tier": "T2",
-    "winrate": 0.1251,
-    "top4": 0.5595,
-    "avg": 4.14,
-    "pickrate": 17.02
-   },
-   {
-    "name": "拉卡尼休",
-    "tier": "T2",
-    "winrate": 0.1057,
-    "top4": 0.5774,
-    "avg": 4.14,
-    "pickrate": 15.84
-   },
-   {
-    "name": "布鲁坎",
-    "tier": "T2",
-    "winrate": 0.1177,
-    "top4": 0.5715,
-    "avg": 4.15,
-    "pickrate": 10.37
-   },
-   {
-    "name": "摇滚教父沃恩",
-    "tier": "T2",
-    "winrate": 0.1458,
-    "top4": 0.5595,
-    "avg": 4.15,
-    "pickrate": 23.08
-   },
-   {
-    "name": "阮大師",
-    "tier": "T2",
-    "winrate": 0.1488,
-    "top4": 0.5567,
-    "avg": 4.16,
-    "pickrate": 48.17
-   },
-   {
-    "name": "強化機器人",
-    "tier": "T2",
-    "winrate": 0.1257,
-    "top4": 0.5592,
-    "avg": 4.16,
-    "pickrate": 22.77
-   },
-   {
-    "name": "無限巨龍姆诺茲多",
-    "tier": "T2",
-    "winrate": 0.1334,
-    "top4": 0.5682,
-    "avg": 4.16,
-    "pickrate": 39.94
-   },
-   {
-    "name": "預言者努波顿",
-    "tier": "T2",
-    "winrate": 0.1427,
-    "top4": 0.5571,
-    "avg": 4.16,
-    "pickrate": 17.24
-   },
-   {
-    "name": "钩牙船长",
-    "tier": "T2",
-    "winrate": 0.1308,
-    "top4": 0.5582,
-    "avg": 4.17,
-    "pickrate": 17.74
+    "pickrate": 58.62
    },
    {
     "name": "泰瑟蘭·血望者",
-    "tier": "T2",
-    "winrate": 0.1237,
-    "top4": 0.5561,
-    "avg": 4.17,
-    "pickrate": 13.16
-   },
-   {
-    "name": "沙德沃克",
-    "tier": "T2",
-    "winrate": 0.1357,
-    "top4": 0.5573,
-    "avg": 4.18,
-    "pickrate": 27.57
-   },
-   {
-    "name": "了不起的杰弗裡斯",
-    "tier": "T2",
-    "winrate": 0.134,
-    "top4": 0.5525,
-    "avg": 4.18,
-    "pickrate": 24.25
-   },
-   {
-    "name": "鼠王",
-    "tier": "T2",
-    "winrate": 0.1249,
-    "top4": 0.559,
-    "avg": 4.18,
-    "pickrate": 18.02
-   },
-   {
-    "name": "克苏恩",
-    "tier": "T2",
-    "winrate": 0.0982,
-    "top4": 0.5662,
-    "avg": 4.18,
-    "pickrate": 7.99
-   },
-   {
-    "name": "希拉斯·暗月",
-    "tier": "T2",
-    "winrate": 0.1293,
-    "top4": 0.5554,
-    "avg": 4.19,
-    "pickrate": 21.18
-   },
-   {
-    "name": "斯卡布斯·刀油",
-    "tier": "T2",
-    "winrate": 0.1264,
-    "top4": 0.5488,
-    "avg": 4.2,
-    "pickrate": 22.26
-   },
-   {
-    "name": "蛇眼",
-    "tier": "T2",
-    "winrate": 0.1409,
-    "top4": 0.5514,
-    "avg": 4.21,
-    "pickrate": 30.96
-   },
-   {
-    "name": "狂風之翼",
-    "tier": "T2",
-    "winrate": 0.1394,
-    "top4": 0.5524,
-    "avg": 4.21,
-    "pickrate": 19.43
-   },
-   {
-    "name": "巴罗夫領主",
-    "tier": "T2",
-    "winrate": 0.1338,
-    "top4": 0.5594,
-    "avg": 4.21,
-    "pickrate": 20.23
-   },
-   {
-    "name": "費林大使",
-    "tier": "T2",
-    "winrate": 0.1479,
-    "top4": 0.5495,
-    "avg": 4.21,
-    "pickrate": 40.45
-   },
-   {
-    "name": "薩鲁法尔大王",
-    "tier": "T2",
-    "winrate": 0.0969,
-    "top4": 0.5534,
-    "avg": 4.22,
-    "pickrate": 11.25
-   },
-   {
-    "name": "廚師曲奇",
-    "tier": "T2",
-    "winrate": 0.1448,
-    "top4": 0.5444,
-    "avg": 4.22,
-    "pickrate": 19.18
-   },
-   {
-    "name": "瑪裡苟斯",
-    "tier": "T2",
-    "winrate": 0.119,
-    "top4": 0.5467,
-    "avg": 4.23,
-    "pickrate": 13.15
-   },
-   {
-    "name": "凱尔薩斯·逐日者",
-    "tier": "T2",
-    "winrate": 0.117,
-    "top4": 0.5478,
-    "avg": 4.23,
-    "pickrate": 12.1
-   },
-   {
-    "name": "洛卡拉",
     "tier": "T3",
-    "winrate": 0.0969,
-    "top4": 0.5526,
-    "avg": 4.23,
-    "pickrate": 6.96
-   },
-   {
-    "name": "森林之王塞納留斯",
-    "tier": "T3",
-    "winrate": 0.1895,
-    "top4": 0.5408,
-    "avg": 4.23,
-    "pickrate": 39.11
-   },
-   {
-    "name": "齊恩瓦拉",
-    "tier": "T3",
-    "winrate": 0.1076,
-    "top4": 0.5565,
-    "avg": 4.23,
-    "pickrate": 24.97
-   },
-   {
-    "name": "海盜帕奇斯",
-    "tier": "T3",
-    "winrate": 0.1102,
-    "top4": 0.5486,
-    "avg": 4.23,
-    "pickrate": 17.07
-   },
-   {
-    "name": "荷利戴醫生",
-    "tier": "T3",
-    "winrate": 0.1099,
-    "top4": 0.5529,
-    "avg": 4.24,
-    "pickrate": 13.2
-   },
-   {
-    "name": "伊妮·积雷",
-    "tier": "T3",
-    "winrate": 0.1404,
-    "top4": 0.5341,
-    "avg": 4.24,
-    "pickrate": 15.09
-   },
-   {
-    "name": "劫匪之王托瓦格尔",
-    "tier": "T3",
-    "winrate": 0.1253,
-    "top4": 0.5389,
-    "avg": 4.25,
-    "pickrate": 12.33
-   },
-   {
-    "name": "泽瑞拉",
-    "tier": "T3",
-    "winrate": 0.123,
-    "top4": 0.5434,
-    "avg": 4.26,
-    "pickrate": 16.66
-   },
-   {
-    "name": "恐龍大師布莱恩",
-    "tier": "T3",
-    "winrate": 0.1173,
-    "top4": 0.5444,
-    "avg": 4.26,
-    "pickrate": 32.72
-   },
-   {
-    "name": "永恆者托奇",
-    "tier": "T3",
-    "winrate": 0.1249,
-    "top4": 0.544,
-    "avg": 4.26,
-    "pickrate": 20.08
-   },
-   {
-    "name": "米尔豪斯·法力風暴",
-    "tier": "T3",
-    "winrate": 0.0897,
-    "top4": 0.5442,
-    "avg": 4.26,
-    "pickrate": 8.45
-   },
-   {
-    "name": "時光扭曲者克罗米",
-    "tier": "T3",
-    "winrate": 0.1306,
-    "top4": 0.5442,
-    "avg": 4.26,
-    "pickrate": 17.53
-   },
-   {
-    "name": "格雷布",
-    "tier": "T3",
-    "winrate": 0.1043,
-    "top4": 0.5417,
-    "avg": 4.26,
-    "pickrate": 18.99
-   },
-   {
-    "name": "詹迪斯·巴罗夫",
-    "tier": "T3",
-    "winrate": 0.1134,
-    "top4": 0.542,
-    "avg": 4.27,
-    "pickrate": 14.02
-   },
-   {
-    "name": "瑪維·影歌",
-    "tier": "T3",
-    "winrate": 0.1295,
-    "top4": 0.5351,
-    "avg": 4.27,
-    "pickrate": 10.88
-   },
-   {
-    "name": "伊瑟拉",
-    "tier": "T3",
-    "winrate": 0.0997,
-    "top4": 0.5351,
-    "avg": 4.27,
-    "pickrate": 12.67
+    "winrate": 0.15,
+    "top4": 0.5,
+    "avg": 4.05,
+    "pickrate": 47.62
    },
    {
     "name": "伊莉斯·逐星",
     "tier": "T3",
-    "winrate": 0.1262,
-    "top4": 0.5356,
+    "winrate": 0.2105,
+    "top4": 0.5263,
+    "avg": 4.05,
+    "pickrate": 54.29
+   },
+   {
+    "name": "大主教奧薩尔",
+    "tier": "T3",
+    "winrate": 0.1579,
+    "top4": 0.5263,
+    "avg": 4.16,
+    "pickrate": 57.58
+   },
+   {
+    "name": "凱尔薩斯·逐日者",
+    "tier": "T3",
+    "winrate": 0,
+    "top4": 0.625,
+    "avg": 4.19,
+    "pickrate": 48.48
+   },
+   {
+    "name": "鼠王",
+    "tier": "T3",
+    "winrate": 0.1667,
+    "top4": 0.5278,
+    "avg": 4.22,
+    "pickrate": 46.15
+   },
+   {
+    "name": "普崔塞德教授",
+    "tier": "T3",
+    "winrate": 0.1111,
+    "top4": 0.5556,
     "avg": 4.28,
-    "pickrate": 12.14
+    "pickrate": 54.55
+   },
+   {
+    "name": "塔維什·雷矛",
+    "tier": "T3",
+    "winrate": 0.1111,
+    "top4": 0.4444,
+    "avg": 4.3,
+    "pickrate": 45.76
+   },
+   {
+    "name": "泽瑞拉",
+    "tier": "T3",
+    "winrate": 0.1786,
+    "top4": 0.5,
+    "avg": 4.36,
+    "pickrate": 50
+   },
+   {
+    "name": "奧拉基尔",
+    "tier": "T3",
+    "winrate": 0.0909,
+    "top4": 0.4848,
+    "avg": 4.39,
+    "pickrate": 48.53
+   },
+   {
+    "name": "希尔瓦娜斯·風行者",
+    "tier": "T3",
+    "winrate": 0.1563,
+    "top4": 0.4375,
+    "avg": 4.53,
+    "pickrate": 71.11
+   }
+  ]
+ },
+ "10": {
+  "sample": 40529,
+  "fetchedAt": "2026-11-10",
+  "heroes": [
+   {
+    "name": "風暴之王托裡姆",
+    "tier": "T0",
+    "winrate": 0.2348,
+    "top4": 0.6862,
+    "avg": 3.5,
+    "pickrate": 53.65
+   },
+   {
+    "name": "加拉克苏斯大王",
+    "tier": "T0",
+    "winrate": 0.1315,
+    "top4": 0.6961,
+    "avg": 3.68,
+    "pickrate": 51.41
+   },
+   {
+    "name": "阿莱克丝塔薩",
+    "tier": "T0",
+    "winrate": 0.1243,
+    "top4": 0.6757,
+    "avg": 3.73,
+    "pickrate": 28.24
+   },
+   {
+    "name": "瓦托格尔女王",
+    "tier": "T0",
+    "winrate": 0.1136,
+    "top4": 0.6591,
+    "avg": 3.78,
+    "pickrate": 15.38
+   },
+   {
+    "name": "帕奇維克",
+    "tier": "T0",
+    "winrate": 0.1101,
+    "top4": 0.656,
+    "avg": 3.79,
+    "pickrate": 37.24
+   },
+   {
+    "name": "伊利丹·怒風",
+    "tier": "T0",
+    "winrate": 0.1785,
+    "top4": 0.6263,
+    "avg": 3.8,
+    "pickrate": 36.53
+   },
+   {
+    "name": "雷诺·杰克逊",
+    "tier": "T0",
+    "winrate": 0.1908,
+    "top4": 0.6174,
+    "avg": 3.81,
+    "pickrate": 59.11
+   },
+   {
+    "name": "德雷阿佳丝",
+    "tier": "T0",
+    "winrate": 0.0877,
+    "top4": 0.6461,
+    "avg": 3.83,
+    "pickrate": 35.41
+   },
+   {
+    "name": "塔隆·血魔",
+    "tier": "T0",
+    "winrate": 0.1554,
+    "top4": 0.6419,
+    "avg": 3.85,
+    "pickrate": 46.69
+   },
+   {
+    "name": "偉大的阿卡扎曼扎拉克",
+    "tier": "T0",
+    "winrate": 0.1396,
+    "top4": 0.6351,
+    "avg": 3.87,
+    "pickrate": 26.16
+   },
+   {
+    "name": "典獄长",
+    "tier": "T0",
+    "winrate": 0.185,
+    "top4": 0.625,
+    "avg": 3.87,
+    "pickrate": 29.97
+   },
+   {
+    "name": "扣子",
+    "tier": "T1",
+    "winrate": 0.17,
+    "top4": 0.6148,
+    "avg": 3.89,
+    "pickrate": 56.63
+   },
+   {
+    "name": "特莱斯塔斯，寄生之魂",
+    "tier": "T1",
+    "winrate": 0.1589,
+    "top4": 0.6238,
+    "avg": 3.89,
+    "pickrate": 55.04
+   },
+   {
+    "name": "堕落的喬治",
+    "tier": "T1",
+    "winrate": 0.1637,
+    "top4": 0.605,
+    "avg": 3.92,
+    "pickrate": 19
+   },
+   {
+    "name": "範达尔·雷矛",
+    "tier": "T1",
+    "winrate": 0.1729,
+    "top4": 0.6015,
+    "avg": 3.92,
+    "pickrate": 23.16
+   },
+   {
+    "name": "沃金",
+    "tier": "T1",
+    "winrate": 0.0975,
+    "top4": 0.6102,
+    "avg": 3.94,
+    "pickrate": 16.31
+   },
+   {
+    "name": "德雷克塔尔",
+    "tier": "T1",
+    "winrate": 0.1436,
+    "top4": 0.6058,
+    "avg": 3.95,
+    "pickrate": 23.91
+   },
+   {
+    "name": "了不起的杰弗裡斯",
+    "tier": "T1",
+    "winrate": 0.1529,
+    "top4": 0.6115,
+    "avg": 3.96,
+    "pickrate": 26.98
+   },
+   {
+    "name": "經理馬林",
+    "tier": "T1",
+    "winrate": 0.1553,
+    "top4": 0.6012,
+    "avg": 3.96,
+    "pickrate": 64.64
+   },
+   {
+    "name": "森林之王塞納留斯",
+    "tier": "T1",
+    "winrate": 0.206,
+    "top4": 0.6009,
+    "avg": 3.96,
+    "pickrate": 50.72
+   },
+   {
+    "name": "芬利·莫格顿爵士",
+    "tier": "T1",
+    "winrate": 0.1556,
+    "top4": 0.6025,
+    "avg": 3.97,
+    "pickrate": 44.27
+   },
+   {
+    "name": "掛機的阿凱",
+    "tier": "T1",
+    "winrate": 0.1501,
+    "top4": 0.5937,
+    "avg": 3.98,
+    "pickrate": 57.32
+   },
+   {
+    "name": "巫妖王",
+    "tier": "T1",
+    "winrate": 0.1187,
+    "top4": 0.5969,
+    "avg": 3.98,
+    "pickrate": 40.51
+   },
+   {
+    "name": "贸易親王加裡維克斯",
+    "tier": "T1",
+    "winrate": 0.2286,
+    "top4": 0.5704,
+    "avg": 3.99,
+    "pickrate": 44.38
+   },
+   {
+    "name": "洛，在世傳奇",
+    "tier": "T1",
+    "winrate": 0.1418,
+    "top4": 0.6046,
+    "avg": 3.99,
+    "pickrate": 31.41
+   },
+   {
+    "name": "菌菇術士弗洛格尔",
+    "tier": "T1",
+    "winrate": 0.113,
+    "top4": 0.5739,
+    "avg": 4,
+    "pickrate": 21.38
+   },
+   {
+    "name": "巫妖巴茲亞尔",
+    "tier": "T1",
+    "winrate": 0.1301,
+    "top4": 0.5772,
+    "avg": 4,
+    "pickrate": 23.7
+   },
+   {
+    "name": "天空上尉庫拉格",
+    "tier": "T1",
+    "winrate": 0.1416,
+    "top4": 0.5899,
+    "avg": 4.02,
+    "pickrate": 27.54
+   },
+   {
+    "name": "尤格-薩隆",
+    "tier": "T1",
+    "winrate": 0.1267,
+    "top4": 0.5777,
+    "avg": 4.03,
+    "pickrate": 29.4
+   },
+   {
+    "name": "希尔瓦娜斯·風行者",
+    "tier": "T1",
+    "winrate": 0.1607,
+    "top4": 0.5789,
+    "avg": 4.05,
+    "pickrate": 43.69
+   },
+   {
+    "name": "死亡之聲者布莱克松",
+    "tier": "T1",
+    "winrate": 0.0838,
+    "top4": 0.5759,
+    "avg": 4.06,
+    "pickrate": 26.09
+   },
+   {
+    "name": "奧拉基尔",
+    "tier": "T1",
+    "winrate": 0.1239,
+    "top4": 0.5872,
+    "avg": 4.06,
+    "pickrate": 24.86
+   },
+   {
+    "name": "伊瑟拉",
+    "tier": "T1",
+    "winrate": 0.0606,
+    "top4": 0.5606,
+    "avg": 4.06,
+    "pickrate": 17.29
+   },
+   {
+    "name": "夢魘之王薩維斯",
+    "tier": "T2",
+    "winrate": 0.1509,
+    "top4": 0.5906,
+    "avg": 4.07,
+    "pickrate": 58.6
+   },
+   {
+    "name": "吞噬者穆坦努斯",
+    "tier": "T2",
+    "winrate": 0.096,
+    "top4": 0.572,
+    "avg": 4.09,
+    "pickrate": 16.15
+   },
+   {
+    "name": "荷利戴醫生",
+    "tier": "T2",
+    "winrate": 0.1293,
+    "top4": 0.5665,
+    "avg": 4.09,
+    "pickrate": 16.98
+   },
+   {
+    "name": "克隆大師泽裡克",
+    "tier": "T2",
+    "winrate": 0.1522,
+    "top4": 0.5575,
+    "avg": 4.1,
+    "pickrate": 50.11
+   },
+   {
+    "name": "鐘表先生克勞沃斯",
+    "tier": "T2",
+    "winrate": 0.1435,
+    "top4": 0.5758,
+    "avg": 4.1,
+    "pickrate": 33.83
+   },
+   {
+    "name": "舞者达瑞尔",
+    "tier": "T2",
+    "winrate": 0.124,
+    "top4": 0.5744,
+    "avg": 4.1,
+    "pickrate": 16.53
+   },
+   {
+    "name": "迦拉克隆",
+    "tier": "T2",
+    "winrate": 0.1201,
+    "top4": 0.5919,
+    "avg": 4.11,
+    "pickrate": 38.07
+   },
+   {
+    "name": "提克特斯",
+    "tier": "T2",
+    "winrate": 0.1209,
+    "top4": 0.5814,
+    "avg": 4.11,
+    "pickrate": 24.61
+   },
+   {
+    "name": "尤朵拉船长",
+    "tier": "T2",
+    "winrate": 0.1475,
+    "top4": 0.5656,
+    "avg": 4.11,
+    "pickrate": 40.44
+   },
+   {
+    "name": "至尊盜王拉法姆",
+    "tier": "T2",
+    "winrate": 0.1622,
+    "top4": 0.5743,
+    "avg": 4.11,
+    "pickrate": 23.45
+   },
+   {
+    "name": "摩洛克·福尔摩斯",
+    "tier": "T2",
+    "winrate": 0.1627,
+    "top4": 0.5725,
+    "avg": 4.14,
+    "pickrate": 29.99
+   },
+   {
+    "name": "米罗克",
+    "tier": "T2",
+    "winrate": 0.1556,
+    "top4": 0.5492,
+    "avg": 4.14,
+    "pickrate": 51.87
+   },
+   {
+    "name": "狂風之翼",
+    "tier": "T2",
+    "winrate": 0.163,
+    "top4": 0.5734,
+    "avg": 4.14,
+    "pickrate": 21.65
+   },
+   {
+    "name": "希拉斯·暗月",
+    "tier": "T2",
+    "winrate": 0.1336,
+    "top4": 0.5411,
+    "avg": 4.15,
+    "pickrate": 19.17
+   },
+   {
+    "name": "钩牙船长",
+    "tier": "T2",
+    "winrate": 0.1075,
+    "top4": 0.5993,
+    "avg": 4.16,
+    "pickrate": 19.17
+   },
+   {
+    "name": "洛卡拉",
+    "tier": "T2",
+    "winrate": 0.0976,
+    "top4": 0.5976,
+    "avg": 4.16,
+    "pickrate": 10.8
+   },
+   {
+    "name": "斯卡布斯·刀油",
+    "tier": "T2",
+    "winrate": 0.1294,
+    "top4": 0.5473,
+    "avg": 4.17,
+    "pickrate": 23.69
+   },
+   {
+    "name": "吉恩，狼人國王",
+    "tier": "T2",
+    "winrate": 0.158,
+    "top4": 0.5617,
+    "avg": 4.17,
+    "pickrate": 45.51
+   },
+   {
+    "name": "德納修斯大帝",
+    "tier": "T2",
+    "winrate": 0.1622,
+    "top4": 0.5439,
+    "avg": 4.17,
+    "pickrate": 55.81
+   },
+   {
+    "name": "鼠王",
+    "tier": "T2",
+    "winrate": 0.1257,
+    "top4": 0.5497,
+    "avg": 4.18,
+    "pickrate": 21.42
+   },
+   {
+    "name": "時光扭曲者克罗米",
+    "tier": "T2",
+    "winrate": 0.1471,
+    "top4": 0.5561,
+    "avg": 4.18,
+    "pickrate": 22.68
+   },
+   {
+    "name": "巴罗夫領主",
+    "tier": "T2",
+    "winrate": 0.1085,
+    "top4": 0.566,
+    "avg": 4.19,
+    "pickrate": 26.92
+   },
+   {
+    "name": "伊莉斯·逐星",
+    "tier": "T2",
+    "winrate": 0.1448,
+    "top4": 0.5517,
+    "avg": 4.19,
+    "pickrate": 18.3
+   },
+   {
+    "name": "瓦尔登·晨擁",
+    "tier": "T2",
+    "winrate": 0.1028,
+    "top4": 0.5745,
+    "avg": 4.19,
+    "pickrate": 17.92
+   },
+   {
+    "name": "海盜帕奇斯",
+    "tier": "T2",
+    "winrate": 0.118,
+    "top4": 0.5652,
+    "avg": 4.19,
+    "pickrate": 24.84
+   },
+   {
+    "name": "預言者努波顿",
+    "tier": "T2",
+    "winrate": 0.1467,
+    "top4": 0.5539,
+    "avg": 4.2,
+    "pickrate": 19.36
+   },
+   {
+    "name": "凱瑞尔·罗姆",
+    "tier": "T2",
+    "winrate": 0.0978,
+    "top4": 0.5615,
+    "avg": 4.21,
+    "pickrate": 22.56
+   },
+   {
+    "name": "摇滚教父沃恩",
+    "tier": "T2",
+    "winrate": 0.1373,
+    "top4": 0.5284,
+    "avg": 4.21,
+    "pickrate": 21.53
+   },
+   {
+    "name": "塔維什·雷矛",
+    "tier": "T2",
+    "winrate": 0.1143,
+    "top4": 0.56,
+    "avg": 4.21,
+    "pickrate": 20.89
+   },
+   {
+    "name": "拉卡尼休",
+    "tier": "T2",
+    "winrate": 0.0484,
+    "top4": 0.586,
+    "avg": 4.21,
+    "pickrate": 13.88
+   },
+   {
+    "name": "凱尔薩斯·逐日者",
+    "tier": "T2",
+    "winrate": 0.0645,
+    "top4": 0.5806,
+    "avg": 4.22,
+    "pickrate": 14.37
+   },
+   {
+    "name": "恩佐斯",
+    "tier": "T2",
+    "winrate": 0.0803,
+    "top4": 0.5036,
+    "avg": 4.23,
+    "pickrate": 28.48
+   },
+   {
+    "name": "泰瑟蘭·血望者",
+    "tier": "T2",
+    "winrate": 0.0885,
+    "top4": 0.5619,
+    "avg": 4.24,
+    "pickrate": 16.75
+   },
+   {
+    "name": "穆克拉",
+    "tier": "T3",
+    "winrate": 0.1273,
+    "top4": 0.5,
+    "avg": 4.25,
+    "pickrate": 11.12
+   },
+   {
+    "name": "沙德沃克",
+    "tier": "T3",
+    "winrate": 0.1356,
+    "top4": 0.5521,
+    "avg": 4.25,
+    "pickrate": 20.03
+   },
+   {
+    "name": "恐龍大師布莱恩",
+    "tier": "T3",
+    "winrate": 0.104,
+    "top4": 0.5693,
+    "avg": 4.25,
+    "pickrate": 30.63
+   },
+   {
+    "name": "因葛，钢鐵颂歌",
+    "tier": "T3",
+    "winrate": 0.1088,
+    "top4": 0.5272,
+    "avg": 4.25,
+    "pickrate": 18.05
+   },
+   {
+    "name": "刀鋒女王凱瑞甘",
+    "tier": "T3",
+    "winrate": 0.069,
+    "top4": 0.5345,
+    "avg": 4.26,
+    "pickrate": 8.85
+   },
+   {
+    "name": "無限巨龍姆诺茲多",
+    "tier": "T3",
+    "winrate": 0.1318,
+    "top4": 0.5642,
+    "avg": 4.26,
+    "pickrate": 36.07
+   },
+   {
+    "name": "斯尼德",
+    "tier": "T3",
+    "winrate": 0.0854,
+    "top4": 0.5671,
+    "avg": 4.26,
+    "pickrate": 18.05
+   },
+   {
+    "name": "大主教奧薩尔",
+    "tier": "T3",
+    "winrate": 0.0913,
+    "top4": 0.5817,
+    "avg": 4.26,
+    "pickrate": 15.72
+   },
+   {
+    "name": "齊恩瓦拉",
+    "tier": "T3",
+    "winrate": 0.0828,
+    "top4": 0.5379,
+    "avg": 4.27,
+    "pickrate": 21.45
+   },
+   {
+    "name": "阮大師",
+    "tier": "T3",
+    "winrate": 0.1298,
+    "top4": 0.5406,
+    "avg": 4.28,
+    "pickrate": 54.14
+   },
+   {
+    "name": "蛇眼",
+    "tier": "T3",
+    "winrate": 0.1402,
+    "top4": 0.559,
+    "avg": 4.28,
+    "pickrate": 33.03
+   },
+   {
+    "name": "詹迪斯·巴罗夫",
+    "tier": "T3",
+    "winrate": 0.0857,
+    "top4": 0.5524,
+    "avg": 4.29,
+    "pickrate": 21.74
+   },
+   {
+    "name": "館长",
+    "tier": "T3",
+    "winrate": 0.0976,
+    "top4": 0.5528,
+    "avg": 4.3,
+    "pickrate": 22.86
+   },
+   {
+    "name": "瑪維·影歌",
+    "tier": "T3",
+    "winrate": 0.1152,
+    "top4": 0.5445,
+    "avg": 4.3,
+    "pickrate": 15.02
+   },
+   {
+    "name": "林地守護者欧穆",
+    "tier": "T3",
+    "winrate": 0.1377,
+    "top4": 0.5481,
+    "avg": 4.31,
+    "pickrate": 24.15
+   },
+   {
+    "name": "費林大使",
+    "tier": "T3",
+    "winrate": 0.1341,
+    "top4": 0.528,
+    "avg": 4.32,
+    "pickrate": 41.12
+   },
+   {
+    "name": "瑪裡苟斯",
+    "tier": "T3",
+    "winrate": 0.0924,
+    "top4": 0.5326,
+    "avg": 4.32,
+    "pickrate": 13.77
+   },
+   {
+    "name": "強化機器人",
+    "tier": "T3",
+    "winrate": 0.1068,
+    "top4": 0.5315,
+    "avg": 4.32,
+    "pickrate": 21.45
+   },
+   {
+    "name": "苔丝·格雷迈恩",
+    "tier": "T3",
+    "winrate": 0.1474,
+    "top4": 0.5184,
+    "avg": 4.32,
+    "pickrate": 22.56
+   },
+   {
+    "name": "廚師曲奇",
+    "tier": "T3",
+    "winrate": 0.1122,
+    "top4": 0.5238,
+    "avg": 4.32,
+    "pickrate": 19.34
+   },
+   {
+    "name": "诺茲多姆",
+    "tier": "T3",
+    "winrate": 0.1038,
+    "top4": 0.5189,
+    "avg": 4.34,
+    "pickrate": 15.38
+   },
+   {
+    "name": "伊妮·积雷",
+    "tier": "T3",
+    "winrate": 0.0759,
+    "top4": 0.5823,
+    "avg": 4.35,
+    "pickrate": 21.64
+   },
+   {
+    "name": "比格沃斯先生",
+    "tier": "T3",
+    "winrate": 0.124,
+    "top4": 0.5124,
+    "avg": 4.36,
+    "pickrate": 17.09
+   },
+   {
+    "name": "普崔塞德教授",
+    "tier": "T3",
+    "winrate": 0.136,
+    "top4": 0.544,
+    "avg": 4.36,
+    "pickrate": 20.94
+   },
+   {
+    "name": "米尔菲丝·法力風暴",
+    "tier": "T3",
+    "winrate": 0.1724,
+    "top4": 0.4483,
+    "avg": 4.4,
+    "pickrate": 18.48
+   },
+   {
+    "name": "永恆者托奇",
+    "tier": "T3",
+    "winrate": 0.1293,
+    "top4": 0.5019,
+    "avg": 4.4,
+    "pickrate": 18.43
+   },
+   {
+    "name": "死亡之翼",
+    "tier": "T3",
+    "winrate": 0.0385,
+    "top4": 0.6154,
+    "avg": 4.4,
+    "pickrate": 11.83
+   },
+   {
+    "name": "布鲁坎",
+    "tier": "T3",
+    "winrate": 0.1111,
+    "top4": 0.5062,
+    "avg": 4.44,
+    "pickrate": 12.37
+   },
+   {
+    "name": "辛达苟薩",
+    "tier": "T3",
+    "winrate": 0.1012,
+    "top4": 0.5123,
+    "avg": 4.44,
+    "pickrate": 19.53
+   },
+   {
+    "name": "亞煞極",
+    "tier": "T3",
+    "winrate": 0.1045,
+    "top4": 0.4776,
+    "avg": 4.44,
+    "pickrate": 14.83
+   },
+   {
+    "name": "古夫·符文圖騰",
+    "tier": "T3",
+    "winrate": 0.1057,
+    "top4": 0.5066,
+    "avg": 4.47,
+    "pickrate": 16.08
+   },
+   {
+    "name": "薩鲁法尔大王",
+    "tier": "T3",
+    "winrate": 0.0581,
+    "top4": 0.4767,
+    "avg": 4.47,
+    "pickrate": 10.76
+   },
+   {
+    "name": "厄祖瑪特",
+    "tier": "T3",
+    "winrate": 0.0698,
+    "top4": 0.4884,
+    "avg": 4.5,
+    "pickrate": 10.44
+   },
+   {
+    "name": "米尔豪斯·法力風暴",
+    "tier": "T3",
+    "winrate": 0.0956,
+    "top4": 0.5147,
+    "avg": 4.51,
+    "pickrate": 12.44
+   },
+   {
+    "name": "霍格船长",
+    "tier": "T3",
+    "winrate": 0.1159,
+    "top4": 0.471,
+    "avg": 4.53,
+    "pickrate": 24.42
+   },
+   {
+    "name": "劫匪之王托瓦格尔",
+    "tier": "T3",
+    "winrate": 0.0737,
+    "top4": 0.4977,
+    "avg": 4.53,
+    "pickrate": 16.19
+   },
+   {
+    "name": "庫尔特鲁斯·陨烬",
+    "tier": "T3",
+    "winrate": 0.0638,
+    "top4": 0.5106,
+    "avg": 4.55,
+    "pickrate": 10.71
+   },
+   {
+    "name": "樂队經理精英牛頭人酋长",
+    "tier": "T3",
+    "winrate": 0.0963,
+    "top4": 0.4771,
+    "avg": 4.56,
+    "pickrate": 25.65
+   },
+   {
+    "name": "泽瑞拉",
+    "tier": "T3",
+    "winrate": 0.1107,
+    "top4": 0.4585,
+    "avg": 4.58,
+    "pickrate": 16.97
    },
    {
     "name": "奧妮克希亞",
     "tier": "T3",
-    "winrate": 0.0982,
-    "top4": 0.5494,
-    "avg": 4.28,
-    "pickrate": 8.63
+    "winrate": 0.0901,
+    "top4": 0.4324,
+    "avg": 4.6,
+    "pickrate": 14.38
    },
    {
-    "name": "瓦尔登·晨擁",
+    "name": "阿蘭娜·逐星",
     "tier": "T3",
+    "winrate": 0.1022,
+    "top4": 0.4731,
+    "avg": 4.62,
+    "pickrate": 13.64
+   },
+   {
+    "name": "格雷布",
+    "tier": "T3",
+    "winrate": 0.066,
+    "top4": 0.4528,
+    "avg": 4.62,
+    "pickrate": 24.37
+   },
+   {
+    "name": "瘋狂金字塔",
+    "tier": "T3",
+    "winrate": 0.0795,
+    "top4": 0.4659,
+    "avg": 4.64,
+    "pickrate": 10.38
+   },
+   {
+    "name": "基希克斯",
+    "tier": "T3",
+    "winrate": 0.0874,
+    "top4": 0.4951,
+    "avg": 4.68,
+    "pickrate": 21.78
+   }
+  ]
+ },
+ "50": {
+  "sample": 202400,
+  "fetchedAt": "2026-11-10",
+  "heroes": [
+   {
+    "name": "風暴之王托裡姆",
+    "tier": "T0",
+    "winrate": 0.2389,
+    "top4": 0.662,
+    "avg": 3.59,
+    "pickrate": 52.32
+   },
+   {
+    "name": "加拉克苏斯大王",
+    "tier": "T0",
+    "winrate": 0.1482,
+    "top4": 0.648,
+    "avg": 3.77,
+    "pickrate": 45.75
+   },
+   {
+    "name": "帕奇維克",
+    "tier": "T0",
+    "winrate": 0.1231,
+    "top4": 0.6475,
+    "avg": 3.81,
+    "pickrate": 35.23
+   },
+   {
+    "name": "伊利丹·怒風",
+    "tier": "T0",
+    "winrate": 0.1642,
+    "top4": 0.6297,
+    "avg": 3.84,
+    "pickrate": 33.65
+   },
+   {
+    "name": "特莱斯塔斯，寄生之魂",
+    "tier": "T0",
+    "winrate": 0.1571,
+    "top4": 0.6299,
+    "avg": 3.87,
+    "pickrate": 54.67
+   },
+   {
+    "name": "扣子",
+    "tier": "T0",
+    "winrate": 0.1754,
+    "top4": 0.6106,
+    "avg": 3.88,
+    "pickrate": 54.13
+   },
+   {
+    "name": "沃金",
+    "tier": "T0",
+    "winrate": 0.1205,
+    "top4": 0.619,
+    "avg": 3.89,
+    "pickrate": 15.88
+   },
+   {
+    "name": "德雷阿佳丝",
+    "tier": "T0",
+    "winrate": 0.1021,
+    "top4": 0.6411,
+    "avg": 3.9,
+    "pickrate": 36.66
+   },
+   {
+    "name": "典獄长",
+    "tier": "T0",
+    "winrate": 0.1351,
+    "top4": 0.6373,
+    "avg": 3.91,
+    "pickrate": 22.03
+   },
+   {
+    "name": "掛機的阿凱",
+    "tier": "T0",
+    "winrate": 0.1535,
+    "top4": 0.6116,
+    "avg": 3.91,
+    "pickrate": 53.4
+   },
+   {
+    "name": "奧拉基尔",
+    "tier": "T0",
+    "winrate": 0.1478,
+    "top4": 0.6133,
+    "avg": 3.91,
+    "pickrate": 28.41
+   },
+   {
+    "name": "塔隆·血魔",
+    "tier": "T0",
+    "winrate": 0.1546,
+    "top4": 0.6205,
+    "avg": 3.94,
+    "pickrate": 41.44
+   },
+   {
+    "name": "阿莱克丝塔薩",
+    "tier": "T1",
+    "winrate": 0.1601,
+    "top4": 0.6099,
+    "avg": 3.95,
+    "pickrate": 22.96
+   },
+   {
+    "name": "凱瑞尔·罗姆",
+    "tier": "T1",
+    "winrate": 0.1106,
+    "top4": 0.6021,
+    "avg": 3.96,
+    "pickrate": 24.35
+   },
+   {
+    "name": "德雷克塔尔",
+    "tier": "T1",
+    "winrate": 0.1686,
+    "top4": 0.5988,
+    "avg": 3.97,
+    "pickrate": 27.77
+   },
+   {
+    "name": "死亡之翼",
+    "tier": "T1",
+    "winrate": 0.1134,
+    "top4": 0.6196,
+    "avg": 3.97,
+    "pickrate": 9.07
+   },
+   {
+    "name": "舞者达瑞尔",
+    "tier": "T1",
+    "winrate": 0.1189,
+    "top4": 0.6167,
+    "avg": 3.98,
+    "pickrate": 18.5
+   },
+   {
+    "name": "偉大的阿卡扎曼扎拉克",
+    "tier": "T1",
+    "winrate": 0.1322,
+    "top4": 0.5988,
+    "avg": 3.99,
+    "pickrate": 23.18
+   },
+   {
+    "name": "巫妖王",
+    "tier": "T1",
+    "winrate": 0.1289,
+    "top4": 0.5897,
+    "avg": 4,
+    "pickrate": 37.84
+   },
+   {
+    "name": "堕落的喬治",
+    "tier": "T1",
+    "winrate": 0.1438,
+    "top4": 0.5892,
+    "avg": 4.01,
+    "pickrate": 21.75
+   },
+   {
+    "name": "鐘表先生克勞沃斯",
+    "tier": "T1",
+    "winrate": 0.1476,
+    "top4": 0.579,
+    "avg": 4.01,
+    "pickrate": 35.9
+   },
+   {
+    "name": "瓦托格尔女王",
+    "tier": "T1",
+    "winrate": 0.1062,
+    "top4": 0.6008,
+    "avg": 4.01,
+    "pickrate": 13.61
+   },
+   {
+    "name": "尤格-薩隆",
+    "tier": "T1",
+    "winrate": 0.13,
+    "top4": 0.5868,
+    "avg": 4.02,
+    "pickrate": 28.32
+   },
+   {
+    "name": "夢魘之王薩維斯",
+    "tier": "T1",
+    "winrate": 0.164,
+    "top4": 0.593,
+    "avg": 4.02,
+    "pickrate": 55.82
+   },
+   {
+    "name": "海盜帕奇斯",
+    "tier": "T1",
+    "winrate": 0.1426,
+    "top4": 0.5921,
+    "avg": 4.02,
+    "pickrate": 22.15
+   },
+   {
+    "name": "經理馬林",
+    "tier": "T1",
+    "winrate": 0.1523,
+    "top4": 0.5904,
+    "avg": 4.03,
+    "pickrate": 58.01
+   },
+   {
+    "name": "雷诺·杰克逊",
+    "tier": "T1",
+    "winrate": 0.1747,
+    "top4": 0.575,
+    "avg": 4.05,
+    "pickrate": 48.38
+   },
+   {
+    "name": "死亡之聲者布莱克松",
+    "tier": "T1",
+    "winrate": 0.1205,
+    "top4": 0.581,
+    "avg": 4.05,
+    "pickrate": 23.37
+   },
+   {
+    "name": "穆克拉",
+    "tier": "T1",
+    "winrate": 0.132,
+    "top4": 0.5913,
+    "avg": 4.05,
+    "pickrate": 10.04
+   },
+   {
+    "name": "範达尔·雷矛",
+    "tier": "T1",
+    "winrate": 0.1521,
+    "top4": 0.5812,
+    "avg": 4.07,
+    "pickrate": 26.65
+   },
+   {
+    "name": "布鲁坎",
+    "tier": "T1",
+    "winrate": 0.1228,
+    "top4": 0.5743,
+    "avg": 4.07,
+    "pickrate": 11.9
+   },
+   {
+    "name": "希尔瓦娜斯·風行者",
+    "tier": "T1",
+    "winrate": 0.1633,
+    "top4": 0.574,
+    "avg": 4.08,
+    "pickrate": 39.43
+   },
+   {
+    "name": "拉卡尼休",
+    "tier": "T1",
     "winrate": 0.1184,
-    "top4": 0.5439,
-    "avg": 4.28,
-    "pickrate": 14.91
+    "top4": 0.5969,
+    "avg": 4.09,
+    "pickrate": 15.74
+   },
+   {
+    "name": "芬利·莫格顿爵士",
+    "tier": "T1",
+    "winrate": 0.1477,
+    "top4": 0.573,
+    "avg": 4.09,
+    "pickrate": 40.63
+   },
+   {
+    "name": "巫妖巴茲亞尔",
+    "tier": "T1",
+    "winrate": 0.1078,
+    "top4": 0.5787,
+    "avg": 4.1,
+    "pickrate": 18.79
+   },
+   {
+    "name": "吞噬者穆坦努斯",
+    "tier": "T2",
+    "winrate": 0.1024,
+    "top4": 0.5804,
+    "avg": 4.1,
+    "pickrate": 20.15
+   },
+   {
+    "name": "館长",
+    "tier": "T2",
+    "winrate": 0.1244,
+    "top4": 0.5746,
+    "avg": 4.1,
+    "pickrate": 19.04
+   },
+   {
+    "name": "摩洛克·福尔摩斯",
+    "tier": "T2",
+    "winrate": 0.1691,
+    "top4": 0.5639,
+    "avg": 4.11,
+    "pickrate": 21.68
+   },
+   {
+    "name": "斯尼德",
+    "tier": "T2",
+    "winrate": 0.1143,
+    "top4": 0.5756,
+    "avg": 4.11,
+    "pickrate": 13.36
+   },
+   {
+    "name": "塔維什·雷矛",
+    "tier": "T2",
+    "winrate": 0.1222,
+    "top4": 0.5703,
+    "avg": 4.11,
+    "pickrate": 22.34
+   },
+   {
+    "name": "洛，在世傳奇",
+    "tier": "T2",
+    "winrate": 0.1219,
+    "top4": 0.5716,
+    "avg": 4.11,
+    "pickrate": 29.69
+   },
+   {
+    "name": "伊瑟拉",
+    "tier": "T2",
+    "winrate": 0.1018,
+    "top4": 0.5525,
+    "avg": 4.12,
+    "pickrate": 14.11
+   },
+   {
+    "name": "摇滚教父沃恩",
+    "tier": "T2",
+    "winrate": 0.1448,
+    "top4": 0.5587,
+    "avg": 4.12,
+    "pickrate": 21.95
+   },
+   {
+    "name": "迦拉克隆",
+    "tier": "T2",
+    "winrate": 0.1361,
+    "top4": 0.5724,
+    "avg": 4.13,
+    "pickrate": 37.07
+   },
+   {
+    "name": "恩佐斯",
+    "tier": "T2",
+    "winrate": 0.0885,
+    "top4": 0.566,
+    "avg": 4.13,
+    "pickrate": 22.07
+   },
+   {
+    "name": "狂風之翼",
+    "tier": "T2",
+    "winrate": 0.15,
+    "top4": 0.5687,
+    "avg": 4.13,
+    "pickrate": 21.86
+   },
+   {
+    "name": "提克特斯",
+    "tier": "T2",
+    "winrate": 0.1254,
+    "top4": 0.5679,
+    "avg": 4.13,
+    "pickrate": 28.18
+   },
+   {
+    "name": "伊妮·积雷",
+    "tier": "T2",
+    "winrate": 0.1332,
+    "top4": 0.5587,
+    "avg": 4.15,
+    "pickrate": 16.61
+   },
+   {
+    "name": "天空上尉庫拉格",
+    "tier": "T2",
+    "winrate": 0.1418,
+    "top4": 0.5532,
+    "avg": 4.15,
+    "pickrate": 20.19
+   },
+   {
+    "name": "齊恩瓦拉",
+    "tier": "T2",
+    "winrate": 0.1211,
+    "top4": 0.5688,
+    "avg": 4.15,
+    "pickrate": 24.19
+   },
+   {
+    "name": "尤朵拉船长",
+    "tier": "T2",
+    "winrate": 0.145,
+    "top4": 0.5619,
+    "avg": 4.16,
+    "pickrate": 34.23
+   },
+   {
+    "name": "了不起的杰弗裡斯",
+    "tier": "T2",
+    "winrate": 0.1497,
+    "top4": 0.5473,
+    "avg": 4.16,
+    "pickrate": 25.14
+   },
+   {
+    "name": "因葛，钢鐵颂歌",
+    "tier": "T2",
+    "winrate": 0.114,
+    "top4": 0.5494,
+    "avg": 4.16,
+    "pickrate": 16.59
+   },
+   {
+    "name": "鼠王",
+    "tier": "T2",
+    "winrate": 0.1263,
+    "top4": 0.5625,
+    "avg": 4.16,
+    "pickrate": 18.09
+   },
+   {
+    "name": "蛇眼",
+    "tier": "T2",
+    "winrate": 0.1454,
+    "top4": 0.5635,
+    "avg": 4.17,
+    "pickrate": 33.15
+   },
+   {
+    "name": "預言者努波顿",
+    "tier": "T2",
+    "winrate": 0.1439,
+    "top4": 0.5513,
+    "avg": 4.17,
+    "pickrate": 17.84
+   },
+   {
+    "name": "钩牙船长",
+    "tier": "T2",
+    "winrate": 0.1254,
+    "top4": 0.5617,
+    "avg": 4.18,
+    "pickrate": 17.62
+   },
+   {
+    "name": "無限巨龍姆诺茲多",
+    "tier": "T2",
+    "winrate": 0.1303,
+    "top4": 0.5716,
+    "avg": 4.18,
+    "pickrate": 37.8
+   },
+   {
+    "name": "霍格船长",
+    "tier": "T2",
+    "winrate": 0.1501,
+    "top4": 0.5443,
+    "avg": 4.19,
+    "pickrate": 21.7
+   },
+   {
+    "name": "米罗克",
+    "tier": "T2",
+    "winrate": 0.1594,
+    "top4": 0.5436,
+    "avg": 4.19,
+    "pickrate": 42.33
+   },
+   {
+    "name": "強化機器人",
+    "tier": "T2",
+    "winrate": 0.1219,
+    "top4": 0.5498,
+    "avg": 4.19,
+    "pickrate": 23.77
+   },
+   {
+    "name": "沙德沃克",
+    "tier": "T2",
+    "winrate": 0.1348,
+    "top4": 0.5594,
+    "avg": 4.19,
+    "pickrate": 22.75
+   },
+   {
+    "name": "比格沃斯先生",
+    "tier": "T2",
+    "winrate": 0.1314,
+    "top4": 0.5538,
+    "avg": 4.2,
+    "pickrate": 17.85
+   },
+   {
+    "name": "斯卡布斯·刀油",
+    "tier": "T2",
+    "winrate": 0.13,
+    "top4": 0.5437,
+    "avg": 4.2,
+    "pickrate": 22.35
+   },
+   {
+    "name": "泰瑟蘭·血望者",
+    "tier": "T2",
+    "winrate": 0.112,
+    "top4": 0.5656,
+    "avg": 4.2,
+    "pickrate": 12.09
    },
    {
     "name": "至尊盜王拉法姆",
-    "tier": "T3",
-    "winrate": 0.118,
-    "top4": 0.5392,
-    "avg": 4.28,
-    "pickrate": 15.35
-   },
-   {
-    "name": "吉恩，狼人國王",
-    "tier": "T3",
-    "winrate": 0.1532,
-    "top4": 0.529,
-    "avg": 4.29,
-    "pickrate": 42.56
+    "tier": "T2",
+    "winrate": 0.1327,
+    "top4": 0.5609,
+    "avg": 4.2,
+    "pickrate": 17.17
    },
    {
     "name": "克隆大師泽裡克",
+    "tier": "T2",
+    "winrate": 0.1487,
+    "top4": 0.5389,
+    "avg": 4.21,
+    "pickrate": 37.68
+   },
+   {
+    "name": "荷利戴醫生",
+    "tier": "T2",
+    "winrate": 0.1185,
+    "top4": 0.537,
+    "avg": 4.21,
+    "pickrate": 14.62
+   },
+   {
+    "name": "亞煞極",
+    "tier": "T2",
+    "winrate": 0.1116,
+    "top4": 0.5514,
+    "avg": 4.22,
+    "pickrate": 14.45
+   },
+   {
+    "name": "森林之王塞納留斯",
+    "tier": "T2",
+    "winrate": 0.1873,
+    "top4": 0.5449,
+    "avg": 4.22,
+    "pickrate": 40.93
+   },
+   {
+    "name": "诺茲多姆",
     "tier": "T3",
-    "winrate": 0.1436,
-    "top4": 0.5336,
+    "winrate": 0.1287,
+    "top4": 0.5495,
+    "avg": 4.23,
+    "pickrate": 14.49
+   },
+   {
+    "name": "凱尔薩斯·逐日者",
+    "tier": "T3",
+    "winrate": 0.1138,
+    "top4": 0.55,
+    "avg": 4.23,
+    "pickrate": 13.47
+   },
+   {
+    "name": "恐龍大師布莱恩",
+    "tier": "T3",
+    "winrate": 0.1257,
+    "top4": 0.5492,
+    "avg": 4.23,
+    "pickrate": 32.05
+   },
+   {
+    "name": "米尔豪斯·法力風暴",
+    "tier": "T3",
+    "winrate": 0.089,
+    "top4": 0.5621,
+    "avg": 4.23,
+    "pickrate": 9.61
+   },
+   {
+    "name": "巴罗夫領主",
+    "tier": "T3",
+    "winrate": 0.1249,
+    "top4": 0.5505,
+    "avg": 4.24,
+    "pickrate": 20.63
+   },
+   {
+    "name": "克苏恩",
+    "tier": "T3",
+    "winrate": 0.0679,
+    "top4": 0.5623,
+    "avg": 4.24,
+    "pickrate": 7.09
+   },
+   {
+    "name": "米尔菲丝·法力風暴",
+    "tier": "T3",
+    "winrate": 0.1554,
+    "top4": 0.5286,
+    "avg": 4.25,
+    "pickrate": 17.24
+   },
+   {
+    "name": "阮大師",
+    "tier": "T3",
+    "winrate": 0.1308,
+    "top4": 0.5407,
+    "avg": 4.26,
+    "pickrate": 45.91
+   },
+   {
+    "name": "時光扭曲者克罗米",
+    "tier": "T3",
+    "winrate": 0.1346,
+    "top4": 0.5496,
+    "avg": 4.26,
+    "pickrate": 18.05
+   },
+   {
+    "name": "贸易親王加裡維克斯",
+    "tier": "T3",
+    "winrate": 0.1966,
+    "top4": 0.5318,
+    "avg": 4.27,
+    "pickrate": 32.11
+   },
+   {
+    "name": "洛卡拉",
+    "tier": "T3",
+    "winrate": 0.1085,
+    "top4": 0.5374,
+    "avg": 4.27,
+    "pickrate": 6.52
+   },
+   {
+    "name": "薩鲁法尔大王",
+    "tier": "T3",
+    "winrate": 0.0856,
+    "top4": 0.5447,
+    "avg": 4.28,
+    "pickrate": 10.2
+   },
+   {
+    "name": "費林大使",
+    "tier": "T3",
+    "winrate": 0.1451,
+    "top4": 0.5262,
+    "avg": 4.28,
+    "pickrate": 39.54
+   },
+   {
+    "name": "希拉斯·暗月",
+    "tier": "T3",
+    "winrate": 0.118,
+    "top4": 0.5327,
     "avg": 4.29,
-    "pickrate": 32.44
+    "pickrate": 18.86
+   },
+   {
+    "name": "大主教奧薩尔",
+    "tier": "T3",
+    "winrate": 0.1084,
+    "top4": 0.5459,
+    "avg": 4.29,
+    "pickrate": 11.73
+   },
+   {
+    "name": "格雷布",
+    "tier": "T3",
+    "winrate": 0.0759,
+    "top4": 0.5434,
+    "avg": 4.29,
+    "pickrate": 19.83
+   },
+   {
+    "name": "菌菇術士弗洛格尔",
+    "tier": "T3",
+    "winrate": 0.1019,
+    "top4": 0.5404,
+    "avg": 4.29,
+    "pickrate": 12.67
+   },
+   {
+    "name": "泽瑞拉",
+    "tier": "T3",
+    "winrate": 0.1223,
+    "top4": 0.5317,
+    "avg": 4.3,
+    "pickrate": 15.21
    },
    {
     "name": "林地守護者欧穆",
     "tier": "T3",
     "winrate": 0.139,
-    "top4": 0.5342,
-    "avg": 4.29,
-    "pickrate": 22.65
-   },
-   {
-    "name": "贸易親王加裡維克斯",
-    "tier": "T3",
-    "winrate": 0.1926,
-    "top4": 0.5264,
-    "avg": 4.29,
-    "pickrate": 30.62
+    "top4": 0.527,
+    "avg": 4.3,
+    "pickrate": 22.57
    },
    {
     "name": "德納修斯大帝",
     "tier": "T3",
-    "winrate": 0.1521,
-    "top4": 0.527,
+    "winrate": 0.1515,
+    "top4": 0.5266,
     "avg": 4.3,
-    "pickrate": 48.68
+    "pickrate": 49.93
    },
    {
-    "name": "斯尼德",
+    "name": "伊莉斯·逐星",
     "tier": "T3",
-    "winrate": 0.1101,
-    "top4": 0.5242,
-    "avg": 4.31,
-    "pickrate": 9.58
+    "winrate": 0.1256,
+    "top4": 0.5446,
+    "avg": 4.3,
+    "pickrate": 15.1
    },
    {
-    "name": "厄祖瑪特",
+    "name": "永恆者托奇",
     "tier": "T3",
-    "winrate": 0.101,
-    "top4": 0.5281,
+    "winrate": 0.1205,
+    "top4": 0.5335,
+    "avg": 4.32,
+    "pickrate": 21.4
+   },
+   {
+    "name": "吉恩，狼人國王",
+    "tier": "T3",
+    "winrate": 0.1522,
+    "top4": 0.524,
     "avg": 4.33,
-    "pickrate": 5.41
+    "pickrate": 40.75
    },
    {
-    "name": "阿蘭娜·逐星",
+    "name": "廚師曲奇",
     "tier": "T3",
-    "winrate": 0.1331,
-    "top4": 0.5224,
+    "winrate": 0.1389,
+    "top4": 0.5268,
     "avg": 4.34,
-    "pickrate": 13.14
+    "pickrate": 16.59
    },
    {
-    "name": "诺茲多姆",
+    "name": "瑪維·影歌",
     "tier": "T3",
-    "winrate": 0.1178,
-    "top4": 0.5208,
+    "winrate": 0.1182,
+    "top4": 0.5358,
     "avg": 4.35,
-    "pickrate": 11.23
+    "pickrate": 10.52
    },
    {
-    "name": "庫尔特鲁斯·陨烬",
-    "tier": "T3",
-    "winrate": 0.1157,
-    "top4": 0.5174,
-    "avg": 4.36,
-    "pickrate": 8.91
-   },
-   {
-    "name": "苔丝·格雷迈恩",
-    "tier": "T3",
-    "winrate": 0.1242,
-    "top4": 0.5145,
-    "avg": 4.37,
-    "pickrate": 21.09
-   },
-   {
-    "name": "樂队經理精英牛頭人酋长",
-    "tier": "T3",
-    "winrate": 0.1275,
-    "top4": 0.5096,
-    "avg": 4.37,
-    "pickrate": 23.87
-   },
-   {
-    "name": "米尔菲丝·法力風暴",
-    "tier": "T3",
-    "winrate": 0.1501,
-    "top4": 0.507,
-    "avg": 4.4,
-    "pickrate": 15.44
-   },
-   {
-    "name": "瘋狂金字塔",
+    "name": "詹迪斯·巴罗夫",
     "tier": "T3",
     "winrate": 0.1021,
-    "top4": 0.5093,
-    "avg": 4.4,
-    "pickrate": 6.96
+    "top4": 0.529,
+    "avg": 4.35,
+    "pickrate": 15.48
    },
    {
-    "name": "塔姆辛·罗姆",
+    "name": "瓦尔登·晨擁",
     "tier": "T3",
-    "winrate": 0.081,
-    "top4": 0.5086,
-    "avg": 4.41,
-    "pickrate": 7.28
+    "winrate": 0.1116,
+    "top4": 0.5153,
+    "avg": 4.36,
+    "pickrate": 16.79
    },
    {
-    "name": "霍格船长",
+    "name": "瑪裡苟斯",
     "tier": "T3",
-    "winrate": 0.1094,
-    "top4": 0.5021,
-    "avg": 4.43,
-    "pickrate": 14.75
+    "winrate": 0.1077,
+    "top4": 0.5162,
+    "avg": 4.37,
+    "pickrate": 11.65
    },
    {
-    "name": "艾德温·範克裡夫",
+    "name": "劫匪之王托瓦格尔",
     "tier": "T3",
-    "winrate": 0.0797,
-    "top4": 0.5051,
-    "avg": 4.45,
-    "pickrate": 4.24
-   },
-   {
-    "name": "基希克斯",
-    "tier": "T3",
-    "winrate": 0.0968,
-    "top4": 0.5042,
-    "avg": 4.47,
-    "pickrate": 19.51
-   },
-   {
-    "name": "辛达苟薩",
-    "tier": "T3",
-    "winrate": 0.1222,
-    "top4": 0.4885,
-    "avg": 4.48,
-    "pickrate": 16.11
-   },
-   {
-    "name": "古夫·符文圖騰",
-    "tier": "T3",
-    "winrate": 0.1238,
-    "top4": 0.4996,
-    "avg": 4.48,
-    "pickrate": 15.37
+    "winrate": 0.1087,
+    "top4": 0.5117,
+    "avg": 4.37,
+    "pickrate": 12.09
    },
    {
     "name": "普崔塞德教授",
     "tier": "T3",
-    "winrate": 0.0949,
-    "top4": 0.4909,
-    "avg": 4.48,
-    "pickrate": 10.47
+    "winrate": 0.126,
+    "top4": 0.5217,
+    "avg": 4.38,
+    "pickrate": 12.61
+   },
+   {
+    "name": "塔姆辛·罗姆",
+    "tier": "T3",
+    "winrate": 0.0922,
+    "top4": 0.4983,
+    "avg": 4.41,
+    "pickrate": 8.05
+   },
+   {
+    "name": "庫尔特鲁斯·陨烬",
+    "tier": "T3",
+    "winrate": 0.1038,
+    "top4": 0.5136,
+    "avg": 4.42,
+    "pickrate": 9.01
+   },
+   {
+    "name": "奧妮克希亞",
+    "tier": "T3",
+    "winrate": 0.0965,
+    "top4": 0.5145,
+    "avg": 4.42,
+    "pickrate": 9.34
+   },
+   {
+    "name": "苔丝·格雷迈恩",
+    "tier": "T3",
+    "winrate": 0.1336,
+    "top4": 0.4997,
+    "avg": 4.43,
+    "pickrate": 21.17
+   },
+   {
+    "name": "阿蘭娜·逐星",
+    "tier": "T3",
+    "winrate": 0.1328,
+    "top4": 0.5,
+    "avg": 4.43,
+    "pickrate": 12.4
+   },
+   {
+    "name": "樂队經理精英牛頭人酋长",
+    "tier": "T3",
+    "winrate": 0.133,
+    "top4": 0.487,
+    "avg": 4.45,
+    "pickrate": 22.43
+   },
+   {
+    "name": "辛达苟薩",
+    "tier": "T3",
+    "winrate": 0.1172,
+    "top4": 0.4948,
+    "avg": 4.47,
+    "pickrate": 16.19
+   },
+   {
+    "name": "厄祖瑪特",
+    "tier": "T3",
+    "winrate": 0.0876,
+    "top4": 0.492,
+    "avg": 4.49,
+    "pickrate": 6.18
    },
    {
     "name": "刀鋒女王凱瑞甘",
     "tier": "T3",
-    "winrate": 0.0818,
-    "top4": 0.5035,
-    "avg": 4.49,
-    "pickrate": 3.69
+    "winrate": 0.0748,
+    "top4": 0.4737,
+    "avg": 4.54,
+    "pickrate": 4.57
+   },
+   {
+    "name": "瘋狂金字塔",
+    "tier": "T3",
+    "winrate": 0.0755,
+    "top4": 0.4884,
+    "avg": 4.57,
+    "pickrate": 7.45
+   },
+   {
+    "name": "基希克斯",
+    "tier": "T3",
+    "winrate": 0.098,
+    "top4": 0.4744,
+    "avg": 4.57,
+    "pickrate": 15.98
+   },
+   {
+    "name": "古夫·符文圖騰",
+    "tier": "T3",
+    "winrate": 0.1104,
+    "top4": 0.4777,
+    "avg": 4.58,
+    "pickrate": 15.16
    },
    {
     "name": "炎魔之王拉格納罗斯",
     "tier": "T3",
-    "winrate": 0.0844,
-    "top4": 0.4948,
-    "avg": 4.52,
-    "pickrate": 4.22
+    "winrate": 0.0561,
+    "top4": 0.484,
+    "avg": 4.64,
+    "pickrate": 4.58
    },
    {
-    "name": "阿塔尼斯",
+    "name": "艾德温·範克裡夫",
     "tier": "T3",
-    "winrate": 0.0906,
-    "top4": 0.4797,
-    "avg": 4.59,
-    "pickrate": 8.93
-   },
-   {
-    "name": "菌菇術士弗洛格尔",
-    "tier": "T3",
-    "winrate": 0.1197,
-    "top4": 0.4797,
-    "avg": 4.6,
-    "pickrate": 9.83
+    "winrate": 0.0774,
+    "top4": 0.4345,
+    "avg": 4.67,
+    "pickrate": 4.61
    },
    {
     "name": "吉姆·雷诺",
     "tier": "T3",
-    "winrate": 0.0637,
-    "top4": 0.4171,
-    "avg": 4.78,
-    "pickrate": 8.05
+    "winrate": 0.0848,
+    "top4": 0.4152,
+    "avg": 4.75,
+    "pickrate": 9.02
+   },
+   {
+    "name": "阿塔尼斯",
+    "tier": "T3",
+    "winrate": 0.0636,
+    "top4": 0.4303,
+    "avg": 4.85,
+    "pickrate": 9.13
    }
   ]
  },
  "100": {
-  "sample": 2263201,
-  "fetchedAt": "2026-11-02",
+  "sample": 411064,
+  "fetchedAt": "2026-11-10",
   "heroes": [
    {
-    "name": "加拉克苏斯大王",
+    "name": "風暴之王托裡姆",
     "tier": "T0",
-    "winrate": 0.219,
-    "top4": 0.6734,
-    "avg": 3.55,
-    "pickrate": 47.31
-   },
-   {
-    "name": "死亡之聲者布莱克松",
-    "tier": "T0",
-    "winrate": 0.1774,
-    "top4": 0.6612,
-    "avg": 3.65,
-    "pickrate": 32.1
+    "winrate": 0.2423,
+    "top4": 0.663,
+    "avg": 3.58,
+    "pickrate": 51.02
    },
    {
     "name": "帕奇維克",
     "tier": "T0",
-    "winrate": 0.1516,
-    "top4": 0.6685,
+    "winrate": 0.1538,
+    "top4": 0.6718,
     "avg": 3.66,
-    "pickrate": 35.96
-   },
-   {
-    "name": "凱瑞尔·罗姆",
-    "tier": "T0",
-    "winrate": 0.1472,
-    "top4": 0.6641,
-    "avg": 3.68,
-    "pickrate": 29.52
-   },
-   {
-    "name": "德雷阿佳丝",
-    "tier": "T0",
-    "winrate": 0.1368,
-    "top4": 0.6775,
-    "avg": 3.69,
-    "pickrate": 45.39
-   },
-   {
-    "name": "特莱斯塔斯，寄生之魂",
-    "tier": "T0",
-    "winrate": 0.1827,
-    "top4": 0.644,
-    "avg": 3.76,
-    "pickrate": 53.68
+    "pickrate": 33.89
    },
    {
     "name": "扣子",
     "tier": "T0",
-    "winrate": 0.1959,
-    "top4": 0.6312,
-    "avg": 3.77,
-    "pickrate": 52.29
-   },
-   {
-    "name": "掛機的阿凱",
-    "tier": "T0",
-    "winrate": 0.1723,
-    "top4": 0.6346,
-    "avg": 3.78,
-    "pickrate": 49.52
+    "winrate": 0.2119,
+    "top4": 0.6436,
+    "avg": 3.69,
+    "pickrate": 53.18
    },
    {
     "name": "伊利丹·怒風",
     "tier": "T0",
-    "winrate": 0.1668,
-    "top4": 0.631,
-    "avg": 3.78,
-    "pickrate": 28.87
+    "winrate": 0.1767,
+    "top4": 0.6546,
+    "avg": 3.7,
+    "pickrate": 33.92
    },
    {
-    "name": "經理馬林",
+    "name": "加拉克苏斯大王",
     "tier": "T0",
-    "winrate": 0.1983,
-    "top4": 0.6282,
-    "avg": 3.79,
-    "pickrate": 55.1
+    "winrate": 0.1737,
+    "top4": 0.6518,
+    "avg": 3.7,
+    "pickrate": 43.09
    },
    {
-    "name": "夢魘之王薩維斯",
+    "name": "伊瑟拉",
     "tier": "T0",
-    "winrate": 0.2016,
-    "top4": 0.6233,
-    "avg": 3.79,
-    "pickrate": 54.18
+    "winrate": 0.1712,
+    "top4": 0.6351,
+    "avg": 3.73,
+    "pickrate": 21.03
+   },
+   {
+    "name": "凱瑞尔·罗姆",
+    "tier": "T0",
+    "winrate": 0.1459,
+    "top4": 0.6509,
+    "avg": 3.73,
+    "pickrate": 25.15
+   },
+   {
+    "name": "死亡之翼",
+    "tier": "T0",
+    "winrate": 0.1507,
+    "top4": 0.6598,
+    "avg": 3.75,
+    "pickrate": 12.17
    },
    {
     "name": "奧拉基尔",
     "tier": "T0",
-    "winrate": 0.1638,
-    "top4": 0.6292,
-    "avg": 3.8,
-    "pickrate": 27.74
+    "winrate": 0.1756,
+    "top4": 0.6458,
+    "avg": 3.75,
+    "pickrate": 29.02
    },
    {
-    "name": "塔隆·血魔",
-    "tier": "T1",
-    "winrate": 0.1766,
-    "top4": 0.6283,
-    "avg": 3.82,
-    "pickrate": 40.84
+    "name": "阿莱克丝塔薩",
+    "tier": "T0",
+    "winrate": 0.2131,
+    "top4": 0.6315,
+    "avg": 3.76,
+    "pickrate": 25.84
    },
    {
-    "name": "舞者达瑞尔",
-    "tier": "T1",
-    "winrate": 0.1295,
-    "top4": 0.6317,
-    "avg": 3.84,
-    "pickrate": 21.9
+    "name": "特莱斯塔斯，寄生之魂",
+    "tier": "T0",
+    "winrate": 0.1812,
+    "top4": 0.6473,
+    "avg": 3.76,
+    "pickrate": 52.41
    },
    {
-    "name": "死亡之翼",
+    "name": "德雷阿佳丝",
+    "tier": "T0",
+    "winrate": 0.1308,
+    "top4": 0.6612,
+    "avg": 3.78,
+    "pickrate": 37.6
+   },
+   {
+    "name": "掛機的阿凱",
     "tier": "T1",
-    "winrate": 0.129,
-    "top4": 0.6318,
-    "avg": 3.84,
-    "pickrate": 11.36
+    "winrate": 0.1781,
+    "top4": 0.6339,
+    "avg": 3.79,
+    "pickrate": 48.68
    },
    {
     "name": "典獄长",
     "tier": "T1",
-    "winrate": 0.1633,
-    "top4": 0.6314,
-    "avg": 3.84,
+    "winrate": 0.1559,
+    "top4": 0.6449,
+    "avg": 3.8,
     "pickrate": 23.28
    },
    {
     "name": "沃金",
     "tier": "T1",
-    "winrate": 0.1469,
-    "top4": 0.6222,
-    "avg": 3.85,
-    "pickrate": 16.25
+    "winrate": 0.1515,
+    "top4": 0.6275,
+    "avg": 3.82,
+    "pickrate": 16.57
    },
    {
-    "name": "風暴之王托裡姆",
+    "name": "夢魘之王薩維斯",
     "tier": "T1",
-    "winrate": 0.1794,
-    "top4": 0.6188,
-    "avg": 3.86,
-    "pickrate": 44.55
+    "winrate": 0.1975,
+    "top4": 0.6182,
+    "avg": 3.83,
+    "pickrate": 52.97
+   },
+   {
+    "name": "舞者达瑞尔",
+    "tier": "T1",
+    "winrate": 0.1357,
+    "top4": 0.6422,
+    "avg": 3.83,
+    "pickrate": 21.14
+   },
+   {
+    "name": "死亡之聲者布莱克松",
+    "tier": "T1",
+    "winrate": 0.1523,
+    "top4": 0.6261,
+    "avg": 3.84,
+    "pickrate": 27.32
+   },
+   {
+    "name": "塔隆·血魔",
+    "tier": "T1",
+    "winrate": 0.172,
+    "top4": 0.633,
+    "avg": 3.84,
+    "pickrate": 38.85
    },
    {
     "name": "德雷克塔尔",
     "tier": "T1",
-    "winrate": 0.1888,
-    "top4": 0.6192,
-    "avg": 3.86,
-    "pickrate": 27.41
-   },
-   {
-    "name": "尤格-薩隆",
-    "tier": "T1",
-    "winrate": 0.1676,
-    "top4": 0.6207,
-    "avg": 3.86,
-    "pickrate": 29.12
-   },
-   {
-    "name": "鐘表先生克勞沃斯",
-    "tier": "T1",
-    "winrate": 0.1766,
-    "top4": 0.6097,
-    "avg": 3.88,
-    "pickrate": 37.32
-   },
-   {
-    "name": "範达尔·雷矛",
-    "tier": "T1",
-    "winrate": 0.1883,
-    "top4": 0.6116,
-    "avg": 3.88,
-    "pickrate": 28.21
-   },
-   {
-    "name": "巫妖王",
-    "tier": "T1",
-    "winrate": 0.1583,
-    "top4": 0.6117,
-    "avg": 3.89,
-    "pickrate": 39.36
-   },
-   {
-    "name": "因葛，钢鐵颂歌",
-    "tier": "T1",
-    "winrate": 0.1391,
-    "top4": 0.6109,
-    "avg": 3.9,
-    "pickrate": 19.51
+    "winrate": 0.1857,
+    "top4": 0.6208,
+    "avg": 3.84,
+    "pickrate": 29.15
    },
    {
     "name": "穆克拉",
     "tier": "T1",
-    "winrate": 0.1265,
-    "top4": 0.6152,
-    "avg": 3.91,
-    "pickrate": 14.4
+    "winrate": 0.1498,
+    "top4": 0.6305,
+    "avg": 3.84,
+    "pickrate": 12.47
    },
    {
-    "name": "偉大的阿卡扎曼扎拉克",
+    "name": "尤格-薩隆",
     "tier": "T1",
-    "winrate": 0.1496,
-    "top4": 0.6077,
-    "avg": 3.91,
-    "pickrate": 22.69
-   },
-   {
-    "name": "洛，在世傳奇",
-    "tier": "T1",
-    "winrate": 0.1553,
-    "top4": 0.6062,
-    "avg": 3.91,
-    "pickrate": 30.77
-   },
-   {
-    "name": "阿莱克丝塔薩",
-    "tier": "T1",
-    "winrate": 0.1924,
-    "top4": 0.606,
-    "avg": 3.91,
-    "pickrate": 20.38
+    "winrate": 0.1683,
+    "top4": 0.6172,
+    "avg": 3.84,
+    "pickrate": 29.21
    },
    {
     "name": "堕落的喬治",
     "tier": "T1",
-    "winrate": 0.1602,
-    "top4": 0.6066,
-    "avg": 3.92,
-    "pickrate": 23.05
+    "winrate": 0.1716,
+    "top4": 0.6178,
+    "avg": 3.84,
+    "pickrate": 24.48
    },
    {
-    "name": "希尔瓦娜斯·風行者",
+    "name": "經理馬林",
+    "tier": "T1",
+    "winrate": 0.1859,
+    "top4": 0.6196,
+    "avg": 3.85,
+    "pickrate": 53.83
+   },
+   {
+    "name": "鐘表先生克勞沃斯",
+    "tier": "T1",
+    "winrate": 0.1783,
+    "top4": 0.6076,
+    "avg": 3.85,
+    "pickrate": 37.01
+   },
+   {
+    "name": "偉大的阿卡扎曼扎拉克",
+    "tier": "T1",
+    "winrate": 0.1607,
+    "top4": 0.62,
+    "avg": 3.86,
+    "pickrate": 22.99
+   },
+   {
+    "name": "海盜帕奇斯",
+    "tier": "T1",
+    "winrate": 0.1562,
+    "top4": 0.627,
+    "avg": 3.86,
+    "pickrate": 24.44
+   },
+   {
+    "name": "吞噬者穆坦努斯",
+    "tier": "T1",
+    "winrate": 0.1357,
+    "top4": 0.6192,
+    "avg": 3.89,
+    "pickrate": 24.64
+   },
+   {
+    "name": "伊妮·积雷",
+    "tier": "T1",
+    "winrate": 0.1662,
+    "top4": 0.6129,
+    "avg": 3.89,
+    "pickrate": 20.98
+   },
+   {
+    "name": "巫妖王",
+    "tier": "T1",
+    "winrate": 0.1476,
+    "top4": 0.6163,
+    "avg": 3.9,
+    "pickrate": 36.35
+   },
+   {
+    "name": "範达尔·雷矛",
     "tier": "T1",
     "winrate": 0.186,
-    "top4": 0.5969,
-    "avg": 3.92,
-    "pickrate": 38.34
+    "top4": 0.6087,
+    "avg": 3.9,
+    "pickrate": 28.18
    },
    {
     "name": "瓦托格尔女王",
     "tier": "T1",
-    "winrate": 0.1276,
-    "top4": 0.6109,
-    "avg": 3.93,
-    "pickrate": 13.44
+    "winrate": 0.1219,
+    "top4": 0.6152,
+    "avg": 3.91,
+    "pickrate": 13.89
    },
    {
-    "name": "館长",
+    "name": "洛，在世傳奇",
     "tier": "T1",
-    "winrate": 0.1333,
-    "top4": 0.6073,
+    "winrate": 0.1509,
+    "top4": 0.6034,
     "avg": 3.94,
-    "pickrate": 22.79
+    "pickrate": 30.1
+   },
+   {
+    "name": "因葛，钢鐵颂歌",
+    "tier": "T1",
+    "winrate": 0.138,
+    "top4": 0.5939,
+    "avg": 3.94,
+    "pickrate": 17.18
+   },
+   {
+    "name": "希尔瓦娜斯·風行者",
+    "tier": "T1",
+    "winrate": 0.1838,
+    "top4": 0.5919,
+    "avg": 3.94,
+    "pickrate": 36.39
    },
    {
     "name": "恩佐斯",
-    "tier": "T1",
-    "winrate": 0.1478,
-    "top4": 0.605,
-    "avg": 3.95,
-    "pickrate": 22.32
-   },
-   {
-    "name": "塔維什·雷矛",
-    "tier": "T1",
-    "winrate": 0.1433,
-    "top4": 0.603,
-    "avg": 3.95,
-    "pickrate": 21.06
-   },
-   {
-    "name": "巫妖巴茲亞尔",
-    "tier": "T1",
-    "winrate": 0.1423,
-    "top4": 0.6103,
-    "avg": 3.95,
-    "pickrate": 19.17
-   },
-   {
-    "name": "大主教奧薩尔",
     "tier": "T2",
-    "winrate": 0.1505,
-    "top4": 0.6011,
-    "avg": 3.95,
-    "pickrate": 16.35
-   },
-   {
-    "name": "比格沃斯先生",
-    "tier": "T2",
-    "winrate": 0.1708,
-    "top4": 0.5927,
-    "avg": 3.96,
-    "pickrate": 20.03
-   },
-   {
-    "name": "米罗克",
-    "tier": "T2",
-    "winrate": 0.1735,
-    "top4": 0.593,
-    "avg": 3.96,
-    "pickrate": 44.98
-   },
-   {
-    "name": "吞噬者穆坦努斯",
-    "tier": "T2",
-    "winrate": 0.1284,
-    "top4": 0.606,
-    "avg": 3.96,
-    "pickrate": 24.93
-   },
-   {
-    "name": "薩鲁法尔大王",
-    "tier": "T2",
-    "winrate": 0.1242,
-    "top4": 0.6041,
-    "avg": 3.97,
-    "pickrate": 16.37
-   },
-   {
-    "name": "無限巨龍姆诺茲多",
-    "tier": "T2",
-    "winrate": 0.1608,
-    "top4": 0.6007,
-    "avg": 3.97,
-    "pickrate": 42.42
-   },
-   {
-    "name": "亞煞極",
-    "tier": "T2",
-    "winrate": 0.1451,
-    "top4": 0.5917,
-    "avg": 3.98,
-    "pickrate": 18.52
+    "winrate": 0.1267,
+    "top4": 0.6074,
+    "avg": 3.94,
+    "pickrate": 22.65
    },
    {
     "name": "提克特斯",
     "tier": "T2",
-    "winrate": 0.1599,
-    "top4": 0.5903,
-    "avg": 3.98,
-    "pickrate": 28.9
+    "winrate": 0.1621,
+    "top4": 0.5994,
+    "avg": 3.94,
+    "pickrate": 30.29
    },
    {
-    "name": "迦拉克隆",
+    "name": "米罗克",
     "tier": "T2",
-    "winrate": 0.1474,
-    "top4": 0.6017,
-    "avg": 3.99,
-    "pickrate": 34.66
+    "winrate": 0.1843,
+    "top4": 0.5934,
+    "avg": 3.95,
+    "pickrate": 42.08
    },
    {
-    "name": "芬利·莫格顿爵士",
+    "name": "比格沃斯先生",
     "tier": "T2",
-    "winrate": 0.167,
-    "top4": 0.5921,
-    "avg": 3.99,
-    "pickrate": 38.54
+    "winrate": 0.1669,
+    "top4": 0.5933,
+    "avg": 3.96,
+    "pickrate": 18.82
    },
    {
-    "name": "摩洛克·福尔摩斯",
+    "name": "無限巨龍姆诺茲多",
     "tier": "T2",
-    "winrate": 0.164,
-    "top4": 0.5945,
-    "avg": 3.99,
-    "pickrate": 22.55
+    "winrate": 0.1676,
+    "top4": 0.6075,
+    "avg": 3.96,
+    "pickrate": 39.9
    },
    {
-    "name": "克苏恩",
+    "name": "館长",
     "tier": "T2",
-    "winrate": 0.1156,
-    "top4": 0.6024,
-    "avg": 3.99,
-    "pickrate": 11.81
-   },
-   {
-    "name": "伊瑟拉",
-    "tier": "T2",
-    "winrate": 0.1409,
-    "top4": 0.5838,
-    "avg": 4,
-    "pickrate": 18.11
-   },
-   {
-    "name": "布鲁坎",
-    "tier": "T2",
-    "winrate": 0.1377,
-    "top4": 0.5929,
-    "avg": 4,
-    "pickrate": 11.55
-   },
-   {
-    "name": "強化機器人",
-    "tier": "T2",
-    "winrate": 0.1445,
-    "top4": 0.5912,
-    "avg": 4,
-    "pickrate": 24.24
-   },
-   {
-    "name": "鼠王",
-    "tier": "T2",
-    "winrate": 0.1482,
-    "top4": 0.5885,
-    "avg": 4.01,
-    "pickrate": 19.02
-   },
-   {
-    "name": "泰瑟蘭·血望者",
-    "tier": "T2",
-    "winrate": 0.1451,
-    "top4": 0.5873,
-    "avg": 4.01,
-    "pickrate": 14.76
+    "winrate": 0.1429,
+    "top4": 0.5991,
+    "avg": 3.96,
+    "pickrate": 19.94
    },
    {
     "name": "拉卡尼休",
     "tier": "T2",
-    "winrate": 0.1348,
-    "top4": 0.5983,
-    "avg": 4.01,
-    "pickrate": 18.17
+    "winrate": 0.14,
+    "top4": 0.6053,
+    "avg": 3.97,
+    "pickrate": 17.95
    },
    {
-    "name": "尤朵拉船长",
+    "name": "摩洛克·福尔摩斯",
     "tier": "T2",
-    "winrate": 0.1556,
-    "top4": 0.5866,
-    "avg": 4.02,
-    "pickrate": 29.67
+    "winrate": 0.1786,
+    "top4": 0.592,
+    "avg": 3.97,
+    "pickrate": 20.1
    },
    {
-    "name": "希拉斯·暗月",
+    "name": "亞煞極",
     "tier": "T2",
-    "winrate": 0.147,
-    "top4": 0.5837,
-    "avg": 4.03,
-    "pickrate": 22.92
+    "winrate": 0.1401,
+    "top4": 0.5913,
+    "avg": 3.98,
+    "pickrate": 15.37
+   },
+   {
+    "name": "布鲁坎",
+    "tier": "T2",
+    "winrate": 0.1465,
+    "top4": 0.5917,
+    "avg": 3.98,
+    "pickrate": 12.39
+   },
+   {
+    "name": "強化機器人",
+    "tier": "T2",
+    "winrate": 0.1497,
+    "top4": 0.5939,
+    "avg": 3.99,
+    "pickrate": 24.93
    },
    {
     "name": "洛卡拉",
     "tier": "T2",
-    "winrate": 0.1192,
-    "top4": 0.5915,
-    "avg": 4.03,
-    "pickrate": 9.16
+    "winrate": 0.1326,
+    "top4": 0.6042,
+    "avg": 3.99,
+    "pickrate": 9.2
    },
    {
-    "name": "天空上尉庫拉格",
+    "name": "斯尼德",
     "tier": "T2",
-    "winrate": 0.1602,
-    "top4": 0.5793,
-    "avg": 4.04,
-    "pickrate": 18.18
+    "winrate": 0.1319,
+    "top4": 0.601,
+    "avg": 3.99,
+    "pickrate": 13.45
    },
    {
-    "name": "阮大師",
+    "name": "薩鲁法尔大王",
     "tier": "T2",
-    "winrate": 0.1686,
-    "top4": 0.5757,
-    "avg": 4.04,
-    "pickrate": 41.73
+    "winrate": 0.129,
+    "top4": 0.5963,
+    "avg": 3.99,
+    "pickrate": 14.72
    },
    {
-    "name": "凱尔薩斯·逐日者",
+    "name": "雷诺·杰克逊",
     "tier": "T2",
-    "winrate": 0.1431,
-    "top4": 0.584,
-    "avg": 4.04,
-    "pickrate": 14.97
-   },
-   {
-    "name": "沙德沃克",
-    "tier": "T2",
-    "winrate": 0.1546,
-    "top4": 0.5807,
-    "avg": 4.05,
-    "pickrate": 29.28
-   },
-   {
-    "name": "預言者努波顿",
-    "tier": "T2",
-    "winrate": 0.1638,
-    "top4": 0.5787,
-    "avg": 4.05,
-    "pickrate": 17.92
-   },
-   {
-    "name": "了不起的杰弗裡斯",
-    "tier": "T2",
-    "winrate": 0.1572,
-    "top4": 0.5749,
-    "avg": 4.06,
-    "pickrate": 26.87
-   },
-   {
-    "name": "摇滚教父沃恩",
-    "tier": "T2",
-    "winrate": 0.1577,
-    "top4": 0.5763,
-    "avg": 4.06,
-    "pickrate": 22.37
-   },
-   {
-    "name": "斯卡布斯·刀油",
-    "tier": "T2",
-    "winrate": 0.1434,
-    "top4": 0.5757,
-    "avg": 4.06,
-    "pickrate": 20.75
+    "winrate": 0.1861,
+    "top4": 0.5812,
+    "avg": 4,
+    "pickrate": 42.11
    },
    {
     "name": "荷利戴醫生",
     "tier": "T2",
-    "winrate": 0.1362,
-    "top4": 0.5853,
-    "avg": 4.06,
-    "pickrate": 15.71
+    "winrate": 0.1509,
+    "top4": 0.5816,
+    "avg": 4.01,
+    "pickrate": 16.44
    },
    {
-    "name": "瓦尔登·晨擁",
+    "name": "齊恩瓦拉",
     "tier": "T2",
-    "winrate": 0.1465,
-    "top4": 0.5789,
-    "avg": 4.07,
-    "pickrate": 17.06
+    "winrate": 0.1492,
+    "top4": 0.5946,
+    "avg": 4.01,
+    "pickrate": 27.56
    },
    {
-    "name": "狂風之翼",
+    "name": "凱尔薩斯·逐日者",
     "tier": "T2",
-    "winrate": 0.162,
-    "top4": 0.5758,
-    "avg": 4.07,
-    "pickrate": 19.48
+    "winrate": 0.1368,
+    "top4": 0.5914,
+    "avg": 4.01,
+    "pickrate": 16.27
+   },
+   {
+    "name": "克苏恩",
+    "tier": "T2",
+    "winrate": 0.1104,
+    "top4": 0.5996,
+    "avg": 4.01,
+    "pickrate": 10.5
+   },
+   {
+    "name": "沙德沃克",
+    "tier": "T2",
+    "winrate": 0.1564,
+    "top4": 0.5907,
+    "avg": 4.02,
+    "pickrate": 25.23
+   },
+   {
+    "name": "鼠王",
+    "tier": "T2",
+    "winrate": 0.1459,
+    "top4": 0.5914,
+    "avg": 4.02,
+    "pickrate": 18.31
+   },
+   {
+    "name": "泰瑟蘭·血望者",
+    "tier": "T2",
+    "winrate": 0.1427,
+    "top4": 0.5893,
+    "avg": 4.02,
+    "pickrate": 12.93
+   },
+   {
+    "name": "希拉斯·暗月",
+    "tier": "T2",
+    "winrate": 0.15,
+    "top4": 0.5842,
+    "avg": 4.03,
+    "pickrate": 21.15
+   },
+   {
+    "name": "塔維什·雷矛",
+    "tier": "T2",
+    "winrate": 0.1371,
+    "top4": 0.5854,
+    "avg": 4.03,
+    "pickrate": 20.85
    },
    {
     "name": "钩牙船长",
     "tier": "T2",
-    "winrate": 0.1469,
-    "top4": 0.5743,
-    "avg": 4.08,
-    "pickrate": 16.01
+    "winrate": 0.1472,
+    "top4": 0.5836,
+    "avg": 4.04,
+    "pickrate": 16.51
    },
    {
-    "name": "蛇眼",
+    "name": "芬利·莫格顿爵士",
     "tier": "T2",
-    "winrate": 0.1607,
-    "top4": 0.5743,
-    "avg": 4.08,
-    "pickrate": 30.74
+    "winrate": 0.1616,
+    "top4": 0.5832,
+    "avg": 4.04,
+    "pickrate": 37.83
    },
    {
-    "name": "海盜帕奇斯",
+    "name": "霍格船长",
     "tier": "T2",
-    "winrate": 0.1225,
-    "top4": 0.58,
-    "avg": 4.08,
-    "pickrate": 19.59
-   },
-   {
-    "name": "費林大使",
-    "tier": "T3",
-    "winrate": 0.1698,
-    "top4": 0.5682,
-    "avg": 4.09,
-    "pickrate": 38.06
-   },
-   {
-    "name": "雷诺·杰克逊",
-    "tier": "T3",
-    "winrate": 0.1784,
-    "top4": 0.5657,
-    "avg": 4.09,
-    "pickrate": 38.64
-   },
-   {
-    "name": "格雷布",
-    "tier": "T3",
-    "winrate": 0.1286,
-    "top4": 0.5736,
-    "avg": 4.09,
-    "pickrate": 21.94
+    "winrate": 0.1682,
+    "top4": 0.5768,
+    "avg": 4.04,
+    "pickrate": 22.88
    },
    {
     "name": "米尔豪斯·法力風暴",
-    "tier": "T3",
-    "winrate": 0.1088,
-    "top4": 0.5753,
-    "avg": 4.1,
-    "pickrate": 9.41
-   },
-   {
-    "name": "齊恩瓦拉",
-    "tier": "T3",
-    "winrate": 0.1359,
-    "top4": 0.5773,
-    "avg": 4.1,
-    "pickrate": 27.34
-   },
-   {
-    "name": "永恆者托奇",
-    "tier": "T3",
-    "winrate": 0.1461,
-    "top4": 0.5702,
-    "avg": 4.11,
-    "pickrate": 22.14
-   },
-   {
-    "name": "瑪裡苟斯",
-    "tier": "T3",
-    "winrate": 0.1367,
-    "top4": 0.5699,
-    "avg": 4.11,
-    "pickrate": 15.32
-   },
-   {
-    "name": "伊妮·积雷",
-    "tier": "T3",
-    "winrate": 0.1561,
-    "top4": 0.5543,
-    "avg": 4.12,
-    "pickrate": 17.25
-   },
-   {
-    "name": "廚師曲奇",
-    "tier": "T3",
-    "winrate": 0.1568,
-    "top4": 0.5591,
-    "avg": 4.13,
-    "pickrate": 19.14
-   },
-   {
-    "name": "至尊盜王拉法姆",
-    "tier": "T3",
-    "winrate": 0.1362,
-    "top4": 0.5651,
-    "avg": 4.14,
-    "pickrate": 15.64
-   },
-   {
-    "name": "厄祖瑪特",
-    "tier": "T3",
-    "winrate": 0.1195,
-    "top4": 0.5648,
-    "avg": 4.14,
-    "pickrate": 7.29
-   },
-   {
-    "name": "伊莉斯·逐星",
-    "tier": "T3",
-    "winrate": 0.1441,
-    "top4": 0.5602,
-    "avg": 4.14,
-    "pickrate": 12.73
-   },
-   {
-    "name": "奧妮克希亞",
-    "tier": "T3",
+    "tier": "T2",
     "winrate": 0.1153,
-    "top4": 0.5762,
-    "avg": 4.14,
-    "pickrate": 10.1
+    "top4": 0.5899,
+    "avg": 4.04,
+    "pickrate": 11.13
    },
    {
-    "name": "時光扭曲者克罗米",
-    "tier": "T3",
-    "winrate": 0.1439,
-    "top4": 0.5645,
-    "avg": 4.15,
-    "pickrate": 17.51
+    "name": "迦拉克隆",
+    "tier": "T2",
+    "winrate": 0.1584,
+    "top4": 0.581,
+    "avg": 4.04,
+    "pickrate": 33.41
    },
    {
-    "name": "泽瑞拉",
-    "tier": "T3",
-    "winrate": 0.1407,
-    "top4": 0.5602,
-    "avg": 4.15,
-    "pickrate": 16.44
+    "name": "狂風之翼",
+    "tier": "T2",
+    "winrate": 0.1618,
+    "top4": 0.5859,
+    "avg": 4.04,
+    "pickrate": 20.7
+   },
+   {
+    "name": "天空上尉庫拉格",
+    "tier": "T2",
+    "winrate": 0.1608,
+    "top4": 0.5751,
+    "avg": 4.05,
+    "pickrate": 18.16
+   },
+   {
+    "name": "了不起的杰弗裡斯",
+    "tier": "T2",
+    "winrate": 0.16,
+    "top4": 0.574,
+    "avg": 4.05,
+    "pickrate": 26.68
    },
    {
     "name": "诺茲多姆",
-    "tier": "T3",
-    "winrate": 0.1439,
-    "top4": 0.5586,
-    "avg": 4.15,
-    "pickrate": 13.87
+    "tier": "T2",
+    "winrate": 0.1545,
+    "top4": 0.5794,
+    "avg": 4.05,
+    "pickrate": 16.85
    },
    {
-    "name": "恐龍大師布莱恩",
-    "tier": "T3",
-    "winrate": 0.1375,
-    "top4": 0.5605,
-    "avg": 4.15,
-    "pickrate": 30.72
+    "name": "阮大師",
+    "tier": "T2",
+    "winrate": 0.1631,
+    "top4": 0.575,
+    "avg": 4.06,
+    "pickrate": 40.4
    },
    {
-    "name": "巴罗夫領主",
-    "tier": "T3",
-    "winrate": 0.1499,
-    "top4": 0.5652,
-    "avg": 4.16,
-    "pickrate": 17.83
+    "name": "摇滚教父沃恩",
+    "tier": "T2",
+    "winrate": 0.1584,
+    "top4": 0.5733,
+    "avg": 4.06,
+    "pickrate": 21.92
    },
    {
-    "name": "瑪維·影歌",
+    "name": "蛇眼",
     "tier": "T3",
-    "winrate": 0.1414,
-    "top4": 0.5573,
-    "avg": 4.16,
-    "pickrate": 10.81
+    "winrate": 0.1626,
+    "top4": 0.5762,
+    "avg": 4.06,
+    "pickrate": 32.79
    },
    {
-    "name": "林地守護者欧穆",
+    "name": "尤朵拉船长",
     "tier": "T3",
-    "winrate": 0.1548,
-    "top4": 0.557,
-    "avg": 4.17,
-    "pickrate": 22.75
-   },
-   {
-    "name": "吉恩，狼人國王",
-    "tier": "T3",
-    "winrate": 0.1722,
-    "top4": 0.551,
-    "avg": 4.17,
-    "pickrate": 40.65
-   },
-   {
-    "name": "劫匪之王托瓦格尔",
-    "tier": "T3",
-    "winrate": 0.1391,
-    "top4": 0.5548,
-    "avg": 4.17,
-    "pickrate": 12.22
-   },
-   {
-    "name": "森林之王塞納留斯",
-    "tier": "T3",
-    "winrate": 0.2053,
-    "top4": 0.5445,
-    "avg": 4.18,
-    "pickrate": 34.59
-   },
-   {
-    "name": "詹迪斯·巴罗夫",
-    "tier": "T3",
-    "winrate": 0.1318,
-    "top4": 0.5557,
-    "avg": 4.18,
-    "pickrate": 14.08
-   },
-   {
-    "name": "斯尼德",
-    "tier": "T3",
-    "winrate": 0.1233,
-    "top4": 0.5506,
-    "avg": 4.19,
-    "pickrate": 9.6
+    "winrate": 0.1595,
+    "top4": 0.5766,
+    "avg": 4.06,
+    "pickrate": 29.53
    },
    {
     "name": "米尔菲丝·法力風暴",
     "tier": "T3",
-    "winrate": 0.1797,
-    "top4": 0.5347,
-    "avg": 4.19,
-    "pickrate": 19.93
+    "winrate": 0.1901,
+    "top4": 0.5651,
+    "avg": 4.06,
+    "pickrate": 22.35
+   },
+   {
+    "name": "斯卡布斯·刀油",
+    "tier": "T3",
+    "winrate": 0.1529,
+    "top4": 0.5694,
+    "avg": 4.07,
+    "pickrate": 21.49
+   },
+   {
+    "name": "大主教奧薩尔",
+    "tier": "T3",
+    "winrate": 0.1377,
+    "top4": 0.5849,
+    "avg": 4.07,
+    "pickrate": 12.24
+   },
+   {
+    "name": "伊莉斯·逐星",
+    "tier": "T3",
+    "winrate": 0.1446,
+    "top4": 0.5796,
+    "avg": 4.08,
+    "pickrate": 15.93
+   },
+   {
+    "name": "瑪維·影歌",
+    "tier": "T3",
+    "winrate": 0.1528,
+    "top4": 0.5742,
+    "avg": 4.09,
+    "pickrate": 11.83
+   },
+   {
+    "name": "詹迪斯·巴罗夫",
+    "tier": "T3",
+    "winrate": 0.1314,
+    "top4": 0.5727,
+    "avg": 4.09,
+    "pickrate": 16.43
+   },
+   {
+    "name": "預言者努波顿",
+    "tier": "T3",
+    "winrate": 0.164,
+    "top4": 0.5663,
+    "avg": 4.09,
+    "pickrate": 17.54
+   },
+   {
+    "name": "巫妖巴茲亞尔",
+    "tier": "T3",
+    "winrate": 0.1219,
+    "top4": 0.5811,
+    "avg": 4.09,
+    "pickrate": 18.8
+   },
+   {
+    "name": "恐龍大師布莱恩",
+    "tier": "T3",
+    "winrate": 0.1405,
+    "top4": 0.5705,
+    "avg": 4.11,
+    "pickrate": 30.84
+   },
+   {
+    "name": "林地守護者欧穆",
+    "tier": "T3",
+    "winrate": 0.1663,
+    "top4": 0.565,
+    "avg": 4.11,
+    "pickrate": 23.19
+   },
+   {
+    "name": "瓦尔登·晨擁",
+    "tier": "T3",
+    "winrate": 0.1456,
+    "top4": 0.5621,
+    "avg": 4.12,
+    "pickrate": 18.47
+   },
+   {
+    "name": "時光扭曲者克罗米",
+    "tier": "T3",
+    "winrate": 0.1434,
+    "top4": 0.5754,
+    "avg": 4.12,
+    "pickrate": 17.94
    },
    {
     "name": "塔姆辛·罗姆",
     "tier": "T3",
-    "winrate": 0.1156,
-    "top4": 0.5556,
-    "avg": 4.19,
-    "pickrate": 8.66
+    "winrate": 0.1276,
+    "top4": 0.5583,
+    "avg": 4.13,
+    "pickrate": 9.52
    },
    {
-    "name": "阿蘭娜·逐星",
+    "name": "泽瑞拉",
     "tier": "T3",
-    "winrate": 0.1521,
-    "top4": 0.5479,
-    "avg": 4.2,
-    "pickrate": 14.42
+    "winrate": 0.1433,
+    "top4": 0.562,
+    "avg": 4.14,
+    "pickrate": 15.76
    },
    {
-    "name": "瘋狂金字塔",
+    "name": "巴罗夫領主",
     "tier": "T3",
-    "winrate": 0.118,
-    "top4": 0.5517,
-    "avg": 4.21,
-    "pickrate": 8.48
+    "winrate": 0.1513,
+    "top4": 0.5686,
+    "avg": 4.14,
+    "pickrate": 19.17
    },
    {
-    "name": "刀鋒女王凱瑞甘",
+    "name": "至尊盜王拉法姆",
     "tier": "T3",
-    "winrate": 0.106,
-    "top4": 0.5527,
-    "avg": 4.22,
-    "pickrate": 5.1
+    "winrate": 0.1442,
+    "top4": 0.5609,
+    "avg": 4.15,
+    "pickrate": 16.08
    },
    {
-    "name": "德納修斯大帝",
+    "name": "費林大使",
     "tier": "T3",
-    "winrate": 0.169,
-    "top4": 0.5416,
-    "avg": 4.22,
-    "pickrate": 44.24
+    "winrate": 0.1665,
+    "top4": 0.5521,
+    "avg": 4.16,
+    "pickrate": 36.66
    },
    {
-    "name": "樂队經理精英牛頭人酋长",
+    "name": "吉恩，狼人國王",
     "tier": "T3",
-    "winrate": 0.1478,
-    "top4": 0.5321,
-    "avg": 4.23,
-    "pickrate": 22.42
+    "winrate": 0.1776,
+    "top4": 0.5513,
+    "avg": 4.16,
+    "pickrate": 40.31
    },
    {
-    "name": "霍格船长",
+    "name": "廚師曲奇",
     "tier": "T3",
-    "winrate": 0.1259,
-    "top4": 0.55,
-    "avg": 4.23,
-    "pickrate": 17.67
+    "winrate": 0.1504,
+    "top4": 0.5589,
+    "avg": 4.16,
+    "pickrate": 17.41
+   },
+   {
+    "name": "永恆者托奇",
+    "tier": "T3",
+    "winrate": 0.1443,
+    "top4": 0.5609,
+    "avg": 4.16,
+    "pickrate": 22.7
+   },
+   {
+    "name": "格雷布",
+    "tier": "T3",
+    "winrate": 0.1075,
+    "top4": 0.5689,
+    "avg": 4.16,
+    "pickrate": 20.94
    },
    {
     "name": "克隆大師泽裡克",
     "tier": "T3",
-    "winrate": 0.1565,
-    "top4": 0.54,
-    "avg": 4.24,
-    "pickrate": 27.2
+    "winrate": 0.162,
+    "top4": 0.544,
+    "avg": 4.17,
+    "pickrate": 32.11
    },
    {
-    "name": "庫尔特鲁斯·陨烬",
+    "name": "森林之王塞納留斯",
     "tier": "T3",
-    "winrate": 0.1349,
-    "top4": 0.54,
-    "avg": 4.24,
-    "pickrate": 9.75
-   },
-   {
-    "name": "贸易親王加裡維克斯",
-    "tier": "T3",
-    "winrate": 0.1987,
-    "top4": 0.5319,
-    "avg": 4.25,
-    "pickrate": 26.25
-   },
-   {
-    "name": "苔丝·格雷迈恩",
-    "tier": "T3",
-    "winrate": 0.1375,
-    "top4": 0.5322,
-    "avg": 4.27,
-    "pickrate": 20
-   },
-   {
-    "name": "古夫·符文圖騰",
-    "tier": "T3",
-    "winrate": 0.1502,
-    "top4": 0.5291,
-    "avg": 4.28,
-    "pickrate": 16.34
-   },
-   {
-    "name": "艾德温·範克裡夫",
-    "tier": "T3",
-    "winrate": 0.0927,
-    "top4": 0.5473,
-    "avg": 4.28,
-    "pickrate": 6.19
-   },
-   {
-    "name": "基希克斯",
-    "tier": "T3",
-    "winrate": 0.1227,
-    "top4": 0.5381,
-    "avg": 4.29,
-    "pickrate": 21.87
-   },
-   {
-    "name": "辛达苟薩",
-    "tier": "T3",
-    "winrate": 0.1414,
-    "top4": 0.523,
-    "avg": 4.3,
-    "pickrate": 14.97
+    "winrate": 0.1998,
+    "top4": 0.5465,
+    "avg": 4.18,
+    "pickrate": 35.24
    },
    {
     "name": "炎魔之王拉格納罗斯",
     "tier": "T3",
-    "winrate": 0.0967,
-    "top4": 0.5371,
-    "avg": 4.32,
-    "pickrate": 6.67
+    "winrate": 0.1174,
+    "top4": 0.5519,
+    "avg": 4.18,
+    "pickrate": 7.86
    },
    {
-    "name": "阿塔尼斯",
+    "name": "厄祖瑪特",
     "tier": "T3",
-    "winrate": 0.125,
-    "top4": 0.5228,
-    "avg": 4.35,
-    "pickrate": 11.32
+    "winrate": 0.1228,
+    "top4": 0.5528,
+    "avg": 4.19,
+    "pickrate": 7.88
+   },
+   {
+    "name": "德納修斯大帝",
+    "tier": "T3",
+    "winrate": 0.1741,
+    "top4": 0.5453,
+    "avg": 4.19,
+    "pickrate": 45.93
+   },
+   {
+    "name": "瑪裡苟斯",
+    "tier": "T3",
+    "winrate": 0.1343,
+    "top4": 0.548,
+    "avg": 4.21,
+    "pickrate": 13.71
+   },
+   {
+    "name": "阿蘭娜·逐星",
+    "tier": "T3",
+    "winrate": 0.1505,
+    "top4": 0.5482,
+    "avg": 4.21,
+    "pickrate": 14.3
+   },
+   {
+    "name": "奧妮克希亞",
+    "tier": "T3",
+    "winrate": 0.1117,
+    "top4": 0.5474,
+    "avg": 4.21,
+    "pickrate": 10.47
+   },
+   {
+    "name": "贸易親王加裡維克斯",
+    "tier": "T3",
+    "winrate": 0.2058,
+    "top4": 0.5356,
+    "avg": 4.22,
+    "pickrate": 27.62
+   },
+   {
+    "name": "劫匪之王托瓦格尔",
+    "tier": "T3",
+    "winrate": 0.134,
+    "top4": 0.5427,
+    "avg": 4.22,
+    "pickrate": 11.69
+   },
+   {
+    "name": "樂队經理精英牛頭人酋长",
+    "tier": "T3",
+    "winrate": 0.1547,
+    "top4": 0.5287,
+    "avg": 4.23,
+    "pickrate": 21.6
+   },
+   {
+    "name": "艾德温·範克裡夫",
+    "tier": "T3",
+    "winrate": 0.1183,
+    "top4": 0.5403,
+    "avg": 4.24,
+    "pickrate": 6.46
+   },
+   {
+    "name": "庫尔特鲁斯·陨烬",
+    "tier": "T3",
+    "winrate": 0.1316,
+    "top4": 0.5328,
+    "avg": 4.26,
+    "pickrate": 10.64
+   },
+   {
+    "name": "基希克斯",
+    "tier": "T3",
+    "winrate": 0.1246,
+    "top4": 0.5396,
+    "avg": 4.26,
+    "pickrate": 18.73
    },
    {
     "name": "普崔塞德教授",
     "tier": "T3",
-    "winrate": 0.1027,
-    "top4": 0.5116,
-    "avg": 4.39,
-    "pickrate": 9.41
+    "winrate": 0.128,
+    "top4": 0.5521,
+    "avg": 4.26,
+    "pickrate": 11.51
+   },
+   {
+    "name": "辛达苟薩",
+    "tier": "T3",
+    "winrate": 0.1467,
+    "top4": 0.5331,
+    "avg": 4.27,
+    "pickrate": 15.87
+   },
+   {
+    "name": "瘋狂金字塔",
+    "tier": "T3",
+    "winrate": 0.1247,
+    "top4": 0.5282,
+    "avg": 4.27,
+    "pickrate": 8.63
+   },
+   {
+    "name": "阿塔尼斯",
+    "tier": "T3",
+    "winrate": 0.1362,
+    "top4": 0.541,
+    "avg": 4.27,
+    "pickrate": 11.64
+   },
+   {
+    "name": "古夫·符文圖騰",
+    "tier": "T3",
+    "winrate": 0.1422,
+    "top4": 0.5297,
+    "avg": 4.29,
+    "pickrate": 17.13
    },
    {
     "name": "吉姆·雷诺",
     "tier": "T3",
-    "winrate": 0.1089,
-    "top4": 0.4983,
-    "avg": 4.4,
-    "pickrate": 10.85
+    "winrate": 0.1174,
+    "top4": 0.5115,
+    "avg": 4.32,
+    "pickrate": 11.5
+   },
+   {
+    "name": "苔丝·格雷迈恩",
+    "tier": "T3",
+    "winrate": 0.1422,
+    "top4": 0.5134,
+    "avg": 4.32,
+    "pickrate": 20.45
+   },
+   {
+    "name": "刀鋒女王凱瑞甘",
+    "tier": "T3",
+    "winrate": 0.0946,
+    "top4": 0.5152,
+    "avg": 4.34,
+    "pickrate": 5.25
    },
    {
     "name": "菌菇術士弗洛格尔",
     "tier": "T3",
-    "winrate": 0.1258,
-    "top4": 0.5002,
-    "avg": 4.47,
-    "pickrate": 10.41
+    "winrate": 0.1112,
+    "top4": 0.5197,
+    "avg": 4.36,
+    "pickrate": 12.07
    }
   ]
  }

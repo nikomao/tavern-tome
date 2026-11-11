@@ -10,7 +10,8 @@ const H = { "user-agent": "tavern-tome/1.0" };
 const SEGS = [100, 50, 10, 1];
 
 async function getJson(url) {
-  const r = await fetch(url, { headers: H });
+  console.log("Fetching:", url);
+  const r = await fetch(url, { headers: H, signal: AbortSignal.timeout(60000) });
   if (!r.ok) throw new Error(url + " " + r.status);
   const b = Buffer.from(await r.arrayBuffer());
   return JSON.parse(b[0] === 0x1f ? gunzipSync(b).toString("utf8") : b.toString("utf8"));
@@ -31,8 +32,9 @@ for (const c of cards) if (c.id) names[c.id] = c.name;
 const out = {};
 for (const seg of SEGS) {
   const hs = await getJson("https://static.zerotoheroes.com/api/bgs/hero-stats/mmr-" + seg + "/last-patch/overview-from-hourly.gz.json");
+  const minPicks = seg === 1 ? 15 : seg === 10 ? 50 : 100;
   const heroes = hs.heroStats
-    .filter(h => names[h.heroCardId] && h.totalPicked >= 200)
+    .filter(h => names[h.heroCardId] && h.totalPicked >= minPicks)
     .map(h => {
       const r = rates(h);
       return {

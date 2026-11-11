@@ -1,68 +1,68 @@
 /* 本周变化（由 scripts/diff_stats.mjs 生成） */
 const STATS_CHANGE = {
-  "from": "2026-11-01",
-  "to": "2026-11-05",
+  "from": "2026-11-05",
+  "to": "2026-11-10",
   "first": false,
-  "sampleFrom": 2202934,
-  "sampleTo": 2263201,
+  "sampleFrom": 2263201,
+  "sampleTo": 411064,
   "heroes": [
     {
-      "name": "典狱长",
-      "rankFrom": 13,
-      "rankTo": 16,
-      "avgFrom": 3.83,
-      "avgTo": 3.84,
-      "delta": 0.01,
-      "tierFrom": "T1",
+      "name": "伊妮·积雷",
+      "rankFrom": 78,
+      "rankTo": 29,
+      "avgFrom": 4.12,
+      "avgTo": 3.89,
+      "delta": -0.23,
+      "tierFrom": "T3",
       "tierTo": "T1"
     },
     {
-      "name": "阿莱克丝塔萨",
-      "rankFrom": 25,
-      "rankTo": 28,
-      "avgFrom": 3.9,
-      "avgTo": 3.91,
-      "delta": 0.01,
+      "name": "斯尼德",
+      "rankFrom": 95,
+      "rankTo": 48,
+      "avgFrom": 4.19,
+      "avgTo": 3.99,
+      "delta": -0.2,
+      "tierFrom": "T3",
+      "tierTo": "T2"
+    },
+    {
+      "name": "巫妖巴兹亚尔",
+      "rankFrom": 35,
+      "rankTo": 80,
+      "avgFrom": 3.95,
+      "avgTo": 4.09,
+      "delta": 0.14,
       "tierFrom": "T1",
-      "tierTo": "T1"
-    },
-    {
-      "name": "米罗克",
-      "rankFrom": 41,
-      "rankTo": 38,
-      "avgFrom": 3.97,
-      "avgTo": 3.96,
-      "delta": -0.01,
-      "tierFrom": "T2",
-      "tierTo": "T2"
-    },
-    {
-      "name": "摩洛克·福尔摩斯",
-      "rankFrom": 43,
-      "rankTo": 46,
-      "avgFrom": 3.98,
-      "avgTo": 3.99,
-      "delta": 0.01,
-      "tierFrom": "T2",
-      "tierTo": "T2"
-    },
-    {
-      "name": "克苏恩",
-      "rankFrom": 44,
-      "rankTo": 47,
-      "avgFrom": 3.98,
-      "avgTo": 3.99,
-      "delta": 0.01,
-      "tierFrom": "T2",
-      "tierTo": "T2"
+      "tierTo": "T3"
     },
     {
       "name": "海盗帕奇斯",
-      "rankFrom": 73,
-      "rankTo": 70,
-      "avgFrom": 4.09,
-      "avgTo": 4.08,
-      "delta": -0.01,
+      "rankFrom": 70,
+      "rankTo": 27,
+      "avgFrom": 4.08,
+      "avgTo": 3.86,
+      "delta": -0.22,
+      "tierFrom": "T2",
+      "tierTo": "T1"
+    },
+    {
+      "name": "伊瑟拉",
+      "rankFrom": 48,
+      "rankTo": 6,
+      "avgFrom": 4,
+      "avgTo": 3.73,
+      "delta": -0.27,
+      "tierFrom": "T2",
+      "tierTo": "T0"
+    },
+    {
+      "name": "霍格船长",
+      "rankFrom": 103,
+      "rankTo": 62,
+      "avgFrom": 4.23,
+      "avgTo": 4.04,
+      "delta": -0.19,
       "tierFrom": "T3",
       "tierTo": "T2"
     }
@@ -71,35 +71,68 @@ const STATS_CHANGE = {
     {
       "key": "quilboar_felboar_spam",
       "name": "野猪人·邪能鲜血",
-      "rankFrom": 14,
-      "rankTo": 1,
-      "avgFrom": 3.55,
-      "avgTo": 3.02,
-      "delta": -0.53,
-      "tierFrom": "T2",
-      "tierTo": "T0"
+      "rankFrom": 1,
+      "rankTo": 15,
+      "avgFrom": 3.02,
+      "avgTo": 3.61,
+      "delta": 0.59,
+      "tierFrom": "T0",
+      "tierTo": "T2"
+    },
+    {
+      "key": "pirate_discover",
+      "name": "海盗·发现",
+      "rankFrom": 23,
+      "rankTo": 10,
+      "avgFrom": 3.79,
+      "avgTo": 3.45,
+      "delta": -0.34,
+      "tierFrom": "T3",
+      "tierTo": "T1"
     },
     {
       "key": "elemental_azerite",
       "name": "元素·艾泽里特倒转",
-      "rankFrom": 9,
-      "rankTo": 3,
-      "avgFrom": 3.43,
-      "avgTo": 3.12,
-      "delta": -0.31,
-      "tierFrom": "T1",
-      "tierTo": "T0"
+      "rankFrom": 4,
+      "rankTo": 12,
+      "avgFrom": 3.12,
+      "avgTo": 3.49,
+      "delta": 0.37,
+      "tierFrom": "T0",
+      "tierTo": "T1"
     },
     {
-      "key": "murloc_scam",
-      "name": "鱼人·下水道下毒",
-      "rankFrom": 12,
-      "rankTo": 6,
-      "avgFrom": 3.54,
-      "avgTo": 3.24,
-      "delta": -0.3,
+      "key": "mech_glambot",
+      "name": "机械·魅力机器人",
+      "rankFrom": 29,
+      "rankTo": 22,
+      "avgFrom": 4.2,
+      "avgTo": 3.84,
+      "delta": -0.36,
+      "tierFrom": "T3",
+      "tierTo": "T3"
+    },
+    {
+      "key": "undead_apm",
+      "name": "亡灵·纺织工复生",
+      "rankFrom": 7,
+      "rankTo": 14,
+      "avgFrom": 3.28,
+      "avgTo": 3.6,
+      "delta": 0.32,
+      "tierFrom": "T1",
+      "tierTo": "T2"
+    },
+    {
+      "key": "demon_self_damage",
+      "name": "恶魔·自伤",
+      "rankFrom": 20,
+      "rankTo": 26,
+      "avgFrom": 3.76,
+      "avgTo": 3.94,
+      "delta": 0.18,
       "tierFrom": "T2",
-      "tierTo": "T1"
+      "tierTo": "T3"
     }
   ]
 };

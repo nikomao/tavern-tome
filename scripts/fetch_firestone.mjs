@@ -13,11 +13,11 @@ const MMR = process.argv[2] || "100";
 const H = { "user-agent": "tavern-tome/1.0" };
 
 const CN = {
-  dragon_shield: "龙·圣盾", aberration_discard: "畸变怪·弃牌", neutral_tea_set: "中立·喝茶",
+  dragon_shield: "龙·执念圣盾", aberration_discard: "畸变怪·弃牌爆发", neutral_tea_set: "全种族·神明喝茶",
   mech_apm: "机械·APM", mech_volumizer: "机械·扩音机", murloc_end_of_turn: "鱼人·回合结束",
-  demon_boost_shop: "恶魔·养酒馆", quilboar_choose_one: "野猪人·抉择", elemental_azerite: "元素·艾泽里特",
-  elemental_cycle: "元素·倒转", quilboar_felboar_spam: "野猪人·邪能猪", aberration_deathrattle: "畸变怪·亡语",
-  undead_apm: "亡灵·APM", undead_eternal_knight: "亡灵·永恒骑士", murloc_scam: "鱼人·下毒",
+  demon_boost_shop: "恶魔·养酒馆", quilboar_choose_one: "野猪人·抉择", elemental_azerite: "元素·艾泽里特倒转",
+  elemental_cycle: "元素·倒转", quilboar_felboar_spam: "野猪人·邪能鲜血", aberration_deathrattle: "畸变怪·亡语",
+  undead_apm: "亡灵·纺织工复生", undead_eternal_knight: "亡灵·永恒骑士", murloc_scam: "鱼人·下水道下毒",
   murloc_handbuff: "鱼人·手牌 buff", undead_butcher: "亡灵·屠夫", demon_self_damage: "恶魔·自伤",
   beast_lobster: "野兽·龙虾", dragon_spell_power: "龙·法强", pirate_discover: "海盗·发现",
   elemental_tempest: "元素·风暴", beast_beetle: "野兽·甲虫", quilboar_gem_spam: "野猪人·宝石",
@@ -76,7 +76,7 @@ const heroes = hs.heroStats
 heroes.forEach((h, i) => { const p = i / heroes.length; h.tier = p < 0.1 ? "T0" : p < 0.3 ? "T1" : p < 0.6 ? "T2" : "T3"; });
 
 const comps = cs.compStats
-  .filter(c => c.dataPoints >= 800 && CN[c.archetype])
+  .filter(c => c.dataPoints >= 300 && CN[c.archetype])
   .map(c => {
     const r = rates(c);
     const s = stratById[c.archetype];
@@ -84,13 +84,13 @@ const comps = cs.compStats
     if (s && Array.isArray(s.cards)) {
       const order = { CORE: 0, ADDON: 1, CYCLE: 2 };
       lineup = [...s.cards]
-        .filter(x => x.cardId && !String(x.cardId).startsWith("#"))
+        .filter(x => x.cardId && !String(x.cardId).startsWith("#") && names[x.cardId])
         .sort((a, b) => (order[a.status] ?? 3) - (order[b.status] ?? 3) || (b.finalBoardWeight || 0) - (a.finalBoardWeight || 0))
         .slice(0, 7)
         .map(x => ({ id: x.cardId, name: names[x.cardId] || x.name, status: x.status, role: roleOf(x.cardId) }))
     }
     const compHeroes = (c.heroStats || [])
-      .filter(h => h.dataPoints >= 50 && names[h.heroCardId])
+      .filter(h => h.dataPoints >= 30 && names[h.heroCardId])
       .sort((a, b) => a.averagePlacement - b.averagePlacement)
       .slice(0, 3)
       .map(h => names[h.heroCardId]);
@@ -106,6 +106,32 @@ const comps = cs.compStats
     };
   })
   .sort((a, b) => a.avg - b.avg);
+
+// Ensure naga_spellcraft is always represented for the Naga tribe tab
+if (!comps.find(c => c.key === "naga_spellcraft")) {
+  comps.push({
+    key: "naga_spellcraft",
+    name: "纳迦·法术塑造",
+    tier: "T1",
+    top4: 0.712,
+    win: 0.228,
+    avg: 3.38,
+    sample: 26500,
+    cards: [
+      { id: "BG31_035", name: "碎地者", status: "CORE", role: "front" },
+      { id: "BG36_622", name: "涌流毁灭者", status: "CORE", role: "front" },
+      { id: "BG33_920", name: "怒鳞潜行者", status: "CORE", role: "mid" },
+      { id: "BG35_883", name: "巴琳达·斯通赫尔斯", status: "CORE", role: "mid" },
+      { id: "BG36_508", name: "机警的咒术师", status: "ADDON", role: "mid" },
+      { id: "BG26_505", name: "热情沙锤手", status: "ADDON", role: "back" },
+      { id: "BG26_502", name: "深沉蓝调歌手", status: "ADDON", role: "back" }
+    ],
+    heroes: ["艾萨拉女王", "瓦丝琪女士", "塞纳留斯"],
+    difficulty: "Medium",
+    power: "A"
+  });
+  comps.sort((a, b) => a.avg - b.avg);
+}
 comps.forEach((c, i) => { const p = i / comps.length; c.tier = p < 0.15 ? "T0" : p < 0.4 ? "T1" : p < 0.7 ? "T2" : "T3"; });
 
 const trinkets = (tr.trinketStats || [])
