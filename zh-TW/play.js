@@ -103,7 +103,7 @@
 
   function current(){ return comps.filter(function(c){ return c.key === key; })[0] || comps[0]; }
 
-  var DEFAULTS = { turn: 1, tier: 1, gold: 3, health: 30, autoGold: true, slots: [], cards: null };
+  var DEFAULTS = { turn: 1, tier: 1, gold: 3, health: 30, autoGold: true, hasPair: false, pickedTrinket: "", slots: [], cards: null };
   var ui = {
     hero: initialHero,
     filter: "ALL_FILTER",
@@ -115,7 +115,10 @@
     stageTabTurnGroup: -1,
     pipMode: "full", // "full" | "mini"
     pipDetailId: null,
-    viewingShare: false
+    viewingShare: false,
+    mmrBracket: "100",
+    draftTribes: [],
+    draftHeroes: []
   };
 
   function loadPrefs(){
@@ -152,6 +155,8 @@
           gold: s.gold == null ? 3 : s.gold,
           health: s.health == null ? 30 : s.health,
           autoGold: s.autoGold !== false,
+          hasPair: !!s.hasPair,
+          pickedTrinket: s.pickedTrinket || "",
           slots: Array.isArray(s.slots) ? s.slots : [],
           cards: Array.isArray(s.cards) && s.cards.length ? s.cards : null
         };
@@ -237,9 +242,13 @@
     return orig && orig.status ? String(orig.status).toUpperCase() : "ADDON";
   }
 
-  function isCompBanned(c){
+  function isCompBannedWithMap(c, bansMap){
     var tid = compTribeId(c);
-    return !!(tid && tid !== "ALL" && ui.bans[tid]);
+    return !!(tid && tid !== "ALL" && bansMap && bansMap[tid]);
+  }
+
+  function isCompBanned(c){
+    return isCompBannedWithMap(c, ui.bans);
   }
 
   function isCompVisible(c){
@@ -272,45 +281,91 @@
     return { avail: avail, locked: locked, total: avail.length + locked.length };
   }
 
+  function tripleTimingAdvice(c){
+    var b = getMissingBuckets();
+    var note = (typeof COMP_NOTES !== "undefined" && c.key) ? COMP_NOTES[c.key] : null;
+    var engNames = {};
+    ((note && note.pipeline && note.pipeline.engine) || []).forEach(function(nm){ engNames[nm] = true; });
+    var allMissing = b.avail.concat(b.locked);
+    var prio = allMissing.filter(function(m){ return m.role === "CORE" || engNames[m.x.name]; });
+    var pool = prio.length ? prio : allMissing;
+    var discoverTier = Math.min(6, state.tier + 1);
+
+    if(state.health <= 15){
+      return {
+        mode: "danger",
+        short: "🩸 血量 ≤15 先保命三连！直接合对子碰 " + discoverTier + " 本戰力保血，別等高本貪上限。"
+      };
+    }
+    var exactNext = pool.filter(function(m){ return m.t === state.tier + 1; });
+    if(exactNext.length){
+      var names = exactNext.slice(0, 2).map(function(m){ return "【" + esc(m.x.name) + "】"; }).join(" / ");
+      return {
+        mode: "go",
+        short: "🌟 碰本黃金窗口！立刻合三连可直接發現 " + (state.tier + 1) + " 本 " + names + "！"
+      };
+    }
+    var higher = pool.filter(function(m){ return m.t != null && m.t > state.tier + 1 && m.t <= 6; });
+    if(higher.length && state.tier < 5){
+      var minT = Math.min.apply(null, higher.map(function(m){ return m.t; }));
+      var wNames = higher.filter(function(m){ return m.t === minT; }).slice(0, 2).map(function(m){ return "【" + esc(m.x.name) + "】"; }).join(" / ");
+      return {
+        mode: "wait",
+        short: "⏳ 建議先锁/凍住对子！升到 " + (minT - 1) + " 本後再合三连，直接碰 " + minT + " 本找 " + wNames + "。"
+      };
+    }
+    return {
+      mode: "go",
+      short: "✨ 當前已到核心本數：可直接合三连騰格子，並順手拿 " + discoverTier + " 本戰力或对策牌。"
+    };
+  }
+
   function advice(){
     var b = getMissingBuckets();
+    var res;
     if(!b.total){
-      return {
+      res = {
         main: "七格齊了：先調站位，再考慮追金。",
         sub: state.gold >= 10 ? "钱充裕可以 D 牌追三连或補对策（火車王/孢子），否則穩健調位。" : "把钱留到關鍵局補針对或升本追金。",
         nextId: null
       };
-    }
-
-    if(state.health <= 12){
+    } else if(state.health <= 12){
       var wall = b.avail.filter(function(m){ return /嘲諷|聖盾術/.test(m.text); })[0];
       if(wall){
-        return {
+        res = {
           main: "血線危險：先找【" + esc(wall.x.name) + "】（嘲諷/聖盾術穩血）",
           sub: "當前就能刷到，先保命活过这一輪再想上限。",
           nextId: wall.x.id
         };
       }
     }
-
-    if(b.avail.length){
+    if(!res && b.avail.length){
       var n = b.avail[0];
       var sub = state.gold >= 8 ? "本本可出，钱夠可以 D 牌找它，注意別 D 空戰力。"
         : state.gold <= 2 ? "金幣较少，先穩住場面，等下回合補钱再找。"
         : "現階段即可買到，边打边找，別硬刷空金幣。";
-      return {
+      res = {
         main: "現在最该找：【" + esc(n.x.name) + "】 " + (n.t != null ? tierStars(n.t) : "?") + " · " + roleCN(n.role),
         sub: sub,
         nextId: n.x.id
       };
     }
-
-    var l = b.locked[0];
-    return {
-      main: "先升到 " + tierStars(l.t) + " 本，再找【" + esc(l.x.name) + "】",
-      sub: "當前 " + tierStars(state.tier) + " 商店还刷不到高本核心，別在此階段盲目 D 牌。",
-      nextId: l.x.id
-    };
+    if(!res){
+      var l = b.locked[0];
+      res = {
+        main: "先升到 " + tierStars(l.t) + " 本，再找【" + esc(l.x.name) + "】",
+        sub: "當前 " + tierStars(state.tier) + " 商店还刷不到高本核心，別在此階段盲目 D 牌。",
+        nextId: l.x.id
+      };
+    }
+    if(state.hasPair){
+      var trAdv = tripleTimingAdvice(current());
+      res.sub = trAdv.short + " · " + res.sub;
+    }
+    if(state.pickedTrinket){
+      res.sub += "（💍 已選飾品：" + esc(state.pickedTrinket) + "）";
+    }
+    return res;
   }
 
   function switchComp(nextKey, opts){
@@ -891,10 +946,62 @@
         '<span class="pst-turn">T' + b.turn + '</span><span class="pst-tier">' + b.tier + '本</span></div>';
     }).join("");
 
+    var trHtml = "";
+    if(state.hasPair){
+      var trAdv = tripleTimingAdvice(current());
+      trHtml = '<div class="pch-triple ' + trAdv.mode + '">' + trAdv.short + '</div>';
+    }
+
     hud.innerHTML =
       '<div class="pch-head"><span class="pch-title">📈 升本節奏線（点擊可跳轉回合）</span><span class="pch-badge ' + badgeClass + '">' + badgeText + '</span></div>' +
       '<p class="pch-tip">' + tip + '</p>' +
-      '<div class="pch-timeline">' + steps + '</div>';
+      '<div class="pch-timeline">' + steps + '</div>' +
+      trHtml;
+    if(trHtml && window.enhanceCardMentions){
+      window.enhanceCardMentions(hud);
+    }
+  }
+
+  function renderTrinketBar(c){
+    var host = document.getElementById("playTrinketBar");
+    if(!host) return;
+    var note = (typeof COMP_NOTES !== "undefined" && c.key) ? COMP_NOTES[c.key] : null;
+    var tn = (note && note.trinket) ? note.trinket : null;
+    var topList = (typeof STATS !== "undefined" && Array.isArray(STATS.trinkets)) ? STATS.trinkets.slice(0, 8) : [];
+    var isNow = (state.turn === 6 || state.turn === 9);
+    host.classList.toggle("is-now", isNow);
+    var phaseTxt = state.turn === 6 ? "⚡ 本回合挑小飾品"
+      : state.turn === 9 ? "⚡ 本回合挑大飾品"
+      : state.turn < 6 ? "T6 小飾品准備"
+      : state.turn < 9 ? "T9 大飾品准備"
+      : "終局飾品參考";
+
+    var compChips = "";
+    if(tn){
+      if(tn.core){
+        compChips += '<button type="button" class="ptb-comp-chip' + (state.pickedTrinket === tn.core ? ' on' : '') + '" data-pick-trinket="' + esc(tn.core) + '">' +
+          '🎯 ' + esc(tn.core) + ' <em>' + esc(tn.coreTier || "首選") + '</em></button>';
+      }
+      if(tn.alt){
+        compChips += '<button type="button" class="ptb-comp-chip' + (state.pickedTrinket === tn.alt ? ' on' : '') + '" data-pick-trinket="' + esc(tn.alt) + '">' +
+          '備選 ' + esc(tn.alt) + ' <em>' + esc(tn.altTier || "備選") + '</em></button>';
+      }
+    }
+
+    var globalChips = topList.map(function(t){
+      return '<button type="button" class="ptb-chip' + (state.pickedTrinket === t.name ? ' on' : '') + '" data-pick-trinket="' + esc(t.name) + '" title="均位 ' + esc(t.avg) + ' · 選取率 ' + esc(t.pickrate) + '%（点擊標記已選）">' +
+        esc(t.name) + ' <em>' + esc(t.avg) + '</em></button>';
+    }).join("");
+
+    host.innerHTML =
+      '<div class="ptb-head"><span>💍 飾品選择指南</span><span class="ptb-phase">' + phaseTxt + '</span></div>' +
+      (compChips ? '<div class="ptb-comp">' + compChips + '</div>' : '') +
+      (tn && tn.synergy ? '<p class="ptb-synergy">' + esc(tn.synergy) + '</p>' : '') +
+      (globalChips ? '<div class="ptb-sublabel"><span>全局高勝飾品榜（点選標記）</span>' + (state.pickedTrinket ? '<span>已選：' + esc(state.pickedTrinket) + '</span>' : '') + '</div><div class="ptb-chips">' + globalChips + '</div>' : '');
+
+    if(window.enhanceCardMentions){
+      window.enhanceCardMentions(host);
+    }
   }
 
   function hintFor(c){
@@ -945,6 +1052,7 @@
 
     var bucketsNow = getMissingBuckets();
     renderCounterBox(c, bucketsNow.total);
+    renderTrinketBar(c);
     renderMissing(adv);
     hintEl.textContent = hintFor(c);
 
@@ -955,6 +1063,8 @@
 
     var autoBtn = document.getElementById("btnAutoGold");
     if(autoBtn) autoBtn.classList.toggle("on", !!state.autoGold);
+    var tripleBtn = document.getElementById("btnTripleReady");
+    if(tripleBtn) tripleBtn.classList.toggle("on", !!state.hasPair);
 
     var tierUpBtn = document.getElementById("btnTierUp");
     if(tierUpBtn){
@@ -1059,7 +1169,27 @@
   }
 
   /* ---- Status, Filters & Hero Controls ---- */
+  var trinketBarEl = document.getElementById("playTrinketBar");
+  if(trinketBarEl){
+    trinketBarEl.addEventListener("click", function(e){
+      if(e.target.closest && e.target.closest(".card-chip,[data-card]")) return;
+      var btn = e.target.closest ? e.target.closest("[data-pick-trinket]") : null;
+      if(!btn) return;
+      var nm = btn.getAttribute("data-pick-trinket") || "";
+      pushUndo();
+      state.pickedTrinket = state.pickedTrinket === nm ? "" : nm;
+      render();
+    });
+  }
+
   document.getElementById("playStatus").addEventListener("click", function(e){
+    var tr = e.target.closest ? e.target.closest("#btnTripleReady") : null;
+    if(tr){
+      pushUndo();
+      state.hasPair = !state.hasPair;
+      render();
+      return;
+    }
     var ag = e.target.closest ? e.target.closest("#btnAutoGold") : null;
     if(ag){
       state.autoGold = !state.autoGold;
@@ -1268,6 +1398,14 @@
   sel.addEventListener("change", function(){ switchComp(sel.value); });
 
   document.addEventListener("keydown", function(e){
+    var draftEl = document.getElementById("draftOverlay");
+    if(draftEl && !draftEl.hidden){
+      if(e.key === "Escape"){
+        draftEl.hidden = true;
+        draftEl.setAttribute("aria-hidden", "true");
+      }
+      return;
+    }
     var overlayEl = document.getElementById("pickOverlay");
     if(overlayEl && !overlayEl.hidden){
       if(e.key === "Escape") closePicker();
@@ -1554,5 +1692,272 @@
     }
   });
 
+  /* ---- Opening 4-choose-1 Hero + 5-Tribe Draft Helper ---- */
+  var DRAFT_TRIBES = TRIBE_DEFS.filter(function(td){ return td.race && td.race !== "ALL"; });
+  var compByKey = {};
+  comps.forEach(function(c){ compByKey[c.key] = c; });
+
+  function buildDraftBans(activeTribes){
+    if(!activeTribes || !activeTribes.length) return {};
+    var has = {}, map = {};
+    activeTribes.forEach(function(r){ has[r] = true; });
+    DRAFT_TRIBES.forEach(function(td){ if(!has[td.race]) map[td.race] = true; });
+    return map;
+  }
+
+  function applyDraftSelection(nextBans, heroName, targetCompKey){
+    var overlayEl = document.getElementById("draftOverlay");
+    if(overlayEl){
+      overlayEl.hidden = true;
+      overlayEl.setAttribute("aria-hidden", "true");
+    }
+    ui.bans = nextBans || {};
+    ui.filter = "ALL_FILTER";
+    if(heroName !== undefined) ui.hero = heroName;
+    if(targetCompKey && compByKey[targetCompKey] && targetCompKey !== key){
+      switchComp(targetCompKey);
+    } else {
+      render();
+      if(!ui.viewingShare){
+        var qs = ["comp=" + encodeURIComponent(key)];
+        if(ui.hero) qs.push("hero=" + encodeURIComponent(ui.hero));
+        history.replaceState(null, "", "?" + qs.join("&"));
+      }
+    }
+  }
+
+  function renderDraftOverlay(){
+    var overlayEl = document.getElementById("draftOverlay");
+    var tribeHost = document.getElementById("draftTribes");
+    var tribeCnt = document.getElementById("draftTribeCount");
+    var heroCnt = document.getElementById("draftHeroCount");
+    var chosenHost = document.getElementById("draftChosen");
+    var searchEl = document.getElementById("draftHeroSearch");
+    var poolHost = document.getElementById("draftHeroPool");
+    var resHost = document.getElementById("draftResults");
+    if(!overlayEl || !tribeHost || !poolHost || !resHost) return;
+
+    Array.prototype.forEach.call(overlayEl.querySelectorAll("[data-mmr]"), function(b){
+      b.classList.toggle("on", b.getAttribute("data-mmr") === ui.mmrBracket);
+    });
+
+    if(tribeCnt){
+      tribeCnt.textContent = ui.draftTribes.length
+        ? ("已選 " + ui.draftTribes.length + " / 5 種族（未選種族自動 Ban）")
+        : "已選 0 / 5（未選即默認全部種族開放）";
+    }
+    tribeHost.innerHTML = DRAFT_TRIBES.map(function(td){
+      var on = ui.draftTribes.indexOf(td.race) >= 0;
+      var fullMute = !on && ui.draftTribes.length >= 5;
+      return '<button type="button" class="dt-chip' + (on ? ' on' : '') + (fullMute ? ' muted' : '') + '" data-dt="' + td.race + '">' +
+        (on ? '✓ ' : '') + esc(td.label) + '</button>';
+    }).join("");
+
+    var mmrList = (typeof STATS_MMR !== "undefined" && STATS_MMR[ui.mmrBracket] && Array.isArray(STATS_MMR[ui.mmrBracket].heroes))
+      ? STATS_MMR[ui.mmrBracket].heroes
+      : ((typeof STATS !== "undefined" && Array.isArray(STATS.heroes)) ? STATS.heroes : []);
+    var mmrMap = {}, rankOrder = {};
+    mmrList.forEach(function(h, idx){ mmrMap[h.name] = h; rankOrder[h.name] = idx; });
+    var allHeroNames = Object.keys(heroListData);
+    mmrList.forEach(function(h){ if(!heroListData[h.name]) allHeroNames.push(h.name); });
+    allHeroNames.sort(function(a, b){
+      var ra = rankOrder[a] == null ? 999 : rankOrder[a];
+      var rb = rankOrder[b] == null ? 999 : rankOrder[b];
+      return ra - rb || a.localeCompare(b);
+    });
+
+    if(heroCnt) heroCnt.textContent = "已選 " + ui.draftHeroes.length + " / 4 位";
+    if(chosenHost){
+      chosenHost.innerHTML = ui.draftHeroes.length
+        ? ui.draftHeroes.map(function(hn){
+            var hs = mmrMap[hn] || heroStatsMap[hn];
+            return '<button type="button" class="dc-chip" data-dr-rm="' + esc(hn) + '" title="点擊移除">' +
+              esc(hn) + (hs ? ' <em>' + esc(hs.tier) + ' · ' + esc(hs.avg) + '</em>' : '') + ' ✕</button>';
+          }).join("")
+        : '<span class="draft-count">点下方英雄快捷加入（或搜名字）…</span>';
+    }
+
+    var q = searchEl ? String(searchEl.value || "").trim().toLowerCase() : "";
+    var poolItems = allHeroNames.filter(function(n){ return !q || n.toLowerCase().indexOf(q) >= 0; }).slice(0, 36);
+    poolHost.innerHTML = poolItems.length ? poolItems.map(function(hn){
+      var hs = mmrMap[hn] || heroStatsMap[hn];
+      var on = ui.draftHeroes.indexOf(hn) >= 0;
+      return '<button type="button" class="dhp-btn' + (on ? ' on' : '') + '" data-dr-add="' + esc(hn) + '">' +
+        (hs ? '<span class="dhp-tier">' + esc(hs.tier) + '</span>' : '') + esc(hn) + '</button>';
+    }).join("") : '<span class="draft-count">無匹配英雄</span>';
+
+    var draftBans = buildDraftBans(ui.draftTribes);
+    var tierOrder = { T0: 0, T1: 1, T2: 2, T3: 3 };
+    var lobbyComps = comps.filter(function(c){ return !isCompBannedWithMap(c, draftBans); }).slice();
+    lobbyComps.sort(function(a, b){
+      var ta = tierOrder[a.tier] == null ? 9 : tierOrder[a.tier];
+      var tb = tierOrder[b.tier] == null ? 9 : tierOrder[b.tier];
+      return ta - tb || (a.avg || 9) - (b.avg || 9);
+    });
+    var fallbackComp = lobbyComps[0] || comps[0];
+
+    var cardsHtml = "";
+    if(ui.draftHeroes.length){
+      var scored = ui.draftHeroes.map(function(hn){
+        var hs = mmrMap[hn] || heroStatsMap[hn];
+        var baseAvg = hs && hs.avg != null ? +hs.avg : 4.6;
+        var recs = (heroListData[hn] || []).slice();
+        var surv = [], dead = [];
+        recs.forEach(function(r){
+          var compObj = compByKey[r.key];
+          if(!compObj) return;
+          if(isCompBannedWithMap(compObj, draftBans)) dead.push(r);
+          else surv.push(r);
+        });
+        surv.sort(function(a, b){ return (a.avg || 9) - (b.avg || 9); });
+        var score = baseAvg;
+        if(surv.length){
+          var bestTier = surv[0].tier;
+          score -= 0.16 + (bestTier === "T0" ? 0.14 : bestTier === "T1" ? 0.08 : 0.02);
+          score += Math.max(-0.2, Math.min(0.25, ((surv[0].avg || 3.8) - 3.6) * 0.12));
+        } else if(recs.length){
+          score += 0.35;
+        } else {
+          score += 0.05;
+        }
+        return {
+          name: hn,
+          hs: hs,
+          score: score,
+          surv: surv,
+          dead: dead,
+          bestKey: (surv[0] && surv[0].key) || fallbackComp.key
+        };
+      });
+      scored.sort(function(a, b){ return a.score - b.score; });
+
+      cardsHtml = '<div class="dr-grid">' + scored.map(function(item, idx){
+        var top = idx === 0;
+        var hsTxt = item.hs
+          ? ('均位 ' + item.hs.avg + ' · 前四 ' + Math.round((item.hs.top4 || 0) * 100) + '% · ' + item.hs.tier)
+          : '暂無當前分段統計';
+        var compChips = item.surv.slice(0, 3).map(function(r){
+          return '<span class="dr-comp">' + esc(r.name) + ' (' + esc(r.tier) + ' · ' + esc(r.avg) + ')</span>';
+        }).join("") + item.dead.slice(0, 2).map(function(r){
+          return '<span class="dr-comp banned">' + esc(r.name) + ' (已Ban)</span>';
+        }).join("");
+        var warnTxt = !item.surv.length
+          ? '<div class="dr-warn">' + (item.dead.length ? '⚠ 招牌體系在當前種族池全被 Ban，进局按【' + esc(fallbackComp.name) + '】開局' : '萬金油英雄，無绑定單一種族體系') + '</div>'
+          : '';
+        return '<div class="dr-card' + (top ? ' top' : '') + '">' +
+          '<div class="dr-top"><b>' + esc(item.name) + '</b><span class="dr-rank">' + (top ? '★ 首選推薦' : ('第 ' + (idx + 1) + ' 順位')) + '</span></div>' +
+          '<div class="dr-stats">' + esc(hsTxt) + '</div>' +
+          (compChips ? '<div class="dr-comps">' + compChips + '</div>' : '') +
+          warnTxt +
+          '<button type="button" class="dr-btn" data-draft-pick="' + esc(item.name) + '" data-draft-comp="' + esc(item.bestKey) + '">選这位进對局 →</button>' +
+        '</div>';
+      }).join("") + '</div>';
+    } else {
+      cardsHtml = '<div class="dr-lobby-box">上方選入 2~4 個候選英雄後，将结合分段數據與在場種族池自動排出推薦順序。</div>';
+    }
+
+    var lobbyHtml = '<div class="dr-lobby-box">' +
+      '<div><b>本局在場強勢陣容（已过滤被 Ban 種族，共 ' + lobbyComps.length + ' 套存活）：</b></div>' +
+      '<div class="dr-comps" style="margin-top:6px">' + lobbyComps.slice(0, 5).map(function(c){
+        return '<button type="button" class="dr-comp" style="cursor:pointer" data-draft-lobby-comp="' + esc(c.key) + '">' +
+          esc(c.name) + ' (' + esc(c.tier) + ' · 均' + esc(c.avg) + ')</button>';
+      }).join("") + '</div>' +
+      '<div class="dr-lobby-actions">' +
+        '<span class="draft-count">可直接点上面任意陣容帶入種族禁選，或選英雄进對局</span>' +
+        '<button type="button" class="draft-mini-btn" id="draftApplyTribesOnly">僅應用種族筛選 →</button>' +
+      '</div></div>';
+
+    resHost.innerHTML = cardsHtml + lobbyHtml;
+  }
+
+  function openDraftOverlay(){
+    var overlayEl = document.getElementById("draftOverlay");
+    if(!overlayEl) return;
+    if(!ui.draftTribes.length){
+      var hasBans = Object.keys(ui.bans).some(function(k){ return ui.bans[k]; });
+      if(hasBans){
+        ui.draftTribes = DRAFT_TRIBES.filter(function(td){ return !ui.bans[td.race]; }).map(function(td){ return td.race; }).slice(0, 5);
+      }
+    }
+    if(!ui.draftHeroes.length && ui.hero) ui.draftHeroes = [ui.hero];
+    overlayEl.hidden = false;
+    overlayEl.setAttribute("aria-hidden", "false");
+    renderDraftOverlay();
+  }
+
+  (function(){
+    var openBtn = document.getElementById("btnDraftHelper");
+    var overlayEl = document.getElementById("draftOverlay");
+    var closeBtn = document.getElementById("draftClose");
+    var tribeReset = document.getElementById("draftTribeReset");
+    var heroReset = document.getElementById("draftHeroReset");
+    var searchEl = document.getElementById("draftHeroSearch");
+    if(openBtn) openBtn.addEventListener("click", openDraftOverlay);
+    if(closeBtn && overlayEl) closeBtn.addEventListener("click", function(){
+      overlayEl.hidden = true;
+      overlayEl.setAttribute("aria-hidden", "true");
+    });
+    if(tribeReset) tribeReset.addEventListener("click", function(){ ui.draftTribes = []; renderDraftOverlay(); });
+    if(heroReset) heroReset.addEventListener("click", function(){ ui.draftHeroes = []; renderDraftOverlay(); });
+    if(searchEl) searchEl.addEventListener("input", renderDraftOverlay);
+    if(overlayEl){
+      overlayEl.addEventListener("click", function(e){
+        if(e.target === overlayEl){
+          overlayEl.hidden = true;
+          overlayEl.setAttribute("aria-hidden", "true");
+          return;
+        }
+        var mmrB = e.target.closest ? e.target.closest("[data-mmr]") : null;
+        if(mmrB){ ui.mmrBracket = mmrB.getAttribute("data-mmr") || "100"; renderDraftOverlay(); return; }
+        var dtB = e.target.closest ? e.target.closest("[data-dt]") : null;
+        if(dtB){
+          var r = dtB.getAttribute("data-dt");
+          var idx = ui.draftTribes.indexOf(r);
+          if(idx >= 0) ui.draftTribes.splice(idx, 1);
+          else if(ui.draftTribes.length < 5) ui.draftTribes.push(r);
+          renderDraftOverlay();
+          return;
+        }
+        var rmB = e.target.closest ? e.target.closest("[data-dr-rm]") : null;
+        if(rmB){
+          var hn = rmB.getAttribute("data-dr-rm");
+          ui.draftHeroes = ui.draftHeroes.filter(function(x){ return x !== hn; });
+          renderDraftOverlay();
+          return;
+        }
+        var addB = e.target.closest ? e.target.closest("[data-dr-add]") : null;
+        if(addB){
+          var hn2 = addB.getAttribute("data-dr-add");
+          var pos = ui.draftHeroes.indexOf(hn2);
+          if(pos >= 0) ui.draftHeroes.splice(pos, 1);
+          else if(ui.draftHeroes.length < 4) ui.draftHeroes.push(hn2);
+          renderDraftOverlay();
+          return;
+        }
+        var pickB = e.target.closest ? e.target.closest("[data-draft-pick]") : null;
+        if(pickB){
+          applyDraftSelection(buildDraftBans(ui.draftTribes), pickB.getAttribute("data-draft-pick"), pickB.getAttribute("data-draft-comp"));
+          return;
+        }
+        var lobbyCompB = e.target.closest ? e.target.closest("[data-draft-lobby-comp]") : null;
+        if(lobbyCompB){
+          applyDraftSelection(buildDraftBans(ui.draftTribes), undefined, lobbyCompB.getAttribute("data-draft-lobby-comp"));
+          return;
+        }
+        var tribesOnlyB = e.target.closest ? e.target.closest("#draftApplyTribesOnly") : null;
+        if(tribesOnlyB){
+          var nextBans = buildDraftBans(ui.draftTribes);
+          var nextKey = key;
+          if(isCompBannedWithMap(current(), nextBans)){
+            var alive = comps.filter(function(c){ return !isCompBannedWithMap(c, nextBans); })[0];
+            if(alive) nextKey = alive.key;
+          }
+          applyDraftSelection(nextBans, undefined, nextKey);
+        }
+      });
+    }
+  })();
+
   render();
+  if(params.get("draft") === "1") openDraftOverlay();
 })();

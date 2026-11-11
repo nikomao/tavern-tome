@@ -49,9 +49,10 @@ option:checked,option:hover{
   background-color:#3d2315 !important;
   color:var(--gold-2) !important;
 }
-html{scroll-behavior:smooth;scroll-padding-top:92px}
+html{scroll-behavior:smooth;scroll-padding-top:92px;overflow-x:clip;max-width:100%}
 body{
   margin:0;background:var(--bg);color:var(--ink);
+  overflow-x:clip;max-width:100%;
   font-family:var(--sans);font-size:17px;line-height:1.75;
   -webkit-font-smoothing:antialiased;
   background-image:
@@ -581,7 +582,9 @@ p{margin:0 0 1em}
   .summary,.matrix{min-width:720px}
 }
 @media (max-width:760px){
-  .hero{padding:72px 18px 62px}
+  .topbar-inner,.section,.section-in,.math-layout,.sim,.tp,.table-wrap{min-width:0;max-width:100%}
+  .math-layout > *,.sim-body > *,.law-grid > *,.engine-grid > *,.fusion-grid > *,.pick4 > *,.start-goal > *{min-width:0}
+  .hero{padding:72px 18px 62px;overflow:hidden}
   .mobile-br{display:block}
   .lede{font-size:15.5px}
   .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%}
@@ -1992,7 +1995,7 @@ html{scrollbar-width:thin;scrollbar-color:#c99a4e #17100a}
 body{position:relative}
 main,.footer,.to-top{position:relative;z-index:2}
 .topbar{position:sticky !important;top:0 !important;z-index:100 !important}
-.hero-glow{transform:translate3d(calc(var(--mx) * -16px),calc(var(--my) * -12px),0);transition:transform .5s ease-out}
+.hero-glow{transform:translate3d(calc(-50% + var(--mx) * -16px),calc(var(--my) * -12px),0);transition:transform .5s ease-out}
 .tavern-decor .lantern.l{transform:translate3d(calc(var(--mx) * 10px),calc(var(--my) * 6px),0);transition:transform .6s ease-out}
 .tavern-decor .lantern.r{transform:translate3d(calc(var(--mx) * -10px),calc(var(--my) * 6px),0);transition:transform .6s ease-out}
 @media (prefers-reduced-motion: reduce){ .bg-grain{animation:none} }
@@ -2064,10 +2067,10 @@ body{
 }
 
 /* ===== real tavern screenshot background ===== */
-.bg-photo{position:fixed;inset:0;z-index:0;pointer-events:none;
+.bg-photo{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg-photo::before{content:"";position:absolute;inset:-4%;
   background:url("bg-tavern.jpg") center center / cover no-repeat;
-  filter:brightness(.28) saturate(.72) blur(2px);
-  transform:scale(1.06)}
+  filter:brightness(.28) saturate(.72) blur(2px)}
 .bg-planks{display:none !important}
 .bg-vignette{background:
   radial-gradient(120% 85% at 50% 0%, rgba(10,6,3,.45) 0%, rgba(10,6,3,.8) 55%, rgba(6,4,2,.94) 100%),

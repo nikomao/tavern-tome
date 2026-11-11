@@ -16,8 +16,8 @@
 <link rel="icon" href="favicon.png" type="image/png" sizes="64x64" />
 <link rel="manifest" href="manifest.json" />
 <meta name="theme-color" content="#21140c" />
-<link rel="stylesheet" href="styles.css?v=20261111d">
-<link rel="stylesheet" href="play.css?v=20261111d">
+<link rel="stylesheet" href="styles.css?v=20261111e">
+<link rel="stylesheet" href="play.css?v=20261111e">
 </head>
 <body class="play-body">
 
@@ -35,6 +35,7 @@
       <div class="play-hero-list" id="playHeroList"></div>
     </div>
   </div>
+  <button type="button" class="play-draft-btn" id="btnDraftHelper" title="录入本局 5 个种族 + 候选英雄，一键计算最优开局选将与阵容">🎯 开局 4 选 1</button>
   <span class="play-meta" id="playMeta"></span>
   <a class="lang-fab play-lang" href="zh-TW/play.html">繁中</a>
 </header>
@@ -62,7 +63,7 @@
 
 <div class="play-status" id="playStatus">
   <div class="ps"><span>回合</span><button type="button" data-k="turn" data-d="-1">−</button><b id="stTurn">1</b><button type="button" data-k="turn" data-d="1">+</button></div>
-  <div class="ps"><span>本数</span><button type="button" data-k="tier" data-d="-1">−</button><b id="stTier">1</b><button type="button" data-k="tier" data-d="1">+</button></div>
+  <div class="ps"><span>本数</span><button type="button" data-k="tier" data-d="-1">−</button><b id="stTier">1</b><button type="button" data-k="tier" data-d="1">+</button><button type="button" class="ps-tog" id="btnTripleReady" title="手里有对子准备三连时点亮，实时计算应该直接碰本还是锁对子升本再碰">🌟 手有对子</button></div>
   <div class="ps"><span>金币</span><button type="button" data-k="gold" data-d="-1">−</button><b id="stGold">3</b><button type="button" data-k="gold" data-d="1">+</button><button type="button" class="ps-tog on" id="btnAutoGold" title="下回合自动按酒馆规则补满上限金币（T1=3…T8+=10）">自动补币</button></div>
   <div class="ps"><span>血量</span><button type="button" class="ps-step" data-k="health" data-d="-5">−5</button><button type="button" data-k="health" data-d="-1">−</button><b id="stHealth">30</b><button type="button" data-k="health" data-d="1">+</button><button type="button" class="ps-step" data-k="health" data-d="5">+5</button></div>
   <div class="ps-shortcuts" title="快捷键说明">1-7 标卡 · 空格 下回合 · ↑ 升本 · Z 撤回</div>
@@ -84,6 +85,7 @@
       <p class="advice-sub" id="adviceSub"></p>
     </div>
     <div class="play-counter-box" id="playCounterBox" hidden></div>
+    <section class="play-trinket-bar" id="playTrinketBar" aria-label="饰品协同与高胜饰品榜"></section>
     <h3>还差 <b id="missCount">0</b> 张 <span class="miss-legend">（点卡看效果）</span></h3>
     <div id="missList"></div>
     <button type="button" class="play-add" id="btnAdd">＋ 添加 / 对策卡</button>
@@ -112,6 +114,48 @@
   </div>
 </div>
 
+<div class="draft-overlay" id="draftOverlay" hidden aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="draft-box">
+    <div class="draft-head">
+      <div>
+        <h3>🎯 开局 4 选 1 · 5 种族秒算助手</h3>
+        <p class="draft-sub">录入本局在场种族与候选英雄，结合分段胜率与未被 Ban 体系直算最优解</p>
+      </div>
+      <div class="draft-head-right">
+        <div class="draft-mmr" id="draftMmrTabs" role="group" aria-label="分段筛选">
+          <button type="button" class="dm-tab on" data-mmr="100">全分段</button>
+          <button type="button" class="dm-tab" data-mmr="50">前50%</button>
+          <button type="button" class="dm-tab" data-mmr="10">前10%</button>
+          <button type="button" class="dm-tab" data-mmr="1">前1%</button>
+        </div>
+        <button type="button" class="draft-close" id="draftClose" aria-label="关闭">✕</button>
+      </div>
+    </div>
+
+    <div class="draft-sec">
+      <div class="draft-sec-h">
+        <b>① 点选本局在场的 5 个种族</b>
+        <span class="draft-count" id="draftTribeCount">已选 0 / 5（未选即默认全开放）</span>
+        <button type="button" class="draft-mini-btn" id="draftTribeReset">清空重置</button>
+      </div>
+      <div class="draft-tribes" id="draftTribes"></div>
+    </div>
+
+    <div class="draft-sec">
+      <div class="draft-sec-h">
+        <b>② 选入候选英雄（最多 4 位）</b>
+        <span class="draft-count" id="draftHeroCount">已选 0 / 4</span>
+        <button type="button" class="draft-mini-btn" id="draftHeroReset">清空英雄</button>
+      </div>
+      <div class="draft-chosen" id="draftChosen"></div>
+      <input type="search" class="draft-search" id="draftHeroSearch" placeholder="搜候选英雄名（如：晨拥、雷矛、鼠王、挂机阿凯）…" autocomplete="off">
+      <div class="draft-hero-pool" id="draftHeroPool"></div>
+    </div>
+
+    <div class="draft-results" id="draftResults"></div>
+  </div>
+</div>
+
 <div class="pool-modal" id="globalCardModal" hidden aria-hidden="true" role="dialog" aria-modal="true">
   <div class="pm-card">
     <button type="button" class="pm-close" id="gcmClose" aria-label="关闭">×</button>
@@ -135,18 +179,19 @@
   </div>
 </div>
 
-<script src="data.js?v=20261111d"></script>
-<script src="pool.js?v=20261111d"></script>
-<script src="stats.js?v=20261111d"></script>
-<script src="comp-notes.js?v=20261111d"></script>
-<script src="extra-cards.js?v=20261111d"></script>
-<script src="cards.js?v=20261111d"></script>
-<script src="card-modal.js?v=20261111d"></script>
-<script src="play.js?v=20261111d"></script>
-<script src="analytics-config.js?v=20261111d"></script>
-<script src="analytics.js?v=20261111d"></script>
-<script src="history.js?v=20261111d"></script>
-<script src="card-fx.js?v=20261111d"></script>
+<script src="data.js?v=20261111e"></script>
+<script src="pool.js?v=20261111e"></script>
+<script src="stats.js?v=20261111e"></script>
+<script src="stats-mmr.js?v=20261111e"></script>
+<script src="comp-notes.js?v=20261111e"></script>
+<script src="extra-cards.js?v=20261111e"></script>
+<script src="cards.js?v=20261111e"></script>
+<script src="card-modal.js?v=20261111e"></script>
+<script src="play.js?v=20261111e"></script>
+<script src="analytics-config.js?v=20261111e"></script>
+<script src="analytics.js?v=20261111e"></script>
+<script src="history.js?v=20261111e"></script>
+<script src="card-fx.js?v=20261111e"></script>
 <script>
   if('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')){
     window.addEventListener('load', function(){

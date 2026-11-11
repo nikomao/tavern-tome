@@ -666,7 +666,7 @@
       "#glossaryList dd", "#glossaryList dt", ".hc-strat", ".hc-trap", ".tn-desc", ".tn-action",
       ".tech-tag", ".rule p", ".dg-note", ".mc-line", ".mc-good", ".mc-bad", "#adviceMain", "#adviceSub",
       ".psc-body p", ".psc-list li", ".ppb-text", ".ppl-diag", ".ppl-cards", ".pto-text", ".pce-list li",
-      ".st4-body"
+      ".st4-body", ".ptb-synergy", ".pch-triple"
     ];
 
     selectors.forEach(function(sel){

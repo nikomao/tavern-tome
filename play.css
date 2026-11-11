@@ -284,7 +284,80 @@
 .pip-pipe-badge.online{background:rgba(74,222,128,.18);color:#6ee7a8}
 .pip-turn-order{margin:6px 0;padding:5px 8px;border-radius:7px;background:rgba(226,180,95,.09);border:1px solid rgba(226,180,95,.26);font-size:11px;line-height:1.45;color:#efdcb9}
 
+/* Triple-ready button & timing banner */
+.play-draft-btn{padding:6px 11px;border-radius:8px;border:1px solid rgba(226,180,95,.48);background:linear-gradient(135deg,rgba(226,180,95,.2),rgba(226,180,95,.07));color:#f8e2ad;font-size:12.5px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.15s}
+.play-draft-btn:hover{background:rgba(226,180,95,.28);border-color:#e2b45f}
+#btnTripleReady.ps-tog.on{color:#f8e2ad;border-color:#e2b45f;background:rgba(226,180,95,.22);font-weight:600}
+.pch-triple{margin-top:8px;padding:7px 9px;border-radius:8px;font-size:12px;line-height:1.5;border:1px solid rgba(226,180,95,.36);background:rgba(226,180,95,.1);color:#f4e7cf}
+.pch-triple.go{border-color:rgba(111,211,154,.55);background:rgba(111,211,154,.12);color:#ccf2db}
+.pch-triple.danger{border-color:rgba(232,105,95,.55);background:rgba(232,105,95,.14);color:#ffd2cc}
+.pch-triple.wait{border-color:rgba(245,158,11,.45);background:rgba(245,158,11,.12);color:#fde68a}
+
+/* Trinket recommendation & STATS.trinkets bar */
+.play-trinket-bar{margin:10px 0 12px;padding:10px 11px;border-radius:10px;border:1px solid rgba(181,143,208,.28);background:linear-gradient(135deg,rgba(56,34,62,.35),rgba(24,14,10,.82))}
+.play-trinket-bar.is-now{border-color:rgba(226,180,95,.65);box-shadow:0 0 14px rgba(226,180,95,.16)}
+.ptb-head{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:6px;font-size:12px;font-weight:700;color:#dcc0ef}
+.ptb-phase{font-size:10.5px;font-weight:600;padding:1px 7px;border-radius:999px;background:rgba(181,143,208,.18);color:#e5d0f6}
+.play-trinket-bar.is-now .ptb-phase{background:rgba(226,180,95,.26);color:#f8e2ad}
+.ptb-comp{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px}
+.ptb-comp-chip{padding:3px 8px;border-radius:7px;border:1px solid rgba(181,143,208,.32);background:rgba(181,143,208,.1);color:#f0e3f8;font-size:11.5px;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+.ptb-comp-chip em{font-style:normal;font-size:10px;color:#c9a8de}
+.ptb-comp-chip.on{border-color:#e2b45f;background:rgba(226,180,95,.22);color:#fff}
+.ptb-synergy{font-size:11.5px;color:#cab6d6;line-height:1.48;margin:0 0 7px}
+.ptb-sublabel{font-size:10.5px;color:#9c8a74;margin-bottom:5px;display:flex;justify-content:space-between;align-items:center}
+.ptb-chips{display:flex;flex-wrap:wrap;gap:5px}
+.ptb-chip{padding:3px 7px;border-radius:6px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:#e0d0b8;font-size:11px;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+.ptb-chip:hover{border-color:rgba(226,180,95,.45)}
+.ptb-chip.on{border-color:#e2b45f;background:rgba(226,180,95,.2);color:#f8e2ad;font-weight:600}
+.ptb-chip em{font-style:normal;color:#9fd8b6;font-size:10.5px}
+
+/* Draft Helper Modal (4-choose-1 Hero + 5 Tribes) */
+.draft-overlay{position:fixed;inset:0;z-index:45;background:rgba(8,5,3,.82);display:flex;justify-content:center;align-items:flex-start;padding:4vh 12px;overflow-y:auto}
+.draft-box{width:min(760px,100%);background:#1c110b;border:1px solid rgba(226,180,95,.38);border-radius:14px;padding:16px;box-shadow:0 24px 60px rgba(0,0,0,.7);color:#f4e7cf}
+.draft-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;padding-bottom:10px;border-bottom:1px solid rgba(226,180,95,.16);margin-bottom:12px}
+.draft-head h3{margin:0;font-size:17px;color:#f8e2ad}
+.draft-sub{margin:3px 0 0;font-size:12px;color:#9c8a74}
+.draft-head-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.draft-mmr{display:inline-flex;border:1px solid rgba(226,180,95,.26);border-radius:8px;overflow:hidden;background:#140c08}
+.dm-tab{padding:4px 9px;border:none;background:none;color:#9c8a74;font-size:11.5px;cursor:pointer}
+.dm-tab.on{background:rgba(226,180,95,.24);color:#f8e2ad;font-weight:700}
+.draft-close{width:30px;height:30px;border-radius:8px;border:1px solid rgba(226,180,95,.25);background:#241610;color:#c8a86a;font-size:14px;cursor:pointer}
+.draft-sec{margin-bottom:12px}
+.draft-sec-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:7px}
+.draft-sec-h b{font-size:13px;color:#e2b45f}
+.draft-count{font-size:11.5px;color:#9c8a74}
+.draft-mini-btn{margin-left:auto;padding:2px 8px;border-radius:6px;border:1px solid rgba(226,180,95,.24);background:rgba(255,255,255,.03);color:#c9b79b;font-size:11px;cursor:pointer}
+.draft-tribes{display:flex;flex-wrap:wrap;gap:6px}
+.dt-chip{padding:5px 10px;border-radius:999px;border:1px solid rgba(226,180,95,.22);background:#140c08;color:#c9b79b;font-size:12px;cursor:pointer}
+.dt-chip.on{border-color:#6fd39a;background:rgba(111,211,154,.16);color:#d7fbe5;font-weight:600}
+.dt-chip.muted{opacity:.42}
+.draft-chosen{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:7px}
+.dc-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:999px;border:1px solid rgba(226,180,95,.5);background:rgba(226,180,95,.16);color:#f8e2ad;font-size:12px;cursor:pointer}
+.draft-search{width:100%;box-sizing:border-box;background:#140c08;border:1px solid rgba(226,180,95,.25);border-radius:8px;color:#f4e7cf;padding:7px 10px;font-size:13px;outline:none;margin-bottom:7px}
+.draft-hero-pool{display:flex;flex-wrap:wrap;gap:5px;max-height:112px;overflow-y:auto;padding:2px 0}
+.dhp-btn{padding:4px 8px;border-radius:7px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);color:#e0d0b8;font-size:11.5px;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+.dhp-btn:hover{border-color:rgba(226,180,95,.4)}
+.dhp-btn.on{border-color:#e2b45f;background:rgba(226,180,95,.2);color:#fff}
+.dhp-tier{font-size:10px;font-weight:700;color:#e2b45f}
+.draft-results{border-top:1px solid rgba(226,180,95,.18);padding-top:11px;display:flex;flex-direction:column;gap:8px}
+.dr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px}
+.dr-card{border:1px solid rgba(226,180,95,.22);border-radius:10px;padding:10px 11px;background:rgba(255,255,255,.025);display:flex;flex-direction:column;gap:6px}
+.dr-card.top{border-color:rgba(111,211,154,.58);background:linear-gradient(135deg,rgba(42,68,48,.3),rgba(24,14,10,.9))}
+.dr-top{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.dr-rank{font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:999px;background:rgba(226,180,95,.2);color:#f8e2ad}
+.dr-card.top .dr-rank{background:#6fd39a;color:#0e1f14}
+.dr-stats{font-size:11.5px;color:#b8a58b}
+.dr-comps{display:flex;flex-wrap:wrap;gap:4px}
+.dr-comp{font-size:11px;padding:2px 7px;border-radius:6px;border:1px solid rgba(111,211,154,.35);background:rgba(111,211,154,.1);color:#ccf2db}
+.dr-comp.banned{border-color:rgba(232,105,95,.3);background:rgba(232,105,95,.08);color:#caa5a0;text-decoration:line-through}
+.dr-warn{font-size:11px;color:#fbbf24}
+.dr-btn{margin-top:auto;padding:6px 10px;border-radius:7px;border:1px solid rgba(226,180,95,.5);background:rgba(226,180,95,.18);color:#f8e2ad;font-size:12px;font-weight:600;cursor:pointer}
+.dr-btn:hover{background:#e2b45f;color:#1a100a}
+.dr-lobby-box{padding:9px 11px;border-radius:9px;border:1px solid rgba(226,180,95,.18);background:rgba(255,255,255,.02);font-size:12px;color:#d6c5aa}
+.dr-lobby-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:6px}
+
 @media (max-width:860px){
+  .play-body{overflow-x:clip;max-width:100%}
   .play-main{grid-template-columns:1fr}
   .play-slots{grid-template-columns:repeat(4,minmax(0,1fr))}
   .ps-tools{opacity:.92}
@@ -294,4 +367,6 @@
   .play-actions{gap:5px;padding:8px 8px;overflow-x:auto}
   .play-actions button{font-size:12.5px;padding:9px 6px}
   .play-actions button span{display:none}
+  .draft-box{padding:12px}
+  .dr-grid{grid-template-columns:1fr}
 }
