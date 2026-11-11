@@ -1,7 +1,62 @@
 {
-  "updated": "2026-11-11T02:22:38.391Z",
+  "updated": "2026-11-11T05:00:34.000Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "With each game im getting more and more certain about that minions are not equally distributed in the tavern.",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xt7njt/with_each_game_im_getting_more_and_more_certain/",
+      "ts": 1794368874000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "随着每场比赛，我越来越确定小兵在酒馆中的分布并不均匀。",
+      "titleZhtw": "随着每场比赛，我越来越确定小兵在旅店中的分布并不均匀。"
+    },
+    {
+      "source": "Reddit",
+      "title": "Duos: has anyone played as reno/nameless in pirate lobby?",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xt485d/duos_has_anyone_played_as_renonameless_in_pirate/",
+      "ts": 1794358888000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "二人组：有人在海盗本局全员扮演过无名/无名角色吗？",
+      "titleZhtw": "二人组：有人在海盜本局全员扮演过无名/无名角色吗？"
+    },
+    {
+      "source": "Reddit",
+      "title": "They really have to nerf these minions",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xszijq/they_really_have_to_nerf_these_minions/",
+      "ts": 1794346711000,
+      "kind": "meta",
+      "tagZh": "天梯平衡",
+      "tagZhtw": "天梯平衡",
+      "titleZh": "他们真的必须削弱这些小兵",
+      "titleZhtw": "他们真的必须削弱這些小兵"
+    },
+    {
+      "source": "Reddit",
+      "title": "Why are mechs in particular nerfed so hard by animations?",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xsl7t4/why_are_mechs_in_particular_nerfed_so_hard_by/",
+      "ts": 1794312401000,
+      "kind": "meta",
+      "tagZh": "天梯平衡",
+      "tagZhtw": "天梯平衡",
+      "titleZh": "为什么机甲特别容易受到动画的影响？",
+      "titleZhtw": "为什麼機甲特别容易受到動画的影响？"
+    },
+    {
+      "source": "Reddit",
+      "title": "7 people playing Quills",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xsk397/7_people_playing_quills/",
+      "ts": 1794308572000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "7人玩野猪人",
+      "titleZhtw": "7人玩野豬人"
+    },
     {
       "source": "Reddit",
       "title": "Anyone else feeling like the quilboar nerfs were a tad underwhelming?",
@@ -69,17 +124,6 @@
       "titleZhtw": "更新檔的最佳更改"
     },
     {
-      "source": "Blizzard Entertainment",
-      "title": "37.0.2 Patch Notes - Blizzard Entertainment",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9adVdYbTNGZG5wTFJnQWg5SzRwaXUzaUhIb1cxQWFNSk5nOVhnbDlodnZDOHVuMU9yaXE4d2FMaDkzdWR4RVVadThVa184NjRJd0pfU3lLY2JLR0Vv?oc=5",
-      "ts": 1793722736000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "37.0.2版本更新公告-暴雪官方",
-      "titleZhtw": "37.0.2版本更新說明-暴雪官方"
-    },
-    {
       "source": "Reddit",
       "title": "37.0.2 Visual Patch Notes(14 locales!)",
       "url": "https://www.reddit.com/r/BobsTavern/comments/1xmx6yb/3702_visual_patch_notes14_locales/",
@@ -89,6 +133,17 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "37.0.2可视化版本更新公告（ 14个区域设置！ ）",
       "titleZhtw": "37.0.2可视化版本更新說明（ 14个区域设置！ ）"
+    },
+    {
+      "source": "Blizzard Entertainment",
+      "title": "37.0.2 Patch Notes - Blizzard Entertainment",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE0yOXZxMHZGZTYzWnBLSTNBQkJBQzlJZXBvNk1fNHF0dkdOaml6a3BUbUkxeWNGQW9vYklXSnUwMUFvbkw4bjN4TTF6Y1J1cmVkUVdmSzFNcms2c3RPMXpBR08wSGRnS1hPXy1PcGZUZVZJVmdEejRZNV9QNA?oc=5",
+      "ts": 1793721889000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "37.0.2版本更新公告-暴雪官方",
+      "titleZhtw": "37.0.2版本更新說明-暴雪官方"
     },
     {
       "source": "Reddit",
@@ -144,61 +199,6 @@
       "tagZhtw": "社群熱議",
       "titleZh": "本局全员里的所有玩家都去野猪人和恶魔，除了一个获得第8名的家伙",
       "titleZhtw": "本局全员里的所有玩家都去野豬人和惡魔，除了一个獲得第8名的家伙"
-    },
-    {
-      "source": "Reddit",
-      "title": "TIL: Enhance-o Mechano can give Fishbait Divine Shield and Windfury Beasts attack twice into them.",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xma202/til_enhanceo_mechano_can_give_fishbait_divine/",
-      "ts": 1793654811000,
-      "kind": "mechanic",
-      "tagZh": "机制冷知识",
-      "tagZhtw": "機制冷知識",
-      "titleZh": "机制冷知识 ：强化机器人可以给鱼饵圣盾和风怒兽攻击两次。",
-      "titleZhtw": "機制冷知識 ：強化機器人可以给魚餌聖盾術和風怒兽攻击两次。"
-    },
-    {
-      "source": "Reddit",
-      "title": "Does anyone actually prefer Aberrations to Naga?",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xm3uct/does_anyone_actually_prefer_aberrations_to_naga/",
-      "ts": 1793641209000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "真的有人更喜欢畸变而不是纳迦吗？",
-      "titleZhtw": "真的有人更喜欢畸變體而不是納迦吗？"
-    },
-    {
-      "source": "Reddit",
-      "title": "Balance patch sneak peak for tomorrow",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xm3n0k/balance_patch_sneak_peak_for_tomorrow/",
-      "ts": 1793640759000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "明天的平衡更新补丁前瞻偷跑",
-      "titleZhtw": "明天的平衡更新更新檔前瞻偷跑"
-    },
-    {
-      "source": "Reddit",
-      "title": "37.0.1 Hotfix Patch - Rolling out on October 19",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xa02xx/3701_hotfix_patch_rolling_out_on_october_19/",
-      "ts": 1792423984000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "37.0.1热修补丁更新- 10月19日推出",
-      "titleZhtw": "37.0.1即時修正更新檔更新- 10月19日推出"
-    },
-    {
-      "source": "Blizzard Entertainment",
-      "title": "37.0 Patch Notes - Blizzard Entertainment",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9RUGpzUWExa2xTeVJPQm9NeFVYX3puTkgzN3pleldiQzJQTzFwU19hcUg5VnRpMjZvNXBSOUdQbnhxNDUyRDJyUWxMNDIyYUF2emJfNkswd3RPVU1Y?oc=5",
-      "ts": 1791788400000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "37.0版本更新公告-暴雪官方",
-      "titleZhtw": "37.0版本更新說明-暴雪官方"
     }
   ]
 }
