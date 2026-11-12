@@ -1,7 +1,40 @@
 {
-  "updated": "2026-11-12T00:09:11.806Z",
+  "updated": "2026-11-12T14:45:36.268Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "Abberations is the worst tribe added to the game. I miss Nagas",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xubmmi/abberations_is_the_worst_tribe_added_to_the_game/",
+      "ts": 1794486872000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "畸变是游戏中加入的最差部落。我想念纳加。",
+      "titleZhtw": "畸變體是游戏中加入的最差部落。我想念纳加。"
+    },
+    {
+      "source": "Reddit",
+      "title": "When the whole lobby is forcing quills, and you go 4th ( last) with this kind of board kinda irritates me, couldnt really make a dent on the 15k felboars",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xuapj3/when_the_whole_lobby_is_forcing_quills_and_you_go/",
+      "ts": 1794484000000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "当整个本局全员都在玩猪人，而您排在第 4 位（最后一位），而且场面是这样的，这让我有点恼火，真的无法对 15k 的邪能猪人造成任何影响。",
+      "titleZhtw": "当整个本局全员都在玩猪人，而您排在第 4 位（最後一位），而且场面是這样的，這让我有點恼火，真的无法對 15k 的邪能猪人造成任何影响。"
+    },
+    {
+      "source": "Reddit",
+      "title": "The ultimate BoB wont give me any keycard for a direction, so im gonna hard force scam build. With the hero power i was summoning the beatboxer, Costume Enthusiast had the 3x hit for the divine shield and a 7k murloc in hand. The whole and i mean WHOLE lobby was either quills/mechs lmao",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xu8zug/the_ultimate_bob_wont_give_me_any_keycard_for_a/",
+      "ts": 1794477988000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "最终的博学者不会给我任何方向的钥匙卡，所以我只能硬着头皮走骗术流。我用英雄技能召唤了节拍手，戏服爱好者有3次攻击来破神圣之盾，手上还有一张7000攻击力的鱼人。整个，我是说整个对局房间里都是猪人/机械，哈哈哈哈。",
+      "titleZhtw": "最終的博学者不会给我任何方向的钥匙卡，所以我只能硬着頭皮走骗術流。我用英雄技能召唤了节拍手，戏服爱好者有3次攻击来破神圣之盾，手上还有一张7000攻击力的魚人。整个，我是說整个對局房间里都是猪人/機械，哈哈哈哈。"
+    },
     {
       "source": "Reddit",
       "title": "This guy will either do nothing if you cant generate choose one cards, or if you can generate plenty, then she will take away your whole turn. This card in play feels like a huge nerf for yourself",
@@ -10,8 +43,8 @@
       "kind": "meta",
       "tagZh": "天梯平衡",
       "tagZhtw": "天梯平衡",
-      "titleZh": "如果你无法生成“选一张”卡牌，这张卡牌就什么也做不了；如果你能生成很多“选一张”卡牌，那么她就会夺走你整回合的行动。这张卡牌在场上时，感觉对自己来说是巨大的削弱。",
-      "titleZhtw": "如果你无法生成“選一张”卡牌，這张卡牌就什麼也做不了；如果你能生成很多“選一张”卡牌，那麼她就会夺走你整回合的行動。這张卡牌在场上时，感觉對自己来說是巨大的削弱。"
+      "titleZh": "如果你无法生成“选一张”卡牌，这张卡牌就什么也做不了；如果你能生成很多“选一张”卡牌，那么她就会夺走你整整一个回合。这张卡在场上时，感觉对自己来说是巨大的削弱。",
+      "titleZhtw": "如果你无法生成“選一张”卡牌，這张卡牌就什麼也做不了；如果你能生成很多“選一张”卡牌，那麼她就会夺走你整整一个回合。這张卡在场上时，感觉對自己来說是巨大的削弱。"
     },
     {
       "source": "Reddit",
@@ -166,39 +199,6 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "37.0.2版本更新公告 - 网易暴雪",
       "titleZhtw": "37.0.2版本更新說明 - 网易暴雪"
-    },
-    {
-      "source": "Reddit",
-      "title": "Visual Patch notes for Patch 36.6.3 by Nomi.gg",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xmwsrh/visual_patch_notes_for_patch_3663_by_nomigg/",
-      "ts": 1793721606000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "Nomi.gg的Patch 36.6.3视觉版本更新公告",
-      "titleZhtw": "Nomi.gg的Patch 36.6.3视觉版本更新說明"
-    },
-    {
-      "source": "Reddit",
-      "title": "37.0.2 Patch Notes",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xmwo79/3702_patch_notes/",
-      "ts": 1793721321000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "37.0.2 版本更新说明",
-      "titleZhtw": "37.0.2 版本更新說明"
-    },
-    {
-      "source": "Reddit",
-      "title": "What Pirate economy cards are you hoping to see next season",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xmhgtp/what_pirate_economy_cards_are_you_hoping_to_see/",
-      "ts": 1793674172000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "您希望下赛季看到哪些海盗经济卡",
-      "titleZhtw": "您希望下赛季看到哪些海盜经济卡"
     }
   ]
 }
