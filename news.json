@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-11T13:42:04.990Z",
+  "updated": "2026-11-12T00:09:11.806Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "This guy will either do nothing if you cant generate choose one cards, or if you can generate plenty, then she will take away your whole turn. This card in play feels like a huge nerf for yourself",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xti9kv/this_guy_will_either_do_nothing_if_you_cant/",
+      "ts": 1794405123000,
+      "kind": "meta",
+      "tagZh": "天梯平衡",
+      "tagZhtw": "天梯平衡",
+      "titleZh": "如果你无法生成“选一张”卡牌，这张卡牌就什么也做不了；如果你能生成很多“选一张”卡牌，那么她就会夺走你整回合的行动。这张卡牌在场上时，感觉对自己来说是巨大的削弱。",
+      "titleZhtw": "如果你无法生成“選一张”卡牌，這张卡牌就什麼也做不了；如果你能生成很多“選一张”卡牌，那麼她就会夺走你整回合的行動。這张卡牌在场上时，感觉對自己来說是巨大的削弱。"
+    },
     {
       "source": "Reddit",
       "title": "Are Demons Out?",
@@ -21,8 +32,8 @@
       "kind": "discussion",
       "tagZh": "社区热议",
       "tagZhtw": "社群熱議",
-      "titleZh": "随着每场比赛，我越来越确定小兵在酒馆中的分布并不均匀。",
-      "titleZhtw": "随着每场比赛，我越来越确定小兵在旅店中的分布并不均匀。"
+      "titleZh": "随着游戏的进行，我越来越确信酒馆中的随从分配并不均衡。",
+      "titleZhtw": "随着游戏的進行，我越来越确信旅店中的手下分配并不均衡。"
     },
     {
       "source": "Reddit",
@@ -43,8 +54,8 @@
       "kind": "meta",
       "tagZh": "天梯平衡",
       "tagZhtw": "天梯平衡",
-      "titleZh": "他们真的必须削弱这些小兵",
-      "titleZhtw": "他们真的必须削弱這些小兵"
+      "titleZh": "他们真的得削弱这些小兵。",
+      "titleZhtw": "他们真的得削弱這些小兵。"
     },
     {
       "source": "Reddit",
@@ -153,8 +164,8 @@
       "kind": "patch",
       "tagZh": "官方补丁",
       "tagZhtw": "官方更新檔",
-      "titleZh": "37.0.2版本更新公告-暴雪官方",
-      "titleZhtw": "37.0.2版本更新說明-暴雪官方"
+      "titleZh": "37.0.2版本更新公告 - 网易暴雪",
+      "titleZhtw": "37.0.2版本更新說明 - 网易暴雪"
     },
     {
       "source": "Reddit",
@@ -175,8 +186,8 @@
       "kind": "patch",
       "tagZh": "官方补丁",
       "tagZhtw": "官方更新檔",
-      "titleZh": "37.0.2版本更新公告",
-      "titleZhtw": "37.0.2版本更新說明"
+      "titleZh": "37.0.2 版本更新说明",
+      "titleZhtw": "37.0.2 版本更新說明"
     },
     {
       "source": "Reddit",
@@ -188,17 +199,6 @@
       "tagZhtw": "社群熱議",
       "titleZh": "您希望下赛季看到哪些海盗经济卡",
       "titleZhtw": "您希望下赛季看到哪些海盜经济卡"
-    },
-    {
-      "source": "Reddit",
-      "title": "Don't you think Blizzard nerfed Pirates too much?",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xmd36n/dont_you_think_blizzard_nerfed_pirates_too_much/",
-      "ts": 1793662172000,
-      "kind": "meta",
-      "tagZh": "天梯平衡",
-      "tagZhtw": "天梯平衡",
-      "titleZh": "你不觉得暴雪削弱海盗太多了吗？",
-      "titleZhtw": "你不觉得暴雪削弱海盜太多了吗？"
     }
   ]
 }
