@@ -1,7 +1,29 @@
 {
-  "updated": "2026-11-13T14:02:32.700Z",
+  "updated": "2026-11-13T23:19:33.916Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "How do Battlegrounds Duo players get so much stats so quickly by turn 6?",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xvj8g5/how_do_battlegrounds_duo_players_get_so_much/",
+      "ts": 1794602794000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "对战双人模式的玩家怎么能在第 6 回合这么快就获得这么多属性？",
+      "titleZhtw": "對戰双人模式的玩家怎麼能在第 6 回合這麼快就獲得這麼多属性？"
+    },
+    {
+      "source": "Reddit",
+      "title": "Fun quillboar setup",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xvav8q/fun_quillboar_setup/",
+      "ts": 1794583861000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "有趣的刺猪设置",
+      "titleZhtw": "有趣的刺猪设置"
+    },
     {
       "source": "3DM",
       "title": "炉石传说37.0.2酒馆战棋野兽巨兽玩法攻略 - 3DM",
@@ -177,28 +199,6 @@
       "tagZhtw": "機制冷知識",
       "titleZh": "野猪人 STILL OP",
       "titleZhtw": "野豬人 STILL OP"
-    },
-    {
-      "source": "Reddit",
-      "title": "Assuming it was last patch this season Silent Deliverer interaction in duos survived for whole season...",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xnjjt1/assuming_it_was_last_patch_this_season_silent/",
-      "ts": 1793783085000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "假设这是本赛季的最后一个补丁， Silent Deliverer在二人组中的互动幸存了整整一个赛季……",
-      "titleZhtw": "假设這是本赛季的最後一个更新檔， Silent Deliverer在二人组中的互動幸存了整整一个赛季……"
-    },
-    {
-      "source": "Reddit",
-      "title": "So much for wand of divination being banned in quilboar lobbies like the patch notes claimed.",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xniana/so_much_for_wand_of_divination_being_banned_in/",
-      "ts": 1793778192000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "在野猪人本局全员中禁止使用占卜魔杖，就像补丁笔记所宣称的那样。",
-      "titleZhtw": "在野豬人本局全员中禁止使用占卜魔杖，就像更新檔笔记所宣称的那样。"
     }
   ]
 }
