@@ -1,7 +1,29 @@
 {
-  "updated": "2026-11-13T05:27:47.772Z",
+  "updated": "2026-11-13T14:02:32.700Z",
   "total": 18,
   "items": [
+    {
+      "source": "3DM",
+      "title": "炉石传说37.0.2酒馆战棋野兽巨兽玩法攻略 - 3DM",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9lYk94R0lpYjVkem1helpxVF92TXJyRDhpaV9Fd1FEZktHS2psUTNWeXIwaGh5VWt5NkoxcllZVmFxbDhhOWhUMWRyQUt3SXJC?oc=5",
+      "ts": 1794560799000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "炉石传说37.0.2酒馆战棋野兽巨兽玩法攻略 - 3DM",
+      "titleZhtw": "爐石戰記37.0.2英雄戰場野獸巨兽玩法攻略 - 3DM"
+    },
+    {
+      "source": "Reddit",
+      "title": "Tavern 7",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xuzylm/tavern_7/",
+      "ts": 1794549223000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "酒馆 7",
+      "titleZhtw": "旅店 7"
+    },
     {
       "source": "Reddit",
       "title": "Demonic Murloc",
@@ -10,8 +32,8 @@
       "kind": "discussion",
       "tagZh": "社区热议",
       "tagZhtw": "社群熱議",
-      "titleZh": "Demonic 鱼人",
-      "titleZhtw": "Demonic 魚人"
+      "titleZh": "恶魔鱼人",
+      "titleZhtw": "惡魔魚人"
     },
     {
       "source": "Reddit",
@@ -21,8 +43,8 @@
       "kind": "discussion",
       "tagZh": "社区热议",
       "tagZhtw": "社群熱議",
-      "titleZh": "Mishmash + 恶魔??",
-      "titleZhtw": "Mishmash + 惡魔??"
+      "titleZh": "杂糅 + 恶魔？？",
+      "titleZhtw": "杂糅 + 惡魔？？"
     },
     {
       "source": "Reddit",
@@ -32,8 +54,8 @@
       "kind": "discussion",
       "tagZh": "社区热议",
       "tagZhtw": "社群熱議",
-      "titleZh": "Abberations is the worst tribe added to the game. I miss 纳迦",
-      "titleZhtw": "Abberations is the worst tribe added to the game. I miss 納迦"
+      "titleZh": "畸变是游戏中加入的最差部落。我想念纳加。",
+      "titleZhtw": "畸變體是游戏中加入的最差部落。我想念纳加。"
     },
     {
       "source": "Reddit",
@@ -177,28 +199,6 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "在野猪人本局全员中禁止使用占卜魔杖，就像补丁笔记所宣称的那样。",
       "titleZhtw": "在野豬人本局全员中禁止使用占卜魔杖，就像更新檔笔记所宣称的那样。"
-    },
-    {
-      "source": "Reddit",
-      "title": "Yes , Blizzard I like playing Pirates now",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xnbdd1/yes_blizzard_i_like_playing_pirates_now/",
-      "ts": 1793755863000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "是的，暴雪我现在喜欢玩海盗游戏",
-      "titleZhtw": "是的，暴雪我現在喜欢玩海盜游戏"
-    },
-    {
-      "source": "Reddit",
-      "title": "Best change of the patch",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xn0nh8/best_change_of_the_patch/",
-      "ts": 1793729953000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "补丁的最佳更改",
-      "titleZhtw": "更新檔的最佳更改"
     }
   ]
 }
