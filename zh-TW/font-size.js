@@ -217,7 +217,7 @@
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
       bindEvents();
-      updateUI(cur);
+      updateUI(getSavedSize());
     });
   }
 

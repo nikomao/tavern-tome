@@ -38,7 +38,67 @@
   var panelWrap = document.getElementById("tribePanels");
 
   function cardOf(name){
-    return (typeof CARDS !== "undefined" && CARDS[name]) ? CARDS[name] : null;
+    if(!name) return null;
+    if(typeof CARDS !== "undefined" && CARDS[name]) return CARDS[name];
+    if(typeof CARDS !== "undefined"){
+      for(var k in CARDS){
+        if(CARDS[k] && CARDS[k].n === name) return CARDS[k];
+      }
+    }
+    if(typeof window !== "undefined" && typeof window.findCard === "function"){
+      var hit = window.findCard(name);
+      if(hit && hit.img){
+        return {
+          n: hit.name || name,
+          t: hit.tier,
+          a: hit.attack,
+          h: hit.health,
+          r: hit.race,
+          k: hit.isSpell ? "spell" : "minion",
+          x: hit.text,
+          img: hit.img,
+          art: "tile"
+        };
+      }
+    }
+    var poolList = (typeof POOL !== "undefined" && Array.isArray(POOL)) ? POOL : [];
+    var isZhTw = (typeof location !== "undefined" && location.pathname && location.pathname.indexOf("/zh-TW/") >= 0);
+    var pfx = isZhTw ? "../pool/" : "../pool/";
+    for(var i = 0; i < poolList.length; i++){
+      if(poolList[i].n === name){
+        var p = poolList[i];
+        return {
+          n: p.n,
+          t: p.t,
+          a: p.a,
+          h: p.h,
+          r: p.r,
+          k: p.y === 1 ? "spell" : "minion",
+          x: p.x,
+          img: pfx + p.i + ".webp",
+          art: "tile"
+        };
+      }
+    }
+    if(typeof EXTRA_CARDS !== "undefined"){
+      for(var ek in EXTRA_CARDS){
+        if(EXTRA_CARDS[ek].n === name){
+          var ex = EXTRA_CARDS[ek];
+          return {
+            n: ex.n,
+            t: ex.t,
+            a: ex.a,
+            h: ex.h,
+            r: ex.r,
+            k: ex.y === 1 ? "spell" : "minion",
+            x: ex.x,
+            img: pfx + ek + ".webp",
+            art: "tile"
+          };
+        }
+      }
+    }
+    return null;
   }
 
   function isNoArt(name){
