@@ -17,7 +17,17 @@
 <link rel="icon" href="../favicon.png" type="image/png" sizes="64x64" />
 <link rel="manifest" href="../manifest.json" />
 <meta name="theme-color" content="#21140c" />
-<link rel="stylesheet" href="../styles.css?v=20261114a" />
+<script>
+  (function(){
+    try{
+      var sz = localStorage.getItem('tt_font_size');
+      if(sz && sz !== 'default'){
+        document.documentElement.setAttribute('data-font-size', sz);
+      }
+    }catch(e){}
+  })();
+</script>
+<link rel="stylesheet" href="../styles.css?v=20261114b" />
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
@@ -32,6 +42,29 @@
       <a href="index.html#tribes">種族</a>
       <a href="index.html#meta">週報</a>
     </nav>
+    <div class="font-scale-wrap" id="fontScaleWrap">
+      <button type="button" class="font-scale-btn" id="fontScaleBtn" title="調整網站字號大小" aria-haspopup="dialog" aria-expanded="false">
+        <span class="fs-icon">Aa</span>
+        <span class="fs-current" id="fsCurrentLabel">字號</span>
+      </button>
+      <div class="font-scale-pop" id="fontScalePop" hidden>
+        <div class="fsp-header">
+          <span class="fsp-title">網站字號</span>
+          <span class="fsp-val" id="fspCurrentPercent">標准 · 100%</span>
+        </div>
+        <div class="fsp-stepper">
+          <button type="button" class="fsp-step-btn" id="fspStepDec" title="減小字號">A−</button>
+          <div class="fsp-scale-pills" id="fspPills">
+            <button type="button" class="fsp-pill on" data-size="default">標准</button>
+            <button type="button" class="fsp-pill" data-size="medium">中大</button>
+            <button type="button" class="fsp-pill" data-size="large">大號</button>
+            <button type="button" class="fsp-pill" data-size="huge">超大</button>
+          </div>
+          <button type="button" class="fsp-step-btn" id="fspStepInc" title="增大字號">A＋</button>
+        </div>
+        <div class="fsp-hint">已自動保存，全站（含對局助手與卡牌池）即時生效</div>
+      </div>
+    </div>
     <div class="ver">v37.0</div>
   </div>
 </header>
@@ -106,6 +139,7 @@
 <script src="pool.js?v=20261114a"></script>
 <script src="comp-notes.js?v=20261114a"></script>
 <script src="cards.js?v=20261114a"></script>
+<script src="font-size.js?v=20261114b"></script>
 <script src="card-modal.js?v=20261114a"></script>
 <script src="pool-page.js?v=20261114a"></script>
 <a class="lang-fab" href="../cards.html">簡中</a>

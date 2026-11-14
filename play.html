@@ -16,8 +16,18 @@
 <link rel="icon" href="favicon.png" type="image/png" sizes="64x64" />
 <link rel="manifest" href="manifest.json" />
 <meta name="theme-color" content="#21140c" />
-<link rel="stylesheet" href="styles.css?v=20261114a">
-<link rel="stylesheet" href="play.css?v=20261114a">
+<script>
+  (function(){
+    try{
+      var sz = localStorage.getItem('tt_font_size');
+      if(sz && sz !== 'default'){
+        document.documentElement.setAttribute('data-font-size', sz);
+      }
+    }catch(e){}
+  })();
+</script>
+<link rel="stylesheet" href="styles.css?v=20261114b">
+<link rel="stylesheet" href="play.css?v=20261114b">
 </head>
 <body class="play-body">
 
@@ -36,6 +46,29 @@
     </div>
   </div>
   <button type="button" class="play-draft-btn" id="btnDraftHelper" title="录入本局 5 个种族 + 候选英雄，一键计算最优开局选将与阵容">🎯 开局 4 选 1</button>
+  <div class="font-scale-wrap" id="fontScaleWrap">
+    <button type="button" class="font-scale-btn" id="fontScaleBtn" title="调整字号大小" aria-haspopup="dialog" aria-expanded="false">
+      <span class="fs-icon">Aa</span>
+      <span class="fs-current" id="fsCurrentLabel">字号</span>
+    </button>
+    <div class="font-scale-pop" id="fontScalePop" hidden>
+      <div class="fsp-header">
+        <span class="fsp-title">对局字号</span>
+        <span class="fsp-val" id="fspCurrentPercent">标准 · 100%</span>
+      </div>
+      <div class="fsp-stepper">
+        <button type="button" class="fsp-step-btn" id="fspStepDec" title="减小字号">A−</button>
+        <div class="fsp-scale-pills" id="fspPills">
+          <button type="button" class="fsp-pill on" data-size="default">标准</button>
+          <button type="button" class="fsp-pill" data-size="medium">中大</button>
+          <button type="button" class="fsp-pill" data-size="large">大号</button>
+          <button type="button" class="fsp-pill" data-size="huge">超大</button>
+        </div>
+        <button type="button" class="fsp-step-btn" id="fspStepInc" title="增大字号">A＋</button>
+      </div>
+      <div class="fsp-hint">边玩边看更轻松，对局与七格阵容同步放大</div>
+    </div>
+  </div>
   <span class="play-meta" id="playMeta"></span>
   <a class="lang-fab play-lang" href="zh-TW/play.html">繁中</a>
 </header>
@@ -187,6 +220,7 @@
 <script src="extra-cards.js?v=20261114a"></script>
 <script src="cards.js?v=20261114a"></script>
 <script src="card-modal.js?v=20261114a"></script>
+<script src="font-size.js?v=20261114b"></script>
 <script src="play.js?v=20261114a"></script>
 <script src="analytics-config.js?v=20261114a"></script>
 <script src="analytics.js?v=20261114a"></script>

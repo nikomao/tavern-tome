@@ -28,7 +28,17 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="旅店手札" />
-<link rel="stylesheet" href="../styles.css?v=20261114a" />
+<script>
+  (function(){
+    try{
+      var sz = localStorage.getItem('tt_font_size');
+      if(sz && sz !== 'default'){
+        document.documentElement.setAttribute('data-font-size', sz);
+      }
+    }catch(e){}
+  })();
+</script>
+<link rel="stylesheet" href="../styles.css?v=20261114b" />
 <link rel="stylesheet" href="../vendor/jsvectormap.min.css?v=20261114a">
 </head>
 <body>
@@ -46,6 +56,29 @@
     <a class="brand" href="#top"><span class="brand-mark">棋</span><span>旅店手札</span></a>
     <span class="visit-badge" id="visitBadge" hidden title="本站訪客序號與今日新增"><i class="vb-dot"></i>第 <b>0</b> 位訪客 <span class="vb-today">今日 +0</span></span>
     <a class="lang-link" href="../index.html">簡中</a>
+    <div class="font-scale-wrap" id="fontScaleWrap">
+      <button type="button" class="font-scale-btn" id="fontScaleBtn" title="調整網站字號大小" aria-haspopup="dialog" aria-expanded="false">
+        <span class="fs-icon">Aa</span>
+        <span class="fs-current" id="fsCurrentLabel">字號</span>
+      </button>
+      <div class="font-scale-pop" id="fontScalePop" hidden>
+        <div class="fsp-header">
+          <span class="fsp-title">網站字號</span>
+          <span class="fsp-val" id="fspCurrentPercent">標准 · 100%</span>
+        </div>
+        <div class="fsp-stepper">
+          <button type="button" class="fsp-step-btn" id="fspStepDec" title="減小字號">A−</button>
+          <div class="fsp-scale-pills" id="fspPills">
+            <button type="button" class="fsp-pill on" data-size="default">標准</button>
+            <button type="button" class="fsp-pill" data-size="medium">中大</button>
+            <button type="button" class="fsp-pill" data-size="large">大號</button>
+            <button type="button" class="fsp-pill" data-size="huge">超大</button>
+          </div>
+          <button type="button" class="fsp-step-btn" id="fspStepInc" title="增大字號">A＋</button>
+        </div>
+        <div class="fsp-hint">已自動保存，全站（含對局助手與卡牌池）即時生效</div>
+      </div>
+    </div>
     <nav class="nav" id="nav">
       <a href="#start" data-i18n="start">入門</a>
       <a href="#curves">節奏</a>
@@ -1238,6 +1271,7 @@
 <script src="extra-cards.js?v=20261114a"></script>
 <script src="cards.js?v=20261114a"></script>
 <script src="card-modal.js?v=20261114a"></script>
+<script src="font-size.js?v=20261114b"></script>
 <script src="app.js?v=20261114a"></script>
 <script src="sim.js?v=20261114a"></script>
 <script src="finder.js?v=20261114a"></script>
@@ -1268,6 +1302,7 @@
 </div>
 <nav class="side-rail" id="sideRail" aria-label="章節导航">
   <button type="button" class="rail-top" id="railTop" aria-label="回到頂部">↑</button>
+  <button type="button" class="rail-font" id="railFontBtn" title="点擊輪換字號大小 (標准/中大/大號/超大)">Aa</button>
   <div class="rail-track" aria-hidden="true"><i id="railFill"></i></div>
   <div class="rail-dots" id="railDots"></div>
 </nav>
