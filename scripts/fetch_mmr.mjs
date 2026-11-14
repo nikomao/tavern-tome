@@ -2,6 +2,7 @@
 /** 生成 stats-mmr.js：各 MMR 分段的英雄榜（100/50/10/1）。 */
 import { gunzipSync } from "node:zlib";
 import { writeFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -11,9 +12,8 @@ const SEGS = [100, 50, 10, 1];
 
 async function getJson(url) {
   console.log("Fetching:", url);
-  const r = await fetch(url, { headers: H, signal: AbortSignal.timeout(60000) });
-  if (!r.ok) throw new Error(url + " " + r.status);
-  const b = Buffer.from(await r.arrayBuffer());
+  const curlBin = process.platform === "win32" ? "curl.exe" : "curl";
+  const b = execFileSync(curlBin, ["-s", "-L", url], { maxBuffer: 50 * 1024 * 1024 });
   return JSON.parse(b[0] === 0x1f ? gunzipSync(b).toString("utf8") : b.toString("utf8"));
 }
 

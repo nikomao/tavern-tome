@@ -5,6 +5,7 @@
  */
 import { gunzipSync } from "node:zlib";
 import { writeFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -26,9 +27,8 @@ const CN = {
 };
 
 async function getJson(url) {
-  const r = await fetch(url, { headers: H });
-  if (!r.ok) throw new Error(url + " " + r.status);
-  const buf = Buffer.from(await r.arrayBuffer());
+  const curlBin = process.platform === "win32" ? "curl.exe" : "curl";
+  const buf = execFileSync(curlBin, ["-s", "-L", url], { maxBuffer: 50 * 1024 * 1024 });
   const text = buf[0] === 0x1f ? gunzipSync(buf).toString("utf8") : buf.toString("utf8");
   return JSON.parse(text);
 }
