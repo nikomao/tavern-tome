@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-14T05:17:53.424Z",
+  "updated": "2026-11-14T13:05:09.186Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "looking for a duo to play hearthstone battlegrounds with on the weekends... don't care about mmr just trying to find some people to play with",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xvwyq4/looking_for_a_duo_to_play_hearthstone/",
+      "ts": 1794643529000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "周末想找个搭档一起玩炉石传说战棋……不在乎天梯分，只想找些人一起玩",
+      "titleZhtw": "周末想找个搭档一起玩爐石戰記戰棋……不在乎天梯分，只想找些人一起玩"
+    },
     {
       "source": "Reddit",
       "title": "How do Battlegrounds Duo players get so much stats so quickly by turn 6?",
@@ -10,8 +21,8 @@
       "kind": "discussion",
       "tagZh": "社区热议",
       "tagZhtw": "社群熱議",
-      "titleZh": "对战双人模式的玩家怎么能在第 6 回合这么快就获得这么多属性？",
-      "titleZhtw": "對戰双人模式的玩家怎麼能在第 6 回合這麼快就獲得這麼多属性？"
+      "titleZh": "对战棋双人模式的玩家来说，怎么能在第 6 回合这么快就获得这么多属性？",
+      "titleZhtw": "對戰棋双人模式的玩家来說，怎麼能在第 6 回合這麼快就獲得這麼多属性？"
     },
     {
       "source": "Reddit",
@@ -23,6 +34,17 @@
       "tagZhtw": "社群熱議",
       "titleZh": "有趣的刺猪设置",
       "titleZhtw": "有趣的刺猪设置"
+    },
+    {
+      "source": "3DM",
+      "title": "炉石传说37.0.2酒馆战棋野兽龙虾流玩法攻略 - 3DM",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBLYkVlOGxpaERrUm1CclFOTkVnV1pCc2oxS0tPWUlGWEtLVk9ES041eElpN29IZmUtWnRmbzF0eDBlTFpZS3hJOUUySmdGNFpH?oc=5",
+      "ts": 1794560854000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "炉石传说37.0.2酒馆战棋野兽龙虾流玩法攻略 - 3DM",
+      "titleZhtw": "爐石戰記37.0.2英雄戰場野獸龙虾流玩法攻略 - 3DM"
     },
     {
       "source": "3DM",
@@ -177,28 +199,6 @@
       "tagZhtw": "社群熱議",
       "titleZh": "7人玩野猪人",
       "titleZhtw": "7人玩野豬人"
-    },
-    {
-      "source": "Reddit",
-      "title": "Anyone else feeling like the quilboar nerfs were a tad underwhelming?",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xo6ksm/anyone_else_feeling_like_the_quilboar_nerfs_were/",
-      "ts": 1793843931000,
-      "kind": "meta",
-      "tagZh": "天梯平衡",
-      "tagZhtw": "天梯平衡",
-      "titleZh": "有没有人觉得那群昆布神经兮兮的神经兮兮的神经兮兮的呢？",
-      "titleZhtw": "有没有人觉得那群昆布神经兮兮的神经兮兮的神经兮兮的呢？"
-    },
-    {
-      "source": "Reddit",
-      "title": "Quillboar still OP",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xnm6bb/quillboar_still_op/",
-      "ts": 1793792855000,
-      "kind": "mechanic",
-      "tagZh": "机制冷知识",
-      "tagZhtw": "機制冷知識",
-      "titleZh": "野猪人 STILL OP",
-      "titleZhtw": "野豬人 STILL OP"
     }
   ]
 }
