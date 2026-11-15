@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-15T13:34:02.825Z",
+  "updated": "2026-11-15T22:33:21.498Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "Major Bug. Late game duos as pirates. Whenever I try to place a minion, it sends it to my team mate.",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xwypgf/major_bug_late_game_duos_as_pirates_whenever_i/",
+      "ts": 1794757592000,
+      "kind": "mechanic",
+      "tagZh": "机制冷知识",
+      "tagZhtw": "機制冷知識",
+      "titleZh": "重大漏洞。游戏后期双人组扮演海盗。每当我试图放置一个随从时，它都会将其发给我的队友。",
+      "titleZhtw": "重大漏洞。游戏後期双人组扮演海盜。每当我試圖放置一个手下时，它都会将其發给我的队友。"
+    },
     {
       "source": "Reddit",
       "title": "Beast Interactions with T7 amalgam is pretty good",
@@ -10,8 +21,8 @@
       "kind": "mechanic",
       "tagZh": "机制冷知识",
       "tagZhtw": "機制冷知識",
-      "titleZh": "野兽与T7汞合金的互动效果相当不错",
-      "titleZhtw": "野獸与T7汞合金的互動效果相当不错"
+      "titleZh": "野兽与T7混合体的互动相当不错",
+      "titleZhtw": "野獸与T7混合體的互動相当不错"
     },
     {
       "source": "Reddit",
@@ -188,17 +199,6 @@
       "tagZhtw": "天梯平衡",
       "titleZh": "他们真的得削弱这些小兵。",
       "titleZhtw": "他们真的得削弱這些小兵。"
-    },
-    {
-      "source": "Reddit",
-      "title": "Why are mechs in particular nerfed so hard by animations?",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xsl7t4/why_are_mechs_in_particular_nerfed_so_hard_by/",
-      "ts": 1794312401000,
-      "kind": "meta",
-      "tagZh": "天梯平衡",
-      "tagZhtw": "天梯平衡",
-      "titleZh": "为什么机甲特别容易受到动画的影响？",
-      "titleZhtw": "为什麼機甲特别容易受到動画的影响？"
     }
   ]
 }
