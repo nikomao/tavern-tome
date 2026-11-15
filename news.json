@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-15T05:13:35.970Z",
+  "updated": "2026-11-15T13:34:02.825Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "Beast Interactions with T7 amalgam is pretty good",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xwu1kg/beast_interactions_with_t7_amalgam_is_pretty_good/",
+      "ts": 1794744901000,
+      "kind": "mechanic",
+      "tagZh": "机制冷知识",
+      "tagZhtw": "機制冷知識",
+      "titleZh": "野兽与T7汞合金的互动效果相当不错",
+      "titleZhtw": "野獸与T7汞合金的互動效果相当不错"
+    },
     {
       "source": "Reddit",
       "title": "looking for a duo to play hearthstone battlegrounds with on the weekends... don't care about mmr just trying to find some people to play with",
@@ -10,8 +21,8 @@
       "kind": "discussion",
       "tagZh": "社区热议",
       "tagZhtw": "社群熱議",
-      "titleZh": "周末想找个搭档一起玩炉石传说战棋……不在乎天梯分，只想找些人一起玩。",
-      "titleZhtw": "周末想找个搭档一起玩爐石戰記戰棋……不在乎天梯分，只想找些人一起玩。"
+      "titleZh": "周末想找个搭档一起玩炉石传说战棋……不在乎天梯分，只想找人一起玩。",
+      "titleZhtw": "周末想找个搭档一起玩爐石戰記戰棋……不在乎天梯分，只想找人一起玩。"
     },
     {
       "source": "Reddit",
@@ -188,17 +199,6 @@
       "tagZhtw": "天梯平衡",
       "titleZh": "为什么机甲特别容易受到动画的影响？",
       "titleZhtw": "为什麼機甲特别容易受到動画的影响？"
-    },
-    {
-      "source": "Reddit",
-      "title": "7 people playing Quills",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xsk397/7_people_playing_quills/",
-      "ts": 1794308572000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "7人玩野猪人",
-      "titleZhtw": "7人玩野豬人"
     }
   ]
 }
