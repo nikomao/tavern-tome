@@ -1,7 +1,40 @@
 {
-  "updated": "2026-11-15T22:33:21.498Z",
+  "updated": "2026-11-16T05:10:22.874Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "How to counter Murlocs",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xxfl0t/how_to_counter_murlocs/",
+      "ts": 1794801510000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "如何对抗鱼人",
+      "titleZhtw": "如何對抗魚人"
+    },
+    {
+      "source": "Reddit",
+      "title": "I switched on the last two rounds to elementals, it felt good",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xxe8sv/i_switched_on_the_last_two_rounds_to_elementals/",
+      "ts": 1794797368000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "我最后两轮换成了元素，感觉很棒。",
+      "titleZhtw": "我最後两轮換成了元素，感觉很棒。"
+    },
+    {
+      "source": "Reddit",
+      "title": "Realized bronze timepiece is not just dragons and used it with the voljin flaming enforcer tech to break the lobby",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xxclkq/realized_bronze_timepiece_is_not_just_dragons_and/",
+      "ts": 1794792498000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "意识到青铜时计不仅仅是龙，并用它配合沃金的火焰执行者科技来突破本局全员。",
+      "titleZhtw": "意识到青铜时计不仅仅是龙，并用它配合沃金的火焰执行者科技来突破本局全员。"
+    },
     {
       "source": "Reddit",
       "title": "Major Bug. Late game duos as pirates. Whenever I try to place a minion, it sends it to my team mate.",
@@ -10,8 +43,8 @@
       "kind": "mechanic",
       "tagZh": "机制冷知识",
       "tagZhtw": "機制冷知識",
-      "titleZh": "重大漏洞。游戏后期双人组扮演海盗。每当我试图放置一个随从时，它都会将其发给我的队友。",
-      "titleZhtw": "重大漏洞。游戏後期双人组扮演海盜。每当我試圖放置一个手下时，它都会将其發给我的队友。"
+      "titleZh": "重大漏洞。游戏后期双人组扮演海盗。每当我试图放置一个随从时，它都会将其发送给我的队友。",
+      "titleZhtw": "重大漏洞。游戏後期双人组扮演海盜。每当我試圖放置一个手下时，它都会将其發送给我的队友。"
     },
     {
       "source": "Reddit",
@@ -21,8 +54,8 @@
       "kind": "mechanic",
       "tagZh": "机制冷知识",
       "tagZhtw": "機制冷知識",
-      "titleZh": "野兽与T7混合体的互动相当不错",
-      "titleZhtw": "野獸与T7混合體的互動相当不错"
+      "titleZh": "野兽与T7汞合金的互动效果相当不错",
+      "titleZhtw": "野獸与T7汞合金的互動效果相当不错"
     },
     {
       "source": "Reddit",
@@ -166,39 +199,6 @@
       "tagZhtw": "社群熱議",
       "titleZh": "恶魔出没了吗？",
       "titleZhtw": "惡魔出没了吗？"
-    },
-    {
-      "source": "Reddit",
-      "title": "With each game im getting more and more certain about that minions are not equally distributed in the tavern.",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xt7njt/with_each_game_im_getting_more_and_more_certain/",
-      "ts": 1794368874000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "随着游戏的进行，我越来越确信酒馆中的随从分配并不均衡。",
-      "titleZhtw": "随着游戏的進行，我越来越确信旅店中的手下分配并不均衡。"
-    },
-    {
-      "source": "Reddit",
-      "title": "Duos: has anyone played as reno/nameless in pirate lobby?",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xt485d/duos_has_anyone_played_as_renonameless_in_pirate/",
-      "ts": 1794358888000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "二人组：有人在海盗本局全员扮演过无名/无名角色吗？",
-      "titleZhtw": "二人组：有人在海盜本局全员扮演过无名/无名角色吗？"
-    },
-    {
-      "source": "Reddit",
-      "title": "They really have to nerf these minions",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xszijq/they_really_have_to_nerf_these_minions/",
-      "ts": 1794346711000,
-      "kind": "meta",
-      "tagZh": "天梯平衡",
-      "tagZhtw": "天梯平衡",
-      "titleZh": "他们真的得削弱这些小兵。",
-      "titleZhtw": "他们真的得削弱這些小兵。"
     }
   ]
 }
