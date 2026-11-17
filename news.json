@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-16T15:01:55.277Z",
+  "updated": "2026-11-17T01:40:44.696Z",
   "total": 18,
   "items": [
+    {
+      "source": "Reddit",
+      "title": "One of my favourite cards in midgame quill lobbies",
+      "url": "https://www.reddit.com/r/BobsTavern/comments/1xxydji/one_of_my_favourite_cards_in_midgame_quill_lobbies/",
+      "ts": 1794856691000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "我在中盘羽毛笔对局中最喜欢的卡牌之一",
+      "titleZhtw": "我在中盘羽毛笔對局中最喜欢的卡牌之一"
+    },
     {
       "source": "Reddit",
       "title": "How to counter Murlocs",
@@ -188,17 +199,6 @@
       "tagZhtw": "天梯平衡",
       "titleZh": "如果你无法生成“选一张”卡牌，这张卡牌就什么也做不了；如果你能生成很多“选一张”卡牌，那么她就会夺走你整整一个回合。这张卡在场上时，感觉对自己来说是巨大的削弱。",
       "titleZhtw": "如果你无法生成“選一张”卡牌，這张卡牌就什麼也做不了；如果你能生成很多“選一张”卡牌，那麼她就会夺走你整整一个回合。這张卡在场上时，感觉對自己来說是巨大的削弱。"
-    },
-    {
-      "source": "Reddit",
-      "title": "Are Demons Out?",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xtg11a/are_demons_out/",
-      "ts": 1794398618000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "恶魔出没了吗？",
-      "titleZhtw": "惡魔出没了吗？"
     }
   ]
 }
