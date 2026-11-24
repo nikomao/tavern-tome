@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-24T08:46:10.863Z",
+  "updated": "2026-11-24T21:59:01.297Z",
   "total": 18,
   "items": [
+    {
+      "source": "Gamereactor UK",
+      "title": "Hearthstone Patch 37.2 arrives 1 December with Battlegrounds Season 15 Warped Empire - Gamereactor UK",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMkRUcXNRNnVFVFg5SFJhMWNrWHBCY3FKS1JtakJOZ040a0huWV9wQ3d6dVk0R3lMX1dPU2hmdUpYZjRNdHhfdlhzQWFEaXAzRzYwT0lXNndXdlZIanZkbE5lVU55Z3JTZFI1QzdpNUYyOVlTWnlHeXVwMnBpTVlmX2NDQUlZT0x3SXZNZkw3THpGUQ?oc=5",
+      "ts": 1795541294000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "《炉石传说》37.2补丁将于12月1日上线，伴随而来的是酒馆战旗第15赛季“扭曲帝国” - Gamereactor UK",
+      "titleZhtw": "《爐石戰記》37.2更新檔将于12月1日上線，伴随而来的是旅店戰旗第15赛季“扭曲帝国” - Gamereactor UK"
+    },
     {
       "source": "YouTube",
       "title": "Battlegrounds Season 15 Update | Hearthstone - YouTube",
@@ -23,6 +34,17 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "An Early Look at Patch 37.2: 酒馆战棋 Season 15, 2v2 酒馆 Brawl, and More - 炉石传说",
       "titleZhtw": "An Early Look at Patch 37.2: 英雄戰場 Season 15, 2v2 旅店 Brawl, and More - 爐石戰記"
+    },
+    {
+      "source": "Blizzard News",
+      "title": "An Early Look at Patch 37.2: Battlegrounds Season 15, 2v2 Tavern Brawl, and More — Hearthstone - Blizzard News",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPX3lhSlZNTmZXN21heWNVOFFSUjJXM3RQNklWWmNwZWRodU9TWmZXUGFtNG1jck5qekwtdnVmRjdkTVdHR3FZZVQzRzRXRjhrWUxUT3BaZ3dvS3o0UXBPa1JkT21SZ1JnTlJaRVBVUi12TXpDdUxHbkM2R2JKQjN6VGdadzdpTUFkUklvM096NzVYVkR2eFE5RHV1WUctakd5MFNYWTJqT2dIdHhNX0p2d2F3eEd1SmFkSjc0WmRGZmQ0UnEz?oc=5",
+      "ts": 1795456500000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "抢先预览补丁 37.2：战场第 15 赛季、2v2 酒馆乱斗等 —《炉石传说》- 网易暴雪新闻",
+      "titleZhtw": "抢先預覽更新檔 37.2：戰场第 15 赛季、2v2 旅店乱斗等 —《爐石戰記》- 网易暴雪新闻"
     },
     {
       "source": "Reddit",
@@ -177,28 +199,6 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "炉石传说37.0.2酒馆战棋野兽巨兽玩法攻略 - 3DM",
       "titleZhtw": "爐石戰記37.0.2英雄戰場野獸巨兽玩法攻略 - 3DM"
-    },
-    {
-      "source": "Reddit",
-      "title": "Tavern 7",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xuzylm/tavern_7/",
-      "ts": 1794549223000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "酒馆 7",
-      "titleZhtw": "旅店 7"
-    },
-    {
-      "source": "Reddit",
-      "title": "Demonic Murloc",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xursuk/demonic_murloc/",
-      "ts": 1794525170000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "恶魔鱼人",
-      "titleZhtw": "惡魔魚人"
     }
   ]
 }
