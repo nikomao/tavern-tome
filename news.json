@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-24T21:59:01.297Z",
+  "updated": "2026-11-25T07:21:54.916Z",
   "total": 18,
   "items": [
+    {
+      "source": "Massively Overpowered",
+      "title": "Hearthstone posts patch notes for its next Battlegrounds season, events, and updates arriving December 1 - Massively Overpowered",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOSkRPX1hDdlE2MmRrc2VuWnY0SFg4TndmWnBRZHJpZVlfazE0NG5sQWhnTFk0MkZleVhlYTRPVWhkbXZvelItc1FwTVdJTm54aWZpYU16UUUxOXNyTzV3MGlLcTNtYnE2alVHSTgyY2pENmhkbGtLNmUxck9mcjdHSHVzSmdmUGtDRWM2dW9NV240VFo4WjAxMVhtQVNKMFVoUFpYMHdfdUhlbWV3RkY1NU5LVWplLTlrQkZDS0pJVjNiS1RITldyNk15RVdqanVwVWhtZQ?oc=5",
+      "ts": 1795561232000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "炉石传说 posts 版本更新公告 for its next 酒馆战棋 season, events, and updates arriving December 1 - Massively Overpowered",
+      "titleZhtw": "爐石戰記 posts 版本更新說明 for its next 英雄戰場 season, events, and updates arriving December 1 - Massively Overpowered"
+    },
     {
       "source": "Gamereactor UK",
       "title": "Hearthstone Patch 37.2 arrives 1 December with Battlegrounds Season 15 Warped Empire - Gamereactor UK",
@@ -10,8 +21,8 @@
       "kind": "patch",
       "tagZh": "官方补丁",
       "tagZhtw": "官方更新檔",
-      "titleZh": "《炉石传说》37.2补丁将于12月1日上线，伴随而来的是酒馆战旗第15赛季“扭曲帝国” - Gamereactor UK",
-      "titleZhtw": "《爐石戰記》37.2更新檔将于12月1日上線，伴随而来的是旅店戰旗第15赛季“扭曲帝国” - Gamereactor UK"
+      "titleZh": "炉石传说 Patch 37.2 arrives 1 December with 酒馆战棋 Season 15 Warped Empire - Gamereactor UK",
+      "titleZhtw": "爐石戰記 Patch 37.2 arrives 1 December with 英雄戰場 Season 15 Warped Empire - Gamereactor UK"
     },
     {
       "source": "YouTube",
@@ -188,17 +199,6 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "炉石传说37.0.2酒馆战棋野兽龙虾流玩法攻略 - 3DM",
       "titleZhtw": "爐石戰記37.0.2英雄戰場野獸龙虾流玩法攻略 - 3DM"
-    },
-    {
-      "source": "3DM",
-      "title": "炉石传说37.0.2酒馆战棋野兽巨兽玩法攻略 - 3DM",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9lYk94R0lpYjVkem1helpxVF92TXJyRDhpaV9Fd1FEZktHS2psUTNWeXIwaGh5VWt5NkoxcllZVmFxbDhhOWhUMWRyQUt3SXJC?oc=5",
-      "ts": 1794560799000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "炉石传说37.0.2酒馆战棋野兽巨兽玩法攻略 - 3DM",
-      "titleZhtw": "爐石戰記37.0.2英雄戰場野獸巨兽玩法攻略 - 3DM"
     }
   ]
 }
