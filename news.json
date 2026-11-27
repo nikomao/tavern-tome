@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T21:00:49.377Z",
+  "updated": "2026-11-27T07:06:13.965Z",
   "total": 18,
   "items": [
     {
@@ -34,6 +34,17 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "酒馆战棋 Season 15 Update | 炉石传说 - YouTube",
       "titleZhtw": "英雄戰場 Season 15 Update | 爐石戰記 - YouTube"
+    },
+    {
+      "source": "Blizzard Entertainment",
+      "title": "An Early Look at Patch 37.2: Battlegrounds Season 15, 2v2 Tavern Brawl, and More - Blizzard Entertainment",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPLWJKYzFIOS1wR2lCZ0VkNjJ3eHZhRzZYdGdrU2xtSUVZdUUxNGJvXy1yS01yZEp2dHZTRGViOG0waXJSbmNlczdKVE9FZndqcmVqTGdFbmVZSHN0ZEtDV1VRNGxvY3pqMUUtMDhGWnljQVE0TDJFZGd6ZnJYci14em9rTWI5aTl3SkVwS1NKMHE3dFZ5eTBVY3psbEFDTHJGT2pQV3NRV0phMVVVR1VDZExjNUdaV2ZjU2RodVJ6TUxRYzYtTzNtNg?oc=5",
+      "ts": 1795457165000,
+      "kind": "patch",
+      "tagZh": "官方补丁",
+      "tagZhtw": "官方更新檔",
+      "titleZh": "抢先预览补丁 37.2：竞技场第 15 赛季、2v2 酒馆乱斗等 - 暴雪官方",
+      "titleZhtw": "抢先預覽更新檔 37.2：竞技场第 15 赛季、2v2 旅店乱斗等 - 暴雪官方"
     },
     {
       "source": "Hearthstone",
@@ -188,17 +199,6 @@
       "tagZhtw": "社群熱議",
       "titleZh": "有趣的刺猪设置",
       "titleZhtw": "有趣的刺猪设置"
-    },
-    {
-      "source": "3DM",
-      "title": "炉石传说37.0.2酒馆战棋野兽龙虾流玩法攻略 - 3DM",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBLYkVlOGxpaERrUm1CclFOTkVnV1pCc2oxS0tPWUlGWEtLVk9ES041eElpN29IZmUtWnRmbzF0eDBlTFpZS3hJOUUySmdGNFpH?oc=5",
-      "ts": 1794560854000,
-      "kind": "patch",
-      "tagZh": "官方补丁",
-      "tagZhtw": "官方更新檔",
-      "titleZh": "炉石传说37.0.2酒馆战棋野兽龙虾流玩法攻略 - 3DM",
-      "titleZhtw": "爐石戰記37.0.2英雄戰場野獸龙虾流玩法攻略 - 3DM"
     }
   ]
 }
