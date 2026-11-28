@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-27T20:45:59.569Z",
+  "updated": "2026-11-28T06:39:52.736Z",
   "total": 18,
   "items": [
+    {
+      "source": "手机新浪网",
+      "title": "S15 周更数据已就位，加拉克苏斯大王继续领跑酒馆|加拉克苏斯大王|风暴之王托里姆|炉石传说|酒馆战棋|帕奇维克|英雄排行榜 - 手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE95MnFKbjJIRllPaFNJWVRscnJLdlp0YVlsY3RHdDU4YklUR0lGeUhZc0hkV2tRX3RvY1pUNVdUQ3ljYnM1amM0bGNXdjcwSmswcndHZjRmVmpCZDFEZEhDU2J0RQ?oc=5",
+      "ts": 1795702740000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "S15 周更数据已就位，加拉克苏斯大王继续领跑酒馆|加拉克苏斯大王|风暴之王托里姆|炉石传说|酒馆战棋|帕奇维克|英雄排行榜 - 手机新浪网",
+      "titleZhtw": "S15 周更數據已就位，加拉克苏斯大王继续领跑旅店|加拉克苏斯大王|风暴之王托里姆|爐石戰記|英雄戰場|帕奇维克|英雄排行榜 - 手機新浪网"
+    },
     {
       "source": "Massively Overpowered",
       "title": "Hearthstone posts patch notes for its next Battlegrounds season, events, and updates arriving December 1 - Massively Overpowered",
@@ -23,6 +34,17 @@
       "tagZhtw": "官方更新檔",
       "titleZh": "《炉石传说》37.2补丁将于12月1日上线，伴随而来的是酒馆战旗第15赛季“扭曲帝国” - Gamereactor UK",
       "titleZhtw": "《爐石戰記》37.2更新檔将于12月1日上線，伴随而来的是旅店戰旗第15赛季“扭曲帝国” - Gamereactor UK"
+    },
+    {
+      "source": "手机新浪网",
+      "title": "坚韧减伤使命奖励，扭曲帝国酒馆战棋第15 季玩法解析|炉石传说 - 手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB3M2haQUUtZlZBR19yVkpKLUR6TGo1MWNDSy0tVEdLOXpXbERITzAwMTZWU3ZCTmt6ZURYR1Q1VjgzcmRzUkdFNXRzMTFzMjFxaTdQTGdPT1F5X3l0ZWlhWEhTRQ?oc=5",
+      "ts": 1795464480000,
+      "kind": "discussion",
+      "tagZh": "社区热议",
+      "tagZhtw": "社群熱議",
+      "titleZh": "坚韧减伤使命奖励，扭曲帝国酒馆战棋第15 季玩法解析|炉石传说 - 手机新浪网",
+      "titleZhtw": "坚韧减伤使命奖励，扭曲帝国英雄戰場第15 季玩法解析|爐石戰記 - 手機新浪网"
     },
     {
       "source": "YouTube",
@@ -177,28 +199,6 @@
       "tagZhtw": "社群熱議",
       "titleZh": "周末想找个搭档一起玩炉石传说战棋……不在乎天梯分，只想找人一起玩。",
       "titleZhtw": "周末想找个搭档一起玩爐石戰記戰棋……不在乎天梯分，只想找人一起玩。"
-    },
-    {
-      "source": "Reddit",
-      "title": "How do Battlegrounds Duo players get so much stats so quickly by turn 6?",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xvj8g5/how_do_battlegrounds_duo_players_get_so_much/",
-      "ts": 1794602794000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "对战双人模式的玩家怎么能在第 6 回合这么快就获得这么多属性？",
-      "titleZhtw": "對戰双人模式的玩家怎麼能在第 6 回合這麼快就獲得這麼多属性？"
-    },
-    {
-      "source": "Reddit",
-      "title": "Fun quillboar setup",
-      "url": "https://www.reddit.com/r/BobsTavern/comments/1xvav8q/fun_quillboar_setup/",
-      "ts": 1794583861000,
-      "kind": "discussion",
-      "tagZh": "社区热议",
-      "tagZhtw": "社群熱議",
-      "titleZh": "有趣的刺猪设置",
-      "titleZhtw": "有趣的刺猪设置"
     }
   ]
 }
